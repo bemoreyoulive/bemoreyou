@@ -45,7 +45,7 @@ const sackSally = [
 
 export default function AndyFeltonDashboard() {
   return (
-    <ClientLayout clientName="Andy Felton" clientRole="Founder, Equate Digital" tabs={tabs}>
+    <ClientLayout clientName="Andy Felton" clientRole="Founder, Equate Digital" clientColor="#2d5a8e" clientInitials="AF" tabs={tabs}>
       {(activeTab) => (
         <>
           {activeTab === "home" && (
@@ -96,7 +96,7 @@ export default function AndyFeltonDashboard() {
                 <h2 className="text-xl font-light text-gray-900 mb-1">To-Do List</h2>
                 <p className="text-sm text-gray-400">Actions from Session 8 (April 2026).</p>
               </div>
-              <TodoList items={todos} />
+              <TodoList items={todos} accentColor="#2d5a8e" />
             </div>
           )}
 

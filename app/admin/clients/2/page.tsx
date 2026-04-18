@@ -34,7 +34,7 @@ const todos = [
 
 export default function AndyScottBarrettDashboard() {
   return (
-    <ClientLayout clientName="Andy Scott Barrett" clientRole="Founder, Ascott Financial Direction" tabs={tabs}>
+    <ClientLayout clientName="Andy Scott Barrett" clientRole="Founder, Ascott Financial Direction" clientColor="#2e7d4f" clientInitials="ASB" tabs={tabs}>
       {(activeTab) => (
         <>
           {activeTab === "home" && (
@@ -94,7 +94,7 @@ export default function AndyScottBarrettDashboard() {
                 <h2 className="text-xl font-light text-gray-900 mb-1">To-Do List</h2>
                 <p className="text-sm text-gray-400">Actions from Session 3 (15 April 2026) + website quick wins.</p>
               </div>
-              <TodoList items={todos} />
+              <TodoList items={todos} accentColor="#2e7d4f" />
             </div>
           )}
 
