@@ -237,7 +237,7 @@ Lue x`,
   },
 ];
 
-const contentMonths = [
+const contentMonths: { month: string; items: { type: string; title: string; notes?: string; hook?: string; status: string; platform?: string; priority?: boolean }[] }[] = [
   {
     month: "April — Already Posted",
     items: [
