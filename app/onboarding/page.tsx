@@ -122,10 +122,60 @@ const questions: Question[] = [
 ];
 
 export default function OnboardingPage() {
+  const [started, setStarted] = useState(false);
   const [current, setCurrent] = useState(0);
   const [values, setValues] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const router = useRouter();
+
+  if (!started) {
+    return (
+      <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
+        <nav style={{ background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <p style={{ fontSize: "1.05rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", margin: 0, fontFamily: "var(--font-dm-serif), serif" }}>
+              BeMore<span style={{ color: "#4ec9d0" }}>You</span>
+            </p>
+            <p style={{ fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: 0 }}>New Client Onboarding</p>
+          </div>
+        </nav>
+
+        <div style={{ maxWidth: 680, margin: "0 auto", padding: "80px 36px" }}>
+          <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ display: "inline-block", width: 24, height: 2, background: "#E8521C" }} />
+            A note from Ben
+          </p>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", lineHeight: 1.15 }}>
+            I don't take your investment lightly.
+          </h1>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 48 }}>
+            <p style={{ fontSize: "1rem", color: "#3D3935", lineHeight: 1.8, margin: 0 }}>
+              I'm super chuffed to have you on board — and before we dive in, I want to be straight with you: the more you put into this questionnaire, the more I can do for you.
+            </p>
+            <p style={{ fontSize: "1rem", color: "#3D3935", lineHeight: 1.8, margin: 0 }}>
+              Set aside <strong>15–20 minutes at minimum</strong> and be as candid as possible. This is completely private — just between you and me. So be an open book. The deeper and more honest you are, the better the work we'll do together.
+            </p>
+            <p style={{ fontSize: "1rem", color: "#3D3935", lineHeight: 1.8, margin: 0 }}>
+              Once you're done, I'll be notified and I'll start building your client dashboard after our first 90 Minute Blueprint Call.
+            </p>
+          </div>
+          <button
+            onClick={() => setStarted(true)}
+            style={{
+              padding: "16px 48px", background: "#E8521C", color: "#fff",
+              border: "none", borderRadius: 3, fontSize: "0.95rem",
+              fontWeight: 600, letterSpacing: "0.05em", cursor: "pointer",
+              transition: "background 0.15s ease",
+            }}
+            onMouseOver={e => (e.currentTarget.style.background = "#BF4016")}
+            onMouseOut={e => (e.currentTarget.style.background = "#E8521C")}
+          >
+            Let's get cooking →
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const q = questions[current];
   const isLast = current === questions.length - 1;
