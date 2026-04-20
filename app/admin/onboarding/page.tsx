@@ -12,6 +12,8 @@ interface Submission {
 
 const questionLabels: Record<string, string> = {
   name: "What's your name?",
+  workEmail: "Work email address",
+  mobile: "Mobile number",
   business: "Name of business and industry",
   beliefs: "What do you stand for and stand against in your industry or space?",
   talkAllDay: "What's something you could talk about all day, that also makes other people lean in and take notes?",

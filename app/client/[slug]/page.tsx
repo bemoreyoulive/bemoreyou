@@ -1,9 +1,8 @@
 "use client";
 
-import { use } from "react";
+import { use, useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
-import { useState } from "react";
 
 const clientData: Record<string, {
   name: string;
@@ -267,17 +266,62 @@ const tabs = [
   { id: "content", label: "Content Ideas" },
 ];
 
+function PendingDashboard({ slug }: { slug: string }) {
+  const [activeTab, setActiveTab] = useState("todos");
+  const placeholderMsg = "This will be filled in after your 90 Minute Blueprint Call.";
+  return (
+    <div style={{minHeight: "100vh", background: "#F5F1EC"}}>
+      <nav style={{position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0"}}>
+        <div style={{maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+          <div style={{display: "flex", alignItems: "center", gap: 12}}>
+            <div style={{width: 36, height: 36, borderRadius: 3, background: "#E0DBD3", display: "flex", alignItems: "center", justifyContent: "center", color: "#7A746E", fontSize: "0.7rem", fontWeight: 700}}>
+              ✓
+            </div>
+            <div>
+              <p style={{fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: 0}}>Welcome</p>
+              <p style={{fontSize: "0.68rem", color: "#7A746E", margin: 0}}>Your dashboard is being set up</p>
+            </div>
+          </div>
+          <div style={{fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif"}}>
+            BeMore<span style={{color: "#4ec9d0"}}>You</span>
+          </div>
+        </div>
+      </nav>
+
+      <div style={{borderBottom: "1px solid #E0DBD3", background: "rgba(245,241,236,0.6)"}}>
+        <div style={{maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", overflowX: "auto"}}>
+          {tabs.map((tab) => (
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{padding: "14px 20px", fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", whiteSpace: "nowrap", border: "none", background: "transparent", cursor: "pointer", borderBottom: activeTab === tab.id ? "2px solid #E8521C" : "2px solid transparent", marginBottom: -1, color: activeTab === tab.id ? "#E8521C" : "#7A746E"}}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div style={{maxWidth: 1160, margin: "0 auto", padding: "56px 36px"}}>
+        <div style={{background: "#fff", border: "1px solid #E0DBD3", borderLeft: "3px solid #E8521C", borderRadius: 3, padding: "40px 48px"}}>
+          <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 16}}>
+            Coming soon
+          </p>
+          <h2 style={{fontSize: "clamp(1.4rem, 2.5vw, 2rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 16px", lineHeight: 1.2}}>
+            {placeholderMsg}
+          </h2>
+          <p style={{fontSize: "0.9rem", color: "#7A746E", lineHeight: 1.7, margin: 0}}>
+            Ben has your questionnaire answers and will have everything ready for you here after your first session. Speak soon.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ClientDashboard({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const client = clientData[slug];
   const [activeTab, setActiveTab] = useState("todos");
 
   if (!client) {
-    return (
-      <div style={{minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#F5F1EC"}}>
-        <p style={{color: "#7A746E", fontSize: "0.9rem"}}>Dashboard not found.</p>
-      </div>
-    );
+    return <PendingDashboard slug={slug} />;
   }
 
   return (

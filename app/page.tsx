@@ -16,7 +16,7 @@ export default function Home() {
 
         <div style={{display: "flex", flexDirection: "column", gap: 12}}>
           <a
-            href="/admin"
+            href="/login"
             style={{
               display: "block", padding: "17px 38px",
               background: "#E8521C", color: "#fff",
@@ -27,10 +27,10 @@ export default function Home() {
             onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#BF4016"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 10px 36px rgba(232,82,28,0.28)"; }}
             onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#E8521C"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
           >
-            Admin Login
+            Client Login
           </a>
           <a
-            href="/login"
+            href="/onboarding"
             style={{
               display: "block", padding: "17px 38px",
               background: "transparent", color: "#fff",
@@ -42,7 +42,22 @@ export default function Home() {
             onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
             onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.15)"; }}
           >
-            Client Login
+            Onboard as New Client
+          </a>
+          <a
+            href="/admin"
+            style={{
+              display: "block", padding: "17px 38px",
+              background: "transparent", color: "#7A746E",
+              borderRadius: 3, fontSize: "0.84rem", fontWeight: 600,
+              letterSpacing: "0.08em", textTransform: "uppercase",
+              textDecoration: "none", border: "1px solid rgba(255,255,255,0.08)",
+              transition: "border-color 0.2s ease, color 0.2s ease",
+            }}
+            onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLAnchorElement).style.color = "#fff"; }}
+            onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLAnchorElement).style.color = "#7A746E"; }}
+          >
+            Admin Login
           </a>
         </div>
       </div>

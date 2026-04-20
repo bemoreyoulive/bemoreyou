@@ -54,11 +54,26 @@ export async function POST(req: NextRequest) {
     // Save to Supabase
     try {
       const supabase = createServiceClient();
-      await supabase.from("onboarding_submissions").insert({
-        client_name: clientName,
-        answers: body.answers ?? {},
-        submitted_at: new Date().toISOString(),
-      });
+      const slug = (clientName as string)
+        .toLowerCase().trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9-]/g, "");
+
+      await Promise.all([
+        supabase.from("onboarding_submissions").insert({
+          client_name: clientName,
+          answers: body.answers ?? {},
+          submitted_at: new Date().toISOString(),
+        }),
+        supabase.from("client_profiles").upsert({
+          slug,
+          name: clientName,
+          role: body.answers?.business ?? "",
+          status: "Pending",
+          started: new Date().getFullYear().toString(),
+          sessions: 0,
+        }, { onConflict: "slug", ignoreDuplicates: true }),
+      ]);
     } catch (err) {
       console.error("Supabase save error:", err);
     }

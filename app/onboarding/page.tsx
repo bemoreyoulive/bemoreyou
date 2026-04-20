@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface Question {
   id: string;
@@ -18,10 +19,24 @@ const questions: Question[] = [
     placeholder: "Your full name",
   },
   {
+    id: "workEmail",
+    label: "What's your work email address?",
+    sublabel: "This is how we'll stay in touch. Check your junk folder if you don't hear from us.",
+    type: "text",
+    placeholder: "e.g. hello@yourbusiness.co.uk",
+  },
+  {
+    id: "mobile",
+    label: "What's your mobile number?",
+    sublabel: "We'll only use this if something urgent comes up.",
+    type: "text",
+    placeholder: "e.g. 07700 000000",
+  },
+  {
     id: "business",
     label: "Name of business and industry",
     type: "text",
-    placeholder: "e.g. Equate Digital — Financial Services",
+    placeholder: "e.g. Acme Ltd — Financial Services",
   },
   {
     id: "beliefs",
@@ -110,6 +125,7 @@ export default function OnboardingPage() {
   const [current, setCurrent] = useState(0);
   const [values, setValues] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const router = useRouter();
 
   const q = questions[current];
   const isLast = current === questions.length - 1;
@@ -144,40 +160,16 @@ export default function OnboardingPage() {
           answers: values,
         }),
       });
-      setStatus("done");
+      const slug = (values.name || "new-client")
+        .toLowerCase().trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9-]/g, "");
+      router.replace(`/client/${slug}`);
     } catch {
       setStatus("error");
     }
   }
 
-  if (status === "done") {
-    return (
-      <div style={{ minHeight: "100vh", background: "#F5F1EC", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 24px" }}>
-        <div style={{ maxWidth: 600, width: "100%", textAlign: "center" }}>
-          <div style={{
-            width: 56, height: 56, borderRadius: "50%", background: "#E8521C",
-            display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px",
-          }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M5 13l4 4L19 7" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 12, margin: "0 0 12px" }}>
-            Questionnaire complete
-          </p>
-          <h1 style={{
-            fontSize: "clamp(2rem, 4vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif",
-            fontWeight: 400, color: "#1C1C1C", margin: "0 0 20px", lineHeight: 1.15,
-          }}>
-            Thanks, {values.name?.split(" ")[0] || "there"}. Ben's got it.
-          </h1>
-          <p style={{ fontSize: "0.95rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
-            Your answers have landed with Ben. He'll read everything before your first session and come prepared. Speak soon.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
