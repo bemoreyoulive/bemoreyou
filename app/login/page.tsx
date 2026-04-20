@@ -65,7 +65,8 @@ function LoginForm() {
             </h2>
             <p style={{ fontSize: "0.9rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>
               We've sent a login link to<br />
-              <strong style={{ color: "#1C1C1C" }}>{email}</strong>
+              <strong style={{ color: "#1C1C1C" }}>{email}</strong><br /><br />
+              <span style={{ fontSize: "0.8rem", color: "#E8521C" }}>Can't see it? Check your junk or spam folder.</span>
             </p>
             <button
               onClick={() => setStatus("idle")}
@@ -125,7 +126,8 @@ function LoginForm() {
             </form>
 
             <p style={{ fontSize: "0.78rem", color: "#7A746E", marginTop: 20, lineHeight: 1.6, textAlign: "center" }}>
-              We'll email you a magic link — no password needed.
+              We'll email you a magic link — no password needed.<br />
+              <span style={{ color: "#E8521C" }}>If you don't see it, check your junk or spam folder.</span>
             </p>
           </>
         )}

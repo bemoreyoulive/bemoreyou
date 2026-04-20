@@ -70,7 +70,8 @@ export default function InviteClient() {
             <p style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 8px" }}>Invitation sent</p>
             <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 20px" }}>
               <strong>{form.name}</strong> will receive a magic link at <strong>{form.email}</strong>.<br />
-              Their dashboard is at <strong>/client/{form.slug}</strong>.
+              Their dashboard is at <strong>/client/{form.slug}</strong>.<br /><br />
+              <span style={{ fontSize: "0.85rem", color: "#E8521C" }}>Heads up: ask them to check their junk or spam folder if they don't see it.</span>
             </p>
             <button
               onClick={() => { setForm({ name: "", email: "", slug: "" }); setStatus("idle"); }}
