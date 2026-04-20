@@ -70,17 +70,41 @@ export default function AdminDashboard() {
             </p>
             <p style={{fontSize: "0.63rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: 0}}>Admin Dashboard</p>
           </div>
-          <a
-            href="/"
-            style={{
-              fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em",
-              textTransform: "uppercase", color: "#7A746E", textDecoration: "none",
-              padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3,
-              transition: "all 0.15s ease",
-            }}
-          >
-            Sign Out
-          </a>
+          <div style={{display: "flex", alignItems: "center", gap: 12}}>
+            <a
+              href="/admin/onboarding"
+              style={{
+                fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em",
+                textTransform: "uppercase", color: "#E8521C", textDecoration: "none",
+                padding: "9px 20px", border: "1px solid #E8521C", borderRadius: 3,
+              }}
+            >
+              Onboarding
+            </a>
+            <a
+              href="/admin/clients/invite"
+              style={{
+                fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em",
+                textTransform: "uppercase", color: "#7A746E", textDecoration: "none",
+                padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3,
+              }}
+            >
+              + Invite Client
+            </a>
+            <form action="/api/signout" method="POST" style={{margin: 0}}>
+              <button
+                type="submit"
+                style={{
+                  fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em",
+                  textTransform: "uppercase", color: "#7A746E",
+                  padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3,
+                  background: "transparent", cursor: "pointer",
+                }}
+              >
+                Sign Out
+              </button>
+            </form>
+          </div>
         </div>
       </nav>
 
