@@ -109,9 +109,6 @@ export default function AdminDashboard() {
               {activeCount} active · {clients.length} total
             </h2>
           </div>
-          <a href="/admin/clients/invite" style={{padding: "13px 32px", background: "#E8521C", color: "#fff", border: "none", borderRadius: 3, fontSize: "0.84rem", fontWeight: 600, letterSpacing: "0.05em", textDecoration: "none", display: "inline-block"}}>
-            + Add Client
-          </a>
         </div>
 
         <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20}}>
