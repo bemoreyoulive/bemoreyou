@@ -50,14 +50,21 @@ export async function GET(request: NextRequest) {
   if (user.email === ADMIN_EMAIL) {
     destination = `${SITE_URL}/admin/dashboard`;
   } else {
-    const service = createServiceClient();
-    const { data: profile } = await service
-      .from("client_profiles")
-      .select("slug")
-      .eq("id", user.id)
-      .single();
-    if (profile?.slug) {
-      destination = `${SITE_URL}/client/${profile.slug}`;
+    // First try user_metadata slug (set at account creation time)
+    const metaSlug = user.user_metadata?.slug as string | undefined;
+    if (metaSlug) {
+      destination = `${SITE_URL}/client/${metaSlug}`;
+    } else {
+      // Fallback: look up client_profiles by user id
+      const service = createServiceClient();
+      const { data: profile } = await service
+        .from("client_profiles")
+        .select("slug")
+        .eq("id", user.id)
+        .single();
+      if (profile?.slug) {
+        destination = `${SITE_URL}/client/${profile.slug}`;
+      }
     }
   }
 
