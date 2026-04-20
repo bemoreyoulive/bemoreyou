@@ -141,6 +141,7 @@ export default function OnboardingPage() {
           type: "onboarding",
           clientName: values.name || "New Client",
           detail,
+          answers: values,
         }),
       });
       setStatus("done");
