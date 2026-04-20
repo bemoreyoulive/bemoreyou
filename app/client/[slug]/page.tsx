@@ -5,7 +5,6 @@ import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import { useState } from "react";
 
-// Client data
 const clientData: Record<string, {
   name: string;
   role: string;
@@ -17,7 +16,7 @@ const clientData: Record<string, {
   messaging: { frame: string; notes: string }[];
   content: { angle: string; notes: string }[];
 }> = {
-  "1": {
+  "andy-felton": {
     name: "Andy Felton",
     role: "Founder, Equate Digital",
     color: "#2d5a8e",
@@ -79,7 +78,7 @@ const clientData: Record<string, {
       { angle: "Client results (when ready)", notes: "The PAPA AI search work, the Chris Dillon POC — once these are complete, the story of what the problem was, what you built, and what changed is gold." },
     ],
   },
-  "2": {
+  "andy-scott-barrett": {
     name: "Andy Scott Barrett",
     role: "Founder, Ascott Financial Direction",
     color: "#2e7d4f",
@@ -140,7 +139,7 @@ const clientData: Record<string, {
       { angle: "Behind a client decision", notes: "Walk through a real decision (anonymised) — what the numbers said, what the options were, what you recommended, what happened. Proof of thinking." },
     ],
   },
-  "3": {
+  "nikki-mcreynolds": {
     name: "Nikki McReynolds",
     role: "Founder, HushAway & The PeacePath",
     color: "#7c3aed",
@@ -202,7 +201,7 @@ const clientData: Record<string, {
       { angle: "55 children across the world", notes: "What they told you that no researcher could have. Real quotes from children: \"I felt brave.\" \"I feel safe.\" More powerful than any credential." },
     ],
   },
-  "5": {
+  "solve-people": {
     name: "Solve People",
     role: "Luenna Knight — Director",
     color: "#c95e00",
@@ -268,9 +267,9 @@ const tabs = [
   { id: "content", label: "Content Ideas" },
 ];
 
-export default function ClientDashboard({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const client = clientData[id];
+export default function ClientDashboard({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  const client = clientData[slug];
   const [activeTab, setActiveTab] = useState("todos");
 
   if (!client) {
@@ -399,14 +398,12 @@ export default function ClientDashboard({ params }: { params: Promise<{ id: stri
             <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 40px", letterSpacing: "-0.02em"}}>
               Positioning
             </h2>
-
             <div style={{background: "#1C1C1C", borderRadius: 4, padding: "40px 48px", marginBottom: 24}}>
               <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 16}}>Your Core Statement</p>
               <p style={{fontSize: "clamp(1.2rem, 2vw, 1.6rem)", color: "#fff", lineHeight: 1.5, fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, margin: 0, fontStyle: "italic"}}>
                 "{client.positioning.headline}"
               </p>
             </div>
-
             <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24}}>
               <div style={{background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px"}}>
                 <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7A746E", marginBottom: 20}}>What Makes You Different</p>

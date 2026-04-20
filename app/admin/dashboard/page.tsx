@@ -2,7 +2,7 @@
 
 const clients = [
   {
-    id: 1,
+    slug: "andy-felton",
     name: "Andy Felton",
     role: "Founder, Equate Digital",
     started: "Dec 2025",
@@ -12,7 +12,7 @@ const clients = [
     initials: "AF",
   },
   {
-    id: 2,
+    slug: "andy-scott-barrett",
     name: "Andy Scott Barrett",
     role: "Founder, Ascott Financial Direction",
     started: "Mar 2026",
@@ -22,7 +22,7 @@ const clients = [
     initials: "ASB",
   },
   {
-    id: 3,
+    slug: "nikki-mcreynolds",
     name: "Nikki McReynolds",
     role: "Founder, HushAway",
     started: "Nov 2025",
@@ -32,7 +32,7 @@ const clients = [
     initials: "NM",
   },
   {
-    id: 4,
+    slug: "james-hartley",
     name: "James Hartley",
     role: "Founder, IgnitionCraft",
     started: "2026",
@@ -42,7 +42,7 @@ const clients = [
     initials: "JH",
   },
   {
-    id: 5,
+    slug: "solve-people",
     name: "Solve People",
     role: "Luenna Knight & Brett Edyvane",
     started: "Feb 2026",
@@ -114,8 +114,8 @@ export default function AdminDashboard() {
         <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20}}>
           {clients.map((client) => (
             <a
-              key={client.id}
-              href={`/admin/clients/${client.id}`}
+              key={client.slug}
+              href={`/admin/clients/${client.slug}`}
               style={{
                 display: "block", background: "#fff", borderRadius: 4,
                 border: "1px solid #E0DBD3", padding: "28px 32px",
