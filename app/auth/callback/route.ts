@@ -3,6 +3,7 @@ import { createServiceClient } from "@/lib/supabase-server";
 import { createMiddlewareClient } from "@/lib/supabase-middleware";
 
 const ADMIN_EMAIL = "ben@thepersonalbrandingguy.com";
+const SITE_URL = "https://bemoreyoulive.com";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -18,8 +19,7 @@ export async function GET(request: NextRequest) {
 
       // Ben goes to admin dashboard
       if (email === ADMIN_EMAIL) {
-        const url = new URL("/admin/dashboard", request.url);
-        const redirect = NextResponse.redirect(url);
+        const redirect = NextResponse.redirect(`${SITE_URL}/admin/dashboard`);
         supabaseResponse.cookies.getAll().forEach(cookie => {
           redirect.cookies.set(cookie.name, cookie.value, { path: "/" });
         });
@@ -35,11 +35,10 @@ export async function GET(request: NextRequest) {
         .single();
 
       const destination = profile?.slug
-        ? `/client/${profile.slug}`
-        : next !== "/" ? next : "/login";
+        ? `${SITE_URL}/client/${profile.slug}`
+        : `${SITE_URL}/login`;
 
-      const url = new URL(destination, request.url);
-      const redirect = NextResponse.redirect(url);
+      const redirect = NextResponse.redirect(destination);
       supabaseResponse.cookies.getAll().forEach(cookie => {
         redirect.cookies.set(cookie.name, cookie.value, { path: "/" });
       });
@@ -47,5 +46,5 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.redirect(new URL("/login?error=auth", request.url));
+  return NextResponse.redirect(`${SITE_URL}/login?error=auth`);
 }
