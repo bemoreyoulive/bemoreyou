@@ -2,18 +2,28 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase-browser";
 
 export default function AdminLogin() {
   const router = useRouter();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (password === "bemoreyou2024") {
-      router.push("/admin/dashboard");
-    } else {
+    setError("");
+    setLoading(true);
+    const supabase = createClient();
+    const { error: signInError } = await supabase.auth.signInWithPassword({
+      email: "ben@thepersonalbrandingguy.com",
+      password,
+    });
+    setLoading(false);
+    if (signInError) {
       setError("Incorrect password.");
+    } else {
+      router.push("/admin/dashboard");
     }
   }
 
@@ -35,17 +45,19 @@ export default function AdminLogin() {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoFocus
               className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
             />
             {error && <p className="text-red-500 text-xs">{error}</p>}
             <button
               type="submit"
+              disabled={loading || !password}
               className="w-full py-3 rounded-lg text-white text-sm font-semibold tracking-wide transition-all duration-200"
               style={{background: "#2d5a8e"}}
               onMouseOver={e => (e.currentTarget.style.background = "#1e4080")}
               onMouseOut={e => (e.currentTarget.style.background = "#2d5a8e")}
             >
-              Enter
+              {loading ? "Signing in..." : "Enter"}
             </button>
           </form>
         </div>
