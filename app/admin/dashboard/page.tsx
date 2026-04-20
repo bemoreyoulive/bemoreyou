@@ -36,7 +36,7 @@ const clients = [
     started: "2026",
     sessions: 0,
     status: "Setting Up",
-    color: "#6b7280",
+    color: "#7A746E",
     initials: "JH",
   },
   {
@@ -53,67 +53,99 @@ const clients = [
 
 export default function AdminDashboard() {
   return (
-    <div className="min-h-screen" style={{background: "#f7f6f3"}}>
-      {/* Header */}
-      <div className="border-b border-gray-200 px-10 py-5 flex items-center justify-between" style={{background: "#1a1a18"}}>
-        <div>
-          <h1 className="text-xl font-bold tracking-tight text-white">
-            BeMore<span style={{color: "#4ec9d0"}}>You</span>
-          </h1>
-          <p className="text-gray-400 text-xs tracking-widest uppercase mt-0.5">Admin Dashboard</p>
+    <div className="min-h-screen" style={{background: "#F5F1EC"}}>
+      {/* Nav */}
+      <nav style={{
+        background: "rgba(245,241,236,0.95)",
+        backdropFilter: "blur(14px)",
+        borderBottom: "1px solid #E0DBD3",
+        padding: "14px 0",
+      }}>
+        <div style={{maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+          <div>
+            <p style={{fontSize: "1.1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", margin: 0, fontFamily: "var(--font-dm-serif), serif"}}>
+              BeMore<span style={{color: "#4ec9d0"}}>You</span>
+            </p>
+            <p style={{fontSize: "0.63rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: 0}}>Admin Dashboard</p>
+          </div>
+          <a
+            href="/"
+            style={{
+              fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em",
+              textTransform: "uppercase", color: "#7A746E", textDecoration: "none",
+              padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3,
+              transition: "all 0.15s ease",
+            }}
+          >
+            Sign Out
+          </a>
         </div>
-        <a
-          href="/"
-          className="text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-lg border border-gray-600 text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
-        >
-          Sign Out
-        </a>
-      </div>
+      </nav>
 
       {/* Main */}
-      <div className="px-10 py-10 max-w-6xl">
-        <div className="flex items-end justify-between mb-8">
+      <div style={{maxWidth: 1160, margin: "0 auto", padding: "56px 36px"}}>
+        <div style={{display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 40}}>
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Your Clients</h2>
-            <p className="text-gray-500 text-sm mt-1">{clients.filter(c => c.status === "Active").length} active · {clients.length} total</p>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
+              <span style={{display: "inline-block", width: 24, height: 2, background: "#E8521C", verticalAlign: "middle"}} />
+              Your Clients
+            </p>
+            <h2 style={{fontSize: "clamp(2rem, 3vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, letterSpacing: "-0.03em", color: "#1C1C1C", margin: 0, lineHeight: 1.1}}>
+              {clients.filter(c => c.status === "Active").length} active · {clients.length} total
+            </h2>
           </div>
           <button
-            className="py-2.5 px-6 rounded-lg text-white text-xs font-semibold tracking-widest uppercase transition-colors"
-            style={{background: "#2d5a8e"}}
+            style={{
+              padding: "13px 32px", background: "#E8521C", color: "#fff",
+              border: "none", borderRadius: 3, fontSize: "0.84rem",
+              fontWeight: 600, letterSpacing: "0.05em", cursor: "pointer",
+              transition: "background 0.2s ease",
+            }}
+            onMouseOver={e => (e.currentTarget.style.background = "#BF4016")}
+            onMouseOut={e => (e.currentTarget.style.background = "#E8521C")}
           >
             + Add Client
           </button>
         </div>
 
         {/* Client Cards */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20}}>
           {clients.map((client) => (
             <a
               key={client.id}
               href={`/admin/clients/${client.id}`}
-              className="block bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 group"
+              style={{
+                display: "block", background: "#fff", borderRadius: 4,
+                border: "1px solid #E0DBD3", padding: "28px 32px",
+                textDecoration: "none", transition: "box-shadow 0.2s ease, transform 0.2s ease",
+              }}
+              onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 32px rgba(28,28,28,0.10)"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; }}
+              onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; }}
             >
-              <div className="flex items-start justify-between mb-5">
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                  style={{background: client.color}}
-                >
+              <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 20}}>
+                <div style={{
+                  width: 44, height: 44, borderRadius: 3,
+                  background: client.color,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: "#fff", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em",
+                }}>
                   {client.initials}
                 </div>
-                <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                  client.status === "Active"
-                    ? "bg-green-100 text-green-700"
-                    : "bg-gray-100 text-gray-500"
-                }`}>
+                <span style={{
+                  fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em",
+                  textTransform: "uppercase", padding: "4px 10px", borderRadius: 2,
+                  background: client.status === "Active" ? "#e8f5ee" : "#f3f2f0",
+                  color: client.status === "Active" ? "#2e7d4f" : "#7A746E",
+                }}>
                   {client.status}
                 </span>
               </div>
-              <h3 className="text-gray-900 font-bold text-base mb-1">{client.name}</h3>
-              <p className="text-gray-500 text-sm mb-5">{client.role}</p>
-              <div className="flex items-center gap-4 text-xs text-gray-400 border-t border-gray-100 pt-4">
+              <h3 style={{fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px", letterSpacing: "-0.01em"}}>{client.name}</h3>
+              <p style={{fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px"}}>{client.role}</p>
+              <div style={{display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid #E0DBD3", fontSize: "0.78rem", color: "#7A746E"}}>
                 <span>Since {client.started}</span>
-                <span>·</span>
-                <span className="font-semibold" style={{color: client.color}}>{client.sessions} sessions</span>
+                <span style={{color: "#E0DBD3"}}>·</span>
+                <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
               </div>
             </a>
           ))}

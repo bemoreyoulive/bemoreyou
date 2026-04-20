@@ -13,7 +13,7 @@ interface TodoListProps {
   accentColor?: string;
 }
 
-export default function TodoList({ items, accentColor = "#2d5a8e" }: TodoListProps) {
+export default function TodoList({ items, accentColor = "#E8521C" }: TodoListProps) {
   const [statuses, setStatuses] = useState<Record<string, "pending" | "completed">>(
     Object.fromEntries(items.map((item) => [item.id, "pending"]))
   );
@@ -26,47 +26,60 @@ export default function TodoList({ items, accentColor = "#2d5a8e" }: TodoListPro
   }
 
   const completedCount = Object.values(statuses).filter((s) => s === "completed").length;
+  const pct = items.length ? (completedCount / items.length) * 100 : 0;
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
-        <p className="text-sm font-semibold text-gray-700">
+      <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24}}>
+        <p style={{fontSize: "0.85rem", fontWeight: 600, color: "#3D3935", margin: 0}}>
           {completedCount} of {items.length} completed
         </p>
-        <div className="h-2 w-40 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className="h-full rounded-full transition-all duration-300"
-            style={{ width: `${(completedCount / items.length) * 100}%`, background: accentColor }}
-          />
+        <div style={{width: 160, height: 3, background: "#E0DBD3", borderRadius: 99, overflow: "hidden"}}>
+          <div style={{height: "100%", width: `${pct}%`, background: accentColor, borderRadius: 99, transition: "width 0.3s ease"}} />
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div style={{display: "flex", flexDirection: "column", gap: 2}}>
         {items.map((item) => {
           const done = statuses[item.id] === "completed";
           return (
             <div
               key={item.id}
-              className={`flex items-start justify-between gap-4 p-4 rounded-xl border transition-all duration-200 ${
-                done ? "border-gray-100 bg-gray-50" : "border-gray-200 bg-white shadow-sm"
-              }`}
+              style={{
+                display: "flex", alignItems: "flex-start", justifyContent: "space-between",
+                gap: 16, padding: "18px 24px",
+                background: done ? "transparent" : "#fff",
+                border: "1px solid",
+                borderColor: done ? "#E0DBD3" : "#E0DBD3",
+                borderRadius: 3,
+                transition: "background 0.2s ease",
+              }}
             >
-              <div className="flex-1">
-                <p className={`text-sm leading-relaxed ${done ? "line-through text-gray-300" : "text-gray-800"}`}>
+              <div style={{flex: 1}}>
+                <p style={{
+                  fontSize: "0.9rem", lineHeight: 1.65, margin: 0,
+                  color: done ? "#7A746E" : "#1C1C1C",
+                  textDecoration: done ? "line-through" : "none",
+                }}>
                   {item.text}
                 </p>
                 {item.owner && (
-                  <p className="text-xs text-gray-400 mt-1 tracking-wide uppercase font-medium">{item.owner}</p>
+                  <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", marginTop: 4, marginBottom: 0}}>
+                    {item.owner}
+                  </p>
                 )}
               </div>
               <button
                 onClick={() => toggle(item.id)}
-                className="shrink-0 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-lg transition-colors duration-200"
-                style={
-                  done
-                    ? {background: "#f3f4f6", color: "#9ca3af"}
-                    : {background: accentColor, color: "#ffffff"}
-                }
+                style={{
+                  flexShrink: 0,
+                  fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em",
+                  textTransform: "uppercase", padding: "8px 16px", borderRadius: 3,
+                  border: done ? "1px solid #E0DBD3" : "none",
+                  background: done ? "transparent" : accentColor,
+                  color: done ? "#7A746E" : "#fff",
+                  cursor: "pointer", transition: "all 0.15s ease",
+                }}
               >
                 {done ? "Undo" : "Done"}
               </button>

@@ -2,38 +2,52 @@
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6" style={{background: "linear-gradient(135deg, #1a1a18 0%, #2d3748 100%)"}}>
-      <div className="text-center max-w-lg">
-        <div className="mb-3">
-          <span className="text-xs font-semibold tracking-[0.3em] uppercase" style={{color: "#4ec9d0"}}>Don't be beige.</span>
-        </div>
-        <h1 className="text-6xl font-black tracking-tight text-white mb-3 uppercase">
+    <div className="min-h-screen flex flex-col items-center justify-center px-6" style={{background: "#1C1C1C"}}>
+      <div style={{textAlign: "center", maxWidth: 480}}>
+        <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 16}}>
+          Don't be beige.
+        </p>
+        <h1 style={{fontSize: "clamp(3rem, 6vw, 5rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, letterSpacing: "-0.035em", color: "#fff", lineHeight: 1.05, margin: "0 0 8px"}}>
           BeMore<span style={{color: "#4ec9d0"}}>You</span>
         </h1>
-        <p className="text-gray-400 text-sm tracking-widest uppercase mb-12">
+        <p style={{fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7A746E", marginBottom: 56}}>
           Coaching Portal
         </p>
 
-        <div className="flex flex-col gap-4">
+        <div style={{display: "flex", flexDirection: "column", gap: 12}}>
           <a
             href="/admin"
-            className="block w-full py-4 px-8 text-sm font-semibold tracking-widest uppercase transition-all duration-200 rounded-lg"
-            style={{background: "#2d5a8e", color: "white"}}
-            onMouseOver={e => (e.currentTarget.style.background = "#1e4080")}
-            onMouseOut={e => (e.currentTarget.style.background = "#2d5a8e")}
+            style={{
+              display: "block", padding: "17px 38px",
+              background: "#E8521C", color: "#fff",
+              borderRadius: 3, fontSize: "0.84rem", fontWeight: 600,
+              letterSpacing: "0.08em", textTransform: "uppercase",
+              textDecoration: "none", transition: "background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease",
+            }}
+            onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#BF4016"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 10px 36px rgba(232,82,28,0.28)"; }}
+            onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#E8521C"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
           >
             Admin Login
           </a>
           <a
             href="/login"
-            className="block w-full py-4 px-8 text-sm font-semibold tracking-widest uppercase transition-all duration-200 rounded-lg border border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white"
+            style={{
+              display: "block", padding: "17px 38px",
+              background: "transparent", color: "#fff",
+              borderRadius: 3, fontSize: "0.84rem", fontWeight: 600,
+              letterSpacing: "0.08em", textTransform: "uppercase",
+              textDecoration: "none", border: "1px solid rgba(255,255,255,0.15)",
+              transition: "border-color 0.2s ease, color 0.2s ease",
+            }}
+            onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+            onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.15)"; }}
           >
             Client Login
           </a>
         </div>
       </div>
 
-      <p className="absolute bottom-8 text-gray-600 text-xs tracking-widest uppercase">
+      <p style={{position: "absolute", bottom: 32, fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3D3935"}}>
         bemoreyoulive.com
       </p>
     </div>
