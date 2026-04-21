@@ -39,6 +39,7 @@ import { useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import EmailOptIn from "@/components/EmailOptIn";
+import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 export interface ClientConfig {
   name: string;
@@ -316,6 +317,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
         {/* ── HOME ── */}
         {activeTab === "home" && (
           <div>
+            <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
 
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>{sessionLabel}</p>

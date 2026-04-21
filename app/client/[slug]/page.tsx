@@ -5,6 +5,7 @@ import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import EmailOptIn from "@/components/EmailOptIn";
 import MilestoneTracker from "@/components/MilestoneTracker";
+import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -329,6 +330,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
         {/* ── HOME ── */}
         {activeTab === "home" && (
           <div>
+            <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>April 2026 · Session 8</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Andy F — Client Dashboard</h2>
@@ -1081,6 +1083,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
         {/* ── HOME ── */}
         {activeTab === "home" && (
           <div>
+            <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
             <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 24, display: "flex", gap: 12, alignItems: "flex-start"}}>
               <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
@@ -2076,6 +2079,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
         {activeTab === "todos" && (
           <div>
+            <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={client.color} />
             <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
               <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
