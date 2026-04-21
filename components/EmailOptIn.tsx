@@ -42,22 +42,49 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
 
   return (
     <div style={{
-      background: "#fff",
-      border: "1px solid #E0DBD3",
-      borderRadius: 4,
-      padding: "20px 24px",
+      background: opted ? accentColor : "#1C1C1C",
+      borderRadius: 6,
+      padding: "28px 32px",
+      marginBottom: 32,
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: 20,
-      marginTop: 24,
+      gap: 24,
+      transition: "background 0.3s ease",
     }}>
-      <div>
-        <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>
-          Weekly to-do reminders
+      <div style={{ flex: 1 }}>
+        <p style={{
+          fontSize: "0.65rem",
+          fontWeight: 700,
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          color: opted ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.5)",
+          margin: "0 0 6px",
+        }}>
+          {opted ? "✓ You're all set" : "Free bonus — don't miss this"}
         </p>
-        <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: 0, lineHeight: 1.5 }}>
-          Receive a Monday 9am email with your outstanding to-do items and anything you've ticked off that week.
+        <p style={{
+          fontSize: "1.05rem",
+          fontWeight: 700,
+          color: "#fff",
+          margin: "0 0 8px",
+          lineHeight: 1.3,
+          letterSpacing: "-0.01em",
+        }}>
+          {opted
+            ? "Weekly to-do reminders are on"
+            : "Get your to-do list delivered every Monday morning"}
+        </p>
+        <p style={{
+          fontSize: "0.82rem",
+          color: opted ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.6)",
+          margin: 0,
+          lineHeight: 1.6,
+          maxWidth: 480,
+        }}>
+          {opted
+            ? "Ben will send you a personalised email every Monday at 9am — what's done, what's outstanding, and a direct link back here."
+            : "Every Monday at 9am, Ben sends you a personalised snapshot of your progress — what you've knocked off, what's still on the list, and a direct link back to your dashboard. Takes 30 seconds to read. Keeps you moving."}
         </p>
       </div>
       <button
@@ -66,11 +93,11 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
         aria-pressed={opted}
         style={{
           flexShrink: 0,
-          width: 48,
-          height: 26,
-          borderRadius: 13,
-          background: opted ? accentColor : "#E0DBD3",
-          border: "none",
+          width: 56,
+          height: 30,
+          borderRadius: 15,
+          background: opted ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.15)",
+          border: "2px solid rgba(255,255,255,0.4)",
           cursor: saving ? "not-allowed" : "pointer",
           position: "relative",
           transition: "background 0.2s ease",
@@ -80,13 +107,13 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
         <span style={{
           position: "absolute",
           top: 3,
-          left: opted ? 25 : 3,
+          left: opted ? 28 : 3,
           width: 20,
           height: 20,
           borderRadius: "50%",
           background: "#fff",
           transition: "left 0.2s ease",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+          boxShadow: "0 1px 4px rgba(0,0,0,0.3)",
         }} />
       </button>
     </div>

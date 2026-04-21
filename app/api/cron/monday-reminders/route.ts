@@ -159,6 +159,16 @@ function buildEmail(
       </a>
     </div>
 
+    <!-- Note -->
+    <div style="background: #fff; border: 1px solid #E0DBD3; border-radius: 4px; padding: 20px 24px; margin-bottom: 32px;">
+      <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0 0 10px;">
+        <strong>Note:</strong> This list may be out of date if you haven't updated it recently. If that's the case, <a href="${dashboardUrl}" style="color: #E8521C; text-decoration: none; font-weight: 600;">log in to your dashboard here</a> using your magic link, tick off what's done, and Ben will be able to see your progress.
+      </p>
+      <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0;">
+        Any problems logging in, send Ben a screenshot via <strong>WhatsApp</strong> or <strong>email</strong> and he'll get you sorted.
+      </p>
+    </div>
+
     <!-- Footer -->
     <p style="font-size: 12px; color: #7A746E; text-align: center; line-height: 1.6; margin: 0;">
       Sent every Monday at 9am by Ben · <a href="${dashboardUrl}" style="color: #7A746E;">bemoreyoulive.com</a>

@@ -327,6 +327,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
         {/* ── HOME ── */}
         {activeTab === "home" && (
           <div>
+            <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>April 2026 · Session 8</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Andy F — Client Dashboard</h2>
 
@@ -380,7 +381,6 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               );
             })}
 
-            <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <CommentBox clientName="Andy Felton" tabName="Home" slug={slug} />
           </div>
         )}
@@ -1072,6 +1072,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
         {/* ── HOME ── */}
         {activeTab === "home" && (
           <div>
+            <EmailOptIn slug={slug} accentColor={NM_COLOR} />
             <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 24, display: "flex", gap: 12, alignItems: "flex-start"}}>
               <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
               <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 11:</strong> Phase 2 starts now. Foundation is built. The priority is conversion and sales. The May LinkedIn plan in Content Ideas is ready — copy, paste, generate. You know what to do.</p>
@@ -1145,7 +1146,6 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
-            <EmailOptIn slug={slug} accentColor={NM_COLOR} />
             <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
           </div>
         )}
@@ -1988,6 +1988,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
         {activeTab === "todos" && (
           <div>
+            <EmailOptIn slug={slug} accentColor={client.color} />
             <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
               <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
               Your Actions
@@ -1996,7 +1997,6 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
               To-Do List
             </h2>
             <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
-            <EmailOptIn slug={slug} accentColor={client.color} />
             <CommentBox clientName={client.name} tabName="To-Do" slug={slug} />
           </div>
         )}
