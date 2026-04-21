@@ -51,7 +51,7 @@ export interface ClientConfig {
 const TABS = [
   { id: "home", label: "Home & To-Do" },
   { id: "milestones", label: "Milestones" },
-  { id: "positioning", label: "Positioning" },
+  { id: "brand", label: "Brand Assets" },
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
@@ -361,8 +361,8 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
           <MilestoneTracker color={color} />
         )}
 
-        {/* ── POSITIONING ── */}
-        {activeTab === "positioning" && (
+        {/* ── BRAND ASSETS ── */}
+        {activeTab === "brand" && (
           POSITIONING.headline ? (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Who You're For & How You're Different</p>

@@ -268,7 +268,7 @@ function IdeaCard({ idea, isSack = false }: { idea: ContentIdea; isSack?: boolea
 const AF_TABS = [
   { id: "home", label: "Home & To-Do" },
   { id: "milestones", label: "Milestones" },
-  { id: "positioning", label: "Positioning" },
+  { id: "brand", label: "Brand Assets" },
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
@@ -393,9 +393,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
         )}
 
         {/* ── POSITIONING ── */}
-        {activeTab === "positioning" && (
+        {activeTab === "brand" && (
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>Who You're For & How You're Different</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>Your Brand Foundation</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Positioning</h2>
 
             <Callout type="green">
@@ -968,7 +968,7 @@ const tabs = [
   { id: "todos", label: "To-Do" },
   { id: "milestones", label: "Milestones" },
   { id: "goals", label: "Goals" },
-  { id: "positioning", label: "Positioning" },
+  { id: "brand", label: "Brand Assets" },
   { id: "messaging", label: "Messaging" },
   { id: "content", label: "Content Ideas" },
 ];
@@ -2103,11 +2103,11 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
           <MilestoneTracker slug={slug} color={client.color} />
         )}
 
-        {activeTab === "positioning" && (
+        {activeTab === "brand" && (
           <div>
             <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
               <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
-              Who You Are & Who You're For
+              Your Brand Foundation
             </p>
             <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 40px", letterSpacing: "-0.02em"}}>
               Positioning
