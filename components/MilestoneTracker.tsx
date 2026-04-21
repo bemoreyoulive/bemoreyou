@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase-browser";
 
-const MILESTONES = [
+const MILESTONES: { id: string; label: string; description: string }[] = [
   {
     id: "m1",
     label: "Blueprint complete",
