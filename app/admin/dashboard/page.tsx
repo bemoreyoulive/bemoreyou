@@ -130,15 +130,23 @@ export default function AdminDashboard() {
               </div>
               <h3 style={{fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px", letterSpacing: "-0.01em"}}>{client.name}</h3>
               <p style={{fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px"}}>{client.role || "Questionnaire submitted"}</p>
-              <div style={{display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid #E0DBD3", fontSize: "0.78rem", color: "#7A746E"}}>
-                <span>Since {client.started}</span>
-                <span style={{color: "#E0DBD3"}}>·</span>
-                <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
+              <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: 16, borderTop: "1px solid #E0DBD3", fontSize: "0.78rem", color: "#7A746E"}}>
+                <div style={{display: "flex", alignItems: "center", gap: 12}}>
+                  <span>Since {client.started}</span>
+                  <span style={{color: "#E0DBD3"}}>·</span>
+                  <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
+                </div>
+                {client.status !== "Pending" && (
+                  <a
+                    href={`/client/${client.slug}`}
+                    onClick={e => e.stopPropagation()}
+                    style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7A746E", textDecoration: "none", padding: "5px 12px", border: "1px solid #E0DBD3", borderRadius: 2}}
+                  >
+                    Preview →
+                  </a>
+                )}
                 {client.status === "Pending" && (
-                  <>
-                    <span style={{color: "#E0DBD3"}}>·</span>
-                    <span style={{fontWeight: 600, color: "#E8521C"}}>View answers →</span>
-                  </>
+                  <span style={{fontWeight: 600, color: "#E8521C", fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase"}}>View answers →</span>
                 )}
               </div>
             </a>

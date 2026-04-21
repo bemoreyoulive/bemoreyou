@@ -391,8 +391,8 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
             <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 40px", letterSpacing: "-0.02em"}}>
               To-Do List
             </h2>
-            <ClientTodoList items={client.todos} clientName={client.name} accentColor={client.color} />
-            <CommentBox clientName={client.name} tabName="To-Do" />
+            <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
+            <CommentBox clientName={client.name} tabName="To-Do" slug={slug} />
           </div>
         )}
 
@@ -429,7 +429,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </ul>
               </div>
             </div>
-            <CommentBox clientName={client.name} tabName="Goals" />
+            <CommentBox clientName={client.name} tabName="Goals" slug={slug} />
           </div>
         )}
 
@@ -472,7 +472,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </div>
               </div>
             </div>
-            <CommentBox clientName={client.name} tabName="Positioning" />
+            <CommentBox clientName={client.name} tabName="Positioning" slug={slug} />
           </div>
         )}
 
@@ -493,7 +493,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </div>
               ))}
             </div>
-            <CommentBox clientName={client.name} tabName="Messaging" />
+            <CommentBox clientName={client.name} tabName="Messaging" slug={slug} />
           </div>
         )}
 
@@ -514,7 +514,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </div>
               ))}
             </div>
-            <CommentBox clientName={client.name} tabName="Content Ideas" />
+            <CommentBox clientName={client.name} tabName="Content Ideas" slug={slug} />
           </div>
         )}
 
