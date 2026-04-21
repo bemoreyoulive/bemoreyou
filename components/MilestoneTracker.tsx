@@ -119,84 +119,86 @@ export default function MilestoneTracker({ slug, color }: Props) {
           return (
             <div
               key={m.id}
+              onClick={() => !isSaving && toggle(m.id)}
               style={{
-                background: "#fff",
+                background: done ? "#fff" : "#fff",
                 border: done ? `1px solid ${color}` : "1px solid #E0DBD3",
                 borderLeft: done ? `4px solid ${color}` : "4px solid #E0DBD3",
                 borderRadius: 4,
                 padding: "18px 22px",
                 display: "flex",
-                alignItems: "flex-start",
-                gap: 16,
-                transition: "border-color 0.2s ease, opacity 0.2s ease",
+                alignItems: "center",
+                gap: 20,
+                cursor: isSaving ? "not-allowed" : "pointer",
+                transition: "border-color 0.2s ease",
                 opacity: isSaving ? 0.6 : 1,
               }}
             >
-              {/* Number / check button */}
-              <button
-                onClick={() => !isSaving && toggle(m.id)}
-                disabled={isSaving}
-                title={done ? "Mark as not done" : "Mark as done"}
-                style={{
-                  width: 30,
-                  height: 30,
-                  borderRadius: "50%",
-                  background: done ? color : "transparent",
-                  border: done ? `2px solid ${color}` : "2px solid #E0DBD3",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                  color: done ? "#fff" : "#B0A89E",
-                  fontSize: done ? "0.8rem" : "0.75rem",
-                  fontWeight: 700,
-                  cursor: isSaving ? "not-allowed" : "pointer",
-                  transition: "all 0.2s ease",
-                }}
-              >
-                {done ? "✓" : i + 1}
-              </button>
+              {/* Step number */}
+              <span style={{
+                flexShrink: 0,
+                width: 24,
+                height: 24,
+                borderRadius: "50%",
+                background: done ? color : "#E0DBD3",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                color: "#fff",
+                transition: "background 0.2s ease",
+              }}>
+                {i + 1}
+              </span>
 
               {/* Content */}
               <div style={{ flex: 1 }}>
                 <p style={{
                   fontSize: "0.92rem",
                   fontWeight: 600,
-                  color: done ? "#1C1C1C" : "#3D3935",
-                  margin: "0 0 4px",
-                  textDecoration: done ? "none" : "none",
+                  color: "#1C1C1C",
+                  margin: "0 0 3px",
+                  textDecoration: done ? "line-through" : "none",
+                  opacity: done ? 0.5 : 1,
                 }}>
                   {m.label}
                 </p>
-                <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>
+                <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6, opacity: done ? 0.6 : 1 }}>
                   {m.description}
                 </p>
               </div>
 
-              {/* Done badge */}
-              {done && (
-                <span style={{
-                  flexShrink: 0,
-                  fontSize: "0.62rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color,
-                  background: `${color}18`,
-                  padding: "3px 8px",
-                  borderRadius: 2,
-                  alignSelf: "center",
+              {/* Sliding toggle */}
+              <div style={{ flexShrink: 0 }}>
+                <div style={{
+                  width: 48,
+                  height: 26,
+                  borderRadius: 13,
+                  background: done ? color : "#E0DBD3",
+                  position: "relative",
+                  transition: "background 0.2s ease",
                 }}>
-                  Done
-                </span>
-              )}
+                  <div style={{
+                    position: "absolute",
+                    top: 3,
+                    left: done ? 25 : 3,
+                    width: 20,
+                    height: 20,
+                    borderRadius: "50%",
+                    background: "#fff",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+                    transition: "left 0.2s ease",
+                  }} />
+                </div>
+              </div>
             </div>
           );
         })}
       </div>
 
       <p style={{ fontSize: "0.75rem", color: "#B0A89E", marginTop: 20, lineHeight: 1.6 }}>
-        Click the circle next to any milestone to mark it complete. Ben can also update these after your sessions together.
+        Toggle any milestone to mark it complete — your progress saves automatically.
       </p>
     </div>
   );
