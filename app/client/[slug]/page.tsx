@@ -1181,8 +1181,13 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
             {/* Headline + One-liner */}
             <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20}}>
               <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "22px 24px"}}>
-                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 10px"}}>LinkedIn Headline</p>
-                <p style={{fontSize: "0.92rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.5, margin: "0 0 10px"}}>
+                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 6px"}}>LinkedIn Headline — Live</p>
+                <p style={{fontSize: "0.72rem", color: "#c4793a", fontWeight: 600, margin: "0 0 10px"}}>⚠ "Dale Carnegie Trainer" still showing — remove this (you resigned Session 9)</p>
+                <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.5, margin: "0 0 12px"}}>
+                  "Championing children's emotional regulation & peace through sound & story, especially neurodivergent minds | Founder, The PeacePath® & HushAway® | Neurodiversity Coach | Sound Therapy Practitioner | Dale Carnegie Trainer"
+                </p>
+                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 6px"}}>Recommended headline</p>
+                <p style={{fontSize: "0.88rem", fontWeight: 600, color: NM_COLOR, lineHeight: 1.5, margin: "0 0 10px"}}>
                   "Helping children aged 4–10 find calm through sound & story | Founder, HushAway® & The PeacePath® | Emotional regulation without the fight"
                 </p>
                 <p style={{fontSize: "0.78rem", color: "#9e9b94", margin: 0, lineHeight: 1.5}}>Lead with the outcome parents want, not your credentials. Credentials follow.</p>
@@ -1193,6 +1198,28 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
                   "I help parents of children who struggle with emotional regulation — think ADHD, anxiety, or kids who just won't switch off at night — find calm through sound and story. No medication needed, no diagnosis required."
                 </p>
                 <p style={{fontSize: "0.78rem", color: "#9e9b94", margin: 0, lineHeight: 1.5}}>Use this when someone asks what you do. Lead with the parent's pain, then HushAway as the answer.</p>
+              </div>
+            </div>
+
+            {/* About section */}
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "24px 28px", marginBottom: 20}}>
+              <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 14px"}}>About Section — Live on LinkedIn</p>
+              <p style={{fontSize: "0.88rem", color: "#3d3935", lineHeight: 1.8, margin: "0 0 10px", whiteSpace: "pre-wrap"}}>{`The PeacePath® and HushAway® exist for one simple reason: to give every child a place that feels like a hug when the world gets too loud.
+
+I kept meeting parents who were exhausted, overwhelmed, and still showing up with so much love… and little ones who were carrying far more emotion than their tiny bodies could hold.
+
+AND..I strongly believe every child, neurodivergent or neurotypical, deserves safety, softness, and somewhere predictable to land. Sound and storytelling became my way of offering that: gentle, sensory-aware stories and soundscapes that help busy brains settle and bodies breathe again.
+
+So, I champion children's emotional regulation and peace through the science of sound and the power of storytelling. Through The PeacePath® and HushAway®, we create gentle, research-informed audio sanctuaries that support big feelings, busy minds and especially neurodivergent children who often feel overwhelmed by the world.
+
+What we do:
+• Support children who feel everything deeply (and the grown-ups who love them), along with teachers, SENCOs and clinicians.
+• Blend science × storytelling × sound to create short, predictable listens and simple rituals that support grounding, focus, transitions and sleep readiness.
+• Design calm experiences and tools: digital soundscapes, guided affirmations, HushAway PODs, PeacePacks and ready-to-use toolkits for home and school.
+• Partner with parents, practitioners, universities and an Advisory Circle of doctors, scientists and neurodiversity experts so what we build is kind, credible and truly useful.
+• Grow our CIC, The PeacePath Project, to widen access for under-served communities through grants, sponsorships and supported school placements.`}</p>
+              <div style={{background: "#fdf8ec", borderLeft: "3px solid #c4793a", borderRadius: "0 4px 4px 0", padding: "10px 14px", marginTop: 12}}>
+                <p style={{fontSize: "0.78rem", color: "#8a6e2a", margin: 0, lineHeight: 1.6}}>Ben's note: Strong opening. The "hug when the world gets too loud" line is your best. Consider leading with Nikki more personally — the About section currently leads with the brand. Starting with "I kept meeting parents…" as your first line would make it land harder.</p>
               </div>
             </div>
 
