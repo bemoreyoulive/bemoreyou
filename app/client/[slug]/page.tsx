@@ -3,6 +3,7 @@
 import { use, useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
+import EmailOptIn from "@/components/EmailOptIn";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -379,6 +380,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               );
             })}
 
+            <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <CommentBox clientName="Andy Felton" tabName="Home" slug={slug} />
           </div>
         )}
@@ -1143,6 +1145,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
+            <EmailOptIn slug={slug} accentColor={NM_COLOR} />
             <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
           </div>
         )}
@@ -1993,6 +1996,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
               To-Do List
             </h2>
             <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
+            <EmailOptIn slug={slug} accentColor={client.color} />
             <CommentBox clientName={client.name} tabName="To-Do" slug={slug} />
           </div>
         )}
