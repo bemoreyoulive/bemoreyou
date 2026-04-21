@@ -1048,7 +1048,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
   const nmTabs = [
     { id: "home", label: "Home" },
     { id: "milestones", label: "Milestones" },
-    { id: "positioning", label: "Positioning" },
+    { id: "brand", label: "Brand Assets" },
     { id: "messaging", label: "Messaging" },
     { id: "content", label: "Content Ideas" },
     { id: "recs", label: "Ben's Recommendations" },
@@ -1164,20 +1164,90 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <MilestoneTracker slug={slug} color={NM_COLOR} />
         )}
 
-        {/* ── POSITIONING ── */}
-        {activeTab === "positioning" && (
+        {/* ── BRAND ASSETS ── */}
+        {activeTab === "brand" && (
           <div>
-            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Positioning</h2>
-            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>Who you're for, what makes you different, and the tensions worth watching.</p>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: NM_COLOR, margin: "0 0 4px"}}>Your Brand Foundation</p>
+            <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em"}}>Brand Assets</h2>
 
-            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Your Audience</p>
-            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "0 22px", marginBottom: 28}}>
+            {/* Positioning Statement */}
+            <div style={{background: NM_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 20}}>
+              <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px"}}>Positioning Statement</p>
+              <p style={{fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0}}>
+                "I help parents of children aged 4–10 find calm without the fight — through sound, story, and sensory tools that actually work at home, before bed, and before the diagnosis lands."
+              </p>
+            </div>
+
+            {/* Headline + One-liner */}
+            <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20}}>
+              <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "22px 24px"}}>
+                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 10px"}}>LinkedIn Headline</p>
+                <p style={{fontSize: "0.92rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.5, margin: "0 0 10px"}}>
+                  "Helping children aged 4–10 find calm through sound & story | Founder, HushAway® & The PeacePath® | Emotional regulation without the fight"
+                </p>
+                <p style={{fontSize: "0.78rem", color: "#9e9b94", margin: 0, lineHeight: 1.5}}>Lead with the outcome parents want, not your credentials. Credentials follow.</p>
+              </div>
+              <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "22px 24px"}}>
+                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 10px"}}>Networking One-Liner</p>
+                <p style={{fontSize: "0.92rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.5, margin: "0 0 10px"}}>
+                  "I help parents of children who struggle with emotional regulation — think ADHD, anxiety, or kids who just won't switch off at night — find calm through sound and story. No medication needed, no diagnosis required."
+                </p>
+                <p style={{fontSize: "0.78rem", color: "#9e9b94", margin: 0, lineHeight: 1.5}}>Use this when someone asks what you do. Lead with the parent's pain, then HushAway as the answer.</p>
+              </div>
+            </div>
+
+            {/* ICP */}
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "24px 28px", marginBottom: 20}}>
+              <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 18px"}}>Your Ideal Client (ICP)</p>
+              <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16}}>
+                <div>
+                  <p style={{fontSize: "0.72rem", fontWeight: 700, color: NM_COLOR, margin: "0 0 6px"}}>Who they are</p>
+                  <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0}}>Parent of a child aged 4–10 with emotional regulation challenges — neurodiverse (ADHD, autism, sensory processing disorder) or simply a child who won't regulate. Exhausted, overwhelmed, and out of ideas. Sceptical of medication. Waiting for a diagnosis or just wanting something they can use tonight.</p>
+                </div>
+                <div>
+                  <p style={{fontSize: "0.72rem", fontWeight: 700, color: NM_COLOR, margin: "0 0 6px"}}>What they say</p>
+                  {[
+                    '"I just want to push the pause button."',
+                    '"I don\'t know how to help them."',
+                    '"I\'ve tried everything and nothing works."',
+                    '"I\'m waiting months for an assessment — what do I do now?"',
+                    '"I don\'t want to medicate unless we have to."',
+                  ].map((q, i) => (
+                    <p key={i} style={{fontSize: "0.82rem", color: "#6b6860", margin: "0 0 6px", fontStyle: "italic"}}>{q}</p>
+                  ))}
+                </div>
+              </div>
+              <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16}}>
+                <div>
+                  <p style={{fontSize: "0.72rem", fontWeight: 700, color: "#2e7d4f", margin: "0 0 8px"}}>Green flags</p>
+                  {["Willing to try something holistic", "Parent-led, not waiting for school to fix it", "Wants tools they can use at home tonight", "Open to a subscription product if it works", "Follows wellness, parenting, or ND accounts"].map((f, i) => (
+                    <div key={i} style={{display: "flex", gap: 8, marginBottom: 6}}>
+                      <span style={{color: "#2e7d4f", fontWeight: 700, flexShrink: 0}}>✓</span>
+                      <p style={{fontSize: "0.82rem", color: "#6b6860", margin: 0}}>{f}</p>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <p style={{fontSize: "0.72rem", fontWeight: 700, color: "#c0392b", margin: "0 0 8px"}}>Red flags</p>
+                  {["Expects a medical cure or clinical outcome", "Wants a one-size solution", "Doesn't believe in holistic approaches", "Will argue with the product instead of using it", "Looking for free content only"].map((f, i) => (
+                    <div key={i} style={{display: "flex", gap: 8, marginBottom: 6}}>
+                      <span style={{color: "#c0392b", fontWeight: 700, flexShrink: 0}}>✗</span>
+                      <p style={{fontSize: "0.82rem", color: "#6b6860", margin: 0}}>{f}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Audience tiers */}
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", margin: "0 0 12px"}}>Audience Tiers</p>
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "0 22px", marginBottom: 20}}>
               {[
-                { badge: "Primary", badgeBg: "#eef4f2", badgeColor: "#3d6b5e", text: "Parents of children aged 4–10 with emotional regulation challenges — particularly those with neurodiverse children (ADHD, autism, sensory processing disorders) who are sceptical of medication, waiting for a diagnosis, and feel unseen and unsupported." },
+                { badge: "Primary", badgeBg: "#eef4f2", badgeColor: "#3d6b5e", text: "Parents of children aged 4–10 with emotional regulation challenges — particularly neurodiverse children (ADHD, autism, sensory processing disorders) who are sceptical of medication, waiting for a diagnosis, and feel unseen and unsupported." },
                 { badge: "Secondary", badgeBg: "#eef2f7", badgeColor: "#3a5c7a", text: "Schools — SENCOs, classroom teachers, and special educational needs leads. Demand is growing as the SEN review forces ND children into underprepared mainstream schools." },
                 { badge: "Tertiary", badgeBg: "#fdf8ec", badgeColor: "#8a6e2a", text: "Therapists and clinicians working with children. Researchers. University partners. These audiences build credibility more than revenue." },
-                { badge: "Emerging", badgeBg: "#fdf3ea", badgeColor: "#c4793a", text: "One-to-one home tutors working with children approved to leave mainstream school. Spotted in Session 10 — a segment Calm and Headspace won't specifically target." },
-                { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Parents expecting a medical cure or quick fix. People who want a one-size solution. Those who don't believe in holistic approaches. They'll drain your energy and argue with your product." },
+                { badge: "Emerging", badgeBg: "#fdf3ea", badgeColor: "#c4793a", text: "One-to-one home tutors working with children approved to leave mainstream school — a segment Calm and Headspace won't specifically target." },
+                { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Parents expecting a medical cure or quick fix. People who want a one-size solution. They'll drain your energy and argue with your product." },
               ].map((row, i) => (
                 <div key={i} style={{display: "flex", alignItems: "flex-start", gap: 14, padding: "11px 0", borderBottom: i < 4 ? "1px solid #e4e2dc" : "none"}}>
                   <span style={{fontSize: "0.68rem", fontWeight: 700, padding: "3px 10px", borderRadius: 20, whiteSpace: "nowrap", flexShrink: 0, marginTop: 1, background: row.badgeBg, color: row.badgeColor}}>{row.badge}</span>
@@ -1186,15 +1256,16 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>What Makes You Different</p>
-            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 28}}>
+            {/* Differentiators */}
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", margin: "0 0 12px"}}>What Makes You Different</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 20}}>
               {[
                 { title: "Customisable by design", body: "What works for one ADHD child won't work for another. You've built that in from day one — children choose how they listen. That's both a product differentiator and a philosophical stance." },
-                { title: "An expert circle, not just a founder's opinion", body: "11+ doctors, ASMR researchers, sleep practitioners, and neuro-psychologists on your advisory board. Plus The Sleep Charity as a partner. This is unusual for a startup at this stage." },
-                { title: "55+ children across the world have tested it", body: "Your SoundSonic Ambassadors are real families who've been using HushAway for months. That's evidence — not a beta list. You can use this more than you currently do." },
-                { title: "Holistic and honest about what it is", body: "No medical claims. \"Functional, not scientific.\" This is a strength, not a limitation — it's what separates you from anything that overpromises and lets families down." },
-                { title: "You treat children like they can handle more than cartoons", body: "No fluffy dogs, no pastel teddies, no avatar world. Enchanted but real. You're making something for children that respects their intelligence. That's rare and worth saying aloud." },
-                { title: "An unusually broad background", body: "Education, business leadership, corporate training, coaching, nursery operations, sound therapy, sensory modulation — most competitors come from one of those. You've come from all of them." },
+                { title: "An expert circle, not just a founder's opinion", body: "11+ doctors, ASMR researchers, sleep practitioners, and neuro-psychologists on your advisory board. Plus The Sleep Charity as a partner. Unusual for a startup at this stage." },
+                { title: "55+ children across the world have tested it", body: "Your SoundSonic Ambassadors are real families who've been using HushAway for months. That's evidence — not a beta list." },
+                { title: "Holistic and honest about what it is", body: "No medical claims. \"Functional, not scientific.\" This is a strength — it's what separates you from anything that overpromises and lets families down." },
+                { title: "You treat children like they can handle more than cartoons", body: "Enchanted but real. No fluffy dogs, no pastel teddies. You're making something for children that respects their intelligence. That's rare." },
+                { title: "An unusually broad background", body: "Education, business leadership, corporate training, coaching, nursery operations, sound therapy — most competitors come from one of those. You've come from all of them." },
               ].map((diff, i) => (
                 <div key={i} style={{display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 14px", background: "#f2f1ee", borderRadius: 6}}>
                   <div style={{width: 28, height: 28, borderRadius: 6, background: "#eef4f2", color: NM_COLOR, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0}}>✦</div>
@@ -1206,31 +1277,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Strategic Tensions Worth Watching</p>
-            <div style={{display: "flex", flexDirection: "column", gap: 12, marginBottom: 28}}>
-              {[
-                { title: "Pushing HushAway vs. leading with Nikki", body: "You're 20 times more memorable than a business brand — that's not a metaphor, it's a practical reality. Right now you're still defaulting to HushAway-forward content on LinkedIn. People need to find you first, then discover HushAway through you. The August name change made this worse by severing your personal brand continuity with 4,000+ existing followers." },
-                { title: "Metrics anxiety vs. what actually matters", body: "820+ newsletter subscribers in a matter of weeks. That's a captive audience who actively said \"yes, I want to hear from you.\" But you're still watching LinkedIn likes as a proxy for validation. The likes dropped when you pivoted away from Dale Carnegie and rebranded — they'll come back as your new audience builds. In the meantime, 820 email subscribers is genuinely impressive. Focus there." },
-                { title: "Deep value content vs. top-of-funnel content", body: "The expert interview videos, the long-form soundscapes, the detailed educational posts — these are genuinely valuable, but they belong in your newsletter and Kajabi, not on LinkedIn. The people discovering you on LinkedIn are strangers. They need the surface: your opinions, your stories, your face. Once they're on your email list, serve them the depth." },
-                { title: "Doing everything yourself vs. trusting your team", body: "You are building this largely solo while also earning your bread and butter through corporate training. Since January 2026 you've been running at high intensity. The agency, the PR, the expert calls, the LinkedIn engagement — it's too much. The April agency review is important. Be clear about what you actually need from them vs. what you're covering yourself." },
-                { title: "The credibility gap", body: "You're not a parent. You're not neurodiverse. You know this. And you've done the right things to address it — expert circle, nursery history, thousands of families trained, real product testing with real children. But this isn't a one-time disclosure. It's an ongoing positioning challenge that needs weaving into your content regularly, not just mentioned when someone asks." },
-              ].map((tension, i) => (
-                <div key={i} style={{border: "1px solid #e4e2dc", borderRadius: 6, overflow: "hidden"}}>
-                  <div onClick={() => setOpenTensions(prev => ({...prev, [i]: !prev[i]}))} style={{display: "flex", alignItems: "center", gap: 12, padding: "13px 16px", cursor: "pointer", background: "#fff", userSelect: "none"}}>
-                    <div style={{width: 22, height: 22, borderRadius: "50%", background: "#fdf8ec", color: "#8a6e2a", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0}}>{i + 1}</div>
-                    <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", flex: 1, margin: 0}}>{tension.title}</p>
-                    <span style={{color: "#9e9b94", fontSize: "0.72rem", transition: "transform 0.2s", transform: openTensions[i] ? "rotate(90deg)" : "none"}}>▶</span>
-                  </div>
-                  {openTensions[i] && (
-                    <div style={{padding: "4px 16px 14px 50px", background: "#fff"}}>
-                      <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0}}>{tension.body}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <CommentBox clientName="Nikki McReynolds" tabName="Positioning" slug={slug} />
+            <CommentBox clientName="Nikki McReynolds" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
