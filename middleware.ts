@@ -46,18 +46,21 @@ export async function middleware(request: NextRequest) {
     if (user.email === ADMIN_EMAIL) return supabaseResponse;
 
     // Client must own this slug
-    const { data: profile } = await supabase
+    // Use user_metadata slug first (set at account creation), fall back to client_profiles
+    const metaSlug = user.user_metadata?.slug as string | undefined;
+    const clientSlug = metaSlug ?? (await supabase
       .from("client_profiles")
       .select("slug")
       .eq("id", user.id)
-      .single();
+      .single()
+      .then(r => r.data?.slug));
 
-    if (!profile || profile.slug !== slug) {
-      // Redirect them to their own dashboard
-      if (profile?.slug) {
-        return NextResponse.redirect(new URL(`/client/${profile.slug}`, request.url));
-      }
+    if (!clientSlug) {
       return NextResponse.redirect(new URL("/login", request.url));
+    }
+
+    if (slug !== clientSlug) {
+      return NextResponse.redirect(new URL(`/client/${clientSlug}`, request.url));
     }
 
     return supabaseResponse;
