@@ -126,16 +126,14 @@ const TODOS: { id: string; text: string; subtext?: string; section: string }[] =
 // ─── POSITIONING ─────────────────────────────────────────────────────────────
 // Fill in after Session 2.
 
-const POSITIONING = {
+const POSITIONING: {
+  headline: string;
+  differentiators: string[];
+  audiences: { label: string; detail: string }[];
+} = {
   headline: "", // e.g. "I help X do Y so they can Z"
-  differentiators: [
-    // "What makes them different #1",
-    // "What makes them different #2",
-  ],
-  audiences: [
-    // { label: "Primary", detail: "Description of primary audience" },
-    // { label: "Avoid", detail: "Who is NOT right for them" },
-  ],
+  differentiators: [],
+  audiences: [],
 };
 
 // ─── HEADLINES ───────────────────────────────────────────────────────────────
