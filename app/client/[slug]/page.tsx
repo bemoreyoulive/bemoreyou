@@ -1012,6 +1012,902 @@ function PendingDashboard({ slug }: { slug: string }) {
   );
 }
 
+// ─── NIKKI McREYNOLDS DASHBOARD ──────────────────────────────────────────────
+
+const NM_COLOR = "#7c3aed";
+
+const nmTodos = [
+  { id: "nm1", text: "HushAway Pod — travel to Huddersfield, meet the head teacher, get it set up. Build a simple case study framework for the 2-month placement" },
+  { id: "nm2", text: "Post LinkedIn job ad — marketing assistant, ~15 hrs/week, email campaigns + content scheduling. Keep it open: \"email me if interested, we'll build the spec together\"" },
+  { id: "nm3", text: "Switch outgoing emails to send from Nikki personally (not HushAway) — open rates will improve immediately. Lead the next email with your personal story, not expert content" },
+  { id: "nm4", text: "Expect an introduction from Colby — Ben has already made contact. Take the call, it's worth your time" },
+  { id: "nm5", text: "Explore UGC agency and paid ads agencies — meetings already booked. The goal: identify the fastest route to paid conversions" },
+  { id: "nm6", text: "Hire a social media VA (not a full agency) — ~£20/hr, 15 hrs/week. They create content, schedule, engage with comments, and follow up with interested parents. You are the library. They are the librarian." },
+  { id: "nm7", text: "Check SEO weekly — now you're managing the website yourself. If rankings drop, it's expensive to rebuild" },
+  { id: "nm8", text: "Use the May LinkedIn plan in the Content Ideas tab — copy the prompt for each week straight into your Claude and generate the post. Done in minutes." },
+  { id: "nm9", text: "Drop to 3 posts/week on Instagram, Facebook, TikTok from 1 May — quality over volume. Windsor.ai proved founder content outperforms everything else" },
+  { id: "nm10", text: "Start collecting parent testimonials and case studies — the school Pod placement is the beginning. PR agencies need a parent saying \"here's what changed.\" Get it on record." },
+  { id: "nm11", text: "Protect your mornings — you came back from Portugal recalibrated. Don't let the pace creep back. The business needs your best thinking, not your most hours." },
+];
+
+function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
+  const [activeTab, setActiveTab] = useState("home");
+  const [openTensions, setOpenTensions] = useState<Record<number, boolean>>({});
+  const [contentSubTab, setContentSubTab] = useState("video");
+
+  const nmTabs = [
+    { id: "home", label: "Home" },
+    { id: "positioning", label: "Positioning" },
+    { id: "messaging", label: "Messaging" },
+    { id: "content", label: "Content Ideas" },
+    { id: "recs", label: "Ben's Recommendations" },
+    { id: "goals", label: "Your Goals" },
+  ];
+
+  return (
+    <div style={{minHeight: "100vh", background: "#f7f6f3"}}>
+      <nav style={{position: "sticky", top: 0, zIndex: 100, background: "rgba(247,246,243,0.97)", backdropFilter: "blur(14px)", borderBottom: "1px solid #e4e2dc", padding: "0 32px", display: "flex", alignItems: "stretch", gap: 0}}>
+        <div style={{display: "flex", alignItems: "center", paddingRight: 32, borderRight: "1px solid #e4e2dc", marginRight: 8, flexShrink: 0}}>
+          <div style={{display: "flex", alignItems: "center", gap: 10}}>
+            <div style={{width: 36, height: 36, borderRadius: 3, background: NM_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700}}>NM</div>
+            <div>
+              <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", margin: 0}}>Nikki McReynolds</p>
+              <p style={{fontSize: "0.68rem", color: "#6b6860", margin: 0}}>Founder, HushAway</p>
+            </div>
+          </div>
+        </div>
+        <div style={{display: "flex", alignItems: "stretch", gap: 0, overflowX: "auto"}}>
+          {nmTabs.map(tab => (
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{display: "flex", alignItems: "center", padding: "0 18px", fontSize: "0.8rem", fontWeight: 500, color: activeTab === tab.id ? NM_COLOR : "#6b6860", cursor: "pointer", border: "none", background: "none", borderBottom: activeTab === tab.id ? `2px solid ${NM_COLOR}` : "2px solid transparent", whiteSpace: "nowrap", height: 52, transition: "color 0.15s"}}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      <div style={{maxWidth: 1080, margin: "0 auto", padding: "32px 32px"}}>
+
+        {/* ── HOME ── */}
+        {activeTab === "home" && (
+          <div>
+            <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 24, display: "flex", gap: 12, alignItems: "flex-start"}}>
+              <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
+              <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 11:</strong> Phase 2 starts now. Foundation is built. The priority is conversion and sales. The May LinkedIn plan in Content Ideas is ready — copy, paste, generate. You know what to do.</p>
+            </div>
+
+            <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
+              <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>11</div>
+              <div>
+                <p style={{fontSize: "0.88rem", fontWeight: 600, color: NM_COLOR, margin: "0 0 4px"}}>Last session — 8 April 2026</p>
+                <p style={{fontSize: "0.84rem", color: "#4a6b62", margin: 0, lineHeight: 1.6}}>Phase 2 begins. Agency contract ended — you're now running everything yourself. Phase 1 foundation is solid: website, SEO, 400 audio files in Kajabi, Vista Social scheduled to end of April. 50 people on email list. HushAway Pod goes into a school in Huddersfield on Friday — a real milestone. Sales and conversion are now the #1 priority. You said no to Cordelia (not right now). You're hiring a marketing assistant (~15 hrs/week, posting Friday). Windsor.ai confirmed founder reels get the most views. Ben's dashboard shown and handed over — you're using it as your content north star with Claude.</p>
+              </div>
+            </div>
+
+            <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14, marginBottom: 28}}>
+              {[
+                { label: "Sessions completed", value: "11", sub: "Since November 2025" },
+                { label: "Email list (warm)", value: "65", sub: "Direct subscribers — priority audience" },
+                { label: "LinkedIn following", value: "~5,000", sub: "Growing" },
+                { label: "HushAway Pod", value: "🏫 Friday", sub: "First school placement — Huddersfield" },
+              ].map((s, i) => (
+                <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "18px 20px"}}>
+                  <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>{s.label}</p>
+                  <p style={{fontSize: "1.5rem", fontWeight: 700, color: "#1a1916", letterSpacing: "-0.02em", margin: "0 0 4px"}}>{s.value}</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: 0}}>{s.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 28}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 16, margin: "0 0 16px"}}>Your To-Do List</p>
+              <ClientTodoList items={nmTodos} clientName="Nikki McReynolds" slug={slug} accentColor={NM_COLOR} />
+            </div>
+
+            <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28}}>
+              <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px"}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 10, margin: "0 0 10px"}}>What's in this dashboard</p>
+                <ul style={{listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0}}>
+                  {["Your current positioning and who you're for", "The messaging angles with the most potential", "Specific content ideas built around your story and opinions", "Ben's strategic recommendations, plain and direct", "Short and long-term goals based on where you're heading"].map((item, i) => (
+                    <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative", lineHeight: 1.5}}>
+                      <span style={{position: "absolute", left: 0, color: "#9e9b94"}}>–</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px"}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 10, margin: "0 0 10px"}}>What this is (and isn't)</p>
+                <ul style={{listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0}}>
+                  {["A working document — not a polished presentation", "Evidence-based — nothing here is invented", "Something to review together, not hand over", "Not a business plan — Ben is your personal brand and visibility layer", "Living — it gets updated as the work evolves"].map((item, i) => (
+                    <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative", lineHeight: 1.5}}>
+                      <span style={{position: "absolute", left: 0, color: "#9e9b94"}}>–</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 28}}>
+              <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 16, margin: "0 0 16px"}}>Who you are and what you're building</h3>
+              <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20}}>
+                {[
+                  { title: "What you actually do", body: "You're the founder of HushAway® — a subscription-based digital platform (£14.50/month) that uses ASMR-inspired audio stories, soundscapes, and sensory rituals to help children aged 4–10 regulate their emotions. You sit underneath a master brand called The PeacePath®." },
+                  { title: "What makes it different", body: "It's customisable (every child is different), it's backed by a circle of 11+ experts including doctors and researchers, and it makes no medical claims. It's holistic — a bridge for families who are waiting for a diagnosis, sceptical of medication, or just exhausted and need something they can use tonight." },
+                  { title: "Who you've been before this", body: "Nursery owner (130 children, 30 staff). Corporate trainer at board level. Dale Carnegie-certified trainer (600+ Saudi delegates). Coach. Voiceover artist. You bring a combination of business, education, coaching, therapy, and lived proximity to the space that very few competitors have." },
+                  { title: "Why we're working together", body: "You've built something credible and real. The job now is making sure the right people can find you, trust you, and feel like they already know you — before they ever sign up. That's what this work is: your visibility, your voice, and your positioning, done properly." },
+                ].map((block, i) => (
+                  <div key={i}>
+                    <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>{block.title}</p>
+                    <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{block.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
+          </div>
+        )}
+
+        {/* ── POSITIONING ── */}
+        {activeTab === "positioning" && (
+          <div>
+            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Positioning</h2>
+            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>Who you're for, what makes you different, and the tensions worth watching.</p>
+
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Your Audience</p>
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "0 22px", marginBottom: 28}}>
+              {[
+                { badge: "Primary", badgeBg: "#eef4f2", badgeColor: "#3d6b5e", text: "Parents of children aged 4–10 with emotional regulation challenges — particularly those with neurodiverse children (ADHD, autism, sensory processing disorders) who are sceptical of medication, waiting for a diagnosis, and feel unseen and unsupported." },
+                { badge: "Secondary", badgeBg: "#eef2f7", badgeColor: "#3a5c7a", text: "Schools — SENCOs, classroom teachers, and special educational needs leads. Demand is growing as the SEN review forces ND children into underprepared mainstream schools." },
+                { badge: "Tertiary", badgeBg: "#fdf8ec", badgeColor: "#8a6e2a", text: "Therapists and clinicians working with children. Researchers. University partners. These audiences build credibility more than revenue." },
+                { badge: "Emerging", badgeBg: "#fdf3ea", badgeColor: "#c4793a", text: "One-to-one home tutors working with children approved to leave mainstream school. Spotted in Session 10 — a segment Calm and Headspace won't specifically target." },
+                { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Parents expecting a medical cure or quick fix. People who want a one-size solution. Those who don't believe in holistic approaches. They'll drain your energy and argue with your product." },
+              ].map((row, i) => (
+                <div key={i} style={{display: "flex", alignItems: "flex-start", gap: 14, padding: "11px 0", borderBottom: i < 4 ? "1px solid #e4e2dc" : "none"}}>
+                  <span style={{fontSize: "0.68rem", fontWeight: 700, padding: "3px 10px", borderRadius: 20, whiteSpace: "nowrap", flexShrink: 0, marginTop: 1, background: row.badgeBg, color: row.badgeColor}}>{row.badge}</span>
+                  <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.5, margin: 0}}>{row.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>What Makes You Different</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 28}}>
+              {[
+                { title: "Customisable by design", body: "What works for one ADHD child won't work for another. You've built that in from day one — children choose how they listen. That's both a product differentiator and a philosophical stance." },
+                { title: "An expert circle, not just a founder's opinion", body: "11+ doctors, ASMR researchers, sleep practitioners, and neuro-psychologists on your advisory board. Plus The Sleep Charity as a partner. This is unusual for a startup at this stage." },
+                { title: "55+ children across the world have tested it", body: "Your SoundSonic Ambassadors are real families who've been using HushAway for months. That's evidence — not a beta list. You can use this more than you currently do." },
+                { title: "Holistic and honest about what it is", body: "No medical claims. \"Functional, not scientific.\" This is a strength, not a limitation — it's what separates you from anything that overpromises and lets families down." },
+                { title: "You treat children like they can handle more than cartoons", body: "No fluffy dogs, no pastel teddies, no avatar world. Enchanted but real. You're making something for children that respects their intelligence. That's rare and worth saying aloud." },
+                { title: "An unusually broad background", body: "Education, business leadership, corporate training, coaching, nursery operations, sound therapy, sensory modulation — most competitors come from one of those. You've come from all of them." },
+              ].map((diff, i) => (
+                <div key={i} style={{display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 14px", background: "#f2f1ee", borderRadius: 6}}>
+                  <div style={{width: 28, height: 28, borderRadius: 6, background: "#eef4f2", color: NM_COLOR, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0}}>✦</div>
+                  <div>
+                    <p style={{fontSize: "0.84rem", fontWeight: 600, color: "#1a1916", margin: "0 0 2px"}}>{diff.title}</p>
+                    <p style={{fontSize: "0.8rem", color: "#6b6860", margin: 0, lineHeight: 1.5}}>{diff.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Strategic Tensions Worth Watching</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 12, marginBottom: 28}}>
+              {[
+                { title: "Pushing HushAway vs. leading with Nikki", body: "You're 20 times more memorable than a business brand — that's not a metaphor, it's a practical reality. Right now you're still defaulting to HushAway-forward content on LinkedIn. People need to find you first, then discover HushAway through you. The August name change made this worse by severing your personal brand continuity with 4,000+ existing followers." },
+                { title: "Metrics anxiety vs. what actually matters", body: "820+ newsletter subscribers in a matter of weeks. That's a captive audience who actively said \"yes, I want to hear from you.\" But you're still watching LinkedIn likes as a proxy for validation. The likes dropped when you pivoted away from Dale Carnegie and rebranded — they'll come back as your new audience builds. In the meantime, 820 email subscribers is genuinely impressive. Focus there." },
+                { title: "Deep value content vs. top-of-funnel content", body: "The expert interview videos, the long-form soundscapes, the detailed educational posts — these are genuinely valuable, but they belong in your newsletter and Kajabi, not on LinkedIn. The people discovering you on LinkedIn are strangers. They need the surface: your opinions, your stories, your face. Once they're on your email list, serve them the depth." },
+                { title: "Doing everything yourself vs. trusting your team", body: "You are building this largely solo while also earning your bread and butter through corporate training. Since January 2026 you've been running at high intensity. The agency, the PR, the expert calls, the LinkedIn engagement — it's too much. The April agency review is important. Be clear about what you actually need from them vs. what you're covering yourself." },
+                { title: "The credibility gap", body: "You're not a parent. You're not neurodiverse. You know this. And you've done the right things to address it — expert circle, nursery history, thousands of families trained, real product testing with real children. But this isn't a one-time disclosure. It's an ongoing positioning challenge that needs weaving into your content regularly, not just mentioned when someone asks." },
+              ].map((tension, i) => (
+                <div key={i} style={{border: "1px solid #e4e2dc", borderRadius: 6, overflow: "hidden"}}>
+                  <div onClick={() => setOpenTensions(prev => ({...prev, [i]: !prev[i]}))} style={{display: "flex", alignItems: "center", gap: 12, padding: "13px 16px", cursor: "pointer", background: "#fff", userSelect: "none"}}>
+                    <div style={{width: 22, height: 22, borderRadius: "50%", background: "#fdf8ec", color: "#8a6e2a", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0}}>{i + 1}</div>
+                    <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", flex: 1, margin: 0}}>{tension.title}</p>
+                    <span style={{color: "#9e9b94", fontSize: "0.72rem", transition: "transform 0.2s", transform: openTensions[i] ? "rotate(90deg)" : "none"}}>▶</span>
+                  </div>
+                  {openTensions[i] && (
+                    <div style={{padding: "4px 16px 14px 50px", background: "#fff"}}>
+                      <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0}}>{tension.body}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <CommentBox clientName="Nikki McReynolds" tabName="Positioning" slug={slug} />
+          </div>
+        )}
+
+        {/* ── MESSAGING ── */}
+        {activeTab === "messaging" && (
+          <div>
+            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Messaging</h2>
+            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>The angles with the most potential, grounded in your own words.</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+              {[
+                { num: 1, title: "Push the pause button", body: "This came from a parent you overheard — and it went straight into your product thinking. Parents are exhausted. They're not failing their children; they're just running on empty with nowhere to put the child safely while they breathe. HushAway isn't just for the child. It's for the parent who needs ten minutes of quiet.", quote: '"I just want to push the pause button." — a parent. That\'s it. That\'s the whole brief.' },
+                { num: 2, title: "The bridge before diagnosis", body: "Families wait years for a formal assessment. Children are struggling now. HushAway is something they can start today — before the diagnosis, before the waiting list, before anyone's decided what label fits. It doesn't require permission from a specialist. It just requires a parent who's willing to try something gentle.", quote: null },
+                { num: 3, title: "Holistic, not clinical — and honest about it", body: "You make no medical claims and you're proud of that. HushAway isn't a cure. It isn't a fix. It's functional, not scientific — something that sits alongside whatever else the family is doing, whether that's medication, therapy, or nothing yet. For parents who are exhausted by clinical language and overpromising products, this framing builds trust fast.", quote: '"It\'s holistic. And it is functional, not scientific."' },
+                { num: 4, title: "Every child is different — and HushAway is built that way", body: "One child loves Blueberry Moon. Another finds it overstimulating. One responds to running water; another needs the sound of a fan. You've built in customisation because the alternative — one size for all — is exactly what you've been fighting against. This is both a product message and a values message.", quote: '"Belonging over fixing. Every little brain deserves safety, dignity, and a place to regulate — without auditions for worthiness."' },
+                { num: 5, title: "From corporate to this — and why", body: "You spent years at board level in corporate. You were a Dale Carnegie trainer to 600+ people across the world. You ran a nursery with 30 staff. And yet none of that compares to what you're building now. That journey — corporate rigidity to something genuinely purposeful — is a story that resonates with an enormous audience of people still stuck in a nine-to-five they've outgrown.", quote: null },
+                { num: 6, title: "The legacy", body: "In ten years, you want to look back and call them \"the HushAway children.\" Not because of the brand — because they grew up with better emotional tools, more self-awareness, and a stronger foundation for navigating the world. That's the legacy frame. It's the biggest, most human version of what this is.", quote: '"HushAway is bigger than stories, meditations, and sounds. That\'s just the conduit."' },
+                { num: 7, title: "The unfixed child", body: "The \"superpower\" narrative around neurodiverse children puts pressure on them to be exceptional to earn their place. You reject that. Not every day is a superpower day. Some days are messy and hard and no one wants to be told their struggle is actually a gift. Children deserve safety as they are — not conditional on being remarkable.", quote: '"Not every day is a superpower day — some days are really messy."' },
+              ].map((msg, i) => (
+                <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px"}}>
+                  <div style={{width: 22, height: 22, borderRadius: "50%", background: NM_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10}}>{msg.num}</div>
+                  <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 8, margin: "0 0 8px"}}>{msg.title}</h3>
+                  <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{msg.body}</p>
+                  {msg.quote && (
+                    <div style={{background: "#eef4f2", borderLeft: "3px solid #3d6b5e", borderRadius: "0 6px 6px 0", padding: "12px 16px", marginTop: 10}}>
+                      <p style={{fontSize: "0.8rem", fontStyle: "italic", color: "#3d6b5e", margin: 0}}>{msg.quote}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <CommentBox clientName="Nikki McReynolds" tabName="Messaging" slug={slug} />
+          </div>
+        )}
+
+        {/* ── CONTENT IDEAS ── */}
+        {activeTab === "content" && (
+          <NikkiContentTab slug={slug} contentSubTab={contentSubTab} setContentSubTab={setContentSubTab} />
+        )}
+
+        {/* ── RECS ── */}
+        {activeTab === "recs" && (
+          <div>
+            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Ben's Recommendations</h2>
+            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>Where the work actually needs to go right now.</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+              {[
+                { icon: "👤", iconBg: "#fdf3ea", title: "Lead with Nikki, not HushAway", flag: "Ongoing", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You are 20 times more memorable than a business brand. That's not an opinion — it's a practical fact about how people decide whether to trust something. Right now you're still defaulting to HushAway-forward content, which means strangers scroll past and think \"interesting product.\" You want them to think \"I like this person.\" They'll find HushAway once they've found you.", "Every piece of LinkedIn content should pass the test: does this tell people something real about Nikki? If not, it belongs in the newsletter, not the feed."] },
+                { icon: "📱", iconBg: "#eef4f2", title: "Hire a social media VA — not another agency", flag: "April", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["You don't need an agency. You need a person. Someone who's dedicated, accountable, and who you can brief directly. Around £20/hour, 15 hours a week. Their job: take the content ideas (this dashboard, your Claude output), create the designs, schedule via Vista Social, engage with comments, and follow up with interested parents. You are the library. They are the librarian.", "Look at VA companies specialising in social media for education or health brands. Or a parent on maternity leave with a digital marketing background. Kingston University's digital marketing programme is worth a call too."] },
+                { icon: "🎬", iconBg: "#eef4f2", title: "Video content — use what you've already got", flag: "When ready", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["You hate recording video. That's noted and valid. But Windsor.ai confirmed founder reels get your highest views. You don't need to commit to a weekly live show. The scripts are in the Video Strategy tab. Batch-record one hour against those scripts when you're ready. Feed the footage into Riverside — it'll spit out clips, reels, and trailers automatically.", "If you explore HeyGen for an AI avatar, think carefully about the brand tension first. HushAway's whole positioning is built around real — real sounds, real children, real results."] },
+                { icon: "📧", iconBg: "#eef2f7", title: "Get your newsletter subscribers off LinkedIn", flag: "This week", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["LinkedIn can change its algorithm, restrict your reach, or disappear tomorrow. Those subscribers are currently renting space on LinkedIn's platform. You need their email addresses — in your own list, on your own platform, where you have direct access to them with no middleman. Send a launch newsletter now inviting them across. Make it simple: \"We've launched. Here's where to follow us directly.\""] },
+                { icon: "🤔", iconBg: "#fdf3ea", title: "Cordelia — the door is still open", flag: "Next phase", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["You said no for now, and that was the right call given where you are financially. You're pre-revenue, the savings pot is thin, and £5k setup plus £500/month would be another outgoing before you've started converting.", "But you love the concept. When you're generating revenue and have a VA running the day-to-day, revisit this. The foundation this dashboard gives you — positioning, stories, content angles — will make everything she builds for you stronger. Keep it as a next-phase move."] },
+                { icon: "📋", iconBg: "#fdf8ec", title: "Don't treat LinkedIn likes as a measure of whether it's working", flag: "Watch point", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["You know this. And yet. The likes dropped when you pivoted in August and changed your name — you severed your existing audience. They're coming back now that you've reverted to Nikki. But even if they don't: your email subscribers are a better signal than any number of likes. Impressions and dwell time are what LinkedIn actually measures now. Every time you feel despondent about likes, go and look at your newsletter subscriber count instead."] },
+                { icon: "⚡", iconBg: "#fdf8ec", title: "Protect your energy — it's a business asset", flag: "Ongoing", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You're doing the work of an entire team. The Portugal retreat recalibrated something for you and you came back at a different speed. Don't let it drift back to full-intensity within a month. You're better in a conversation, in a post, and in a meeting when you've had a morning to yourself. Keep the gym in the diary. Keep the weekends protected where you can."] },
+                { icon: "🏆", iconBg: "#fdf3ea", title: "Start collecting parent testimonials and case studies — now", flag: "April", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["This is the one gap that's blocking PR traction. Smoking Gun asked for parent case studies. Other agencies will too. You've got expert voices, children's voices, and your own story. But you don't yet have a parent saying \"my child went from 90 minutes to settle to 4 minutes. Here's what changed.\" Identify the three or four families from your SoundSonic ambassador group who've had the clearest results and ask them properly. A case study doesn't need to be long. It needs to be real."] },
+              ].map((rec, i) => (
+                <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px", display: "flex", gap: 16, alignItems: "flex-start"}}>
+                  <div style={{width: 36, height: 36, borderRadius: 8, background: rec.iconBg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0}}>{rec.icon}</div>
+                  <div style={{flex: 1}}>
+                    <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 8, margin: "0 0 8px"}}>{rec.title}</h3>
+                    {rec.paras.map((p, j) => <p key={j} style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: j < rec.paras.length - 1 ? "0 0 8px" : 0}}>{p}</p>)}
+                    <span style={{display: "inline-block", marginTop: 10, fontSize: "0.75rem", fontWeight: 600, padding: "4px 10px", borderRadius: 20, background: rec.flagBg, color: rec.flagColor}}>{rec.flag}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <CommentBox clientName="Nikki McReynolds" tabName="Recommendations" slug={slug} />
+          </div>
+        )}
+
+        {/* ── GOALS ── */}
+        {activeTab === "goals" && (
+          <div>
+            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Your Goals</h2>
+            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>Where you're heading — short and long term.</p>
+
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Short Term — Next 4–12 Weeks</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 28}}>
+              {[
+                { icon: "🎯", title: "Build early HushAway membership momentum", body: "Target: 1,000 members by December 2026 — that's £14,500/month and proof of concept. Every sign-up matters and every piece of personal LinkedIn content is moving people closer to that decision." },
+                { icon: "📣", title: "Establish a consistent personal content rhythm on LinkedIn", body: "At least one genuinely personal post per week — opinion, story, or lived experience — mixed in with the expert and value content. This isn't about volume, it's about pattern. People need to see your face and hear your voice regularly enough that they remember who you are." },
+                { icon: "📧", title: "Own your audience — get them off LinkedIn", body: "Migrate LinkedIn newsletter subscribers to your own email list. Grow that list through the launch email, the Kajabi free tier, and the ManyChat DM flows. This is the most important infrastructure move you can make in the next four weeks." },
+                { icon: "🤝", title: "Land the right PR relationship", body: "You're between PR consultants. The right agency will get what HushAway is about, have genuine contacts in the parenting and SEN press space, and come back to you with results — not excuses." },
+                { icon: "🎬", title: "Establish your opinion-led video presence", body: "Get the strategy mapped, the format decided, and the first batch recorded. The goal is to position you as an opinion former in the children's emotional regulation and neurodiversity space. The Content Ideas tab has a full three-month roadmap with scripts ready to go." },
+                { icon: "📊", title: "Agency review and rebalance", body: "The review needs to result in a clear picture of what they're responsible for and what you're responsible for. Right now you're doing 90% of the management work on top of paying for theirs. That's not sustainable." },
+              ].map((goal, i) => (
+                <div key={i} style={{display: "flex", alignItems: "flex-start", gap: 14, background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "16px 18px"}}>
+                  <div style={{width: 32, height: 32, borderRadius: 8, background: "#eef4f2", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0}}>{goal.icon}</div>
+                  <div>
+                    <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", margin: "0 0 3px"}}>{goal.title}</p>
+                    <p style={{fontSize: "0.8rem", color: "#6b6860", margin: 0, lineHeight: 1.55}}>{goal.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{height: 1, background: "#e4e2dc", margin: "24px 0"}} />
+
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 12, margin: "0 0 12px"}}>Long Term — 6–18 Months</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 40}}>
+              {[
+                { icon: "💷", title: "1,000 HushAway members by December 2026", body: "£14,500/month recurring. That's the financial turning point — the moment HushAway stops being funded by your training income and starts standing on its own. Everything in this dashboard is upstream of that number." },
+                { icon: "🏫", title: "HushAway in schools", body: "You've planned this from day one — licensing to schools, toolkits for SENCOs, the HushAway POD. The SEN review makes this more urgent, not less. Schools are being asked to do more with less. You have something they can use." },
+                { icon: "🎤", title: "Established thought leader in children's emotional regulation", body: "Known by name in the neurodiversity and SEN space. Invited to speak. Referenced in the press. Sought out by researchers and clinicians. You were on this trajectory before — the pivot disrupted it, but you're building it back faster this time." },
+                { icon: "🌍", title: "The HushAway children", body: "In your own words: \"I want to look back in ten years and call them the HushAway children.\" Children who grew up with better emotional tools. Better self-awareness. A stronger foundation for navigating the world. That's the legacy. Everything else is just the work that gets you there." },
+              ].map((goal, i) => (
+                <div key={i} style={{display: "flex", alignItems: "flex-start", gap: 14, background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "16px 18px"}}>
+                  <div style={{width: 32, height: 32, borderRadius: 8, background: "#eef2f7", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0}}>{goal.icon}</div>
+                  <div>
+                    <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1a1916", margin: "0 0 3px"}}>{goal.title}</p>
+                    <p style={{fontSize: "0.8rem", color: "#6b6860", margin: 0, lineHeight: 1.55}}>{goal.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <CommentBox clientName="Nikki McReynolds" tabName="Goals" slug={slug} />
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+// ─── NIKKI CONTENT TAB (split out to keep component manageable) ───────────────
+
+function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: string; contentSubTab: string; setContentSubTab: (t: string) => void }) {
+  const [openIdeas, setOpenIdeas] = useState<Record<string, boolean>>({});
+
+  const subTabs = [
+    { id: "video", label: "🎥 Video Strategy" },
+    { id: "story", label: "📅 May LinkedIn Plan" },
+    { id: "belief", label: "Belief & Opinion" },
+    { id: "contrarian", label: "Bold & Contrarian" },
+    { id: "practical", label: "Practical & Educational" },
+    { id: "authority", label: "Authority" },
+  ];
+
+  function IdeaCard({ id, hook, format, why, prompt, extra }: { id: string; hook: string; format: string; why?: string; prompt?: string; extra?: React.ReactNode }) {
+    const isOpen = openIdeas[id];
+    return (
+      <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, overflow: "hidden"}}>
+        <div onClick={() => setOpenIdeas(prev => ({...prev, [id]: !prev[id]}))} style={{display: "flex", alignItems: "center", gap: 14, padding: "16px 20px", cursor: "pointer", userSelect: "none"}}>
+          <p style={{flex: 1, fontSize: "0.9rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.4, margin: 0}}>{hook}</p>
+          <div style={{display: "flex", alignItems: "center", gap: 8, flexShrink: 0}}>
+            <span style={{fontSize: "0.68rem", fontWeight: 600, padding: "2px 8px", borderRadius: 20, background: "#eef2f7", color: "#3a5c7a"}}>{format}</span>
+          </div>
+          <span style={{color: "#9e9b94", fontSize: "0.68rem", transition: "transform 0.2s", transform: isOpen ? "rotate(90deg)" : "none", flexShrink: 0}}>▶</span>
+        </div>
+        {isOpen && (
+          <div style={{padding: "0 20px 18px 20px", borderTop: "1px solid #e4e2dc"}}>
+            {why && (
+              <div style={{marginTop: 14}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Why this post</p>
+                <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.55, margin: 0}}>{why}</p>
+              </div>
+            )}
+            {prompt && (
+              <div style={{marginTop: 14}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Claude prompt — copy and paste this</p>
+                <div style={{background: "#eef4f2", borderRadius: 6, padding: "14px 16px"}}>
+                  <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.7, whiteSpace: "pre-wrap", margin: 0}}>{prompt}</p>
+                </div>
+              </div>
+            )}
+            {extra}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Content Ideas</h2>
+      <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 20}}>Specific ideas built around your experience, opinions, and voice. Click to expand.</p>
+
+      <div style={{display: "flex", gap: 0, borderBottom: "1px solid #e4e2dc", marginBottom: 20, overflowX: "auto"}}>
+        {subTabs.map(t => (
+          <button key={t.id} onClick={() => setContentSubTab(t.id)} style={{padding: "10px 18px", fontSize: "0.8rem", fontWeight: 500, color: contentSubTab === t.id ? NM_COLOR : "#6b6860", cursor: "pointer", border: "none", background: "none", borderBottom: contentSubTab === t.id ? `2px solid ${NM_COLOR}` : "2px solid transparent", whiteSpace: "nowrap", transition: "color 0.15s"}}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      {contentSubTab === "story" && (
+        <div>
+          <div style={{background: "#eef4f2", border: "1px solid #3d6b5e", borderRadius: 8, padding: "18px 22px", marginBottom: 20}}>
+            <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#3d6b5e", marginBottom: 8, margin: "0 0 8px"}}>How to use this tab</h3>
+            <p style={{fontSize: "0.84rem", color: "#2a4d44", marginBottom: 10, margin: "0 0 10px"}}>Each week has one personal LinkedIn post. These are the posts that build trust and awareness — which Windsor.ai confirmed are your two biggest priorities right now, and personal stories are what drives both.</p>
+            <p style={{fontSize: "0.84rem", color: "#2a4d44", marginBottom: 10, margin: "0 0 10px"}}>Under each week you'll find a <strong>ready-to-use Claude prompt</strong>. Copy it exactly, paste it into your Claude, and it will generate the post. Tweak the output until it sounds like you — remove any hyphens, short staccato lines, or anything that feels robotic.</p>
+            <p style={{fontSize: "0.84rem", color: "#2a4d44", margin: 0}}>You don't need to post these in order. Pick the week that feels most timely.</p>
+          </div>
+          <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            <IdeaCard id="s1" hook={`Week 1 — "My mum's last words to me were: 'You go out that door and you keep on walking.'"`} format="Text + photo"
+              why="Your mum is the emotional engine underneath everything you've built. She died in 2020. Her final words are one of the most powerful things you've ever shared. This post will stop people mid-scroll — not because it's dramatic, but because it's true. You're not posting for sympathy. You're posting to show people who you are and what drives you. That's exactly what builds trust."
+              prompt={`Write a personal LinkedIn post for me. I'm Nikki McReynolds, founder of HushAway — a sound-based emotional regulation platform for children aged 4–10.
+
+My mum died in 2020. Her last words to me were: "You go out that door and you keep on walking." She was my biggest supporter and my compass. Losing her, combined with selling my nursery and everything else that happened that year, was the hardest period of my life. I didn't feel ready to build something new until 2024.
+
+I want to write a short, honest LinkedIn post that starts with her words — or something close to them. The post should feel warm and direct, not heavy or grief-led. It should connect her to why I built HushAway and what keeps me going. End with something real, not a sales pitch.
+
+Rules: no bullet points, no hyphens, no short one-line staccato sentences. Write in flowing, conversational paragraphs. No AI-sounding phrases like "delve into" or "in today's world." Keep it under 200 words. Sound like a real human being who has lived something.`}
+              extra={<div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Photo</p><p style={{fontSize: "0.84rem", color: "#6b6860", margin: 0}}>Use a photo of you and your mum together if you have one. If not, a photo of you — warm, not corporate.</p></div>}
+            />
+            <IdeaCard id="s2" hook={`Week 2 — "I ran a nursery with 130 children and 30 staff. I still didn't know how to help the parents who were really struggling."`} format="Text post"
+              why="This is the origin story of HushAway and it's one you haven't told properly yet. You watched parents struggle, felt like you were failing them, and couldn't yet give them anything useful. That gap became HushAway. It's a vulnerable, honest post that shows exactly why you're credible."
+              prompt={`Write a personal LinkedIn post for me. I'm Nikki McReynolds, founder of HushAway.
+
+I ran a nursery for around five years — 130 children, 30 staff. It was the most formative professional experience of my life. But one of the things that stayed with me was watching parents come in exhausted, overwhelmed, and not knowing what to do for their children who were dysregulated, distressed, or undiagnosed. And I didn't have the tools to give them anything useful. I felt like I was failing them.
+
+That gap — between what those families needed and what existed — is why I eventually built HushAway.
+
+Write a post that starts with the nursery setting and leads into why that experience is the foundation of what I'm doing now. It should feel honest and a little bit humble — this isn't a post about how impressive the nursery was. It's about what I noticed I couldn't do, and why that matters.
+
+Rules: no bullet points, no hyphens, no short one-line staccato sentences. Write in flowing, conversational paragraphs. No AI-sounding phrases. Keep it under 220 words. No sales pitch at the end.`}
+            />
+            <IdeaCard id="s3" hook={`Week 3 — "I arrived in Portugal in high beta. The sound therapist knew before I said a word."`} format="Text + photo"
+              why="This post works on two levels. One: the contrast between your corporate background and going to Portugal for sound therapy is inherently interesting. Two: you experienced exactly what HushAway does for children. You were a dysregulated adult, and sound brought you back. That's your lived proof."
+              prompt={`Write a personal LinkedIn post for me. I'm Nikki McReynolds, founder of HushAway.
+
+In February 2026, I attended a two-weekend immersive sound therapy course in Portugal. I went in at full pace — high cortisol, running at full capacity, the way I'd been running for months. The first session was intense: I was shaking, felt completely overwhelmed, and came out the other side feeling like something had genuinely shifted. I came back at a different speed.
+
+The reason this matters is that I'm building a product that uses sound to help children regulate themselves. I experienced what that actually does — not as a researcher, but as a person who needed it.
+
+Write a post that starts with landing in Portugal and builds to what I experienced and what it proved to me. The contrast angle — corporate trainer to sound therapy retreat — should be in there, but not played for laughs.
+
+Rules: no bullet points, no hyphens, no short one-line staccato sentences. Write in flowing, conversational paragraphs. No AI-sounding phrases. Keep it under 220 words. End with something real, not a product pitch.`}
+            />
+            <IdeaCard id="s4" hook={`Week 4 — "I've got a chopper bike in the shed. Here's what growing up on a farm actually taught me about emotional regulation."`} format="Text + photo"
+              why="This is the lightest post in the month — a bit of warmth and personality before getting serious again. Your generation will latch onto the chopper bike immediately. Children used to regulate instinctively through nature, movement, boredom, and outdoor sounds. The contrast between what you had as a child and what today's children are living in is HushAway's whole reason for existing."
+              prompt={`Write a personal LinkedIn post for me. I'm Nikki McReynolds, founder of HushAway.
+
+I grew up on a farm. I had a chopper bike. If you had a chopper in the 70s, you were cool — and I was absolutely that child. Unstructured time, outdoor sounds, boredom, mud, animals. Nobody called it emotional regulation, but that's exactly what it was.
+
+I want to write a warm, slightly nostalgic LinkedIn post that opens with the bike and the farm, and then connects it to what I've learned about why children today struggle to regulate. Not in a "kids these days" way. More in a "something was happening in those unstructured hours that we didn't have a word for, and now we do" way.
+
+End with why that realisation feeds into what HushAway tries to give children now.
+
+Rules: no bullet points, no hyphens, no short one-line staccato sentences. Write in flowing, conversational paragraphs. No AI-sounding phrases. Keep it under 220 words. Make it feel warm and a bit personal, not preachy.`}
+              extra={<div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Photo</p><p style={{fontSize: "0.84rem", color: "#6b6860", margin: 0}}>A childhood photo if you have one. People love a throwback. It'll double the engagement.</p></div>}
+            />
+            <IdeaCard id="s5" hook={`Bonus — "Someone tried to take my business from me. Here's what I did the morning after the hardest night of my career."`} format="Text post"
+              why="This is the nursery sabotage story — a manager who spread rumours, tampered with records, and reported you to Ofsted with 25 fabricated allegations. Ofsted dismissed everything after a full investigation. Resilience stories land as proof of who someone is — people who read it will trust you more, not feel sorry for you."
+              prompt={`Write a personal LinkedIn post for me. I'm Nikki McReynolds, founder of HushAway.
+
+When I ran my nursery, a manager I'd hired turned out to be someone who worked against me — spreading false rumours, interfering with records, and eventually reporting me to Ofsted with 25 fabricated allegations. Ofsted investigated all day. They dismissed every single one. But I didn't know they would. The night before their decision, I was in the worst place I've ever been.
+
+What I want to write is a post about what happened the next morning — the decision I made, and what it changed in how I ran the business from that day on. This isn't a victim story. I don't want it to feel like one. It's a story about what you do when someone tries to take something you've built.
+
+Write the post starting in that moment — don't explain the whole backstory. Just enough context so the reader understands the weight of it. Then lead into the decision and what followed.
+
+Rules: no bullet points, no hyphens, no short one-line staccato sentences. Write in flowing, conversational paragraphs. No AI-sounding phrases. Under 250 words. No corporate language. Start in the scene, not the setup.`}
+            />
+          </div>
+          <CommentBox clientName="Nikki McReynolds" tabName="Content — May LinkedIn Plan" slug={slug} />
+        </div>
+      )}
+
+      {contentSubTab === "belief" && (
+        <div>
+          <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            <IdeaCard id="b1" hook={`"I believe empathy can't be taught. The most empathetic people I know are the ones who've been hurt the most."`} format="Text post"
+              why="This is one of your deepest beliefs and you said it directly in your onboarding answers. It's also personal — you've lived it. Post it as an opinion, not as a lesson. Don't hedge it. Let people agree or disagree. The ones who agree are your people."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["Who in your life embodies this? (Without naming them if private)", "What does this mean for how you built HushAway?", "How does this connect to why you're drawn to working with families who are struggling?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>Do you agree? Disagree? I'd genuinely like to know — drop it in the comments.</p></div></div>}
+            />
+            <IdeaCard id="b2" hook={`"We say we want children to be seen. But do we actually let them feel what they feel, or do we rush them past it?"`} format="Text post"
+              why="One of the things you feel strongly about is that children aren't given permission to sit with their emotions. We say 'you're okay' when they're not. You've talked about HushAway creating space for children to explore how they feel, not just calm down fast. That distinction is worth making explicitly."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What's the difference between regulating a child and helping them understand what they're feeling?", "When did you first notice adults rushing children past their emotions rather than through them?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>What do you do when your child is in the middle of something big emotionally? I'm curious how other parents handle this.</p></div></div>}
+            />
+            <IdeaCard id="b3" hook={`"I'm not a parent. I'm not neurodiverse. Here's why I'm building this anyway."`} format="Text post"
+              why="You know this is the question sitting in the back of people's minds. Address it directly, once, on your terms. This is one of the most powerful posts you haven't written yet — because it pre-empts the doubt and replaces it with your actual answer: the nursery, the coaching, the training, the families, the years spent walking alongside parents who were struggling."
+              extra={<div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["When did you first feel you had enough credibility to do this?", "What do you have that a parent of an ND child wouldn't necessarily have?", "What do the 11 experts, the 55+ children, and hundreds of families tell you that your own parenthood can't?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div>}
+            />
+          </div>
+          <CommentBox clientName="Nikki McReynolds" tabName="Content — Belief & Opinion" slug={slug} />
+        </div>
+      )}
+
+      {contentSubTab === "contrarian" && (
+        <div>
+          <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            <IdeaCard id="c1" hook={`"Stop calling ADHD a superpower. Not every day is a superpower day."`} format="Text post"
+              why="This is your strongest contrarian position and it's already embedded in your onboarding answers. It's polarising but fair — you're not attacking the idea of ND children having strengths, you're calling out the pressure that the narrative puts on families. Let this be blunt. It'll attract exactly the right people and filter out exactly the wrong ones."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What do parents actually say to you when the 'superpower' framing doesn't match their reality?", "What message does it send to a neurotypical child when superpowers only belong to ND children?", "What framing would you use instead?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>What do you think? Does this framing help your family or put pressure on it?</p></div></div>}
+            />
+            <IdeaCard id="c2" hook={`"Handing your personal brand to an agency is one of the most expensive mistakes you'll make."`} format="Text post"
+              why="This is lived experience — you've been through it and come out the other side with a clear view. You kept your LinkedIn yourself, which is exactly right. This post isn't a complaint — it's advice to other founders who might be about to make the same mistake."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What specifically goes wrong when a brand's social voice is handed over?", "What should a founder keep control of, always?", "What's the one question to ask any agency before you sign?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div></div>}
+            />
+            <IdeaCard id="c3" hook={`"The school system doesn't have a behaviour problem. It has a support problem. And closing special schools won't fix it."`} format="Text post"
+              why="The SEN review closing specialist schools and pushing ND children into mainstream is actively happening right now. You have direct insight into what this means for families. This is a topical, urgent, credible opinion you are uniquely placed to hold."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What does a non-verbal, severely autistic child actually experience in a mainstream classroom?", "What do teachers need that they're not getting?", "What would you say directly to the Department of Education if you had five minutes?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>If you're a SENCO, a teacher, or a parent navigating this — what are you seeing on the ground?</p></div></div>}
+            />
+          </div>
+          <CommentBox clientName="Nikki McReynolds" tabName="Content — Bold & Contrarian" slug={slug} />
+        </div>
+      )}
+
+      {contentSubTab === "practical" && (
+        <div>
+          <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            <IdeaCard id="p1" hook={`"This weekend: try one of these three sounds before you reach for your phone. The results might surprise you."`} format="Text post"
+              why="This gives parents something concrete to try today, at home, for free — a weekend sound challenge using household sounds (hairdryer, kettle, fan, running water, birds outside). The practical post that follows up from what they tried is the content gold."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["Which three sounds are easiest for parents to try at home with zero effort?", "What should they notice in their child? What are the signs it's helping?", "How long should they try it for before drawing any conclusion?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>Try it this weekend and let me know what you notice. DM me or comment — I want to hear what worked.</p></div></div>}
+            />
+            <IdeaCard id="p2" hook={`"Sunday to Monday is the hardest transition of the week for ND children. Here's why — and what actually helps."`} format="Text post / video"
+              why="You identified transitions as the key pain point for ND families. Sunday night to Monday morning. Friday to Saturday. After lunch at school. These moments of change are where the nervous system struggles most. Make this practical and specific — not 'sound can help' but 'this is what you do Sunday night at 7pm.'"
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What's actually happening neurologically during a transition for an ND child?", "What's the simplest thing a parent can do to introduce predictability before Monday?", "How does playing a familiar sound earlier in the day prime the nervous system for later?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>Which transition is hardest in your household? I'm collecting this for something — drop it below.</p></div></div>}
+            />
+          </div>
+          <CommentBox clientName="Nikki McReynolds" tabName="Content — Practical & Educational" slug={slug} />
+        </div>
+      )}
+
+      {contentSubTab === "authority" && (
+        <div>
+          <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            <IdeaCard id="a1" hook={`"One in five children in the UK. If you're a teacher in a class of 30, six of your students are carrying more than you know."`} format="Text post"
+              why="You mentioned this statistic in Session 10 in the context of the Dale Carnegie network. It's a simple, striking reframe — take a percentage and make it a classroom. The authority here is in the specificity: not just 'this is common,' but 'here's what that number looks like in a room you're standing in.'"
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What does a classroom actually feel like when six children are in emotional dysregulation simultaneously?", "What do teachers tell you they most need but aren't getting?", "What would change in that classroom if those six children had one consistent regulatory anchor?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>If you're a teacher or SENCO, I'd love to hear what you're seeing. What would actually help? My inbox is open.</p></div></div>}
+            />
+            <IdeaCard id="a2" hook={`"55 children across the world. Here's what they told us that no researcher could have."`} format="Text + carousel"
+              why="Your SoundSonic Ambassadors are real children who tested HushAway before launch. Real quotes from children: 'I felt sad before, and now I don't.' 'I wiggle on my chair and I thought I wasn't allowed, but it's okay.' 'I feel brave.' These quotes are more powerful than any credential."
+              extra={<div><div style={{marginTop: 14}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Prompting questions</p><ul style={{listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4}}>{["What were the most unexpected things children told you about how the sounds made them feel?", "Were there any children for whom it didn't work — and what did that teach you?", "What did parents notice that the children couldn't articulate themselves?"].map((q, i) => <li key={i} style={{fontSize: "0.84rem", color: "#6b6860", paddingLeft: 14, position: "relative"}}><span style={{position: "absolute", left: 0}}>·</span>{q}</li>)}</ul></div><div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}>The Open Sanctuary is free. Let your child try it this week and tell me what they say.</p></div></div>}
+            />
+          </div>
+          <CommentBox clientName="Nikki McReynolds" tabName="Content — Authority" slug={slug} />
+        </div>
+      )}
+
+      {contentSubTab === "video" && (
+        <NikkiVideoTab slug={slug} />
+      )}
+    </div>
+  );
+}
+
+function NikkiVideoTab({ slug }: { slug: string }) {
+  const [openVideos, setOpenVideos] = useState<Record<string, boolean>>({});
+
+  function VideoCard({ id, title, format, benNote, hookA, hookB, script, cta, repurpose }: { id: string; title: string; format: string; benNote: string; hookA: string; hookB: string; script: string; cta: string; repurpose: string }) {
+    const isOpen = openVideos[id];
+    return (
+      <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, overflow: "hidden"}}>
+        <div onClick={() => setOpenVideos(prev => ({...prev, [id]: !prev[id]}))} style={{display: "flex", alignItems: "center", gap: 14, padding: "16px 20px", cursor: "pointer", userSelect: "none"}}>
+          <p style={{flex: 1, fontSize: "0.9rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.4, margin: 0}}>{title}</p>
+          <span style={{fontSize: "0.68rem", fontWeight: 600, padding: "2px 8px", borderRadius: 20, background: "#eef2f7", color: "#3a5c7a", flexShrink: 0}}>{format}</span>
+          <span style={{color: "#9e9b94", fontSize: "0.68rem", transition: "transform 0.2s", transform: isOpen ? "rotate(90deg)" : "none", flexShrink: 0}}>▶</span>
+        </div>
+        {isOpen && (
+          <div style={{padding: "0 20px 18px 20px", borderTop: "1px solid #e4e2dc"}}>
+            <div style={{fontSize: "0.84rem", color: "#3d6b5e", background: "#eef4f2", borderLeft: "2px solid #3d6b5e", padding: "8px 12px", borderRadius: "0 6px 6px 0", marginTop: 14, lineHeight: 1.55}}><strong>Ben: </strong>{benNote}</div>
+            <div style={{marginTop: 14}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Hook option A</p>
+              <div style={{background: "#fdf8ec", border: "1px solid #ede0b8", borderRadius: 6, padding: "10px 14px"}}><p style={{fontSize: "0.84rem", color: "#6b5020", fontStyle: "italic", margin: 0, lineHeight: 1.55}}>{hookA}</p></div>
+            </div>
+            <div style={{marginTop: 10}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Hook option B</p>
+              <div style={{background: "#fdf8ec", border: "1px solid #ede0b8", borderRadius: 6, padding: "10px 14px"}}><p style={{fontSize: "0.84rem", color: "#6b5020", fontStyle: "italic", margin: 0, lineHeight: 1.55}}>{hookB}</p></div>
+            </div>
+            <div style={{marginTop: 14}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Full script</p>
+              <div style={{background: "#f2f1ee", border: "1px solid #e4e2dc", borderRadius: 6, padding: "14px 16px"}}><p style={{fontSize: "0.8rem", color: "#1a1916", lineHeight: 1.75, whiteSpace: "pre-wrap", margin: 0}}>{script}</p></div>
+            </div>
+            <div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}><strong>CTA:</strong> {cta}</p></div>
+            <div style={{marginTop: 10}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 4, margin: "0 0 4px"}}>Repurpose as</p><p style={{fontSize: "0.8rem", color: "#6b6860", margin: 0}}>{repurpose}</p></div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "14px 18px", marginBottom: 20, display: "flex", gap: 12}}>
+        <span style={{fontSize: 16, flexShrink: 0}}>💬</span>
+        <p style={{fontSize: "0.84rem", color: "#2a4d44", margin: 0, lineHeight: 1.55}}><strong>A note from Ben:</strong> I know you've been looking at a video strategy offer from someone else. I've looked at it properly. It's a good model — a weekly live show with a full content repurposing system built around it. I want to be honest with you about both sides, because I think you deserve that more than a sales pitch.</p>
+      </div>
+
+      <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 20}}>
+        <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 10, margin: "0 0 10px"}}>The strategy — what we're building and why</h3>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.65, margin: "0 0 12px"}}>The goal isn't to become a podcaster. It's to become a thought leader people have a reaction to — ideally "I really like her" or "she's not for me," both of which are fine. Indifference is the only thing that doesn't work. Short, punchy, solo talking-head videos where you are the content. Your opinion, your experience, your direct challenge to how things are currently done.</p>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.65, margin: "0 0 12px"}}>Everything we've already built together — the LinkedIn posts, the newsletter, the messaging framework, the positioning work — feeds directly into this. These videos aren't separate from that work, they are the next layer of it. Each video becomes a LinkedIn post, a newsletter section, a short clip, a quote.</p>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 14, lineHeight: 1.65, margin: "0 0 14px"}}>The three-month arc below is designed to build trust at scale. Month 1 is about introducing who you are. Month 2 is about expertise and taking stronger positions. Month 3 is about drawing potential HushAway members into your world. You batch record each month in one sitting — 4–6 videos, one Saturday morning.</p>
+        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>
+          {["2–4 mins per video", "Solo talking head — no guests needed", "Batch record 4–6 per session", "LinkedIn · Instagram · TikTok · YouTube", "Phone + tripod + natural light — that's all"].map((tag, i) => (
+            <span key={i} style={{fontSize: "0.72rem", fontWeight: 600, padding: "3px 10px", borderRadius: 20, background: "#eef4f2", color: "#3d6b5e"}}>{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Month 1 */}
+      <div style={{marginBottom: 36}}>
+        <div style={{display: "flex", alignItems: "center", gap: 14, marginBottom: 6}}>
+          <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", padding: "4px 12px", borderRadius: 20, background: "#eef4f2", color: "#3d6b5e", border: "1px solid #cfe0db", whiteSpace: "nowrap"}}>Month 1</span>
+          <p style={{fontSize: "0.84rem", fontWeight: 600, color: "#6b6860", borderLeft: "2px solid #e4e2dc", paddingLeft: 12, lineHeight: 1.5, flex: 1, margin: 0}}>Establish who you are. Make people feel something. Give them a reason to follow you — not just HushAway.</p>
+        </div>
+        <div style={{height: 1, background: "#e4e2dc", marginBottom: 18}} />
+        <div style={{display: "flex", flexDirection: "column", gap: 14}}>
+          <VideoCard id="v1" title={`Video 1 — "I had an idea. It didn't exist. So I built it."`} format="Talking head"
+            benNote="This is your origin story — the one that makes people stop scrolling. We've used this line in your LinkedIn work and it lands every time. In video, with your face and voice behind it, it will be even stronger. Don't polish it. The rawer this feels, the better it works."
+            hookA={"I had an idea for something that I couldn't find anywhere in the world. So I stopped looking and started building it instead."}
+            hookB={"In 2024 I walked away from a twenty-year career to build something from scratch. Not because I had a plan. Because I couldn't not."}
+            script={`"I've spent the last eighteen months building something that, hand on heart, I couldn't find anywhere else in the world. And believe me, I looked.
+
+I'm Nikki McReynolds. I'm the founder of HushAway — a sound-based platform that helps children aged four to ten manage their emotions. Not through medication. Not through clinical intervention. Through sound. Through story. Through something they can actually use at home, tonight, before anything else has worked out.
+
+I came to this from a very particular set of experiences. I ran a nursery with 130 children and 30 staff for five years near Hampton Court. I trained 600 business leaders in communication and executive presence. I coached families through some of the hardest periods of their lives.
+
+And across all of it, I kept seeing the same thing. Children who were dysregulated and parents who were exhausted and a gap between the two that nobody was filling.
+
+HushAway launched three weeks ago. And I am nowhere near done.
+
+If you're a parent of a child who finds the world a bit much — or a teacher who sees those children every day — I'd love you to stick around. Follow along. Because I'm going to keep talking about this, honestly, for as long as it takes.
+
+Link in the comments if you want to try the free tier tonight."`}
+            cta="Follow along if you want to see where this goes. And if you have a child who finds it hard to settle — the first tier of HushAway is free. Link in the comments."
+            repurpose="LinkedIn text post (pull 'I had an idea. It didn't exist. So I built it.' as the opener). Newsletter intro. Pin to your LinkedIn profile for the month."
+          />
+          <VideoCard id="v2" title={`Video 2 — "The 'superpower' narrative is doing ND children real harm. I'm going to explain why."`} format="Opinion / Contrarian"
+            benNote="This is your dividing line video. You said in our sessions that you hate the superpower framing — use that energy. People will either nod and share it, or disagree loudly, and both are exactly what you want. Do not soften it."
+            hookA={"Superpower. I hate that word in this context. And I want to tell you why — because I think it's doing real harm to the families it's supposed to help."}
+            hookB={"We've been telling neurodiverse children they're superheroes. And I think, on some days, that's the cruellest thing we could say."}
+            script={`"I want to talk about a word that's become so common in the neurodiversity space that nobody questions it anymore. And that word is superpower.
+
+Now I understand why it happened. It came from a place of love. Parents wanting their children to feel proud, not broken. And that instinct is right.
+
+But here's what I keep seeing. On the hard days — the days where a child can't get dressed without a meltdown, can't transition between activities, can't fall asleep, can't stop crying and doesn't know why — the superpower framing doesn't help. It excludes them. Because on that day, they don't feel like a superhero. They feel like they're failing at something everyone else finds easy.
+
+And the parents watching that? They feel it too.
+
+Not every day is a superpower day. Some days are just messy and hard and exhausting for everyone involved. And I think those children — and those families — deserve language that makes room for that. Dignity doesn't have to mean exceptional. Safety doesn't require being remarkable.
+
+That's the whole philosophy behind what I've built with HushAway. Not 'your child is extraordinary.' Just: your child deserves to feel okay. That's enough.
+
+What do you think? Am I wrong about this?"`}
+            cta="Drop a 🤍 in the comments if you've ever had a day where that framing felt like pressure rather than comfort."
+            repurpose="Strong standalone LinkedIn text post using 'Not every day is a superpower day' as the hook. Clip the first 30 seconds for TikTok/Reels. Will generate comments — respond to every one."
+          />
+          <VideoCard id="v3" title={`Video 3 — "I ran a nursery with 130 children. Here's what I wish I'd known."`} format="Story / Credibility"
+            benNote="We've talked about the nursery story in sessions but you haven't told it on video yet. This is the one that closes the credibility gap fastest — not because it proves you're an expert, but because it shows you were in the room. The vulnerability is the point."
+            hookA={"I ran a nursery near Hampton Court for five years. 130 children. 30 staff. And looking back, I failed some of those families — not because I didn't care, but because I didn't know enough."}
+            hookB={"There were children in my nursery who I could never quite reach. I thought about them for years after I sold it. HushAway is my answer to them."}
+            script={`"Before I built HushAway, I ran a nursery.
+
+130 children. 30 staff. Near Hampton Court. For five years. And it was the most formative professional experience of my life — not because it went smoothly, but because of what I saw there that I couldn't fix at the time.
+
+Parents dropping off children who were already dysregulated before nine in the morning. Children who couldn't transition between activities, couldn't manage noise, couldn't settle. Parents picking them up at the end of the day — exhausted, worried, sometimes in tears.
+
+And what I know now, that I didn't know then, is that many of those children were probably neurodiverse. And many of those parents were completely alone in it, waiting on lists, trying to make sense of something that had no name for them yet.
+
+I sold that nursery just before COVID. And for a long time, I carried a quiet guilt about the gap I'd seen and hadn't known how to fill.
+
+HushAway came out of that. Not as a product — as an answer to a question I'd been sitting with for years.
+
+I can't go back and help those families. But I can make sure the next generation of them has somewhere to go.
+
+That's why I built it."`}
+            cta="I built HushAway for the children I saw in that nursery — and for every family like them. If that's you, the first tier is free. Link in the comments."
+            repurpose="LinkedIn post with the hook 'There were children in my nursery I could never quite reach.' Pin after Video 1's pin period ends."
+          />
+          <VideoCard id="v4" title={`Video 4 — "My mum's last words to me were: 'You go out that door and you keep on walking.'"`} format="Personal / Story"
+            benNote="You've mentioned your mum multiple times across our sessions. You haven't posted about her yet — not properly. This doesn't need to be heavy. It can be warm and funny and full of her. But it's the video that will make people fall in love with who you are. Save it for a day when you feel grounded and ready."
+            hookA={"My mum died in 2020. And to this day, when something goes wrong, I hear her voice before I hear my own."}
+            hookB={"Her last words to me were: 'You go out that door and you keep on walking.' I've thought about that most days since."}
+            script={`"My mum died in 2020.
+
+She was my compass. The person who knew, before I did, what I was capable of. The one who didn't require proof before she believed in me.
+
+2020 was the year I sold my nursery. Ended a relationship. Sold my flat. And then COVID happened, and then she was gone, and all of it landed at once.
+
+I won't pretend I handled it well. I didn't.
+
+It took me until 2023 to really accept that she wasn't coming back. And 2024 to feel ready to build something new.
+
+Her last words to me were: 'You go out that door and you keep on walking.' She said it like she knew I'd need reminding.
+
+She was right.
+
+HushAway launched a few weeks ago. And whenever I doubt whether I should be doing this — whether it'll work, whether I'm the right person to do it — I hear her.
+
+I don't share this for sympathy. I'm not a victim and I don't want to be. I share it because I think most people who build something hard have a reason that goes beyond the product. Mine is partially her.
+
+If you had someone like that — someone who believed in you unreasonably — you'll know what I mean."`}
+            cta="No hard sell here. If you're building something and you're doing it partly for someone — tell me. I'd love to know."
+            repurpose="Standalone LinkedIn text post. High engagement potential — deeply human. The photo of you both, if you use it, will significantly increase reach."
+          />
+        </div>
+      </div>
+
+      {/* Month 2 */}
+      <div style={{marginBottom: 36}}>
+        <div style={{display: "flex", alignItems: "center", gap: 14, marginBottom: 6}}>
+          <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", padding: "4px 12px", borderRadius: 20, background: "#eef2f7", color: "#3a5c7a", border: "1px solid #c8d9e8", whiteSpace: "nowrap"}}>Month 2</span>
+          <p style={{fontSize: "0.84rem", fontWeight: 600, color: "#6b6860", borderLeft: "2px solid #e4e2dc", paddingLeft: 12, lineHeight: 1.5, flex: 1, margin: 0}}>Establish expertise and take positions. Build the trust that converts a follower into someone who believes you know what you're talking about.</p>
+        </div>
+        <div style={{height: 1, background: "#e4e2dc", marginBottom: 18}} />
+        <div style={{display: "flex", flexDirection: "column", gap: 14}}>
+          <VideoCard id="v5" title={`Video 5 — "We've been telling parents to wait for a diagnosis. I want to challenge that."`} format="Opinion / Timely"
+            benNote="The diagnostic waiting list issue is live right now — the SEN review in March 2026 has put this front and centre. You're the person who can speak to this without a clinical background making you cautious. You're an advocate, not a clinician, and that's exactly what these families need."
+            hookA={"The average wait for an ADHD assessment in the UK is currently over three years. And the advice most families get in the meantime is: be patient. I want to talk about why that's not good enough."}
+            hookB={"You don't need a diagnosis to need support. I feel like this needs saying clearly, because nobody seems to be saying it."}
+            script={`"Let me paint you a picture.
+
+A family notices their seven-year-old is struggling. Not in a dramatic way — in a quiet, grinding, daily way. Transitions are hard. Sleep is a battle. School is exhausting for everyone. Meltdowns happen at home because she's been holding it together all day.
+
+They go to the GP. They get referred. And then they wait.
+
+Three years, in many cases. Three years of not knowing. Three years of managing the symptoms without a framework for understanding them.
+
+I'm not anti-diagnosis. Please hear that. A diagnosis can be a profound relief for a family — it gives language, it unlocks support, it says: this is real, this is not your fault.
+
+But here's what I believe: you don't need a diagnosis to need support. And you shouldn't have to wait three years to find something that helps.
+
+There are tools — holistic, non-clinical, evidence-informed tools — that families can use right now. In the home. Tonight. That don't require a letter from a consultant.
+
+HushAway is one of them. It won't diagnose your child. It won't replace medication or therapy. But it will give your child somewhere safe to land when the world gets too loud. And it will give you ten minutes to breathe.
+
+If you're in that waiting room right now — you don't have to just wait."`}
+            cta="If you're in that waiting period and want something you can use tonight, the Open Sanctuary is free. Link in the comments. No card required."
+            repurpose="LinkedIn post with 'You don't need a diagnosis to need support' as the standalone hook. Also a natural email newsletter section."
+          />
+          <VideoCard id="v6" title={`Video 6 — "Schools are being asked to absorb children they don't have the tools to support."`} format="Opinion / Policy"
+            benNote="The March 2026 SEN review is a genuine hook for this video — it's current, it affects your whole secondary audience, and it positions you as someone watching the sector closely. Calm and measured is the right register here. This is the video that gets shared in staff rooms."
+            hookA={"Following the SEN review in March, mainstream schools in England are now responsible for children whose needs they weren't set up to meet. I want to talk about what that actually looks like in a classroom."}
+            hookB={"There's a teacher somewhere right now with 30 children in a classroom, one of whom is dysregulated, and no additional support available. I think about that teacher a lot."}
+            script={`"I want to talk about something that came out of the SEN review in March, because I don't think it's been discussed clearly enough.
+
+Mainstream schools are now being asked to include and support children with a much wider range of needs than they were designed for. The intention is right — inclusion matters. But the resource to back it up hasn't followed.
+
+So here's what that looks like in practice. A class teacher with 30 children, one of whom has ADHD and sensory processing difficulties, is dysregulating in the classroom. The SENCO is covering three schools. There's no one-to-one support available today. And the teacher has twenty-nine other children who also need to learn.
+
+This isn't a criticism of teachers. They are doing something extraordinary under impossible conditions.
+
+But children who are struggling don't stop struggling because the adults around them are stretched. They need practical tools — tools that work in a real classroom, not in a specialist setting. Tools that can be used before a meltdown, not just after one.
+
+That's what I've been building with HushAway. Audio-based sensory tools that a child can access independently. That a teacher can suggest without needing training. That don't require a diagnosis or a referral or a budget line.
+
+I'm talking to schools at the moment. If you're a SENCO or a teacher reading this and you'd like to explore what that looks like — I'd genuinely love to hear from you."`}
+            cta="If you work in a school and you're seeing this on the ground — I'd love to know what it looks like from where you are. Comment below or get in touch directly."
+            repurpose="LinkedIn post targeting educators — leads with the teacher image. Share into SENCO and teacher groups where possible. This is your best school pipeline video."
+          />
+          <VideoCard id="v7" title={`Video 7 — "What emotional dysregulation actually looks like — and why most people have it wrong."`} format="Educational + Demo"
+            benNote="Most people picture the dramatic version — the full meltdown in a supermarket. The subtler, daily version is what your audience is actually living with and rarely sees reflected back at them accurately. This video validates families who've been misunderstood, and provides the perfect context to demo a HushAway audio clip."
+            hookA={"When people picture emotional dysregulation, they think meltdown. But most families living with it are dealing with something quieter, more chronic, and much harder to explain to anyone who isn't in it."}
+            hookB={"The child who cries on the way home from school every day — not because anything bad happened, but because they held it together all day and now they can't. That's dysregulation. And most people don't recognise it."}
+            script={`"I want to talk about what emotional dysregulation actually looks like — because I think there's a real gap between what people expect to see and what families are actually living through.
+
+The dramatic version — the full meltdown, the screaming in a public place — that's the one people imagine. And yes, that happens. But it's not the daily reality for most families.
+
+The daily reality is often quieter than that. It's the child who can't transition between activities without a battle. The one who's fine until they're not, and when they're not it seems to come from nowhere. The one who falls apart on the way home from school because they've been keeping it together all day and they've got nothing left.
+
+It's the child who can't settle at bedtime — not because they're not tired, but because their nervous system hasn't had a chance to come down from the day.
+
+None of these look dramatic. Many of them look like behaviour problems, or defiance, or anxiety. And so families spend years managing what looks like the symptom, without understanding the system underneath.
+
+Sound, it turns out, is one of the most effective regulators of the nervous system — this is well-established in sensory integration research and it's the foundation of what I've built with HushAway.
+
+[At this point, play 15–20 seconds of a HushAway audio clip directly]
+
+What you're hearing isn't just background noise. It's been designed specifically to help a dysregulated nervous system find its way back down.
+
+That's what HushAway does. And I'm proud of it."`}
+            cta="Try the Open Sanctuary for free — let your child pick what they want to listen to. See what happens. Link in the comments."
+            repurpose="The 'held it together all day' hook works brilliantly as a standalone LinkedIn text post. The demo clip makes this a good YouTube long-form candidate too."
+          />
+          <VideoCard id="v8" title={`Video 8 — "I resigned from Dale Carnegie in March. It was harder than I expected."`} format="Personal / Behind the scenes"
+            benNote="You mentioned this in Session 9 and said the culture had changed — that the people who made it feel right had gone. That's a very human and relatable experience of leaving something you'd invested in. The LinkedIn audience of people still in corporate jobs will feel this deeply."
+            hookA={"In March I resigned from a role I'd held for years. One I'd genuinely loved. The leaving was harder than I thought it would be — not because I wanted to stay, but because it was the last piece of an old identity."}
+            hookB={"I've spent twenty years helping other people find their voice. Last month I finally cleared the last thing that was stopping me using mine."}
+            script={`"I want to talk about something I haven't mentioned publicly yet. In March, I resigned from a training role I'd had for years.
+
+It wasn't a dramatic decision. There was no big falling out. But the culture had shifted. The people who had made it feel like somewhere I belonged had moved on, and what was left didn't align with who I am now.
+
+The strange thing is, I was at peace with the decision before I made it. I knew it was right. But the day I actually resigned — the day it was real — I felt the loss of it more than I expected.
+
+Because it wasn't just a role. It was a significant part of how I'd identified professionally for a long time. Walking away from that, even when it's right, asks you to answer the question: okay, so who are you now?
+
+I know who I am now. I am the founder of HushAway. I am the creator of The PeacePath. That is what I am building and it is the most important work I have ever done.
+
+But I think it's worth saying that the steps forward aren't always clean. Sometimes they're a bit bittersweet. And that's allowed.
+
+If you're sitting on a decision you know is right but you're not quite ready to make — I see you. It'll still be right when you're ready."`}
+            cta="No ask here. Just: if this landed for you, follow along. I'm going to keep being honest about what this journey actually looks like."
+            repurpose="LinkedIn text post using Hook B as the opener. High save potential. The corporate-to-founder audience will forward this to each other."
+          />
+        </div>
+      </div>
+
+      {/* Month 3 */}
+      <div style={{marginBottom: 36}}>
+        <div style={{display: "flex", alignItems: "center", gap: 14, marginBottom: 6}}>
+          <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", padding: "4px 12px", borderRadius: 20, background: "#fdf3ea", color: "#c4793a", border: "1px solid #f0d4b8", whiteSpace: "nowrap"}}>Month 3</span>
+          <p style={{fontSize: "0.84rem", fontWeight: 600, color: "#6b6860", borderLeft: "2px solid #e4e2dc", paddingLeft: 12, lineHeight: 1.5, flex: 1, margin: 0}}>Convert trust into action. Draw the right people toward HushAway — warm, direct, without apology. You've earned the ask by now.</p>
+        </div>
+        <div style={{height: 1, background: "#e4e2dc", marginBottom: 18}} />
+        <div style={{display: "flex", flexDirection: "column", gap: 14}}>
+          <VideoCard id="v9" title={`Video 9 — "I want to tell you about the children who tested HushAway."`} format="Social proof / Story"
+            benNote="By month 3 you should have parent testimonials building. This video is the bridge — it uses the SoundSonic Ambassadors (55+ children, global) as the social proof vehicle, but it also invites your growing audience to share their own experiences."
+            hookA={"Before HushAway launched publicly, 55 children from around the world spent months testing it. I want to tell you what they said."}
+            hookB={"A seven-year-old in New Zealand listened to one of our soundscapes for the first time and said: 'It sounds like the inside of safe.' I don't think I'll ever forget that."}
+            script={`"Before HushAway went public, I wanted to know if it actually worked. Not in theory — actually worked, with real children, in real homes, with real families who weren't going to be polite about it if it didn't.
+
+So we ran an ambassador programme. Fifty-five children from across the world — different ages, different needs, different countries. Some neurodiverse, some neurotypical. Some with diagnosed ADHD, some just children who found it hard to switch off.
+
+And they listened. And their parents watched. And they told us what worked and what didn't.
+
+[Share one or two specific, concrete responses here — a favourite soundscape, something a child said, a parent's message]
+
+What came back wasn't what I expected. Children were choosing what they listened to. They were developing preferences. They were going to the app independently before bed.
+
+One parent wrote to me and said: 'For the first time in six months, he's asked to go to his room.'
+
+That's the thing HushAway does that I can't fully quantify. It gives a child somewhere that's theirs. Somewhere safe and still and their own.
+
+If your child has tried HushAway — I'd genuinely love to hear what they said. The children always have the best words for it."`}
+            cta="If your child has used HushAway, drop a comment — even just one word they used to describe it. And if you haven't tried it yet, the Open Sanctuary is still free. Link in the comments."
+            repurpose="Hook B ('the inside of safe') is a standalone LinkedIn post waiting to happen. Comments from parents on this video are testimonial gold. Screenshot them and save them."
+          />
+          <VideoCard id="v10" title={`Video 10 — "Here's what I want for these children in ten years' time."`} format="Vision / Legacy"
+            benNote="You said in one of our sessions: 'I want to look back in ten years and call them the HushAway children.' That's your legacy frame and it's extraordinary — I've never heard another founder say anything quite like it. This is the kind of video that gets mentioned when journalists and researchers write about you."
+            hookA={"In ten years, I want to look back at a generation of children and say: those are the HushAway children. Children who learned to regulate. Who knew what to do when the world got too loud. Who grew up believing they deserved peace without having to earn it."}
+            hookB={"Every little brain deserves safety, dignity, and a place to regulate — without auditions for worthiness. That's not a tagline. That's the whole point."}
+            script={`"I want to tell you what I'm actually building here — not the product, the bigger thing.
+
+There's a phrase I keep coming back to. 'Every little brain deserves safety, dignity, and a place to regulate — without auditions for worthiness.' That's not a tagline. It's the entire point.
+
+What I mean by worthiness is this: right now, the support available to children who struggle emotionally tends to be conditional. You get help if you have a diagnosis. You get resources if you're at a certain school. You get taken seriously if you present in the right way, at the right time, to the right professional.
+
+Children shouldn't have to audition for peace. And parents shouldn't have to fight for the right to be helped.
+
+HushAway is one answer to that. The PeacePath Project — our CIC arm — is about widening access to schools and communities that can't afford a subscription. And eventually, Cosmic Calm for teenagers, and something for the 16–19 age group who are falling through the current gaps entirely.
+
+In ten years, I want to look back at a generation of children who grew up knowing what to do when their nervous system got overloaded. Who had something that worked before they had a label. Who were taught that stillness is a skill, not a luxury.
+
+I want to call them the HushAway children.
+
+That is what I'm building. And I'm only getting started."`}
+            cta="If you believe in this — share this video. The more people who know HushAway exists, the more families we can reach. That's the only ask."
+            repurpose="Hook A as a LinkedIn post. Hook B as a standalone quote graphic for Instagram. PR-ready: this is the kind of quote a journalist uses in a feature."
+          />
+          <VideoCard id="v11" title={`Video 11 — "What HushAway actually is — and what it isn't."`} format="Direct / Product"
+            benNote="By month 3, your audience trusts you. Now you can talk about the product directly without it feeling like a sales pitch — because the trust is already there. This video is clear, confident, and unapologetic. It's the video you send to a parent who's curious but unconvinced."
+            hookA={"I want to be very clear about what HushAway is — and what it isn't. Because I think clarity is more useful than a sales pitch."}
+            hookB={"HushAway is not a cure. It's not a diagnosis tool. It doesn't replace therapy or medication. Here's what it actually is."}
+            script={`"I want to tell you exactly what HushAway is — clearly, without overselling it, because I think honesty is more important here than sounding impressive.
+
+HushAway is a subscription-based audio platform for children aged four to ten. It contains ASMR-inspired stories, soundscapes, guided affirmations, and sensory rituals. Everything on it is designed to help a child's nervous system find its way back to calm. Better focus. Better sleep. A quieter inner world.
+
+Here's what it isn't.
+
+It is not a medical intervention. It makes no medical claims and never will.
+It is not a diagnosis tool — it won't tell you what's going on with your child's neurology.
+It is not a replacement for therapy, medication, or any clinical support your family needs.
+And it is not one-size-fits-all — because one of the first things I learned in my advisory work is that what regulates one ADHD child will do nothing for another. So we built choice in from day one. Your child picks what they listen to.
+
+It's been reviewed by an advisory circle of eleven experts — doctors, ASMR researchers, sleep practitioners, neuro-psychologists. It's been tested by 55 children from around the world.
+
+It's £14.50 a month. The Open Sanctuary tier is free — no card required.
+
+I built it because I saw families who needed something they could use tonight, before the waiting list came through, before the appointment happened, before they had all the answers. HushAway is that thing.
+
+If you've been curious about it — go and try the free tier. See what your child thinks. They're usually the best judge."`}
+            cta="Try the free tier tonight — no card needed, no commitment. Let your child pick what they want to listen to and see what happens. Link in the comments."
+            repurpose="LinkedIn post using Hook B. Strong email sequence video — this is the 'what it is' email that follows a free trial sign-up. Pin to your Instagram profile as an evergreen explainer."
+          />
+          <VideoCard id="v12" title={`Video 12 — "The parents who got in touch after I launched. What they said."`} format="Community / Validation"
+            benNote="This is the testimonial video — and it works best when it's told through your eyes, not just quoted. You reading out messages, reacting to them in real time, showing what it means to you. This is trust made visible. Record this after you've had time to gather genuine responses — don't rush it."
+            hookA={"Three months ago I launched something I'd been building for eighteen months. I didn't know if anyone would care. Here's what happened."}
+            hookB={"A parent sent me a message last week that I haven't been able to stop thinking about. I want to read it to you."}
+            script={`"I want to share something with you — and I want to do it carefully, because these are real people and real families.
+
+Since we launched in March, I've had messages from parents. Some I was expecting — people saying thank you, letting me know their child had used something from the app. Others I wasn't.
+
+[Read 2–3 specific messages here. Include at least one unexpected or surprising one. React genuinely — this doesn't need to be polished.]
+
+The reason I'm sharing these isn't to sell you something. It's because I built HushAway in the belief that these families existed — that there were parents out there who needed something I couldn't yet see in the market. And these messages are confirmation that I was right.
+
+The thing that strikes me, reading them back, is how isolated many of these families have felt. Not just in managing their child's needs — but in being seen as someone who's doing their best in a difficult situation.
+
+If you're one of those families — and you're watching this wondering whether HushAway is for you — I want to say clearly: yes. It's for you. That's exactly who it's for.
+
+Come and try it. The first tier is free. And if you have a message you want to send me — I read every one."`}
+            cta="If you've been trying HushAway and it's helped — send me a message. I want to hear about it. And if you haven't tried it yet, the link is in the comments. No commitment."
+            repurpose="LinkedIn post using Hook A or B depending on which message had the most impact. This video generates significant warm traffic — it's the one that moves fence-sitters into free trial."
+          />
+        </div>
+      </div>
+
+      <CommentBox clientName="Nikki McReynolds" tabName="Content — Video Strategy" slug={slug} />
+    </div>
+  );
+}
+
 export default function ClientDashboard({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const client = clientData[slug];
@@ -1019,6 +1915,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
   if (slug === "andy-felton") {
     return <AndyFeltonDashboard slug={slug} />;
+  }
+
+  if (slug === "nikki-mcreynolds") {
+    return <NikkiMcReynoldsDashboard slug={slug} />;
   }
 
   if (!client) {
