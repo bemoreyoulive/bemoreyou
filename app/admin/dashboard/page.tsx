@@ -136,15 +136,6 @@ export default function AdminDashboard() {
                   <span style={{color: "#E0DBD3"}}>·</span>
                   <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
                 </div>
-                {client.status !== "Pending" && (
-                  <a
-                    href={`/client/${client.slug}`}
-                    onClick={e => e.stopPropagation()}
-                    style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7A746E", textDecoration: "none", padding: "5px 12px", border: "1px solid #E0DBD3", borderRadius: 2}}
-                  >
-                    Preview →
-                  </a>
-                )}
                 {client.status === "Pending" && (
                   <span style={{fontWeight: 600, color: "#E8521C", fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase"}}>View answers →</span>
                 )}
