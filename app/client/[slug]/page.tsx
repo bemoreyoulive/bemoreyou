@@ -4,6 +4,7 @@ import { use, useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import EmailOptIn from "@/components/EmailOptIn";
+import MilestoneTracker from "@/components/MilestoneTracker";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -266,6 +267,7 @@ function IdeaCard({ idea, isSack = false }: { idea: ContentIdea; isSack?: boolea
 
 const AF_TABS = [
   { id: "home", label: "Home & To-Do" },
+  { id: "milestones", label: "Milestones" },
   { id: "positioning", label: "Positioning" },
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
@@ -383,6 +385,11 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
 
             <CommentBox clientName="Andy Felton" tabName="Home" slug={slug} />
           </div>
+        )}
+
+        {/* ── MILESTONES ── */}
+        {activeTab === "milestones" && (
+          <MilestoneTracker slug={slug} color={AF_COLOR} />
         )}
 
         {/* ── POSITIONING ── */}
@@ -959,6 +966,7 @@ const clientData: Record<string, {
 
 const tabs = [
   { id: "todos", label: "To-Do" },
+  { id: "milestones", label: "Milestones" },
   { id: "goals", label: "Goals" },
   { id: "positioning", label: "Positioning" },
   { id: "messaging", label: "Messaging" },
@@ -1039,6 +1047,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
 
   const nmTabs = [
     { id: "home", label: "Home" },
+    { id: "milestones", label: "Milestones" },
     { id: "positioning", label: "Positioning" },
     { id: "messaging", label: "Messaging" },
     { id: "content", label: "Content Ideas" },
@@ -1148,6 +1157,11 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
 
             <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
           </div>
+        )}
+
+        {/* ── MILESTONES ── */}
+        {activeTab === "milestones" && (
+          <MilestoneTracker slug={slug} color={NM_COLOR} />
         )}
 
         {/* ── POSITIONING ── */}
@@ -2036,6 +2050,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
             </div>
             <CommentBox clientName={client.name} tabName="Goals" slug={slug} />
           </div>
+        )}
+
+        {activeTab === "milestones" && (
+          <MilestoneTracker slug={slug} color={client.color} />
         )}
 
         {activeTab === "positioning" && (
