@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase-browser";
 
 const hardcodedClients = [
-  { slug: "andy-felton", adminPath: "/admin/clients/1", name: "Andy Felton", role: "Founder, Equate Digital", started: "Dec 2025", sessions: 8, status: "Active", color: "#2d5a8e", initials: "AF" },
-  { slug: "andy-scott-barrett", adminPath: "/admin/clients/2", name: "Andy Scott Barrett", role: "Founder, Ascott Financial Direction", started: "Mar 2026", sessions: 3, status: "Active", color: "#2e7d4f", initials: "ASB" },
-  { slug: "nikki-mcreynolds", adminPath: "/admin/clients/3", name: "Nikki McReynolds", role: "Founder, HushAway", started: "Nov 2025", sessions: 11, status: "Active", color: "#7c3aed", initials: "NM" },
+  { slug: "andy-felton", adminPath: "/client/andy-felton", name: "Andy Felton", role: "Founder, Equate Digital", started: "Dec 2025", sessions: 8, status: "Active", color: "#2d5a8e", initials: "AF" },
+  { slug: "andy-scott-barrett", adminPath: "/client/andy-scott-barrett", name: "Andy Scott Barrett", role: "Founder, Ascott Financial Direction", started: "Mar 2026", sessions: 3, status: "Active", color: "#2e7d4f", initials: "ASB" },
+  { slug: "nikki-mcreynolds", adminPath: "/client/nikki-mcreynolds", name: "Nikki McReynolds", role: "Founder, HushAway", started: "Nov 2025", sessions: 11, status: "Active", color: "#7c3aed", initials: "NM" },
   { slug: "james-hartley", adminPath: null, name: "James Hartley", role: "Founder, IgnitionCraft", started: "2026", sessions: 0, status: "Setting Up", color: "#7A746E", initials: "JH" },
-  { slug: "solve-people", adminPath: "/admin/clients/5", name: "Solve People", role: "Luenna Knight & Brett Edyvane", started: "Feb 2026", sessions: 6, status: "Active", color: "#c95e00", initials: "SP" },
+  { slug: "solve-people", adminPath: "/client/solve-people", name: "Solve People", role: "Luenna Knight & Brett Edyvane", started: "Feb 2026", sessions: 6, status: "Active", color: "#c95e00", initials: "SP" },
 ];
 
 function initials(name: string) {
