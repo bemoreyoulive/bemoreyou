@@ -320,10 +320,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} />
-
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>{sessionLabel}</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>{firstName} — Client Dashboard</h2>
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} />
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 32 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>

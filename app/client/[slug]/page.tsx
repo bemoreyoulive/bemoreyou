@@ -334,9 +334,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
-            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} />
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>April 2026 · Session 8</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Andy F — Client Dashboard</h2>
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 8" />
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 28 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
@@ -1080,7 +1078,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
-            <NextMoveBox move={NM_NEXT_MOVE} accentColor={NM_COLOR} />
+            <NextMoveBox move={NM_NEXT_MOVE} accentColor={NM_COLOR} clientName="Nikki McReynolds" sessionLabel="April 2026 · Session 12" />
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
               <div>
@@ -2252,14 +2250,18 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={client.color} />
-            <NextMoveBox move={client.nextMove} accentColor={client.color} />
-            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
-              <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
-              Your Actions
-            </p>
-            <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 40px", letterSpacing: "-0.02em"}}>
-              To-Do List
-            </h2>
+            <div style={{display: "grid", gridTemplateColumns: "1fr auto", gap: 28, alignItems: "end", marginBottom: 36}}>
+              <div>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, margin: "0 0 6px", display: "flex", alignItems: "center", gap: 8}}>
+                  <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
+                  Your Actions
+                </p>
+                <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: 0, letterSpacing: "-0.02em"}}>
+                  To-Do List
+                </h2>
+              </div>
+              <NextMoveBox move={client.nextMove} accentColor={client.color} />
+            </div>
             <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
             <DashboardFooter clientName={client.name} tabName="To-Do" slug={slug} />
           </div>
