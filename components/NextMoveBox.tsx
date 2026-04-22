@@ -12,7 +12,7 @@ interface Props {
 
 export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn }: Props) {
   const firstName = clientName?.split(" ")[0];
-  const [visible, setVisible] = useState(!animateIn);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (!animateIn) return;
@@ -20,11 +20,53 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
     return () => clearTimeout(t);
   }, [animateIn]);
 
-  const slideStyle: React.CSSProperties = animateIn ? {
-    transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease",
-    transform: visible ? "translateX(0)" : "translateX(-60px)",
-    opacity: visible ? 1 : 0,
-  } : {};
+  if (animateIn) {
+    return (
+      <>
+        {/* Restore the title header inline */}
+        {clientName && sessionLabel && (
+          <div style={{ marginBottom: 36 }}>
+            <p style={{
+              fontSize: "0.68rem",
+              fontWeight: 700,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: accentColor,
+              margin: "0 0 6px",
+            }}>
+              {sessionLabel}
+            </p>
+            <h2 style={{
+              fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+              fontFamily: "var(--font-dm-serif), serif",
+              fontWeight: 400,
+              color: "#1C1C1C",
+              margin: 0,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.15,
+            }}>
+              {firstName} — Client Dashboard
+            </h2>
+          </div>
+        )}
+
+        {/* Fixed bottom-left toast */}
+        <div style={{
+          position: "fixed",
+          bottom: 28,
+          left: 28,
+          zIndex: 999,
+          width: 220,
+          transform: visible ? "translateX(0)" : "translateX(-120%)",
+          opacity: visible ? 1 : 0,
+          transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
+          pointerEvents: visible ? "auto" : "none",
+        }}>
+          <NeedleCard move={move} accentColor={accentColor} />
+        </div>
+      </>
+    );
+  }
 
   if (clientName && sessionLabel) {
     return (
@@ -58,15 +100,13 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
             {firstName} — Client Dashboard
           </h2>
         </div>
-        <div style={slideStyle}>
-          <NeedleCard move={move} accentColor={accentColor} />
-        </div>
+        <NeedleCard move={move} accentColor={accentColor} />
       </div>
     );
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28, ...slideStyle }}>
+    <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28 }}>
       <NeedleCard move={move} accentColor={accentColor} />
     </div>
   );
@@ -86,6 +126,7 @@ function NeedleCard({ move, accentColor }: { move: string; accentColor: string }
       flexShrink: 0,
       position: "relative",
       overflow: "hidden",
+      boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
     }}>
       {/* Accent bar */}
       <div style={{
