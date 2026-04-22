@@ -2250,7 +2250,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={client.color} />
-            <div style={{display: "grid", gridTemplateColumns: "1fr auto", gap: 28, alignItems: "end", marginBottom: 36}}>
+            <div style={{display: "grid", gridTemplateColumns: "1fr auto", gap: 28, alignItems: "start", marginBottom: 36}}>
               <div>
                 <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, margin: "0 0 6px", display: "flex", alignItems: "center", gap: 8}}>
                   <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
