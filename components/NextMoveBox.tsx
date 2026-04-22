@@ -1,18 +1,32 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 interface Props {
   move: string;
   accentColor: string;
-  // When provided, renders the page title + session label to the left of the box
   clientName?: string;
   sessionLabel?: string;
+  animateIn?: boolean;
 }
 
-export default function NextMoveBox({ move, accentColor, clientName, sessionLabel }: Props) {
+export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn }: Props) {
   const firstName = clientName?.split(" ")[0];
+  const [visible, setVisible] = useState(!animateIn);
+
+  useEffect(() => {
+    if (!animateIn) return;
+    const t = setTimeout(() => setVisible(true), 2000);
+    return () => clearTimeout(t);
+  }, [animateIn]);
+
+  const slideStyle: React.CSSProperties = animateIn ? {
+    transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease",
+    transform: visible ? "translateX(0)" : "translateX(-60px)",
+    opacity: visible ? 1 : 0,
+  } : {};
 
   if (clientName && sessionLabel) {
-    // Two-column header: title left, needle box right
     return (
       <div style={{
         display: "grid",
@@ -44,14 +58,15 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
             {firstName} — Client Dashboard
           </h2>
         </div>
-        <NeedleCard move={move} accentColor={accentColor} />
+        <div style={slideStyle}>
+          <NeedleCard move={move} accentColor={accentColor} />
+        </div>
       </div>
     );
   }
 
-  // Standalone: just the box, floated right
   return (
-    <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28 }}>
+    <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28, ...slideStyle }}>
       <NeedleCard move={move} accentColor={accentColor} />
     </div>
   );
@@ -84,13 +99,13 @@ function NeedleCard({ move, accentColor }: { move: string; accentColor: string }
 
       {/* Label */}
       <p style={{
-        fontSize: "0.55rem",
+        fontSize: "0.72rem",
         fontWeight: 700,
-        letterSpacing: "0.22em",
+        letterSpacing: "0.18em",
         textTransform: "uppercase",
-        color: "rgba(255,255,255,0.75)",
+        color: "rgba(255,255,255,0.85)",
         margin: 0,
-        lineHeight: 1.6,
+        lineHeight: 1.5,
       }}>
         What will move<br />the needle this week
       </p>

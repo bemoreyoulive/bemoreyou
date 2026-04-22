@@ -334,7 +334,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
-            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 8" />
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 8" animateIn />
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 28 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
@@ -1078,7 +1078,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
-            <NextMoveBox move={NM_NEXT_MOVE} accentColor={NM_COLOR} clientName="Nikki McReynolds" sessionLabel="April 2026 · Session 12" />
+            <NextMoveBox move={NM_NEXT_MOVE} accentColor={NM_COLOR} clientName="Nikki McReynolds" sessionLabel="April 2026 · Session 12" animateIn />
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
               <div>
