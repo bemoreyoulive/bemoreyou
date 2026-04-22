@@ -13,11 +13,13 @@ interface Props {
 export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn }: Props) {
   const firstName = clientName?.split(" ")[0];
   const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
     if (!animateIn) return;
-    const t = setTimeout(() => setVisible(true), 2000);
-    return () => clearTimeout(t);
+    const showT = setTimeout(() => setVisible(true), 2000);
+    const hideT = setTimeout(() => setVisible(false), 12000);
+    return () => { clearTimeout(showT); clearTimeout(hideT); };
   }, [animateIn]);
 
   if (animateIn) {
@@ -51,19 +53,39 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
         )}
 
         {/* Fixed bottom-left toast */}
-        <div style={{
-          position: "fixed",
-          bottom: 28,
-          left: 28,
-          zIndex: 999,
-          width: 220,
-          transform: visible ? "translateX(0)" : "translateX(-120%)",
-          opacity: visible ? 1 : 0,
-          transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
-          pointerEvents: visible ? "auto" : "none",
-        }}>
-          <NeedleCard move={move} accentColor={accentColor} />
-        </div>
+        {!dismissed && (
+          <div style={{
+            position: "fixed",
+            bottom: 28,
+            left: 28,
+            zIndex: 999,
+            width: 220,
+            transform: visible ? "translateX(0)" : "translateX(-120%)",
+            opacity: visible ? 1 : 0,
+            transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
+            pointerEvents: visible ? "auto" : "none",
+          }}>
+            <div style={{ position: "relative" }}>
+              <button
+                onClick={() => { setVisible(false); setTimeout(() => setDismissed(true), 400); }}
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  right: 10,
+                  zIndex: 1,
+                  background: "none",
+                  border: "none",
+                  color: "rgba(255,255,255,0.6)",
+                  cursor: "pointer",
+                  fontSize: "0.85rem",
+                  lineHeight: 1,
+                  padding: 0,
+                }}
+              >✕</button>
+              <NeedleCard move={move} accentColor={accentColor} />
+            </div>
+          </div>
+        )}
       </>
     );
   }

@@ -7,8 +7,9 @@ export default function SessionPrepPrompt() {
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 1200);
-    return () => clearTimeout(timer);
+    const showT = setTimeout(() => setVisible(true), 1200);
+    const hideT = setTimeout(() => { setVisible(false); setTimeout(() => setDismissed(true), 400); }, 11200);
+    return () => { clearTimeout(showT); clearTimeout(hideT); };
   }, []);
 
   if (dismissed) return null;
