@@ -1350,6 +1350,7 @@ What we do:
                 <div style={{background: "#fdfaf6", border: "1px dashed #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
                   <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>LinkedIn — light, personal, scroll-stopping</p>
                   <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>One personal post per week. A story, a moment, a reaction, a photo of a real thing. This is the hook — the job is to make someone stop scrolling and think <em>"who is this woman?"</em></p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>You don't need to come up with this from scratch — that's exactly what the <strong>Content Ideas</strong> tab is for. Every week has a direction, a hook, and the angle mapped out. Open the tab, pick the week, write it in your own voice. If you're short on time, copy the guidance into Claude and let it draft — then edit it so it sounds like you. The goal is to <em>reduce</em> the weight of content creation, not add another thinking task on top.</p>
                   <p style={{fontSize: "0.72rem", color: "#8a3a3a", fontWeight: 600, margin: 0}}>→ Call to action: "Full conversation on YouTube" / "I wrote about this in the newsletter — link in comments"</p>
                 </div>
               </div>
