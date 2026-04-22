@@ -37,6 +37,7 @@
 
 import { useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
+import BenUpdateBox from "@/components/BenUpdateBox";
 import CommentBox from "@/components/CommentBox";
 import EmailOptIn from "@/components/EmailOptIn";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
@@ -354,6 +355,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
             )}
 
             <CommentBox clientName={name} tabName="Home" slug={slug} />
+            <BenUpdateBox slug={slug} />
           </div>
         )}
 
