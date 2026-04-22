@@ -18,7 +18,7 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
         display: "grid",
         gridTemplateColumns: "1fr auto",
         gap: 28,
-        alignItems: "end",
+        alignItems: "start",
         marginBottom: 36,
       }}>
         <div>
@@ -88,7 +88,7 @@ function NeedleCard({ move, accentColor }: { move: string; accentColor: string }
         fontWeight: 700,
         letterSpacing: "0.22em",
         textTransform: "uppercase",
-        color: "rgba(255,255,255,0.4)",
+        color: "rgba(255,255,255,0.75)",
         margin: 0,
         lineHeight: 1.6,
       }}>
