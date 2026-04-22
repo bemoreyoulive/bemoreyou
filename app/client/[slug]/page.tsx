@@ -1333,10 +1333,114 @@ What we do:
           <div>
             <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Ben's Recommendations</h2>
             <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>Where the work actually needs to go right now.</p>
+
+            {/* ── NURTURE WORKFLOW ── */}
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "24px 26px", marginBottom: 20}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>The System</p>
+              <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>How a stranger becomes a member — the 8-touchpoint nurture</h3>
+              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>Research is boringly consistent on this: most buyers need <strong>at least 8 meaningful touchpoints</strong> before they pay. LinkedIn alone can't deliver 8 — the feed moves too fast and people forget. This is why we push everything toward your owned channels (newsletter, YouTube, website). Those are the places where a stranger racks up the touches that turn into trust.</p>
+
+              {/* Stage 1: Top of funnel */}
+              <div style={{display: "grid", gridTemplateColumns: "110px 1fr", gap: 16, marginBottom: 14}}>
+                <div style={{background: "#fdf0f0", borderRadius: 8, padding: "14px 12px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                  <p style={{fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#8a3a3a", margin: "0 0 4px"}}>Stage 1</p>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: 0, lineHeight: 1.3}}>Attention</p>
+                  <p style={{fontSize: "0.7rem", color: "#8a3a3a", margin: "4px 0 0"}}>Touch 1–2</p>
+                </div>
+                <div style={{background: "#fdfaf6", border: "1px dashed #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>LinkedIn — light, personal, scroll-stopping</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>One personal post per week. A story, a moment, a reaction, a photo of a real thing. This is the hook — the job is to make someone stop scrolling and think <em>"who is this woman?"</em></p>
+                  <p style={{fontSize: "0.72rem", color: "#8a3a3a", fontWeight: 600, margin: 0}}>→ Call to action: "Full conversation on YouTube" / "I wrote about this in the newsletter — link in comments"</p>
+                </div>
+              </div>
+
+              {/* Arrow */}
+              <div style={{textAlign: "center", color: NM_COLOR, fontSize: "1.2rem", margin: "4px 0", fontWeight: 700}}>↓</div>
+
+              {/* Stage 2: Owned discovery */}
+              <div style={{display: "grid", gridTemplateColumns: "110px 1fr", gap: 16, marginBottom: 14}}>
+                <div style={{background: "#fdf3ea", borderRadius: 8, padding: "14px 12px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                  <p style={{fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#a86725", margin: "0 0 4px"}}>Stage 2</p>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: 0, lineHeight: 1.3}}>Interest</p>
+                  <p style={{fontSize: "0.7rem", color: "#a86725", margin: "4px 0 0"}}>Touch 3–4</p>
+                </div>
+                <div style={{background: "#fdfaf6", border: "1px dashed #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>YouTube (@hushaway_peace) + hushaway.com</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>They clicked. Now they land on a full Conversations interview, a Sound Sanctuary explainer, or a blog post. This is where all the <strong>heavy expertise content</strong> goes — the stuff that was cluttering your LinkedIn feed. It's also where Google sends people searching "ASMR children regulation."</p>
+                  <p style={{fontSize: "0.72rem", color: "#a86725", fontWeight: 600, margin: 0}}>→ Call to action: "Subscribe to the newsletter for the next one" / "Get the free Sound Sanctuary tracks"</p>
+                </div>
+              </div>
+
+              <div style={{textAlign: "center", color: NM_COLOR, fontSize: "1.2rem", margin: "4px 0", fontWeight: 700}}>↓</div>
+
+              {/* Stage 3: Nurture */}
+              <div style={{display: "grid", gridTemplateColumns: "110px 1fr", gap: 16, marginBottom: 14}}>
+                <div style={{background: "#eef4f2", borderRadius: 8, padding: "14px 12px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                  <p style={{fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#3d6b5e", margin: "0 0 4px"}}>Stage 3</p>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: 0, lineHeight: 1.3}}>Trust</p>
+                  <p style={{fontSize: "0.7rem", color: "#3d6b5e", margin: "4px 0 0"}}>Touch 5–7</p>
+                </div>
+                <div style={{background: "#fdfaf6", border: "1px dashed #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>The email newsletter (from Nikki, not HushAway)</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>Fortnightly. Personal tone, sent from your name. One deeper takeaway per email, a line of real context at the top, one soft link. This is where most of the 8 touches happen — the newsletter is doing the work while LinkedIn is just the doorway.</p>
+                  <p style={{fontSize: "0.72rem", color: "#3d6b5e", fontWeight: 600, margin: 0}}>→ Call to action: Start a free Kajabi trial / Join the Sound Sanctuary</p>
+                </div>
+              </div>
+
+              <div style={{textAlign: "center", color: NM_COLOR, fontSize: "1.2rem", margin: "4px 0", fontWeight: 700}}>↓</div>
+
+              {/* Stage 4: Conversion */}
+              <div style={{display: "grid", gridTemplateColumns: "110px 1fr", gap: 16}}>
+                <div style={{background: "#ede4f7", borderRadius: 8, padding: "14px 12px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                  <p style={{fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: NM_COLOR, margin: "0 0 4px"}}>Stage 4</p>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: 0, lineHeight: 1.3}}>Member</p>
+                  <p style={{fontSize: "0.7rem", color: NM_COLOR, margin: "4px 0 0"}}>Touch 8+</p>
+                </div>
+                <div style={{background: "#fdfaf6", border: "1px dashed #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <p style={{fontSize: "0.82rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>Kajabi trial → paid HushAway member</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", margin: "0 0 6px", lineHeight: 1.55}}>By the time they sign up, they've already consumed you across 3+ channels and 8+ moments. The sale is almost a formality — they've already decided they trust you. This is the 1,000-member goal, and it compounds.</p>
+                  <p style={{fontSize: "0.72rem", color: NM_COLOR, fontWeight: 600, margin: 0}}>→ Then: onboarding sequence, keep them, ask for testimonial, PR unlock</p>
+                </div>
+              </div>
+
+              <div style={{background: "#fdf8ec", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 22}}>
+                <p style={{fontSize: "0.78rem", color: "#6b5a2a", margin: 0, lineHeight: 1.6}}><strong>The point:</strong> you have already built every layer of this funnel. The gap isn't the infrastructure — it's that you keep trying to do stages 2–3 <em>on LinkedIn</em>, where they don't work. Let each channel do the job it's designed for.</p>
+              </div>
+            </div>
+
+            {/* ── 6-MONTH MAINTENANCE PLAN ── */}
+            <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "24px 26px", marginBottom: 20}}>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>Proposed: 6-month maintenance</p>
+              <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>If you want to keep moving — one call a month, May to October</h3>
+              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>The core brand work is done. What's left isn't strategy-from-scratch — it's the monthly discipline of staying on pattern, catching drift early, and making the right call at each growth moment. One 60-minute call a month keeps the system accountable and gives you someone to pressure-test the harder decisions with. Here's what each month would likely cover — not fixed, but grounded in where the business actually is.</p>
+
+              {[
+                { month: "May 2026", theme: "Pod placement + content discipline reset", focus: "Review the Huddersfield Pod week 1–2 — are the testimonials being collected, is the teacher engaged, is the content from it getting into LinkedIn and newsletter. Audit the last 4 weeks of LinkedIn posts together — count how many were personal vs expertise. Reset if needed. Decide: has the marketing assistant been hired yet? If not, why not?", my: "Accountability and audit. You won't spot the drift yourself — by now you know this." },
+                { month: "June 2026", theme: "First PR push", focus: "Pod case study is live — one parent quote, one teacher quote, one before/after. Shortlist 3 parenting/SEN publications. Decide which PR relationship you're going after. I can help draft the approach and the pitch. Newsletter audit: what are open rates, what's the click-through, where do subscribers drop off.", my: "Pitch strategy and PR positioning — the difference between being ignored and being printed is usually the angle." },
+                { month: "July 2026", theme: "Funnel conversion check", focus: "First real data on the 8-touchpoint funnel — how many LinkedIn → YouTube clicks, how many YouTube → newsletter signups, how many newsletter → Kajabi trials. Find the weakest link and fix it. Is the membership growing? What's the trial-to-paid rate? If it's not working, we diagnose which stage is broken.", my: "Reading the numbers together — you'll be too close to them. I'll ask the questions that reframe what's actually happening." },
+                { month: "August 2026", theme: "Positioning review + content refresh", focus: "Quarter-mark check on the HushAway positioning. Is it landing? Are the right people finding you? Are you still getting the \"oh, that makes sense\" reaction when you explain it? Refresh the content bank — by now the LinkedIn content may need a new angle. Plan the autumn push.", my: "Spotting when positioning needs tightening vs when it's working and you're just tired of saying it. These are different problems." },
+                { month: "September 2026", theme: "Schools pipeline + scale decisions", focus: "If the Pod placement worked, you should be in conversations with 2–3 more schools by now. Commercial model review — what are schools willing to pay, how does licensing actually work, who owns the relationship. Also: is the marketing assistant working out? Time to expand, or time to replace? Start mapping a possible schools-focused funnel separate from the parent one.", my: "Strategic decisions that shape the next year — these are the ones you'll want to think out loud with someone who knows the full context." },
+                { month: "October 2026", theme: "End-of-year review + 2027 plan", focus: "Are you on track for 1,000 members by December? If not, what's the realistic number and what would need to happen to accelerate it. Review: what PR landed, what content worked, what the audience is actually telling you. Set the 2027 commercial and personal goals — including whether the monthly structure continues, stops, or changes.", my: "The reflection + planning conversation that you won't make time for otherwise. This is where the next phase gets decided." },
+              ].map((m, i) => (
+                <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "16px 18px", marginBottom: 10}}>
+                  <div style={{display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8}}>
+                    <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR}}>{m.month}</span>
+                    <span style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916"}}>{m.theme}</span>
+                  </div>
+                  <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.6, margin: "0 0 8px"}}><strong style={{fontWeight: 600, color: "#1a1916"}}>Focus:</strong> {m.focus}</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", lineHeight: 1.6, margin: 0, fontStyle: "italic"}}><strong style={{fontWeight: 600, color: NM_COLOR, fontStyle: "normal"}}>Where I add value:</strong> {m.my}</p>
+                </div>
+              ))}
+
+              <div style={{background: "#ede4f7", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 16}}>
+                <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}><strong>How this works in practice:</strong> one 60-minute call per month, a loose agenda set a week before, dashboard updated after each session, async access to me between calls for anything urgent. No lock-in — cancel any month. The purpose isn't to fill a gap you don't have. It's to keep the pattern intact so the work you've already done compounds instead of drifting.</p>
+              </div>
+            </div>
+
             <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
               {[
-                { icon: "🔁", iconBg: "#fdf0f0", title: "You keep reverting to expertise content — this is the pattern we need to break", flag: "Urgent", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["Every time we cover this, you agree. Then the next fortnight, the podcast clips are back on LinkedIn, the personal stories have stopped, and the engagement has dropped. This isn't a content strategy problem — it's a habit problem. The expertise content feels safer. The personal stories feel exposed. But your audience doesn't need more expert voices. They need to trust you.", "Here's the rule, non-negotiable: one personal post per week on LinkedIn. Not an opinion piece about neurodiversity. Not a podcast clip. A moment from your life. A feeling you had. A conversation that stuck with you. It doesn't need to be long. It needs to be real. That's what's worked every single time you've done it."] },
-                { icon: "🚪", iconBg: "#fdf3ea", title: "LinkedIn is a door opener — not a content library", flag: "Mindset shift", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["Posting heavy-consumption content on LinkedIn — long expert interviews, detailed podcast summaries — is trying to feed people before they've decided they're hungry. LinkedIn works at the top of the funnel. Its job is to make someone think \"I like this person, I want to hear more.\" Once they feel that, they'll follow you into the newsletter, into Kajabi, into a trial.", "Podcast content, expert panels, in-depth resources — those belong in the email funnel and on Kajabi. Not the feed. Use LinkedIn to bring them to the door, then invite them in."] },
+                { icon: "🔁", iconBg: "#fdf0f0", title: "You keep reverting to expertise content — this is the pattern we need to break", flag: "Urgent", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["Every time we cover this, you agree. Then the next fortnight, the podcast clips are back on LinkedIn, the personal stories have stopped, and the engagement has dropped. This isn't a content strategy problem — it's a habit problem. The expertise content feels safer. The personal stories feel exposed. But your audience doesn't need more expert voices. They need to trust you.", "Here's the rule, non-negotiable: one personal post per week on LinkedIn. Not an opinion piece about neurodiversity. Not a podcast clip. A moment from your life. A feeling you had. A conversation that stuck with you. It doesn't need to be long. It needs to be real. That's what's worked every single time you've done it.", "Practical swap — so the expert content doesn't go to waste: when you finish a podcast or expert conversation, don't post the clip on LinkedIn. Instead: (1) the full interview goes on the HushAway YouTube channel as a Conversations episode — that's what it's built for. (2) A written summary with two or three takeaways goes into the next newsletter — your subscribers have already said they want depth. (3) The evergreen version lives on the hushaway.com blog, so it does SEO work for you long after the post would've died. Same effort, three owned channels, zero LinkedIn feed clutter."] },
+                { icon: "🚪", iconBg: "#fdf3ea", title: "LinkedIn is a door opener — not a content library", flag: "Mindset shift", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["Posting heavy-consumption content on LinkedIn — long expert interviews, detailed podcast summaries — is trying to feed people before they've decided they're hungry. LinkedIn works at the top of the funnel. Its job is to make someone think \"I like this person, I want to hear more.\" Once they feel that, they'll follow you into the newsletter, into Kajabi, into a trial.", "Podcast content, expert panels, in-depth resources — those belong in the email funnel and on Kajabi. Not the feed. Use LinkedIn to bring them to the door, then invite them in.", "Here's the funnel mapped out, so you've got somewhere specific to put every piece of heavy content: YouTube (@hushaway_peace) is the home for full-length expert interviews and the Sound Sanctuary explainer videos — people who search \"ASMR children regulation\" end up there. The email newsletter is where deeper writing goes — one longer piece a fortnight, sent from Nikki personally, with a single takeaway and a line of personal context at the top. hushaway.com is the evergreen library — blog posts, resources, research summaries — the stuff that needs to rank and be findable. LinkedIn's only job is to send people to one of those three. A personal post, a human reaction, a story — then a link in the comments or a \"if you want the full conversation, it's on the YouTube channel.\" That's the whole system."] },
                 { icon: "👤", iconBg: "#eef4f2", title: "Lead with Nikki, not HushAway", flag: "Ongoing", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You are 20 times more memorable than a business brand. Every piece of LinkedIn content should answer the question: does this tell people something real about Nikki? If not, it belongs somewhere else.", "The personal posts have consistently outperformed your brand content. This is not a coincidence. People buy from people. Let them find the person first."] },
                 { icon: "🏆", iconBg: "#fdf3ea", title: "The Pod school placement is a content goldmine — use it", flag: "Now", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["You've crossed a real milestone: HushAway is in a school. The journey to get there — the doubt, the logistics, the moment the head teacher said yes — is multiple posts. The impact over the 2-month placement is your PR case study. Start building this now while it's fresh.", "You need: one parent quote, one teacher quote, one before/after. That unlocks PR. That unlocks inbound. That unlocks everything that cold pitching can't buy."] },
                 { icon: "📱", iconBg: "#eef4f2", title: "The marketing assistant — non-negotiable at this stage", flag: "If not done, this week", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["If this hire hasn't happened, it needs to happen this week. You are spending time on scheduling, design, and engagement that a trained VA could do for £20/hour. That time is worth more when you're doing the thinking — the positioning, the storytelling, the relationships.", "You are the library. They are the librarian. You don't need to manage them heavily. You need to brief them well. This dashboard and your Claude workflow is the brief."] },
