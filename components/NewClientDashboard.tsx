@@ -39,6 +39,7 @@ import { useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import DashboardFooter from "@/components/DashboardFooter";
 import EmailOptIn from "@/components/EmailOptIn";
+import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 export interface ClientConfig {
@@ -47,6 +48,7 @@ export interface ClientConfig {
   initials: string;
   color: string;
   sessionLabel: string;
+  nextMove: string;
 }
 
 const TABS = [
@@ -318,6 +320,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
+            <NextMoveBox move={config.nextMove} accentColor={color} />
 
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>{sessionLabel}</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>{firstName} — Client Dashboard</h2>

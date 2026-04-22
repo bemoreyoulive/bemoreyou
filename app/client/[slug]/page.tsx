@@ -6,11 +6,13 @@ import CommentBox from "@/components/CommentBox";
 import DashboardFooter from "@/components/DashboardFooter";
 import EmailOptIn from "@/components/EmailOptIn";
 import MilestoneTracker from "@/components/MilestoneTracker";
+import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
+const AF_NEXT_MOVE = "Post the holiday story. Photos, honesty, the storm. No hard CTA. This is the post that brings you back — do it this week.";
 
 const afTodos = [
   { id: "c1", text: "Post the holiday story — with 2 or 3 photos", subtext: "Cruise, Norway, husky ride, the storm, the norovirus. Be honest about the ups and downs. Bring in the business subtly at the end — no hard CTA. This is your first post back and it will land well. Don't overthink it.", section: "Content — this fortnight" },
@@ -332,6 +334,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} />
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>April 2026 · Session 8</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Andy F — Client Dashboard</h2>
 
@@ -708,6 +711,7 @@ const clientData: Record<string, {
   role: string;
   color: string;
   initials: string;
+  nextMove: string;
   todos: { id: string; text: string; owner?: string }[];
   goals: { short: string[]; long: string[] };
   positioning: { headline: string; differentiators: string[]; audiences: { label: string; detail: string }[] };
@@ -719,6 +723,7 @@ const clientData: Record<string, {
     role: "Founder, Equate Digital",
     color: "#2d5a8e",
     initials: "AF",
+    nextMove: "Post the holiday story. Photos, honesty, the storm. No hard CTA. This is the post that brings you back — do it this week.",
     todos: [
       { id: "c1", text: "Post the holiday story — with 2 or 3 photos (Cruise, Norway, husky ride, the storm, the norovirus)", owner: "Andy" },
       { id: "c2", text: "Post one SACK SALLY — owner absence angle. Hook: \"You started a business because of freedom. But right now, you ain't living that dream.\"", owner: "Andy" },
@@ -781,6 +786,7 @@ const clientData: Record<string, {
     role: "Founder, Ascott Financial Direction",
     color: "#2e7d4f",
     initials: "ASB",
+    nextMove: "Update your LinkedIn headline — it's the single highest-leverage change you can make this week. Do it today.",
     todos: [
       { id: "t1", text: "Update LinkedIn headline to: \"I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce\"", owner: "Andy" },
       { id: "t2", text: "Update LinkedIn banner with the three lines Ben sent", owner: "Andy" },
@@ -842,6 +848,7 @@ const clientData: Record<string, {
     role: "Founder, HushAway & The PeacePath",
     color: "#7c3aed",
     initials: "NM",
+    nextMove: "Land the CMO hire. Four interviews this week — hold the line on your terms. Don't let another week pass without a signed consultant.",
     todos: [
       { id: "t1", text: "HushAway Pod — build a simple case study framework for the 2-month school placement in Huddersfield", owner: "Nikki" },
       { id: "t2", text: "Post LinkedIn job ad — marketing assistant, ~15 hrs/week. Keep it open: \"email me if interested, we'll build the spec together\"", owner: "Nikki" },
@@ -904,6 +911,7 @@ const clientData: Record<string, {
     role: "Luenna Knight — Director",
     color: "#c95e00",
     initials: "SP",
+    nextMove: "Screenshot that troll comment and write the follow-up post. It's content gold and the moment will pass — do it today.",
     todos: [
       { id: "t1", text: "Screenshot the troll comment and turn it into a follow-up post — this is content gold. Do this one first.", owner: "Lue" },
       { id: "t2", text: "LinkedIn to 250 connections by Session 7 (May 5) — connect with directors, accountants, site managers, CIS subcontractors", owner: "Lue" },
@@ -1017,6 +1025,7 @@ function PendingDashboard({ slug }: { slug: string }) {
 // ─── NIKKI McREYNOLDS DASHBOARD ──────────────────────────────────────────────
 
 const NM_COLOR = "#7c3aed";
+const NM_NEXT_MOVE = "Land the CMO hire. Four interviews this week — hold the line on your terms. Don't let another week pass without a signed consultant.";
 
 const nmTodos = [
   { id: "nm1", text: "Land the CMO / 3-month consultant hire this week. Four interviews booked (two Wednesday, one Thursday, one Friday). Hold the line on your terms — project-based fee, 40% up front, KPI of 50 paid members by end of three months. Don't bend on the payment structure again." },
@@ -1071,6 +1080,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
+            <NextMoveBox move={NM_NEXT_MOVE} accentColor={NM_COLOR} />
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
               <div>
@@ -2242,6 +2252,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={client.color} />
+            <NextMoveBox move={client.nextMove} accentColor={client.color} />
             <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
               <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
               Your Actions
