@@ -56,7 +56,6 @@ const TABS = [
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
-  { id: "messaging", label: "Messaging" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
 ];
@@ -388,7 +387,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
               )}
 
               {POSITIONING.audiences.length > 0 && (
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px" }}>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
                   {POSITIONING.audiences.map((a, i) => (
                     <div key={i} style={{ marginBottom: 16 }}>
@@ -397,6 +396,18 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
                     </div>
                   ))}
                 </div>
+              )}
+
+              {MESSAGING.length > 0 && (
+                <>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
+                  {MESSAGING.map((m, i) => (
+                    <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                      <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
+                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
+                    </div>
+                  ))}
+                </>
               )}
             </div>
           ) : <PlaceholderTab label="Positioning" color={color} />
@@ -450,22 +461,6 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
               ))}
             </div>
           ) : <PlaceholderTab label="Content Ideas" color={color} />
-        )}
-
-        {/* ── MESSAGING ── */}
-        {activeTab === "messaging" && (
-          MESSAGING.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Key Themes</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Messaging</h2>
-              {MESSAGING.map((m, i) => (
-                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
-                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
-                </div>
-              ))}
-            </div>
-          ) : <PlaceholderTab label="Messaging" color={color} />
         )}
 
         {/* ── RECOMMENDATIONS ── */}

@@ -273,7 +273,6 @@ const AF_TABS = [
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
-  { id: "messaging", label: "Messaging" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
 ];
@@ -453,7 +452,46 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             ))}
 
-            <CommentBox clientName="Andy Felton" tabName="Positioning" slug={slug} />
+            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Key Messaging Angles</h3>
+            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px" }}>The angles, language patterns, and distinctions that define how you communicate. Note: you've been advised not to lead with "AI" or "automation" — people glaze over. Process and systems language lands better.</p>
+            {afMessaging.map((m, i) => (
+              <Collapsible key={i} title={m.title} defaultOpen={i === 0}>
+                <p style={{ margin: "0 0 12px" }}>{m.body}</p>
+                {m.quote && <blockquote style={{ borderLeft: "3px solid #E0DBD3", paddingLeft: 16, margin: "12px 0 0", color: "#7A746E", fontStyle: "italic", fontSize: "0.9rem" }}>{m.quote}</blockquote>}
+              </Collapsible>
+            ))}
+
+            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Language That Works</h3>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.8rem", color: "#7A746E", marginBottom: 14 }}>From your own words. This is the language that sounds like you and resonates with the right audience.</p>
+              {[
+                "\"Building and solving stuff is my pet subject.\"",
+                "\"Whilst anyone can create systems, the question is whether they should.\"",
+                "\"I'd rather be honest and lose the client than knowingly over-promise.\"",
+                "\"If your agency runs on spreadsheets, workarounds, and outdated systems, we should probably talk.\"",
+                "\"Spreadsheets are where data goes to die.\"",
+                "\"This is plumbing. Not magic.\"",
+                "\"I'm an implementor. I go in and do it.\"",
+              ].map((line, i) => (
+                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 6 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>What Your Ideal Client Is Thinking</h3>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 40 }}>
+              {[
+                "\"I know this is a problem. I just don't know how to fix it.\"",
+                "\"I need someone who understands the technical side so I don't have to.\"",
+                "\"I've wasted money on people who over-promised. I need someone straight.\"",
+                "\"We've outgrown our processes but I don't know what the next step looks like.\"",
+              ].map((line, i) => (
+                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
+              ))}
+            </div>
+
+            <CommentBox clientName="Andy Felton" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
@@ -575,54 +613,6 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             )}
 
             <CommentBox clientName="Andy Felton" tabName="Content Ideas" slug={slug} />
-          </div>
-        )}
-
-        {/* ── MESSAGING ── */}
-        {activeTab === "messaging" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>How to Talk About What You Do</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Messaging</h2>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 28px" }}>The angles, language patterns, and distinctions that define how you communicate. Note: you've been advised not to lead with "AI" or "automation" — people glaze over. Process and systems language lands better.</p>
-
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Key Messaging Angles</h3>
-            {afMessaging.map((m, i) => (
-              <Collapsible key={i} title={m.title} defaultOpen={i === 0}>
-                <p style={{ margin: "0 0 12px" }}>{m.body}</p>
-                {m.quote && <blockquote style={{ borderLeft: "3px solid #E0DBD3", paddingLeft: 16, margin: "12px 0 0", color: "#7A746E", fontStyle: "italic", fontSize: "0.9rem" }}>{m.quote}</blockquote>}
-              </Collapsible>
-            ))}
-
-            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Language That Works</h3>
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.8rem", color: "#7A746E", marginBottom: 14 }}>From your own words. This is the language that sounds like you and resonates with the right audience.</p>
-              {[
-                "\"Building and solving stuff is my pet subject.\"",
-                "\"Whilst anyone can create systems, the question is whether they should.\"",
-                "\"I'd rather be honest and lose the client than knowingly over-promise.\"",
-                "\"If your agency runs on spreadsheets, workarounds, and outdated systems, we should probably talk.\"",
-                "\"Spreadsheets are where data goes to die.\"",
-                "\"This is plumbing. Not magic.\"",
-                "\"I'm an implementor. I go in and do it.\"",
-              ].map((line, i) => (
-                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 6 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
-              ))}
-            </div>
-
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>What Your Ideal Client Is Thinking</h3>
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 40 }}>
-              {[
-                "\"I know this is a problem. I just don't know how to fix it.\"",
-                "\"I need someone who understands the technical side so I don't have to.\"",
-                "\"I've wasted money on people who over-promised. I need someone straight.\"",
-                "\"We've outgrown our processes but I don't know what the next step looks like.\"",
-              ].map((line, i) => (
-                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
-              ))}
-            </div>
-
-            <CommentBox clientName="Andy Felton" tabName="Messaging" slug={slug} />
           </div>
         )}
 
@@ -971,7 +961,6 @@ const tabs = [
   { id: "milestones", label: "Milestones" },
   { id: "goals", label: "Goals" },
   { id: "brand", label: "Brand Assets" },
-  { id: "messaging", label: "Messaging" },
   { id: "content", label: "Content Ideas" },
 ];
 
@@ -1051,7 +1040,6 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
     { id: "home", label: "Home" },
     { id: "milestones", label: "Milestones" },
     { id: "brand", label: "Brand Assets" },
-    { id: "messaging", label: "Messaging" },
     { id: "content", label: "Content Ideas" },
     { id: "recs", label: "Ben's Recommendations" },
     { id: "goals", label: "Your Goals" },
@@ -1307,16 +1295,11 @@ What we do:
               ))}
             </div>
 
-            <CommentBox clientName="Nikki McReynolds" tabName="Brand Assets" slug={slug} />
-          </div>
-        )}
-
-        {/* ── MESSAGING ── */}
-        {activeTab === "messaging" && (
-          <div>
-            <h2 style={{fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1a1916", margin: "0 0 4px"}}>Messaging</h2>
-            <p style={{fontSize: "0.88rem", color: "#6b6860", marginBottom: 28}}>The angles with the most potential, grounded in your own words.</p>
-            <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
+            {/* Messaging angles */}
+            <div style={{height: 1, background: "#e4e2dc", margin: "24px 0"}} />
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", margin: "0 0 8px"}}>Key Messaging Angles</p>
+            <p style={{fontSize: "0.84rem", color: "#6b6860", margin: "0 0 20px", lineHeight: 1.6}}>The angles with the most potential, grounded in your own words.</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 20}}>
               {[
                 { num: 1, title: "Push the pause button", body: "This came from a parent you overheard — and it went straight into your product thinking. Parents are exhausted. They're not failing their children; they're just running on empty with nowhere to put the child safely while they breathe. HushAway isn't just for the child. It's for the parent who needs ten minutes of quiet.", quote: '"I just want to push the pause button." — a parent. That\'s it. That\'s the whole brief.' },
                 { num: 2, title: "The bridge before diagnosis", body: "Families wait years for a formal assessment. Children are struggling now. HushAway is something they can start today — before the diagnosis, before the waiting list, before anyone's decided what label fits. It doesn't require permission from a specialist. It just requires a parent who's willing to try something gentle.", quote: null },
@@ -1326,19 +1309,20 @@ What we do:
                 { num: 6, title: "The legacy", body: "In ten years, you want to look back and call them \"the HushAway children.\" Not because of the brand — because they grew up with better emotional tools, more self-awareness, and a stronger foundation for navigating the world. That's the legacy frame. It's the biggest, most human version of what this is.", quote: '"HushAway is bigger than stories, meditations, and sounds. That\'s just the conduit."' },
                 { num: 7, title: "The unfixed child", body: "The \"superpower\" narrative around neurodiverse children puts pressure on them to be exceptional to earn their place. You reject that. Not every day is a superpower day. Some days are messy and hard and no one wants to be told their struggle is actually a gift. Children deserve safety as they are — not conditional on being remarkable.", quote: '"Not every day is a superpower day — some days are really messy."' },
               ].map((msg, i) => (
-                <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px"}}>
+                <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "18px 20px"}}>
                   <div style={{width: 22, height: 22, borderRadius: "50%", background: NM_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10}}>{msg.num}</div>
-                  <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 8, margin: "0 0 8px"}}>{msg.title}</h3>
-                  <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{msg.body}</p>
+                  <p style={{fontSize: "0.9rem", fontWeight: 600, color: "#1a1916", margin: "0 0 6px"}}>{msg.title}</p>
+                  <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{msg.body}</p>
                   {msg.quote && (
-                    <div style={{background: "#eef4f2", borderLeft: "3px solid #3d6b5e", borderRadius: "0 6px 6px 0", padding: "12px 16px", marginTop: 10}}>
-                      <p style={{fontSize: "0.8rem", fontStyle: "italic", color: "#3d6b5e", margin: 0}}>{msg.quote}</p>
+                    <div style={{background: "#eef4f2", borderLeft: "3px solid #3d6b5e", borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10}}>
+                      <p style={{fontSize: "0.78rem", fontStyle: "italic", color: "#3d6b5e", margin: 0}}>{msg.quote}</p>
                     </div>
                   )}
                 </div>
               ))}
             </div>
-            <CommentBox clientName="Nikki McReynolds" tabName="Messaging" slug={slug} />
+
+            <CommentBox clientName="Nikki McReynolds" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
@@ -2173,19 +2157,8 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </div>
               </div>
             </div>
-            <CommentBox clientName={client.name} tabName="Positioning" slug={slug} />
-          </div>
-        )}
-
-        {activeTab === "messaging" && (
-          <div>
-            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: client.color, marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
-              <span style={{display: "inline-block", width: 24, height: 2, background: client.color}} />
-              How to Talk About What You Do
-            </p>
-            <h2 style={{fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 40px", letterSpacing: "-0.02em"}}>
-              Messaging for Social Media
-            </h2>
+            <div style={{height: 1, background: "#E0DBD3", margin: "28px 0"}} />
+            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7A746E", marginBottom: 20}}>Messaging Angles</p>
             <div style={{display: "flex", flexDirection: "column", gap: 2, marginBottom: 40}}>
               {client.messaging.map((m, i) => (
                 <div key={i} style={{background: "#fff", border: "1px solid #E0DBD3", borderRadius: 3, padding: "24px 28px"}}>
@@ -2194,7 +2167,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
                 </div>
               ))}
             </div>
-            <CommentBox clientName={client.name} tabName="Messaging" slug={slug} />
+            <CommentBox clientName={client.name} tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
