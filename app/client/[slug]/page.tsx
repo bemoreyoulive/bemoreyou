@@ -2253,6 +2253,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
             </h2>
             <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
             <CommentBox clientName={client.name} tabName="To-Do" slug={slug} />
+            <BenUpdateBox slug={slug} />
           </div>
         )}
 
