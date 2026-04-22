@@ -1070,10 +1070,30 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
-            <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 24, display: "flex", gap: 12, alignItems: "flex-start"}}>
+            <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 14, display: "flex", gap: 12, alignItems: "flex-start"}}>
               <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
               <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 11:</strong> Phase 2 starts now. Foundation is built. The priority is conversion and sales. The May LinkedIn plan in Content Ideas is ready — copy, paste, generate. You know what to do.</p>
             </div>
+
+            <button
+              onClick={() => setActiveTab("recs")}
+              style={{
+                width: "100%", textAlign: "left", cursor: "pointer",
+                background: "linear-gradient(135deg, #ede4f7 0%, #f5eefb 100%)",
+                border: `1px solid ${NM_COLOR}`,
+                borderRadius: 8, padding: "18px 22px", marginBottom: 24,
+                display: "flex", gap: 14, alignItems: "flex-start",
+                fontFamily: "inherit",
+              }}
+            >
+              <span style={{fontSize: 20, flexShrink: 0, lineHeight: 1}}>🧭</span>
+              <div style={{flex: 1}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 4px"}}>New — added after today's session</p>
+                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>The 8-touchpoint nurture strategy + 6-month plan</p>
+                <p style={{fontSize: "0.82rem", color: "#4a3d5e", margin: 0, lineHeight: 1.6}}>A visual map of how LinkedIn, YouTube, your newsletter, and hushaway.com work together to turn strangers into members — and the specific content you <em>don't</em> have to create from scratch (Content Ideas tab already has it). Also: a proposed month-by-month maintenance plan from May through October if you want to keep the momentum going.</p>
+                <p style={{fontSize: "0.78rem", fontWeight: 600, color: NM_COLOR, margin: "10px 0 0"}}>→ Open Ben&apos;s Recommendations</p>
+              </div>
+            </button>
 
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
