@@ -192,7 +192,7 @@ function buildEmail(
       <p style="font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0 0 16px;">
         Anything happened this week that deserves a tick? A DM that came in because of something you posted? Someone who used your exact words back at you? A better enquiry than last month? These things happen and we forget them by Friday — don't let that happen. Log it while it's fresh.
       </p>
-      <a href="${dashboardUrl}/milestones" style="display: inline-block; padding: 11px 22px; background: #E8521C; color: #fff; text-decoration: none; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
+      <a href="${dashboardUrl}" style="display: inline-block; padding: 11px 22px; background: #E8521C; color: #fff; text-decoration: none; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
         Check Milestones &amp; Signals →
       </a>
     </div>
