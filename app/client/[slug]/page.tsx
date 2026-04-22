@@ -2,8 +2,8 @@
 
 import { use, useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
-import BenUpdateBox from "@/components/BenUpdateBox";
 import CommentBox from "@/components/CommentBox";
+import DashboardFooter from "@/components/DashboardFooter";
 import EmailOptIn from "@/components/EmailOptIn";
 import MilestoneTracker from "@/components/MilestoneTracker";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
@@ -385,8 +385,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               );
             })}
 
-            <CommentBox clientName="Andy Felton" tabName="Home" slug={slug} />
-            <BenUpdateBox slug={slug} />
+            <DashboardFooter clientName="Andy Felton" tabName="Home" slug={slug} />
           </div>
         )}
 
@@ -1140,8 +1139,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
-            <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
-            <BenUpdateBox slug={slug} />
+            <DashboardFooter clientName="Nikki McReynolds" tabName="Home" slug={slug} />
           </div>
         )}
 
@@ -2252,8 +2250,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
               To-Do List
             </h2>
             <ClientTodoList items={client.todos} clientName={client.name} slug={slug} accentColor={client.color} />
-            <CommentBox clientName={client.name} tabName="To-Do" slug={slug} />
-            <BenUpdateBox slug={slug} />
+            <DashboardFooter clientName={client.name} tabName="To-Do" slug={slug} />
           </div>
         )}
 
