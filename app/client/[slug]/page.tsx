@@ -1455,6 +1455,19 @@ What we do:
               <div style={{background: "#ede4f7", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 16}}>
                 <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}><strong>How this works in practice:</strong> one 60-minute call per month, a loose agenda set a week before, dashboard updated after each session, async access to me between calls for anything urgent. No lock-in — cancel any month. The purpose isn't to fill a gap you don't have. It's to keep the pattern intact so the work you've already done compounds instead of drifting.</p>
               </div>
+
+              {/* ── HOW THE PAYMENTS WORK ── */}
+              <div style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "18px 22px", marginTop: 16}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6b5a2a", margin: "0 0 8px"}}>How the payments work — no surprises</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Nothing about your current arrangement is changing. You&apos;re still paying <strong>£350/month</strong> against the original package balance (13.5 hours of work already delivered since November 2025). That balance runs out in <strong>December 2026</strong> — at which point the £350 simply stops.</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>The monthly maintenance call is a separate line — <strong>£200 per session</strong>, billed only in months we actually meet. That&apos;s it. No retainer, no minimum, no price creep. Skip a month and you don&apos;t pay for it.</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>So your outgoing looks like this:</p>
+                <ul style={{margin: "0 0 10px", padding: "0 0 0 18px", listStyle: "none"}}>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>Now until Dec 2026:</strong> £350 balance repayment + £200 per call (only when we have one).</li>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>From Jan 2027 onwards:</strong> just £200 per call. Nothing else. Balance paid off in full.</li>
+                </ul>
+                <p style={{fontSize: "0.8rem", color: "#6b6860", lineHeight: 1.6, margin: 0, fontStyle: "italic"}}>The full schedule with running balance lives in the spreadsheet I&apos;ve shared with you — ask if you want a fresh copy.</p>
+              </div>
             </div>
 
             <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
