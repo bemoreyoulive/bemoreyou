@@ -1070,56 +1070,11 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
-            <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 14, display: "flex", gap: 12, alignItems: "flex-start"}}>
-              <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
-              <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 12 (22 April):</strong> One last fortnightly session on <strong>6 May at 12:30pm</strong>, then a break while you fix the funnel with the CMO. Maintenance sessions start <strong>August</strong> at £200/month (no change to your monthly spend — see the payments block in Ben&apos;s Recommendations). Don&apos;t change the scheduled April LinkedIn posts — let them run.</p>
-            </div>
-
-            <button
-              onClick={() => setActiveTab("recs")}
-              style={{
-                width: "100%", textAlign: "left", cursor: "pointer",
-                background: "linear-gradient(135deg, #ede4f7 0%, #f5eefb 100%)",
-                border: `1px solid ${NM_COLOR}`,
-                borderRadius: 8, padding: "18px 22px", marginBottom: 14,
-                display: "flex", gap: 14, alignItems: "flex-start",
-                fontFamily: "inherit",
-              }}
-            >
-              <span style={{fontSize: 20, flexShrink: 0, lineHeight: 1}}>🧭</span>
-              <div style={{flex: 1}}>
-                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 4px"}}>Updated after Session 12</p>
-                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>The plan for the next 3 months — and what happens after the break</p>
-                <p style={{fontSize: "0.82rem", color: "#4a3d5e", margin: 0, lineHeight: 1.6}}>Why we&apos;re pausing fortnightly sessions, what the CMO project needs to deliver, the August maintenance restart, and the payment structure (stays at £350/month — nothing changes for you). Also includes the 8-touchpoint funnel and the Behind the Hush series framing.</p>
-                <p style={{fontSize: "0.78rem", fontWeight: 600, color: NM_COLOR, margin: "10px 0 0"}}>→ Open Ben&apos;s Recommendations</p>
-              </div>
-            </button>
-
-            <button
-              onClick={() => { setActiveTab("content"); setContentSubTab("behindthehush"); }}
-              style={{
-                width: "100%", textAlign: "left", cursor: "pointer",
-                background: "linear-gradient(135deg, #eef4f2 0%, #f5faf8 100%)",
-                border: `1px solid #3d6b5e`,
-                borderRadius: 8, padding: "18px 22px", marginBottom: 24,
-                display: "flex", gap: 14, alignItems: "flex-start",
-                fontFamily: "inherit",
-              }}
-            >
-              <span style={{fontSize: 20, flexShrink: 0, lineHeight: 1}}>🤫</span>
-              <div style={{flex: 1}}>
-                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#3d6b5e", margin: "0 0 4px"}}>New — your idea from Session 12</p>
-                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>Behind the Hush — weekly series workspace</p>
-                <p style={{fontSize: "0.82rem", color: "#2a4d44", margin: 0, lineHeight: 1.6}}>A new sub-tab in Content Ideas to build out the weekly series you came up with. Format scaffolding, first four topic ideas, and a place to drop your Claude work when you&apos;re ready. Open it, see what&apos;s there, add your thinking, we&apos;ll shape it together on 6 May.</p>
-                <p style={{fontSize: "0.78rem", fontWeight: 600, color: "#3d6b5e", margin: "10px 0 0"}}>→ Open Behind the Hush</p>
-              </div>
-            </button>
-
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
               <div>
                 <p style={{fontSize: "0.88rem", fontWeight: 600, color: NM_COLOR, margin: "0 0 4px"}}>Session 12 — 22 April 2026</p>
-                <p style={{fontSize: "0.84rem", color: "#4a6b62", margin: 0, lineHeight: 1.6}}>The honest session. Phase 1 learnings banked — the agency path didn&apos;t convert, and you&apos;re now hunting a fractional CMO / 3-month consultant to fix the funnel before any more ad spend. Four interviews booked this week. You&apos;ve set yourself a clear KPI: 50 paid members in three months. On personal content, you pushed back — you&apos;ve lost faith in personal posts for now but agreed &quot;Behind the Hush&quot; as the bridge (your idea, weekly series). Commercial shift agreed: one final fortnightly on 6 May, break while the CMO does the heavy lifting, then £200/month maintenance from August.</p>
+                <p style={{fontSize: "0.84rem", color: "#4a6b62", margin: 0, lineHeight: 1.6}}>Phase 1 learnings banked. The agency path didn&apos;t convert — you&apos;ve cut your losses and are now hunting a fractional CMO / 3-month consultant to fix the funnel before any more ad spend. Four interviews booked this week, clear KPI set: 50 paid members in three months. On personal content, you pushed back — you&apos;ve lost faith in personal posts for now but agreed &quot;Behind the Hush&quot; as the bridge. One final fortnightly on 6 May, then a break while the CMO does the heavy lifting. Everything in Ben&apos;s Recommendations tab has been updated to reflect where we are.</p>
               </div>
             </div>
 
@@ -1459,8 +1414,7 @@ What we do:
                 {[
                   { when: "Wed 6 May 2026 · 12:30pm", theme: "Final fortnightly session (1 hour)", focus: "Wrap Phase 1 cleanly. Lock the Behind the Hush format so you&apos;ve got a live-able weekly routine through the break. Agree content capture plan for the Happy Place Festival and the Pod day-30 check-in. Confirm who the CMO / 3-month consultant is and what success looks like by end of three months (target: 50 paid members)." },
                   { when: "May — June — July 2026", theme: "The break — CMO project runs", focus: "No coaching sessions. The CMO is doing the funnel diagnostic, parent interviews, Open Sanctuary → 14-day trial switch, and conversion fix. Your job is to brief them, unblock them, and protect your own mornings. The dashboard stays live throughout — automated Monday email, to-do list, comment box — so we stay connected async." },
-                  { when: "Fri 4 July 2026", theme: "Final payment on the original package", focus: "The original £3,450 coaching package is fully paid off. No more package payments from this point." },
-                  { when: "August 2026 onwards", theme: "£200/month maintenance sessions begin", focus: "One 60-minute session per month. No fortnightly cadence. The focus shifts to personal / opinion / Behind the Hush content to drive traffic to the (now-working) funnel. This is the moment we go hell-for-leather on your personal brand, because the back end can finally hold the traffic we send it. No lock-in — cancel any month." },
+                  { when: "July 2026", theme: "Reconnect — kick off monthly maintenance", focus: "We&apos;ll talk in July to review how the CMO project is landing and, if the ducks are in a row, kick off one session a month from there. The focus shifts to personal / opinion / Behind the Hush content to drive traffic to the (now-working) funnel — going hell-for-leather on your personal brand once the back end can hold the traffic." },
                 ].map((m, i) => (
                   <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "16px 18px"}}>
                     <div style={{display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8}}>
@@ -1473,23 +1427,9 @@ What we do:
               </div>
 
               <div style={{background: "#ede4f7", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 8}}>
-                <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}><strong>Why this works:</strong> I&apos;m not starting from scratch when we come back — I&apos;ve got mountains of information on you already. August is about taking the work from third gear to fifth gear, not re-learning the business. The break is so you can step off the treadmill while someone else fixes the funnel, and so you&apos;re actually ready — mentally and commercially — to go personal when we pick back up.</p>
+                <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}>When we come back, we&apos;re not starting from scratch — I&apos;ve got everything on you already. It&apos;s about taking the work from third gear to fifth gear. The break gives you space to get the funnel fixed so that when we go hell-for-leather on your personal brand, there&apos;s actually something for people to land on.</p>
               </div>
 
-              {/* ── HOW THE PAYMENTS WORK ── */}
-              <div style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "18px 22px", marginTop: 16}}>
-                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6b5a2a", margin: "0 0 8px"}}>How the payments work — no gap, no increase</p>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Your <strong>£350/month</strong> direct debit stays running the whole way through — through the break, and onward. You never stop paying, and you never pay more. From August, that £350/month simply converts into a single £200 session plus the final package payments, then drops to £200/month from September onwards.</p>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Here&apos;s the full schedule:</p>
-                <ul style={{margin: "0 0 12px", padding: "0 0 0 18px", listStyle: "none"}}>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>Nov 2025 – Jun 2026:</strong> £350/month, all going against the original 13.5-hour package balance (£3,450 total).</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>4 July 2026:</strong> final £350 payment on the original package. Package balance clears.</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>August 2026:</strong> first £200 maintenance session. Coaching cadence resumes at one session/month.</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>August 2026 onwards:</strong> £200/month, indefinite, cancel any time.</li>
-                </ul>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>So there&apos;s no interruption in payment, no re-signing, no awkwardness. The package finishes when it finishes (4 July), maintenance starts in August at a lower monthly cost than you&apos;re paying now, and the dashboard keeps running the whole time so you always have somewhere to put your thinking.</p>
-                <p style={{fontSize: "0.8rem", color: "#6b6860", lineHeight: 1.6, margin: 0, fontStyle: "italic"}}>The full schedule with running balance lives in the spreadsheet I&apos;ve shared with you — ask if you want a fresh copy.</p>
-              </div>
             </div>
 
             <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
@@ -1659,7 +1599,7 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
               ))}
             </div>
             <div style={{background: "#fdf8ec", borderLeft: "3px solid #8a6e2a", borderRadius: 4, padding: "12px 14px"}}>
-              <p style={{fontSize: "0.78rem", color: "#6b5a2a", margin: 0, lineHeight: 1.6}}><strong>Ben&apos;s nudge:</strong> don&apos;t route people to a separate blog. You said it yourself — &quot;another click, another reason for them to go, I can&apos;t be asked.&quot; The reel + post + ManyChat = newsletter signup. That&apos;s the whole funnel. Save the blog for the newsletter body itself.</p>
+              <p style={{fontSize: "0.78rem", color: "#6b5a2a", margin: 0, lineHeight: 1.6}}>Don&apos;t route people to a separate blog — as you said yourself: &quot;another click, another reason for them to go, I can&apos;t be asked.&quot; The reel + post + ManyChat = newsletter signup. That&apos;s the whole funnel. Save the depth for the newsletter itself.</p>
             </div>
           </div>
 
