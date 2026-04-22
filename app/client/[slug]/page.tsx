@@ -1018,14 +1018,14 @@ function PendingDashboard({ slug }: { slug: string }) {
 const NM_COLOR = "#7c3aed";
 
 const nmTodos = [
-  { id: "nm1", text: "Post one personal story to LinkedIn this week — not an expert post, not a podcast clip. Something from your life. A moment, a feeling, a conversation. That's the content that's consistently outperformed everything else. Do it before Sunday." },
-  { id: "nm2", text: "Stop using LinkedIn as a content library. Podcast clips and expert interviews belong in the newsletter and on Kajabi — not the feed. LinkedIn is a door opener. Once people trust you there, they'll follow you deeper. Not the other way around." },
-  { id: "nm3", text: "HushAway Pod — the Huddersfield school placement is live. Start building the case study now while the experience is fresh. You need at least one parent and one teacher on record within 8 weeks. PR agencies will ask for this." },
-  { id: "nm4", text: "Marketing assistant — if this hire hasn't happened yet, prioritise it this week. Your content operation is too manual right now. The right person takes scheduling, engagement, and design off your plate completely." },
-  { id: "nm5", text: "Check your email open rates — if you're still sending from HushAway rather than Nikki, switch this now. Personalised sender name typically lifts open rates 15–20%. Small change, meaningful result." },
-  { id: "nm6", text: "Write down three personal stories you haven't posted yet — formative moments from the nursery years, conversations with parents, the moment you knew you needed to build this. Send them to Ben or drop them into the comment box below before the next session." },
-  { id: "nm7", text: "Collect one parent testimonial from the SoundSonic ambassador group — a proper one, not a one-liner. Ask them: what was life like before HushAway, what specifically changed, and would they recommend it. That's your PR unlock." },
-  { id: "nm8", text: "Check SEO weekly — you're managing the website yourself now. If rankings slip, it's expensive and slow to recover. Build it into your Monday routine." },
+  { id: "nm1", text: "Land the CMO / 3-month consultant hire this week. Four interviews booked (two Wednesday, one Thursday, one Friday). Hold the line on your terms — project-based fee, 40% up front, KPI of 50 paid members by end of three months. Don't bend on the payment structure again." },
+  { id: "nm2", text: "Once CMO is signed, brief them on the Open Sanctuary → 14-day trial switch and the funnel diagnostic. Their first job is the 10–15 parent interviews. You are not doing those yourself — that's the whole point." },
+  { id: "nm3", text: "Start 'Behind the Hush' concept work with Claude. You said you'd send your first pass to Ben — do it before 6 May so we can shape it in the last fortnightly session. One-line format idea: reel hook → written post → newsletter CTA via ManyChat." },
+  { id: "nm4", text: "HushAway Pod — Huddersfield is live and mid-baseline. Day 30 check-in is coming. Make sure NDA + media consent forms are signed by all five parents. Collect one usable story or parent reaction now, even if it's just a quote — don't wait for the full 60-day data." },
+  { id: "nm5", text: "Switch the email sender name from HushAway to Nikki (founder of HushAway). This one has been on the list too long. It's a 5-minute job in Kajabi and it materially lifts open rates. Do it before the next send." },
+  { id: "nm6", text: "Happy Place Festival — lock the capture plan. Who's filming, what's the interview list, what assets do you want out of the day. Treat it like a content shoot, not a day out. You'll use this content for months." },
+  { id: "nm7", text: "Protect the mornings. You told Ben you were in a dark place two weeks ago — the 45-minute gym window is non-negotiable. Don't trade it for another interview. You cannot pour from an empty cup and the business needs your clearest thinking, not your most hours." },
+  { id: "nm8", text: "Let April's scheduled LinkedIn posts run their course. Do not change them. Do not obsess over them. All energy goes into the CMO hire and the Behind the Hush concept — that is where the next 3 months of output actually gets built." },
 ];
 
 function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
@@ -1072,7 +1072,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
             <EmailOptIn slug={slug} accentColor={NM_COLOR} />
             <div style={{background: "#fdf3ea", border: "1px solid #f0d4b8", borderRadius: 8, padding: "14px 18px", marginBottom: 14, display: "flex", gap: 12, alignItems: "flex-start"}}>
               <span style={{fontSize: 16, flexShrink: 0}}>⚡</span>
-              <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 11:</strong> Phase 2 starts now. Foundation is built. The priority is conversion and sales. The May LinkedIn plan in Content Ideas is ready — copy, paste, generate. You know what to do.</p>
+              <p style={{fontSize: "0.85rem", color: "#7a4a20", margin: 0, lineHeight: 1.55}}><strong>Updated after Session 12 (22 April):</strong> One last fortnightly session on <strong>6 May at 12:30pm</strong>, then a break while you fix the funnel with the CMO. Maintenance sessions start <strong>August</strong> at £200/month (no change to your monthly spend — see the payments block in Ben&apos;s Recommendations). Don&apos;t change the scheduled April LinkedIn posts — let them run.</p>
             </div>
 
             <button
@@ -1081,25 +1081,45 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
                 width: "100%", textAlign: "left", cursor: "pointer",
                 background: "linear-gradient(135deg, #ede4f7 0%, #f5eefb 100%)",
                 border: `1px solid ${NM_COLOR}`,
-                borderRadius: 8, padding: "18px 22px", marginBottom: 24,
+                borderRadius: 8, padding: "18px 22px", marginBottom: 14,
                 display: "flex", gap: 14, alignItems: "flex-start",
                 fontFamily: "inherit",
               }}
             >
               <span style={{fontSize: 20, flexShrink: 0, lineHeight: 1}}>🧭</span>
               <div style={{flex: 1}}>
-                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 4px"}}>New — added after today's session</p>
-                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>The 8-touchpoint nurture strategy + 6-month plan</p>
-                <p style={{fontSize: "0.82rem", color: "#4a3d5e", margin: 0, lineHeight: 1.6}}>A visual map of how LinkedIn, YouTube, your newsletter, and hushaway.com work together to turn strangers into members — and the specific content you <em>don't</em> have to create from scratch (Content Ideas tab already has it). Also: a proposed month-by-month maintenance plan from June through November if you want to keep the momentum going.</p>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 4px"}}>Updated after Session 12</p>
+                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>The plan for the next 3 months — and what happens after the break</p>
+                <p style={{fontSize: "0.82rem", color: "#4a3d5e", margin: 0, lineHeight: 1.6}}>Why we&apos;re pausing fortnightly sessions, what the CMO project needs to deliver, the August maintenance restart, and the payment structure (stays at £350/month — nothing changes for you). Also includes the 8-touchpoint funnel and the Behind the Hush series framing.</p>
                 <p style={{fontSize: "0.78rem", fontWeight: 600, color: NM_COLOR, margin: "10px 0 0"}}>→ Open Ben&apos;s Recommendations</p>
+              </div>
+            </button>
+
+            <button
+              onClick={() => { setActiveTab("content"); setContentSubTab("behindthehush"); }}
+              style={{
+                width: "100%", textAlign: "left", cursor: "pointer",
+                background: "linear-gradient(135deg, #eef4f2 0%, #f5faf8 100%)",
+                border: `1px solid #3d6b5e`,
+                borderRadius: 8, padding: "18px 22px", marginBottom: 24,
+                display: "flex", gap: 14, alignItems: "flex-start",
+                fontFamily: "inherit",
+              }}
+            >
+              <span style={{fontSize: 20, flexShrink: 0, lineHeight: 1}}>🤫</span>
+              <div style={{flex: 1}}>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#3d6b5e", margin: "0 0 4px"}}>New — your idea from Session 12</p>
+                <p style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>Behind the Hush — weekly series workspace</p>
+                <p style={{fontSize: "0.82rem", color: "#2a4d44", margin: 0, lineHeight: 1.6}}>A new sub-tab in Content Ideas to build out the weekly series you came up with. Format scaffolding, first four topic ideas, and a place to drop your Claude work when you&apos;re ready. Open it, see what&apos;s there, add your thinking, we&apos;ll shape it together on 6 May.</p>
+                <p style={{fontSize: "0.78rem", fontWeight: 600, color: "#3d6b5e", margin: "10px 0 0"}}>→ Open Behind the Hush</p>
               </div>
             </button>
 
             <div style={{background: "#eef4f2", border: "1px solid #cfe0db", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28}}>
               <div style={{width: 36, height: 36, background: NM_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0}}>12</div>
               <div>
-                <p style={{fontSize: "0.88rem", fontWeight: 600, color: NM_COLOR, margin: "0 0 4px"}}>Today's session — 22 April 2026</p>
-                <p style={{fontSize: "0.84rem", color: "#4a6b62", margin: 0, lineHeight: 1.6}}>The content pattern conversation. You've been reverting to expertise-led posts and heavy-consumption podcast content rather than the personal stories that have consistently outperformed everything else. We're going back to first principles on what LinkedIn is for: it's a door opener, not a content library. Personal content builds trust. Trust drives trial. Trial drives the 1,000 members goal. The HushAway Pod school placement happened — a significant milestone. We also reviewed where the work goes from here.</p>
+                <p style={{fontSize: "0.88rem", fontWeight: 600, color: NM_COLOR, margin: "0 0 4px"}}>Session 12 — 22 April 2026</p>
+                <p style={{fontSize: "0.84rem", color: "#4a6b62", margin: 0, lineHeight: 1.6}}>The honest session. Phase 1 learnings banked — the agency path didn&apos;t convert, and you&apos;re now hunting a fractional CMO / 3-month consultant to fix the funnel before any more ad spend. Four interviews booked this week. You&apos;ve set yourself a clear KPI: 50 paid members in three months. On personal content, you pushed back — you&apos;ve lost faith in personal posts for now but agreed &quot;Behind the Hush&quot; as the bridge (your idea, weekly series). Commercial shift agreed: one final fortnightly on 6 May, break while the CMO does the heavy lifting, then £200/month maintenance from August.</p>
               </div>
             </div>
 
@@ -1429,58 +1449,59 @@ What we do:
               </div>
             </div>
 
-            {/* ── 6-MONTH MAINTENANCE PLAN ── */}
+            {/* ── THE NEW COACHING STRUCTURE — POST SESSION 12 ── */}
             <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "24px 26px", marginBottom: 20}}>
-              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>Proposed: 6-month maintenance</p>
-              <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>If you want to keep moving — one call a month, June to November</h3>
-              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>The core brand work is done. What's left isn't strategy-from-scratch — it's the monthly discipline of staying on pattern, catching drift early, and making the right call at each growth moment. One 60-minute call a month keeps the system accountable and gives you someone to pressure-test the harder decisions with. Here's what each month would likely cover — not fixed, but grounded in where the business actually is.</p>
+              <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>Agreed in Session 12 — what happens next</p>
+              <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>One final fortnightly → break → maintenance sessions from August</h3>
+              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>You said it yourself in Session 12: &quot;one person landing on that website and turning and switching off is lost — I will never get them back.&quot; Pushing more LinkedIn content through a funnel that isn&apos;t converting is the wrong move. The right move is to pause fortnightly coaching, let the CMO fix the funnel over the next three months, and come back together once the back end is actually working. Then we go hell-for-leather on personal / opinion content to drive people to the newsletter and on to HushAway.</p>
 
-              {[
-                { month: "June 2026", theme: "Pod placement + content discipline reset", focus: "Review the Huddersfield Pod so far — are the testimonials being collected, is the teacher engaged, is the content from it getting into LinkedIn and newsletter. Audit the last 4 weeks of LinkedIn posts together — count how many were personal vs expertise. Reset if needed. Decide: has the marketing assistant been hired yet? If not, why not?" },
-                { month: "July 2026", theme: "First PR push", focus: "Pod case study is live — one parent quote, one teacher quote, one before/after. Shortlist 3 parenting/SEN publications. Decide which PR relationship you're going after. Draft the approach and the pitch together. Newsletter audit: what are open rates, what's the click-through, where do subscribers drop off." },
-                { month: "August 2026", theme: "Funnel conversion check", focus: "First real data on the 8-touchpoint funnel — how many LinkedIn → YouTube clicks, how many YouTube → newsletter signups, how many newsletter → Kajabi trials. Find the weakest link and fix it. Is the membership growing? What's the trial-to-paid rate? If it's not working, diagnose which stage is broken." },
-                { month: "September 2026", theme: "Positioning review + content refresh", focus: "Quarter-mark check on the HushAway positioning. Is it landing? Are the right people finding you? Are you still getting the \"oh, that makes sense\" reaction when you explain it? Refresh the content bank — by now the LinkedIn content may need a new angle. Plan the autumn push." },
-                { month: "October 2026", theme: "Schools pipeline + scale decisions", focus: "If the Pod placement worked, you should be in conversations with 2–3 more schools by now. Commercial model review — what are schools willing to pay, how does licensing actually work, who owns the relationship. Also: is the marketing assistant working out? Time to expand, or time to replace? Start mapping a possible schools-focused funnel separate from the parent one." },
-                { month: "November 2026", theme: "End-of-year review + 2027 plan", focus: "Are you on track for 1,000 members by December? If not, what's the realistic number and what would need to happen to accelerate it. Review: what PR landed, what content worked, what the audience is actually telling you. Set the 2027 commercial and personal goals — including whether the monthly structure continues, stops, or changes." },
-              ].map((m, i) => (
-                <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "16px 18px", marginBottom: 10}}>
-                  <div style={{display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8}}>
-                    <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR}}>{m.month}</span>
-                    <span style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916"}}>{m.theme}</span>
+              <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 16}}>
+                {[
+                  { when: "Wed 6 May 2026 · 12:30pm", theme: "Final fortnightly session (1 hour)", focus: "Wrap Phase 1 cleanly. Lock the Behind the Hush format so you&apos;ve got a live-able weekly routine through the break. Agree content capture plan for the Happy Place Festival and the Pod day-30 check-in. Confirm who the CMO / 3-month consultant is and what success looks like by end of three months (target: 50 paid members)." },
+                  { when: "May — June — July 2026", theme: "The break — CMO project runs", focus: "No coaching sessions. The CMO is doing the funnel diagnostic, parent interviews, Open Sanctuary → 14-day trial switch, and conversion fix. Your job is to brief them, unblock them, and protect your own mornings. The dashboard stays live throughout — automated Monday email, to-do list, comment box — so we stay connected async." },
+                  { when: "Fri 4 July 2026", theme: "Final payment on the original package", focus: "The original £3,450 coaching package is fully paid off. No more package payments from this point." },
+                  { when: "August 2026 onwards", theme: "£200/month maintenance sessions begin", focus: "One 60-minute session per month. No fortnightly cadence. The focus shifts to personal / opinion / Behind the Hush content to drive traffic to the (now-working) funnel. This is the moment we go hell-for-leather on your personal brand, because the back end can finally hold the traffic we send it. No lock-in — cancel any month." },
+                ].map((m, i) => (
+                  <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "16px 18px"}}>
+                    <div style={{display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8}}>
+                      <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR}}>{m.when}</span>
+                      <span style={{fontSize: "0.95rem", fontWeight: 700, color: "#1a1916"}}>{m.theme}</span>
+                    </div>
+                    <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.6, margin: 0}}>{m.focus}</p>
                   </div>
-                  <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.6, margin: 0}}>{m.focus}</p>
-                </div>
-              ))}
+                ))}
+              </div>
 
-              <div style={{background: "#ede4f7", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 16}}>
-                <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}><strong>How this works in practice:</strong> one 60-minute call per month, a loose agenda set a week before, dashboard updated after each session, async access to me between calls for anything urgent. No lock-in — cancel any month. The purpose isn't to fill a gap you don't have. It's to keep the pattern intact so the work you've already done compounds instead of drifting.</p>
+              <div style={{background: "#ede4f7", borderLeft: `3px solid ${NM_COLOR}`, borderRadius: 4, padding: "14px 16px", marginTop: 8}}>
+                <p style={{fontSize: "0.78rem", color: "#3d2f55", margin: 0, lineHeight: 1.6}}><strong>Why this works:</strong> I&apos;m not starting from scratch when we come back — I&apos;ve got mountains of information on you already. August is about taking the work from third gear to fifth gear, not re-learning the business. The break is so you can step off the treadmill while someone else fixes the funnel, and so you&apos;re actually ready — mentally and commercially — to go personal when we pick back up.</p>
               </div>
 
               {/* ── HOW THE PAYMENTS WORK ── */}
               <div style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "18px 22px", marginTop: 16}}>
-                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6b5a2a", margin: "0 0 8px"}}>How the payments work — no price increase</p>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Your monthly outgoing stays at <strong>£350</strong> — exactly what you&apos;ve been paying since November 2025. Nothing goes up. The only thing that changes from <strong>June 2026</strong>, when the single-session coaching begins, is how that £350 is split.</p>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Here&apos;s the split:</p>
+                <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6b5a2a", margin: "0 0 8px"}}>How the payments work — no gap, no increase</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Your <strong>£350/month</strong> direct debit stays running the whole way through — through the break, and onward. You never stop paying, and you never pay more. From August, that £350/month simply converts into a single £200 session plus the final package payments, then drops to £200/month from September onwards.</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>Here&apos;s the full schedule:</p>
                 <ul style={{margin: "0 0 12px", padding: "0 0 0 18px", listStyle: "none"}}>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>Nov 2025 – May 2026:</strong> £350/month, all going against the original 13.5-hour package balance (£3,450 total).</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>From June 2026 onwards:</strong> still £350/month total — but it splits as <strong>£150 against the remaining balance</strong> and <strong>£200 for that month&apos;s coaching session</strong>.</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>December 2026:</strong> balance clears (final £75 + £200 session = £275 that month).</li>
-                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>From Jan 2027 onwards:</strong> just £200/month for the session. Balance paid in full.</li>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>Nov 2025 – Jun 2026:</strong> £350/month, all going against the original 13.5-hour package balance (£3,450 total).</li>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>4 July 2026:</strong> final £350 payment on the original package. Package balance clears.</li>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>August 2026:</strong> first £200 maintenance session. Coaching cadence resumes at one session/month.</li>
+                  <li style={{fontSize: "0.8rem", color: "#3d3935", lineHeight: 1.6, marginBottom: 4, position: "relative", paddingLeft: 14}}><span style={{position: "absolute", left: 0, color: NM_COLOR}}>–</span><strong>August 2026 onwards:</strong> £200/month, indefinite, cancel any time.</li>
                 </ul>
-                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>So in practice: you keep paying the exact same amount, but from June onward you&apos;re also getting a live strategy session each month as part of it. The balance takes a little longer to clear that way, but your monthly cost doesn&apos;t move.</p>
+                <p style={{fontSize: "0.82rem", color: "#3d3935", lineHeight: 1.65, margin: "0 0 10px"}}>So there&apos;s no interruption in payment, no re-signing, no awkwardness. The package finishes when it finishes (4 July), maintenance starts in August at a lower monthly cost than you&apos;re paying now, and the dashboard keeps running the whole time so you always have somewhere to put your thinking.</p>
                 <p style={{fontSize: "0.8rem", color: "#6b6860", lineHeight: 1.6, margin: 0, fontStyle: "italic"}}>The full schedule with running balance lives in the spreadsheet I&apos;ve shared with you — ask if you want a fresh copy.</p>
               </div>
             </div>
 
             <div style={{display: "flex", flexDirection: "column", gap: 14, marginBottom: 40}}>
               {[
-                { icon: "🔁", iconBg: "#fdf0f0", title: "You keep reverting to expertise content — this is the pattern we need to break", flag: "Urgent", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["Every time we cover this, you agree. Then the next fortnight, the podcast clips are back on LinkedIn, the personal stories have stopped, and the engagement has dropped. This isn't a content strategy problem — it's a habit problem. The expertise content feels safer. The personal stories feel exposed. But your audience doesn't need more expert voices. They need to trust you.", "Here's the rule, non-negotiable: one personal post per week on LinkedIn. Not an opinion piece about neurodiversity. Not a podcast clip. A moment from your life. A feeling you had. A conversation that stuck with you. It doesn't need to be long. It needs to be real. That's what's worked every single time you've done it.", "Practical swap — so the expert content doesn't go to waste: when you finish a podcast or expert conversation, don't post the clip on LinkedIn. Instead: (1) the full interview goes on the HushAway YouTube channel as a Conversations episode — that's what it's built for. (2) A written summary with two or three takeaways goes into the next newsletter — your subscribers have already said they want depth. (3) The evergreen version lives on the hushaway.com blog, so it does SEO work for you long after the post would've died. Same effort, three owned channels, zero LinkedIn feed clutter."] },
-                { icon: "🚪", iconBg: "#fdf3ea", title: "LinkedIn is a door opener — not a content library", flag: "Mindset shift", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["Posting heavy-consumption content on LinkedIn — long expert interviews, detailed podcast summaries — is trying to feed people before they've decided they're hungry. LinkedIn works at the top of the funnel. Its job is to make someone think \"I like this person, I want to hear more.\" Once they feel that, they'll follow you into the newsletter, into Kajabi, into a trial.", "Podcast content, expert panels, in-depth resources — those belong in the email funnel and on Kajabi. Not the feed. Use LinkedIn to bring them to the door, then invite them in.", "Here's the funnel mapped out, so you've got somewhere specific to put every piece of heavy content: YouTube (@hushaway_peace) is the home for full-length expert interviews and the Sound Sanctuary explainer videos — people who search \"ASMR children regulation\" end up there. The email newsletter is where deeper writing goes — one longer piece a fortnight, sent from Nikki personally, with a single takeaway and a line of personal context at the top. hushaway.com is the evergreen library — blog posts, resources, research summaries — the stuff that needs to rank and be findable. LinkedIn's only job is to send people to one of those three. A personal post, a human reaction, a story — then a link in the comments or a \"if you want the full conversation, it's on the YouTube channel.\" That's the whole system."] },
-                { icon: "👤", iconBg: "#eef4f2", title: "Lead with Nikki, not HushAway", flag: "Ongoing", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You are 20 times more memorable than a business brand. Every piece of LinkedIn content should answer the question: does this tell people something real about Nikki? If not, it belongs somewhere else.", "The personal posts have consistently outperformed your brand content. This is not a coincidence. People buy from people. Let them find the person first."] },
-                { icon: "🏆", iconBg: "#fdf3ea", title: "The Pod school placement is a content goldmine — use it", flag: "Now", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["You've crossed a real milestone: HushAway is in a school. The journey to get there — the doubt, the logistics, the moment the head teacher said yes — is multiple posts. The impact over the 2-month placement is your PR case study. Start building this now while it's fresh.", "You need: one parent quote, one teacher quote, one before/after. That unlocks PR. That unlocks inbound. That unlocks everything that cold pitching can't buy."] },
-                { icon: "📱", iconBg: "#eef4f2", title: "The marketing assistant — non-negotiable at this stage", flag: "If not done, this week", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["If this hire hasn't happened, it needs to happen this week. You are spending time on scheduling, design, and engagement that a trained VA could do for £20/hour. That time is worth more when you're doing the thinking — the positioning, the storytelling, the relationships.", "You are the library. They are the librarian. You don't need to manage them heavily. You need to brief them well. This dashboard and your Claude workflow is the brief."] },
-                { icon: "📋", iconBg: "#fdf8ec", title: "Likes are not the signal — stop checking them", flag: "Watch point", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["LinkedIn measures impressions and dwell time now, not likes. And even if it didn't — your email list is a better signal of genuine trust than any like count. Every time you feel despondent about a post, go look at your subscriber count instead. That's the number that matters."] },
-                { icon: "⚡", iconBg: "#fdf8ec", title: "Protect your mornings", flag: "Ongoing", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You came back from Portugal recalibrated. The business needs your clearest thinking, not your most hours. Keep the gym in the diary. Keep the weekends protected. The pace creep is real and it erodes the quality of what you produce."] },
+                { icon: "🎯", iconBg: "#fdf0f0", title: "The CMO hire is the whole game for the next three months", flag: "This week", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["You&apos;ve already done the hard thinking: project-based fee, 40% up front, KPI of 50 paid members in three months, £500 bonus attached. Four interviews this week. Don&apos;t bend on the payment structure — the one who wanted monthly-up-front was a red flag, not a negotiation.", "The one thing to be ruthless about is strategic depth. The first candidate you rejected wasn&apos;t a doer. The second nearly worked but got the terms wrong. The right person will understand that their first job is the parent interviews and the funnel diagnostic — not posting content. If they try to pitch you \"I&apos;ll do some posts for you\", walk.", "If you can&apos;t find one person who covers the full brief, split the role — strategic consultant (the diagnostic, the interviews, the funnel fix) paired with the Vert Talent social-media operator. Don&apos;t let a hiring delay become another month lost."] },
+                { icon: "🤫", iconBg: "#eef4f2", title: "Behind the Hush is your personal-brand unlock — let&apos;s build it properly", flag: "Your idea, shape it", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You came up with this in Session 12 and I think it&apos;s the single best personal-content idea we&apos;ve had. It sidesteps the &quot;too personal / too soft&quot; block because it&apos;s framed as business content — but it&apos;s deeply personal by nature. Weekly series, Friday, one key insight from the week, 30-second reel + written post + CTA to newsletter via ManyChat.", "Action: do your first pass with Claude before 6 May and send it over. We&apos;ll shape the format, the four-week topic arc, and the ManyChat flow in the last fortnightly session. There&apos;s a new workspace for it in the Content Ideas tab — open Behind the Hush, drop your thinking in, or just read what&apos;s there to start.", "One nudge: don&apos;t route people through a separate blog. You said it yourself — &quot;another click, another reason for them to go, I can&apos;t be asked.&quot; Push the CTA straight to newsletter signup. You&apos;ve got 30 seconds of attention — use it."] },
+                { icon: "🧪", iconBg: "#fdf3ea", title: "Funnel first, ads second — you already proved this", flag: "Hold the line", flagBg: "#fdf3ea", flagColor: "#a86725", paras: ["The £30 Instagram test was incredibly useful. +25 followers / 5% in 4 days, zero conversions. That&apos;s not a failure — it&apos;s the cleanest signal you could have asked for: top-of-funnel traffic is easy, conversion is the problem. You&apos;ve read it correctly.", "So no more ad spend until the funnel converts. The CMO&apos;s 3-month project is: diagnose the drop-off, kill the Open Sanctuary freemium, stand up the 14-day trial, lift the ManyChat and email mechanics. Then ads go behind a funnel that actually converts — that&apos;s when the £30 becomes £300 becomes £3,000 sensibly."] },
+                { icon: "🏫", iconBg: "#fdf3ea", title: "The Pod + Happy Place Festival are your content goldmine — don&apos;t waste them", flag: "Now", flagBg: "#fdf0f0", flagColor: "#8a3a3a", paras: ["The Huddersfield Pod is live with five named children, NDAs and media consent in motion, day-30 check-in coming. That pipeline gives you 5 case studies by end of June, 8–10 by end of August once the University of East London research centre placement runs. This is your DfE proposal proof, and it&apos;s also your PR unlock.", "Action now, don&apos;t wait for the full data: capture one parent reaction, one teacher observation, and one before/after at the day-30 checkpoint. Don&apos;t wait for day 60 — by then the moment is gone.", "Happy Place Festival: treat it like a content shoot. Interview list, filming plan, capture assets. You&apos;ll use this content through autumn and into the schools pipeline."] },
+                { icon: "🚫", iconBg: "#fdf8ec", title: "Freemium → 14-day trial — a call you&apos;ve made, let the CMO execute", flag: "CMO scope", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["You&apos;ve decided Open Sanctuary goes. Expert interviews come out from behind the paywall onto a free landing page. Paid content becomes the stories, audio, signs. 14-day trial as the conversion mechanism.", "I pushed back on &quot;free stuff is a dangerous game&quot; but I accept my service sells differently to a product like HushAway. You&apos;re right that reducing friction at this stage matters more than filtering early — you have to get people to the product before you can get them to value it. The CMO&apos;s first two weeks should include mapping exactly what moves where."] },
+                { icon: "📧", iconBg: "#fdf8ec", title: "Switch the email sender name — it&apos;s been on the list too long", flag: "5-minute job", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["Emails go from &quot;Nikki (founder of HushAway)&quot;, not &quot;HushAway&quot;. Personal sender names lift open rates meaningfully because to a cold inbox, &quot;HushAway&quot; means nothing. This is a 5-minute change in Kajabi. Do it before the next send or give the CMO ownership of the whole email stack on day one."] },
+                { icon: "🩺", iconBg: "#eef4f2", title: "Protect your mornings — seriously this time", flag: "Non-negotiable", flagBg: "#eef4f2", flagColor: "#3d6b5e", paras: ["You told me two weeks ago you were in a dark place. You&apos;re forcing yourself to the gym for 45 minutes to avoid a crash. Good. Don&apos;t negotiate that down for another interview slot.", "The whole point of the break from May is so you can step off the treadmill while the CMO fixes the back end. If you fill the gap with more hustle, we&apos;ve lost the whole purpose of the structural shift. You can&apos;t pour from an empty cup — your words. Come back in August clear, rested, and ready to go hell-for-leather on Behind the Hush."] },
+                { icon: "📊", iconBg: "#fdf8ec", title: "On personal content — we disagree, and that&apos;s fine", flag: "Noted", flagBg: "#fdf8ec", flagColor: "#8a6e2a", paras: ["You pushed back hard in Session 12: you&apos;ve tried personal posts, they flopped, you&apos;ve lost faith, and the one post that cut through (70+ likes) was your opinion on the &quot;superpower&quot; framing. You also said likes ARE a barometer — people see low-engagement posts and discount the author. I hear you on all of it.", "My position hasn&apos;t changed: personal content is the long-term unlock. But I&apos;m not going to keep pushing it through May, because we&apos;ve agreed Behind the Hush is the bridge. It&apos;s business content wrapped around personal truth. That&apos;s the compromise and it&apos;s a good one.", "When we pick back up in August, the funnel will be fixed and we&apos;ll have three months of Behind the Hush under your belt. Then we open the door wider on personal content — but only because you&apos;ll actually have the evidence that it&apos;s converting, not just my opinion that it will."] },
               ].map((rec, i) => (
                 <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "20px 22px", display: "flex", gap: 16, alignItems: "flex-start"}}>
                   <div style={{width: 36, height: 36, borderRadius: 8, background: rec.iconBg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0}}>{rec.icon}</div>
@@ -1556,6 +1577,7 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
   const [openIdeas, setOpenIdeas] = useState<Record<string, boolean>>({});
 
   const subTabs = [
+    { id: "behindthehush", label: "🤫 Behind the Hush" },
     { id: "video", label: "🎥 Video Strategy" },
     { id: "story", label: "📅 May LinkedIn Plan" },
     { id: "belief", label: "Belief & Opinion" },
@@ -1610,6 +1632,85 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
           </button>
         ))}
       </div>
+
+      {contentSubTab === "behindthehush" && (
+        <div>
+          <div style={{background: "#eef4f2", border: "1px solid #3d6b5e", borderRadius: 8, padding: "20px 24px", marginBottom: 20}}>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#3d6b5e", margin: "0 0 6px"}}>Your series, started in Session 12</p>
+            <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 10px"}}>Behind the Hush — a weekly series</h3>
+            <p style={{fontSize: "0.84rem", color: "#2a4d44", marginBottom: 10, margin: "0 0 10px"}}>This was your idea. You said: <em>&quot;behind the hush — this is what I learned this week, or this is a watch-out&quot;</em> — a Friday weekly post, moving away from straight personal background into &quot;business content, but incredibly personal and trust-building&quot;.</p>
+            <p style={{fontSize: "0.84rem", color: "#2a4d44", margin: 0}}>The point isn&apos;t to be perfect — it&apos;s to document the journey of building HushAway in real time. One insight or one watch-out per week. Founders who win at personal branding (The Real David Lloyd, Fern Cotton&apos;s wellness content) all do this.</p>
+          </div>
+
+          <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 16}}>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", margin: "0 0 10px"}}>The format we discussed</p>
+            <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 14}}>
+              {[
+                { step: "1", title: "30-second reel", body: "One lesson, one watch-out, or one unfiltered moment from the week. Filmed on your phone, no production. The hook is in the first three seconds." },
+                { step: "2", title: "Written post under the reel", body: "Short — 80–150 words. The same insight in text, so people who don&apos;t watch still get value. Ends with a CTA." },
+                { step: "3", title: "CTA via ManyChat", body: "&quot;Comment HUSH below and I&apos;ll send you the newsletter signup.&quot; Captures the email without them leaving the app. Low friction." },
+                { step: "4", title: "Newsletter tie-in", body: "The next fortnightly newsletter expands the same theme with 400–600 words of depth. The reel hooks. The newsletter builds trust." },
+              ].map((s, i) => (
+                <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <div style={{width: 24, height: 24, borderRadius: "50%", background: "#3d6b5e", color: "#fff", fontSize: "0.7rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8}}>{s.step}</div>
+                  <p style={{fontSize: "0.85rem", fontWeight: 700, color: "#1a1916", margin: "0 0 4px"}}>{s.title}</p>
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", lineHeight: 1.55, margin: 0}}>{s.body}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{background: "#fdf8ec", borderLeft: "3px solid #8a6e2a", borderRadius: 4, padding: "12px 14px"}}>
+              <p style={{fontSize: "0.78rem", color: "#6b5a2a", margin: 0, lineHeight: 1.6}}><strong>Ben&apos;s nudge:</strong> don&apos;t route people to a separate blog. You said it yourself — &quot;another click, another reason for them to go, I can&apos;t be asked.&quot; The reel + post + ManyChat = newsletter signup. That&apos;s the whole funnel. Save the blog for the newsletter body itself.</p>
+            </div>
+          </div>
+
+          <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 16}}>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", margin: "0 0 4px"}}>Starter topic bank — first four weeks</p>
+            <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.6, margin: "0 0 14px"}}>These are first-pass themes to react against, not a locked plan. The whole point of Behind the Hush is that the topic comes from whatever actually happened that week. Use these as a safety net.</p>
+            <div style={{display: "flex", flexDirection: "column", gap: 10}}>
+              {[
+                { week: "Week 1", title: "The agency lesson", hook: "&quot;I paid six-figure agency fees for 12 months. Here&apos;s what I&apos;d tell any founder considering the same.&quot;", body: "The real lesson from Phase 1. You don&apos;t need to name names — and shouldn&apos;t — but the insight is powerful: agencies will build the thing but they won&apos;t own the conversion. Founders need to know this before they sign the contract." },
+                { week: "Week 2", title: "The 2am number", hook: "&quot;I check my LinkedIn likes at 2am. I know it&apos;s not healthy. I also can&apos;t stop.&quot;", body: "The honest contradiction you named in Session 12 — likes ARE a barometer even when you know they shouldn&apos;t be. Permission-giving, relatable, and unusually honest for a founder on LinkedIn." },
+                { week: "Week 3", title: "What Portugal actually did", hook: "&quot;I went to a sound therapy retreat in high beta. The practitioner knew before I said a word.&quot;", body: "The Portugal story, reframed as what it taught you about your own business. Not grief, not drama — what changed in your thinking about the product roadmap. Brings the 2028 sound-frequency retreat idea forward." },
+                { week: "Week 4", title: "The Pod day it actually happened", hook: "&quot;I spent 18 months talking about HushAway in schools. Last Friday, we walked in.&quot;", body: "The Huddersfield moment. The doubt, the logistics, the head teacher saying yes. The first five children, including the non-verbal one you&apos;re most curious about. Tie it to the wider mission — this is why the funnel matters." },
+              ].map((t, i) => (
+                <div key={i} style={{background: "#fdfaf6", border: "1px solid #e4dbc8", borderRadius: 8, padding: "14px 16px"}}>
+                  <div style={{display: "flex", alignItems: "baseline", gap: 10, flexWrap: "wrap", marginBottom: 6}}>
+                    <span style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: "#3d6b5e"}}>{t.week}</span>
+                    <span style={{fontSize: "0.9rem", fontWeight: 700, color: "#1a1916"}}>{t.title}</span>
+                  </div>
+                  <p style={{fontSize: "0.82rem", color: "#1a1916", fontStyle: "italic", margin: "0 0 6px", lineHeight: 1.5}} dangerouslySetInnerHTML={{__html: t.hook}} />
+                  <p style={{fontSize: "0.78rem", color: "#6b6860", lineHeight: 1.55, margin: 0}}>{t.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 16}}>
+            <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", margin: "0 0 10px"}}>Claude starter prompt — for your first pass</p>
+            <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.6, margin: "0 0 12px"}}>You said in Session 12 you&apos;d do some work with Claude on this and send it over. Here&apos;s a prompt to get started. Copy it, paste into Claude, iterate — then drop your output in the comment box below so we can shape it together on 6 May.</p>
+            <div style={{background: "#eef4f2", borderRadius: 6, padding: "14px 16px", marginBottom: 10}}>
+              <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.7, whiteSpace: "pre-wrap", margin: 0}}>{`I'm Nikki McReynolds, founder of HushAway — a sound-based emotional regulation platform for children aged 4–10.
+
+I'm starting a weekly LinkedIn series called "Behind the Hush". It runs every Friday. Each post is one key insight or one watch-out from that week of building the business. The format is:
+  - 30-second reel (filmed on my phone, no production)
+  - 80–150 word written post underneath, same insight in text
+  - CTA: "Comment HUSH below and I'll send you the newsletter signup"
+
+The tone is: honest, founder-first, business content but deeply personal. Think "The Real David Lloyd" or Fern Cotton's journey content — not corporate, not polished, not AI-sounding.
+
+I want you to:
+1. Help me design a repeatable format template I can use every Friday in 15 minutes
+2. Generate 12 weeks of starter topic ideas based on what I'm actually going through — hiring a fractional CMO, the Huddersfield Pod launch, the Open Sanctuary → 14-day trial switch, the Happy Place Festival, the agency lessons, the Portugal retreat, menopause + founder burnout, the "I'm not a parent and not neurodiverse" credibility gap
+3. For each topic, give me: a reel hook (first 3 seconds), a post opening line, and a tone note
+
+Rules: no hyphens between words, no three-word staccato sentences, no "delve into" or "in today's fast-paced world." Write like a real person talking to another real person. Short paragraphs, flowing, a bit unvarnished.`}</p>
+            </div>
+            <p style={{fontSize: "0.75rem", color: "#9e9b94", fontStyle: "italic", margin: 0, lineHeight: 1.5}}>Tip: run it twice. The first output will feel a bit AI. Push back: &quot;this sounds like a LinkedIn guru wrote it. Make it sound like a 55-year-old founder having a coffee with a friend.&quot; That&apos;s usually where it lands.</p>
+          </div>
+
+          <CommentBox clientName="Nikki McReynolds" tabName="Behind the Hush" slug={slug} />
+        </div>
+      )}
 
       {contentSubTab === "story" && (
         <div>
