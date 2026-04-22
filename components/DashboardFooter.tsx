@@ -140,7 +140,7 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
                 transition: "background 0.15s ease",
               }}
             >
-              {commentStatus === "sending" ? "Sending..." : "Send Comment"}
+              {commentStatus === "sending" ? "Sending..." : "Send to Ben"}
             </button>
           </form>
         </div>

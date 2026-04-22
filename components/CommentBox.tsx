@@ -86,7 +86,7 @@ export default function CommentBox({ clientName, tabName, slug }: CommentBoxProp
         <textarea
           value={text}
           onChange={e => setText(e.target.value)}
-          placeholder="Type your comment or question here..."
+          placeholder="e.g. Hi Ben, love the updates — could you check this content idea / headline for me?"
           rows={4}
           style={{
             width: "100%", padding: "14px 16px",
@@ -112,7 +112,7 @@ export default function CommentBox({ clientName, tabName, slug }: CommentBoxProp
             transition: "background 0.15s ease",
           }}
         >
-          {status === "sending" ? "Sending..." : "Send Comment"}
+          {status === "sending" ? "Sending..." : "Send to Ben"}
         </button>
       </form>
     </div>
