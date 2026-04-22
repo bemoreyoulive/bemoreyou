@@ -2,6 +2,7 @@
 
 import { use, useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
+import BenUpdateBox from "@/components/BenUpdateBox";
 import CommentBox from "@/components/CommentBox";
 import EmailOptIn from "@/components/EmailOptIn";
 import MilestoneTracker from "@/components/MilestoneTracker";
@@ -385,6 +386,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             })}
 
             <CommentBox clientName="Andy Felton" tabName="Home" slug={slug} />
+            <BenUpdateBox slug={slug} />
           </div>
         )}
 
@@ -1139,6 +1141,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
             </div>
 
             <CommentBox clientName="Nikki McReynolds" tabName="Home" slug={slug} />
+            <BenUpdateBox slug={slug} />
           </div>
         )}
 
