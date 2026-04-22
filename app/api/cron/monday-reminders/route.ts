@@ -63,13 +63,14 @@ export async function GET(req: NextRequest) {
       continue;
     }
 
+    const firstName = profile.name.split(" ")[0];
     const html = buildEmail(profile.name, slug, pending, completedThisWeek);
 
     try {
       await resend.emails.send({
         from: "Ben at BeMOREyou <ben@bemoreyoulive.com>",
         to: profile.email,
-        subject: `Your weekly check-in — ${profile.name}`,
+        subject: subjectLine(firstName),
         html,
       });
       results.push({ slug, status: "sent" });
@@ -80,6 +81,27 @@ export async function GET(req: NextRequest) {
   }
 
   return NextResponse.json({ ok: true, results });
+}
+
+function getWeekNumber() {
+  const d = new Date();
+  const startOfYear = new Date(d.getFullYear(), 0, 1);
+  return Math.ceil(((d.getTime() - startOfYear.getTime()) / 86400000 + startOfYear.getDay() + 1) / 7);
+}
+
+const SUBJECTS = [
+  (name: string) => `Right then, ${name} — what are we doing this week?`,
+  (name: string) => `${name}, your Monday nudge has arrived 👀`,
+  (name: string) => `New week. Fresh start. No excuses, ${name}.`,
+  (name: string) => `${name} — Ben here. Open this.`,
+  (name: string) => `Your to-do list isn't going to tick itself, ${name}`,
+  (name: string) => `Monday check-in — how's it looking, ${name}?`,
+  (name: string) => `This is your sign, ${name}. Open the dashboard.`,
+];
+
+function subjectLine(firstName: string) {
+  const week = getWeekNumber();
+  return SUBJECTS[week % SUBJECTS.length](firstName);
 }
 
 function buildEmail(
@@ -124,6 +146,15 @@ function buildEmail(
       <p style="font-size: 15px; color: #1a5c35; margin: 0; font-weight: 600;">You've cleared everything on your list. 🎉</p>
     </div>`;
 
+  const greetings = [
+    `Right, let's go.`,
+    `New week. Clean slate.`,
+    `Monday again. Already.`,
+    `Here we go again.`,
+    `The week isn't going to build itself.`,
+  ];
+  const greeting = greetings[getWeekNumber() % greetings.length];
+
   return `
 <!DOCTYPE html>
 <html>
@@ -136,36 +167,50 @@ function buildEmail(
       <p style="font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #1C1C1C; margin: 0; font-family: Georgia, serif;">
         BeMore<span style="color: #4ec9d0;">You</span>
       </p>
-      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #7A746E; margin: 2px 0 0;">Weekly check-in</p>
+      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #7A746E; margin: 2px 0 0;">Monday morning</p>
     </div>
 
     <!-- Greeting -->
     <div style="background: #fff; border: 1px solid #E0DBD3; border-radius: 4px; padding: 28px 32px; margin-bottom: 24px;">
-      <p style="font-size: 22px; font-family: Georgia, serif; font-weight: 400; color: #1C1C1C; margin: 0 0 12px; line-height: 1.3;">
-        Morning, ${firstName}.
+      <p style="font-size: 22px; font-family: Georgia, serif; font-weight: 400; color: #1C1C1C; margin: 0 0 14px; line-height: 1.3;">
+        Morning, ${firstName}. ${greeting}
       </p>
       <p style="font-size: 15px; color: #3D3935; line-height: 1.7; margin: 0;">
-        Here's your weekly snapshot — what you've ticked off and what's still on the list. Full details and content ideas are in your dashboard.
+        Your to-do list is below. Tick off what's done, look at what's still sitting there, and be honest with yourself about why. That's genuinely half the work.
       </p>
     </div>
 
     ${completedSection}
     ${pendingSection}
 
-    <!-- CTA -->
+    <!-- Milestones & Signals nudge -->
+    <div style="background: #1a1916; border-radius: 6px; padding: 24px 28px; margin-bottom: 28px;">
+      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 8px;">Two minutes. That's all this takes.</p>
+      <p style="font-size: 16px; font-weight: 600; color: #fff; margin: 0 0 10px; line-height: 1.4;">
+        Have a look at your Milestones &amp; Signals tab.
+      </p>
+      <p style="font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0 0 16px;">
+        Anything happened this week that deserves a tick? A DM that came in because of something you posted? Someone who used your exact words back at you? A better enquiry than last month? These things happen and we forget them by Friday — don't let that happen. Log it while it's fresh.
+      </p>
+      <a href="${dashboardUrl}/milestones" style="display: inline-block; padding: 11px 22px; background: #E8521C; color: #fff; text-decoration: none; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
+        Check Milestones &amp; Signals →
+      </a>
+    </div>
+
+    <!-- Main CTA -->
     <div style="text-align: center; margin-bottom: 32px;">
       <a href="${dashboardUrl}" style="display: inline-block; padding: 14px 36px; background: #E8521C; color: #fff; text-decoration: none; border-radius: 3px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
         Open your dashboard →
       </a>
     </div>
 
-    <!-- Note -->
+    <!-- Login note -->
     <div style="background: #fff; border: 1px solid #E0DBD3; border-radius: 4px; padding: 20px 24px; margin-bottom: 32px;">
       <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0 0 10px;">
-        <strong>Note:</strong> This list may be out of date if you haven't updated it recently. If that's the case, <a href="${dashboardUrl}" style="color: #E8521C; text-decoration: none; font-weight: 600;">log in to your dashboard here</a> using your magic link, tick off what's done, and Ben will be able to see your progress.
+        If the to-do list looks wrong, <a href="${dashboardUrl}" style="color: #E8521C; text-decoration: none; font-weight: 600;">log in here</a> and tick off what's actually done — Ben can see your progress from his end.
       </p>
       <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0;">
-        Any problems logging in, send Ben a screenshot via <strong>WhatsApp</strong> or <strong>email</strong> and he'll get you sorted.
+        Any login trouble, drop Ben a message on <strong>WhatsApp</strong> or <strong>email</strong> and he'll sort it.
       </p>
     </div>
 
