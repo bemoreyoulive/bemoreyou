@@ -393,157 +393,221 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <MilestoneTracker slug={slug} color={AF_COLOR} />
         )}
 
-        {/* ── POSITIONING ── */}
+        {/* ── BRAND ASSETS ── */}
         {activeTab === "brand" && (
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>Your Brand Foundation</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Positioning</h2>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, margin: "0 0 4px" }}>Your Brand Foundation</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
 
-            <Callout type="green">
-              <strong>Session 8 confirmed — implementor positioning is settled:</strong> You've had the implementor conversation with multiple people and all of them agree it's the right distinction. You go in and build it. You don't advise. The offer and niche are being refined with a specialist AI/automation business coach — once that lands, the headline, About section, and content direction all update. Hold for that clarity. Don't change anything on LinkedIn until you have it.
-            </Callout>
+            {/* Positioning statement */}
+            <div style={{ background: AF_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning Statement</p>
+              <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0 }}>
+                "I replace the fragile processes holding your business together with systems that actually hold up."
+              </p>
+            </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 28 }}>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 16 }}>Primary audience</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 16px", paddingBottom: 16, borderBottom: "1px solid #E0DBD3" }}>Growing businesses in the 1 to 10 employee range. Founder-led. Processes are breaking under growth pressure. Spreadsheets have become a liability. The founder knows it's unsustainable but doesn't know what to replace it with. Also: consultants and agencies who need a trusted implementor as a delivery partner.</p>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 12 }}>Secondary audience</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Other consultants — specifically, those who identify the problems but need someone technically capable of delivering the solution. David's introduction is the first version of this model. Worth treating as a test bed.</p>
+            {/* Headline + one-liner */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
+              <div style={{ background: "#fff", border: `2px solid ${AF_COLOR}`, borderRadius: 6, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, margin: "0 0 6px" }}>LinkedIn Headline — Live</p>
+                <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>
+                  {`The "Sheldon" of AI & automation, connecting systems, fixing fragile workflows, and protecting teams from burnout`}
+                </p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Live as of April 2026. Leads with AI & automation — worth updating to process/systems language once offer clarity lands.</p>
               </div>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2e7d4f", marginBottom: 12 }}>Good fit</p>
-                <ul style={{ margin: "0 0 16px", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6, paddingBottom: 16, borderBottom: "1px solid #E0DBD3" }}>
-                  {["Recognises they have process problems, not defensive about it", "Has budget and is ready to invest in a proper fix", "Respects technical expertise, doesn't want cheap", "Values honesty over a polished pitch", "Open to being educated, not just sold to"].map((item, i) => (
-                    <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", display: "flex", gap: 8 }}><span style={{ color: "#2e7d4f", fontWeight: 700 }}>✓</span>{item}</li>
-                  ))}
-                </ul>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8850a", marginBottom: 12 }}>Poor fit</p>
-                <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 4 }}>
-                  {["Charities — no budget", "Solopreneurs — often no budget, not ready", "Clients who want \"clever\" without caring if it works long-term", "Anyone who doesn't respect technical expertise", "Anyone who drains your social energy — you know who these people are"].map((item, i) => (
-                    <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", paddingBottom: 6, borderBottom: i < 4 ? "1px solid #E0DBD3" : "none" }}>— {item}</li>
-                  ))}
-                </ul>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner</p>
+                <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 10px" }}>
+                  "Most growing businesses I meet are being held together by people doing things manually that a system should be doing. I go in and build the thing that replaces that. I spent 20 years doing it for national sports bodies — now I do it for founder-led businesses."
+                </p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Lead with the problem they recognise, land the credential. Don't open with AI or automation.</p>
               </div>
             </div>
 
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>What Makes You Different</h3>
-            {afPositioningDiffs.map((d, i) => (
-              <Collapsible key={i} title={d.title} defaultOpen={i === 0}>
-                <p style={{ whiteSpace: "pre-line", margin: 0 }}>{d.body}</p>
-              </Collapsible>
-            ))}
+            {/* LinkedIn Banner */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>LinkedIn Banner — Live</p>
+            <div style={{ background: "#0f1f3d", borderRadius: 8, padding: "28px 32px", marginBottom: 6, display: "flex", flexDirection: "column", gap: 10 }}>
+              <p style={{ color: "#ffffff", fontWeight: 700, fontSize: "1.1rem", margin: 0 }}>Helping businesses replace fragile processes with systems they can rely on</p>
+              <p style={{ color: "#8ab4d4", fontSize: "0.88rem", margin: 0 }}>Get your custom automation & AI report — agencies.equatedigital.com</p>
+            </div>
+            <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: "0 0 24px", lineHeight: 1.5 }}>Live as of April 2026.</p>
 
-            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>The Core Positioning Insight</h3>
-            <Callout type="blue"><strong>Implementation matters more than the idea.</strong> Most selling in this space happens at the idea level. You work at the delivery level — where things actually fail. That's the distinction. It's underweighted in how you talk about yourself, and it shouldn't be.</Callout>
-            <Callout type="amber"><strong>Gap to close: No social proof in the new niche yet.</strong> Your credibility from RunBritain, SwimEngland, and England Golf is real — but it needs to be translated into the current context. The first aligned client is the unlock.</Callout>
-
-            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 8px" }}>Prep for 22nd April — Offer Clarity Session</h3>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 16px" }}>This session is about translating whatever comes out of the coach sessions into concrete positioning, messaging, and content updates.</p>
-            {[
-              { q: "What did the coach sessions clarify about your offer and niche?", a: "Send Ben the details before the session — the recording or full notes, not a one-minute summary. If the niche is sharpened, that changes the headline, the About section, and the content direction. Come with your thinking on what's changed." },
-              { q: "How does the networking intro need to change?", a: "Right now you still lead with AI and automation when you introduce yourself at networking events. People glaze over before you've got to anything useful. The fix: lead with the problem — \"I help growing businesses that are being held together by manual processes and fragile workarounds\" — and mention the tools further in, once they're already interested." },
-              { q: "What's the PAPA case study angle?", a: "You upsold AI work to an existing web client by identifying an opportunity they hadn't seen. That's a strong content story — spotting the gap, proposing the fix, getting the yes. Once funding is confirmed and you've sent Ben the voice note, there's a post there. Bring an update on 22nd April." },
-            ].map((item, i) => (
-              <div key={i} style={{ background: "#fffaf6", border: "1px solid #e8c4a0", borderRadius: 4, padding: "18px 22px", marginBottom: 12 }}>
-                <h4 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#8a3a00", margin: "0 0 8px" }}>{item.q}</h4>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{item.a}</p>
+            {/* About section */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>About Section — Live on LinkedIn</p>
+            <div style={{ background: "#fff", border: `2px solid ${AF_COLOR}`, borderRadius: 8, padding: "36px 40px", marginBottom: 8 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, color: AF_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>Live — April 2026</p>
+              <div style={{ fontSize: "0.97rem", lineHeight: 2, color: "#3D3935", display: "flex", flexDirection: "column", gap: 16 }}>
+                <p style={{ margin: 0 }}>Typically businesses come to me when they're being held together by manual processes, workarounds, and people quietly filling the gaps.</p>
+                <p style={{ margin: 0 }}>It's not quite "on fire" YET… But everything takes way more effort than it should.</p>
+                <p style={{ margin: 0 }}>That's the problem I spend most of my time fixing.</p>
+                <p style={{ margin: 0 }}>👋 I'm Andy, often described (with affection) as the Sheldon of agency's AI & automation.</p>
+                <p style={{ margin: 0 }}>I typically help businesses who:</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 4 }}>
+                  {[
+                    "Are drowning in manual processes (onboarding, invoicing, reporting, internal ops)",
+                    "Are scaling work faster than their systems can handle",
+                    "Have smart people who are quietly burning out holding everything together",
+                  ].map((item, i) => (
+                    <p key={i} style={{ margin: 0 }}>✅ {item}</p>
+                  ))}
+                </div>
+                <p style={{ margin: 0 }}>Our clients are typically not:</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 4 }}>
+                  {[
+                    "Solopreneurs, charities or the public sector",
+                    `Or businesses who want shortcuts, or someone to "just make it work somehow"`,
+                  ].map((item, i) => (
+                    <p key={i} style={{ margin: 0 }}>❌ {item}</p>
+                  ))}
+                </div>
+                <p style={{ margin: 0, marginTop: 8 }}>I've spent 20+ years designing, building and fixing complex systems across software, data and automation, long before AI became a buzzword. I won't promise what can't be delivered & I won't tell you something can be done if it can't.</p>
+                <p style={{ margin: 0 }}>I've led development teams, delivered large-scale national platforms, and worked at the uncomfortable intersection where business reality meets technical truth.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>In recent years, I was diagnosed as autistic, not something I mention for sympathy, but for clarity because it explains how I work…</p>
+                <p style={{ margin: 0 }}>I think in systems, I see patterns others miss, I'm process-driven, detail-oriented, and far more interested in making things work properly than making them look impressive.</p>
               </div>
-            ))}
+            </div>
+            <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "14px 18px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>
+                <strong style={{ color: "#1C1C1C" }}>To update:</strong> LinkedIn → profile → pencil icon on intro → About → paste. Check character count stays within the 2,600 limit.
+              </p>
+            </div>
 
+            {/* ICP */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 18px" }}>Your Ideal Client (ICP)</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 6px" }}>Who they are</p>
+                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>Founder-led businesses in the 1–10 employee range. Scaling fast. Manual processes are breaking under growth pressure. Spreadsheets have become a liability and the founder knows it's unsustainable but doesn't know what to replace it with — or who to trust to build it properly.</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 6px" }}>What they say</p>
+                  {[
+                    '"Everything takes way more effort than it should."',
+                    '"We\'ve got smart people burning out doing things manually."',
+                    '"I know we need to fix this but I don\'t know where to start."',
+                    '"I\'ve been burned by over-promising before — I need someone straight."',
+                    '"I don\'t need clever. I need it to work reliably."',
+                  ].map((q, i) => (
+                    <p key={i} style={{ fontSize: "0.82rem", color: "#6b6860", margin: "0 0 6px", fontStyle: "italic" }}>{q}</p>
+                  ))}
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 8px" }}>Good fit</p>
+                  {["Recognises the problem and isn't defensive about it", "Has budget and is ready to invest in a proper fix", "Respects technical expertise — doesn't want cheap", "Values honesty over a polished pitch", "Open to being told what the right answer actually is"].map((f, i) => (
+                    <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                      <span style={{ color: AF_COLOR, fontWeight: 700, flexShrink: 0 }}>✓</span>
+                      <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "#c0392b", margin: "0 0 8px" }}>Poor fit</p>
+                  {["Solopreneurs or charities — no budget", `Wants "clever" without caring if it works long-term`, `Wants shortcuts or someone to "just make it work somehow"`, "Doesn't respect technical expertise", "Drains your social energy — you know who these people are"].map((f, i) => (
+                    <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                      <span style={{ color: "#c0392b", fontWeight: 700, flexShrink: 0 }}>✗</span>
+                      <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Audience tiers */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Audience Tiers</p>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "0 22px", marginBottom: 20 }}>
+              {[
+                { badge: "Primary", badgeBg: "#e8f0f7", badgeColor: "#2d5a8e", text: "Founder-led businesses 1–10 employees, scaling past the point where manual processes still work. Drowning in spreadsheets and workarounds. Need someone to go in and fix it properly, not advise on it." },
+                { badge: "Partner", badgeBg: "#eef4ef", badgeColor: "#2e7d4f", text: "Consultants and agencies who identify the problems but need a trusted implementor to deliver the solution. David Maguire is the first version of this model. Worth building this channel deliberately." },
+                { badge: "Referral", badgeBg: "#fdf8ec", badgeColor: "#8a6e2a", text: "N8N community, East Midlands Chamber, AI networking events. Authority-building over time — not direct sales, but the place where right-fit clients find you." },
+                { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Solopreneurs, charities, public sector. Anyone who wants shortcuts, over-promises, or drains your social energy." },
+              ].map((row, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14, padding: "11px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none" }}>
+                  <span style={{ fontSize: "0.68rem", fontWeight: 700, padding: "3px 10px", borderRadius: 20, whiteSpace: "nowrap", flexShrink: 0, marginTop: 1, background: row.badgeBg, color: row.badgeColor }}>{row.badge}</span>
+                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.5, margin: 0 }}>{row.text}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* What makes you different */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>What Makes You Different</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+              {[
+                { title: "You're an implementor, not a consultant", body: "You go in and build it. You don't produce a strategy document and hand it over. The distinction is specific, credible, and honest — and it filters the right kind of client immediately. Most people in this space advise. You deliver." },
+                { title: "20+ years building systems that had to work under real conditions", body: "RunBritain, SwimEngland, England Golf. National platforms. Not small projects. You built things that had to be reliable, not just clever — and you bring that standard to every engagement today." },
+                { title: "You won't build it if it shouldn't be built", body: `"Whilst anyone can create systems, the question is whether they should." You question the brief before you touch anything. That honesty costs you work sometimes. It's also what makes you trustworthy to the right clients.` },
+                { title: "Autistic — and precise about why it matters", body: "You think in systems, spot edge cases others miss, and won't gloss over anything that could fail later. You mention it not for sympathy but for clarity: it explains how you work, and for the right clients, it's exactly the quality they're paying for." },
+                { title: "The Sheldon persona — earned, not manufactured", body: `"The Sheldon of AI & automation" came from Keith Walker unprompted. It stuck because it's accurate — warmth and technical precision in the same person. That's rare and memorable. Lean into it deliberately.` },
+                { title: "You tell clients what they don't want to hear", body: `"I'd rather be honest and lose the client than knowingly over-promise." This has cost you work. You'd do it again. For clients burned by over-confident, under-technical people before, that integrity is the whole point.` },
+              ].map((diff, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 14px", background: "#F9F8F6", borderRadius: 6 }}>
+                  <div style={{ width: 28, height: 28, borderRadius: 6, background: "#e8f0f7", color: AF_COLOR, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0 }}>✦</div>
+                  <div>
+                    <p style={{ fontSize: "0.84rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 2px" }}>{diff.title}</p>
+                    <p style={{ fontSize: "0.8rem", color: "#6b6860", margin: 0, lineHeight: 1.5 }}>{diff.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Messaging angles */}
             <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Key Messaging Angles</h3>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px" }}>The angles, language patterns, and distinctions that define how you communicate. Note: you've been advised not to lead with "AI" or "automation" — people glaze over. Process and systems language lands better.</p>
-            {afMessaging.map((m, i) => (
-              <Collapsible key={i} title={m.title} defaultOpen={i === 0}>
-                <p style={{ margin: "0 0 12px" }}>{m.body}</p>
-                {m.quote && <blockquote style={{ borderLeft: "3px solid #E0DBD3", paddingLeft: 16, margin: "12px 0 0", color: "#7A746E", fontStyle: "italic", fontSize: "0.9rem" }}>{m.quote}</blockquote>}
-              </Collapsible>
-            ))}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>Key Messaging Angles</p>
+            <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: "0 0 20px", lineHeight: 1.6 }}>Lead with process and systems — never AI or automation as the opener. The tools are the answer, not the hook.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+              {[
+                { num: 1, title: "Implementation beats advice", body: "Most selling in this space happens at the idea level. You work at the delivery level — where things actually fail. You're the person who goes in and builds the fix, not the one who tells you what the fix should be.", quote: `"I'm an implementor. I go in and do it. That's the thing."` },
+                { num: 2, title: "The fragile process no one has noticed yet", body: "The most expensive thing in a growing business isn't the software — it's the manual processes nobody's noticed yet. What does it cost in time, errors, and growth ceiling to stay on spreadsheets and workarounds? This is the question most founders haven't answered.", quote: null },
+                { num: 3, title: "Smart people burning out holding it together", body: "The problem isn't that the team isn't capable. It's that too much of how the business works lives in people's heads and hands. That's not a people problem — it's a systems problem. And systems problems have systems solutions.", quote: null },
+                { num: 4, title: "SACK SALLY — the recurring content hook", body: "Sally is the person in every growing business quietly filling the gaps a system should fill. The format names the specific process, calls out the human cost, and lands on: 'that's exactly the kind of thing I fix.' Keep the format consistent. The more recognisable it gets, the more it works.", quote: null },
+                { num: 5, title: "Don't build it just because you can", body: `Counter-cultural in a space full of hype. "Whilst anyone can create systems, the question is whether they should." You question the brief before you touch anything. That's what makes you trustworthy — and what filters wrong-fit clients early.`, quote: `"Whilst anyone can create systems, the question is whether they should."` },
+                { num: 6, title: "Spreadsheets are where data goes to die", body: "One of your best lines. Build posts around it. The specific, visual, and slightly funny description of what happens to data in a spreadsheet over time — the drift, the errors, the one person who's the only one who understands the formula. Then explain what replaces it.", quote: `"Spreadsheets are where data goes to die."` },
+              ].map((msg, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px" }}>
+                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: AF_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>{msg.num}</div>
+                  <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 6px" }}>{msg.title}</p>
+                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0 }}>{msg.body}</p>
+                  {msg.quote && (
+                    <div style={{ background: "#e8f0f7", borderLeft: `3px solid ${AF_COLOR}`, borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10 }}>
+                      <p style={{ fontSize: "0.78rem", fontStyle: "italic", color: "#2d5a8e", margin: 0 }}>{msg.quote}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
 
-            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
+            {/* Language that works */}
+            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
             <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Language That Works</h3>
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.8rem", color: "#7A746E", marginBottom: 14 }}>From your own words. This is the language that sounds like you and resonates with the right audience.</p>
+              <p style={{ fontSize: "0.8rem", color: "#7A746E", marginBottom: 14 }}>From your own words. This is the language that sounds like you.</p>
               {[
-                "\"Building and solving stuff is my pet subject.\"",
-                "\"Whilst anyone can create systems, the question is whether they should.\"",
-                "\"I'd rather be honest and lose the client than knowingly over-promise.\"",
-                "\"If your agency runs on spreadsheets, workarounds, and outdated systems, we should probably talk.\"",
-                "\"Spreadsheets are where data goes to die.\"",
-                "\"This is plumbing. Not magic.\"",
-                "\"I'm an implementor. I go in and do it.\"",
+                `"Building and solving stuff is my pet subject."`,
+                `"Whilst anyone can create systems, the question is whether they should."`,
+                `"I'd rather be honest and lose the client than knowingly over-promise."`,
+                `"Spreadsheets are where data goes to die."`,
+                `"This is plumbing. Not magic."`,
+                `"I'm an implementor. I go in and do it."`,
+                `"I won't build something for the sake of billing hours."`,
               ].map((line, i) => (
                 <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 6 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
               ))}
             </div>
 
             <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>What Your Ideal Client Is Thinking</h3>
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 40 }}>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
               {[
-                "\"I know this is a problem. I just don't know how to fix it.\"",
-                "\"I need someone who understands the technical side so I don't have to.\"",
-                "\"I've wasted money on people who over-promised. I need someone straight.\"",
-                "\"We've outgrown our processes but I don't know what the next step looks like.\"",
+                `"I know this is a problem. I just don't know how to fix it."`,
+                `"I need someone who understands the technical side so I don't have to."`,
+                `"I've wasted money on people who over-promised. I need someone straight."`,
+                `"We've outgrown our processes but I don't know what the next step looks like."`,
               ].map((line, i) => (
                 <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
               ))}
             </div>
-
-            {/* ── HEADLINES ── */}
-            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>LinkedIn Headline</p>
-            <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: "0 0 16px", lineHeight: 1.6 }}>Current headline and options — all implementor-led. Avoid leading with "AI" or "automation". Max 220 characters.</p>
-
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", marginBottom: 10 }}>Current headline</p>
-            {afHeadlinesCurrent.map((h, i) => (
-              <div key={i} style={{ background: "#fff8e6", border: "1px solid #e8c97a", borderRadius: 4, padding: "16px 20px", marginBottom: 16 }}>
-                <p style={{ fontStyle: "italic", fontSize: "0.95rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{h.note}</p>
-                  <span style={{ fontSize: "0.7rem", color: "#7A746E", flexShrink: 0 }}>{h.chars} chars</span>
-                </div>
-              </div>
-            ))}
-
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "16px 0 10px" }}>5 strong options — implementor-led</p>
-            {afHeadlinesStrong.map((h, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "16px 20px", marginBottom: 10 }}>
-                <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{h.note}</p>
-                  <span style={{ fontSize: "0.7rem", color: "#7A746E", flexShrink: 0 }}>{h.chars} chars</span>
-                </div>
-              </div>
-            ))}
-
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "16px 0 10px" }}>5 bolder options</p>
-            {afHeadlinesBold.map((h, i) => (
-              <div key={i} style={{ background: "#f0efe9", border: "1px solid #E0DBD3", borderRadius: 4, padding: "16px 20px", marginBottom: 10 }}>
-                <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{h.note}</p>
-                  <span style={{ fontSize: "0.7rem", color: "#7A746E", flexShrink: 0 }}>{h.chars} chars</span>
-                </div>
-              </div>
-            ))}
-
-            {/* ── ABOUT SECTION ── */}
-            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>About Section</p>
-            <Callout type="blue">
-              Your current About section leads with "Typically businesses come to me when they're being held together by manual processes, workarounds, and people quietly filling in the gaps." That's a strong opening. The three versions below bring the implementor positioning into the rest of it and sharpen who it's written for.
-            </Callout>
-            {afAboutVersions.map((v, i) => (
-              <div key={i} style={{ marginBottom: 16 }}>
-                <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 8px" }}>{v.label}</p>
-                <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 6 }}>
-                  <pre style={{ fontFamily: "inherit", fontSize: "0.88rem", color: "#1C1C1C", lineHeight: 1.8, whiteSpace: "pre-wrap", margin: 0 }}>{v.text}</pre>
-                </div>
-                <p style={{ fontSize: "0.8rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{v.note}</p>
-              </div>
-            ))}
 
             <CommentBox clientName="Andy Felton" tabName="Brand Assets" slug={slug} />
           </div>
