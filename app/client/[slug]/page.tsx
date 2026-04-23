@@ -8,6 +8,7 @@ import EmailOptIn from "@/components/EmailOptIn";
 import MilestoneTracker from "@/components/MilestoneTracker";
 import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
+import AndyScottBarrettDashboard from "@/components/AndyScottBarrettDashboard";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -2182,6 +2183,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
   if (slug === "nikki-mcreynolds") {
     return <NikkiMcReynoldsDashboard slug={slug} />;
+  }
+
+  if (slug === "andy-scott-barrett") {
+    return <AndyScottBarrettDashboard slug={slug} />;
   }
 
   if (!client) {
