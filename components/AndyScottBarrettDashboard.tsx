@@ -31,7 +31,7 @@ const asbTodos = [
 const asbTabs = [
   { id: "home", label: "Home" },
   { id: "milestones", label: "Milestones" },
-  { id: "positioning", label: "Positioning" },
+  { id: "brand", label: "Brand Assets" },
   { id: "headlines", label: "Headlines" },
   { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
@@ -133,74 +133,174 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <MilestoneTracker slug={slug} color={ASB_COLOR} />
         )}
 
-        {/* ── POSITIONING ── */}
-        {activeTab === "positioning" && (
+        {/* ── BRAND ASSETS ── */}
+        {activeTab === "brand" && (
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Who You're For & How You're Different</p>
-            <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 28px", letterSpacing: "-0.02em" }}>Positioning</h2>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 4px" }}>Your Brand Foundation</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
 
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 20 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Core positioning</p>
-              <p style={{ fontSize: "1.05rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>I turn financial data into decisions — the bit your accountant isn't there to do.</p>
+            {/* Positioning statement */}
+            <div style={{ background: ASB_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning Statement</p>
+              <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0 }}>
+                "I turn financial data into decisions — the bit your accountant isn't there to do."
+              </p>
             </div>
 
+            {/* Headline + one-liner */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 14px" }}>Who you're for</p>
-                {[
-                  { label: "Primary ICP", detail: "UK SME owners with £500k–£10m turnover (sweet spot £500k–£5m). Have bookkeeping and accounting covered. Lacking someone who turns data into forward-looking decisions. Driven by growth, a specific inflection point, or pain." },
-                  { label: "Secondary ICP", detail: "Start-ups preparing to raise investment — need their numbers straight and their financial story coherent before investor conversations. A valid fit, not a 'not for'." },
-                ].map((a, i) => (
-                  <div key={i} style={{ marginBottom: i < 1 ? 14 : 0 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, margin: "0 0 4px" }}>{a.label}</p>
-                    <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
-                  </div>
-                ))}
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>LinkedIn Headline — Chosen (Session 3)</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>
+                  "I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce"
+                </p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Opens with the outcome (decisions), not the job title. Frames the accountant gap without criticism.</p>
               </div>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#DC2626", margin: "0 0 14px" }}>Who you're not for</p>
-                {[
-                  "Doesn't respect your time or the relationship",
-                  "Needs convincing rather than ready to act",
-                  "Wants validation, not genuine insight",
-                  "Treats it transactionally — squeezes every invoice, goes quiet between calls",
-                  "Too early-stage or too small to justify the engagement",
-                ].map((item, i) => (
-                  <div key={i} style={{ display: "flex", gap: 8, marginBottom: 8 }}>
-                    <span style={{ color: "#DC2626", fontWeight: 700, flexShrink: 0 }}>✕</span>
-                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{item}</p>
-                  </div>
-                ))}
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner</p>
+                <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 10px" }}>
+                  "I help UK SME owners turn their financial data into actual decisions — the bit your accountant isn't there to do. I work with a small number of retained clients, typically turning over between £500k and £10m."
+                </p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Lead with the gap — not the job title. Let them ask the follow-up.</p>
               </div>
             </div>
 
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 20 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 16px" }}>What makes you different</p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { icon: "🏭", title: "20 years at Rolls-Royce — stress-testing business cases on jet engines", body: "Not in the boardroom. In the weeds — working directly with engineers, sales directors and management teams on live business decisions. That's a very different thing from a career consultant who's never been inside something that demanding." },
-                  { icon: "🇨🇳", title: "Beijing at 25 — you've always been able to turn your hand to things", body: "Sent to China at 25. Found a messy, ad-hoc operation and systematised it from scratch. Mentored the local team. Evidence that you can land somewhere unfamiliar, figure it out, and leave it better than you found it." },
-                  { icon: "🚪", title: "You chose this deliberately, at 40, on your own terms", body: "Most people who leave big corporate jobs do it under pressure. You'd had 40 in your mind for years. Your boss told you your job was safe. Your internal response: 'oh no.' Last day was exactly 20 years to the day from day one." },
-                  { icon: "🧠", title: "You understand the emotional weight of running a business", body: "You had a stress-related health crisis at Rolls-Royce. You've watched pressure compound on former colleagues. When a client says they can't sleep over a cash flow decision, you understand that in a way that most finance professionals simply don't." },
-                  { icon: "💬", title: "People confide in you", body: "Colleagues at Rolls-Royce would confide in you. Not because you asked, but because you listen and you're not there to judge or get ahead of anyone. That's rare in finance." },
-                  { icon: "📉", title: "You tell clients what they don't want to hear", body: "You once presented numbers a room full of senior people desperately didn't want to hear. One slammed the desk and walked out. The numbers were still right. That integrity — giving an honest picture even when it's uncomfortable — is what clients actually need." },
-                ].map((d, i) => (
-                  <div key={i} style={{ display: "flex", gap: 14, background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 6, padding: "14px 16px" }}>
-                    <span style={{ fontSize: "1.1rem", flexShrink: 0 }}>{d.icon}</span>
-                    <div>
-                      <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>{d.title}</p>
-                      <p style={{ fontSize: "0.83rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{d.body}</p>
+            {/* ICP */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 18px" }}>Your Ideal Client (ICP)</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, margin: "0 0 6px" }}>Who they are</p>
+                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>UK SME owner turning over £500k–£10m (sweet spot £500k–£5m). Has their bookkeeping and accounting covered. Doesn't know what to do with the numbers once they arrive. Driven by a growth decision, a cash flow worry, or a moment where they realise gut feel isn't cutting it anymore.</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, margin: "0 0 6px" }}>What they say</p>
+                  {[
+                    '"My accountant sends the numbers and I just… stare at them."',
+                    '"I know something needs to change, I just don\'t know what."',
+                    '"I can\'t sleep — the cash flow is worrying me and I don\'t know why."',
+                    '"I\'m making big decisions on gut feel and hoping for the best."',
+                    '"I need someone who actually helps me run the business."',
+                  ].map((q, i) => (
+                    <p key={i} style={{ fontSize: "0.82rem", color: "#6b6860", margin: "0 0 6px", fontStyle: "italic" }}>{q}</p>
+                  ))}
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, margin: "0 0 8px" }}>Good fit</p>
+                  {["Has the accounting covered — needs the next layer", "Driven by a real business decision, not just curiosity", "Values honesty over a polished answer", "Respects the relationship, not just the invoice", "Ready to act, not endlessly deliberating"].map((f, i) => (
+                    <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                      <span style={{ color: ASB_COLOR, fontWeight: 700, flexShrink: 0 }}>✓</span>
+                      <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "#c0392b", margin: "0 0 8px" }}>Poor fit</p>
+                  {["Wants validation, not genuine insight", "Treats it transactionally — squeezes every invoice", "Needs convincing rather than is ready to act", "Too early-stage or too small to justify retained FD", "Doesn't respect your time or the relationship"].map((f, i) => (
+                    <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                      <span style={{ color: "#c0392b", fontWeight: 700, flexShrink: 0 }}>✗</span>
+                      <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px" }}>
-              <p style={{ fontSize: "0.8rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 6px" }}>Ben's take</p>
-              <p style={{ fontSize: "0.85rem", color: "#3a6048", lineHeight: 1.7, margin: 0 }}>Your positioning is actually very clear once you say it out loud. The challenge isn't a lack of differentiation — it's that you've been underselling it across every touchpoint. The work we're doing now is closing that gap: making sure what people find online matches the version of you they'd actually meet.</p>
+            {/* Audience tiers */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Audience Tiers</p>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "0 22px", marginBottom: 20 }}>
+              {[
+                { badge: "Primary", badgeBg: "#edf4ef", badgeColor: "#2e7d4f", text: "UK SME owners £500k–£10m turnover who have bookkeeping and accounting covered but no one helping them turn the data into forward-looking decisions. The gap is specific, common, and painful." },
+                { badge: "Secondary", badgeBg: "#eef2f7", badgeColor: "#2d5a8e", text: "Start-ups preparing to raise investment — need their numbers in order and their financial story coherent before investor conversations. A valid fit, not a primary audience." },
+                { badge: "Referral", badgeBg: "#fdf8ec", badgeColor: "#8a6e2a", text: "Accountants and bookkeepers who can refer clients who've outgrown their current support. Not competitors — complementary. Worth building these relationships deliberately." },
+                { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Clients who want to be convinced, who don't respect your time, or who are too small to justify a retained FD engagement. Wrong-fit clients cost more than no clients." },
+              ].map((row, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14, padding: "11px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none" }}>
+                  <span style={{ fontSize: "0.68rem", fontWeight: 700, padding: "3px 10px", borderRadius: 20, whiteSpace: "nowrap", flexShrink: 0, marginTop: 1, background: row.badgeBg, color: row.badgeColor }}>{row.badge}</span>
+                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.5, margin: 0 }}>{row.text}</p>
+                </div>
+              ))}
             </div>
-            <CommentBox clientName="Andy Scott Barrett" tabName="Positioning" slug={slug} />
+
+            {/* What makes you different */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>What Makes You Different</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+              {[
+                { title: "20 years at Rolls-Royce — stress-testing business cases on jet engines", body: "Not in the boardroom. Working directly with engineers, sales directors, and management teams on live decisions. That's a very different thing from a career consultant who's never been inside something that demanding." },
+                { title: "You went to Beijing at 25", body: "Found a messy, ad-hoc finance operation and systematised it from scratch. Mentored the local team. Evidence that you can land somewhere unfamiliar, figure it out, and leave it better than you found it. Most finance people have never had to do that." },
+                { title: "You chose to leave at 40 — on your own terms", body: "Most people leave big corporate jobs under pressure. You'd had 40 in your mind for years. When your boss told you your job was safe, your internal response was 'oh no.' The last day was exactly 20 years to the day from day one. That's not a redundancy story. It's a conviction story." },
+                { title: "You understand the emotional weight of running a business", body: "You had a stress-related health crisis at Rolls-Royce. When a client says they can't sleep over a cash flow decision, you understand that in a way most finance professionals simply don't — and you say so." },
+                { title: "People confide in you", body: "Colleagues at Rolls-Royce confided in you without being asked. You listen, you don't judge, and you're not there to get ahead of anyone. That's unusually rare in a finance professional." },
+                { title: "You tell clients what they don't want to hear", body: "You once presented numbers a room full of senior people desperately didn't want to hear. One slammed the desk and walked out. The numbers were still right. Integrity over comfort — that's what clients actually need." },
+              ].map((diff, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 14px", background: "#F9F8F6", borderRadius: 6 }}>
+                  <div style={{ width: 28, height: 28, borderRadius: 6, background: "#edf4ef", color: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0 }}>✦</div>
+                  <div>
+                    <p style={{ fontSize: "0.84rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 2px" }}>{diff.title}</p>
+                    <p style={{ fontSize: "0.8rem", color: "#6b6860", margin: 0, lineHeight: 1.5 }}>{diff.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Messaging angles */}
+            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>Key Messaging Angles</p>
+            <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: "0 0 20px", lineHeight: 1.6 }}>The angles with the most potential, grounded in your own words and experiences.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+              {[
+                { num: 1, title: "The gap your accountant was never meant to fill", body: "Your accountant reports what happened. You help owners decide what to do next. This isn't a criticism of accountants — it's a clear, useful distinction that most SME owners have never heard articulated. Say it in every intro, every post, every conversation.", quote: '"Reporting what happened isn\'t the same as helping you run the business."' },
+                { num: 2, title: "The numbers are only useful if you know what to do with them", body: "Most SME owners receive their accounts and stare at them. They're not failing their business — they're just missing the layer that turns data into decisions. That's the job. Frame it as the missing layer, not a failing.", quote: null },
+                { num: 3, title: "You can sleep better when someone's carrying the numbers with you", body: "Financial pressure is one of the most isolating things about running a business. When a client says they sleep better once you're working together, that's not about spreadsheets — it's about not carrying the weight alone. That's a human story worth telling.", quote: '"They can see problems coming while there\'s still time to act."' },
+                { num: 4, title: "Decisions before commitment", body: "The value of a fractional FD isn't the reports — it's knowing the financial impact of a decision before you make it, not after. Pricing, growth, capital purchases, whether the new product is worth pursuing. This is the specific thing you do that most SME owners have never had access to.", quote: null },
+                { num: 5, title: "Corporate-grade rigour, without the corporate cost", body: "You spent 20 years stress-testing business cases at one of the world's most demanding engineering companies. SME owners can now access that kind of thinking for a fraction of the cost of a full-time FD. That framing — big company rigour, small company context — is a powerful door-opener.", quote: null },
+                { num: 6, title: "You know when to say no", body: "You once presented numbers a room of senior people desperately didn't want to hear. One slammed the desk and walked out. The numbers were still right. Telling the truth when it's uncomfortable — not telling clients what they want to hear — is the thing that makes you genuinely useful.", quote: '"The honest picture, even when it\'s uncomfortable."' },
+              ].map((msg, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px" }}>
+                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>{msg.num}</div>
+                  <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 6px" }}>{msg.title}</p>
+                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0 }}>{msg.body}</p>
+                  {msg.quote && (
+                    <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10 }}>
+                      <p style={{ fontSize: "0.78rem", fontStyle: "italic", color: "#3a6048", margin: 0 }}>{msg.quote}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Language that works */}
+            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Language That Works</h3>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.8rem", color: "#7A746E", marginBottom: 14 }}>From your own words. This is the language that sounds like you and resonates with the right audience.</p>
+              {[
+                '"Reporting what happened isn\'t the same as helping you run the business."',
+                '"I turn your financial data into decisions — not just reports."',
+                '"Your accountant is doing exactly what they\'re supposed to do. The problem is, that\'s not the same as helping you run the business."',
+                '"I made the decision to leave at 40 to do work where you can actually feel the difference it makes."',
+                '"The honest picture — even when it\'s uncomfortable."',
+                '"I\'m not for everyone, but if this sounds like someone you\'d want in your corner…"',
+              ].map((line, i) => (
+                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 5 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>What Your Ideal Client Is Thinking</h3>
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 28px", marginBottom: 28 }}>
+              {[
+                '"I glance at the accounts, don\'t really understand them, and carry on hoping."',
+                '"I need someone who actually helps me make decisions — not just sends me numbers."',
+                '"I can\'t sleep. Something\'s wrong with the cash flow and I don\'t know what."',
+                '"Is my business actually profitable? I genuinely don\'t know."',
+              ].map((line, i) => (
+                <p key={i} style={{ fontSize: "0.9rem", color: "#1C1C1C", padding: "8px 0", borderBottom: i < 3 ? "1px solid #E0DBD3" : "none", margin: 0 }}>{line}</p>
+              ))}
+            </div>
+
+            <CommentBox clientName="Andy Scott Barrett" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
