@@ -32,8 +32,6 @@ const asbTabs = [
   { id: "home", label: "Home" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
-  { id: "headlines", label: "Headlines" },
-  { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
   { id: "recs", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
@@ -147,22 +145,67 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               </p>
             </div>
 
-            {/* Headline + one-liner */}
+            {/* Live LinkedIn profile */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
-                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>LinkedIn Headline — Chosen (Session 3)</p>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>
-                  "I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce"
+              <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 6, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>✓ LinkedIn Headline — Live</p>
+                <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>
+                  "I turn your numbers into decisions - the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce"
                 </p>
-                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Opens with the outcome (decisions), not the job title. Frames the accountant gap without criticism.</p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Opens with the outcome, not the job title. Frames the accountant gap without criticism.</p>
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
                 <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner</p>
                 <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 10px" }}>
-                  "I help UK SME owners turn their financial data into actual decisions — the bit your accountant isn't there to do. I work with a small number of retained clients, typically turning over between £500k and £10m."
+                  "Most SME owners I meet have their accountant sorted — they just have no idea what to do with the numbers once they arrive. That's literally what I fix. I spent 20 years doing it at Rolls-Royce; now I do it for businesses that actually need it."
                 </p>
-                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Lead with the gap — not the job title. Let them ask the follow-up.</p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Lead with the gap they recognise, land the credibility. Let them ask the follow-up.</p>
               </div>
+            </div>
+
+            {/* LinkedIn Banner */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>LinkedIn Banner — Live</p>
+            <div style={{ background: "#1a3a6b", borderRadius: 8, padding: "28px 32px", marginBottom: 6, display: "flex", flexDirection: "column", gap: 10 }}>
+              <p style={{ color: "#ffffff", fontWeight: 700, fontSize: "1rem", margin: 0 }}>Turning your data into decisions and actions, not just reports</p>
+              <p style={{ color: "#c8a84b", fontSize: "0.95rem", fontWeight: 600, margin: 0 }}>I give you the financial direction you don't get from your accountant</p>
+              <p style={{ color: "#cbd5e1", fontSize: "0.88rem", margin: 0 }}>For SME owners who want to run their business properly</p>
+            </div>
+            <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: "0 0 24px", lineHeight: 1.5 }}>Session 3 decision. Live and correct as of April 2026.</p>
+
+            {/* About section */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>About Section — Live on LinkedIn</p>
+            <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "36px 40px", marginBottom: 8 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>✓ Finalised — Session 3 · 15 April 2026</p>
+              <div style={{ fontSize: "0.97rem", lineHeight: 2, color: "#3D3935", display: "flex", flexDirection: "column", gap: 16 }}>
+                <p style={{ margin: 0 }}>Does this sound familiar?</p>
+                <p style={{ margin: 0 }}>Your accountant sends the accounts… you glance at the numbers.</p>
+                <p style={{ margin: 0 }}>You're not really sure what to do with them. So you carry on, making the big calls on gut feel and hoping for the best.</p>
+                <p style={{ margin: 0 }}>You're not doing anything wrong. Your accountant is doing exactly what they're supposed to do.</p>
+                <p style={{ margin: 0 }}>The problem is, reporting what happened and keeping you compliant isn't the same as helping you run the business.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>That's the gap I fill.</p>
+                <p style={{ margin: 0 }}>👋 I'm Andy, a Fractional Finance Director for growing UK SMEs, which in plain English means I'm the person who takes your financial data and turns it into actual decisions around:</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 4 }}>
+                  {["Growth plans", "Pricing", "Cash flow", "Where to invest and when to hire", "Launching new products", "Funding readiness"].map((item, i) => (
+                    <p key={i} style={{ margin: 0 }}>👉 {item}</p>
+                  ))}
+                </div>
+                <p style={{ margin: 0, marginTop: 8 }}>I spent 20 years at Rolls-Royce stress-testing business cases on jet engines and working directly with engineers, sales directors and management teams, not in the boardroom. I made the decision to leave at 40 to do work where you can really feel the difference it makes.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>I work with a small number of retained clients at a time, typically either start-ups preparing for funding or UK SME owners turning over between £500k and £10m. They have their accounting covered but want someone to help them actually use the numbers to run the business effectively.</p>
+                <p style={{ margin: 0 }}>Some are at a specific moment: a growth decision, an investor conversation, a cash flow worry that won't go away. Others have just outgrown the informal approach. Either way, the gap is the same.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>What my clients tell me, once we're working together:</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingLeft: 4 }}>
+                  <p style={{ margin: 0 }}>👉 They make major decisions with confidence — because they know the financial impact before they commit, not after</p>
+                  <p style={{ margin: 0 }}>👉 They sleep better — because they're no longer carrying the numbers on their own, and they can see problems coming while there's still time to act</p>
+                  <p style={{ margin: 0 }}>👉 They feel in control — there's a clear plan, they know whether they're on track, and they're not waiting to be blindsided</p>
+                </div>
+                <p style={{ margin: 0, marginTop: 8 }}>Based in Derby (and occasionally Portugal). Mandarin: decent conversation level, probably. Currently learning Japanese on Duolingo.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>I'm not for everyone, but if any of this sounds like someone you'd want in your corner, I'm always up for a straightforward conversation to see if we're a good fit.</p>
+              </div>
+            </div>
+            <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "14px 18px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>
+                <strong style={{ color: "#1C1C1C" }}>To update:</strong> LinkedIn → profile → pencil icon on intro → About → paste. Check character count stays within the 2,600 limit.
+              </p>
             </div>
 
             {/* ICP */}
@@ -305,106 +348,6 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
         )}
 
         {/* ── HEADLINES ── */}
-        {activeTab === "headlines" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>LinkedIn Headline</p>
-            <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Headlines</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 28px" }}>We went through two sessions on headlines. The chosen version is highlighted in green. Others are kept for reference.</p>
-
-            <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "22px 24px", marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <span style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em" }}>Revised A</span>
-                <span style={{ background: "#edf4ef", color: ASB_COLOR, border: `1px solid #c2dbc9`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em" }}>✓ Chosen — Session 3</span>
-                <span style={{ marginLeft: "auto", fontSize: "0.75rem", color: "#9CA3AF" }}>179 chars</span>
-              </div>
-              <p style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>"I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce"</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>Andy's reaction: "I really like that. Hard hitting, right?" — Keeps the accountant distinction but frames it as a gap, not a criticism. Opens with the outcome (decisions), not the job title.</p>
-            </div>
-
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 16 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase", letterSpacing: "0.08em" }}>Option 3</span>
-                <span style={{ background: "#FEF3C7", color: "#92400E", border: "1px solid #FDE68A", borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em" }}>Chosen — Session 2 (superseded)</span>
-                <span style={{ marginLeft: "auto", fontSize: "0.75rem", color: "#9CA3AF" }}>183 chars</span>
-              </div>
-              <p style={{ fontSize: "1rem", fontWeight: 600, color: "#7A746E", lineHeight: 1.5, margin: "0 0 12px" }}>"Your accountant keeps you compliant. I help you grow | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce | Turning financial clarity into better decisions"</p>
-              <p style={{ fontSize: "0.82rem", color: "#9CA3AF", lineHeight: 1.6, margin: 0 }}>Set aside in Session 3 — Andy's concern that the first line could be read as implying the accountant doesn't help you grow. The Revised A version addresses this more cleanly.</p>
-            </div>
-
-            <div style={{ borderTop: "1px solid #E0DBD3", margin: "28px 0 20px", paddingTop: 20 }}>
-              <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 16px" }}>Other options considered</p>
-              {[
-                { label: "Option 1", chars: "178", text: '"I help SME owners turn their numbers into decisions, not just reports | Ex-Rolls-Royce Finance | The financial direction your accountant was never meant to give you"' },
-                { label: "Option 2", chars: "196", text: '"Fractional Finance Director for SMEs | 20 years at Rolls-Royce | I turn your financial data into decisions that grow your business, without the cost of a full-time FD"' },
-                { label: "Option 4", chars: "196", text: '"Left Rolls-Royce after 20 years to give SME owners what big corporates take for granted: a Finance Director who actually helps them run the business | Fractional FD"' },
-                { label: "Revised B", chars: "191", text: '"Helping UK SME owners make better decisions with their numbers | Fractional Finance Director | 20 years at Rolls-Royce | The financial strategy your business hasn\'t had yet"' },
-              ].map((h, i) => (
-                <div key={i} style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 6, padding: "14px 18px", marginBottom: 10 }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-                    <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: "0.06em" }}>{h.label}</span>
-                    <span style={{ fontSize: "0.75rem", color: "#9CA3AF" }}>{h.chars} chars</span>
-                  </div>
-                  <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>{h.text}</p>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ borderTop: "1px solid #E0DBD3", margin: "28px 0 20px", paddingTop: 20 }}>
-              <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 12px" }}>LinkedIn Banner — Chosen</p>
-              <div style={{ background: "#1a3a6b", borderRadius: 8, padding: "28px 32px", marginBottom: 12, display: "flex", flexDirection: "column", gap: 10 }}>
-                <p style={{ color: "#ffffff", fontWeight: 700, fontSize: "1rem", margin: 0 }}>Turning your numbers into decisions, not just reports</p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.92rem", margin: 0 }}>I give you the financial direction you don't get from your accountant</p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.92rem", margin: 0 }}>For UK SME owners who want to run their business properly</p>
-              </div>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>Session 3 decision — Banner Option 1, flipped so "Turning your numbers into decisions, not just reports" leads as the strongest hook. Copy ready to paste into LinkedIn.</p>
-            </div>
-            <CommentBox clientName="Andy Scott Barrett" tabName="Headlines" slug={slug} />
-          </div>
-        )}
-
-        {/* ── ABOUT SECTION ── */}
-        {activeTab === "about" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>LinkedIn About Section</p>
-            <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>About Section</h2>
-            <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "14px 18px", marginBottom: 24 }}>
-              <p style={{ fontSize: "0.85rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>✓ Finalised — Session 3 · 15 April 2026</p>
-              <p style={{ fontSize: "0.83rem", color: "#3a6048", margin: 0 }}>Final version compacted to ~1,550 characters. Ready to copy and paste into LinkedIn. Navigate to your profile → Edit intro → About → paste below.</p>
-            </div>
-
-            <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "36px 40px", marginBottom: 20 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>Final Version — Copy this into LinkedIn</p>
-              <div style={{ fontSize: "0.97rem", lineHeight: 2, color: "#3D3935", display: "flex", flexDirection: "column", gap: 16 }}>
-                <p style={{ margin: 0 }}>Does this sound familiar?</p>
-                <p style={{ margin: 0 }}>Your accountant sends the accounts… you glance at the numbers.</p>
-                <p style={{ margin: 0 }}>You're not really sure what to do with them. So you carry on, making the big calls on gut feel and hoping for the best.</p>
-                <p style={{ margin: 0 }}>You're not doing anything wrong. Your accountant is doing exactly what they're supposed to do.</p>
-                <p style={{ margin: 0 }}>The problem is, reporting what happened isn't the same as helping you run the business.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>That's the gap I fill.</p>
-                <p style={{ margin: 0 }}>👋 I'm Andy — a Fractional Finance Director and CFO for UK SMEs, which in plain English means I'm the person who takes your financial data and turns it into actual decisions around pricing, growth plans, cash flow, capital purchases, whether that new product is worth pursuing, or whether you're ready for investment or funding.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>I spent 20 years at Rolls-Royce stress-testing business cases on jet engines — working directly with engineers, sales directors and management teams, not in the boardroom. I made the decision to leave at 40 to do work where you can actually feel the difference it makes.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>I work with a small number of retained clients at a time, typically UK SME owners turning over between £500k and £10m, who have their accounting covered but want someone to help them actually use the numbers to run the business effectively.</p>
-                <p style={{ margin: 0 }}>Some are at a specific moment: a growth decision, an investor conversation, a cash flow worry that won't go away. Others have just outgrown the informal approach. Either way, the gap is the same.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>What my clients tell me, once we're working together:</p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingLeft: 4 }}>
-                  <p style={{ margin: 0 }}>👉 They make major decisions with confidence — because they know the financial impact before they commit, not after</p>
-                  <p style={{ margin: 0 }}>👉 They sleep better — because they're no longer carrying the numbers on their own, and they can see problems coming while there's still time to act</p>
-                  <p style={{ margin: 0 }}>👉 They feel in control — there's a clear plan, they know whether they're on track, and they're not waiting to be blindsided</p>
-                </div>
-                <p style={{ margin: 0, marginTop: 8 }}>Based in Derby (and occasionally Portugal). Mandarin: decent conversation level, probably. Currently learning Japanese on Duolingo.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>I'm not for everyone, but if any of this sounds like someone you'd want in your corner, I'm always up for a straightforward conversation to see if we're a good fit.</p>
-              </div>
-            </div>
-
-            <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px" }}>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>
-                <strong style={{ color: "#1C1C1C" }}>To upload:</strong> Copy the text above. On LinkedIn, go to your profile → click the pencil icon on your intro → scroll to About → paste. Remove the 👉 emoji if it doesn't render cleanly on mobile. Check character count in LinkedIn's editor — should sit comfortably within the 2,600 limit.
-              </p>
-            </div>
-            <CommentBox clientName="Andy Scott Barrett" tabName="About Section" slug={slug} />
-          </div>
-        )}
-
         {/* ── CONTENT IDEAS ── */}
         {activeTab === "content" && (
           <div>
