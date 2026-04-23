@@ -274,8 +274,6 @@ const AF_TABS = [
   { id: "home", label: "Home & To-Do" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
-  { id: "headlines", label: "Headlines" },
-  { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
@@ -299,7 +297,6 @@ function Callout({ type, children }: { type: "green" | "amber" | "blue" | "orang
 function AndyFeltonDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
   const [contentSubTab, setContentSubTab] = useState("story");
-  const [aboutVersion, setAboutVersion] = useState(0);
 
   const afTodoItems = afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy" }));
 
@@ -494,20 +491,14 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            <CommentBox clientName="Andy Felton" tabName="Brand Assets" slug={slug} />
-          </div>
-        )}
+            {/* ── HEADLINES ── */}
+            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>LinkedIn Headline</p>
+            <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: "0 0 16px", lineHeight: 1.6 }}>Current headline and options — all implementor-led. Avoid leading with "AI" or "automation". Max 220 characters.</p>
 
-        {/* ── HEADLINES ── */}
-        {activeTab === "headlines" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>LinkedIn Headlines</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Headlines</h2>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 32px" }}>Current headline, strong options, and bolder options — all reflecting the implementor positioning. Max 220 characters. Avoid leading with "AI" or "automation" — people glaze over.</p>
-
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 12 }}>Current headline</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", marginBottom: 10 }}>Current headline</p>
             {afHeadlinesCurrent.map((h, i) => (
-              <div key={i} style={{ background: "#fff8e6", border: "1px solid #e8c97a", borderRadius: 4, padding: "16px 20px", marginBottom: 12 }}>
+              <div key={i} style={{ background: "#fff8e6", border: "1px solid #e8c97a", borderRadius: 4, padding: "16px 20px", marginBottom: 16 }}>
                 <p style={{ fontStyle: "italic", fontSize: "0.95rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
                   <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{h.note}</p>
@@ -516,8 +507,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             ))}
 
-            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 12 }}>5 strong options — implementor-led</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "16px 0 10px" }}>5 strong options — implementor-led</p>
             {afHeadlinesStrong.map((h, i) => (
               <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "16px 20px", marginBottom: 10 }}>
                 <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
@@ -528,8 +518,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             ))}
 
-            <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 12 }}>5 bolder options</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "16px 0 10px" }}>5 bolder options</p>
             {afHeadlinesBold.map((h, i) => (
               <div key={i} style={{ background: "#f0efe9", border: "1px solid #E0DBD3", borderRadius: 4, padding: "16px 20px", marginBottom: 10 }}>
                 <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{h.text}</p>
@@ -540,35 +529,23 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             ))}
 
-            <CommentBox clientName="Andy Felton" tabName="Headlines" slug={slug} />
-          </div>
-        )}
-
-        {/* ── ABOUT ── */}
-        {activeTab === "about" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, marginBottom: 8 }}>About Section</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>About Section</h2>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px" }}>Three versions. All under LinkedIn's 2,200 character limit. Note: "AI" and "automation" are avoided as openers — process and systems language used instead.</p>
-
+            {/* ── ABOUT SECTION ── */}
+            <div style={{ height: 1, background: "#E0DBD3", margin: "28px 0" }} />
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 8px" }}>About Section</p>
             <Callout type="blue">
-              Your current About section leads with "Typically businesses come to me when they're being held together by manual processes, workarounds, and people quietly filling in the gaps." That's a strong opening. What the versions below do is bring the implementor positioning into the rest of it — and sharpen who it's written for.
+              Your current About section leads with "Typically businesses come to me when they're being held together by manual processes, workarounds, and people quietly filling in the gaps." That's a strong opening. The three versions below bring the implementor positioning into the rest of it and sharpen who it's written for.
             </Callout>
+            {afAboutVersions.map((v, i) => (
+              <div key={i} style={{ marginBottom: 16 }}>
+                <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 8px" }}>{v.label}</p>
+                <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 6 }}>
+                  <pre style={{ fontFamily: "inherit", fontSize: "0.88rem", color: "#1C1C1C", lineHeight: 1.8, whiteSpace: "pre-wrap", margin: 0 }}>{v.text}</pre>
+                </div>
+                <p style={{ fontSize: "0.8rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{v.note}</p>
+              </div>
+            ))}
 
-            <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" as const }}>
-              {afAboutVersions.map((v, i) => (
-                <button key={i} onClick={() => setAboutVersion(i)} style={{ padding: "10px 18px", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.08em", border: "1px solid #E0DBD3", borderRadius: 3, cursor: "pointer", background: aboutVersion === i ? AF_COLOR : "#fff", color: aboutVersion === i ? "#fff" : "#7A746E" }}>
-                  {v.label}
-                </button>
-              ))}
-            </div>
-
-            <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12, fontFamily: "inherit" }}>
-              <pre style={{ fontFamily: "inherit", fontSize: "0.9rem", color: "#1C1C1C", lineHeight: 1.8, whiteSpace: "pre-wrap", margin: 0 }}>{afAboutVersions[aboutVersion].text}</pre>
-            </div>
-            <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, marginBottom: 40 }}>{afAboutVersions[aboutVersion].note}</p>
-
-            <CommentBox clientName="Andy Felton" tabName="About Section" slug={slug} />
+            <CommentBox clientName="Andy Felton" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
