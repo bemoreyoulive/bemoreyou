@@ -37,8 +37,10 @@
 
 import { useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
+import CommentBox from "@/components/CommentBox";
 import DashboardFooter from "@/components/DashboardFooter";
 import EmailOptIn from "@/components/EmailOptIn";
+import MilestoneTracker from "@/components/MilestoneTracker";
 import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
@@ -62,60 +64,7 @@ const TABS = [
   { id: "goals", label: "Goals" },
 ];
 
-// ─── MILESTONE DEFINITIONS ───────────────────────────────────────────────────
-// These are the 8 core milestones every client works through.
-// Mark completed ones by changing `done: false` to `done: true` as they happen.
 
-const MILESTONES = [
-  {
-    id: "m1",
-    label: "Blueprint complete",
-    description: "90-minute deep dive done. Ben has a full picture of your experiences, values, beliefs, personality, and where you're headed.",
-    done: false,
-  },
-  {
-    id: "m2",
-    label: "Positioning statement finalised",
-    description: "You have a clear, specific positioning statement that reflects who you are now — not who you used to be.",
-    done: false,
-  },
-  {
-    id: "m3",
-    label: "LinkedIn profile updated",
-    description: "Headline, About section, and banner all updated to reflect your new positioning and voice.",
-    done: false,
-  },
-  {
-    id: "m4",
-    label: "First aligned post published",
-    description: "Your first piece of content that sounds genuinely like you — not performed, not diluted.",
-    done: false,
-  },
-  {
-    id: "m5",
-    label: "First 'that's exactly me' DM received",
-    description: "Someone has reached out off the back of your content or profile saying you described their problem perfectly.",
-    done: false,
-  },
-  {
-    id: "m6",
-    label: "First inbound enquiry from content",
-    description: "A genuine lead has come in who found you through your personal brand — not a referral, not a warm intro.",
-    done: false,
-  },
-  {
-    id: "m7",
-    label: "Consistent posting rhythm established",
-    description: "2+ posts per week for 4 consecutive weeks. The habit is real, not forced.",
-    done: false,
-  },
-  {
-    id: "m8",
-    label: "First 'shit, you just get me' moment",
-    description: "A prospect or client has used those words — or something close. The positioning is doing its job.",
-    done: false,
-  },
-];
 
 // ─── TODO LIST ───────────────────────────────────────────────────────────────
 // Add items here after each session. Keep in sync with lib/todos.ts.
@@ -186,69 +135,6 @@ const GOALS = {
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-function MilestoneTracker({ color }: { color: string }) {
-  const done = MILESTONES.filter(m => m.done).length;
-  const total = MILESTONES.length;
-  const pct = Math.round((done / total) * 100);
-
-  return (
-    <div>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-        <div>
-          <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, margin: "0 0 4px" }}>Your Journey</p>
-          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: 0, letterSpacing: "-0.02em" }}>Milestones</h2>
-        </div>
-        <div style={{ textAlign: "right" }}>
-          <p style={{ fontSize: "2rem", fontWeight: 700, color, margin: 0, lineHeight: 1 }}>{done}/{total}</p>
-          <p style={{ fontSize: "0.72rem", color: "#7A746E", margin: "4px 0 0" }}>completed</p>
-        </div>
-      </div>
-
-      <div style={{ background: "#E0DBD3", borderRadius: 4, height: 6, marginBottom: 32, overflow: "hidden" }}>
-        <div style={{ height: "100%", width: `${pct}%`, background: color, borderRadius: 4, transition: "width 0.4s ease" }} />
-      </div>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        {MILESTONES.map((m, i) => (
-          <div key={m.id} style={{
-            background: m.done ? "#fff" : "#fff",
-            border: m.done ? `1px solid ${color}` : "1px solid #E0DBD3",
-            borderLeft: m.done ? `4px solid ${color}` : "4px solid #E0DBD3",
-            borderRadius: 4,
-            padding: "18px 22px",
-            display: "flex",
-            alignItems: "flex-start",
-            gap: 16,
-            opacity: m.done ? 1 : 0.7,
-          }}>
-            <div style={{
-              width: 28,
-              height: 28,
-              borderRadius: "50%",
-              background: m.done ? color : "#E0DBD3",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-              color: "#fff",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-            }}>
-              {m.done ? "✓" : i + 1}
-            </div>
-            <div>
-              <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>{m.label}</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{m.description}</p>
-              {m.done && (
-                <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "8px 0 0", letterSpacing: "0.05em" }}>COMPLETE</p>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function PlaceholderTab({ label, color }: { label: string; color: string }) {
   return (
@@ -359,155 +245,173 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
 
         {/* ── MILESTONES ── */}
         {activeTab === "milestones" && (
-          <MilestoneTracker color={color} />
+          <MilestoneTracker slug={slug} color={color} />
         )}
 
         {/* ── BRAND ASSETS ── */}
         {activeTab === "brand" && (
-          POSITIONING.headline ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Who You're For & How You're Different</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Positioning</h2>
+          <div>
+            {POSITIONING.headline ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Who You're For & How You're Different</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Positioning</h2>
 
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
-                <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
+                  <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
+                </div>
+
+                {POSITIONING.differentiators.length > 0 && (
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>What makes you different</p>
+                    {POSITIONING.differentiators.map((d, i) => (
+                      <div key={i} style={{ display: "flex", gap: 12, marginBottom: 10 }}>
+                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{d}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {POSITIONING.audiences.length > 0 && (
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
+                    {POSITIONING.audiences.map((a, i) => (
+                      <div key={i} style={{ marginBottom: 16 }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 4px" }}>{a.label}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {MESSAGING.length > 0 && (
+                  <>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
+                    {MESSAGING.map((m, i) => (
+                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                        <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
+                      </div>
+                    ))}
+                  </>
+                )}
               </div>
-
-              {POSITIONING.differentiators.length > 0 && (
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>What makes you different</p>
-                  {POSITIONING.differentiators.map((d, i) => (
-                    <div key={i} style={{ display: "flex", gap: 12, marginBottom: 10 }}>
-                      <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{d}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {POSITIONING.audiences.length > 0 && (
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
-                  {POSITIONING.audiences.map((a, i) => (
-                    <div key={i} style={{ marginBottom: 16 }}>
-                      <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 4px" }}>{a.label}</p>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {MESSAGING.length > 0 && (
-                <>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
-                  {MESSAGING.map((m, i) => (
-                    <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
-                      <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
-                    </div>
-                  ))}
-                </>
-              )}
-            </div>
-          ) : <PlaceholderTab label="Positioning" color={color} />
+            ) : <PlaceholderTab label="Positioning" color={color} />}
+            <CommentBox clientName={name} tabName="Brand Assets" slug={slug} />
+          </div>
         )}
 
         {/* ── HEADLINES ── */}
         {activeTab === "headlines" && (
-          HEADLINES.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn Headline Options</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Headlines</h2>
-              {HEADLINES.map((h, i) => (
-                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{h.label}</p>
-                  <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
-                </div>
-              ))}
-            </div>
-          ) : <PlaceholderTab label="Headlines" color={color} />
+          <div>
+            {HEADLINES.length > 0 ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn Headline Options</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Headlines</h2>
+                {HEADLINES.map((h, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
+                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{h.label}</p>
+                    <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
+                  </div>
+                ))}
+              </div>
+            ) : <PlaceholderTab label="Headlines" color={color} />}
+            <CommentBox clientName={name} tabName="Headlines" slug={slug} />
+          </div>
         )}
 
         {/* ── ABOUT ── */}
         {activeTab === "about" && (
-          ABOUT_VERSIONS.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn About Section</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>About Section</h2>
-              {ABOUT_VERSIONS.map((v, i) => (
-                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{v.label}</p>
-                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
-                  <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
-                </div>
-              ))}
-            </div>
-          ) : <PlaceholderTab label="About Section" color={color} />
+          <div>
+            {ABOUT_VERSIONS.length > 0 ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn About Section</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>About Section</h2>
+                {ABOUT_VERSIONS.map((v, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
+                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{v.label}</p>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
+                    <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
+                  </div>
+                ))}
+              </div>
+            ) : <PlaceholderTab label="About Section" color={color} />}
+            <CommentBox clientName={name} tabName="About Section" slug={slug} />
+          </div>
         )}
 
         {/* ── CONTENT IDEAS ── */}
         {activeTab === "content" && (
-          CONTENT_IDEAS.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Content Strategy</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-              {CONTENT_IDEAS.map((idea, i) => (
-                <div key={i} style={{ background: idea.priority ? "#f0f7ed" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 12 }}>
-                  <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.5 }}>{idea.hook}</p>
-                  <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>
-                </div>
-              ))}
-            </div>
-          ) : <PlaceholderTab label="Content Ideas" color={color} />
+          <div>
+            {CONTENT_IDEAS.length > 0 ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Content Strategy</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+                {CONTENT_IDEAS.map((idea, i) => (
+                  <div key={i} style={{ background: idea.priority ? "#f0f7ed" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 12 }}>
+                    <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.5 }}>{idea.hook}</p>
+                    <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>
+                  </div>
+                ))}
+              </div>
+            ) : <PlaceholderTab label="Content Ideas" color={color} />}
+            <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
+          </div>
         )}
 
         {/* ── RECOMMENDATIONS ── */}
         {activeTab === "recommendations" && (
-          RECOMMENDATIONS.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>From Ben</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
-              {RECOMMENDATIONS.map((r, i) => (
-                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
-                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{r.body}</p>
-                </div>
-              ))}
-            </div>
-          ) : <PlaceholderTab label="Ben's Recommendations" color={color} />
+          <div>
+            {RECOMMENDATIONS.length > 0 ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>From Ben</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
+                {RECOMMENDATIONS.map((r, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
+                    <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{r.body}</p>
+                  </div>
+                ))}
+              </div>
+            ) : <PlaceholderTab label="Ben's Recommendations" color={color} />}
+            <CommentBox clientName={name} tabName="Recommendations" slug={slug} />
+          </div>
         )}
 
         {/* ── GOALS ── */}
         {activeTab === "goals" && (
-          GOALS.short.length > 0 || GOALS.long.length > 0 ? (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Where We're Headed</p>
-              <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Goals</h2>
+          <div>
+            {GOALS.short.length > 0 || GOALS.long.length > 0 ? (
+              <div>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Where We're Headed</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Goals</h2>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Short-term</p>
-                  {GOALS.short.map((g, i) => (
-                    <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                      <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                    </div>
-                  ))}
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Long-term</p>
-                  {GOALS.long.map((g, i) => (
-                    <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                      <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                    </div>
-                  ))}
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Short-term</p>
+                    {GOALS.short.map((g, i) => (
+                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Long-term</p>
+                    {GOALS.long.map((g, i) => (
+                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ) : <PlaceholderTab label="Goals" color={color} />
+            ) : <PlaceholderTab label="Goals" color={color} />}
+            <CommentBox clientName={name} tabName="Goals" slug={slug} />
+          </div>
         )}
 
       </div>

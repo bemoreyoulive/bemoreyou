@@ -5,6 +5,9 @@ import ClientTodoList from "@/components/ClientTodoList";
 import EmailOptIn from "@/components/EmailOptIn";
 import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
+import MilestoneTracker from "@/components/MilestoneTracker";
+import DashboardFooter from "@/components/DashboardFooter";
+import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
 const ASB_NEXT_MOVE = "Post the Martin Lewis wedding speech draft this week. You've written it, you've had the feedback — now post it and move on. Set the 30-minute timer. That's the rule.";
@@ -24,16 +27,6 @@ const asbTodos = [
   { id: "w5", text: "Website: Update copyright year to 2026", owner: "Andy" },
 ];
 
-const asbMilestones = [
-  { id: "m1", label: "Blueprint complete", description: "90-minute deep dive done. Ben has a full picture of your experience, values, stories, and where you're headed.", done: true },
-  { id: "m2", label: "Positioning statement finalised", description: "You have a clear, specific positioning that reflects who you are and what you do for SME owners.", done: true },
-  { id: "m3", label: "LinkedIn headline updated", description: "New headline live on your profile — the one that does the positioning work.", done: false },
-  { id: "m4", label: "LinkedIn About section updated", description: "Final version live — the one that sounds like you and opens the door to the right conversations.", done: false },
-  { id: "m5", label: "First aligned post published", description: "Your first piece of content written in your own voice, in the new direction — not a Friday Finance concept post.", done: false },
-  { id: "m6", label: "First 'that's exactly me' DM received", description: "Someone has reached out off the back of your content saying you described their situation perfectly.", done: false },
-  { id: "m7", label: "First inbound enquiry from content", description: "A lead has come in who found you through your personal brand — not a referral, not a warm intro.", done: false },
-  { id: "m8", label: "Consistent posting rhythm established", description: "2 posts per week for 4 consecutive weeks. The habit is real, not forced.", done: false },
-];
 
 const asbTabs = [
   { id: "home", label: "Home" },
@@ -48,10 +41,6 @@ const asbTabs = [
 
 export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
-
-  const done = asbMilestones.filter(m => m.done).length;
-  const total = asbMilestones.length;
-  const pct = Math.round((done / total) * 100);
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
@@ -135,40 +124,13 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 </ul>
               </div>
             </div>
+            <DashboardFooter clientName="Andy Scott Barrett" tabName="Home" slug={slug} />
           </div>
         )}
 
         {/* ── MILESTONES ── */}
         {activeTab === "milestones" && (
-          <div>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 4px" }}>Your Journey</p>
-                <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: 0, letterSpacing: "-0.02em" }}>Milestones</h2>
-              </div>
-              <div style={{ textAlign: "right" }}>
-                <p style={{ fontSize: "2rem", fontWeight: 700, color: ASB_COLOR, margin: 0, lineHeight: 1 }}>{done}/{total}</p>
-                <p style={{ fontSize: "0.72rem", color: "#7A746E", margin: "4px 0 0" }}>completed</p>
-              </div>
-            </div>
-            <div style={{ background: "#E0DBD3", borderRadius: 4, height: 6, marginBottom: 32, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: `${pct}%`, background: ASB_COLOR, borderRadius: 4, transition: "width 0.4s ease" }} />
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {asbMilestones.map((m, i) => (
-                <div key={m.id} style={{ background: "#fff", border: m.done ? `1px solid ${ASB_COLOR}` : "1px solid #E0DBD3", borderLeft: m.done ? `4px solid ${ASB_COLOR}` : "4px solid #E0DBD3", borderRadius: 4, padding: "18px 22px", display: "flex", alignItems: "flex-start", gap: 16, opacity: m.done ? 1 : 0.7 }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: m.done ? ASB_COLOR : "#E0DBD3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#fff", fontSize: "0.75rem", fontWeight: 700 }}>
-                    {m.done ? "✓" : i + 1}
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>{m.label}</p>
-                    <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{m.description}</p>
-                    {m.done && <p style={{ fontSize: "0.72rem", fontWeight: 700, color: ASB_COLOR, margin: "8px 0 0", letterSpacing: "0.05em" }}>COMPLETE</p>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <MilestoneTracker slug={slug} color={ASB_COLOR} />
         )}
 
         {/* ── POSITIONING ── */}
@@ -238,6 +200,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "0.8rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 6px" }}>Ben's take</p>
               <p style={{ fontSize: "0.85rem", color: "#3a6048", lineHeight: 1.7, margin: 0 }}>Your positioning is actually very clear once you say it out loud. The challenge isn't a lack of differentiation — it's that you've been underselling it across every touchpoint. The work we're doing now is closing that gap: making sure what people find online matches the version of you they'd actually meet.</p>
             </div>
+            <CommentBox clientName="Andy Scott Barrett" tabName="Positioning" slug={slug} />
           </div>
         )}
 
@@ -295,6 +258,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               </div>
               <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>Session 3 decision — Banner Option 1, flipped so "Turning your numbers into decisions, not just reports" leads as the strongest hook. Copy ready to paste into LinkedIn.</p>
             </div>
+            <CommentBox clientName="Andy Scott Barrett" tabName="Headlines" slug={slug} />
           </div>
         )}
 
@@ -337,6 +301,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 <strong style={{ color: "#1C1C1C" }}>To upload:</strong> Copy the text above. On LinkedIn, go to your profile → click the pencil icon on your intro → scroll to About → paste. Remove the 👉 emoji if it doesn't render cleanly on mobile. Check character count in LinkedIn's editor — should sit comfortably within the 2,600 limit.
               </p>
             </div>
+            <CommentBox clientName="Andy Scott Barrett" tabName="About Section" slug={slug} />
           </div>
         )}
 
@@ -439,6 +404,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px", marginTop: 8 }}>
               <p style={{ fontSize: "0.83rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Weeks 5–12 content ideas are in development and will be added after Session 4. The first four weeks are enough to establish the rhythm and prove the model.</p>
             </div>
+            <CommentBox clientName="Andy Scott Barrett" tabName="Content Ideas" slug={slug} />
           </div>
         )}
 
@@ -495,6 +461,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 </div>
               </div>
             ))}
+            <CommentBox clientName="Andy Scott Barrett" tabName="Ben's Recommendations" slug={slug} />
           </div>
         )}
 
@@ -556,6 +523,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.83rem", color: "#3a6048", lineHeight: 1.6, margin: 0 }}><strong>What he's NOT expecting:</strong> a quick fix. He understands it's a slow build. He just wants to know it's moving in the right direction. That's a realistic, achievable benchmark — and it's the right one to hold.</p>
               </div>
             </div>
+            <CommentBox clientName="Andy Scott Barrett" tabName="Goals" slug={slug} />
           </div>
         )}
 
