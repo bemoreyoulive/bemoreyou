@@ -56,6 +56,7 @@ export interface ClientConfig {
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
+  { id: "sessions", label: "Sessions" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
   { id: "headlines", label: "Headlines" },
@@ -121,6 +122,33 @@ const MESSAGING: { title: string; body: string }[] = [
 
 const RECOMMENDATIONS: { title: string; body: string }[] = [
   // { title: "1. First recommendation", body: "Detail and reasoning" },
+];
+
+// ─── SESSIONS ────────────────────────────────────────────────────────────────
+// After each session, paste the call transcript into Claude and ask it to
+// update this file. Claude will add a new entry here with a 200–300 word
+// summary covering: what was achieved, key insights, decisions made, and
+// what was agreed for next time.
+
+const SESSIONS: {
+  number: number;
+  date: string;
+  title: string;
+  summary: string;
+  insights: string[];
+  agreed: string[];
+  nextSession: string;
+}[] = [
+  // Sessions added here after each call. Example:
+  // {
+  //   number: 1,
+  //   date: "1 April 2026",
+  //   title: "Foundations — Who You Are and Who You're For",
+  //   summary: "We spent the first session getting under the surface...",
+  //   insights: ["You lead with logic before emotion", "Your ICP is clearer than you think"],
+  //   agreed: ["Draft LinkedIn headline using problem-first framing", "Send Ben your current About section"],
+  //   nextSession: "15 April 2026",
+  // },
 ];
 
 // ─── GOALS ───────────────────────────────────────────────────────────────────
@@ -376,6 +404,82 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
               </div>
             ) : <PlaceholderTab label="Ben's Recommendations" color={color} />}
             <CommentBox clientName={name} tabName="Recommendations" slug={slug} />
+          </div>
+        )}
+
+        {/* ── SESSIONS ── */}
+        {activeTab === "sessions" && (
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, margin: "0 0 6px" }}>Your Journey</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 36px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
+
+            {SESSIONS.length === 0 ? (
+              <PlaceholderTab label="Sessions" color={color} />
+            ) : (
+              <div style={{ position: "relative" }}>
+                {/* Timeline line */}
+                <div style={{ position: "absolute", left: 19, top: 24, bottom: 24, width: 2, background: "#E0DBD3", zIndex: 0 }} />
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+                  {[...SESSIONS].reverse().map((session, i) => (
+                    <div key={session.number} style={{ display: "flex", gap: 28, position: "relative" }}>
+                      {/* Number dot */}
+                      <div style={{ flexShrink: 0, width: 40, height: 40, borderRadius: "50%", background: i === 0 ? color : "#fff", border: `2px solid ${i === 0 ? color : "#E0DBD3"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.78rem", fontWeight: 700, color: i === 0 ? "#fff" : "#7A746E", zIndex: 1 }}>
+                        {session.number}
+                      </div>
+
+                      <div style={{ flex: 1, background: "#fff", border: "1px solid #E0DBD3", borderLeft: i === 0 ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 4 }}>
+                        {/* Header */}
+                        <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 16, gap: 12 }}>
+                          <div>
+                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 4px" }}>Session {session.number} · {session.date}</p>
+                            <h3 style={{ fontSize: "1.05rem", fontWeight: 600, color: "#1C1C1C", margin: 0, letterSpacing: "-0.01em", lineHeight: 1.3 }}>{session.title}</h3>
+                          </div>
+                          {i === 0 && (
+                            <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20, background: `${color}18`, color, border: `1px solid ${color}33` }}>Latest</span>
+                          )}
+                        </div>
+
+                        {/* Summary */}
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 20px" }}>{session.summary}</p>
+
+                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                          {/* Key insights */}
+                          <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "14px 16px" }}>
+                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Key insights</p>
+                            {session.insights.map((insight, j) => (
+                              <div key={j} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                                <span style={{ color, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem" }}>→</span>
+                                <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{insight}</p>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Agreed actions */}
+                          <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "14px 16px" }}>
+                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>What was agreed</p>
+                            {session.agreed.map((action, j) => (
+                              <div key={j} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+                                <span style={{ color: "#2e7d4f", fontWeight: 700, flexShrink: 0, fontSize: "0.8rem" }}>✓</span>
+                                <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{action}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Next session */}
+                        <div style={{ borderTop: "1px solid #E0DBD3", paddingTop: 12, display: "flex", alignItems: "center", gap: 8 }}>
+                          <p style={{ fontSize: "0.72rem", color: "#9CA3AF", margin: 0 }}>Next session:</p>
+                          <p style={{ fontSize: "0.72rem", fontWeight: 600, color: "#3D3935", margin: 0 }}>{session.nextSession}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            <CommentBox clientName={name} tabName="Sessions" slug={slug} />
           </div>
         )}
 
