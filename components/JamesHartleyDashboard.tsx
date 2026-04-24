@@ -14,8 +14,8 @@ const COLOR = "#7A746E";
 const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
-const SESSION_LABEL = "Session 13 · March 2026";
-const NEXT_MOVE = "Write your power statements. You've been collecting real client feedback — use their words, not yours. Start with one sentence: what they had before, what they have now. That's your foundation.";
+const SESSION_LABEL = "Session 15 · 29 April 2026";
+const NEXT_MOVE = "Write your power statements before the 29 April session. Use your clients' actual words — 'the spaghetti is unravelling', 'progress I never expected to make'. Three sentences: what they had before, what changed, what they have now. Bring a draft and we'll sharpen it together.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -73,6 +73,26 @@ const SESSIONS: {
   agreed: string[];
   nextSession: string;
 }[] = [
+  {
+    number: 14,
+    date: "Late March 2026 · London (in-person)",
+    title: "Duality, Recognition and Redefining Success",
+    summary: "First face-to-face session in London. The conversation was less structured than usual — deliberately so. James was reflective, candid, and honest about the duality he's been living: optimistic by default but with a real shadow side that surfaces when stimulation drops. He talked openly about how compliments and recognition still motivate him — and how that's not a flaw, it's a lever to use intentionally. He's actively redefining what success looks like — measuring quality of conversations, not just income. At the time of meeting: 8 live conversations, 2 potential clients in flight. We agreed his next move is the power statements (still outstanding), and a follow-up working session was set for 29 April.",
+    insights: [
+      "The duality is the human condition — naming it removes its grip",
+      "Title has historically been linked to self-worth — that's the work he's actively unwinding",
+      "Adrenaline and stimulation are non-negotiable for him — boredom is a trigger, not a state",
+      "Recognition matters — own it, don't apologise for it, channel it into the work",
+      "Redefining success: measure the quality of the conversations, not just the invoices",
+    ],
+    agreed: [
+      "Write the power statements before 29 April — using real client feedback, not assumptions",
+      "Follow through on the 8 live conversations — momentum needs continuity",
+      "Continue posting weekly — keep the rhythm going",
+      "Bring the brand draft to the next session for joint refinement",
+    ],
+    nextSession: "29 April 2026",
+  },
   {
     number: 13,
     date: "3 March 2026",
@@ -153,19 +173,100 @@ const SESSIONS: {
 
 // ─── POSITIONING ──────────────────────────────────────────────────────────────
 
-const POSITIONING = {
-  headline: "",
-  differentiators: [],
-  audiences: [],
+const POSITIONING: {
+  headline: string;
+  subline: string;
+  differentiators: { title: string; body: string }[];
+  audiences: { label: string; body: string }[];
+  themes: string[];
+} = {
+  headline: "James Hartley helps leaders move from position to purpose — bringing 30 years of global people leadership, the commercial rigour of a board operator, and the human edge of a coach who's lived the transition himself.",
+  subline: "Three delivery vehicles, one voice: Interim & Fractional CPO · Consulting (People, Culture & Transformation) · Executive Coaching.",
+  differentiators: [
+    {
+      title: "30 years inside the room — not theorising from the outside",
+      body: "Zurich, Hong Kong, Tokyo, Paris, Singapore, London. Lived through complexity at scale. Most recently in contention for the top HR role at Swiss Re before going independent.",
+    },
+    {
+      title: "Commercial rigour with a human edge",
+      body: "His own phrase: execution discipline without being stifled by structure, challenge without ego, momentum without the mess. Brings entrepreneurial risk-taking to people decisions where most go conservative.",
+    },
+    {
+      title: "Purpose as a diagnostic, not a slogan",
+      body: "Built 'Our Little Book of Why' for an EMEA HR function — engagement up 30 points, customer satisfaction up 50. Lived proof, not theory. Uses 'why' as a tool in coaching too.",
+    },
+    {
+      title: "Agile, co-creative, allergic to corporate theatre",
+      body: "Goes where the energy is. Iterates. Doesn't wait for perfect. Co-creates with clients rather than presenting polished decks at them.",
+    },
+    {
+      title: "Lived experience of identity transition",
+      body: "Has been through the title-to-purpose shift himself — not as theory, but as life. Coaches others through similar inflection points with credibility, warmth, and edge.",
+    },
+    {
+      title: "Founder credibility through skin in the game",
+      body: "Co-owns the London Cat Clinic with his husband Javier. Has lived through the highs and lows of having personal money at risk. He understands what founders actually feel.",
+    },
+  ],
+  audiences: [
+    {
+      label: "CEOs & C-Suite of mid-size organisations",
+      body: "PE-backed, financial services, professional services, start-up to scale-up. Genuine inflection points — new leadership, growth phase, cultural shift. Leaders who already know something isn't working.",
+    },
+    {
+      label: "Senior & emerging leaders at career transitions",
+      body: "People who've tied their identity to a title and found it hollow. High-performers with a confidence or clarity gap. Ambitious but not arrogant. Ready to be challenged.",
+    },
+    {
+      label: "Boards making people decisions that matter",
+      body: "Where the cost of a wrong hire, a delayed transformation, or a misread culture is measured in millions. Where pragmatic risk and proportionate courage are the answer — not another framework.",
+    },
+  ],
+  themes: [
+    "Title is not identity — and the seat you really want is your own",
+    "People risk vs. commercial risk — why organisations get the second right and the first wrong",
+    "Performance vs. performance management — when the process consumes the goal",
+    "Culture change is doing more of what you want to be known for, not running another workshop",
+    "The portfolio career — what it actually takes after 30 years inside one",
+    "From the boardroom: what's not being said",
+  ],
 };
 
 // ─── HEADLINES ────────────────────────────────────────────────────────────────
 
-const HEADLINES: { label: string; text: string; note: string }[] = [];
+const HEADLINES: { label: string; text: string; note: string }[] = [
+  {
+    label: "Current LinkedIn headline",
+    text: "Passionate about purpose. Challenges the status quo. Brings energy, empathy & results. Chief People Officer | Executive Coach & Advisor | Culture, Strategy & Transformation Leader | Interim & Fractional Executive",
+    note: "Live as of March 2026. Strong values cues but dense and keyword-heavy — works for search, less for human-first impression. Worth a tighter alternative.",
+  },
+  {
+    label: "Alternative — human-first",
+    text: "Helping leaders move from position to purpose · Interim & Fractional CPO · Executive Coach · 30 years across Zurich, Hong Kong, Tokyo, Paris, London",
+    note: "Leads with the work and the perspective. Geography signals the breadth without listing every credential. Test against the current version for two weeks.",
+  },
+  {
+    label: "Alternative — outcome-led",
+    text: "Bringing commercial rigour and a human edge to people decisions that matter · Interim CPO · Coach · Advisor",
+    note: "More confident framing of the differentiator. Slightly less searchable — better for the people already in your network.",
+  },
+];
 
 // ─── ABOUT SECTION ────────────────────────────────────────────────────────────
 
-const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [];
+const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
+  {
+    label: "Current About section (live on LinkedIn)",
+    text: `I'm a people, culture and transformation leader who's spent 30 years helping organisations get the human side of business right.
+
+After a long corporate career — most recently in senior people leadership at Swiss Re — I went independent to do the work I find most meaningful: stepping in as an interim or fractional Chief People Officer, partnering with leadership teams on culture and transformation, and coaching senior and emerging leaders through career inflection points.
+
+What clients tend to say about working with me: straight-talking, calm clarity, simplifying the complex. I'm motivated by mission. I call out what others won't — with both empathy and edge. I bring execution discipline without being stifled by structure, challenge without ego, momentum without the mess.
+
+If you want someone to nod politely and colour inside the lines, I'm not for you. If you want a partner who'll do the real work — purpose ahead of policy, pragmatism ahead of process — let's talk.`,
+    note: "Strong values-led framing and good calling-out of who you're not for. Next iteration should evolve toward insight → execution → impact and surface more commercial credibility upfront. Will draft three options once power statements are written.",
+  },
+];
 
 // ─── CONTENT IDEAS ────────────────────────────────────────────────────────────
 
@@ -188,6 +289,16 @@ const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [
   {
     hook: "Three years in. Here's what I got wrong about going independent.",
     guidance: "A reflective post on what you've learned since leaving corporate — but not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. One thing that looked like progress but wasn't. The best version of this is honest and specific. 'I spent the first year waiting for the work to find me. That was a mistake.' You have the material — use it.",
+    priority: false,
+  },
+  {
+    hook: "If you want a more courageous culture, you have to do things that require courage.",
+    guidance: "You said this on the Powered by People podcast and it's one of your sharpest lines. Build a post around it. Most culture programmes are about explaining the new behaviour. The faster route is doing it visibly — leaders go first. Use a short example (you have plenty: the Swiss Re EMEA story, the offsite where you let the team push back, the moment you stopped explaining and started modelling). End with: what's one thing you keep talking about that you haven't actually done yet?",
+    priority: false,
+  },
+  {
+    hook: "Metrics without purpose are meaningless. Here's how I learned that the hard way.",
+    guidance: "From the podcast: the EMEA HR function story — engagement up 30 points, customer satisfaction up 50, after you built 'Our Little Book of Why'. The numbers came after the meaning, not the other way round. Tell that story tightly. The post writes itself when you frame it as: 'I used to lead with the dashboard. Now I lead with the why.' Real proof, your voice, lands without sounding like LinkedIn fluff.",
     priority: false,
   },
   {
@@ -233,16 +344,6 @@ const GOALS = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-
-function PlaceholderTab({ label }: { label: string }) {
-  return (
-    <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 4, padding: "48px 36px", textAlign: "center" }}>
-      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: COLOR, margin: "0 0 12px" }}>{label}</p>
-      <p style={{ fontSize: "1rem", color: "#7A746E", margin: "0 0 8px" }}>Content coming after your next session with Ben.</p>
-      <p style={{ fontSize: "0.82rem", color: "#B0A89E", margin: 0 }}>Check back here once Ben has updated your dashboard.</p>
-    </div>
-  );
-}
 
 function IdeaCard({ idea, index, slug }: { idea: { hook: string; guidance: string; priority: boolean }; index: number; slug: string }) {
   const [used, setUsed] = useState(false);
@@ -363,20 +464,20 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
 
             {/* Latest session recap */}
             <div style={{ background: "#f5f3f0", border: `1px solid #d9d4ce`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
-              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>13</div>
+              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>14</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 13 — 3 March 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Returned from holiday with good energy after the London Cat Clinic transaction completed. Focused on converting conversations into content — the three-step chain: have the conversation, extract the insight, write the post. James had reached out to 19 network contacts and 19 warm LinkedIn connections since February. Contact tracker is working. The gap is converting those conversations into clients and content consistently. Next session TBC.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 14 — Late March 2026 · London (in-person)</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>First face-to-face. Reflective, candid, honest about the duality — optimistic by default but with a real shadow side when stimulation drops. We talked about title, recognition, and redefining success around the quality of conversations rather than the invoice line. 8 live conversations, 2 potential clients in flight. Power statements remain the priority before our next working session on 29 April.</p>
               </div>
             </div>
 
             {/* Stat cards */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "13", sub: "Since July 2025" },
-                { label: "Power statements", value: "Not yet", sub: "Priority — do this first" },
-                { label: "Posting cadence", value: "Weekly", sub: "Keep it up" },
-                { label: "BD contacts live", value: "38+", sub: "Network + LinkedIn outreach" },
+                { label: "Sessions done", value: "14", sub: "Since July 2025" },
+                { label: "Next session", value: "29 Apr", sub: "Working session — bring drafts" },
+                { label: "Live conversations", value: "8", sub: "2 potential clients" },
+                { label: "Power statements", value: "Outstanding", sub: "Priority — do before 29 Apr" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -455,7 +556,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
             <div style={{ position: "relative" }}>
               <div style={{ position: "absolute", left: 19, top: 24, bottom: 24, width: 2, background: "#E0DBD3", zIndex: 0 }} />
               <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-                {[...SESSIONS].reverse().map((session, i) => (
+                {SESSIONS.map((session, i) => (
                   <div key={session.number} style={{ display: "flex", gap: 28, position: "relative" }}>
                     <div style={{ flexShrink: 0, width: 40, height: 40, borderRadius: "50%", background: i === 0 ? COLOR : "#fff", border: `2px solid ${i === 0 ? COLOR : "#E0DBD3"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.78rem", fontWeight: 700, color: i === 0 ? "#fff" : "#7A746E", zIndex: 1 }}>
                       {session.number}
@@ -512,7 +613,91 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
         {/* ── BRAND ASSETS ── */}
         {activeTab === "brand" && (
           <div>
-            <PlaceholderTab label="Positioning" />
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: COLOR, marginBottom: 8 }}>Who you are, on the page</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Your positioning, headline, About section, differentiators, and target audiences — drawn directly from your sessions, your LinkedIn, and the work we've done together.</p>
+
+            {/* Positioning banner */}
+            <div style={{ background: COLOR, color: "#fff", borderRadius: 8, padding: "32px 36px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", opacity: 0.7, margin: "0 0 14px" }}>Positioning Statement</p>
+              <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, lineHeight: 1.5, margin: "0 0 14px", letterSpacing: "-0.01em" }}>{POSITIONING.headline}</p>
+              <p style={{ fontSize: "0.9rem", opacity: 0.85, lineHeight: 1.6, margin: 0 }}>{POSITIONING.subline}</p>
+            </div>
+
+            {/* LinkedIn headline options */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>LinkedIn Headline</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {HEADLINES.map((h, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: i === 0 ? `3px solid ${COLOR}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 10 }}>
+                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: COLOR, margin: 0 }}>{h.label}</p>
+                      {i === 0 && <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 10px", borderRadius: 20, background: `${COLOR}18`, color: COLOR, border: `1px solid ${COLOR}33` }}>Live</span>}
+                    </div>
+                    <p style={{ fontSize: "0.92rem", color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.55, fontWeight: 500 }}>{h.text}</p>
+                    <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: 0, lineHeight: 1.6, fontStyle: "italic" }}>{h.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* About section */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>LinkedIn About Section</p>
+              {ABOUT_VERSIONS.map((a, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${COLOR}`, borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: COLOR, margin: "0 0 14px" }}>{a.label}</p>
+                  <p style={{ fontSize: "0.9rem", color: "#1C1C1C", lineHeight: 1.8, margin: "0 0 14px", whiteSpace: "pre-wrap" }}>{a.text}</p>
+                  <div style={{ borderTop: "1px solid #E0DBD3", paddingTop: 12 }}>
+                    <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: 0, lineHeight: 1.6, fontStyle: "italic" }}>{a.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Differentiators */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>What makes you different</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                {POSITIONING.differentiators.map((d, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 22px" }}>
+                    <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.4 }}>{d.title}</p>
+                    <p style={{ fontSize: "0.85rem", color: "#3D3935", margin: 0, lineHeight: 1.65 }}>{d.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Audiences */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>Who you're for</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {POSITIONING.audiences.map((a, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", display: "flex", gap: 18, alignItems: "flex-start" }}>
+                    <div style={{ flexShrink: 0, fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 20, background: `${COLOR}18`, color: COLOR, border: `1px solid ${COLOR}33` }}>0{i + 1}</div>
+                    <div>
+                      <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>{a.label}</p>
+                      <p style={{ fontSize: "0.85rem", color: "#3D3935", margin: 0, lineHeight: 1.65 }}>{a.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Messaging themes */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>Messaging themes to mine</p>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "22px 26px" }}>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
+                  {POSITIONING.themes.map((t, i) => (
+                    <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", paddingLeft: 18, position: "relative", lineHeight: 1.6 }}>
+                      <span style={{ position: "absolute", left: 0, color: COLOR, fontWeight: 700 }}>→</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
             <CommentBox clientName={NAME} tabName="Brand Assets" slug={slug} />
           </div>
         )}
