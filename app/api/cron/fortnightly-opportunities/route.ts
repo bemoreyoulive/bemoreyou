@@ -52,10 +52,20 @@ Current momentum: Social media growth in early stages. First post generating eng
   `.trim(),
 };
 
+function isFortnightlyWeek(): boolean {
+  // Week number since Unix epoch, mod 2 — only runs on even weeks
+  const weeksSinceEpoch = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000));
+  return weeksSinceEpoch % 2 === 0;
+}
+
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  if (!isFortnightlyWeek()) {
+    return NextResponse.json({ ok: true, skipped: "off-week" });
   }
 
   const supabase = createServiceClient();
