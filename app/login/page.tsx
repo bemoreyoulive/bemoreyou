@@ -129,6 +129,10 @@ function LoginForm() {
               We'll email you a magic link — no password needed.<br />
               <span style={{ color: "#E8521C" }}>If you don't see it, check your junk or spam folder.</span>
             </p>
+
+            <p style={{ fontSize: "0.72rem", color: "#B0A89E", marginTop: 16, lineHeight: 1.6, textAlign: "center" }}>
+              For the best experience, access your portal<br />on a computer or laptop — not your phone.
+            </p>
           </>
         )}
       </div>

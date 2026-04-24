@@ -62,6 +62,10 @@ export default function Home() {
         </div>
       </div>
 
+      <p style={{marginTop: 40, fontSize: "0.72rem", color: "#5A534E", lineHeight: 1.6, textAlign: "center"}}>
+        For the best experience, access your portal<br />on a computer or laptop — not your phone.
+      </p>
+
       <p style={{position: "absolute", bottom: 32, fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3D3935"}}>
         bemoreyoulive.com
       </p>
