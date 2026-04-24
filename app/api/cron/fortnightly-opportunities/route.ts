@@ -186,19 +186,28 @@ Write a fortnightly opportunity email with two parts:
 
 1. A short personalised note (3–5 sentences max). It should:
    - Reference where they genuinely are right now based on their context above
-   - Feel like it came from someone who has been paying attention
-   - Be direct, warm, and coaching in tone — not admin, not generic
-   - NOT start with "Hi" or "Hey" — open mid-thought or with a direct observation
+   - Feel like it came from someone who has been paying attention, not a template
+   - Open mid-thought or with a direct observation — never "Hi" or "Hey" or "I hope this finds you well"
+   - Be warm, informal, a bit jovial — like a smart mate who also happens to be their coach
+   - Short punchy sentences mixed with longer ones
+   - Direct — tell them what to do, don't ask how they're feeling or request permission
 
-2. Three specific, actionable opportunity prompts tailored to this client right now. Each should be one sentence. Choose from or riff on these angles (pick the most relevant, not all three):
-   - Anyone you should follow up with this week?
-   - Any conversation worth turning into content?
-   - Any podcast, speaking, or collaboration opportunity worth chasing right now?
-   - Any warm lead going cold that needs a nudge?
-   - Any relationship you've been meaning to invest in?
-   - Any platform or community you should be more visible in?
+2. Three specific, actionable prompts tailored to this client right now. Each should be one sentence — casual, direct, specific to them. Choose the most relevant angles:
+   - A warm prospect or lead that needs a follow-up nudge
+   - A conversation or interaction worth turning into a LinkedIn post
+   - A podcast, speaking gig, or collaboration worth chasing
+   - A relationship they should be investing in right now
+   - A community or platform where they should be more visible
 
-Tone: Ben's voice. Direct, no fluff, no corporate language, no motivational poster energy. Sounds like a smart coach who knows their work and their client.
+Tone rules (Ben's voice):
+👉 British, warm, direct, a bit cheeky
+👉 Conversational — like texting a mate who happens to be brilliant at this stuff
+👉 Specific and real — no vague motivational bollocks
+👉 Short sentences that breathe. Not everything needs joining up.
+👉 Ends with direction, not a question or a bow
+👉 Never: "Not X. Not Y. Just Z." sentence structure — sounds like AI
+👉 Never: corporate phrases like "leverage", "optimise", "aspirational", "surface goal"
+👉 Never: welfare-checking phrases like "let me know if anything feels off" — just tell them what to do
 
 Return your response as JSON in this exact format:
 {
@@ -227,11 +236,11 @@ async function generateOpportunities(prompt: string): Promise<{ note: string; op
 
 function subjectLine(firstName: string): string {
   const subjects = [
-    `${firstName} — fortnightly check-in from Ben`,
-    `Two weeks in. Where are you at, ${firstName}?`,
-    `${firstName}, a few things worth your attention`,
-    `Fortnightly nudge — what are you chasing this week, ${firstName}?`,
-    `${firstName} — opportunities worth thinking about right now`,
+    `${firstName} — quick one from Ben`,
+    `Right ${firstName}, a few things worth your attention`,
+    `${firstName}, here's what I'm thinking this fortnight`,
+    `Fortnightly check-in — ${firstName}, let's have a look`,
+    `${firstName} — Ben here. Worth two minutes of your time.`,
   ];
   const index = Math.floor(Date.now() / (14 * 24 * 60 * 60 * 1000)) % subjects.length;
   return subjects[index];
@@ -287,14 +296,14 @@ function buildEmail(
 
     <!-- Reflective prompts -->
     <div style="background: #1a1916; border-radius: 6px; padding: 24px 28px; margin-bottom: 28px;">
-      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 8px;">Worth sitting with</p>
+      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 8px;">Also worth a thought</p>
       <p style="font-size: 15px; color: rgba(255,255,255,0.9); line-height: 1.75; margin: 0 0 8px;">
-        Anyone you've been meaning to follow up with but haven't?<br>
-        Any conversation from the last two weeks that's worth turning into a post?<br>
-        Any opportunity that's been sitting on your radar — podcast, event, collaboration?
+        Anyone you've been meaning to follow up with but keep putting off?<br>
+        Any conversation from the last couple of weeks that'd make a decent post?<br>
+        Any opportunity you've been sitting on — podcast, event, collaboration — that just needs a yes?
       </p>
       <p style="font-size: 13px; color: rgba(255,255,255,0.45); margin: 12px 0 0; line-height: 1.6;">
-        These are the things that move the needle. They rarely feel urgent. That's why most people don't do them.
+        These are the things that actually move things forward. They never feel urgent. That's the trap.
       </p>
     </div>
 

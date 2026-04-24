@@ -90,13 +90,13 @@ function getWeekNumber() {
 }
 
 const SUBJECTS = [
-  (name: string) => `Right then, ${name} — what are we doing this week?`,
-  (name: string) => `${name}, your Monday nudge has arrived 👀`,
-  (name: string) => `New week. Fresh start. No excuses, ${name}.`,
+  (name: string) => `Right then ${name}, Monday's here`,
+  (name: string) => `${name} — your list is waiting`,
+  (name: string) => `Morning ${name}. Let's have a look at where we're at`,
   (name: string) => `${name} — Ben here. Open this.`,
-  (name: string) => `Your to-do list isn't going to tick itself, ${name}`,
-  (name: string) => `Monday check-in — how's it looking, ${name}?`,
-  (name: string) => `This is your sign, ${name}. Open the dashboard.`,
+  (name: string) => `That to-do list won't tick itself, ${name}`,
+  (name: string) => `New week. Same list. Let's fix that, ${name}.`,
+  (name: string) => `${name}, quick one from Ben`,
 ];
 
 function subjectLine(firstName: string) {
@@ -147,11 +147,11 @@ function buildEmail(
     </div>`;
 
   const greetings = [
-    `Right, let's go.`,
-    `New week. Clean slate.`,
-    `Monday again. Already.`,
-    `Here we go again.`,
-    `The week isn't going to build itself.`,
+    `Alright ${firstName}, Monday's here whether you like it or not.`,
+    `Morning ${firstName}. Let's see where we're at.`,
+    `${firstName} — it's Monday. You know what that means.`,
+    `Right ${firstName}, another week. Let's make it count.`,
+    `Morning ${firstName}. Quick one from me before the week kicks off.`,
   ];
   const greeting = greetings[getWeekNumber() % greetings.length];
 
@@ -173,10 +173,10 @@ function buildEmail(
     <!-- Greeting -->
     <div style="background: #fff; border: 1px solid #E0DBD3; border-radius: 4px; padding: 28px 32px; margin-bottom: 24px;">
       <p style="font-size: 22px; font-family: Georgia, serif; font-weight: 400; color: #1C1C1C; margin: 0 0 14px; line-height: 1.3;">
-        Morning, ${firstName}. ${greeting}
+        ${greeting}
       </p>
       <p style="font-size: 15px; color: #3D3935; line-height: 1.7; margin: 0;">
-        Your to-do list is below. Tick off what's done, look at what's still sitting there, and be honest with yourself about why. That's genuinely half the work.
+        Your list is below. Have a proper look at what's still sitting there — and be honest with yourself about why. That's half the job right there.
       </p>
     </div>
 
@@ -185,12 +185,12 @@ function buildEmail(
 
     <!-- Milestones & Signals nudge -->
     <div style="background: #1a1916; border-radius: 6px; padding: 24px 28px; margin-bottom: 28px;">
-      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 8px;">Two minutes. That's all this takes.</p>
+      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 8px;">Two minutes. That's genuinely all this takes.</p>
       <p style="font-size: 16px; font-weight: 600; color: #fff; margin: 0 0 10px; line-height: 1.4;">
-        Have a look at your Milestones &amp; Signals tab.
+        Jump on your Milestones &amp; Signals tab while you're here.
       </p>
       <p style="font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0 0 16px;">
-        Anything happened this week that deserves a tick? A DM that came in because of something you posted? Someone who used your exact words back at you? A better enquiry than last month? These things happen and we forget them by Friday — don't let that happen. Log it while it's fresh.
+        Had a DM because of something you posted? Someone use your exact words back at you? A better quality enquiry than normal? These things happen and we forget them by Friday. Tick them off now while they're fresh — they matter more than you think.
       </p>
       <a href="${dashboardUrl}" style="display: inline-block; padding: 11px 22px; background: #E8521C; color: #fff; text-decoration: none; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
         Check Milestones &amp; Signals →
@@ -207,10 +207,10 @@ function buildEmail(
     <!-- Login note -->
     <div style="background: #fff; border: 1px solid #E0DBD3; border-radius: 4px; padding: 20px 24px; margin-bottom: 32px;">
       <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0 0 10px;">
-        If the to-do list looks wrong, <a href="${dashboardUrl}" style="color: #E8521C; text-decoration: none; font-weight: 600;">log in here</a> and tick off what's actually done — Ben can see your progress from his end.
+        List looks wrong? <a href="${dashboardUrl}" style="color: #E8521C; text-decoration: none; font-weight: 600;">Log in and tick off what's done</a> — I can see your progress from my end.
       </p>
       <p style="font-size: 13px; color: #3D3935; line-height: 1.7; margin: 0;">
-        Any login trouble, drop Ben a message on <strong>WhatsApp</strong> or <strong>email</strong> and he'll sort it.
+        Any login bother, just drop me a WhatsApp or an email and I'll sort it.
       </p>
     </div>
 
