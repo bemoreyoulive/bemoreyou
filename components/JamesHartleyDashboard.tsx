@@ -22,8 +22,6 @@ const TABS = [
   { id: "sessions", label: "Sessions" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
-  { id: "headlines", label: "Headlines" },
-  { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
@@ -174,27 +172,27 @@ const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [];
 const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [
   {
     hook: "The thing your board agreed on faster than any people decision this year",
-    guidance: "You observed this in a client's ExCo — a major commercial partnership agreed in one sharp meeting, followed by weeks of performance calibration. Flip it into a post: organisations make bold commercial bets daily but become risk-averse the moment it's a people decision. Why? What's the cost of that gap? End with a question: where are you playing it safe when you should be taking the risk? This is your performance vs. performance process territory — you've already written one great post here, but there's more in this seam.",
-    priority: true,
-  },
-  {
-    hook: "I chased the seat at the table — until I built my own table",
-    guidance: "The title-to-purpose post landed well and has strong resonance. This is a natural extension: what does it feel like to stop measuring success by title, and start measuring it by the kind of work you're doing and the people you're with? Write it from the perspective of someone mid-transition — not someone who has it all figured out. The honesty is what makes it land. End with: what are you still chasing that you might not actually want?",
+    guidance: "You observed this in a client's ExCo — a major commercial partnership agreed in one sharp meeting, followed by weeks of performance calibration. Flip it into a post: organisations make bold commercial bets daily but become risk-averse the moment it's a people decision. Why? What's the cost of that gap? End with a question: where are you playing it safe when you should be taking the risk? You've written one strong post in this territory already (the performance vs. performance process one) — this is the next angle in that seam.",
     priority: true,
   },
   {
     hook: "What I heard in a room this week that nobody's saying out loud",
-    guidance: "Use something from a recent client conversation — one insight, one observation, one thing someone said that made you think. You don't need to name anyone or name the company. 'I was with a leadership team this week...' is enough. The point is to position yourself as someone who's in the room, doing real work, hearing real things. You are the voice for the things your clients can't say publicly. One observation is enough — if one person is thinking it, a hundred others are too.",
+    guidance: "Use something from a recent client conversation — one insight, one observation, one thing someone said that made you think. You don't need to name anyone. 'I was with a leadership team this week...' is enough. The point is to position yourself as someone who's in the room, doing real work, hearing real things. You are the voice for things your clients can't say publicly. One observation is enough — if one person is thinking it, a hundred others are too.",
+    priority: true,
+  },
+  {
+    hook: "I used to hide behind a plant pot to avoid an executive I didn't like. Here's what changed.",
+    guidance: "You mentioned this in your onboarding — literally hiding to avoid difficult conversations early in your career. That's the hook. The post isn't about the hiding — it's about what happened when you stopped. How facing those conversations with confidence unlocked something you didn't expect. This lands both as a leadership story and as a coaching story. It's also very you — specific, self-deprecating, and with a real point underneath it.",
     priority: false,
   },
   {
-    hook: "HR handed me a 60-page handbook. I handed it back.",
-    guidance: "The risk post you wrote about the 25-person business with the watertight-but-culturally-wrong employee handbook is strong territory. Rework it as a sharper, more opinionated piece: the instinct to eliminate every conceivable risk often creates the one risk you didn't anticipate — the cultural one. Keep it punchy. Short paragraphs. Let the contrast do the work. End with: what risk are you managing that's actually costing you more than it's saving?",
+    hook: "Three years in. Here's what I got wrong about going independent.",
+    guidance: "A reflective post on what you've learned since leaving corporate — but not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. One thing that looked like progress but wasn't. The best version of this is honest and specific. 'I spent the first year waiting for the work to find me. That was a mistake.' You have the material — use it.",
     priority: false,
   },
   {
-    hook: "Three years in. Here's what actually moves the needle.",
-    guidance: "A reflective post on what you've learned since going independent — but not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. One thing that looked like progress but wasn't. The best version of this is honest and specific, not inspirational. 'I spent a year building a brand before I picked up the phone to anyone I already knew. That was a mistake.' Something like that. You have the material.",
+    hook: "Nobody's alone in their problems. So why does it feel that way in a boardroom?",
+    guidance: "You said this spontaneously in session 13 — 'no one is alone in their problems' — and it's genuinely good. Build a post around it: the paradox that senior leaders are surrounded by people but often the most isolated when it comes to the real conversations. Connect it to what you actually do — create the conditions where those conversations can happen. End with a question that makes people feel seen.",
     priority: false,
   },
 ];
@@ -361,33 +359,87 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={COLOR} />
-            <NextMoveBox move={NEXT_MOVE} accentColor={COLOR} clientName={NAME} sessionLabel={SESSION_LABEL} />
+            <NextMoveBox move={NEXT_MOVE} accentColor={COLOR} clientName={NAME} sessionLabel={SESSION_LABEL} animateIn />
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 32 }}>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>What this is</h3>
-                <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>A working strategy document — not a polished deck. Everything in here is based on your sessions with Ben. It'll evolve as things move forward. Use it to review, challenge, and track what you're building. If something doesn't feel right, say so.</p>
+            {/* Latest session recap */}
+            <div style={{ background: "#f5f3f0", border: `1px solid #d9d4ce`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
+              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>13</div>
+              <div>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 13 — 3 March 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Returned from holiday with good energy after the London Cat Clinic transaction completed. Focused on converting conversations into content — the three-step chain: have the conversation, extract the insight, write the post. James had reached out to 19 network contacts and 19 warm LinkedIn connections since February. Contact tracker is working. The gap is converting those conversations into clients and content consistently. Next session TBC.</p>
               </div>
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>What's in here</h3>
-                <ul style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.8, margin: 0, paddingLeft: 16 }}>
-                  <li>Your to-do list — updated after each session</li>
-                  <li>Milestone tracker — your 6-month journey</li>
-                  <li>Session summaries — what was covered and agreed</li>
-                  <li>Content ideas with guidance</li>
-                  <li>Ben's recommendations</li>
-                  <li>Goals — short and long term</li>
+            </div>
+
+            {/* Stat cards */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
+              {[
+                { label: "Sessions done", value: "13", sub: "Since July 2025" },
+                { label: "Power statements", value: "Not yet", sub: "Priority — do this first" },
+                { label: "Posting cadence", value: "Weekly", sub: "Keep it up" },
+                { label: "BD contacts live", value: "38+", sub: "Network + LinkedIn outreach" },
+              ].map((s, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
+                  <p style={{ fontSize: "1.2rem", fontWeight: 700, color: "#1C1C1C", letterSpacing: "-0.02em", margin: "0 0 4px" }}>{s.value}</p>
+                  <p style={{ fontSize: "0.78rem", color: "#7A746E", margin: 0 }}>{s.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* To-do list */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 16px" }}>Your To-Do List</p>
+              <ClientTodoList items={todoItems} clientName={NAME} slug={slug} accentColor={COLOR} onTabLink={setActiveTab} />
+            </div>
+
+            {/* Who James is + why we're working together */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Who you are</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 12px" }}>30 years in corporate HR — most recently in contention for the top people role at Swiss Re — before walking away to build something of his own. Now operating as an interim and fractional CPO, an executive coach, and a consulting partner through IgnitionCraft.</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>Based in London. Spends time in South-West France. Married to Javier. Francophile, cook, entertainer. Optimistic by default — and honest about when that slips.</p>
+              </div>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Why we're working together</p>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: 0, padding: 0 }}>
+                  {[
+                    "Build a personal brand that reflects who James actually is — not just what he does",
+                    "Create a consistent LinkedIn presence that attracts the right interim and coaching work",
+                    "Clarify the positioning: one voice across fractional CPO, consulting, and coaching",
+                    "Build the business development discipline that corporate life never required",
+                    "Move from waiting for work to actively and confidently creating it",
+                  ].map((item, i) => (
+                    <li key={i} style={{ fontSize: "0.84rem", color: "#3D3935", paddingLeft: 16, position: "relative", lineHeight: 1.55 }}>
+                      <span style={{ position: "absolute", left: 0, color: COLOR, fontWeight: 700 }}>→</span>{item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
 
-            <ClientTodoList
-              items={todoItems}
-              clientName={NAME}
-              slug={slug}
-              accentColor={COLOR}
-              onTabLink={setActiveTab}
-            />
+            {/* What's in here + what this is */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What's in this dashboard</p>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
+                  {["Session summaries — what was covered and agreed", "Milestone tracker — your 6-month journey", "Brand assets — positioning, differentiators, audiences", "Content ideas with hooks and guidance", "Ben's recommendations", "Goals — short and long term"].map((item, i) => (
+                    <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
+                      <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What this is (and isn't)</p>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
+                  {["A working document — not a polished presentation", "Everything grounded in your own words and sessions", "Something to review together, not filed and forgotten", "Not a script — scaffolding. You write in your own voice.", "Living — updated after every session"].map((item, i) => (
+                    <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
+                      <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
             <DashboardFooter clientName={NAME} tabName="Home" slug={slug} />
           </div>
@@ -462,22 +514,6 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
           <div>
             <PlaceholderTab label="Positioning" />
             <CommentBox clientName={NAME} tabName="Brand Assets" slug={slug} />
-          </div>
-        )}
-
-        {/* ── HEADLINES ── */}
-        {activeTab === "headlines" && (
-          <div>
-            <PlaceholderTab label="Headlines" />
-            <CommentBox clientName={NAME} tabName="Headlines" slug={slug} />
-          </div>
-        )}
-
-        {/* ── ABOUT ── */}
-        {activeTab === "about" && (
-          <div>
-            <PlaceholderTab label="About Section" />
-            <CommentBox clientName={NAME} tabName="About Section" slug={slug} />
           </div>
         )}
 
