@@ -10,6 +10,7 @@ import MilestoneTracker from "@/components/MilestoneTracker";
 import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 import AndyScottBarrettDashboard from "@/components/AndyScottBarrettDashboard";
+import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -2299,6 +2300,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
   const { slug } = use(params);
   const client = clientData[slug];
   const [activeTab, setActiveTab] = useState("todos");
+
+  if (slug === "james-hartley") {
+    return <JamesHartleyDashboard slug={slug} />;
+  }
 
   if (slug === "andy-felton") {
     return <AndyFeltonDashboard slug={slug} />;
