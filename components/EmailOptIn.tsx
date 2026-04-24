@@ -61,7 +61,7 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
           color: opted ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.5)",
           margin: "0 0 6px",
         }}>
-          {opted ? "✓ You're all set" : "Free bonus — don't miss this"}
+          {opted ? "✓ You're all set" : "Stay connected between sessions"}
         </p>
         <p style={{
           fontSize: "1.05rem",
@@ -72,8 +72,8 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
           letterSpacing: "-0.01em",
         }}>
           {opted
-            ? "Weekly to-do reminders are on"
-            : "Get your to-do list delivered every Monday morning"}
+            ? "Weekly reminders & fortnightly opportunities are on"
+            : "Get coached between sessions — straight to your inbox"}
         </p>
         <p style={{
           fontSize: "0.82rem",
@@ -83,8 +83,8 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
           maxWidth: 480,
         }}>
           {opted
-            ? "Ben will send you a personalised email every Monday at 9am — what's done, what's outstanding, and a direct link back here."
-            : "Every Monday at 9am, Ben sends you a personalised snapshot of your progress — what you've knocked off, what's still on the list, and a direct link back to your dashboard. Takes 30 seconds to read. Keeps you moving."}
+            ? "Every Monday at 9am: a personalised to-do snapshot — what's done, what's outstanding, and a link back here. Every fortnight: an opportunity email from Ben reviewing where you are, what to chase, and who to follow up with."
+            : "Two emails, both written around you. Every Monday: your to-do list, your progress, your dashboard link. Every fortnight: Ben reviews your momentum and sends you specific opportunities to act on — conversations to turn into content, leads to chase, platforms to show up on."}
         </p>
       </div>
       <button
