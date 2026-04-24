@@ -232,6 +232,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
                 clientName={name}
                 slug={slug}
                 accentColor={color}
+                onTabLink={setActiveTab}
               />
             ) : (
               <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 4, padding: "32px", textAlign: "center", marginBottom: 24 }}>

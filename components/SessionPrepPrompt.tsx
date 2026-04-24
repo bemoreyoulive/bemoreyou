@@ -2,17 +2,25 @@
 
 import { useState, useEffect } from "react";
 
+const QUESTIONS = [
+  "What have you posted since we last spoke — and how did it feel?",
+  "What conversations have you had that felt relevant?",
+  "What felt aligned this fortnight? What felt forced?",
+  "Any wins worth celebrating, however small?",
+  "Anything you want to make sure we cover?",
+];
+
 export default function SessionPrepPrompt() {
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const [minimised, setMinimised] = useState(false);
+  const [crossed, setCrossed] = useState<boolean[]>(QUESTIONS.map(() => false));
 
   useEffect(() => {
-    const showT = setTimeout(() => setVisible(true), 1200);
-    const hideT = setTimeout(() => { setVisible(false); setTimeout(() => setDismissed(true), 400); }, 11200);
-    return () => { clearTimeout(showT); clearTimeout(hideT); };
+    const t = setTimeout(() => setVisible(true), 1200);
+    return () => clearTimeout(t);
   }, []);
 
-  if (dismissed) return null;
+  const allDone = crossed.every(Boolean);
 
   return (
     <div style={{
@@ -34,49 +42,64 @@ export default function SessionPrepPrompt() {
       }}>
         {/* Header */}
         <div style={{
-          background: "#E8521C",
+          background: allDone ? "#2e7d4f" : "#E8521C",
           padding: "12px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-        }}>
+          cursor: "pointer",
+          transition: "background 0.3s ease",
+        }} onClick={() => setMinimised(m => !m)}>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ fontSize: "0.95rem" }}>📋</span>
+            <span style={{ fontSize: "0.95rem" }}>{allDone ? "✅" : "📋"}</span>
             <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#fff", margin: 0 }}>
-              Session prep
+              {allDone ? "Session prep — all done" : "Session prep"}
             </p>
           </div>
-          <button
-            onClick={() => { setVisible(false); setTimeout(() => setDismissed(true), 400); }}
-            style={{ background: "none", border: "none", color: "rgba(255,255,255,0.7)", cursor: "pointer", fontSize: "1rem", lineHeight: 1, padding: 0 }}
-          >
-            ✕
-          </button>
+          <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75rem" }}>{minimised ? "▲" : "▼"}</span>
         </div>
 
         {/* Body */}
-        <div style={{ padding: "16px 18px 20px" }}>
-          <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.7)", margin: "0 0 14px", lineHeight: 1.5 }}>
-            Before your next session with Ben, take 5 minutes:
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {[
-              "What have you posted since we last spoke — and how did it feel?",
-              "What conversations have you had that felt relevant?",
-              "What felt aligned this fortnight? What felt forced?",
-              "Any wins worth celebrating, however small?",
-              "Anything you want to make sure we cover?",
-            ].map((q, i) => (
-              <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                <span style={{ color: "#E8521C", fontWeight: 700, fontSize: "0.75rem", flexShrink: 0, marginTop: 1 }}>{i + 1}.</span>
-                <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.85)", margin: 0, lineHeight: 1.55 }}>{q}</p>
-              </div>
-            ))}
+        {!minimised && (
+          <div style={{ padding: "16px 18px 20px" }}>
+            <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.7)", margin: "0 0 14px", lineHeight: 1.5 }}>
+              Before your next session with Ben, take 5 minutes. Tick each one off as you go.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {QUESTIONS.map((q, i) => (
+                <div
+                  key={i}
+                  onClick={() => setCrossed(prev => { const next = [...prev]; next[i] = !next[i]; return next; })}
+                  style={{
+                    display: "flex", gap: 10, alignItems: "flex-start",
+                    cursor: "pointer", padding: "6px 0",
+                    borderBottom: i < QUESTIONS.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+                  }}
+                >
+                  <span style={{
+                    flexShrink: 0, width: 18, height: 18, borderRadius: 3,
+                    border: `2px solid ${crossed[i] ? "#2e7d4f" : "rgba(255,255,255,0.3)"}`,
+                    background: crossed[i] ? "#2e7d4f" : "transparent",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    marginTop: 1, transition: "all 0.15s ease",
+                  }}>
+                    {crossed[i] && <span style={{ color: "#fff", fontSize: "0.65rem", fontWeight: 700 }}>✓</span>}
+                  </span>
+                  <p style={{
+                    fontSize: "0.8rem",
+                    color: crossed[i] ? "rgba(255,255,255,0.35)" : "rgba(255,255,255,0.85)",
+                    margin: 0, lineHeight: 1.55,
+                    textDecoration: crossed[i] ? "line-through" : "none",
+                    transition: "all 0.15s ease",
+                  }}>{q}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: "0.72rem", color: "rgba(255,255,255,0.4)", margin: "14px 0 0", lineHeight: 1.5 }}>
+              Drop your answers in the comment box below — Ben will see them before the call.
+            </p>
           </div>
-          <p style={{ fontSize: "0.72rem", color: "rgba(255,255,255,0.4)", margin: "14px 0 0", lineHeight: 1.5 }}>
-            Drop your answers in the comment box below — Ben will see them before the call.
-          </p>
-        </div>
+        )}
       </div>
     </div>
   );

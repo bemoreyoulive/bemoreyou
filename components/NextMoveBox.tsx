@@ -13,19 +13,18 @@ interface Props {
 export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn }: Props) {
   const firstName = clientName?.split(" ")[0];
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const [minimised, setMinimised] = useState(false);
 
   useEffect(() => {
     if (!animateIn) return;
-    const showT = setTimeout(() => setVisible(true), 2000);
-    const hideT = setTimeout(() => setVisible(false), 12000);
-    return () => { clearTimeout(showT); clearTimeout(hideT); };
+    const t = setTimeout(() => setVisible(true), 2000);
+    return () => clearTimeout(t);
   }, [animateIn]);
 
   if (animateIn) {
     return (
       <>
-        {/* Restore the title header inline */}
+        {/* Inline title header */}
         {clientName && sessionLabel && (
           <div style={{ marginBottom: 36 }}>
             <p style={{
@@ -52,40 +51,47 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
           </div>
         )}
 
-        {/* Fixed bottom-left toast */}
-        {!dismissed && (
-          <div style={{
-            position: "fixed",
-            bottom: 28,
-            left: 28,
-            zIndex: 999,
-            width: 220,
-            transform: visible ? "translateX(0)" : "translateX(-120%)",
-            opacity: visible ? 1 : 0,
-            transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
-            pointerEvents: visible ? "auto" : "none",
-          }}>
+        {/* Fixed bottom-left — persistent, minimisable */}
+        <div style={{
+          position: "fixed",
+          bottom: 28,
+          left: 28,
+          zIndex: 999,
+          width: minimised ? 160 : 220,
+          transform: visible ? "translateX(0)" : "translateX(-120%)",
+          opacity: visible ? 1 : 0,
+          transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, width 0.2s ease",
+          pointerEvents: visible ? "auto" : "none",
+        }}>
+          {minimised ? (
+            <button
+              onClick={() => setMinimised(false)}
+              style={{
+                width: "100%", padding: "10px 14px",
+                background: "#1a1916", borderRadius: 8,
+                border: "none", cursor: "pointer",
+                display: "flex", alignItems: "center", gap: 8,
+                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+              }}
+            >
+              <div style={{ width: 8, height: 8, borderRadius: "50%", background: accentColor, flexShrink: 0 }} />
+              <span style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)" }}>This week</span>
+            </button>
+          ) : (
             <div style={{ position: "relative" }}>
               <button
-                onClick={() => { setVisible(false); setTimeout(() => setDismissed(true), 400); }}
+                onClick={() => setMinimised(true)}
                 style={{
-                  position: "absolute",
-                  top: 10,
-                  right: 10,
-                  zIndex: 1,
-                  background: "none",
-                  border: "none",
-                  color: "rgba(255,255,255,0.6)",
-                  cursor: "pointer",
-                  fontSize: "0.85rem",
-                  lineHeight: 1,
-                  padding: 0,
+                  position: "absolute", top: 10, right: 10, zIndex: 1,
+                  background: "none", border: "none",
+                  color: "rgba(255,255,255,0.5)", cursor: "pointer",
+                  fontSize: "0.75rem", lineHeight: 1, padding: 0,
                 }}
-              >✕</button>
+              >▼</button>
               <NeedleCard move={move} accentColor={accentColor} />
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </>
     );
   }

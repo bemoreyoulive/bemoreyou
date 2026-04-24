@@ -72,10 +72,10 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
     if (!updateText.trim()) return;
     setUpdateStatus("sending");
     try {
-      const res = await fetch("/api/ben-update", {
+      const res = await fetch("/api/ben-comment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, message: updateText }),
+        body: JSON.stringify({ slug, message: updateText, clientName, tabName }),
       });
       setUpdateStatus(res.ok ? "sent" : "error");
       if (res.ok) setUpdateText("");

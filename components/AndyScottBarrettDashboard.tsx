@@ -13,13 +13,13 @@ const ASB_COLOR = "#2e7d4f";
 const ASB_NEXT_MOVE = "Post the Martin Lewis wedding speech draft this week. You've written it, you've had the feedback — now post it and move on. Set the 30-minute timer. That's the rule.";
 
 const asbTodos = [
-  { id: "t1", text: "Post the Martin Lewis post — apply Ben's feedback on the ending, then post. 30-minute timer, no more.", owner: "Andy" },
-  { id: "t2", text: "Update LinkedIn headline to: \"I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce\"", owner: "Andy" },
-  { id: "t3", text: "Update LinkedIn banner — three lines Ben sent: 'Turning your numbers into decisions, not just reports' / 'I give you the financial direction you don't get from your accountant' / 'For UK SME owners who want to run their business properly'", owner: "Andy" },
-  { id: "t4", text: "Upload finalised About section to LinkedIn", owner: "Andy" },
+  { id: "t1", text: "Post the Martin Lewis post — apply Ben's feedback on the ending, then post. 30-minute timer, no more.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "t2", text: "Update LinkedIn headline to: \"I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce\"", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
+  { id: "t3", text: "Update LinkedIn banner — three lines Ben sent: 'Turning your numbers into decisions, not just reports' / 'I give you the financial direction you don't get from your accountant' / 'For UK SME owners who want to run their business properly'", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
+  { id: "t4", text: "Upload finalised About section to LinkedIn", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
   { id: "t5", text: "Book working photo session with father-in-law — natural, outside, not a corporate headshot", owner: "Andy" },
-  { id: "t6", text: "Pursue aerospace East Midlands prospect — follow up when owner returns", owner: "Andy" },
-  { id: "t7", text: "Follow up with Manchester client on visit date", owner: "Andy" },
+  { id: "t6", text: "Pursue aerospace East Midlands prospect — follow up when owner returns", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
+  { id: "t7", text: "Follow up with Manchester client on visit date", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
   { id: "w1", text: "Website: Change 'top-performing FTSE 100 company' to 'Rolls-Royce'", owner: "Andy" },
   { id: "w2", text: "Website: Move Richard Waine testimonial to homepage", owner: "Andy" },
   { id: "w3", text: "Website: Replace contact page copy with the version Ben sent", owner: "Andy" },
@@ -97,7 +97,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
 
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 16px" }}>Your To-Do List</p>
-              <ClientTodoList items={asbTodos} clientName="Andy Scott Barrett" slug={slug} accentColor={ASB_COLOR} />
+              <ClientTodoList items={asbTodos} clientName="Andy Scott Barrett" slug={slug} accentColor={ASB_COLOR} onTabLink={setActiveTab} />
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>

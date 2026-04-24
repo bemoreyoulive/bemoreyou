@@ -7,6 +7,7 @@ interface TodoItem {
   id: string;
   text: string;
   owner?: string;
+  tabLink?: { label: string; tab: string };
 }
 
 interface ClientTodoListProps {
@@ -14,9 +15,10 @@ interface ClientTodoListProps {
   clientName: string;
   slug: string;
   accentColor?: string;
+  onTabLink?: (tab: string) => void;
 }
 
-export default function ClientTodoList({ items, clientName, slug, accentColor = "#E8521C" }: ClientTodoListProps) {
+export default function ClientTodoList({ items, clientName, slug, accentColor = "#E8521C", onTabLink }: ClientTodoListProps) {
   const [statuses, setStatuses] = useState<Record<string, boolean>>(
     Object.fromEntries(items.map((item) => [item.id, false]))
   );
@@ -94,6 +96,14 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
                   <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", marginTop: 4, marginBottom: 0}}>
                     {item.owner}
                   </p>
+                )}
+                {item.tabLink && onTabLink && (
+                  <button
+                    onClick={() => onTabLink(item.tabLink!.tab)}
+                    style={{marginTop: 6, fontSize: "0.68rem", fontWeight: 600, color: accentColor, background: "none", border: "none", cursor: "pointer", padding: 0, letterSpacing: "0.05em", textDecoration: "underline"}}
+                  >
+                    → {item.tabLink.label}
+                  </button>
                 )}
               </div>
               <button
