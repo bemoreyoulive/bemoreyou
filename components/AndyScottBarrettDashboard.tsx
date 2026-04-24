@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createClient } from "@/lib/supabase-browser";
 import ClientTodoList from "@/components/ClientTodoList";
 import EmailOptIn from "@/components/EmailOptIn";
 import NextMoveBox from "@/components/NextMoveBox";
@@ -347,108 +348,9 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
-        {/* ── HEADLINES ── */}
         {/* ── CONTENT IDEAS ── */}
         {activeTab === "content" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>3-Month Content Strategy</p>
-            <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 8px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card below has the hook, the direction, questions to answer before you write, and a CTA. Set the 30-minute timer and go.</p>
-            <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 8, padding: "12px 16px", marginBottom: 24 }}>
-              <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>The rule:</strong> If you're still editing after 30 minutes, it's probably good enough. Give it one last read and hit post.</p>
-            </div>
-
-            {[
-              {
-                week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech",
-                hook: "Apparently I've always been this way. I didn't choose finance because of a career plan. It was just always the thing I was interested in — probably to the mild irritation of people around me.",
-                direction: "A warm, light, self-deprecating post. The Martin Lewis wedding speech reference is the hook — use it. Keep it human and slightly funny. This is an introduction post for people who don't know you yet. End on why that lifelong interest in money and numbers translates into something genuinely useful for business owners — not just knowing the theory, but caring about it.",
-                questions: "What's the earliest memory you have of being interested in money? What did the best man's speech actually say? How has that trait shown up in ways that weren't always useful?",
-                cta: '"Are you someone who naturally gets into the numbers — or do you do everything you can to avoid them?"',
-                drafted: true,
-              },
-              {
-                week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Money's There. But Is It Actually Yours?",
-                hook: "The bank balance looks healthy. You feel okay. But there's a VAT bill coming, corporation tax due in a few months, and a supplier invoice you'd half-forgotten about. That money in your account isn't all yours.",
-                direction: "The hidden claims on your bank balance — HMRC, committed supplier costs, pre-sold revenue not yet delivered. A simple worked example. No jargon. End on what to do about it.",
-                questions: "What are the most common hidden claims on cash that catch owners out? What's the simplest way to work out what you can actually spend? Have you seen someone spend tax money?",
-                cta: '"Before you make your next big spend — do you know what\'s already committed from that balance?"',
-                drafted: false,
-              },
-              {
-                week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.",
-                hook: "For years I'd told myself 40 was the number. Not as a wish. As a plan. When my boss called me in and told me my job was safe, I sat there thinking: that's not the news I wanted.",
-                direction: "The deliberate exit at 40 — not a redundancy, not a crisis, a decision that had been forming for years. The detail that makes this post: last day was exactly 20 years to the day from day one. Don't make it inspirational. Make it honest.",
-                questions: "When did you first know 40 was the number? What had been stopping you before? What did the last morning feel like? What do you know now that you wish you'd known?",
-                cta: '"Is there something you already know the answer to — but haven\'t done anything about yet?"',
-                drafted: false,
-              },
-              {
-                week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even",
-                hook: "Offering a 10% discount feels like a small thing. On a low-margin product or service, recovering that in extra volume can require selling 200% more than you were before. All you've done is made yourself busier for less money.",
-                direction: "From your networking talk — one of the sharpest, most counterintuitive insights in your toolkit. Walk through a simple worked example: a business with 20% gross margin discounts 10% — show what happens to the volume required. Acknowledge discounting is sometimes right — but it should be a considered decision, not a default.",
-                questions: "What gross margin % to use for the example? What do owners say when you show them this maths? When is discounting actually the right call?",
-                cta: '"Next time a customer asks for a discount — do you know what you\'d need to sell more of to make up for it?"',
-                drafted: false,
-              },
-              {
-                week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25",
-                hook: "I was 25. My employer sent me to Beijing for a year. I knew maybe 20 words of Mandarin. The finance operation I'd been sent to sort out was, to put it politely, held together with goodwill and optimism.",
-                direction: "Landing somewhere unfamiliar, finding a mess, building structure from scratch in a place where you didn't speak the language. The connection to now: most SME finance operations look a bit like that Beijing office. The thing you came away with: confidence that you can turn your hand to things.",
-                questions: "What did it look like when you arrived — the actual state of the operation? What was the first thing you changed? How did you earn the local team's trust? What did you come back with that you didn't go with?",
-                cta: '"Most of the businesses I work with have never had anyone look properly at their finances. When did you last take a proper look at yours?"',
-                drafted: false,
-              },
-              {
-                week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: One of Your Products Is Carrying the Rest. Do You Know Which One?",
-                hook: "Overall, the business looks profitable. But break it down by product or service and a different picture appears. One is doing the heavy lifting. A couple are barely covering their costs. And one might actually be losing money.",
-                direction: "Separate from the break-even concept — this is about diagnosis and what you do with the information. Use the current client example (anonymised) who thought they knew their gross margin but didn't. You can use the Lego parallel here.",
-                questions: "What's the most common reaction when you show an owner the product-level breakdown for the first time? What do businesses typically do with this? Are there legitimate reasons to keep a loss-making product?",
-                cta: '"Do you know which of your products or services is your most profitable — not the one that sells the most, but the one that actually makes you the most money?"',
-                drafted: false,
-              },
-              {
-                week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep",
-                hook: "She ran a good business. Investors kept asking questions about cash flow. She knew the answers — she just couldn't get to them fast enough, and it was grinding her down.",
-                direction: "A client story post — told as a moment, not a case study. Once cash planning was sorted and she had clear answers ready, she said she wasn't on her own anymore — and could sleep better. Keep her anonymous. The transformation isn't the spreadsheet — it's the weight that lifted.",
-                questions: "What was the early atmosphere like — stressed, resigned, exhausted? What was the first thing that changed once planning was in place? What did 'sleeping better' actually look like in her day-to-day?",
-                cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."',
-                drafted: false,
-              },
-            ].map((idea, i) => (
-              <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: idea.drafted ? `3px solid ${ASB_COLOR}` : "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 14 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>
-                  <span style={{ background: idea.type === "Personal" ? "#EEF2FF" : "#F0FDF4", color: idea.type === "Personal" ? "#4338CA" : ASB_COLOR, border: `1px solid ${idea.type === "Personal" ? "#C7D2FE" : "#c2dbc9"}`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em", textTransform: "uppercase" }}>{idea.week}</span>
-                  <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>{idea.title}</p>
-                  <span style={{ fontSize: "0.72rem", color: "#9CA3AF", marginLeft: "auto" }}>{idea.type} · Bold: {idea.bold}</span>
-                  {idea.drafted && <span style={{ background: "#edf4ef", color: ASB_COLOR, border: `1px solid #c2dbc9`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px" }}>Draft written</span>}
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  <div>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 4px" }}>🪝 The Hook</p>
-                    <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.hook}</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Direction</p>
-                    <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.direction}</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 4px" }}>❓ Questions first</p>
-                    <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{idea.questions}</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 4px" }}>📣 CTA</p>
-                    <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>{idea.cta}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px", marginTop: 8 }}>
-              <p style={{ fontSize: "0.83rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Weeks 5–12 content ideas are in development and will be added after Session 4. The first four weeks are enough to establish the rhythm and prove the model.</p>
-            </div>
-            <CommentBox clientName="Andy Scott Barrett" tabName="Content Ideas" slug={slug} />
-          </div>
+          <AsbContentTab slug={slug} />
         )}
 
         {/* ── BEN'S RECOMMENDATIONS ── */}
@@ -571,6 +473,187 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
         )}
 
       </div>
+    </div>
+  );
+}
+
+// ─── ASB IDEA CARD ────────────────────────────────────────────────────────────
+
+type AsbIdea = {
+  id: string;
+  week: string;
+  type: "Personal" | "Expertise";
+  bold: string;
+  title: string;
+  hook: string;
+  direction: string;
+  questions: string;
+  cta: string;
+  drafted?: boolean;
+};
+
+function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
+  const [open, setOpen] = useState(false);
+  const [used, setUsed] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.from("idea_states").select("used").eq("slug", slug).eq("idea_id", `asb-${idea.id}`).single()
+      .then(({ data }) => { if (data) setUsed(data.used); });
+  }, [slug, idea.id]);
+
+  async function toggleUsed(e: React.MouseEvent) {
+    e.stopPropagation();
+    const next = !used;
+    setSaving(true);
+    setUsed(next);
+    const supabase = createClient();
+    await supabase.from("idea_states").upsert(
+      { slug, idea_id: `asb-${idea.id}`, used: next },
+      { onConflict: "slug,idea_id" }
+    );
+    setSaving(false);
+  }
+
+  const isPersonal = idea.type === "Personal";
+
+  return (
+    <div style={{ background: used ? "#f7f6f3" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.drafted ? `3px solid ${ASB_COLOR}` : used ? "1px solid #E0DBD3" : "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 14, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", flex: 1 }}>
+          <span style={{ background: isPersonal ? "#EEF2FF" : "#F0FDF4", color: isPersonal ? "#4338CA" : ASB_COLOR, border: `1px solid ${isPersonal ? "#C7D2FE" : "#c2dbc9"}`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em", textTransform: "uppercase" as const, flexShrink: 0 }}>{idea.week}</span>
+          <p style={{ fontSize: "0.9rem", fontWeight: 600, color: used ? "#9CA3AF" : "#1C1C1C", margin: 0, textDecoration: used ? "line-through" : "none", lineHeight: 1.4 }}>{idea.title}</p>
+          <span style={{ fontSize: "0.72rem", color: "#9CA3AF", marginLeft: "auto", flexShrink: 0 }}>{idea.type} · Bold: {idea.bold}</span>
+          {idea.drafted && <span style={{ background: "#edf4ef", color: ASB_COLOR, border: `1px solid #c2dbc9`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", flexShrink: 0 }}>Draft written</span>}
+        </div>
+        <button
+          onClick={toggleUsed}
+          disabled={saving}
+          style={{
+            flexShrink: 0, fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em",
+            textTransform: "uppercase" as const, padding: "5px 12px", borderRadius: 2,
+            border: `1px solid ${used ? "#B0A89E" : ASB_COLOR}`,
+            background: used ? "#f3f2f0" : "#edf4ef",
+            color: used ? "#7A746E" : ASB_COLOR,
+            cursor: saving ? "not-allowed" : "pointer",
+            transition: "all 0.15s ease",
+          }}
+        >
+          {used ? "Used ✓" : "Mark used"}
+        </button>
+      </div>
+      <button onClick={() => setOpen(o => !o)} style={{ fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: ASB_COLOR, background: "transparent", border: "none", cursor: "pointer", padding: 0, marginBottom: open ? 12 : 0 }}>
+        {open ? "Hide detail ▲" : "Show detail ▼"}
+      </button>
+      {open && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, paddingTop: 12, borderTop: "1px solid #E0DBD3" }}>
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🪝 The Hook</p>
+            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.hook}</p>
+          </div>
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Direction</p>
+            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.direction}</p>
+          </div>
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>❓ Questions first</p>
+            <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{idea.questions}</p>
+          </div>
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>📣 CTA</p>
+            <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>{idea.cta}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── ASB CONTENT TAB ──────────────────────────────────────────────────────────
+
+const asbMayIdeas: AsbIdea[] = [
+  { id: "may-1", week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech", hook: "Apparently I've always been this way. I didn't choose finance because of a career plan. It was just always the thing I was interested in — probably to the mild irritation of people around me.", direction: "A warm, light, self-deprecating post. The Martin Lewis wedding speech reference is the hook — use it. Keep it human and slightly funny. This is an introduction post for people who don't know you yet. End on why that lifelong interest in money and numbers translates into something genuinely useful for business owners — not just knowing the theory, but caring about it.", questions: "What's the earliest memory you have of being interested in money? What did the best man's speech actually say? How has that trait shown up in ways that weren't always useful?", cta: '"Are you someone who naturally gets into the numbers — or do you do everything you can to avoid them?"', drafted: true },
+  { id: "may-2", week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Money's There. But Is It Actually Yours?", hook: "The bank balance looks healthy. You feel okay. But there's a VAT bill coming, corporation tax due in a few months, and a supplier invoice you'd half-forgotten about. That money in your account isn't all yours.", direction: "The hidden claims on your bank balance — HMRC, committed supplier costs, pre-sold revenue not yet delivered. A simple worked example. No jargon. End on what to do about it.", questions: "What are the most common hidden claims on cash that catch owners out? What's the simplest way to work out what you can actually spend? Have you seen someone spend tax money?", cta: '"Before you make your next big spend — do you know what\'s already committed from that balance?"' },
+  { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "For years I'd told myself 40 was the number. Not as a wish. As a plan. When my boss called me in and told me my job was safe, I sat there thinking: that's not the news I wanted.", direction: "The deliberate exit at 40 — not a redundancy, not a crisis, a decision that had been forming for years. The detail that makes this post: last day was exactly 20 years to the day from day one. Don't make it inspirational. Make it honest.", questions: "When did you first know 40 was the number? What had been stopping you before? What did the last morning feel like? What do you know now that you wish you'd known?", cta: '"Is there something you already know the answer to — but haven\'t done anything about yet?"' },
+  { id: "may-4", week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even", hook: "Offering a 10% discount feels like a small thing. On a low-margin product or service, recovering that in extra volume can require selling 200% more than you were before. All you've done is made yourself busier for less money.", direction: "From your networking talk — one of the sharpest, most counterintuitive insights in your toolkit. Walk through a simple worked example: a business with 20% gross margin discounts 10% — show what happens to the volume required. Acknowledge discounting is sometimes right — but it should be a considered decision, not a default.", questions: "What gross margin % to use for the example? What do owners say when you show them this maths? When is discounting actually the right call?", cta: '"Next time a customer asks for a discount — do you know what you\'d need to sell more of to make up for it?"' },
+  { id: "may-5", week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25", hook: "I was 25. My employer sent me to Beijing for a year. I knew maybe 20 words of Mandarin. The finance operation I'd been sent to sort out was, to put it politely, held together with goodwill and optimism.", direction: "Landing somewhere unfamiliar, finding a mess, building structure from scratch in a place where you didn't speak the language. The connection to now: most SME finance operations look a bit like that Beijing office. The thing you came away with: confidence that you can turn your hand to things.", questions: "What did it look like when you arrived — the actual state of the operation? What was the first thing you changed? How did you earn the local team's trust? What did you come back with that you didn't go with?", cta: '"Most of the businesses I work with have never had anyone look properly at their finances. When did you last take a proper look at yours?"' },
+  { id: "may-6", week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: One of Your Products Is Carrying the Rest. Do You Know Which One?", hook: "Overall, the business looks profitable. But break it down by product or service and a different picture appears. One is doing the heavy lifting. A couple are barely covering their costs. And one might actually be losing money.", direction: "Separate from the break-even concept — this is about diagnosis and what you do with the information. Use the current client example (anonymised) who thought they knew their gross margin but didn't. You can use the Lego parallel here.", questions: "What's the most common reaction when you show an owner the product-level breakdown for the first time? What do businesses typically do with this? Are there legitimate reasons to keep a loss-making product?", cta: '"Do you know which of your products or services is your most profitable — not the one that sells the most, but the one that actually makes you the most money?"' },
+  { id: "may-7", week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep", hook: "She ran a good business. Investors kept asking questions about cash flow. She knew the answers — she just couldn't get to them fast enough, and it was grinding her down.", direction: "A client story post — told as a moment, not a case study. Once cash planning was sorted and she had clear answers ready, she said she wasn't on her own anymore — and could sleep better. Keep her anonymous. The transformation isn't the spreadsheet — it's the weight that lifted.", questions: "What was the early atmosphere like — stressed, resigned, exhausted? What was the first thing that changed once planning was in place? What did 'sleeping better' actually look like in her day-to-day?", cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."' },
+  { id: "may-8", week: "Week 4 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: What Break-Even Actually Means — and Why Most People Get It Wrong", hook: "Break-even sounds simple. In practice, most business owners either don't know theirs, or know a number that doesn't account for everything it should.", direction: "The break-even concept from your networking talk — walked through clearly with an example. Not just the formula, but what the number tells you about pricing decisions, fixed cost choices, and growth plans. The punchline: most business owners making growth decisions don't have this number, and they should.", questions: "What's the most common misunderstanding about break-even you see? What's the simplest way to show it? What decisions change once someone knows their real break-even point?", cta: '"Do you know your break-even point — and does it account for your own time?"' },
+];
+
+const asbJuneIdeas: AsbIdea[] = [
+  { id: "jun-1", week: "Week 5 · Mid-week", type: "Personal", bold: "4/5", title: "Someone Slammed the Door. I Was Just the Messenger.", hook: "I once presented numbers that a room full of senior people really didn't want to hear. One of them slammed his fist on the desk and walked out. The numbers were still right.", direction: "Set the scene — a high-stakes presentation, a product the room was heavily invested in, numbers that said it wasn't viable. Keep all identifying details out. The point: the most useful thing an adviser can do is give you the honest picture, even when it's not what you want to hear. Especially then. That experience shaped how you work with clients today — you're not there to validate decisions people have already made. Tie it to the SME context: how often do business owners avoid looking at numbers because they're worried about what they might find?", questions: "What was the atmosphere in the room before it went wrong? How did you hold your ground — what was going through your head? Has there been a moment like this with a client, where you had to say something uncomfortable? What happened as a result?", cta: '"Has anyone ever told you something about your business you didn\'t want to hear — but that turned out to be exactly what you needed?"' },
+  { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Three Questions Every Business Owner Should Be Able to Answer", hook: "Three questions. You don't need to answer them out loud. Just sit with them honestly for a moment.", direction: "These three came directly from the close of your networking talk and they're strong enough to anchor a post on their own. No preamble needed — just the three questions, then your honest framing of what they reveal. 1) When you're making a big decision, do you go with gut feel or look at what the numbers are telling you? 2) Do you know which of your products or services is most profitable? 3) Do you know what your cash position will be in three months — and how much of that will be yours? End with: most business owners who can't answer these aren't failing. They just haven't had anyone help them look.", questions: "What proportion of owners you meet can genuinely answer all three? What's usually the one that stumps people most? What changes once someone can answer all three?", cta: '"Which of the three is your honest answer: \'yes\', \'not sure\', or \'I\'d rather not think about it\'?"' },
+  { id: "jun-3", week: "Week 6 · Mid-week", type: "Personal", bold: "2/5", title: "I'm Running My First Half Marathon. I'm Not Fast. That's Not the Point.", hook: "I'm training for my first half marathon. My pace is best described as determined. The goal isn't to impress anyone — it's to finish, and to be faster than I was when I started.", direction: "A light, warm, relatable post about training for something you're not naturally built for. Last year you ran your first 10k in 17 years — faster than you managed at 23. This year it's a half marathon. The connection to your work is subtle but real: you measure progress, adjust the plan, and keep going even when the pace is slow. Don't labour the analogy — let it land on its own.", questions: "What made you decide on the half marathon this year? What does training currently look like — what are you running, how often, what's hard about it? What do you listen to when you run? What does finishing feel like as a goal compared to racing to win?", cta: '"Are you working towards something right now that has nothing to do with business? What is it?"' },
+  { id: "jun-4", week: "Week 6 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: How to Price Something You Actually Make Money From", hook: "A lot of businesses set prices based on what feels right, what competitors charge, or what they think the market will bear. Without knowing what it actually costs to deliver the product or service, all of those approaches involve some guesswork.", direction: "This came directly from your networking talk and your own client experience with pricing too low because costs weren't properly understood. The concept of 'defendable pricing' is central here — if you don't know your costs, you can't hold your price in a negotiation with any confidence. Walk through what it takes to properly cost a product or service, including the things people routinely miss: their own time, indirect costs, delivery and fulfilment.", questions: "What are the most commonly missed costs when businesses price their services? What's the most striking example you've seen of a business pricing far below what they could charge once they understood their costs? What does 'defendable pricing' actually feel like in a client conversation?", cta: '"Do you know the full cost of delivering your most popular product or service — or is there guesswork in there?"' },
+  { id: "jun-5", week: "Week 7 · Mid-week", type: "Personal", bold: "3/5", title: "Leaving the Corporate World Was Harder Than I Expected. And Easier.", hook: "Everyone told me leaving a stable, well-paid corporate career to start something from scratch was a big risk. They weren't wrong. They also weren't fully right.", direction: "The honest version of the transition post — not a 'best decision I ever made' highlight reel. What was genuinely hard about the first few months (the quiet, the uncertainty, the lack of structure you didn't know you relied on)? What surprised you — both in the difficult direction and the unexpected freedom? Use your own words: 'It was either go back into all of that and I don't want to do that to myself, or coast. I didn't feel passionate about that either. Or come and do what I'm doing now. So I took the leap.'", questions: "What was the hardest moment in the first few months? What did you miss about corporate that you didn't expect to? What's better now in a way you couldn't have predicted? What would you tell yourself if you could go back to the day you handed in your notice?", cta: '"If you\'ve made a big leap — professionally or personally — what\'s the one thing nobody warned you about?"' },
+  { id: "jun-6", week: "Week 7 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Your Accountant Is Doing Their Job. That's the Problem.", hook: "The accounts arrived. You glanced at them. You carried on. That's not a problem with you — or your accountant. It's a gap nobody told you existed.", direction: "Your core positioning post. Write it without any shade on accountants — they're doing exactly what they're supposed to. The gap isn't their fault. Compliance and forward-looking strategy are two genuinely different roles. Most SMEs only have one covered. Use the bookkeeper → accountant → FD ladder you explained in your networking talk — it's the clearest version of this you've articulated publicly. End on what the FD role actually looks like day-to-day in an SME context, so the reader can picture it.", questions: "What's the most common thing business owners say about their accountant early in a conversation with you? What does a management accounts pack actually look like to someone without a finance background? What's the first question you ask that their accountant has never asked?", cta: '"When did you last look at your numbers and actually know what to do next?"' },
+  { id: "jun-7", week: "Week 8 · Mid-week", type: "Personal", bold: "1/5", title: "We've Been Fostering Labradors. This Is What I've Learned.", hook: "My wife and I have been fostering Labradors — looking after dogs waiting for their forever home. Every single one has been different. All of them have taught us something.", direction: "A warm, human post that shows a side of Andy most LinkedIn connections won't have seen. Don't try too hard to make a business point — let the story do the work. What has the fostering experience actually been like? The brief introductions, the different personalities, the moment when a dog goes to its permanent home. The connection to Andy's character (patience, staying calm under pressure, building trust through consistency) can be implicit rather than stated.", questions: "What made you start fostering? What does the handover moment feel like when a dog goes to its permanent home? Has fostering changed how you think about anything — relationships, patience, trust? Is there a particular dog that stands out?", cta: '"Does anyone else foster — or have you thought about it? Would love to hear other people\'s experiences."' },
+  { id: "jun-8", week: "Week 8 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Growth Should Feel Exciting. If It Feels Risky, Here's Why.", hook: "A good opportunity comes along. Instead of feeling excited, it feels like a risk you're not sure you can take. That's not caution. That's what happens when you don't have the numbers to back up what your gut is telling you.", direction: "Clarity doesn't just improve financial decisions — it changes how growth feels. Without it, every opportunity is a gamble. With it, you can take a calculated risk — which is a different thing entirely. The post should help business owners recognise themselves in that feeling: not that they're risk-averse, but that they lack the information that makes risk feel manageable. End with what changes when you have it — decisions feel lighter, growth feels intentional rather than accidental.", questions: "Have you had a client who turned down a good opportunity because the numbers felt unclear — and what happened? What does 'a calculated risk' actually look like in practice when you're working with someone? What's the difference between cautious and uninformed?", cta: '"Think of the last opportunity you hesitated on. Was it genuine caution — or did you not have the numbers to back yourself?"' },
+];
+
+const asbJulyIdeas: AsbIdea[] = [
+  { id: "jul-1", week: "Week 9 · Mid-week", type: "Personal", bold: "4/5", title: "I Woke Up One Morning and Everything Was Spinning", hook: "I woke up one morning and the room was spinning — like I'd had ten pints, except I hadn't. That was how my body told me something needed to change.", direction: "The vestibular migraine story — the stress-related health crisis during your Rolls-Royce years. This is 4/5 bold, but one of the most powerful posts available. The lesson isn't 'corporate life is toxic' — it's that pressure compounds silently, small habits make a significant difference, and paying attention to how you feel is as important as paying attention to your numbers. The parallel to what you see in business owners — carrying financial stress alone without realising the toll it takes — is implicit and real. Only write this when it feels right, not because the schedule says so.", questions: "What were the warning signs you missed before that morning? What was the recovery like — what actually changed? What habits made the biggest difference, and which surprised you? What do you notice now in other people that you didn't notice before?", cta: '"Has your body ever told you something your brain was refusing to hear?"' },
+  { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "The business had profitable contracts. Revenue was growing. They'd never needed a cash flow forecast and had always been fine. Then they took on some bigger deals — with costs up front and payment at the end. Once we put a forecast in place, the picture changed.", direction: "The cash flow crisis story from your client work — a profitable business nearly ran out of cash within three months because of payment timing on larger contracts. Tell the story, keep the client fully anonymous, and land on the pay-off: they said it was worse than they'd thought — but they could sleep at night because they knew, and knew there was still time to act.", questions: "What did the business look like from the outside when you first got involved? When did the forecast show what was coming? What exactly did they do to fix it — walk through the discount-for-early-payment solution simply. What did the owner actually say when they saw the numbers?", cta: '"Do you have a forward-looking cash flow forecast — or just last month\'s accounts?"' },
+  { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner" — What Clients Actually Say', hook: "The thing clients say most often, once things are working: 'I wish I'd done this sooner.' Not 'that was useful' or 'glad we did that.' Specifically: sooner.", direction: "A reflection post on what 'sooner' actually means — the decisions that would have been better, the stress that could have been avoided, the time spent operating without visibility. Draw on the startup founder story: he could explain the business but couldn't articulate the financial story. Once he could, the decision was clear and game-changing. The emotional core of this post is constructive regret — the kind that makes people act now rather than wait.", questions: "What do clients typically mean when they say 'sooner'? How far back are they imagining? What's a concrete example of a decision that would have gone differently? What's the most common thing that stops people acting earlier?", cta: '"What\'s one thing in your business you\'ve been putting off — and what\'s actually stopping you?"' },
+  { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Most founders can explain their business with real passion and conviction. The numbers are another matter. In an investor conversation, both need to be in lock step — and the financial story needs to hold up under questioning.", direction: "Draw on your power sentence about the founder preparing to raise investment — he could explain the business but couldn't articulate the financial story. After working together, he could hold his own in those conversations. This isn't about the mechanics of raising investment — it's about credibility. What does 'the financial story' actually mean in practice?", questions: "What are the most common financial questions investors ask that founders aren't prepared for? What did it look like before and after for the founder in your power sentence? What's the simplest version of 'financial story' that a pre-investment founder could build in a short time?", cta: '"If an investor asked you to walk them through the financial story of your business right now — how confident would you feel?"' },
+  { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "I've been learning Japanese on Duolingo every day for over 400 days. I'm not fluent. I'm not even close. But I'm significantly better than I was 400 days ago.", direction: "A post about consistency, small daily habits, and what compounds over time — told through language learning. French A* at GCSE, Mandarin across two spells in Beijing, now Japanese. The connection to Andy's broader point about small habits (which he's deeply passionate about, and connects to his vestibular migraine recovery) can be made without it becoming a lecture. Keep it warm and slightly self-deprecating about the Japanese.", questions: "Why Japanese specifically? What has 400 days of daily practice actually taught you beyond the language itself? What's the moment where you noticed real progress? What habit in your life or business has compounded in a way you didn't expect?", cta: '"What\'s a habit you\'ve kept going that\'s quietly made a difference — in life or in business?"' },
+  { id: "jul-6", week: "Week 11 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I Can Just Use AI for My Financial Strategy.\" Can You, Though?", hook: "I've started to hear this one: 'Why would I need help with my financial strategy — I can just use AI?' It's a reasonable question. Here's my honest answer.", direction: "This is Andy's hot-take from his onboarding form, written almost verbatim. The argument: AI isn't the problem. The problem is using any tool without the ability to evaluate what it's producing. If you don't understand finance well enough to know when the AI output is wrong or incomplete, you won't know to question it. Write this in Andy's voice: not preachy, not dismissive of AI, just honest about where the real value sits.", questions: "Have you seen AI-generated financial output that looked plausible but was wrong in an important way? What's the role AI could genuinely play for SME owners — and where does it fall short? What would you say to someone who genuinely believes this objection?", cta: '"Have you tried using AI for financial decisions? What was useful and what didn\'t quite work?"' },
+  { id: "jul-7", week: "Week 12 · Mid-week", type: "Personal", bold: "3/5", title: "The Question I Ask Every New Client (That Nobody's Ever Asked Them Before)", hook: "Early on with every new client, I ask one question. The reaction tells me almost everything I need to know — not just about their business, but about whether we'll work well together.", direction: "A post that's both personal (it reveals how Andy approaches client relationships) and expertise-adjacent (it shows the diagnostic instinct of someone who knows what to look for). The question itself — something like 'what are you getting from your accountant, and is it helping you run the business?' — is less important than the reaction. What does it look like when someone can't answer? This post closes the 3-month arc — by now the audience knows Andy, trusts his expertise, and this post invites them to imagine what that first conversation with him would actually be like.", questions: "What's the question — be specific? What are the different reactions you get and what do they tell you? What's the most surprising or memorable response you've ever received? What does it mean for the relationship when someone answers confidently vs. hesitates?", cta: '"How would you answer it?"' },
+  { id: "jul-8", week: "Week 12 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Costly Mistakes Don't Announce Themselves. They Show Up Afterwards.", hook: "Work that looked profitable turns out to destroy margin. Costs are committed to that the business can't sustain. A hire is made too early. Usually you don't find out until it's too late to do much about it.", direction: "From your power sentences: 'When a business owner makes decisions on guesswork alone, costly mistakes often follow — and it's usually not known until it's too late.' This is a post about the cost of operating without visibility — told through real examples (anonymous). The tone isn't scary; it's matter-of-fact. These things happen. They happen less when someone is looking at the numbers. Use 2–3 concrete scenarios from your client experience. Finish on the positive: this isn't about being perfect, it's about having enough information to course-correct before things become serious.", questions: "What are the most common guesswork-driven mistakes you see? What's a real example where better information would have changed the decision? What's the earliest warning sign that a business is operating without sufficient financial visibility?", cta: '"What\'s the most expensive decision you\'ve made based on gut feel — and how did it turn out?"' },
+];
+
+function AsbContentTab({ slug }: { slug: string }) {
+  const [activeMonth, setActiveMonth] = useState("may");
+  const months = [
+    { id: "may", label: "May — Weeks 1–4" },
+    { id: "june", label: "June — Weeks 5–8" },
+    { id: "july", label: "July — Weeks 9–12" },
+  ];
+  const ideas = activeMonth === "may" ? asbMayIdeas : activeMonth === "june" ? asbJuneIdeas : asbJulyIdeas;
+  const descriptions: Record<string, string> = {
+    may: "The first month. Build the habit, establish the rhythm. Personal posts introduce you as a human; expertise posts introduce you as someone worth listening to on finance. The Martin Lewis post is your way in — it's ready to go.",
+    june: "Month 2. The audience is warming up. The personal posts get a little more revealing, the expertise posts get sharper. The door-slammer post (Week 5) is a bold one — save it for when the habit is solid.",
+    july: "Month 3. By now the rhythm is established. Go deeper and bolder — the personal posts tackle the stories you haven't shared publicly yet. The expertise posts push into sharper, more opinionated territory.",
+  };
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>3-Month Content Strategy</p>
+      <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 8px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, direction, questions to answer before you write, and a CTA. Set the 30-minute timer and go.</p>
+      <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 8, padding: "12px 16px", marginBottom: 20 }}>
+        <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>The rule:</strong> If you're still editing after 30 minutes, it's probably good enough. Give it one last read and hit post.</p>
+      </div>
+
+      {/* Month sub-tabs */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+        {months.map(m => (
+          <button
+            key={m.id}
+            onClick={() => setActiveMonth(m.id)}
+            style={{
+              padding: "8px 18px", borderRadius: 6, fontSize: "0.8rem", fontWeight: 600, cursor: "pointer",
+              border: `1px solid ${activeMonth === m.id ? ASB_COLOR : "#E0DBD3"}`,
+              background: activeMonth === m.id ? ASB_COLOR : "#fff",
+              color: activeMonth === m.id ? "#fff" : "#7A746E",
+              transition: "all 0.15s ease",
+            }}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
+
+      <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 20px" }}>{descriptions[activeMonth]}</p>
+
+      {ideas.map(idea => (
+        <AsbIdeaCard key={idea.id} idea={idea} slug={slug} />
+      ))}
+
+      <CommentBox clientName="Andy Scott Barrett" tabName="Content Ideas" slug={slug} />
     </div>
   );
 }

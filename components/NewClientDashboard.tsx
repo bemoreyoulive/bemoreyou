@@ -35,7 +35,8 @@
 // session by session — just edit this file directly.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createClient } from "@/lib/supabase-browser";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import DashboardFooter from "@/components/DashboardFooter";
@@ -351,10 +352,7 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Content Strategy</p>
                 <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
                 {CONTENT_IDEAS.map((idea, i) => (
-                  <div key={i} style={{ background: idea.priority ? "#f0f7ed" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 12 }}>
-                    <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.5 }}>{idea.hook}</p>
-                    <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>
-                  </div>
+                  <NewClientIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
                 ))}
               </div>
             ) : <PlaceholderTab label="Content Ideas" color={color} />}
@@ -416,6 +414,54 @@ export default function NewClientDashboard({ slug, config }: { slug: string; con
         )}
 
       </div>
+    </div>
+  );
+}
+
+function NewClientIdeaCard({ idea, index, slug, color }: { idea: { hook: string; guidance: string; priority: boolean }; index: number; slug: string; color: string }) {
+  const [used, setUsed] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.from("idea_states").select("used").eq("slug", slug).eq("idea_id", `nc-${index}`).single()
+      .then(({ data }) => { if (data) setUsed(data.used); });
+  }, [slug, index]);
+
+  async function toggleUsed(e: React.MouseEvent) {
+    e.stopPropagation();
+    const next = !used;
+    setSaving(true);
+    setUsed(next);
+    const supabase = createClient();
+    await supabase.from("idea_states").upsert(
+      { slug, idea_id: `nc-${index}`, used: next },
+      { onConflict: "slug,idea_id" }
+    );
+    setSaving(false);
+  }
+
+  return (
+    <div style={{ background: used ? "#f7f6f3" : idea.priority ? "#f0f7ed" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 12, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: idea.guidance ? 10 : 0 }}>
+        <p style={{ fontSize: "0.92rem", fontWeight: 600, color: used ? "#9CA3AF" : "#1C1C1C", margin: 0, lineHeight: 1.5, textDecoration: used ? "line-through" : "none", flex: 1 }}>{idea.hook}</p>
+        <button
+          onClick={toggleUsed}
+          disabled={saving}
+          style={{
+            flexShrink: 0, fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em",
+            textTransform: "uppercase" as const, padding: "5px 12px", borderRadius: 2,
+            border: `1px solid ${used ? "#B0A89E" : color}`,
+            background: used ? "#f3f2f0" : "#f0f7ed",
+            color: used ? "#7A746E" : color,
+            cursor: saving ? "not-allowed" : "pointer",
+            transition: "all 0.15s ease",
+          }}
+        >
+          {used ? "Used ✓" : "Mark used"}
+        </button>
+      </div>
+      {idea.guidance && <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>}
     </div>
   );
 }
