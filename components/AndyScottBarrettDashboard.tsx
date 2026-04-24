@@ -355,7 +355,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 8px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card below has the hook, the direction, questions to answer before you write, and a CTA. Set the 30-minute timer and go.</p>
             <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 8, padding: "12px 16px", marginBottom: 24 }}>
-              <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>The rule:</strong> Past 30 minutes you're making silly tweaks. You said it yourself. Post and move on.</p>
+              <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>The rule:</strong> If you're still editing after 30 minutes, it's probably good enough. Give it one last read and hit post.</p>
             </div>
 
             {[
@@ -461,7 +461,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               {
                 num: "01",
                 title: "The 30-minute rule is non-negotiable",
-                body: "You know you overthink. You've acknowledged it, you've even added a reminder to your Claude project about it. Past 30 minutes you're making silly tweaks that don't improve the post — they just delay it. Set the timer. When it goes off, read it once more, post it, and move on. The audience doesn't see your doubt. They just see whether you showed up.",
+                body: "Set a 30-minute timer when you sit down to write. If it's still going when the timer ends, give it one last read, trust your instincts, and post it. The audience never sees the draft — they only see whether you showed up or didn't.",
               },
               {
                 num: "02",
