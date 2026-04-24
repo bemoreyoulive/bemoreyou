@@ -64,33 +64,33 @@ export default function AdminDashboard() {
   const activeCount = clients.filter(c => c.status === "Active").length;
 
   function statusStyle(status: string) {
-    if (status === "Active") return { background: "#e8f5ee", color: "#2e7d4f" };
-    if (status === "Pending") return { background: "#fff3ec", color: "#E8521C" };
-    return { background: "#f3f2f0", color: "#7A746E" };
+    if (status === "Active") return { background: "rgba(46,125,79,0.18)", color: "#4caf7d", border: "1px solid rgba(46,125,79,0.3)" };
+    if (status === "Pending") return { background: "rgba(232,82,28,0.15)", color: "#E8521C", border: "1px solid rgba(232,82,28,0.3)" };
+    return { background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.1)" };
   }
 
   return (
-    <div className="min-h-screen" style={{background: "#F5F1EC"}}>
-      <nav style={{background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0"}}>
+    <div className="min-h-screen" style={{background: "#13120f"}}>
+      <nav style={{background: "rgba(19,18,15,0.96)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "14px 0"}}>
         <div style={{maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
           <div>
-            <p style={{fontSize: "1.1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", margin: 0, fontFamily: "var(--font-dm-serif), serif"}}>
+            <p style={{fontSize: "1.1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#fff", margin: 0, fontFamily: "var(--font-dm-serif), serif"}}>
               BeMore<span style={{color: "#4ec9d0"}}>You</span>
             </p>
-            <p style={{fontSize: "0.63rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: 0}}>Admin Dashboard</p>
+            <p style={{fontSize: "0.63rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", margin: 0}}>Admin Dashboard</p>
           </div>
-          <div style={{display: "flex", alignItems: "center", gap: 12}}>
-            <a href="/admin/onboarding" style={{fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#E8521C", textDecoration: "none", padding: "9px 20px", border: "1px solid #E8521C", borderRadius: 3}}>
+          <div style={{display: "flex", alignItems: "center", gap: 10}}>
+            <a href="/admin/onboarding" style={{fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#E8521C", textDecoration: "none", padding: "8px 18px", border: "1px solid rgba(232,82,28,0.4)", borderRadius: 3, background: "rgba(232,82,28,0.08)"}}>
               Onboarding
             </a>
-            <a href="https://bemoreyoulive.com/onboarding" target="_blank" rel="noopener noreferrer" style={{fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", textDecoration: "none", padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3}}>
+            <a href="https://bemoreyoulive.com/onboarding" target="_blank" rel="noopener noreferrer" style={{fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", textDecoration: "none", padding: "8px 18px", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 3}}>
               Onboard New Client
             </a>
-            <a href="/admin/clients/invite" style={{fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", textDecoration: "none", padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3}}>
+            <a href="/admin/clients/invite" style={{fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", textDecoration: "none", padding: "8px 18px", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 3}}>
               + Invite Client
             </a>
             <form action="/api/signout" method="POST" style={{margin: 0}}>
-              <button type="submit" style={{fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", padding: "9px 20px", border: "1px solid #E0DBD3", borderRadius: 3, background: "transparent", cursor: "pointer"}}>
+              <button type="submit" style={{fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", padding: "8px 18px", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 3, background: "transparent", cursor: "pointer"}}>
                 Sign Out
               </button>
             </form>
@@ -99,46 +99,51 @@ export default function AdminDashboard() {
       </nav>
 
       <div style={{maxWidth: 1160, margin: "0 auto", padding: "56px 36px"}}>
-        <div style={{display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 40}}>
-          <div>
-            <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 8, display: "flex", alignItems: "center", gap: 8}}>
-              <span style={{display: "inline-block", width: 24, height: 2, background: "#E8521C", verticalAlign: "middle"}} />
-              Your Clients
-            </p>
-            <h2 style={{fontSize: "clamp(2rem, 3vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, letterSpacing: "-0.03em", color: "#1C1C1C", margin: 0, lineHeight: 1.1}}>
-              {activeCount} active · {clients.length} total
-            </h2>
-          </div>
+        <div style={{marginBottom: 44}}>
+          <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#E8521C", marginBottom: 10, display: "flex", alignItems: "center", gap: 8}}>
+            <span style={{display: "inline-block", width: 20, height: 2, background: "#E8521C"}} />
+            Your Clients
+          </p>
+          <h2 style={{fontSize: "clamp(2rem, 3vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, letterSpacing: "-0.03em", color: "#fff", margin: 0, lineHeight: 1.1}}>
+            {activeCount} active · {clients.length} total
+          </h2>
         </div>
 
-        <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20}}>
+        <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16}}>
           {clients.map((client) => (
             <a
               key={client.slug}
               href={client.status === "Pending" ? `/admin/onboarding` : (client.adminPath ?? "#")}
-              style={{display: "block", background: "#fff", borderRadius: 4, border: "1px solid #E0DBD3", padding: "28px 32px", textDecoration: "none", transition: "box-shadow 0.2s ease, transform 0.2s ease"}}
-              onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 32px rgba(28,28,28,0.10)"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; }}
-              onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; }}
+              style={{display: "block", background: "#1c1b17", borderRadius: 8, border: "1px solid rgba(255,255,255,0.07)", textDecoration: "none", overflow: "hidden", transition: "transform 0.2s ease, box-shadow 0.2s ease"}}
+              onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-3px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 12px 40px rgba(0,0,0,0.4)`; }}
+              onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
             >
-              <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 20}}>
-                <div style={{width: 44, height: 44, borderRadius: 3, background: client.color, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em"}}>
-                  {client.initials}
+              {/* Colour bar */}
+              <div style={{height: 3, background: client.color, width: "100%"}} />
+
+              <div style={{padding: "24px 26px 22px"}}>
+                <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 18}}>
+                  <div style={{width: 42, height: 42, borderRadius: 6, background: `${client.color}22`, border: `1px solid ${client.color}44`, display: "flex", alignItems: "center", justifyContent: "center", color: client.color, fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em"}}>
+                    {client.initials}
+                  </div>
+                  <span style={{fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20, ...statusStyle(client.status)}}>
+                    {client.status}
+                  </span>
                 </div>
-                <span style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 2, ...statusStyle(client.status)}}>
-                  {client.status}
-                </span>
-              </div>
-              <h3 style={{fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px", letterSpacing: "-0.01em"}}>{client.name}</h3>
-              <p style={{fontSize: "0.85rem", color: "#7A746E", margin: "0 0 20px"}}>{client.role || "Questionnaire submitted"}</p>
-              <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: 16, borderTop: "1px solid #E0DBD3", fontSize: "0.78rem", color: "#7A746E"}}>
-                <div style={{display: "flex", alignItems: "center", gap: 12}}>
-                  <span>Since {client.started}</span>
-                  <span style={{color: "#E0DBD3"}}>·</span>
-                  <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
+
+                <h3 style={{fontSize: "1rem", fontWeight: 600, color: "#fff", margin: "0 0 3px", letterSpacing: "-0.01em"}}>{client.name}</h3>
+                <p style={{fontSize: "0.82rem", color: "rgba(255,255,255,0.4)", margin: "0 0 22px", lineHeight: 1.4}}>{client.role || "Questionnaire submitted"}</p>
+
+                <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: 14, borderTop: "1px solid rgba(255,255,255,0.07)", fontSize: "0.75rem"}}>
+                  <div style={{display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.3)"}}>
+                    <span>Since {client.started}</span>
+                    <span style={{opacity: 0.4}}>·</span>
+                    <span style={{fontWeight: 600, color: client.color}}>{client.sessions} sessions</span>
+                  </div>
+                  {client.status === "Pending" && (
+                    <span style={{fontWeight: 600, color: "#E8521C", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase"}}>View →</span>
+                  )}
                 </div>
-                {client.status === "Pending" && (
-                  <span style={{fontWeight: 600, color: "#E8521C", fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase"}}>View answers →</span>
-                )}
               </div>
             </a>
           ))}
