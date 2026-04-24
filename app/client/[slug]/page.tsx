@@ -1111,14 +1111,14 @@ const NM_COLOR = "#7c3aed";
 const NM_NEXT_MOVE = "Land the CMO hire. Four interviews this week — hold the line on your terms. Don't let another week pass without a signed consultant.";
 
 const nmTodos = [
-  { id: "nm1", text: "Land the CMO / 3-month consultant hire this week. Four interviews booked (two Wednesday, one Thursday, one Friday). Hold the line on your terms — project-based fee, 40% up front, KPI of 50 paid members by end of three months. Don't bend on the payment structure again." },
-  { id: "nm2", text: "Once CMO is signed, brief them on the Open Sanctuary → 14-day trial switch and the funnel diagnostic. Their first job is the 10–15 parent interviews. You are not doing those yourself — that's the whole point." },
-  { id: "nm3", text: "Start 'Behind the Hush' concept work with Claude. You said you'd send your first pass to Ben — do it before 6 May so we can shape it in the last fortnightly session. One-line format idea: reel hook → written post → newsletter CTA via ManyChat." },
+  { id: "nm1", text: "Land the CMO / 3-month consultant hire this week. Four interviews booked (two Wednesday, one Thursday, one Friday). Hold the line on your terms — project-based fee, 40% up front, KPI of 50 paid members by end of three months. Don't bend on the payment structure again.", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
+  { id: "nm2", text: "Once CMO is signed, brief them on the Open Sanctuary → 14-day trial switch and the funnel diagnostic. Their first job is the 10–15 parent interviews. You are not doing those yourself — that's the whole point.", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
+  { id: "nm3", text: "Start 'Behind the Hush' concept work with Claude. You said you'd send your first pass to Ben — do it before 6 May so we can shape it in the last fortnightly session. One-line format idea: reel hook → written post → newsletter CTA via ManyChat.", tabLink: { label: "See Content Ideas", tab: "content" } },
   { id: "nm4", text: "HushAway Pod — Huddersfield is live and mid-baseline. Day 30 check-in is coming. Make sure NDA + media consent forms are signed by all five parents. Collect one usable story or parent reaction now, even if it's just a quote — don't wait for the full 60-day data." },
   { id: "nm5", text: "Switch the email sender name from HushAway to Nikki (founder of HushAway). This one has been on the list too long. It's a 5-minute job in Kajabi and it materially lifts open rates. Do it before the next send." },
-  { id: "nm6", text: "Happy Place Festival — lock the capture plan. Who's filming, what's the interview list, what assets do you want out of the day. Treat it like a content shoot, not a day out. You'll use this content for months." },
+  { id: "nm6", text: "Happy Place Festival — lock the capture plan. Who's filming, what's the interview list, what assets do you want out of the day. Treat it like a content shoot, not a day out. You'll use this content for months.", tabLink: { label: "See Content Ideas", tab: "content" } },
   { id: "nm7", text: "Protect the mornings. You told Ben you were in a dark place two weeks ago — the 45-minute gym window is non-negotiable. Don't trade it for another interview. You cannot pour from an empty cup and the business needs your clearest thinking, not your most hours." },
-  { id: "nm8", text: "Let April's scheduled LinkedIn posts run their course. Do not change them. Do not obsess over them. All energy goes into the CMO hire and the Behind the Hush concept — that is where the next 3 months of output actually gets built." },
+  { id: "nm8", text: "Let April's scheduled LinkedIn posts run their course. Do not change them. Do not obsess over them. All energy goes into the CMO hire and the Behind the Hush concept — that is where the next 3 months of output actually gets built.", tabLink: { label: "Browse Content Ideas", tab: "content" } },
 ];
 
 function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
@@ -1189,7 +1189,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
 
             <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 28}}>
               <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 16, margin: "0 0 16px"}}>Your To-Do List</p>
-              <ClientTodoList items={nmTodos} clientName="Nikki McReynolds" slug={slug} accentColor={NM_COLOR} />
+              <ClientTodoList items={nmTodos} clientName="Nikki McReynolds" slug={slug} accentColor={NM_COLOR} onTabLink={setActiveTab} />
             </div>
 
             <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28}}>
@@ -1622,14 +1622,53 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
 
   function IdeaCard({ id, hook, format, why, prompt, extra }: { id: string; hook: string; format: string; why?: string; prompt?: string; extra?: React.ReactNode }) {
     const isOpen = openIdeas[id];
+    const [used, setUsed] = useState(false);
+    const [saving, setSaving] = useState(false);
+
+    useEffect(() => {
+      const supabase = createClient();
+      supabase.from("idea_states").select("used").eq("slug", slug).eq("idea_id", `nm-${id}`).single()
+        .then(({ data }) => { if (data) setUsed(data.used); });
+    }, [id]);
+
+    async function toggleUsed(e: React.MouseEvent) {
+      e.stopPropagation();
+      const next = !used;
+      setSaving(true);
+      setUsed(next);
+      const supabase = createClient();
+      await supabase.from("idea_states").upsert(
+        { slug, idea_id: `nm-${id}`, used: next },
+        { onConflict: "slug,idea_id" }
+      );
+      setSaving(false);
+    }
+
     return (
-      <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, overflow: "hidden"}}>
-        <div onClick={() => setOpenIdeas(prev => ({...prev, [id]: !prev[id]}))} style={{display: "flex", alignItems: "center", gap: 14, padding: "16px 20px", cursor: "pointer", userSelect: "none"}}>
-          <p style={{flex: 1, fontSize: "0.9rem", fontWeight: 600, color: "#1a1916", lineHeight: 1.4, margin: 0}}>{hook}</p>
-          <div style={{display: "flex", alignItems: "center", gap: 8, flexShrink: 0}}>
-            <span style={{fontSize: "0.68rem", fontWeight: 600, padding: "2px 8px", borderRadius: 20, background: "#eef2f7", color: "#3a5c7a"}}>{format}</span>
+      <div style={{background: used ? "#f7f6f3" : "#fff", border: "1px solid #e4e2dc", borderRadius: 8, overflow: "hidden", opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease"}}>
+        <div style={{display: "flex", alignItems: "center", gap: 14, padding: "16px 20px"}}>
+          <div onClick={() => setOpenIdeas(prev => ({...prev, [id]: !prev[id]}))} style={{flex: 1, display: "flex", alignItems: "center", gap: 14, cursor: "pointer", userSelect: "none" as const}}>
+            <p style={{flex: 1, fontSize: "0.9rem", fontWeight: 600, color: used ? "#9e9b94" : "#1a1916", lineHeight: 1.4, margin: 0, textDecoration: used ? "line-through" : "none"}}>{hook}</p>
+            <div style={{display: "flex", alignItems: "center", gap: 8, flexShrink: 0}}>
+              <span style={{fontSize: "0.68rem", fontWeight: 600, padding: "2px 8px", borderRadius: 20, background: "#eef2f7", color: "#3a5c7a"}}>{format}</span>
+            </div>
+            <span style={{color: "#9e9b94", fontSize: "0.68rem", transition: "transform 0.2s", transform: isOpen ? "rotate(90deg)" : "none", flexShrink: 0}}>▶</span>
           </div>
-          <span style={{color: "#9e9b94", fontSize: "0.68rem", transition: "transform 0.2s", transform: isOpen ? "rotate(90deg)" : "none", flexShrink: 0}}>▶</span>
+          <button
+            onClick={toggleUsed}
+            disabled={saving}
+            style={{
+              flexShrink: 0, fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em",
+              textTransform: "uppercase" as const, padding: "4px 10px", borderRadius: 4,
+              border: `1px solid ${used ? "#c4c0b8" : "#2e7d4f"}`,
+              background: used ? "#eeede8" : "#e8f5ee",
+              color: used ? "#9e9b94" : "#2e7d4f",
+              cursor: saving ? "not-allowed" : "pointer",
+              transition: "all 0.15s ease",
+            }}
+          >
+            {used ? "Used ✓" : "Mark used"}
+          </button>
         </div>
         {isOpen && (
           <div style={{padding: "0 20px 18px 20px", borderTop: "1px solid #e4e2dc"}}>
