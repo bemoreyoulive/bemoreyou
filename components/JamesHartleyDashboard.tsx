@@ -15,7 +15,7 @@ const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
 const SESSION_LABEL = "Session 15 · 29 April 2026";
-const NEXT_MOVE = "Write your power statements before the 29 April session. Use your clients' actual words — 'the spaghetti is unravelling', 'progress I never expected to make'. Three sentences: what they had before, what changed, what they have now. Bring a draft and we'll sharpen it together.";
+const NEXT_MOVE = "You have 8 live conversations. Move them forward this week — don't let them go cold. For each one: send a personalised follow-up referencing something specific from your last conversation, offer a clear next step, and use your Calendly link. The goal is to have at least 2–3 calls booked before 29 April. Bring an update on where each prospect is.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -32,20 +32,20 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "jh1",
-    text: "Write your power statements",
-    subtext: "Use the feedback your coaching clients have already given you — their words, not yours. Start with: what they had before working with you, what changed, what they now have. Three sentences. That's the foundation for everything else — headline, about section, how you pitch on calls.",
+    text: "Move your 8 live conversations forward this week",
+    subtext: "This is the priority. Don't let them go cold. For each one: send a personalised follow-up that references something specific from your last conversation, and offer a clear next step — 'I'd love to continue this conversation. Here's my Calendly link.' You've already done the hard work of getting in the room. Now close the loop.",
     section: "Priority — do this first",
   },
   {
     id: "jh2",
     text: "Ring-fence one BD day per week",
-    subtext: "You tried this once and it worked. It wasn't magic — it was structure. Block a morning in your calendar and protect it. On that morning: reach out to 4–5 people, follow up on any open threads, and send your Calendly link to anyone who hasn't booked yet.",
+    subtext: "You tried this once and it worked. It wasn't magic — it was structure. Block a morning in your calendar and protect it. On that morning: follow up on the 8 live conversations, reach out to 3–4 new contacts, and send your Calendly link to anyone who hasn't booked yet.",
     section: "Business development",
   },
   {
     id: "jh3",
-    text: "Follow up on all open LinkedIn conversations within 48 hours",
-    subtext: "You've had people engage with your posts — CEOs, directors, people who've sent connection requests. You're not following through. Message them: \"Thanks for engaging with the post — I'd love to know what resonated. Happy to chat if it's useful.\" That's it. No pitch.",
+    text: "Write your power statements",
+    subtext: "Use the feedback your coaching clients have already given you — their words, not yours. Start with: what they had before working with you, what changed, what they now have. Three sentences. That's the foundation for everything else — headline, about section, how you pitch on calls. Bring a draft to 29 April.",
     section: "Business development",
   },
   {
@@ -173,6 +173,19 @@ const SESSIONS: {
 
 // ─── POSITIONING ──────────────────────────────────────────────────────────────
 
+const POSITIONING_FIRST_PERSON: { label: string; text: string; note: string }[] = [
+  {
+    label: "Option 1 — purpose-led",
+    text: "I help leaders move from position to purpose. After 30 years in global people leadership — most recently at Swiss Re — I went independent to do the work I find most meaningful: stepping in as an interim or fractional CPO, advising on people and culture strategy, and coaching senior leaders through the transitions that actually matter. I bring commercial rigour and a human edge. I've been in the room at board level. I've also lived the identity shift myself. That's the combination my clients don't find anywhere else.",
+    note: "Use this at networking events or when meeting people 1:1. Lead with the purpose, land on what makes you different. Flows naturally into a conversation.",
+  },
+  {
+    label: "Option 2 — outcome-led",
+    text: "I work with leaders and organisations at inflection points — the moments where the people decisions are the commercial decisions. Over 30 years I've run people functions across Zurich, Hong Kong, Tokyo, Paris, and London. Now I operate independently: as an interim or fractional CPO, as a consulting partner on culture and transformation, and as an executive coach. What my clients say about working with me: straight-talking, calm clarity, simplifying the complex. I call out what others won't — with both empathy and edge.",
+    note: "Use this when you want to lead with credibility and outcomes rather than identity. Stronger in more formal introductions or with boards and senior stakeholders.",
+  },
+];
+
 const POSITIONING: {
   headline: string;
   subline: string;
@@ -211,15 +224,19 @@ const POSITIONING: {
   audiences: [
     {
       label: "CEOs & C-Suite of mid-size organisations",
-      body: "PE-backed, financial services, professional services, start-up to scale-up. Genuine inflection points — new leadership, growth phase, cultural shift. Leaders who already know something isn't working.",
+      body: "PE-backed, financial services, professional services, start-up to scale-up. Leaders at genuine inflection points — new leadership, growth phase, cultural shift, post-merger integration. They already know something isn't working. They don't need a framework, they need someone who's been in the room and can move fast. James steps in as an interim or fractional CPO and operates from day one. No ramp-up, no handholding.",
     },
     {
       label: "Senior & emerging leaders at career transitions",
-      body: "People who've tied their identity to a title and found it hollow. High-performers with a confidence or clarity gap. Ambitious but not arrogant. Ready to be challenged.",
+      body: "High-performers who've tied their identity to a title and found it hollow when the title changes or disappears. People who've made it to the C-suite and realised the seat doesn't feel how they expected. Ambitious but not arrogant. Smart but stuck. They want to be challenged, not handled. James coaches them through the identity shift — from what they've built to who they actually are. He's done this himself. That credibility is real.",
     },
     {
       label: "Boards making people decisions that matter",
-      body: "Where the cost of a wrong hire, a delayed transformation, or a misread culture is measured in millions. Where pragmatic risk and proportionate courage are the answer — not another framework.",
+      body: "Where the cost of a wrong hire, a delayed transformation, or a misread culture is measured in millions — and where the people risk is consistently underestimated relative to commercial risk. Boards that need an honest outside voice before they make a call, not after. James brings 30 years of operational credibility to those conversations. He's not there to validate the decision — he's there to pressure-test it.",
+    },
+    {
+      label: "Who you're not for",
+      body: "Leaders who want someone to nod politely and colour inside the lines. Organisations looking for another workshop, another framework, another 60-page deck. People who confuse activity with progress. If you want cautious, consensus-led, everything-approved-by-committee — James is not the right fit and he'll tell you that upfront.",
     },
   ],
   themes: [
@@ -264,7 +281,99 @@ After a long corporate career — most recently in senior people leadership at S
 What clients tend to say about working with me: straight-talking, calm clarity, simplifying the complex. I'm motivated by mission. I call out what others won't — with both empathy and edge. I bring execution discipline without being stifled by structure, challenge without ego, momentum without the mess.
 
 If you want someone to nod politely and colour inside the lines, I'm not for you. If you want a partner who'll do the real work — purpose ahead of policy, pragmatism ahead of process — let's talk.`,
-    note: "Strong values-led framing and good calling-out of who you're not for. Next iteration should evolve toward insight → execution → impact and surface more commercial credibility upfront. Will draft three options once power statements are written.",
+    note: "Good values framing. Next iteration should lead with the insight and open with a stronger hook. Will draft three evolved options once power statements are written.",
+  },
+  {
+    label: "Next iteration (draft — for refinement after power statements are done)",
+    text: `Most organisations get commercial risk right. They get people risk wrong.
+
+I've spent 30 years inside that gap — as a people leader across Zurich, Hong Kong, Tokyo, Paris, and London, most recently in senior HR leadership at Swiss Re. I've watched organisations make bold commercial bets in a single meeting and spend months avoiding the people decisions that would actually unlock them.
+
+Now I work independently. I step in as an interim or fractional CPO when organisations are at inflection points — new leadership, rapid growth, cultural shift, transformation that's stalled. I partner with leadership teams on culture and people strategy. And I coach senior leaders through the transitions that matter: from what they've built to who they actually are.
+
+What my clients say about working with me: straight-talking, calm clarity, simplifying the complex. I call out what others won't — with both empathy and edge. Execution discipline without being stifled by structure. Challenge without ego. Momentum without the mess.
+
+Three delivery vehicles, one voice: Interim & Fractional CPO · People, Culture & Transformation Consulting · Executive Coaching.
+
+If you want someone to colour inside the lines — I'm not your person. If you want a partner who'll do the real work, let's talk.`,
+    note: "Draft for the next evolution — leads with insight, surfaces commercial credibility, keeps the voice strong. To be finalised once power statements are complete and Ben has reviewed.",
+  },
+];
+
+// ─── PROSPECT CONVERSION QUESTIONS ───────────────────────────────────────────
+
+const PROSPECT_QUESTIONS: { phase: string; intro: string; questions: string[] }[] = [
+  {
+    phase: "1. Open them up — understand where they are",
+    intro: "Before you pitch anything, get them talking. Your goal in the first 5 minutes is to understand what they're actually carrying.",
+    questions: [
+      "What's taking up most of your headspace at the moment?",
+      "What's shifted for you in the last 6–12 months — professionally or personally?",
+      "If you could change one thing about how things are going right now, what would it be?",
+    ],
+  },
+  {
+    phase: "2. Understand what they've already tried",
+    intro: "Most people have attempted to fix this themselves. Find out what hasn't worked and why — that's where the real conversation starts.",
+    questions: [
+      "Have you worked with a coach or advisor before? What worked and what didn't?",
+      "What have you already tried when it comes to [the challenge they've described]?",
+      "Why do you think it hasn't shifted yet?",
+    ],
+  },
+  {
+    phase: "3. Career direction and clarity",
+    intro: "For coaching prospects especially — get specific about what they're trying to achieve, not just what they're trying to escape.",
+    questions: [
+      "Where do you want to be in two years — and does the path feel clear to you?",
+      "Is there a version of your career that excites you that you haven't given yourself permission to pursue?",
+      "What does success actually look like for you right now — not what it looked like five years ago?",
+    ],
+  },
+  {
+    phase: "4. Influence, visibility and recognition",
+    intro: "These often sit underneath the surface. People rarely volunteer it — but when you name it, something shifts.",
+    questions: [
+      "Do you feel like your contribution is being recognised at the level it should be?",
+      "Is there a gap between how you see yourself and how others see you — and does that gap frustrate you?",
+      "What would it mean for you to be known for the right things — not just the things that got you here?",
+    ],
+  },
+  {
+    phase: "5. Surfacing urgency",
+    intro: "This is the most important part of the conversation. Without urgency, there's no decision. Find out what happens if nothing changes.",
+    questions: [
+      "How long have you been sitting with this?",
+      "What's the cost of it staying the same — to you, your career, the people around you?",
+      "Is there a point where this becomes a real problem if it's not addressed?",
+    ],
+  },
+  {
+    phase: "6. Commitment and readiness",
+    intro: "You're not there to convince anyone. But you can help them work out whether they're ready to do the work.",
+    questions: [
+      "What would have to be true for you to feel like this was the right investment right now?",
+      "What's your honest hesitation — is it the time, the cost, or something else?",
+      "On a scale of 1–10, how important is resolving this for you right now?",
+    ],
+  },
+  {
+    phase: "7. Money resistance",
+    intro: "Don't run from it. Address it directly and reframe the investment.",
+    questions: [
+      "What's the cost of the problem you've just described — in real terms, to you or the business?",
+      "If you had clarity / the right person in the CPO seat / a resolved culture issue, what would that be worth?",
+      "Is price the real hesitation, or is there something underneath that?",
+    ],
+  },
+  {
+    phase: "8. Permission-based close",
+    intro: "Don't pitch — invite. The best close is a question that makes the next step feel like their idea.",
+    questions: [
+      "Based on what you've shared, I think I can help — do you want me to tell you how I work?",
+      "Would it be useful for me to outline what a first engagement might look like?",
+      "I'm not going to push — but if this resonates, the easiest next step is [X]. Want to do that?",
+    ],
   },
 ];
 
@@ -344,6 +453,58 @@ const GOALS = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
+
+function GoalItem({ goal, id, slug, accentColor }: { goal: string; id: string; slug: string; accentColor: string }) {
+  const [achieved, setAchieved] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.from("goal_states").select("achieved").eq("slug", slug).eq("goal_id", id).single()
+      .then(({ data }) => { if (data) setAchieved(data.achieved); });
+  }, [slug, id]);
+
+  async function toggle() {
+    const next = !achieved;
+    setSaving(true);
+    setAchieved(next);
+    const supabase = createClient();
+    await supabase.from("goal_states").upsert(
+      { slug, goal_id: id, achieved: next },
+      { onConflict: "slug,goal_id" }
+    );
+    setSaving(false);
+  }
+
+  return (
+    <div
+      onClick={toggle}
+      style={{
+        display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 10,
+        cursor: saving ? "not-allowed" : "pointer",
+        opacity: saving ? 0.7 : 1,
+      }}
+    >
+      <div style={{
+        flexShrink: 0, width: 20, height: 20, borderRadius: 4, marginTop: 1,
+        border: `2px solid ${achieved ? accentColor : "#D1CBC3"}`,
+        background: achieved ? accentColor : "transparent",
+        display: "flex", alignItems: "center", justifyContent: "center",
+        transition: "all 0.15s ease",
+      }}>
+        {achieved && (
+          <svg width="11" height="8" viewBox="0 0 11 8" fill="none">
+            <path d="M1 4L4 7L10 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        )}
+      </div>
+      <p style={{
+        fontSize: "0.88rem", color: achieved ? "#9CA3AF" : "#3D3935", lineHeight: 1.6, margin: 0,
+        textDecoration: achieved ? "line-through" : "none", transition: "all 0.15s ease",
+      }}>{goal}</p>
+    </div>
+  );
+}
 
 function IdeaCard({ idea, index, slug }: { idea: { hook: string; guidance: string; priority: boolean }; index: number; slug: string }) {
   const [used, setUsed] = useState(false);
@@ -624,6 +785,21 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "0.9rem", opacity: 0.85, lineHeight: 1.6, margin: 0 }}>{POSITIONING.subline}</p>
             </div>
 
+            {/* First-person positioning */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>Your Positioning — First Person</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 14px" }}>Two options to use at networking events, in meetings, or when someone asks "so what do you do?". Read them, pick one, make it yours.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {POSITIONING_FIRST_PERSON.map((p, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${COLOR}`, borderRadius: 4, padding: "22px 26px" }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: COLOR, margin: "0 0 12px" }}>{p.label}</p>
+                    <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.8, margin: "0 0 12px", fontStyle: "italic" }}>"{p.text}"</p>
+                    <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: 0, lineHeight: 1.6 }}>{p.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* LinkedIn headline options */}
             <div style={{ marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 14px" }}>LinkedIn Headline</p>
@@ -698,6 +874,28 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
+            {/* Prospect conversion questions */}
+            <div style={{ marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>Prospect Conversion — Questions That Work</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 14px" }}>Use these in sales conversations and exploratory calls. Not a script — a structure. Work through the phases in order, but follow the conversation. Your goal is to help them articulate what they're carrying, not to pitch at them.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {PROSPECT_QUESTIONS.map((section, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px" }}>
+                    <p style={{ fontSize: "0.78rem", fontWeight: 700, color: COLOR, margin: "0 0 6px" }}>{section.phase}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.55, margin: "0 0 12px", fontStyle: "italic" }}>{section.intro}</p>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {section.questions.map((q, j) => (
+                        <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                          <span style={{ color: COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem", marginTop: 1 }}>→</span>
+                          <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>"{q}"</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <CommentBox clientName={NAME} tabName="Brand Assets" slug={slug} />
           </div>
         )}
@@ -734,24 +932,19 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
         {activeTab === "goals" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: COLOR, marginBottom: 8 }}>Where We're Headed</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Goals</h2>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Tick off goals as you achieve them. Progress saves automatically.</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: COLOR, margin: "0 0 16px" }}>Short-term</p>
                 {GOALS.short.map((g, i) => (
-                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                    <span style={{ color: COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                  </div>
+                  <GoalItem key={i} goal={g} id={`jh-short-${i}`} slug={slug} accentColor={COLOR} />
                 ))}
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: COLOR, margin: "0 0 16px" }}>Long-term</p>
                 {GOALS.long.map((g, i) => (
-                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                    <span style={{ color: COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                  </div>
+                  <GoalItem key={i} goal={g} id={`jh-long-${i}`} slug={slug} accentColor={COLOR} />
                 ))}
               </div>
             </div>
