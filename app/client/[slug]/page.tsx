@@ -15,21 +15,21 @@ import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
-const AF_NEXT_MOVE = "Post the holiday story. Photos, honesty, the storm. No hard CTA. This is the post that brings you back — do it this week.";
+const AF_NEXT_MOVE = "Session 9 is tomorrow — 29th April. We're going through your new ICP, revised positioning, and updated messaging for accountancy. Review the new headline and about section drafts in Brand Assets before the call.";
 
 const afTodos = [
-  { id: "c1", text: "Post the holiday story — with 2 or 3 photos", subtext: "Cruise, Norway, husky ride, the storm, the norovirus. Be honest about the ups and downs. Bring in the business subtly at the end — no hard CTA. This is your first post back and it will land well. Don't overthink it.", section: "Content — this fortnight", tabLink: { label: "See Story ideas in Content tab", tab: "content" } },
-  { id: "c2", text: "Post one SACK SALLY — owner absence angle", subtext: "Shift the focus from Sally to the owner who can't step away. Hook: \"You started a business because of freedom. But right now, you ain't living that dream.\" See the updated SACK SALLY section in Content Ideas for the full brief.", section: "Content — this fortnight", tabLink: { label: "See SACK SALLY in Content tab", tab: "content" } },
-  { id: "c3", text: "Post the bold contrarian differentiator post", subtext: "\"Most people in this space took a course. I've been building systems for 10 to 15 years. They're not the same thing.\" Your words from Session 8 — they're ready. Dry tone. Don't over-explain it. Let it land.", section: "Content — this fortnight", tabLink: { label: "See Bold ideas in Content tab", tab: "content" } },
-  { id: "p1", text: "See David Maguire at the AI networking event (~week of 14th April)", subtext: "Ask him in person how things are progressing with the client. Also ask if he'd be willing to comment on a SACK SALLY post — one well-placed comment from someone with the right audience is worth more than another post into the void.", section: "Pipeline actions" },
-  { id: "p2", text: "Draft commercial approach for the Chris Dillon media-monitoring POC", subtext: "He's going back to the Mars-owned company with an initial price. You need to have your numbers ready. If that doesn't materialise, he wants to do it anyway. Work out what you'd charge and how you'd structure it.", section: "Pipeline actions" },
-  { id: "p3", text: "Send Ben a voice note on the PAPA AI search work", subtext: "Give Ben the detail: what was the problem, what you proposed, what the outcome will be. Don't name the client. Then Ben can help draft a vague case study post once funding is confirmed.", section: "Pipeline actions" },
-  { id: "o1", text: "Success manager call this week — send Ben the recording or detailed notes", subtext: "Not a one-minute voice note. Ben needs the substance of what was discussed so he can translate it into updated messaging, headline, and content. If you can record the call, send that.", section: "Offer clarity — critical" },
-  { id: "o2", text: "Main AI/automation coach session next week — same deal", subtext: "This is the one that should unlock the niche and offer question. Whatever comes out of it needs to reach Ben in detail. That's what updates the headline, About section, and content direction before 22nd April.", section: "Offer clarity — critical" },
-  { id: "b1", text: "Maintain 2 posts per week on LinkedIn", subtext: "Holiday story + SACK SALLY + bold contrarian = three posts for this fortnight. You've got the content. Use the ideas tab if you need a fourth.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
-  { id: "b2", text: "Networking: 2 events per week", subtext: "East Midlands Chamber and AI networking are the constants. Rework your opening intro — lead with the problem you solve, not \"AI and automation.\" People glaze over before you get to the good bit.", section: "Ongoing baseline" },
-  { id: "b3", text: "Land the first aligned implementation client", subtext: "Hold outreach until offer clarity lands from your coach sessions. Then go. Don't throw against the wall with an offer that isn't sharp yet.", section: "Ongoing baseline", tabLink: { label: "See Ben's Recommendations", tab: "recommendations" } },
-  { id: "b4", text: "Continue N8N community contributions", subtext: "Long-game authority-building. Keep going even when it feels slow.", section: "Ongoing baseline" },
+  { id: "n1", text: "Set up warm email domains — do this today", subtext: "This is off the critical path but it's blocking your outreach launch. Warm-up takes 14–21 days. Every day of delay pushes back when you can start. Get this done before anything else.", section: "Niche & outreach — urgent" },
+  { id: "n2", text: "Deep research: UK accountancy retainer deliverables", subtext: "What do accountancy firms typically deliver monthly, quarterly, annually on a retainer? What's the most manual, time-consuming part? Claude or Perplexity with UK-specific prompts. This is the input for your demo builds.", section: "Niche & outreach — urgent" },
+  { id: "n3", text: "Build 2–3 demo automations solving accountancy bottlenecks", subtext: "Once research identifies the 2–3 heaviest-lifting deliverables (likely: client reporting, chase workflows, document generation), build a demo for each. These become the outreach hook — not \"I do automation\" but \"I've already built this for you.\"", section: "Niche & outreach — urgent" },
+  { id: "n4", text: "Book call with Harry and James (Guy Last's team)", subtext: "They'll help you identify the right data sets for accountancy outreach, find contact details, and structure the campaign messaging. Book it this week.", section: "Niche & outreach — urgent" },
+  { id: "b1", text: "Finalise updated LinkedIn headline — post-Session 9", subtext: "Review the 3 new accountancy-specific headline drafts in Brand Assets. Agree the live version with Ben in tomorrow's session, then update LinkedIn within 24 hours.", section: "Post-session actions", tabLink: { label: "See new headline drafts in Brand Assets", tab: "brand" } },
+  { id: "b2", text: "Finalise updated About section — post-Session 9", subtext: "Review the 2 new accountancy-specific About drafts in Brand Assets. Agree the version with Ben in tomorrow's session, then update LinkedIn within 24 hours. Check character count stays within 2,600.", section: "Post-session actions", tabLink: { label: "See new About drafts in Brand Assets", tab: "brand" } },
+  { id: "p1", text: "David Maguire follow-up — partnership still live", subtext: "Partnership opportunity likely converting in May. Follow up after the networking event in the week of 14th April.", section: "Pipeline actions" },
+  { id: "p2", text: "Draft commercial approach for the Chris Dillon media-monitoring POC", subtext: "He's going back to the Mars-owned company with an initial price. Work out what you'd charge and how you'd structure it.", section: "Pipeline actions" },
+  { id: "p3", text: "Chase PAPA funding confirmation", subtext: "Once confirmed, draft a vague case study post (no client name — just the problem, approach, and outcome).", section: "Pipeline actions" },
+  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "Content direction updates after Session 9. Use the ideas tab in the meantime.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
+  { id: "ob2", text: "Networking: 2 events per week", subtext: "Rework your opening intro to lead with the problem, not AI or automation. Start referencing accountancy-specific pain if you're in rooms where that fits.", section: "Ongoing baseline" },
+  { id: "ob3", text: "Continue N8N community contributions", subtext: "Long-game authority-building. Keep going.", section: "Ongoing baseline" },
 ];
 
 const afPositioningDiffs = [
@@ -57,6 +57,59 @@ const afHeadlinesBold = [
   { text: '"I\'ve built systems for UK Athletics, SwimEngland & England Golf. Now I build them for growing businesses that can\'t afford them to break | Equate Digital"', chars: 158, note: "Uses the credibility you almost never mention. \"Can't afford them to break\" connects the old work to the new context cleanly and honestly." },
   { text: '"Whilst anyone can build a system, the question is whether it\'ll still work in 6 months | I\'m the one who makes sure it does | Equate Digital"', chars: 143, note: "Taken from your own strongest quote, adapted for implementor framing. Positions you as someone who thinks past the build — which is rare." },
   { text: '"Diagnosed with autism. Obsessed with edge cases. Builds systems that hold up under real conditions. That\'s probably related. | Equate Digital"', chars: 144, note: "The most distinctive option. Uses your disclosure openly and turns it into a differentiator. High risk, high reward. Only use this if you're ready to own it." },
+];
+
+const afHeadlinesAccountancy = [
+  { text: `"The 'Sheldon' of accountancy automation — I build the systems that take the heavy lifting out of your retainer deliverables | Equate Digital"`, chars: 148, note: "Keeps the Sheldon persona. 'Retainer deliverables' is language accountancy practice owners will immediately recognise — it signals you understand their world without needing to explain it." },
+  { text: `"Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I fix that. | The 'Sheldon' of practice automation | Equate Digital"`, chars: 163, note: "Problem-first structure — names the specific tension that every practice owner lives with. 'Practice automation' is specific enough to attract the right people without alienating others." },
+  { text: `"I automate the manual processes inside accountancy retainers — reporting, chasing, document workflows — so your team can focus on what actually earns the fee | Equate Digital"`, chars: 176, note: "Most specific of the three. 'What actually earns the fee' is sharp language for a practice owner — it speaks to the distinction between billable thinking and admin grind. Slightly long but packs a lot." },
+];
+
+const afAboutVersionsAccountancy = [
+  {
+    label: "Version A — Problem-led (accountancy)",
+    text: `Accountancy firms come to me when the retainer work is taking longer than it should.
+
+Not because the team isn't capable. Because too much of it is still manual — client reporting built from scratch each month, update chasers sent by hand, documents assembled from three different places every time.
+
+I'm Andy. Often described (with affection) as the Sheldon of practice automation.
+
+I build the systems that take the heavy lifting out of your retainer deliverables — the recurring workflows that happen every month, every quarter, every year, regardless of how full the diary is.
+
+Typically I work with practice owners who:
+
+✅ Are delivering good work but spending too much time on the admin around it
+✅ Have processes that rely on one person knowing how they work
+✅ Know it needs fixing but haven't found the time or the right person to fix it
+
+I won't over-promise. I won't build something for the sake of it. And I'll tell you if what you're asking for isn't the right answer.
+
+I've spent 20+ years building complex systems that had to hold up under real conditions. Long before AI became a buzzword.
+
+If your retainer delivery is taking more time than it should, I'm worth a conversation.
+
+Founder, Equate Digital. East Midlands.`,
+    note: "Leads with the practice owner's specific experience — retainer delivery pain. Introduces Sheldon persona early. Clear who-I-work-with and who-I-don't structure. Consistent tone with the current About but speaks directly to the accountancy niche.",
+  },
+  {
+    label: "Version B — Credibility-led (accountancy)",
+    text: `Most accountancy firms I speak to are delivering good work on retainer. The problem is how much of the delivery process is still manual.
+
+Monthly reporting assembled by hand. Client update chasers sent one by one. Documents built from scratch every time.
+
+I build systems that automate those recurring workflows — so the work gets done consistently, without the admin overhead that quietly eats into every week.
+
+I'm Andy. I've spent 20+ years building complex systems that had to work reliably under real conditions — including long-running platforms for UK Athletics, SwimEngland, and England Golf. I bring the same standard to every engagement now.
+
+I won't build something unless it's the right answer. And I'll tell you if it isn't, even if that's not what you wanted to hear.
+
+I work with practice owners who are ready to fix the processes, not just talk about it.
+
+If that's you, let's have a conversation.
+
+Founder, Equate Digital. East Midlands.`,
+    note: "Opens with the market observation rather than a direct question to the reader. Brings in the NGB credibility to anchor the technical depth claim. Slightly more confident in tone — works well once Andy has a proof case in the accountancy niche.",
+  },
 ];
 
 const afAboutVersions = [
@@ -351,7 +404,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AF_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AF</div>
             <div>
               <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Felton</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · April 2026 · Session 8</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · April 2026 · Session 9</p>
             </div>
           </div>
           <div style={{ fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif" }}>BeMore<span style={{ color: "#4ec9d0" }}>You</span></div>
@@ -375,7 +428,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
-            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 8" animateIn />
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 9" animateIn />
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 28 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
@@ -401,7 +454,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             </div>
 
             <Callout type="green">
-              <strong>Where we are, April 2026 — post Session 8:</strong> Implementor positioning is confirmed. You've landed a piece of AI work with an existing client (PAPA), have a media-monitoring opportunity with Chris Dillon, and David Maguire looks likely to convert in May. An external AI/automation business coach is now helping you nail the offer and niche. Hold outreach until that clarity lands — then it all updates: headline, About section, content direction. Next session: <strong>22nd April, 11am BST.</strong>
+              <strong>Where we are, April 2026 — going into Session 9:</strong> Niche confirmed — <strong>UK accountancy practices</strong>. Three calls with Guy Last (AI niche strategist) are done. Accountancy practice owners are the primary ICP: accessible decision-makers, retainer-based revenue, regulatory pressure creating automation demand. Next steps are deep research into accountancy deliverables, email domain setup, and a call with Harry &amp; James to build the outreach campaign. Tomorrow&apos;s session (29th April) covers: new ICP, revised positioning, updated headline and About section. Review the new drafts in Brand Assets before the call.
             </Callout>
 
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
@@ -409,10 +462,10 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>You pivoted from software development to process and systems implementation in early 2025 after the bespoke web dev market dried up. Strong skills, real integrity, no clear story about who you were for. Three months in, the positioning is largely sorted. Content is landing with the right people offline. The sticking point is converting the first properly-aligned client, and getting the LinkedIn work in front of enough of the right people — not just thrown against a wall and hoped for.</p>
             </div>
 
-            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Now to 22nd April</h2>
-            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 24px" }}>Updated after Session 8 on 8th April. Tick things off as you go.</p>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 9</h2>
+            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 24px" }}>Updated after Session 9 on 29th April. Tick things off as you go.</p>
 
-            {["Content — this fortnight", "Pipeline actions", "Offer clarity — critical", "Ongoing baseline"].map(section => {
+            {["Niche & outreach — urgent", "Post-session actions", "Pipeline actions", "Ongoing baseline"].map(section => {
               const sectionItems = afTodos.filter(t => t.section === section);
               return (
                 <div key={section} style={{ marginBottom: 28 }}>
@@ -469,6 +522,21 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
+            {/* New accountancy headline drafts */}
+            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Three new headline drafts below, written for the accountancy niche. Review with Ben, agree the live version, then update LinkedIn within 24 hours.</p>
+            </div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>New Headline Drafts — Accountancy Niche</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+              {afHeadlinesAccountancy.map((h, i) => (
+                <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 6, padding: "18px 22px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: AF_COLOR, margin: "0 0 8px" }}>Option {i + 1} · {h.chars} chars</p>
+                  <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 10px" }}>{h.text}</p>
+                  <p style={{ fontSize: "0.78rem", color: "#7A746E", margin: 0, lineHeight: 1.5 }}>{h.note}</p>
+                </div>
+              ))}
+            </div>
+
             {/* LinkedIn Banner */}
             <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>LinkedIn Banner — Live</p>
             <div style={{ background: "#0f1f3d", borderRadius: 8, padding: "28px 32px", marginBottom: 6, display: "flex", flexDirection: "column", gap: 10 }}>
@@ -517,20 +585,37 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </p>
             </div>
 
+            {/* New accountancy About drafts */}
+            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Two new About section drafts below, written for the accountancy niche. Review with Ben, agree the live version, then update LinkedIn within 24 hours.</p>
+            </div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>New About Section Drafts — Accountancy Niche</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
+              {afAboutVersionsAccountancy.map((v, i) => (
+                <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 8, padding: "28px 32px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, color: AF_COLOR, textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 16px" }}>{v.label}</p>
+                  <div style={{ fontSize: "0.93rem", lineHeight: 1.9, color: "#3D3935", whiteSpace: "pre-line", marginBottom: 16 }}>{v.text}</div>
+                  <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "10px 14px" }}>
+                    <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>{v.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             {/* ICP */}
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 18px" }}>Your Ideal Client (ICP)</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
                 <div>
                   <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 6px" }}>Who they are</p>
-                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>Founder-led businesses in the 1–10 employee range. Scaling fast. Manual processes are breaking under growth pressure. Spreadsheets have become a liability and the founder knows it's unsustainable but doesn't know what to replace it with — or who to trust to build it properly.</p>
+                  <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>UK accountancy practice owners. Running on recurring retainers, servicing 50–200 business clients. Familiar with software (Xero, QuickBooks) but still drowning in manual processes around their retainer deliverables — monthly reporting, chasing, document workflows. Under regulatory pressure from Making Tax Digital. Decision-maker is directly accessible: public email, active on LinkedIn.</p>
                 </div>
                 <div>
                   <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 6px" }}>What they say</p>
                   {[
-                    '"Everything takes way more effort than it should."',
-                    '"We\'ve got smart people burning out doing things manually."',
-                    '"I know we need to fix this but I don\'t know where to start."',
+                    '"The reporting takes longer than the actual work."',
+                    '"We\'re always chasing clients for the same things."',
+                    '"I know this should be automated — I just haven\'t got round to it."',
                     '"I\'ve been burned by over-promising before — I need someone straight."',
                     '"I don\'t need clever. I need it to work reliably."',
                   ].map((q, i) => (
@@ -541,7 +626,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                 <div>
                   <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 8px" }}>Good fit</p>
-                  {["Recognises the problem and isn't defensive about it", "Has budget and is ready to invest in a proper fix", "Respects technical expertise — doesn't want cheap", "Values honesty over a polished pitch", "Open to being told what the right answer actually is"].map((f, i) => (
+                  {["Practice owner who recognises the admin overhead and isn't defensive about it", "Has recurring retainer revenue — money to invest in a proper fix", "Respects technical expertise, doesn't want cheap", "Values honesty over a polished pitch", "Motivated by efficiency and protecting the practice reputation"].map((f, i) => (
                     <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
                       <span style={{ color: AF_COLOR, fontWeight: 700, flexShrink: 0 }}>✓</span>
                       <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
@@ -550,7 +635,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 </div>
                 <div>
                   <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "#c0392b", margin: "0 0 8px" }}>Poor fit</p>
-                  {["Solopreneurs or charities — no budget", `Wants "clever" without caring if it works long-term`, `Wants shortcuts or someone to "just make it work somehow"`, "Doesn't respect technical expertise", "Drains your social energy — you know who these people are"].map((f, i) => (
+                  {["National Governing Bodies — slow adopters, small market, committee-driven", "Solopreneurs or charities — no budget", `Wants "clever" without caring if it works long-term`, "Doesn't respect technical expertise", "Drains your social energy — you know who these people are"].map((f, i) => (
                     <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
                       <span style={{ color: "#c0392b", fontWeight: 700, flexShrink: 0 }}>✗</span>
                       <p style={{ fontSize: "0.82rem", color: "#6b6860", margin: 0 }}>{f}</p>
@@ -564,7 +649,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Audience Tiers</p>
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "0 22px", marginBottom: 20 }}>
               {[
-                { badge: "Primary", badgeBg: "#e8f0f7", badgeColor: "#2d5a8e", text: "Founder-led businesses 1–10 employees, scaling past the point where manual processes still work. Drowning in spreadsheets and workarounds. Need someone to go in and fix it properly, not advise on it." },
+                { badge: "Primary", badgeBg: "#e8f0f7", badgeColor: "#2d5a8e", text: "UK accountancy practice owners. Running on retainers, drowning in manual delivery workflows. Decision-makers are accessible, have budget, and are under growing regulatory pressure. Confirmed by Guy Last (niche strategist) April 2026." },
                 { badge: "Partner", badgeBg: "#eef4ef", badgeColor: "#2e7d4f", text: "Consultants and agencies who identify the problems but need a trusted implementor to deliver the solution. David Maguire is the first version of this model. Worth building this channel deliberately." },
                 { badge: "Referral", badgeBg: "#fdf8ec", badgeColor: "#8a6e2a", text: "N8N community, East Midlands Chamber, AI networking events. Authority-building over time — not direct sales, but the place where right-fit clients find you." },
                 { badge: "Avoid", badgeBg: "#fdf0f0", badgeColor: "#8a3a3a", text: "Solopreneurs, charities, public sector. Anyone who wants shortcuts, over-promises, or drains your social energy." },
