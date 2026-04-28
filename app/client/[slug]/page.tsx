@@ -514,12 +514,38 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Live as of April 2026. Leads with AI & automation — worth updating to process/systems language once offer clarity lands.</p>
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
-                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner</p>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner — Current</p>
                 <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 10px" }}>
                   "Most growing businesses I meet are being held together by people doing things manually that a system should be doing. I go in and build the thing that replaces that. I spent 20 years doing it for national sports bodies — now I do it for founder-led businesses."
                 </p>
                 <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Lead with the problem they recognise, land the credential. Don't open with AI or automation.</p>
               </div>
+            </div>
+
+            {/* New UPS drafts for accountancy niche */}
+            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Two new unique positioning statement drafts for networking events, updated for the accountancy niche. Agree the preferred version with Ben tomorrow.</p>
+            </div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Unique Positioning Statement — Accountancy Niche Drafts</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+              {[
+                {
+                  label: "Option 1 — Problem-led",
+                  text: `"Unlike most automation providers, I specialise in taking the manual heavy lifting out of accountancy retainer delivery — the reporting, the chasing, the recurring workflows that eat into every week. Often called (with affection) the 'Sheldon' of practice automation, I've spent 20+ years building complex systems that had to hold up under real conditions. My clients typically come to me when their team is spending more time on admin around the work than the work itself."`,
+                  note: "Mirrors the structure of the original UPS. Swaps 'agencies' for accountancy-specific language. 'Retainer delivery' signals niche fluency immediately. Keeps the Sheldon persona and the credential.",
+                },
+                {
+                  label: "Option 2 — Credibility-led",
+                  text: `"Unlike the wave of AI tools promising to transform accountancy overnight, I focus on the unglamorous bit — automating the manual processes inside your retainer workflows so they run consistently, every month, without someone having to hold them together. I've spent 20+ years building systems for organisations like UK Athletics and SwimEngland that couldn't afford to break. I bring the same standard to accountancy practices that are drowning in delivery admin and ready to fix it properly."`,
+                  note: "Positions against the AI hype angle — relevant in a market that's been heavily targeted by shiny tool vendors. 'Couldn't afford to break' connects the NGB credibility to accountancy context cleanly. Slightly bolder in tone.",
+                },
+              ].map((ups, i) => (
+                <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 6, padding: "22px 26px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: AF_COLOR, margin: "0 0 10px" }}>{ups.label}</p>
+                  <p style={{ fontSize: "0.93rem", fontWeight: 500, color: "#1C1C1C", lineHeight: 1.7, margin: "0 0 12px" }}>{ups.text}</p>
+                  <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>{ups.note}</p>
+                </div>
+              ))}
             </div>
 
             {/* New accountancy headline drafts */}
