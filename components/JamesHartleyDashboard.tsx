@@ -300,7 +300,7 @@ If you want someone to nod politely and colour inside the lines, I'm not for you
     label: "Next iteration (draft — for refinement after power statements are done)",
     text: `Thirty years inside organisations teaches you a lot. Some of it you wish you'd learned sooner.
 
-I've led people functions across Zurich, Hong Kong, Tokyo, Paris, Singapore, and London — most recently in senior HR leadership at Swiss Re, before choosing to go independent. Not because corporate life stopped working, but because I wanted to do the parts of it I find most meaningful, with more of the people I actually want to work with.
+I spent thirty years in corporate life — most of it in large, complex organisations, most recently in senior HR leadership at Swiss Re, before choosing to go independent. Not because corporate life stopped working, but because I wanted to do the parts of it I find most meaningful, with more of the people I actually want to work with.
 
 That's what I do now. I step in as an interim or fractional CPO for organisations at inflection points — the moments where the people decisions and the commercial decisions are the same decision. I partner with leadership teams on culture and transformation. And I coach senior leaders through the transitions that matter: the ones where the title stops feeling like the answer and something more interesting starts to emerge.
 
