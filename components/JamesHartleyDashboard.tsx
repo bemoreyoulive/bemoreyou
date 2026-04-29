@@ -33,19 +33,19 @@ const TODOS: { id: string; text: string; subtext?: string; section: string }[] =
   {
     id: "jh1",
     text: "Post at least once a week this month",
-    subtext: "Consistency is the priority. You have content ideas from today's session — they're on the Content tab. Pick one, write it, post it. You don't need a long personal story every time. One insight, one angle, a question at the end. Done.",
+    subtext: "Every week you don't post, someone who might have hired you doesn't know you exist. You have content ideas from today's session on the Content tab — pick one, write it, post it. It doesn't need to be a long personal story. One insight, one angle, a question at the end. The people who will eventually hire you are watching before they ever reach out. Stay visible.",
     section: "Priority — do this first",
   },
   {
     id: "jh2",
     text: "Close your leads this month",
-    subtext: "This is the most commercially urgent thing. Follow up on every live conversation — reference something specific from last time, offer a clear next step, and use your Calendly link. The goal is at least one signed client this month. You've done the hard work of getting in the room. Now close the loop.",
+    subtext: "This is where the money is. Follow up on every live conversation — reference something specific from last time, offer a clear next step, and send your Calendly link. You've already done the hard work of getting in the room. Not following up doesn't just lose the client — it wastes every conversation that got you there. Goal: at least one signed client this month.",
     section: "Priority — do this first",
   },
   {
     id: "jh3",
     text: "Ring-fence one BD morning per week",
-    subtext: "Structure beats willpower every time. Block a morning in your calendar — same morning each week — and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, and send your Calendly link to anyone who hasn't booked yet.",
+    subtext: "You've proved this works — you just haven't made it structural yet. Block the same morning every week and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, send your Calendly link to anyone who hasn't booked. Willpower runs out. A blocked calendar doesn't.",
     section: "Business development",
   },
   {
