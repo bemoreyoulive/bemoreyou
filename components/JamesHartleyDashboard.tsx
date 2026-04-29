@@ -15,7 +15,7 @@ const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
 const SESSION_LABEL = "Session 15 · 29 April 2026";
-const NEXT_MOVE = "You have 8 live conversations. Move them forward this week — don't let them go cold. For each one: send a personalised follow-up referencing something specific from your last conversation, offer a clear next step, and use your Calendly link. The goal is to have at least 2–3 calls booked before 29 April. Bring an update on where each prospect is.";
+const NEXT_MOVE = "This month: post at least once a week and close your leads. Pick up where your conversations left off — follow up, offer a clear next step, and use your Calendly link. Content ideas from today's session are on the Content tab — they came directly from your notes. Your goal this month is to turn at least one of those conversations into a signed client.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -32,32 +32,26 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "jh1",
-    text: "Move your 8 live conversations forward this week",
-    subtext: "This is the priority. Don't let them go cold. For each one: send a personalised follow-up that references something specific from your last conversation, and offer a clear next step — 'I'd love to continue this conversation. Here's my Calendly link.' You've already done the hard work of getting in the room. Now close the loop.",
+    text: "Post at least once a week this month",
+    subtext: "Consistency is the priority. You have content ideas from today's session — they're on the Content tab. Pick one, write it, post it. You don't need a long personal story every time. One insight, one angle, a question at the end. Done.",
     section: "Priority — do this first",
   },
   {
     id: "jh2",
-    text: "Ring-fence one BD day per week",
-    subtext: "You tried this once and it worked. It wasn't magic — it was structure. Block a morning in your calendar and protect it. On that morning: follow up on the 8 live conversations, reach out to 3–4 new contacts, and send your Calendly link to anyone who hasn't booked yet.",
-    section: "Business development",
+    text: "Close your leads this month",
+    subtext: "This is the most commercially urgent thing. Follow up on every live conversation — reference something specific from last time, offer a clear next step, and use your Calendly link. The goal is at least one signed client this month. You've done the hard work of getting in the room. Now close the loop.",
+    section: "Priority — do this first",
   },
   {
     id: "jh3",
-    text: "Write your power statements",
-    subtext: "Use the feedback your coaching clients have already given you — their words, not yours. Start with: what they had before working with you, what changed, what they now have. Three sentences. That's the foundation for everything else — headline, about section, how you pitch on calls. Bring a draft to 29 April.",
+    text: "Ring-fence one BD morning per week",
+    subtext: "Structure beats willpower every time. Block a morning in your calendar — same morning each week — and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, and send your Calendly link to anyone who hasn't booked yet.",
     section: "Business development",
   },
   {
     id: "jh4",
-    text: "Post once a week minimum — use conversations as source material",
-    subtext: "You don't need to write a long personal story every time. One insight from a client conversation is enough. What's something you heard recently that made you think? Write that. One observation, one angle, a question at the end. Done.",
-    section: "LinkedIn content",
-  },
-  {
-    id: "jh5",
     text: "Revisit the About section once power statements are written",
-    subtext: "The current About section is good but the framing needs to evolve — more insight, more execution, more impact. Once the power statements are done, this update will be quick. Ben will help draft three options.",
+    subtext: "The current About section is good but the framing needs to evolve — more insight, more execution, more impact. Ben will help draft options once you've put words on the page.",
     section: "Profile — when ready",
   },
 ];
@@ -73,6 +67,25 @@ const SESSIONS: {
   agreed: string[];
   nextSession: string;
 }[] = [
+  {
+    number: 15,
+    date: "29 April 2026",
+    title: "Back in the Room — Leads, Content, and the Month Ahead",
+    summary: "Monthly session. James came in having had a month with limited LinkedIn activity but lots of ideas captured in his phone notes — which we worked through together to extract content angles. We checked in on the live conversations from session 14 and talked through where each one had gone. The session had a practical focus: extracting what's already in his head and turning it into usable content ideas, now live on the dashboard. The two clear priorities for May: post at least once a week (using the ideas we pulled out today) and close the live leads — converting at least one into a signed client.",
+    insights: [
+      "Ideas exist — they just need to be extracted and structured, not invented from scratch",
+      "Monthly sessions suit James's rhythm — gives space between while keeping the accountability alive",
+      "Posting consistency matters more than posting perfectly — one observation per week is enough",
+      "The leads won't close themselves — follow-up with a specific reference and a clear next step is the mechanism",
+    ],
+    agreed: [
+      "Post at least once a week in May — use content ideas from this session (now on the Content tab)",
+      "Follow up on all live conversations this week — specific, personal, clear next step",
+      "Ring-fence one BD morning per week in May",
+      "Next session: end of May 2026",
+    ],
+    nextSession: "End of May 2026",
+  },
   {
     number: 14,
     date: "Late March 2026 · London (in-person)",
@@ -625,20 +638,20 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
 
             {/* Latest session recap */}
             <div style={{ background: "#f5f3f0", border: `1px solid #d9d4ce`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
-              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>14</div>
+              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>15</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 14 — Late March 2026 · London (in-person)</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>First face-to-face. Reflective, candid, honest about the duality — optimistic by default but with a real shadow side when stimulation drops. We talked about title, recognition, and redefining success around the quality of conversations rather than the invoice line. 8 live conversations, 2 potential clients in flight. Power statements remain the priority before our next working session on 29 April.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 15 — 29 April 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Monthly session. We extracted content ideas from James's phone notes — they're now live on the Content tab. Two priorities for May: post at least once a week, and close the live leads — converting at least one into a signed client. Next session: end of May 2026.</p>
               </div>
             </div>
 
             {/* Stat cards */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "14", sub: "Since July 2025" },
-                { label: "Next session", value: "29 Apr", sub: "Working session — bring drafts" },
-                { label: "Live conversations", value: "8", sub: "2 potential clients" },
-                { label: "Power statements", value: "Outstanding", sub: "Priority — do before 29 Apr" },
+                { label: "Sessions done", value: "15", sub: "Since July 2025" },
+                { label: "Next session", value: "End of May", sub: "Monthly cadence" },
+                { label: "Goal this month", value: "Post weekly", sub: "And close at least one lead" },
+                { label: "Content ideas", value: "Live", sub: "Check the Content tab" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
