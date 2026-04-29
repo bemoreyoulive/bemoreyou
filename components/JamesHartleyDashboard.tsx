@@ -14,8 +14,8 @@ const COLOR = "#7A746E";
 const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
-const SESSION_LABEL = "Session 15 · 29 April 2026";
-const NEXT_MOVE = "This month: post at least once a week and close your leads. Pick up where your conversations left off — follow up, offer a clear next step, and use your Calendly link. Content ideas from today's session are on the Content tab — they came directly from your notes. Your goal this month is to turn at least one of those conversations into a signed client.";
+const SESSION_LABEL = "Session 15 · 29 April 2026 · Next: 27 May";
+const NEXT_MOVE = "Two things this month: post at least once a week (start with the Odgers panel — write it while it's fresh, tag the people you met), and find at least one new network in London you actually enjoy being part of. Ben is researching options for you. The content ideas from this session are on the Content tab — don't try to do all 10, just pick two or three for May and get them written.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -32,27 +32,33 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "jh1",
-    text: "Post at least once a week this month",
-    subtext: "Every week you don't post, someone who might have hired you doesn't know you exist. You have content ideas from today's session on the Content tab — pick one, write it, post it. It doesn't need to be a long personal story. One insight, one angle, a question at the end. The people who will eventually hire you are watching before they ever reach out. Stay visible.",
+    text: "Write the Odgers panel post — this week, while it's fresh",
+    subtext: "You're about to speak in front of 60–70 FTSE directors. That's not a footnote — that's your content. Write the post the same day or the day after while the experience is live. Don't make it about being chosen; make it about what you observed in the room. Tag 5–10 people you meet. That's your follow-up and your post in one.",
     section: "Priority — do this first",
   },
   {
     id: "jh2",
-    text: "Close your leads this month",
-    subtext: "This is where the money is. Follow up on every live conversation — reference something specific from last time, offer a clear next step, and send your Calendly link. You've already done the hard work of getting in the room. Not following up doesn't just lose the client — it wastes every conversation that got you there. Goal: at least one signed client this month.",
+    text: "Post at least once a week in May",
+    subtext: "Every week you don't post, someone who might have hired you doesn't know you exist. You have 10 ideas on the Content tab — don't try to do all of them. Pick two or three for this month. One insight, one angle, a question at the end. The people who will eventually hire you are watching before they ever reach out.",
     section: "Priority — do this first",
   },
   {
     id: "jh3",
-    text: "Ring-fence one BD morning per week",
-    subtext: "You've proved this works — you just haven't made it structural yet. Block the same morning every week and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, send your Calendly link to anyone who hasn't booked. Willpower runs out. A blocked calendar doesn't.",
-    section: "Business development",
+    text: "Find at least one aligned network in London to join",
+    subtext: "Your IgnitionCraft partner is getting real results from community networks in Oxford. You need the same in London — but the right ones, not the ones that feel like work. Ben is researching options for you. When you find one you like, commit to showing up consistently. One connection leads to another. It's not about the people in the room — it's about who they know.",
+    section: "Network",
   },
   {
     id: "jh4",
-    text: "Revisit the About section once power statements are written",
-    subtext: "The current About section is good but the framing needs to evolve — more insight, more execution, more impact. Ben will help draft options once you've put words on the page.",
-    section: "Profile — when ready",
+    text: "Lead with coaching in every conversation this month",
+    subtext: "Three people told you independently that leading with three service lines reads as hedging. You agreed. From now on: coaching is your first sentence, consulting is your second, CPO is only mentioned if it comes up. Headhunters already know you for CPO work — they don't need reminding. Everyone else should hear coach first.",
+    section: "Positioning",
+  },
+  {
+    id: "jh5",
+    text: "Ring-fence one BD morning per week",
+    subtext: "Structure beats willpower every time. Block the same morning every week and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, and send your Calendly link to anyone who hasn't booked. Willpower runs out. A blocked calendar doesn't.",
+    section: "Business development",
   },
 ];
 
@@ -70,21 +76,25 @@ const SESSIONS: {
   {
     number: 15,
     date: "29 April 2026",
-    title: "Back in the Room — Leads, Content, and the Month Ahead",
-    summary: "Monthly session. James came in having had a month with limited LinkedIn activity but lots of ideas captured in his phone notes — which we worked through together to extract content angles. We checked in on the live conversations from session 14 and talked through where each one had gone. The session had a practical focus: extracting what's already in his head and turning it into usable content ideas, now live on the dashboard. The two clear priorities for May: post at least once a week (using the ideas we pulled out today) and close the live leads — converting at least one into a signed client.",
+    title: "Networks, the Odgers Panel, and Leading with Coaching",
+    summary: "Good energy session. James had just returned from a week in France with his 86-year-old mum — a grounding, precious week. The session covered three things: the pipeline update, a new strategic direction, and the dashboard introduction. On the 8 live conversations: roughly a third withered away (misaligned, out of his control), a third didn't convert for one reason or another, a third still has potential. Ben's read: James is no longer losing work because of commercial inexperience — he's losing misaligned work, which is progress. The big news: an Odgers headhunter has invited James to speak on a panel in front of 60–70 FTSE directors and CEOs. And three people in his network independently told him that leading with three service lines reads as hedging — he agreed, and has decided to consciously lead with coaching first, consulting second, interim CPO third. LinkedIn has gone quiet; 10 content ideas extracted from his phone notes and now live on the dashboard. Ben to research aligned London networks for James to tap into.",
     insights: [
-      "Ideas exist — they just need to be extracted and structured, not invented from scratch",
-      "Monthly sessions suit James's rhythm — gives space between while keeping the accountability alive",
-      "Posting consistency matters more than posting perfectly — one observation per week is enough",
-      "The leads won't close themselves — follow-up with a specific reference and a clear next step is the mechanism",
+      "He's no longer losing work through lack of commercial skill — he's filtering out misaligned work. That's a different problem.",
+      "Offline reputation is flourishing — headhunters choosing him for panels, being described as 'compelling, with a point of view, brings energy'",
+      "'When I get in front of people, I'm really good. I just need to get in front of more people.'",
+      "Leading with three service lines reads as hedging — coaching first, consulting second, interim CPO third",
+      "LinkedIn is the gap — lots of ideas, the moment passes before they get written",
+      "Needs to find communities he actually enjoys, not just useful ones — that's where energy and referrals come from",
     ],
     agreed: [
-      "Post at least once a week in May — use content ideas from this session (now on the Content tab)",
-      "Follow up on all live conversations this week — specific, personal, clear next step",
-      "Ring-fence one BD morning per week in May",
-      "Next session: end of May 2026",
+      "Post at least once a week in May — 10 ideas now on the Content tab, focus on top 2–3 only",
+      "Follow up with 5–10 people after the Odgers panel — and post about it",
+      "Ben to research aligned London networks: founders groups, LGBT+ business networks, coaching communities",
+      "Be intentional in conversations: lead with coaching, then consulting, then CPO",
+      "Ben to draft revised positioning statements that lead with coaching",
+      "James to explore the HR journalist podcast mini-series",
     ],
-    nextSession: "End of May 2026",
+    nextSession: "27 May 2026 · 9am",
   },
   {
     number: 14,
@@ -394,38 +404,83 @@ const PROSPECT_QUESTIONS: { phase: string; intro: string; questions: string[] }[
 
 const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [
   {
-    hook: "The thing your board agreed on faster than any people decision this year",
-    guidance: "You observed this in a client's ExCo — a major commercial partnership agreed in one sharp meeting, followed by weeks of performance calibration. Flip it into a post: organisations make bold commercial bets daily but become risk-averse the moment it's a people decision. Why? What's the cost of that gap? End with a question: where are you playing it safe when you should be taking the risk? You've written one strong post in this territory already (the performance vs. performance process one) — this is the next angle in that seam.",
+    hook: "I just spoke on a panel in front of 60 FTSE directors. Here's what I didn't expect.",
+    guidance: "Post this immediately after the Odgers event while the experience is fresh. Don't make it a humble brag about being chosen — make it about what you observed in the room. What question surprised you? What moment landed differently than expected? What did 60 senior leaders in one room tell you about the state of people leadership right now? Tag 5–10 people you met. That's the follow-up and the post in one.",
     priority: true,
+  },
+  {
+    hook: "Everyone's talking about job hugging. I think they're missing the point.",
+    guidance: "Your phrase from session 15 — 'job hugging'. Post-COVID great resignation has swung to the great freeze. Everyone's clinging on, not taking risks. The post isn't just naming the trend — it's asking why, and what it costs people who stay put out of fear rather than choice. You've seen this from both sides: as someone who left a 30-year career voluntarily, and as a coach working with people who are stuck. Write from the tension between the two.",
+    priority: true,
+  },
+  {
+    hook: "Taking a risk in your career. Part two.",
+    guidance: "You wrote about managing risk not meaning taking no risk. This is the follow-up, more personal and specific. You've had three conversations recently where career risk came up: someone relocating from the US to take a chance, a coaching prospect who started her own business, a current client applying for a promotion they weren't sure about. You don't need to name them. 'Three conversations this month, same theme' is enough. The insight: risk isn't the absence of fear, it's moving despite it.",
+    priority: true,
+  },
+  {
+    hook: "The fractional market has a supply problem. Nobody's saying it.",
+    guidance: "Your hypothesis: supply of fractional leaders now exceeds demand, and the market hasn't caught up. This is a genuine perspective, not a safe one — and that's why it's worth writing. What does the glut look like from where you sit? What separates the fractionals who are getting work from the ones who aren't? End with what organisations are still missing by not using fractional leaders properly. This positions you as someone with a real read on the market, not just someone selling their own services.",
+    priority: false,
+  },
+  {
+    hook: "What does 'positively disruptive' actually mean? A CEO asked me. I had to think.",
+    guidance: "A CEO who hired you had read your LinkedIn profile and asked this directly in the interview. That's your hook — someone called you out on your own positioning. What was your answer? This is a post about having a point of view and being able to articulate it under pressure. Write about what positive disruption means to you in practice: throwing rocks outside the greenhouse, not inside it. The Henley peer said it. Make it yours.",
+    priority: false,
+  },
+  {
+    hook: "Are CPOs becoming transformation directors? The line is blurring — and it matters.",
+    guidance: "A real market trend you're observing: more CPOs being appointed to transformation and people leadership roles simultaneously. What does that mean for organisations? What's the opportunity and what's the risk? You sit at this intersection — business leader who operates in HR, not an HR person who supports the business. This is your territory. Write the observation, then your take on what good looks like.",
+    priority: false,
+  },
+  {
+    hook: "If you do what you've always done, you'll get what you've always got. What if that's the point?",
+    guidance: "The reframe from France: you saw it watching the farmers tending their fields — consistency as a virtue, not a criticism. Everyone uses 'if you do what you've always done' as a warning against stagnation. But what about the expertise, the craft, the discipline of doing something the same way because it works? There's a post here about the difference between stubborn repetition and intentional mastery. It's also a quietly contrarian take, which is very you.",
+    priority: false,
+  },
+  {
+    hook: "AI investment is the hook. The answer is still human.",
+    guidance: "You attended an AI panel and came away with this line. Build a post around it. Most AI content on LinkedIn is either breathlessly enthusiastic or defensively sceptical. Yours can be neither. The organisations getting AI right are the ones who've already figured out the human system — culture, trust, communication. The ones struggling with AI are struggling because they were already struggling with people. That's the insight. You've seen it.",
+    priority: false,
+  },
+  {
+    hook: "I give founders advice on building their people and culture. Then I remember I'm a founder too.",
+    guidance: "From your conversation with your IgnitionCraft partner: you advise scale-up founders on people decisions, then go home to the same pressures, the same uncertainty, the same wearing-multiple-hats reality. The post is about the gap between the advice you give and the advice you take yourself. What's the hardest bit of your own counsel to follow? This is honest, self-aware, and very relatable to the founders and independent operators you're trying to reach.",
+    priority: false,
+  },
+  {
+    hook: "The most powerful thing you can do in a coaching conversation is nothing.",
+    guidance: "The power of silence — overfilling the glass. You've been working on this yourself, and you used it recently with a client: coaching a manager who kept jumping in to fill silences when a difficult employee didn't respond immediately. The breakthrough came when she stopped doing the work for them. The post: silence isn't awkward, it's active. The discomfort you feel in the pause is the other person doing the thinking. Count to ten. Let them.",
+    priority: false,
+  },
+  {
+    hook: "The thing your board agreed on faster than any people decision this year",
+    guidance: "You observed this in a client's ExCo — a major commercial partnership agreed in one sharp meeting, followed by weeks of performance calibration. Flip it into a post: organisations make bold commercial bets daily but become risk-averse the moment it's a people decision. Why? What's the cost of that gap? End with a question: where are you playing it safe when you should be taking the risk?",
+    priority: false,
   },
   {
     hook: "What I heard in a room this week that nobody's saying out loud",
-    guidance: "Use something from a recent client conversation — one insight, one observation, one thing someone said that made you think. You don't need to name anyone. 'I was with a leadership team this week...' is enough. The point is to position yourself as someone who's in the room, doing real work, hearing real things. You are the voice for things your clients can't say publicly. One observation is enough — if one person is thinking it, a hundred others are too.",
-    priority: true,
+    guidance: "Use something from a recent client conversation — one insight, one observation, one thing someone said that made you think. You don't need to name anyone. 'I was with a leadership team this week...' is enough. You are the voice for things your clients can't say publicly. One observation is enough — if one person is thinking it, a hundred others are too.",
+    priority: false,
   },
   {
     hook: "I used to hide behind a plant pot to avoid an executive I didn't like. Here's what changed.",
-    guidance: "You mentioned this in your onboarding — literally hiding to avoid difficult conversations early in your career. That's the hook. The post isn't about the hiding — it's about what happened when you stopped. How facing those conversations with confidence unlocked something you didn't expect. This lands both as a leadership story and as a coaching story. It's also very you — specific, self-deprecating, and with a real point underneath it.",
+    guidance: "You mentioned this in your onboarding — literally hiding to avoid difficult conversations early in your career. That's the hook. The post isn't about the hiding — it's about what happened when you stopped. How facing those conversations with confidence unlocked something you didn't expect. Specific, self-deprecating, and with a real point underneath it.",
     priority: false,
   },
   {
     hook: "Three years in. Here's what I got wrong about going independent.",
-    guidance: "A reflective post on what you've learned since leaving corporate — but not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. One thing that looked like progress but wasn't. The best version of this is honest and specific. 'I spent the first year waiting for the work to find me. That was a mistake.' You have the material — use it.",
+    guidance: "A reflective post on what you've learned since leaving corporate — but not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. 'I spent the first year waiting for the work to find me. That was a mistake.' You have the material — use it.",
     priority: false,
   },
   {
     hook: "If you want a more courageous culture, you have to do things that require courage.",
-    guidance: "You said this on the Powered by People podcast and it's one of your sharpest lines. Build a post around it. Most culture programmes are about explaining the new behaviour. The faster route is doing it visibly — leaders go first. Use a short example (you have plenty: the Swiss Re EMEA story, the offsite where you let the team push back, the moment you stopped explaining and started modelling). End with: what's one thing you keep talking about that you haven't actually done yet?",
-    priority: false,
-  },
-  {
-    hook: "Metrics without purpose are meaningless. Here's how I learned that the hard way.",
-    guidance: "From the podcast: the EMEA HR function story — engagement up 30 points, customer satisfaction up 50, after you built 'Our Little Book of Why'. The numbers came after the meaning, not the other way round. Tell that story tightly. The post writes itself when you frame it as: 'I used to lead with the dashboard. Now I lead with the why.' Real proof, your voice, lands without sounding like LinkedIn fluff.",
+    guidance: "You said this on the Powered by People podcast. Most culture programmes are about explaining the new behaviour. The faster route is doing it visibly — leaders go first. Use a short example. End with: what's one thing you keep talking about that you haven't actually done yet?",
     priority: false,
   },
   {
     hook: "Nobody's alone in their problems. So why does it feel that way in a boardroom?",
-    guidance: "You said this spontaneously in session 13 — 'no one is alone in their problems' — and it's genuinely good. Build a post around it: the paradox that senior leaders are surrounded by people but often the most isolated when it comes to the real conversations. Connect it to what you actually do — create the conditions where those conversations can happen. End with a question that makes people feel seen.",
+    guidance: "You said this spontaneously in session 13. Build a post around it: the paradox that senior leaders are surrounded by people but often the most isolated when it comes to the real conversations. Connect it to what you actually do — create the conditions where those conversations can happen.",
     priority: false,
   },
 ];
@@ -649,7 +704,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>15</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 15 — 29 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Monthly session. We extracted content ideas from James's phone notes — they're now live on the Content tab. Two priorities for May: post at least once a week, and close the live leads — converting at least one into a signed client. Next session: end of May 2026.</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Strong session. Odgers panel opportunity (60–70 FTSE directors), HR journalist podcast in the works, facilitation work from the new Cat Clinic owners. Big shift: consciously leading with coaching first, consulting second, CPO third. 10 content ideas now on the Content tab. Next: 27 May, 9am.</p>
               </div>
             </div>
 
@@ -657,9 +712,9 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
                 { label: "Sessions done", value: "15", sub: "Since July 2025" },
-                { label: "Next session", value: "End of May", sub: "Monthly cadence" },
-                { label: "Goal this month", value: "Post weekly", sub: "And close at least one lead" },
-                { label: "Content ideas", value: "Live", sub: "Check the Content tab" },
+                { label: "Next session", value: "27 May", sub: "9am · Monthly cadence" },
+                { label: "Content ideas", value: "10 new", sub: "From session 15 — Content tab" },
+                { label: "Odgers panel", value: "Coming up", sub: "60–70 FTSE directors" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
