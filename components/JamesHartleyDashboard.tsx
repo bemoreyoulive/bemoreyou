@@ -298,18 +298,18 @@ If you want someone to nod politely and colour inside the lines, I'm not for you
   },
   {
     label: "Next iteration (draft — for refinement after power statements are done)",
-    text: `Most organisations get commercial risk right. They get people risk wrong.
+    text: `Thirty years inside organisations teaches you a lot. Some of it you wish you'd learned sooner.
 
-I've spent 30 years inside that gap — as a people leader across Zurich, Hong Kong, Tokyo, Paris, and London, most recently in senior HR leadership at Swiss Re. I've watched organisations make bold commercial bets in a single meeting and spend months avoiding the people decisions that would actually unlock them.
+I've led people functions across Zurich, Hong Kong, Tokyo, Paris, Singapore, and London — most recently in senior HR leadership at Swiss Re, before choosing to go independent. Not because corporate life stopped working, but because I wanted to do the parts of it I find most meaningful, with more of the people I actually want to work with.
 
-Now I work independently. I step in as an interim or fractional CPO when organisations are at inflection points — new leadership, rapid growth, cultural shift, transformation that's stalled. I partner with leadership teams on culture and people strategy. And I coach senior leaders through the transitions that matter: from what they've built to who they actually are.
+That's what I do now. I step in as an interim or fractional CPO for organisations at inflection points — the moments where the people decisions and the commercial decisions are the same decision. I partner with leadership teams on culture and transformation. And I coach senior leaders through the transitions that matter: the ones where the title stops feeling like the answer and something more interesting starts to emerge.
 
-What my clients say about working with me: straight-talking, calm clarity, simplifying the complex. I call out what others won't — with both empathy and edge. Execution discipline without being stifled by structure. Challenge without ego. Momentum without the mess.
+I've been through that transition myself. It changes how you coach people through it.
 
-Three delivery vehicles, one voice: Interim & Fractional CPO · People, Culture & Transformation Consulting · Executive Coaching.
+What clients tend to say about working with me: straight-talking, calm clarity, simplifying the complex. I call out what others won't — with both empathy and edge. I bring execution discipline without being stifled by structure, challenge without ego, momentum without the mess.
 
-If you want someone to colour inside the lines — I'm not your person. If you want a partner who'll do the real work, let's talk.`,
-    note: "Draft for the next evolution — leads with insight, surfaces commercial credibility, keeps the voice strong. To be finalised once power statements are complete and Ben has reviewed.",
+If you want a partner who'll do the real work, let's talk.`,
+    note: "Draft for the next evolution — warmer open, more honest about the journey, keeps the voice. To be finalised once power statements are written and we've refined together.",
   },
 ];
 
