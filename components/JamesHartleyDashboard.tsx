@@ -432,25 +432,90 @@ const CONTENT_MAY: ContentIdea[] = [
   {
     week: "Week 1 — 5 May",
     hook: "Everyone's talking about job hugging. I think they're missing the point.",
-    guidance: "Your phrase from session 15 — 'job hugging'. Post-COVID great resignation has swung to the great freeze. Everyone's clinging on, not taking risks. The post isn't just naming the trend — it's asking why, and what it costs people who stay put out of fear rather than choice. You've seen this from both sides: as someone who left a 30-year career voluntarily, and as a coach working with people who are stuck. Write from the tension between the two.",
+    guidance: `OPENING HOOK OPTIONS
+Try one of these to start — pick whichever one you'd actually say out loud:
+· "Everyone's talking about job hugging. I think they're missing the point."
+· "The great resignation gave way to the great freeze. And it's costing people more than they realise."
+· "Post-COVID, people stopped leaving jobs. That's not loyalty. That's fear."
+
+HOW TO WRITE IT
+Your phrase 'job hugging' is the engine of this post. Open with the observation — the market has swung from people leaving everything to people clinging to anything. Then bring in the tension you've lived: you left a 30-year career voluntarily, at the top of your game, when most people would have stayed. That's not reckless. That was a considered bet on yourself. Now, as a coach, you're in rooms with people who know they should move but can't bring themselves to. Name what's really going on: it's not about the job. It's about identity, security, and what happens to your sense of self when you let go of the familiar.
+
+Keep your sentences short and punchy in the middle section — the way you wrote "Not performance. Ratings. Forms. Calibration." in your performance management post. That rhythm lands hard.
+
+RHETORICAL QUESTIONS FOR ENGAGEMENT
+· Are you staying because you want to — or because you're afraid of what leaving says about you?
+· What's the real cost of staying in a role that's stopped stretching you?
+· Is it the job you're holding onto, or the identity that comes with it?
+
+CLOSING CTA
+"If you're at a crossroads and want to think it through — whether that's a change of role, a leap into something new, or just getting clearer on what you actually want — I'd love to have that conversation."`,
     priority: true,
   },
   {
     week: "Week 2 — 12 May",
     hook: "Taking a risk in your career. Part two.",
-    guidance: "You wrote about managing risk not meaning taking no risk. This is the follow-up — more personal and specific. You've had three conversations recently where career risk came up: someone relocating from the US, a coaching prospect who started her own business, a current client applying for a promotion they weren't sure about. You don't need to name them. 'Three conversations this month, same theme' is enough. The insight: risk isn't the absence of fear, it's moving despite it.",
+    guidance: `OPENING HOOK OPTIONS
+· "Taking a risk in your career. Part two."
+· "Three conversations this month. Same theme. Different people. Same fear."
+· "I wrote about managing risk recently. Then I had three conversations in a week that made me want to say more."
+
+HOW TO WRITE IT
+Open by referencing your previous risk post — your readers will remember it and it signals this is a continuation, not a repeat. Then bring in the three real conversations you've had: someone relocating from the US to take a chance on a new chapter, a coaching prospect who'd set up her own business, a current client applying for a promotion they weren't sure they were ready for. You don't need names or details. 'Three conversations. Three people. Three different versions of the same question: is this the right risk to take?' is enough.
+
+The core insight: risk in your career isn't about certainty. It's about moving before you feel ready. None of these three people had a guarantee. They moved anyway. Contrast that with the people you see clinging to safety — not because the role is right, but because the alternative feels too uncertain.
+
+End with the reframe you landed in your first risk post: pragmatic, proportionate risk. The same mindset leaders apply to commercial decisions should apply to their own careers.
+
+RHETORICAL QUESTIONS FOR ENGAGEMENT
+· When did you last make a career decision from a place of genuine desire rather than fear of what happens if you don't?
+· What's the cost — to your energy, your potential, your sense of self — of the risk you're not taking?
+· Is the 'safe' option actually the riskiest one in the long run?
+
+CLOSING CTA
+"If you're weighing up a risk right now and want a thinking partner — someone who'll ask the awkward questions and won't just tell you what you want to hear — I'd love to chat."`,
     priority: true,
   },
   {
     week: "Week 3 — 19 May",
     hook: "The most powerful thing you can do in a coaching conversation is nothing.",
-    guidance: "The power of silence — overfilling the glass. You used it recently with a client: coaching a manager who kept jumping in to fill silences when a difficult employee didn't respond. The breakthrough came when she stopped doing the work for them. The post: silence isn't awkward, it's active. The discomfort you feel in the pause is the other person doing the thinking. Count to ten. Let them.",
+    guidance: `OPENING HOOK OPTIONS
+· "The most powerful thing you can do in a coaching conversation is nothing."
+· "I almost said something. I didn't. That silence changed everything."
+· "Silence in coaching isn't awkward. It's active."
+
+HOW TO WRITE IT
+This is a coaching insight post with a specific story at its heart — use it. You were coaching a manager who had a pattern: whenever a difficult employee went quiet, she rushed to fill the space. 'What you could do is...' 'My view is that...' She was doing the thinking for them. The coaching moment came when she stopped. Let the silence sit. Counted to ten. And the employee said something she'd never have said if the space hadn't been held open for them.
+
+The broader point: most people experience silence as failure — as something to be rescued. In a coaching context (and in leadership), it's often the opposite. The discomfort you feel in the pause is the other person doing the work. Your job is to not take that from them.
+
+Write in short paragraphs. Use one-line beats for emphasis the way you do naturally: "Not filling the space. Holding it." "The breakthrough didn't come from a better question. It came from not asking one."
+
+This is a storytelling/coaching insight post — no hard CTA needed. A soft closing question is enough.
+
+CLOSING QUESTION
+"Where are you filling space that would be more powerful left open?"`,
     priority: false,
   },
   {
     week: "Week 4 — 26 May",
     hook: "I just spoke in front of 60 FTSE directors. Here's what I didn't expect.",
-    guidance: "Write this immediately after the Odgers panel while the experience is still fresh. Don't make it about being chosen — make it about what you observed in the room. What question surprised you? What moment landed differently than expected? What patterns did you notice across the room? Tag 5–10 people you met. That's your follow-up and your post in one. (Save this slot — write it the day after the panel.)",
+    guidance: `OPENING HOOK OPTIONS
+· "I just spoke in front of 60 FTSE directors. Here's what I didn't expect."
+· "I was asked to join a panel of senior HR leaders in front of 60 FTSE directors this week. I said yes before I'd finished reading the email."
+· "Sixty directors in a room. One question that stopped me in my tracks."
+
+HOW TO WRITE IT
+Write this the day after the Odgers panel while it's still alive in you. Don't make it about being chosen — the most interesting posts aren't about the honour, they're about the observation. What did you notice in the room? What question surprised you? What pattern came up across the discussion that you've seen before in your own work — and what does that tell you about where organisations are right now?
+
+Use the structure you use well: set the scene briefly, get to the substance fast. One sharp insight from the room is worth more than a summary of everything discussed. 'The question that kept coming back was...' or 'What struck me was how many people in that room were asking the same thing...' is the move.
+
+Tag 5–10 of the people you met. It turns a post into a conversation and opens doors to people who weren't in the room.
+
+This is a storytelling/observation post — close with a question, not a hard CTA.
+
+CLOSING QUESTION
+"What's the conversation your leadership team keeps having — but hasn't quite resolved?"`,
     priority: true,
   },
 ];
@@ -459,25 +524,94 @@ const CONTENT_JUNE: ContentIdea[] = [
   {
     week: "Week 1 — 2 June",
     hook: "I give founders advice on building their people and culture. Then I remember I'm a founder too.",
-    guidance: "From your conversation with your IgnitionCraft partner: you advise scale-up founders on people decisions, then go home to the same pressures and uncertainty. The post is about the gap between the advice you give and the advice you take yourself. What's the hardest bit of your own counsel to follow? Honest, self-aware, and very relatable to the founders and independent operators you're trying to reach.",
+    guidance: `OPENING HOOK OPTIONS
+· "I give founders advice on building their people and culture. Then I remember I'm a founder too."
+· "The hardest advice to take is usually the advice you give to others."
+· "This week I told a founder exactly what they needed to do. Then I went home and didn't do it myself."
+
+HOW TO WRITE IT
+This post works because of the honest self-awareness in it — the gap between what you counsel others to do and what you actually do yourself. Bring in the conversation with your IgnitionCraft partner: he's been tapping into founder communities and getting results. You've been meaning to. You know it's the right move. You haven't done it. That tension — between knowing and doing — is the post.
+
+The insight: advisors make the best clients because they understand the value. They also make the most stubborn ones, because they know all the right answers and still don't act on them. You're no different. And there's something genuinely useful in that for anyone reading who works in a professional services, advisory or coaching capacity.
+
+Use the short-sentence rhythm you're good at. Keep it honest and a little self-deprecating — that's when your writing is at its best.
+
+This is a personal storytelling post — no hard CTA needed.
+
+CLOSING QUESTION
+"What advice are you giving freely to others that you haven't yet taken yourself?"`,
     priority: false,
   },
   {
     week: "Week 2 — 9 June",
     hook: "AI investment is the hook. The answer is still human.",
-    guidance: "You attended an AI panel and came away with this line. Most AI content on LinkedIn is breathlessly enthusiastic or defensively sceptical. Yours can be neither. The organisations getting AI right have already figured out the human system — culture, trust, communication. The ones struggling with AI were already struggling with people. That's the insight. You've seen it.",
+    guidance: `OPENING HOOK OPTIONS
+· "AI investment is the hook. The answer is still human."
+· "I sat on an AI panel this week. The smartest thing said in the room had nothing to do with technology."
+· "Every organisation I speak to is investing in AI. Almost none of them have sorted out the human system first."
+
+HOW TO WRITE IT
+You attended an AI panel as a guest and came away with this line — use it as your anchor. The observation: organisations are pouring investment into AI capability while the underlying people challenges — trust, communication, culture, change readiness — remain unresolved. The technology doesn't fix those. If anything, it amplifies them.
+
+This is your territory: you're not an AI commentator, you're a people and culture leader who's been in rooms where transformation has worked and rooms where it hasn't. The difference was never the technology. Write from that credibility.
+
+Structure it like your performance management post: open with the sharp observation, bring in a specific example or two (you've seen this in client work), land on the principle, end with a question that makes people think about their own organisation.
+
+RHETORICAL QUESTIONS FOR ENGAGEMENT
+· Is your organisation AI-ready — or just AI-excited?
+· What's the point of investing in AI capability if the culture doesn't trust it, and the leadership can't communicate why it matters?
+· When did you last ask whether your people system is ready for the change you're planning?
+
+CLOSING CTA
+"If you're thinking about transformation and want to pressure-test whether your people and culture are set up to make it land — I'd love to have that conversation."`,
     priority: false,
   },
   {
     week: "Week 3 — 16 June",
     hook: "What does 'positively disruptive' actually mean? A CEO asked me. I had to think.",
-    guidance: "A CEO who hired you had read your LinkedIn profile and asked this directly in the interview. That's your hook — someone called you out on your own positioning. What was your answer? Write about what positive disruption means in practice: throwing rocks outside the greenhouse, not inside it. The Henley peer said it. Make it yours.",
+    guidance: `OPENING HOOK OPTIONS
+· "What does 'positively disruptive' actually mean? A CEO asked me. I had to think."
+· "A CEO read my LinkedIn profile before our meeting. Then he asked me to define my own words. Fair."
+· "'Positively disruptive.' It's on my profile. I've said it for years. Last week someone asked me what it actually means."
+
+HOW TO WRITE IT
+The hook is irresistible — someone calling you out on your own positioning, in an interview, before you'd even started. Open with that moment. You're being asked to prove your own brand. What did you say?
+
+The substance: positive disruption isn't about being provocative for the sake of it. It's about throwing rocks outside the greenhouse, not inside it. The Henley peer who said that unprompted is your best source material — use it. What does it look like in practice? Give a real example from your work: a moment where you said the thing others weren't saying, challenged a decision that was about to be made badly, or reframed a problem the leadership team had stopped questioning.
+
+This is a market observation post with a strong personal story at the start — give it a CTA at the end.
+
+RHETORICAL QUESTIONS FOR ENGAGEMENT
+· When did you last genuinely challenge a decision in your organisation — not just raise a concern, but push back hard on the direction?
+· What's the difference between being constructively disruptive and just being difficult?
+· Is the status quo in your organisation being questioned — or just managed?
+
+CLOSING CTA
+"If you want someone in the room who'll ask the awkward questions and challenge the comfortable answers — that's what I do. Happy to have a conversation about whether that's useful to you."`,
     priority: false,
   },
   {
     week: "Week 4 — 23 June",
     hook: "The fractional market has a supply problem. Nobody's saying it.",
-    guidance: "Your hypothesis: supply of fractional leaders now exceeds demand, and the market hasn't caught up. What does the glut look like from where you sit? What separates the fractionals who are getting work from the ones who aren't? End with what organisations are still missing by not using fractional leaders properly. This positions you as someone with a real read on the market, not just selling their own services.",
+    guidance: `OPENING HOOK OPTIONS
+· "The fractional market has a supply problem. Nobody's saying it."
+· "Everyone wants to be fractional. Not everyone should be."
+· "Supply of fractional leaders now exceeds demand. The market just hasn't caught up with that yet."
+
+HOW TO WRITE IT
+This is a market observation post and a genuinely contrarian one — which makes it worth writing. Your hypothesis: post-COVID, the appeal of fractional working drew a wave of people out of corporate life. The supply of people positioning themselves as fractional CPOs, CFOs, CMOs, etc. now outstrips the demand for them. Say that plainly. It'll provoke a reaction.
+
+Then get specific: what separates the fractionals who are getting quality work from the ones who aren't? It's not credentials. It's not even experience. It's reputation, relationship capital, and being front of mind with the right people. You know this from the inside. Write it.
+
+The close is a reframe: organisations that understand fractional working are still underusing it. The pitch is still being made wrong — too much focus on cost flexibility, not enough on what it actually feels like to have a truly senior operator step in for six months and leave something better than they found it.
+
+RHETORICAL QUESTIONS FOR ENGAGEMENT
+· What's your organisation missing by not thinking fractionally — and what's the cost of that gap?
+· If you're positioning yourself as fractional: are you building a reputation, or just a CV?
+· When a fractional leader walks out the door, do they leave the organisation stronger — or just finished?
+
+CLOSING CTA
+"If you're thinking about bringing in fractional senior support and want to understand what good looks like — I'd be happy to share what I've seen work."`,
     priority: false,
   },
 ];
@@ -486,49 +620,154 @@ const CONTENT_BACKUP: ContentIdea[] = [
   {
     week: "Backup",
     hook: "Are CPOs becoming transformation directors? The line is blurring — and it matters.",
-    guidance: "A real market trend: more CPOs being appointed to transformation and people leadership roles simultaneously. What does that mean for organisations? You sit at this intersection — business leader who operates in HR, not an HR person who supports the business. Write the observation, then your take on what good looks like.",
+    guidance: `OPENING HOOK OPTIONS
+· "Are CPOs becoming transformation directors? The line is blurring — and it matters."
+· "More and more, I'm seeing Chief People Officers appointed to transformation roles. That's not a coincidence."
+· "The job title says CPO. The job description says transformation director. Which one is actually right?"
+
+HOW TO WRITE IT
+This is a market trend post — write it from the inside. You've seen the shift happening: organisations are giving CPOs transformation mandates because they've finally understood that people change and organisational change are the same thing. That's progress. But it also creates confusion about what the role actually is, and what skills it requires. Share your take: what does a CPO who can genuinely lead transformation look like, versus one who can run the people process while someone else leads the change?
+
+RHETORICAL QUESTIONS
+· Is the transformation in your organisation being led by someone who understands people — or just process?
+· What happens when you separate the people strategy from the change strategy?
+· If your CPO and your transformation director are different people, who resolves the tension between them?
+
+CLOSING CTA
+"If you're thinking about how your people and transformation agenda fit together — or whether they do — I'd love to have that conversation."`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "If you do what you've always done, you'll get what you've always got. What if that's the point?",
-    guidance: "The reframe from France — watching farmers tending their fields: consistency as a virtue, not a criticism. There's a post here about the difference between stubborn repetition and intentional mastery. A quietly contrarian take, which is very you.",
+    guidance: `OPENING HOOK OPTIONS
+· "If you do what you've always done, you'll get what you've always got. What if that's the point?"
+· "We use this phrase as a warning. I've been wondering whether it's also an argument."
+· "In France last week, watching the farmers tend their fields for the hundredth season, it struck me differently."
+
+HOW TO WRITE IT
+The reframe is the whole post — and it's a quietly contrarian one, which is when your writing lands best. Everyone uses 'if you do what you've always done' as a warning against stagnation. But what about the farmer, the craftsman, the coach who keeps returning to the same fundamentals because they know they work? There's a difference between stubborn repetition and intentional mastery. Write that distinction. Use the France image — it's specific, it's visual, it's very you.
+
+This is a reflective/storytelling post. No hard CTA. Close with a question that invites people to think.
+
+CLOSING QUESTION
+"What have you stopped doing — that actually worked — in pursuit of something new?"`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "The thing your board agreed on faster than any people decision this year",
-    guidance: "A major commercial partnership agreed in one sharp ExCo meeting, followed by weeks of performance calibration. Organisations make bold commercial bets daily but become risk-averse the moment it's a people decision. Why? What's the cost of that gap?",
+    guidance: `OPENING HOOK OPTIONS
+· "The thing your board agreed on faster than any people decision this year."
+· "A major commercial partnership. Agreed in one sharp meeting. The performance ratings took three months."
+· "I was in an ExCo meeting recently. A multi-million-pound deal was done in an hour. The performance calibration took weeks."
+
+HOW TO WRITE IT
+You observed this firsthand — use the specific detail the way you did in your performance management post. Open with the contrast: a major commercial partnership agreed in one sharp meeting, full due diligence commissioned, significant investment committed — done. Then cut to the weeks that followed: calibration sessions, guidance notes, recalibrations, system updates. Same organisation. Different appetite for risk depending on the type of decision.
+
+The insight — and this is genuinely sharp — is that organisations apply entrepreneurial thinking to commercial decisions and compliance thinking to people decisions. The asymmetry is the post.
+
+RHETORICAL QUESTIONS
+· Where in your organisation are people decisions treated with more caution than commercial ones — and what does that cost you?
+· What would change if your leadership team applied the same boldness to talent decisions that they apply to commercial bets?
+· Is the process protecting the business — or protecting people from the discomfort of making a call?
+
+CLOSING CTA
+"If you want to shift how your organisation thinks about people risk — with the same commercial rigour you apply to everything else — I'd love to talk."`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "What I heard in a room this week that nobody's saying out loud",
-    guidance: "Use something from a recent client conversation — one insight, one thing someone said that made you think. 'I was with a leadership team this week...' is enough. You are the voice for things your clients can't say publicly. One observation is enough — if one person is thinking it, a hundred others are too.",
+    guidance: `OPENING HOOK OPTIONS
+· "What I heard in a room this week that nobody's saying out loud."
+· "I was with a leadership team this week. Something came up that I've now heard in three different organisations."
+· "The most useful thing I do isn't the coaching. It's hearing what people can't say inside the building."
+
+HOW TO WRITE IT
+Use something real from a recent client conversation — one insight, one observation that struck you as true and underreported. You don't need names or details. 'I was with a leadership team this week...' is the frame. The post isn't about you — it's about the observation, and what it tells you about a wider pattern. You are the voice for things your clients can't say publicly. That's the value of this format: you give the market a window into what's actually happening in senior leadership conversations.
+
+This is a recurring format you can return to whenever you have a good observation from client work. Keep it short. The observation is the whole post.
+
+CLOSING QUESTION
+"Is this something you're seeing too — or is this one organisation's pattern?"`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "I used to hide behind a plant pot to avoid an executive I didn't like. Here's what changed.",
-    guidance: "Literally hiding to avoid difficult conversations early in your career. The post isn't about the hiding — it's about what happened when you stopped. Specific, self-deprecating, and with a real point underneath it.",
+    guidance: `OPENING HOOK OPTIONS
+· "I used to hide behind a plant pot to avoid an executive I didn't like."
+· "Early in my career, I literally hid from conversations I didn't want to have."
+· "There's a plant pot in an office building I worked in twenty-odd years ago. I spent a lot of time behind it."
+
+HOW TO WRITE IT
+The image is so specific and so self-deprecating that it immediately earns attention — use it exactly as it happened. Open with the scene. Then follow the structure you use brilliantly in your identity posts: the honest before, the thing that changed, the after. What made you stop hiding? What was the moment — or the slow accumulation of moments — that made facing those conversations less frightening than avoiding them? And what happened to your presence, your confidence, your career, when you did?
+
+This is a personal storytelling post in the same vein as your title/identity post — don't force a hard CTA onto it. Close with a question that lands.
+
+CLOSING QUESTION
+"What conversation are you still finding reasons to avoid — and what might change if you had it?"`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "Three years in. Here's what I got wrong about going independent.",
-    guidance: "A reflective post on what you've learned since leaving corporate — not a greatest hits list. Pick one thing that surprised you. One belief you've had to unlearn. 'I spent the first year waiting for the work to find me. That was a mistake.' You have the material — use it.",
+    guidance: `OPENING HOOK OPTIONS
+· "Three years in. Here's what I got wrong about going independent."
+· "I left a thirty-year career to go independent. I thought I knew what I was doing. I was wrong about most of it."
+· "Nobody tells you the hard parts of going independent. Here's one I wish someone had told me."
+
+HOW TO WRITE IT
+Don't do a list of lessons — pick one thing. One belief you had that turned out to be wrong. One thing that looked like progress but wasn't. One habit from corporate life that actively worked against you in the early months of independence. Be specific and honest — the more specific, the more it resonates.
+
+The best version of this post sounds like you'd say it in conversation: candid, a little wry, not self-pitying. You went independent by choice, from a position of strength. You're not complaining — you're giving people something genuinely useful from the inside.
+
+This is a personal storytelling post. No hard CTA. Close with a question that invites people at the same crossroads to reflect.
+
+CLOSING QUESTION
+"If you've made the leap — what's the one thing you'd go back and tell yourself?"`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "If you want a more courageous culture, you have to do things that require courage.",
-    guidance: "You said this on the Powered by People podcast. Most culture programmes explain the new behaviour. The faster route is doing it visibly — leaders go first. Use a short example. End with: what's one thing you keep talking about that you haven't actually done yet?",
+    guidance: `OPENING HOOK OPTIONS
+· "If you want a more courageous culture, you have to do things that require courage."
+· "Culture change programmes talk about courage. They rarely model it."
+· "I said this on a podcast recently and couldn't stop thinking about it afterwards."
+
+HOW TO WRITE IT
+You landed this line on the Powered by People podcast and it's one of your sharpest. The insight is simple but rarely acted on: organisations design courage into their values, their competency frameworks, their leadership principles. Then the leadership team plays it safe. The gap between what's espoused and what's demonstrated is the culture. Leaders have to go first. Visibly. Not in a memo — in the room.
+
+Give a specific example. A moment you've witnessed where a leader chose the courageous path rather than the comfortable one — and what it unlocked. Or a moment where they didn't, and what that cost.
+
+RHETORICAL QUESTIONS
+· When did someone in your organisation last say the thing everyone was thinking but no one was saying?
+· Is the courage you're asking of your people something your leadership team is actually modelling?
+· What's the thing that needs to be said in your organisation — that keeps not getting said?
+
+CLOSING CTA
+"If you want to build a culture that actually does the thing it says it values — I'd love to talk about what that looks like in practice."`,
     priority: false,
   },
   {
     week: "Backup",
     hook: "Nobody's alone in their problems. So why does it feel that way in a boardroom?",
-    guidance: "You said this spontaneously in session 13. The paradox that senior leaders are surrounded by people but often the most isolated when it comes to the real conversations. Connect it to what you actually do — create the conditions where those conversations can happen.",
+    guidance: `OPENING HOOK OPTIONS
+· "Nobody's alone in their problems. So why does it feel that way in a boardroom?"
+· "The loneliest people I meet are often the most senior."
+· "I said something offhand in a conversation recently: 'No one is alone in their problems.' I've been thinking about it ever since."
+
+HOW TO WRITE IT
+You said this spontaneously and it landed — "No one is alone in their problems." Build the post around the paradox: the higher you go in an organisation, the more surrounded by people you are, and the more isolated you often feel. The conversations that actually need to happen keep getting deferred. The thing in the room that everyone knows but no one names. That's the gap — and it's where you do some of your best work.
+
+This is a coaching/insight post with real emotional weight — write it with warmth. Use the rhythm you used in your 'why I do what I do' post: specific observations, short punchy sentences for the beats that matter, and a close that makes the reader feel seen rather than advised.
+
+This is a storytelling post — no hard CTA. End with a question that creates a moment of recognition.
+
+CLOSING QUESTION
+"What's the conversation that keeps not happening in your organisation — and what would change if it did?"`,
     priority: false,
   },
 ];
