@@ -445,6 +445,14 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
     title: "3. Treat headhunters like a warm channel, not a passive one",
     body: "Headhunters refer who is front of mind. That means regular contact, not just when you're looking for work. Keep appearing in their feeds (LinkedIn), keep showing up in their inbox (quarterly check-in), and make it easy for them to remember exactly what you do and who you do it for. When a client calls with a need, you want to be the first name that comes up.",
   },
+  {
+    title: "4. Posting weekly is not a vanity exercise — it's how you stay commercially alive",
+    body: "Every week you don't post, someone who might have hired you doesn't know you exist. Every week you do post, you're front of mind for the headhunter who saw it, the CEO who shared it with a peer, the former colleague who finally plucked up the courage to reach out. You've already seen this work — CEOs commenting, voice DMs from strangers, people referencing your posts in conversations. That doesn't happen by accident and it doesn't happen in silence. One post a week is not a big ask. It is, however, the difference between a pipeline that refills itself and one that dries up every time you stop looking.",
+  },
+  {
+    title: "5. Visibility builds the reputation that converts to work — but only if it's consistent",
+    body: "The people who will hire you are watching you long before they contact you. They read three posts, check your About section, and decide whether you seem like someone worth talking to — before you've said a word to them. That's the job LinkedIn is actually doing for you: running a slow, silent sales process on your behalf, 24 hours a day. But it only works if you keep showing up. A month of silence doesn't just mean missed impressions — it means the impression you leave is of someone who's gone quiet, possibly busy with other things, possibly not that active. Consistent visibility tells the market you're present, in demand, and worth reaching out to. Inconsistency tells them nothing useful.",
+  },
 ];
 
 // ─── GOALS ────────────────────────────────────────────────────────────────────
