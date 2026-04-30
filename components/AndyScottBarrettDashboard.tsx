@@ -64,7 +64,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "32px 32px" }}>
 
         {/* ── HOME ── */}
-        {activeTab === "home" && (
+        <div style={{ display: activeTab === "home" ? "block" : "none" }}>
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
@@ -129,7 +129,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             </div>
             <DashboardFooter clientName="Andy Scott Barrett" tabName="Home" slug={slug} />
           </div>
-        )}
+        </div>
 
         {/* ── MILESTONES ── */}
         {activeTab === "milestones" && (
