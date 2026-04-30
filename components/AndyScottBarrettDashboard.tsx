@@ -11,16 +11,17 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Post the Martin Lewis wedding speech draft this week. You've written it, you've had the feedback — now post it and move on. Set the 30-minute timer. That's the rule.";
+const ASB_NEXT_MOVE = "Post the discounting post this week — 'Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's on the dashboard, it's ready. Set the 30-minute timer and go. Then: implement time blocking this week — client calls Tue/Wed/Thu only, content and admin Mon/Fri. One structural change that makes everything else easier.";
 
 const asbTodos = [
-  { id: "t1", text: "Post the Martin Lewis post — apply Ben's feedback on the ending, then post. 30-minute timer, no more.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "t2", text: "Update LinkedIn headline to: \"I turn financial data into decisions — the bit your accountant isn't there to do | Fractional Finance Director for UK SMEs | Ex-Rolls-Royce\"", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
-  { id: "t3", text: "Update LinkedIn banner — three lines Ben sent: 'Turning your numbers into decisions, not just reports' / 'I give you the financial direction you don't get from your accountant' / 'For UK SME owners who want to run their business properly'", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
-  { id: "t4", text: "Upload finalised About section to LinkedIn", owner: "Andy", tabLink: { label: "See Brand Assets", tab: "brand" } },
-  { id: "t5", text: "Book working photo session with father-in-law — natural, outside, not a corporate headshot", owner: "Andy" },
-  { id: "t6", text: "Pursue aerospace East Midlands prospect — follow up when owner returns", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
-  { id: "t7", text: "Follow up with Manchester client on visit date", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
+  { id: "s4-1", text: "Post the discounting post this week — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's in Content Ideas, ready to go. 30-minute timer.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s4-2", text: "Implement diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, BD, content, follow-ups.", owner: "Andy" },
+  { id: "s4-3", text: "Tighten Calendly — limit one-to-ones to one or two fixed time windows per week only. Remove the open availability.", owner: "Andy" },
+  { id: "s4-4", text: "Use the hard stop technique on all calls from now — announce at the start: 'I've got a hard stop at X.' Not rude. Makes both parties conscious of time.", owner: "Andy" },
+  { id: "s4-5", text: "After every prospect call, networking session or client meeting: write down 3–4 challenges, pain points, or misconceptions that came up. WhatsApp them to Ben to turn into content ideas.", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
+  { id: "s4-6", text: "Follow up with the strategy woman from networking — she mentioned doing webinars together. Neither of you followed up. Get back in touch.", owner: "Andy" },
+  { id: "s4-7", text: "Read Jo's 'Making the Sale' document before your next prospect call.", owner: "Andy" },
+  { id: "s4-8", text: "Use Ben's prospect call question framework for your next sales conversation — it's in Ben's Recommendations.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
   { id: "w1", text: "Website: Change 'top-performing FTSE 100 company' to 'Rolls-Royce'", owner: "Andy" },
   { id: "w2", text: "Website: Move Richard Waine testimonial to homepage", owner: "Andy" },
   { id: "w3", text: "Website: Replace contact page copy with the version Ben sent", owner: "Andy" },
@@ -51,7 +52,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Scott Barrett</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 3 of 6</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 4 of 6</p>
             </div>
           </div>
         </div>
@@ -73,20 +74,27 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
             <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 4 · 30 April 2026" animateIn />
 
-            <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>3</div>
+            <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>4</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 3 — 15 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Profile finalised. New headline confirmed ("I turn financial data into decisions — the bit your accountant isn't there to do"). Banner decided: decision-focused option, flipped order. About section structure agreed and compacted. Networking talk debriefed — used as content angle source. Pipeline updates: aerospace East Midlands prospect in play, Manchester client returning, email-only prospect correctly left, startup re-activating. Content workflow discussion — Claude + dashboard cards + 30-minute posting timer. Next session: 30 April 2026.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 4 — 30 April 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Content cadence settled at 2 posts/week (one expertise, one personal). Transition to dashboard ideas for Friday Finance posts — discounting post lined up next. Bank balance post went out — bookkeeper/accountant/FD explanation landing well at networking, generating a warm referral. Pipeline: aerospace lead dead, startup re-activating, main client ongoing. Time management framework agreed — diary blocking, Calendly constraints, hard stops on calls. Prospect call question framework added to dashboard. Content-from-conversations workflow introduced — Andy to send Ben notes after calls. Next session: week of 14 May 2026.</p>
+              </div>
+            </div>
+            <div style={{ background: "#f5f3f0", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
+              <div style={{ width: 36, height: 36, background: "#9CA3AF", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>3</div>
+              <div>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#3D3935", margin: "0 0 4px" }}>Session 3 — 15 April 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: 0, lineHeight: 1.6 }}>Profile finalised. New headline confirmed ("I turn financial data into decisions — the bit your accountant isn't there to do"). Banner decided: decision-focused option, flipped order. About section structure agreed and compacted. Networking talk debriefed — used as content angle source. Pipeline updates: aerospace East Midlands prospect in play, Manchester client returning, email-only prospect correctly left, startup re-activating. Content workflow discussion — Claude + dashboard cards + 30-minute posting timer.</p>
               </div>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "3 of 6", sub: "Next: 30 April 2026" },
-                { label: "Headline", value: "✓ Finalised", sub: "Ready to go live" },
-                { label: "About section", value: "✓ Finalised", sub: "Ready to go live" },
-                { label: "Posts in bank", value: "1 drafted", sub: "Martin Lewis — ready to post" },
+                { label: "Sessions done", value: "4 of 6", sub: "Next: w/c 14 May 2026" },
+                { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
+                { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
+                { label: "Posts out", value: "2 posted", sub: "Martin Lewis + bank balance" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -359,6 +367,172 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>From Ben</p>
             <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 28px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
 
+            {/* Prospect Call Framework */}
+            <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Added Session 4 · 30 April 2026</p>
+              <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 18px" }}>Prospect Call Question Framework</p>
+              <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: "0 0 20px" }}>Use this as a mental map, not a script. The goal is to uncover real problems, confirm they want to solve them, then position your solution. The close is gentle and natural if the conversation has gone well. Don't follow these verbatim — adapt to how the call is flowing.</p>
+
+              {[
+                {
+                  step: "1",
+                  label: "Start with neutral context — warm them up",
+                  desc: "Easy, non-threatening questions to get them talking about the business without feeling examined.",
+                  questions: [
+                    "What's keeping the business going at the moment?",
+                    "Where are your clients coming from?",
+                    "What's working best right now?",
+                    "What's not working that used to work?",
+                    "Are you actively trying to grow, or just stabilise things at the moment?",
+                  ],
+                },
+                {
+                  step: "2",
+                  label: "Understand their financial reality",
+                  desc: "Gently explore sustainability without sounding intrusive. Only go here once you have enough context.",
+                  questions: [
+                    "Do you have visibility on your cash position over the next few months?",
+                    "Are you broadly happy with how the business is performing financially, or are there things you'd want to change?",
+                  ],
+                },
+                {
+                  step: "3",
+                  label: "Understand their offer and how they work",
+                  desc: "Only once context is clear — understand their commercial model before surfacing problems.",
+                  questions: [
+                    "How do you typically work with a client, and what does that look like in practice?",
+                    "Do you feel like you have a clear picture of which parts of the business are most profitable?",
+                  ],
+                },
+                {
+                  step: "4",
+                  label: "Surface pressure, pain, and friction",
+                  desc: "Move from facts to feelings. This is where the real problems tend to surface.",
+                  questions: [
+                    "Is there anything that feels like it needs fixing sooner rather than later?",
+                    "What feels most frustrating about the business at the moment?",
+                    "Do you feel like you've got a financial plan, or are you figuring it out as you go?",
+                    "When your accountant sends the numbers — do you know what to do with them?",
+                  ],
+                },
+                {
+                  step: "5",
+                  label: "Introduce future consequences",
+                  desc: "Increases urgency without pressure. Use only once you've surfaced a real problem.",
+                  questions: [
+                    "If nothing changed in how you're managing the financial side, would the business still be in a good place in 6–12 months?",
+                  ],
+                },
+                {
+                  step: "6",
+                  label: "Catch-all if they're vague or guarded",
+                  desc: "Use only if needed — when you can't find the problem.",
+                  questions: [
+                    "If you could change anything about how the business is running right now, is there anything that comes to mind?",
+                  ],
+                },
+                {
+                  step: "7",
+                  label: "Assess motivation and previous attempts",
+                  desc: "Test seriousness before moving toward a proposal.",
+                  questions: [
+                    "How motivated are you to change this?",
+                    "Have you already looked at ways to fix it, or is this something you haven't had time for yet?",
+                  ],
+                },
+                {
+                  step: "8",
+                  label: "Reflect back and confirm the problem",
+                  desc: "Summarise what you've heard. This shows you've listened and lets them confirm you've understood correctly.",
+                  questions: [
+                    "So from what you're telling me — you've got [problem A], [problem B], [problem C]. Is that something you'd want to change?",
+                  ],
+                },
+                {
+                  step: "9",
+                  label: "Validate before pivoting to your solution",
+                  desc: "Lower their defences and build trust before you talk about what you do.",
+                  questions: [
+                    "I've got no doubt you understand your business — what I'm hearing is that the financial side hasn't had someone dedicated to turning the numbers into forward decisions. That's the gap I work in.",
+                  ],
+                },
+                {
+                  step: "10",
+                  label: "Permission-based transition to your offer",
+                  desc: "Clean, respectful, and high-status. Ask permission before explaining how you work.",
+                  questions: [
+                    "Would you like me to explain how I work with clients?",
+                  ],
+                },
+                {
+                  step: "11",
+                  label: "State the price — then sit in silence",
+                  desc: "Explain how you work, what it costs, then stop talking. Let them process. Don't fill the gap.",
+                  questions: [],
+                  note: "After you've explained your approach and fees — pause. The silence is intentional. Whoever speaks first loses the negotiation. Hold it.",
+                },
+                {
+                  step: "12",
+                  label: "Handling money resistance (only if raised)",
+                  desc: "Leave this to the end. Only use if they raise cost as an objection.",
+                  questions: [
+                    "You said earlier that getting clarity on the numbers was something you wanted — what's changed?",
+                    "That's usually the biggest sticking point, and I understand it's a leap of faith.",
+                    "I had a client in a similar position — the difference once they had the financial picture clear was [outcome]. Would it help to talk through what that looked like?",
+                    "If you're willing to commit to this, I'm confident you'll see the results.",
+                  ],
+                },
+              ].map((section, i) => (
+                <div key={i} style={{ marginBottom: 20 }}>
+                  <div style={{ display: "flex", gap: 12, alignItems: "flex-start", marginBottom: 8 }}>
+                    <div style={{ width: 26, height: 26, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.72rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{section.step}</div>
+                    <div style={{ flex: 1 }}>
+                      <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 2px" }}>{section.label}</p>
+                      <p style={{ fontSize: "0.8rem", color: "#9CA3AF", margin: "0 0 8px", lineHeight: 1.5 }}>{section.desc}</p>
+                      {section.questions.length > 0 && (
+                        <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+                          {section.questions.map((q, qi) => (
+                            <div key={qi} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                              <span style={{ color: ASB_COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem" }}>→</span>
+                              <p style={{ fontSize: "0.84rem", color: "#3D3935", margin: 0, lineHeight: 1.55, fontStyle: "italic" }}>&ldquo;{q}&rdquo;</p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {section.note && (
+                        <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 6, padding: "10px 14px", marginTop: 8 }}>
+                          <p style={{ fontSize: "0.82rem", color: "#92400E", margin: 0, lineHeight: 1.5 }}>{section.note}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  {i < 11 && <div style={{ height: 1, background: "#E0DBD3", marginLeft: 38 }} />}
+                </div>
+              ))}
+            </div>
+
+            {/* Content From Conversations */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Added Session 4 · 30 April 2026</p>
+              <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Content From Conversations — Your New Workflow</p>
+              <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 14px" }}>Every prospect call, networking session, and client conversation is a content tap. You're already hearing the objections, misconceptions, and questions that your audience has — you just haven't been converting them into posts yet.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 14 }}>
+                {[
+                  { step: "1", text: "After every call or meeting — write down 3–4 challenges, pain points, misconceptions, or questions that came up." },
+                  { step: "2", text: "WhatsApp them to Ben. Even rough notes. 'Someone today asked why they'd need me if they already have an accountant' is enough." },
+                  { step: "3", text: "Ben turns them into content ideas and adds them to this dashboard." },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <div style={{ width: 24, height: 24, borderRadius: "50%", background: "#edf4ef", color: ASB_COLOR, fontSize: "0.72rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{item.step}</div>
+                    <p style={{ fontSize: "0.87rem", color: "#3D3935", margin: 0, lineHeight: 1.6 }}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>Why it matters:</strong> The bookkeeper/accountant/FD explanation post — the one landing best — came directly from someone at networking not understanding what you did. Objection-based content repels wrong-fit clients while attracting right-fit ones. Conversations equal clients, clarity, and content.</p>
+              </div>
+            </div>
+
             {[
               {
                 num: "01",
@@ -377,8 +551,13 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               },
               {
                 num: "04",
-                title: "The personal posts are not optional",
-                body: "The Friday finance expertise posts build credibility. The mid-week personal posts build trust. You need both. An SME owner hiring a retained FD is hiring a relationship as much as a service — and they'll check your LinkedIn before they reach out. The personal posts are what make you a person rather than a finance professional. The Martin Lewis one is the right way in.",
+                title: "Two posts a week — one expertise, one personal. That's the rhythm.",
+                body: "The Friday finance expertise posts build credibility. The mid-week personal posts build trust. You need both. Two posts a week is the right number for now — it's sustainable, and sustainable beats ambitious. An SME owner hiring a retained FD is hiring a relationship as much as a service — they'll check your LinkedIn before they reach out. Don't use AI-generated or stock images. Use real photos of yourself. People disengage immediately with anything that looks templated. Humans engage with humans.",
+              },
+              {
+                num: "04b",
+                title: "Diary blocking is the structural change that makes everything else easier",
+                body: "Client calls on Tuesday, Wednesday, and Thursday only. Monday and Friday are for admin, BD, content, and follow-ups. One or two fixed Calendly windows per week — remove the open availability. Use hard stops on all calls: announce it at the start ('I've got a hard stop at X'). This isn't rude — it makes both parties conscious of time. Five to ten minutes maximum prep for networking and prospect calls: focus on the human (shared interests, shared city, something to connect on immediately), not the business details. They'll tell you the details.",
               },
               {
                 num: "05",
