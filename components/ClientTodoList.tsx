@@ -1,5 +1,5 @@
 "use client";
-
+// v2 — loads saved todo states from Supabase on mount
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase-browser";
 
