@@ -15,20 +15,20 @@ import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
-const AF_NEXT_MOVE = "Session 9 is tomorrow — 29th April. We're going through your new ICP, positioning, and messaging. Come ready to talk about what you already know about the pain inside an accountancy practice. That's the conversation that moves things forward.";
+const AF_NEXT_MOVE = "Your priority this week: speak to at least three accountants. Not sales calls — research calls. Ask, listen, take notes. Send Ben the transcripts or notes as you go. That's the fuel for everything that comes next.";
 
 const afTodos = [
-  { id: "n1", text: "Set up warm email domains — do this today", subtext: "This is off the critical path but it's blocking your outreach launch. Warm-up takes 14–21 days. Every day of delay pushes back when you can start. Get this done before anything else.", section: "Niche & outreach — urgent" },
-  { id: "n2", text: "Deep research: UK accountancy retainer deliverables", subtext: "What do accountancy firms typically deliver monthly, quarterly, annually on a retainer? What's the most manual, time-consuming part? Claude or Perplexity with UK-specific prompts. This is the input for your demo builds.", section: "Niche & outreach — urgent" },
-  { id: "n3", text: "Build 2–3 demo automations solving accountancy bottlenecks", subtext: "Once research identifies the 2–3 heaviest-lifting deliverables (likely: client reporting, chase workflows, document generation), build a demo for each. These become the outreach hook — not \"I do automation\" but \"I've already built this for you.\"", section: "Niche & outreach — urgent" },
-  { id: "n4", text: "Book call with Harry and James (Guy Last's team)", subtext: "They'll help you identify the right data sets for accountancy outreach, find contact details, and structure the campaign messaging. Book it this week.", section: "Niche & outreach — urgent" },
-  { id: "b1", text: "Update your LinkedIn headline — after Session 9 on 29th April", subtext: "Ben will go through the new options with you in the session. Agree the live version on the call, then update LinkedIn the same day.", section: "Post-session actions" },
-  { id: "b2", text: "Update your LinkedIn About section — after Session 9 on 29th April", subtext: "Ben will go through the new drafts with you in the session. Agree the version on the call, then update LinkedIn the same day. Check character count stays within 2,600.", section: "Post-session actions" },
-  { id: "p1", text: "David Maguire follow-up — partnership still live", subtext: "Partnership opportunity likely converting in May. Follow up after the networking event in the week of 14th April.", section: "Pipeline actions" },
-  { id: "p2", text: "Draft commercial approach for the Chris Dillon media-monitoring POC", subtext: "He's going back to the Mars-owned company with an initial price. Work out what you'd charge and how you'd structure it.", section: "Pipeline actions" },
-  { id: "p3", text: "Chase PAPA funding confirmation", subtext: "Once confirmed, draft a vague case study post (no client name — just the problem, approach, and outcome).", section: "Pipeline actions" },
-  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "Content direction updates after Session 9. Use the ideas tab in the meantime.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
-  { id: "ob2", text: "Networking: 2 events per week", subtext: "Rework your opening intro to lead with the problem, not AI or automation. Start referencing accountancy-specific pain if you're in rooms where that fits.", section: "Ongoing baseline" },
+  { id: "r1", text: "Speak to at least 3 accountants before 13 May — research calls, not sales calls", subtext: "Email them this week. Template: 'I'm doing research on bottlenecks in accountancy practices — would you give me 30 minutes? No agenda, just questions.' Don't mention AI or automation in the ask. See the questions below on this page.", section: "Accountant research — priority" },
+  { id: "r2", text: "Send Ben the transcript or notes after each conversation", subtext: "Don't wait until Session 10. Send as you go — via Otter AI transcript or detailed notes. Ben will use this to build objection-based content and refine your messaging in real time.", section: "Accountant research — priority" },
+  { id: "r3", text: "Post 'When AI goes wrong' this week", subtext: "The GP surgery Emma story is fresh. Write it today or tomorrow. Lead with the story, give your expert take on what went wrong and why, connect it back to what you do. That opinion is the most valuable part — don't just share the article.", section: "Accountant research — priority" },
+  { id: "m1", text: "Update LinkedIn headline — agreed in Session 9", subtext: "Live version agreed: \"Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I fix that. | The 'Sheldon' of practice automation | Equate Digital\" — update this today if not already done.", section: "Messaging updates — do now" },
+  { id: "m2", text: "Update LinkedIn About section — first two sentences only", subtext: "Replace the opening with: 'Accountancy firms come to me when the retainer work is taking longer than it should. Not because the team isn't capable. Because too much of it is still manual — client reporting built from scratch each month, update chasers sent by hand, documents assembled from three different places every time.' Rest of the About stays the same.", section: "Messaging updates — do now" },
+  { id: "m3", text: "Set up warm email domains", subtext: "Still not done. Takes 14–21 days to warm up. Every day of delay pushes back your outreach start date. Do it this week.", section: "Messaging updates — do now" },
+  { id: "p1", text: "David Maguire — partnership follow-up", subtext: "Still live. Likely converting in May.", section: "Pipeline actions" },
+  { id: "p2", text: "Chris Dillon media-monitoring POC", subtext: "Draft commercial approach — he needs numbers.", section: "Pipeline actions" },
+  { id: "p3", text: "Chase PAPA funding confirmation", subtext: "Case study post ready to draft once confirmed.", section: "Pipeline actions" },
+  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "New Bobby's Got a Brain content ideas are in the Content tab now. Use them once you've confirmed the bottlenecks from your accountant conversations.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
+  { id: "ob2", text: "Networking: 2 events per week", subtext: "Use the new UPS when it fits: 'Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I specialise in taking the manual heavy lifting out of that delivery...' Keep it short for small rooms.", section: "Ongoing baseline" },
   { id: "ob3", text: "Continue N8N community contributions", subtext: "Long-game authority-building. Keep going.", section: "Ongoing baseline" },
 ];
 
@@ -209,6 +209,15 @@ const afContentSack = [
   { id: "af-sack-9", hook: "The new starter who needs Sally to explain everything", whiteboard: "\"Your Onboarding Manual Shouldn't Be A Person\"", grade: 3, tag: "Unused", priority: false, postCopy: "If every new hire spends their first two weeks following Sally around to understand how things work — that's not training. That's your undocumented process surviving by word of mouth. It worked at three people. It doesn't work at ten. Every time someone new starts and gets trained by Sally, you're proving you need a system.", cta: "If your knowledge lives in people rather than systems, let's talk about what happens when those people leave." },
   { id: "af-sack-10", hook: "The proposal that takes Sally four hours to put together", whiteboard: "\"Your Sales Process Shouldn't Start From Scratch Every Time\"", grade: 2, tag: "Unused", priority: false, postCopy: "If every proposal involves copying a previous one, reformatting it, chasing the right numbers from three different places, and hoping Sally remembers to update the client name — that's exactly the kind of thing I fix. A proposal that takes four hours should take forty minutes. The difference is a system that does the legwork.", cta: "If your proposals start with \"where's the last one we sent?\" — let's look at what that's actually costing you in time." },
   { id: "af-sack-11", hook: "The Slack message that substitutes for a system", whiteboard: "\"Your Comms Tools Aren't Your Workflow\"", grade: 3, tag: "Unused", priority: false, postCopy: "If your team runs on Slack messages that say \"can you just send me that thing again\" and \"has anyone updated the client yet\" — that's not communication. That's what happens when the system doesn't exist. Slack is for conversations. Not for replacing the process your business is supposed to have. Sally shouldn't need a Slack message to know what to do next.", cta: "If your workflow lives in a chat thread, let's get it out of there and into something that doesn't rely on everyone being online at the same time." },
+];
+
+const afContentBobby = [
+  { id: "af-bobby-1", hook: "Bobby shouldn't be your chase-up department", whiteboard: "\"Bobby Shouldn't Be Your Chase-Up Department\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby is the one sending the same email every quarter asking clients to submit their records — that's exactly the kind of process I automate.\n\nPeriod-end chasing can run on a schedule. Automatically. Consistently. Without Bobby having to remember who's submitted and who hasn't.\n\nBobby's time is worth more than copy-pasting the same message into fourteen different email threads.\n\nThis is plumbing. Not magic.", cta: "If Bobby is your chase-up process, let's talk about what replaces that." },
+  { id: "af-bobby-2", hook: "Bobby shouldn't be building the same report every month", whiteboard: "\"Bobby Shouldn't Be Building The Same Report Every Month\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby starts the same reporting process from scratch every month — pulling data from one place, formatting it in another, manually checking who's submitted what — that's exactly the kind of workflow I automate.\n\nA system that knows when submissions are in and produces a consistent report doesn't get tired on a Friday afternoon.\n\nBobby does.", cta: "If your monthly reports start with a blank page and Bobby's patience, let's fix that." },
+  { id: "af-bobby-3", hook: "Bobby deserves a dashboard, not six logins", whiteboard: "\"Bobby Deserves A Dashboard, Not Six Logins\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby's Monday morning starts with logging into multiple platforms to work out who's done what — that's fragility, not process.\n\nOne internal dashboard that aggregates submission status automatically isn't complex. It just doesn't exist yet.\n\nThat's the gap I fix.", cta: "If Bobby starts the week with six tabs open just to know where things stand, let's talk." },
+  { id: "af-bobby-4", hook: "Your practice isn't a spreadsheet", whiteboard: "\"Your Practice Isn't A Spreadsheet\"", grade: 3, tag: "Unused", priority: false, postCopy: "If the master tracker for your client base lives in a spreadsheet that only Bobby fully understands — that's not a system. That's a single point of failure.\n\nSpreadsheets are tools. They're not operating systems.\n\nOne accidental delete. One formula broken. One Bobby-goes-on-holiday scenario.\n\nAnd everything wobbles.", cta: "If Bobby going on holiday is genuinely a risk to your practice, let's fix that before she books the next one." },
+  { id: "af-bobby-5", hook: "Onboarding a new client shouldn't take Bobby half a day", whiteboard: "\"Onboarding A New Client Shouldn't Take Half A Day\"", grade: 2, tag: "Unused", priority: false, postCopy: "New client signs. Bobby creates the folder, sends the welcome email, sets up the task list, updates the practice management system — every single time, from scratch, from memory.\n\nIf onboarding relies on Bobby knowing all the steps, it's fragile.\n\nRepeatable beats heroic. Every time.", cta: "If your onboarding process lives in Bobby's head, let's get it out of there." },
+  { id: "af-bobby-6", hook: "Bobby's got a brain — let's use it properly", whiteboard: "\"Bobby's Got A Brain\"", grade: 1, tag: "Unused", priority: false, postCopy: "Most accountancy practices I speak to aren't struggling because their people aren't good enough.\n\nThey're struggling because their best people are spending half their week on tasks a system should handle.\n\nChasing clients for records. Building the same report from scratch. Logging into six platforms to find out what's still outstanding.\n\nBobby didn't become an accountant to be a data entry function.\n\nThat's not a people problem. It's a process problem.", cta: "If Bobby's skills are being wasted on manual admin, let's talk about what the fix looks like." },
 ];
 
 const afMessaging = [
@@ -454,7 +463,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             </div>
 
             <Callout type="green">
-              <strong>Where we are, April 2026 — going into Session 9:</strong> Niche confirmed — <strong>UK accountancy practices</strong>. Three calls with Guy Last (AI niche strategist) are done. Accountancy practice owners are the primary ICP: accessible decision-makers, retainer-based revenue, regulatory pressure creating automation demand. Next steps are deep research into accountancy deliverables, email domain setup, and a call with Harry &amp; James to build the outreach campaign. Tomorrow&apos;s session (29th April) covers: new ICP, revised positioning, updated headline and About section. Review the new drafts in Brand Assets before the call.
+              <strong>Where we are, April 2026 — post Session 9:</strong> Niche confirmed — <strong>UK accountancy practices</strong>. LinkedIn headline and About section updated. UPS agreed. Content theme rebranded from SACK SALLY to <strong>Bobby&apos;s Got a Brain</strong> — Bobby is the junior accountant doing manual non-revenue work that a system should handle. Priority this fortnight: speak to at least 3 accountants, understand the real bottlenecks, send notes to Ben. That research feeds everything — content, messaging, outreach. <strong>Next session: 13 May, 10:30am BST.</strong>
             </Callout>
 
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
@@ -465,7 +474,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 9</h2>
             <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 24px" }}>Updated after Session 9 on 29th April. Tick things off as you go.</p>
 
-            {["Niche & outreach — urgent", "Post-session actions", "Pipeline actions", "Ongoing baseline"].map(section => {
+            {["Accountant research — priority", "Messaging updates — do now", "Pipeline actions", "Ongoing baseline"].map(section => {
               const sectionItems = afTodos.filter(t => t.section === section);
               return (
                 <div key={section} style={{ marginBottom: 28 }}>
@@ -480,6 +489,53 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 </div>
               );
             })}
+
+            {/* Accountant research questions */}
+            <div style={{ marginBottom: 32 }}>
+              <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Questions to ask in your accountant conversations</h2>
+              <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Use these in your research calls before 13 May. You&apos;re not selling — you&apos;re being curious. The goal is to hear them say the same problems back to you in their own words.</p>
+              <Callout type="blue">
+                <strong>Before you ask anything:</strong> Don&apos;t mention AI or automation. Don&apos;t ask &quot;what could be automated&quot; — they won&apos;t know, and they&apos;ll close down. Ask about time, people, and frustration. You&apos;ll spot the automation opportunities yourself. Send Ben the transcript or notes after each call — that&apos;s what builds the content.
+              </Callout>
+              {[
+                { section: "Opening — get them talking", questions: [
+                  "Walk me through a typical week in the practice — what does the team actually spend most of their time on?",
+                  "When things get busy — end of quarter, January rush — what breaks first?",
+                  "What's the one task you wish you never had to think about again?",
+                ]},
+                { section: "People and process", questions: [
+                  "Are there tasks in the practice that only one person really knows how to do?",
+                  "What happens when that person is off sick or on holiday?",
+                  "What does your junior team spend most of their time on — and does that feel like the best use of them?",
+                  "What are you finding with hiring at the moment?",
+                ]},
+                { section: "Client delivery and admin", questions: [
+                  "How do you currently chase clients for information at period end — what does that process look like?",
+                  "How do you produce client updates or reports — is there a standard process, or does it vary?",
+                  "When a new client comes on board, what are the steps involved — and how long does it take?",
+                  "With Making Tax Digital coming in for sole traders, how are you preparing for the extra submission volume?",
+                ]},
+                { section: "The real cost question", questions: [
+                  "If you could wave a magic wand and remove one recurring task from the practice tomorrow, what would it be?",
+                  "What would it free up if that task just... handled itself?",
+                ]},
+              ].map((group, i) => (
+                <div key={i} style={{ marginBottom: 20 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 10px" }}>{group.section}</p>
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "4px 0" }}>
+                    {group.questions.map((q, j) => (
+                      <div key={j} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 20px", borderBottom: j < group.questions.length - 1 ? "1px solid #F0EDE8" : "none" }}>
+                        <span style={{ color: AF_COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.85rem", marginTop: 1 }}>→</span>
+                        <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.6 }}>{q}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              <div style={{ background: "#e8f0f7", borderLeft: `3px solid ${AF_COLOR}`, borderRadius: "0 4px 4px 0", padding: "14px 18px" }}>
+                <p style={{ fontSize: "0.84rem", color: "#1a3a5c", lineHeight: 1.6, margin: 0 }}><strong>After the call:</strong> Send Ben the Otter AI transcript or a voice note summary. Don&apos;t filter it — raw is better. If two or three accountants say the same thing, that&apos;s a content post. If they say something surprising, that&apos;s an even better one.</p>
+              </div>
+            </div>
 
             <DashboardFooter clientName="Andy Felton" tabName="Home" slug={slug} />
           </div>
@@ -497,11 +553,14 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
 
             {/* Positioning statement */}
-            <div style={{ background: AF_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 20 }}>
-              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning Statement</p>
-              <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0 }}>
-                "I replace the fragile processes holding your business together with systems that actually hold up."
+            <div style={{ background: AF_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 8 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Unique Positioning Statement — Agreed April 2026</p>
+              <p style={{ fontSize: "1.05rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.7, margin: 0 }}>
+                {`"Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I specialise in taking the manual heavy lifting out of accountancy retainer delivery — the reporting, the chasing, the recurring workflows that eat into every week. Often called (with affection) the 'Sheldon' of practice automation, I've spent 20+ years building complex systems that had to hold up under real conditions. I bring the same standard to accountancy practices that are drowning in delivery admin and ready to fix it properly."`}
               </p>
+            </div>
+            <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: "0 0 4px 4px", padding: "10px 18px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>Use the full version at formal networking. For small rooms and quick intros, lead with just the first two sentences then your name and the Sheldon line.</p>
             </div>
 
             {/* Headline + one-liner */}
@@ -509,9 +568,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               <div style={{ background: "#fff", border: `2px solid ${AF_COLOR}`, borderRadius: 6, padding: "22px 24px" }}>
                 <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, margin: "0 0 6px" }}>LinkedIn Headline — Live</p>
                 <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>
-                  {`The "Sheldon" of AI & automation, connecting systems, fixing fragile workflows, and protecting teams from burnout`}
+                  {`Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I fix that. | The 'Sheldon' of practice automation | Equate Digital`}
                 </p>
-                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Live as of April 2026. Leads with AI & automation — worth updating to process/systems language once offer clarity lands.</p>
+                <p style={{ fontSize: "0.78rem", color: "#9CA3AF", margin: 0, lineHeight: 1.5 }}>Agreed and updated April 2026. Problem-first, niche-specific, Sheldon persona retained. Opening line also anchors the UPS.</p>
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "22px 24px" }}>
                 <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Networking One-Liner — Current</p>
@@ -576,9 +635,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fff", border: `2px solid ${AF_COLOR}`, borderRadius: 8, padding: "36px 40px", marginBottom: 8 }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, color: AF_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>Live — April 2026</p>
               <div style={{ fontSize: "0.97rem", lineHeight: 2, color: "#3D3935", display: "flex", flexDirection: "column", gap: 16 }}>
-                <p style={{ margin: 0 }}>Typically businesses come to me when they're being held together by manual processes, workarounds, and people quietly filling the gaps.</p>
-                <p style={{ margin: 0 }}>It's not quite "on fire" YET… But everything takes way more effort than it should.</p>
-                <p style={{ margin: 0 }}>That's the problem I spend most of my time fixing.</p>
+                <p style={{ margin: 0 }}>Accountancy firms come to me when the retainer work is taking longer than it should.</p>
+                <p style={{ margin: 0 }}>Not because the team isn&apos;t capable. Because too much of it is still manual — client reporting built from scratch each month, update chasers sent by hand, documents assembled from three different places every time.</p>
+                <p style={{ margin: 0 }}>That&apos;s the problem I spend most of my time fixing.</p>
                 <p style={{ margin: 0 }}>👋 I'm Andy, often described (with affection) as the Sheldon of agency's AI & automation.</p>
                 <p style={{ margin: 0 }}>I typically help businesses who:</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 4 }}>
@@ -783,8 +842,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 { id: "practical", label: "Practical" },
                 { id: "authority", label: "Authority" },
                 { id: "sack", label: "SACK SALLY" },
+                { id: "bobby", label: "Bobby's Got a Brain" },
               ].map(st => (
-                <button key={st.id} onClick={() => setContentSubTab(st.id)} style={{ padding: "9px 16px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", border: "1px solid #E0DBD3", borderRadius: 3, cursor: "pointer", background: contentSubTab === st.id ? (st.id === "sack" ? "#6b2a00" : AF_COLOR) : "#fff", color: contentSubTab === st.id ? "#fff" : "#7A746E" }}>
+                <button key={st.id} onClick={() => setContentSubTab(st.id)} style={{ padding: "9px 16px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", border: "1px solid #E0DBD3", borderRadius: 3, cursor: "pointer", background: contentSubTab === st.id ? (st.id === "sack" ? "#6b2a00" : st.id === "bobby" ? "#2e7d4f" : AF_COLOR) : "#fff", color: contentSubTab === st.id ? "#fff" : "#7A746E" }}>
                   {st.label}
                 </button>
               ))}
@@ -808,6 +868,19 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                   <strong>April 2026 — keeping Andy aligned:</strong> Andy drafted a holiday post using the old Sally-as-the-problem framing. Feedback given: keep the opening email hook (it's concrete and works) but pivot the frame — Sally isn't the problem, the owner's reaction to that email is. When Sally is the villain, the reader feels exposed rather than understood. The new version leads with freedom (why they started the business) and lands on the owner as the single point of failure. Less accusatory, more emotional, same destination. CTA shifted to the owner stepping away rather than replacing Sally — avoids feeling like a threat to anyone on their team.
                 </Callout>
                 {afContentSack.map((idea, i) => <IdeaCard key={i} idea={idea} isSack={true} slug={slug} />)}
+              </div>
+            )}
+
+            {contentSubTab === "bobby" && (
+              <div>
+                <div style={{ background: "linear-gradient(135deg, #edf7f0, #d4edda)", border: "1px solid #7ec89a", borderRadius: 4, padding: "18px 22px", marginBottom: 20 }}>
+                  <p style={{ fontSize: "1.1rem", fontWeight: 800, color: "#1a4a2e", margin: "0 0 6px" }}>Bobby&apos;s Got a Brain</p>
+                  <p style={{ fontSize: "0.85rem", color: "#2e7d4f", margin: 0 }}>Bobby is the junior accountant in a practice doing manual, non-revenue-moving tasks that a system should be handling. The format: name the specific process Bobby is doing, call out the cost to the practice, land on &quot;that&apos;s exactly the kind of thing I fix.&quot; Bobby isn&apos;t the problem — the lack of a system is.</p>
+                </div>
+                <Callout type="green">
+                  <strong>Session 9 note:</strong> Don&apos;t post new Bobby content until you&apos;ve had your accountant research conversations. The real bottlenecks need to come from those calls — not assumption. Once you hear the same problem from two or three practices, that&apos;s your post. Send the transcripts to Ben and he&apos;ll help turn it into objection-based content.
+                </Callout>
+                {afContentBobby.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
               </div>
             )}
 
