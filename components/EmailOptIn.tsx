@@ -33,8 +33,7 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
     const supabase = createClient();
     await supabase
       .from("client_profiles")
-      .update({ monday_reminders: next })
-      .eq("slug", slug);
+      .upsert({ slug, monday_reminders: next }, { onConflict: "slug" });
     setSaving(false);
   }
 

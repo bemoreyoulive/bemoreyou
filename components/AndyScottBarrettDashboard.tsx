@@ -16,17 +16,13 @@ const ASB_NEXT_MOVE = "Post the discounting post this week — 'Discounting by 1
 const asbTodos = [
   { id: "s4-1", text: "Post the discounting post this week — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's in Content Ideas, ready to go. 30-minute timer.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
   { id: "s4-2", text: "Implement diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, BD, content, follow-ups.", owner: "Andy" },
-  { id: "s4-3", text: "Tighten Calendly — limit one-to-ones to one or two fixed time windows per week only. Remove the open availability.", owner: "Andy" },
+  { id: "s4-3", text: "Tighten your Outlook calendar — block out client call slots on Tue/Wed/Thu only. When sending meeting invites, offer one or two fixed time windows rather than open availability.", owner: "Andy" },
   { id: "s4-4", text: "Use the hard stop technique on all calls from now — announce at the start: 'I've got a hard stop at X.' Not rude. Makes both parties conscious of time.", owner: "Andy" },
   { id: "s4-5", text: "After every prospect call, networking session or client meeting: write down 3–4 challenges, pain points, or misconceptions that came up. WhatsApp them to Ben to turn into content ideas.", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
   { id: "s4-6", text: "Follow up with the strategy woman from networking — she mentioned doing webinars together. Neither of you followed up. Get back in touch.", owner: "Andy" },
   { id: "s4-7", text: "Read Jo's 'Making the Sale' document before your next prospect call.", owner: "Andy" },
   { id: "s4-8", text: "Use Ben's prospect call question framework for your next sales conversation — it's in Ben's Recommendations.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
-  { id: "w1", text: "Website: Change 'top-performing FTSE 100 company' to 'Rolls-Royce'", owner: "Andy" },
-  { id: "w2", text: "Website: Move Richard Waine testimonial to homepage", owner: "Andy" },
-  { id: "w3", text: "Website: Replace contact page copy with the version Ben sent", owner: "Andy" },
-  { id: "w4", text: "Website: Fix name hyphenation — 'Andy Scott Barrett' consistently, no hyphen", owner: "Andy" },
-  { id: "w5", text: "Website: Update copyright year to 2026", owner: "Andy" },
+  { id: "w1", text: "Website quick wins (5 changes, ~1 hour): name Rolls-Royce explicitly; move Richard Waine testimonial to homepage; replace contact page copy with Ben's version; fix name hyphenation to 'Andy Scott Barrett' throughout; update copyright year to 2026.", owner: "Andy" },
 ];
 
 
@@ -78,7 +74,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>4</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 4 — 30 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Content cadence settled at 2 posts/week (one expertise, one personal). Transition to dashboard ideas for Friday Finance posts — discounting post lined up next. Bank balance post went out — bookkeeper/accountant/FD explanation landing well at networking, generating a warm referral. Pipeline: aerospace lead dead, startup re-activating, main client ongoing. Time management framework agreed — diary blocking, Calendly constraints, hard stops on calls. Prospect call question framework added to dashboard. Content-from-conversations workflow introduced — Andy to send Ben notes after calls. Next session: week of 14 May 2026.</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Content cadence settled at 2 posts/week (one expertise, one personal). Transition to dashboard ideas for Friday Finance posts — discounting post lined up next. Bank balance post went out — bookkeeper/accountant/FD explanation landing well at networking, generating a warm referral. Pipeline: aerospace lead dead, startup re-activating, main client ongoing. Time management framework agreed — diary blocking, Outlook constraints, hard stops on calls. Prospect call question framework added to dashboard. Content-from-conversations workflow introduced — Andy to send Ben notes after calls. Next session: week of 14 May 2026.</p>
               </div>
             </div>
             <div style={{ background: "#f5f3f0", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
@@ -557,7 +553,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               {
                 num: "04b",
                 title: "Diary blocking is the structural change that makes everything else easier",
-                body: "Client calls on Tuesday, Wednesday, and Thursday only. Monday and Friday are for admin, BD, content, and follow-ups. One or two fixed Calendly windows per week — remove the open availability. Use hard stops on all calls: announce it at the start ('I've got a hard stop at X'). This isn't rude — it makes both parties conscious of time. Five to ten minutes maximum prep for networking and prospect calls: focus on the human (shared interests, shared city, something to connect on immediately), not the business details. They'll tell you the details.",
+                body: "Client calls on Tuesday, Wednesday, and Thursday only. Monday and Friday are for admin, BD, content, and follow-ups. When sending meeting invites via Outlook, offer one or two fixed time windows only — not open availability. Use hard stops on all calls: announce it at the start ('I've got a hard stop at X'). This isn't rude — it makes both parties conscious of time. Five to ten minutes maximum prep for networking and prospect calls: focus on the human (shared interests, shared city, something to connect on immediately), not the business details. They'll tell you the details.",
               },
               {
                 num: "05",
@@ -674,13 +670,17 @@ type AsbIdea = {
 function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
   const [open, setOpen] = useState(false);
   const [used, setUsed] = useState(false);
+  const [rowExists, setRowExists] = useState(false);
   const [saving, setSaving] = useState(false);
+  const ideaId = `asb-${idea.id}`;
 
   useEffect(() => {
     const supabase = createClient();
-    supabase.from("idea_states").select("used").eq("slug", slug).eq("idea_id", `asb-${idea.id}`).single()
-      .then(({ data }) => { if (data) setUsed(data.used); });
-  }, [slug, idea.id]);
+    supabase.from("idea_states").select("used").eq("slug", slug).eq("idea_id", ideaId).single()
+      .then(({ data }) => {
+        if (data) { setUsed(data.used); setRowExists(true); }
+      });
+  }, [slug, ideaId]);
 
   async function toggleUsed(e: React.MouseEvent) {
     e.stopPropagation();
@@ -688,10 +688,12 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
     setSaving(true);
     setUsed(next);
     const supabase = createClient();
-    await supabase.from("idea_states").upsert(
-      { slug, idea_id: `asb-${idea.id}`, used: next },
-      { onConflict: "slug,idea_id" }
-    );
+    if (rowExists) {
+      await supabase.from("idea_states").update({ used: next }).eq("slug", slug).eq("idea_id", ideaId);
+    } else {
+      await supabase.from("idea_states").insert({ slug, idea_id: ideaId, used: next });
+      setRowExists(true);
+    }
     setSaving(false);
   }
 
