@@ -16,11 +16,11 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
     async function load() {
       const supabase = createClient();
       const { data } = await supabase
-        .from("client_profiles")
-        .select("monday_reminders")
+        .from("email_optins")
+        .select("opted_in")
         .eq("slug", slug)
         .single();
-      setOpted(data?.monday_reminders ?? false);
+      setOpted(data?.opted_in ?? false);
     }
     load();
   }, [slug]);
@@ -32,8 +32,8 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
     setOpted(next);
     const supabase = createClient();
     await supabase
-      .from("client_profiles")
-      .upsert({ slug, monday_reminders: next }, { onConflict: "slug" });
+      .from("email_optins")
+      .upsert({ slug, opted_in: next, updated_at: new Date().toISOString() }, { onConflict: "slug" });
     setSaving(false);
   }
 
