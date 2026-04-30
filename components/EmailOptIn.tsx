@@ -31,9 +31,14 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
     setSaving(true);
     setOpted(next);
     const supabase = createClient();
-    await supabase
+    const { error } = await supabase
       .from("email_optins")
-      .upsert({ slug, opted_in: next, updated_at: new Date().toISOString() }, { onConflict: "slug" });
+      .update({ opted_in: next, updated_at: new Date().toISOString() })
+      .eq("slug", slug);
+    if (error) {
+      // Row doesn't exist yet — insert it
+      await supabase.from("email_optins").insert({ slug, opted_in: next });
+    }
     setSaving(false);
   }
 
