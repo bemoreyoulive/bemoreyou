@@ -18,10 +18,10 @@ export async function GET(req: NextRequest) {
   const results: { slug: string; status: string }[] = [];
 
   for (const slug of getAllClientSlugs()) {
-    // Look up client profile — must have email and opted in
+    // Look up client profile — must have email
     const { data: profile } = await supabase
       .from("client_profiles")
-      .select("name, email, monday_reminders")
+      .select("name, email")
       .eq("slug", slug)
       .single();
 
@@ -30,7 +30,14 @@ export async function GET(req: NextRequest) {
       continue;
     }
 
-    if (!profile.monday_reminders) {
+    // Check opt-in from email_optins table
+    const { data: optIn } = await supabase
+      .from("email_optins")
+      .select("opted_in")
+      .eq("slug", slug)
+      .single();
+
+    if (!optIn?.opted_in) {
       results.push({ slug, status: "skipped — not opted in" });
       continue;
     }
