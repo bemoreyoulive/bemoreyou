@@ -22,6 +22,7 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
   const [statuses, setStatuses] = useState<Record<string, boolean>>(
     Object.fromEntries(items.map((item) => [item.id, false]))
   );
+  const [existingIds, setExistingIds] = useState<Set<string>>(new Set());
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -33,8 +34,10 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
         .eq("slug", slug);
       if (data?.length) {
         const saved: Record<string, boolean> = {};
-        data.forEach(row => { saved[row.todo_id] = row.completed; });
+        const ids = new Set<string>();
+        data.forEach(row => { saved[row.todo_id] = row.completed; ids.add(row.todo_id); });
         setStatuses(prev => ({ ...prev, ...saved }));
+        setExistingIds(ids);
       }
       setLoaded(true);
     }
@@ -46,10 +49,15 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
     setStatuses(prev => ({ ...prev, [id]: newCompleted }));
 
     const supabase = createClient();
-    await supabase.from("todo_states").upsert(
-      { slug, todo_id: id, completed: newCompleted, updated_at: new Date().toISOString() },
-      { onConflict: "slug,todo_id" }
-    );
+    if (existingIds.has(id)) {
+      await supabase.from("todo_states")
+        .update({ completed: newCompleted, updated_at: new Date().toISOString() })
+        .eq("slug", slug).eq("todo_id", id);
+    } else {
+      await supabase.from("todo_states")
+        .insert({ slug, todo_id: id, completed: newCompleted, updated_at: new Date().toISOString() });
+      setExistingIds(prev => new Set(prev).add(id));
+    }
 
     if (newCompleted) {
       await fetch("/api/notify", {
