@@ -77,14 +77,6 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Content cadence settled at 2 posts/week (one expertise, one personal). Transition to dashboard ideas for Friday Finance posts — discounting post lined up next. Bank balance post went out — bookkeeper/accountant/FD explanation landing well at networking, generating a warm referral. Pipeline: aerospace lead dead, startup re-activating, main client ongoing. Time management framework agreed — diary blocking, Outlook constraints, hard stops on calls. Prospect call question framework added to dashboard. Content-from-conversations workflow introduced — Andy to send Ben notes after calls. Next session: week of 14 May 2026.</p>
               </div>
             </div>
-            <div style={{ background: "#f5f3f0", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
-              <div style={{ width: 36, height: 36, background: "#9CA3AF", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>3</div>
-              <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#3D3935", margin: "0 0 4px" }}>Session 3 — 15 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#6b6860", margin: 0, lineHeight: 1.6 }}>Profile finalised. New headline confirmed ("I turn financial data into decisions — the bit your accountant isn't there to do"). Banner decided: decision-focused option, flipped order. About section structure agreed and compacted. Networking talk debriefed — used as content angle source. Pipeline updates: aerospace East Midlands prospect in play, Manchester client returning, email-only prospect correctly left, startup re-activating. Content workflow discussion — Claude + dashboard cards + 30-minute posting timer.</p>
-              </div>
-            </div>
-
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
                 { label: "Sessions done", value: "4 of 6", sub: "Next: w/c 14 May 2026" },
