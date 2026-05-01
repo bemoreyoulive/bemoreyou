@@ -385,11 +385,13 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 },
                 {
                   step: "3",
-                  label: "Understand their offer and how they work",
-                  desc: "Only once context is clear — understand their commercial model before surfacing problems.",
+                  label: "Understand the financial shape of the business",
+                  desc: "Only once context is clear. Get a picture of revenue, costs, margins, and how they're currently managing the numbers — before surfacing problems.",
                   questions: [
-                    "How do you typically work with a client, and what does that look like in practice?",
-                    "Do you feel like you have a clear picture of which parts of the business are most profitable?",
+                    "Do you have a sense of what your margins look like across different parts of the business?",
+                    "How are you currently keeping on top of the numbers — is it you, your accountant, someone in-house?",
+                    "Do you have visibility on your cash position a few months out, or is it more month to month?",
+                    "Are there parts of the business that are more profitable than others — do you know which?",
                   ],
                 },
                 {
