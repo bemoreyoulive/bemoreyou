@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createClient } from "@/lib/supabase-browser";
 
 interface EmailOptInProps {
   slug: string;
@@ -14,13 +13,9 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
 
   useEffect(() => {
     async function load() {
-      const supabase = createClient();
-      const { data } = await supabase
-        .from("email_optins")
-        .select("opted_in")
-        .eq("slug", slug)
-        .single();
-      setOpted(data?.opted_in ?? false);
+      const res = await fetch(`/api/email-optin?slug=${encodeURIComponent(slug)}`);
+      const json = await res.json();
+      setOpted(json.opted_in ?? false);
     }
     load();
   }, [slug]);
@@ -30,15 +25,11 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
     const next = !opted;
     setSaving(true);
     setOpted(next);
-    const supabase = createClient();
-    const { error } = await supabase
-      .from("email_optins")
-      .update({ opted_in: next, updated_at: new Date().toISOString() })
-      .eq("slug", slug);
-    if (error) {
-      // Row doesn't exist yet — insert it
-      await supabase.from("email_optins").insert({ slug, opted_in: next });
-    }
+    await fetch("/api/email-optin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, opted_in: next }),
+    });
     setSaving(false);
   }
 

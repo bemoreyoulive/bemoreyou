@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createClient } from "@/lib/supabase-browser";
 
 interface Props {
   clientName: string;
@@ -27,14 +26,9 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
 
   useEffect(() => {
     async function loadComments() {
-      const supabase = createClient();
-      const { data } = await supabase
-        .from("comments")
-        .select("id, text, created_at")
-        .eq("slug", slug)
-        .eq("tab_name", tabName)
-        .order("created_at", { ascending: true });
-      setComments(data ?? []);
+      const res = await fetch(`/api/comments?slug=${encodeURIComponent(slug)}&tab=${encodeURIComponent(tabName)}`);
+      const json = await res.json();
+      setComments(json.data ?? []);
     }
     loadComments();
   }, [slug, tabName]);
@@ -44,16 +38,16 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
     if (!commentText.trim()) return;
     setCommentStatus("sending");
 
-    const supabase = createClient();
-    const { data: saved, error } = await supabase
-      .from("comments")
-      .insert({ slug, tab_name: tabName, client_name: clientName, text: commentText.trim() })
-      .select("id, text, created_at")
-      .single();
+    const res = await fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, tabName, clientName, text: commentText }),
+    });
+    const json = await res.json();
 
-    if (error) { setCommentStatus("error"); return; }
+    if (!json.ok) { setCommentStatus("error"); return; }
 
-    setComments(prev => [...prev, saved]);
+    setComments(prev => [...prev, json.data]);
     setCommentText("");
     setCommentStatus("idle");
 

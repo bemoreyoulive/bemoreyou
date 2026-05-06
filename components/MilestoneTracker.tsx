@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createClient } from "@/lib/supabase-browser";
 
 const MILESTONES: { id: string; label: string; description: string }[] = [
   {
@@ -175,13 +174,12 @@ export default function MilestoneTracker({ slug, color }: Props) {
 
   useEffect(() => {
     async function load() {
-      const supabase = createClient();
-      const { data } = await supabase
-        .from("milestone_states")
-        .select("milestone_id, completed")
-        .eq("slug", slug);
+      const res = await fetch(`/api/milestone-state?slug=${encodeURIComponent(slug)}`);
+      const json = await res.json();
       const map: Record<string, boolean> = {};
-      (data ?? []).forEach(r => { map[r.milestone_id] = r.completed; });
+      (json.data ?? []).forEach((r: { milestone_id: string; completed: boolean }) => {
+        map[r.milestone_id] = r.completed;
+      });
       setCompleted(map);
       setLoaded(true);
     }
@@ -192,15 +190,11 @@ export default function MilestoneTracker({ slug, color }: Props) {
     const next = !completed[id];
     setSaving(id);
     setCompleted(prev => ({ ...prev, [id]: next }));
-    const supabase = createClient();
-    await supabase
-      .from("milestone_states")
-      .upsert({
-        slug,
-        milestone_id: id,
-        completed: next,
-        completed_at: next ? new Date().toISOString() : null,
-      }, { onConflict: "slug,milestone_id" });
+    await fetch("/api/milestone-state", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, milestoneId: id, completed: next }),
+    });
     setSaving(null);
   }
 
