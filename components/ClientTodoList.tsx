@@ -1,7 +1,5 @@
 "use client";
-// v3 — update/insert instead of upsert to avoid duplicate key errors
 import { useState, useEffect } from "react";
-import { createClient } from "@/lib/supabase-browser";
 
 interface TodoItem {
   id: string;
@@ -22,22 +20,18 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
   const [statuses, setStatuses] = useState<Record<string, boolean>>(
     Object.fromEntries(items.map((item) => [item.id, false]))
   );
-  const [existingIds, setExistingIds] = useState<Set<string>>(new Set());
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     async function loadStates() {
-      const supabase = createClient();
-      const { data } = await supabase
-        .from("todo_states")
-        .select("todo_id, completed")
-        .eq("slug", slug);
-      if (data?.length) {
+      const res = await fetch(`/api/todo-state?slug=${encodeURIComponent(slug)}`);
+      const json = await res.json();
+      if (json.ok && json.data?.length) {
         const saved: Record<string, boolean> = {};
-        const ids = new Set<string>();
-        data.forEach(row => { saved[row.todo_id] = row.completed; ids.add(row.todo_id); });
+        json.data.forEach((row: { todo_id: string; completed: boolean }) => {
+          saved[row.todo_id] = row.completed;
+        });
         setStatuses(prev => ({ ...prev, ...saved }));
-        setExistingIds(ids);
       }
       setLoaded(true);
     }
@@ -48,16 +42,11 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
     const newCompleted = !statuses[id];
     setStatuses(prev => ({ ...prev, [id]: newCompleted }));
 
-    const supabase = createClient();
-    if (existingIds.has(id)) {
-      await supabase.from("todo_states")
-        .update({ completed: newCompleted, updated_at: new Date().toISOString() })
-        .eq("slug", slug).eq("todo_id", id);
-    } else {
-      await supabase.from("todo_states")
-        .insert({ slug, todo_id: id, completed: newCompleted, updated_at: new Date().toISOString() });
-      setExistingIds(prev => new Set(prev).add(id));
-    }
+    await fetch("/api/todo-state", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, todoId: id, completed: newCompleted }),
+    });
 
     if (newCompleted) {
       await fetch("/api/notify", {
