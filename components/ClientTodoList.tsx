@@ -5,6 +5,8 @@ interface TodoItem {
   id: string;
   text: string;
   owner?: string;
+  subtext?: string;
+  section?: string;
   tabLink?: { label: string; tab: string };
 }
 
@@ -57,7 +59,8 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
     }
   }
 
-  const completedCount = Object.values(statuses).filter(Boolean).length;
+  const itemIds = new Set(items.map(i => i.id));
+  const completedCount = Object.entries(statuses).filter(([id, done]) => done && itemIds.has(id)).length;
   const pct = items.length ? (completedCount / items.length) * 100 : 0;
 
   return (
@@ -72,50 +75,63 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
       </div>
 
       <div style={{display: "flex", flexDirection: "column", gap: 2}}>
-        {items.map((item) => {
+        {items.map((item, idx) => {
           const done = statuses[item.id];
+          const prevSection = idx > 0 ? items[idx - 1].section : null;
+          const showSectionHeader = item.section && item.section !== prevSection;
           return (
-            <div
-              key={item.id}
-              style={{
-                display: "flex", alignItems: "flex-start", justifyContent: "space-between",
-                gap: 16, padding: "18px 24px",
-                background: done ? "transparent" : "#fff",
-                border: "1px solid #E0DBD3", borderRadius: 3,
-                transition: "background 0.2s ease",
-              }}
-            >
-              <div style={{flex: 1}}>
-                <p style={{fontSize: "0.9rem", lineHeight: 1.65, margin: 0, color: done ? "#7A746E" : "#1C1C1C", textDecoration: done ? "line-through" : "none"}}>
-                  {item.text}
+            <div key={item.id}>
+              {showSectionHeader && (
+                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: idx === 0 ? "0 0 8px" : "20px 0 8px"}}>
+                  {item.section}
                 </p>
-                {item.owner && (
-                  <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", marginTop: 4, marginBottom: 0}}>
-                    {item.owner}
-                  </p>
-                )}
-                {item.tabLink && onTabLink && (
-                  <button
-                    onClick={() => onTabLink(item.tabLink!.tab)}
-                    style={{marginTop: 6, fontSize: "0.68rem", fontWeight: 600, color: accentColor, background: "none", border: "none", cursor: "pointer", padding: 0, letterSpacing: "0.05em", textDecoration: "underline"}}
-                  >
-                    → {item.tabLink.label}
-                  </button>
-                )}
-              </div>
-              <button
-                onClick={() => toggle(item.id, item.text)}
+              )}
+              <div
                 style={{
-                  flexShrink: 0, fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em",
-                  textTransform: "uppercase", padding: "8px 16px", borderRadius: 3,
-                  border: done ? "1px solid #E0DBD3" : "none",
-                  background: done ? "transparent" : accentColor,
-                  color: done ? "#7A746E" : "#fff",
-                  cursor: "pointer", transition: "all 0.15s ease",
+                  display: "flex", alignItems: "flex-start", justifyContent: "space-between",
+                  gap: 16, padding: "18px 24px",
+                  background: done ? "transparent" : "#fff",
+                  border: "1px solid #E0DBD3", borderRadius: 3,
+                  transition: "background 0.2s ease",
                 }}
               >
-                {done ? "Undo" : "Done"}
-              </button>
+                <div style={{flex: 1}}>
+                  <p style={{fontSize: "0.9rem", lineHeight: 1.65, margin: 0, color: done ? "#7A746E" : "#1C1C1C", textDecoration: done ? "line-through" : "none"}}>
+                    {item.text}
+                  </p>
+                  {item.subtext && (
+                    <p style={{fontSize: "0.8rem", color: "#7A746E", lineHeight: 1.6, margin: "6px 0 0", textDecoration: "none"}}>
+                      {item.subtext}
+                    </p>
+                  )}
+                  {item.owner && !item.subtext && (
+                    <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", marginTop: 4, marginBottom: 0}}>
+                      {item.owner}
+                    </p>
+                  )}
+                  {item.tabLink && onTabLink && (
+                    <button
+                      onClick={() => onTabLink(item.tabLink!.tab)}
+                      style={{marginTop: 6, fontSize: "0.68rem", fontWeight: 600, color: accentColor, background: "none", border: "none", cursor: "pointer", padding: 0, letterSpacing: "0.05em", textDecoration: "underline"}}
+                    >
+                      → {item.tabLink.label}
+                    </button>
+                  )}
+                </div>
+                <button
+                  onClick={() => toggle(item.id, item.text)}
+                  style={{
+                    flexShrink: 0, fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em",
+                    textTransform: "uppercase", padding: "8px 16px", borderRadius: 3,
+                    border: done ? "1px solid #E0DBD3" : "none",
+                    background: done ? "transparent" : accentColor,
+                    color: done ? "#7A746E" : "#fff",
+                    cursor: "pointer", transition: "all 0.15s ease",
+                  }}
+                >
+                  {done ? "Undo" : "Done"}
+                </button>
+              </div>
             </div>
           );
         })}

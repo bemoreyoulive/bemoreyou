@@ -523,7 +523,18 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 9" animateIn />
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 28 }}>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 9</h2>
+            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 9 on 29th April. Tick things off as you go.</p>
+
+            <ClientTodoList
+              items={afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy", subtext: t.subtext, section: t.section, tabLink: t.tabLink }))}
+              clientName="Andy Felton"
+              slug={slug}
+              accentColor={AF_COLOR}
+              onTabLink={setActiveTab}
+            />
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, margin: "40px 0 28px" }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
                 <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>What this is</h3>
                 <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>A working strategy document — not a polished deck. Everything in here is based on our sessions together. It'll evolve as things move forward. Use it to review, challenge, and track what we're building. If something doesn't feel right, say so.</p>
@@ -554,25 +565,6 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>Why we're working on this</h2>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>You pivoted from software development to process and systems implementation in early 2025 after the bespoke web dev market dried up. Strong skills, real integrity, no clear story about who you were for. Three months in, the positioning is largely sorted. Content is landing with the right people offline. The sticking point is converting the first properly-aligned client, and getting the LinkedIn work in front of enough of the right people — not just thrown against a wall and hoped for.</p>
             </div>
-
-            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 9</h2>
-            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 24px" }}>Updated after Session 9 on 29th April. Tick things off as you go.</p>
-
-            {["Accountant research — priority", "Messaging updates — do now", "Pipeline actions", "Ongoing baseline"].map(section => {
-              const sectionItems = afTodos.filter(t => t.section === section);
-              return (
-                <div key={section} style={{ marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", marginBottom: 10 }}>{section}</p>
-                  <ClientTodoList
-                    items={sectionItems.map(t => ({ id: t.id, text: t.text, owner: "Andy", tabLink: t.tabLink }))}
-                    clientName="Andy Felton"
-                    slug={slug}
-                    accentColor={AF_COLOR}
-                    onTabLink={setActiveTab}
-                  />
-                </div>
-              );
-            })}
 
             {/* Accountant research questions */}
             <div style={{ marginBottom: 32 }}>
