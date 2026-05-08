@@ -18,6 +18,75 @@ interface ClientTodoListProps {
   onTabLink?: (tab: string) => void;
 }
 
+function TodoRow({ item, done, accentColor, onToggle, onTabLink }: {
+  item: TodoItem;
+  done: boolean;
+  accentColor: string;
+  onToggle: () => void;
+  onTabLink?: (tab: string) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const hasDetail = item.subtext || item.tabLink;
+
+  return (
+    <div
+      style={{
+        background: done ? "transparent" : "#fff",
+        border: "1px solid #E0DBD3", borderRadius: 3,
+        transition: "background 0.2s ease",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "11px 16px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flex: 1, minWidth: 0 }}>
+          {hasDetail && (
+            <button
+              onClick={() => setExpanded(o => !o)}
+              style={{ flexShrink: 0, background: "none", border: "none", cursor: "pointer", padding: 0, fontSize: "0.6rem", color: "#7A746E", lineHeight: 1 }}
+              aria-label={expanded ? "Collapse" : "Expand"}
+            >
+              {expanded ? "▼" : "▶"}
+            </button>
+          )}
+          {!hasDetail && <span style={{ width: 14, flexShrink: 0 }} />}
+          <p style={{ fontSize: "0.85rem", lineHeight: 1.5, margin: 0, color: done ? "#7A746E" : "#1C1C1C", textDecoration: done ? "line-through" : "none" }}>
+            {item.text}
+          </p>
+        </div>
+        <button
+          onClick={onToggle}
+          style={{
+            flexShrink: 0, fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em",
+            textTransform: "uppercase", padding: "5px 12px", borderRadius: 3,
+            border: done ? "1px solid #E0DBD3" : "none",
+            background: done ? "transparent" : accentColor,
+            color: done ? "#7A746E" : "#fff",
+            cursor: "pointer", transition: "all 0.15s ease",
+          }}
+        >
+          {done ? "Undo" : "Done"}
+        </button>
+      </div>
+      {expanded && hasDetail && (
+        <div style={{ padding: "0 16px 12px 38px", borderTop: "1px solid #F0EBE5" }}>
+          {item.subtext && (
+            <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.6, margin: "8px 0 0" }}>
+              {item.subtext}
+            </p>
+          )}
+          {item.tabLink && onTabLink && (
+            <button
+              onClick={() => onTabLink(item.tabLink!.tab)}
+              style={{ marginTop: 6, fontSize: "0.68rem", fontWeight: 600, color: accentColor, background: "none", border: "none", cursor: "pointer", padding: 0, letterSpacing: "0.05em", textDecoration: "underline" }}
+            >
+              → {item.tabLink.label}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ClientTodoList({ items, clientName, slug, accentColor = "#E8521C", onTabLink }: ClientTodoListProps) {
   const [statuses, setStatuses] = useState<Record<string, boolean>>(
     Object.fromEntries(items.map((item) => [item.id, false]))
@@ -65,16 +134,16 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
 
   return (
     <div style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.2s ease" }}>
-      <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24}}>
-        <p style={{fontSize: "0.85rem", fontWeight: 600, color: "#3D3935", margin: 0}}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+        <p style={{ fontSize: "0.82rem", fontWeight: 600, color: "#3D3935", margin: 0 }}>
           {completedCount} of {items.length} completed
         </p>
-        <div style={{width: 160, height: 3, background: "#E0DBD3", borderRadius: 99, overflow: "hidden"}}>
-          <div style={{height: "100%", width: `${pct}%`, background: accentColor, borderRadius: 99, transition: "width 0.3s ease"}} />
+        <div style={{ width: 140, height: 3, background: "#E0DBD3", borderRadius: 99, overflow: "hidden" }}>
+          <div style={{ height: "100%", width: `${pct}%`, background: accentColor, borderRadius: 99, transition: "width 0.3s ease" }} />
         </div>
       </div>
 
-      <div style={{display: "flex", flexDirection: "column", gap: 2}}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
         {items.map((item, idx) => {
           const done = statuses[item.id];
           const prevSection = idx > 0 ? items[idx - 1].section : null;
@@ -82,56 +151,17 @@ export default function ClientTodoList({ items, clientName, slug, accentColor = 
           return (
             <div key={item.id}>
               {showSectionHeader && (
-                <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: idx === 0 ? "0 0 8px" : "20px 0 8px"}}>
+                <p style={{ fontSize: "0.63rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: idx === 0 ? "0 0 6px" : "16px 0 6px" }}>
                   {item.section}
                 </p>
               )}
-              <div
-                style={{
-                  display: "flex", alignItems: "flex-start", justifyContent: "space-between",
-                  gap: 16, padding: "18px 24px",
-                  background: done ? "transparent" : "#fff",
-                  border: "1px solid #E0DBD3", borderRadius: 3,
-                  transition: "background 0.2s ease",
-                }}
-              >
-                <div style={{flex: 1}}>
-                  <p style={{fontSize: "0.9rem", lineHeight: 1.65, margin: 0, color: done ? "#7A746E" : "#1C1C1C", textDecoration: done ? "line-through" : "none"}}>
-                    {item.text}
-                  </p>
-                  {item.subtext && (
-                    <p style={{fontSize: "0.8rem", color: "#7A746E", lineHeight: 1.6, margin: "6px 0 0", textDecoration: "none"}}>
-                      {item.subtext}
-                    </p>
-                  )}
-                  {item.owner && !item.subtext && (
-                    <p style={{fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", marginTop: 4, marginBottom: 0}}>
-                      {item.owner}
-                    </p>
-                  )}
-                  {item.tabLink && onTabLink && (
-                    <button
-                      onClick={() => onTabLink(item.tabLink!.tab)}
-                      style={{marginTop: 6, fontSize: "0.68rem", fontWeight: 600, color: accentColor, background: "none", border: "none", cursor: "pointer", padding: 0, letterSpacing: "0.05em", textDecoration: "underline"}}
-                    >
-                      → {item.tabLink.label}
-                    </button>
-                  )}
-                </div>
-                <button
-                  onClick={() => toggle(item.id, item.text)}
-                  style={{
-                    flexShrink: 0, fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em",
-                    textTransform: "uppercase", padding: "8px 16px", borderRadius: 3,
-                    border: done ? "1px solid #E0DBD3" : "none",
-                    background: done ? "transparent" : accentColor,
-                    color: done ? "#7A746E" : "#fff",
-                    cursor: "pointer", transition: "all 0.15s ease",
-                  }}
-                >
-                  {done ? "Undo" : "Done"}
-                </button>
-              </div>
+              <TodoRow
+                item={item}
+                done={done}
+                accentColor={accentColor}
+                onToggle={() => toggle(item.id, item.text)}
+                onTabLink={onTabLink}
+              />
             </div>
           );
         })}
