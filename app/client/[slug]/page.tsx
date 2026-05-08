@@ -212,12 +212,96 @@ const afContentSack = [
 ];
 
 const afContentBobby = [
-  { id: "af-bobby-1", hook: "Bobby shouldn't be your chase-up department", whiteboard: "\"Bobby Shouldn't Be Your Chase-Up Department\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby is the one sending the same email every quarter asking clients to submit their records — that's exactly the kind of process I automate.\n\nPeriod-end chasing can run on a schedule. Automatically. Consistently. Without Bobby having to remember who's submitted and who hasn't.\n\nBobby's time is worth more than copy-pasting the same message into fourteen different email threads.\n\nThis is plumbing. Not magic.", cta: "If Bobby is your chase-up process, let's talk about what replaces that." },
-  { id: "af-bobby-2", hook: "Bobby shouldn't be building the same report every month", whiteboard: "\"Bobby Shouldn't Be Building The Same Report Every Month\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby starts the same reporting process from scratch every month — pulling data from one place, formatting it in another, manually checking who's submitted what — that's exactly the kind of workflow I automate.\n\nA system that knows when submissions are in and produces a consistent report doesn't get tired on a Friday afternoon.\n\nBobby does.", cta: "If your monthly reports start with a blank page and Bobby's patience, let's fix that." },
-  { id: "af-bobby-3", hook: "Bobby deserves a dashboard, not six logins", whiteboard: "\"Bobby Deserves A Dashboard, Not Six Logins\"", grade: 2, tag: "Unused", priority: false, postCopy: "If Bobby's Monday morning starts with logging into multiple platforms to work out who's done what — that's fragility, not process.\n\nOne internal dashboard that aggregates submission status automatically isn't complex. It just doesn't exist yet.\n\nThat's the gap I fix.", cta: "If Bobby starts the week with six tabs open just to know where things stand, let's talk." },
-  { id: "af-bobby-4", hook: "Your practice isn't a spreadsheet", whiteboard: "\"Your Practice Isn't A Spreadsheet\"", grade: 3, tag: "Unused", priority: false, postCopy: "If the master tracker for your client base lives in a spreadsheet that only Bobby fully understands — that's not a system. That's a single point of failure.\n\nSpreadsheets are tools. They're not operating systems.\n\nOne accidental delete. One formula broken. One Bobby-goes-on-holiday scenario.\n\nAnd everything wobbles.", cta: "If Bobby going on holiday is genuinely a risk to your practice, let's fix that before she books the next one." },
-  { id: "af-bobby-5", hook: "Onboarding a new client shouldn't take Bobby half a day", whiteboard: "\"Onboarding A New Client Shouldn't Take Half A Day\"", grade: 2, tag: "Unused", priority: false, postCopy: "New client signs. Bobby creates the folder, sends the welcome email, sets up the task list, updates the practice management system — every single time, from scratch, from memory.\n\nIf onboarding relies on Bobby knowing all the steps, it's fragile.\n\nRepeatable beats heroic. Every time.", cta: "If your onboarding process lives in Bobby's head, let's get it out of there." },
-  { id: "af-bobby-6", hook: "Bobby's got a brain — let's use it properly", whiteboard: "\"Bobby's Got A Brain\"", grade: 1, tag: "Unused", priority: false, postCopy: "Most accountancy practices I speak to aren't struggling because their people aren't good enough.\n\nThey're struggling because their best people are spending half their week on tasks a system should handle.\n\nChasing clients for records. Building the same report from scratch. Logging into six platforms to find out what's still outstanding.\n\nBobby didn't become an accountant to be a data entry function.\n\nThat's not a people problem. It's a process problem.", cta: "If Bobby's skills are being wasted on manual admin, let's talk about what the fix looks like." },
+  {
+    id: "af-bobby-1",
+    hook: "Bobby shouldn't be your chase-up department",
+    whiteboard: "\"Bobby Shouldn't Be Your Chase-Up Department\"",
+    grade: 2, tag: "Unused", priority: false,
+    guidance: "The emotional hook here is quiet frustration — the practice owner who knows, deep down, that chasing clients for records is embarrassing. It's not just inefficient, it's a professional image problem. You're a trusted advisor and you're sending the same email asking for the same documents for the fourth time this quarter. Lead with that feeling. The practice owner reading this has either sent that email themselves or watched Bobby send it and cringed. Name that moment specifically. Then make the fix sound boring and obvious — because it is. That's your whole positioning: this isn't clever AI magic, it's plumbing that should have been done years ago.",
+    prompts: "Think about the practice owners you've spoken to. What's the specific moment when chasing clients stops being a minor irritation and becomes a genuine problem — missing a deadline, a client relationship that gets awkward, a quarter-end that runs two weeks late because three clients didn't submit? What does the owner say when you describe this back to them? What's the version of this that they haven't admitted out loud yet?",
+    postCopy: "If Bobby is the one sending the same email every quarter asking clients to submit their records — that's exactly the kind of process I automate.\n\nPeriod-end chasing can run on a schedule. Automatically. Consistently. Without Bobby having to remember who's submitted and who hasn't.\n\nBobby's time is worth more than copy-pasting the same message into fourteen different email threads.\n\nThis is plumbing. Not magic.",
+    cta: "If Bobby is your chase-up process, I'd genuinely love to show you what replaces it. Drop me a message — it's a shorter conversation than you think."
+  },
+  {
+    id: "af-bobby-2",
+    hook: "Bobby shouldn't be building the same report every month",
+    whiteboard: "\"Bobby Shouldn't Be Building The Same Report Every Month\"",
+    grade: 2, tag: "Unused", priority: false,
+    guidance: "The emotional core of this one is the hidden cost of reliability. Bobby always delivers. The report always looks right. And because it always looks right, nobody ever questions whether the process behind it is quietly exhausting someone. You want to surface the thing that never gets noticed because the person doing it is too competent to let it show. That's a specific, human observation — and it's the kind of thing a practice owner hasn't thought about because Bobby hasn't complained. Make them feel slightly guilty about that. Not accusatory — just honest. Then show them what changes when a system does the boring bit.",
+    prompts: "What's the most time-consuming part of the monthly report build that a practice owner would be surprised to know about? What's the version of this where something goes wrong — Bobby was off sick, the numbers were pulled for the wrong week, a platform changed its interface — and the whole thing fell apart? What did the practice owner say when they found out?",
+    postCopy: "If Bobby starts the same reporting process from scratch every month — pulling data from one place, formatting it in another, manually checking who's submitted what — that's exactly the kind of workflow I automate.\n\nA system that knows when submissions are in and produces a consistent report doesn't get tired on a Friday afternoon.\n\nBobby does.",
+    cta: "If your monthly reports start with a blank page and Bobby's patience, let's fix that. Bobby's patience is finite. The deadline isn't."
+  },
+  {
+    id: "af-bobby-3",
+    hook: "Bobby deserves a dashboard, not six logins",
+    whiteboard: "\"Bobby Deserves A Dashboard, Not Six Logins\"",
+    grade: 2, tag: "Unused", priority: false,
+    guidance: "This one is about the absurdity of how accountancy practices actually operate versus how professional they appear externally. From the outside, a well-run practice looks polished and organised. On the inside, Monday morning is six browser tabs, three password resets, and a spreadsheet that hasn't been saved since Thursday. You want the practice owner to recognise that gap — and feel slightly silly about it. Keep the tone dry. You're not lecturing them, you're describing something you've seen so many times it barely surprises you anymore. Then offer the obvious fix like it's the most boring thing in the world. Because it is.",
+    prompts: "What are the actual platforms a junior accountant typically logs into to piece together a status picture? What's the human cost of that — in time, in errors, in the general dread of Monday morning? What would the same person's Monday look like if a single dashboard existed instead?",
+    postCopy: "If Bobby's Monday morning starts with logging into multiple platforms to work out who's done what — that's fragility, not process.\n\nOne internal dashboard that aggregates submission status automatically isn't complex. It just doesn't exist yet.\n\nThat's the gap I fix.",
+    cta: "If Bobby's Monday morning involves more logins than a hacker movie, let's talk about what a proper dashboard looks like. It's less glamorous than it sounds. It also works."
+  },
+  {
+    id: "af-bobby-4",
+    hook: "Your practice isn't a spreadsheet",
+    whiteboard: "\"Your Practice Isn't A Spreadsheet\"",
+    grade: 3, tag: "Unused", priority: false,
+    guidance: "This is your strongest Bobby post and the one most likely to make a practice owner stop scrolling. Every accountancy practice has a master spreadsheet. The practice owner knows it's fragile. They've thought about fixing it. They just haven't. The emotional hook is mild dread — the thing they haven't said out loud, which is that the whole operation has a single point of failure and its name is a file on someone's OneDrive. Don't be harsh about it. Be the person who's seen this so many times that they're just stating the obvious, gently. The 'Bobby goes on holiday' scenario is the specific moment to build around — it's tangible, funny, and uncomfortably real.",
+    prompts: "Have you actually seen a spreadsheet collapse in a client's business? What happened? What did it cost them — in time, in client trust, in sheer embarrassment? What's the specific version of this that an accountancy practice owner would most recognise? What's the thing they'd read and think 'that's definitely us, please don't tell anyone'?",
+    postCopy: "If the master tracker for your client base lives in a spreadsheet that only Bobby fully understands — that's not a system. That's a single point of failure.\n\nSpreadsheets are tools. They're not operating systems.\n\nOne accidental delete. One formula broken. One Bobby-goes-on-holiday scenario.\n\nAnd everything wobbles.",
+    cta: "If Bobby going on holiday is genuinely a risk to your practice, send me a message before she books the next one. I'm not even slightly joking."
+  },
+  {
+    id: "af-bobby-5",
+    hook: "Onboarding a new client shouldn't take Bobby half a day",
+    whiteboard: "\"Onboarding A New Client Shouldn't Take Half A Day\"",
+    grade: 2, tag: "Unused", priority: false,
+    guidance: "The irony here is the thing worth naming: winning a new client should be a good day. Instead, it triggers a half-day of manual admin. The practice owner knows this. They've been meaning to fix it. They haven't, because it only happens occasionally and Bobby handles it. Your job in this post is to make the reader notice how backwards that is. You win business — and your reward is an afternoon of folder creation and copy-pasting. Lead with the victory, then immediately undercut it with the admin reality. That contrast is where the post lives. Keep the tone wry rather than critical.",
+    prompts: "Walk through the actual onboarding sequence step by step, the way you'd describe it to someone who's never seen it. How many manual steps are there? How many of those could be triggered automatically once a client record is created? What's the version of this that's broken because Bobby was off sick the day the new client signed?",
+    postCopy: "New client signs. Bobby creates the folder, sends the welcome email, sets up the task list, updates the practice management system — every single time, from scratch, from memory.\n\nIf onboarding relies on Bobby knowing all the steps, it's fragile.\n\nRepeatable beats heroic. Every time.",
+    cta: "If a new client signing triggers a half-day of manual work, something has gone wrong with the system — not with Bobby. Let's fix the system. Bobby's got better things to do."
+  },
+  {
+    id: "af-bobby-6",
+    hook: "Bobby's got a brain — let's use it properly",
+    whiteboard: "\"Bobby's Got A Brain\"",
+    grade: 1, tag: "Unused", priority: false,
+    guidance: "This is the big-picture framing post — the one that explains the whole series in one go. Use it as either an opener to the Bobby theme or a closer once you've run a few of the specific ones. The emotional core is respect for the people doing the work. You're not saying these tasks are beneath Bobby. You're saying Bobby is too good for them. That's a different argument and it lands better with practice owners who care about their team. The point is that manual admin doesn't just cost the practice time — it costs Bobby the opportunity to do the work they're actually qualified for. Lead with that.",
+    prompts: "What's the most capable person you've seen doing the most tedious task in a practice? What was the gap between what they were actually doing and what they were qualified to do? What's the version of this that the practice owner would find most uncomfortable — not because you're criticising them, but because they genuinely hadn't thought about the cost to their team?",
+    postCopy: "Most accountancy practices I speak to aren't struggling because their people aren't good enough.\n\nThey're struggling because their best people are spending half their week on tasks a system should handle.\n\nChasing clients for records. Building the same report from scratch. Logging into six platforms to find out what's still outstanding.\n\nBobby didn't become an accountant to be a data entry function.\n\nThat's not a people problem. It's a process problem.",
+    cta: "If Bobby's skills are being wasted on manual admin, I'd genuinely like to hear what that looks like in your practice. Not a sales call — just a conversation. I'll probably tell you something useful either way."
+  },
+  {
+    id: "af-bobby-7",
+    hook: "Making Tax Digital is coming for every sole trader. Bobby is going to feel it first.",
+    whiteboard: "\"Making Tax Digital — Bobby's Busiest Quarter Yet\"",
+    grade: 3, tag: "Unused", priority: false,
+    guidance: "This is the regulatory pressure angle — and it's specific enough to land with a practice owner who's already thinking about MTD. The emotional hook is the compound effect: the practice is already stretched, the manual processes are already slow, and now there's a wave of mandatory quarterly reporting heading towards every sole trader client they have. Bobby isn't coping badly now — Bobby is fine now. The question is whether Bobby will still be fine in 18 months when the volume triples. That's a useful, credible question to raise. Don't be alarmist. Be the person who's thought through the downstream consequence that the practice owner hasn't had time to think through yet.",
+    prompts: "What specifically does Making Tax Digital mean for a practice that processes, say, 100 sole trader clients manually? What does the workload look like quarterly versus annually? What's the version of this where a practice that's borderline coping now becomes genuinely overwhelmed? What would you say to a practice owner who says 'we'll cross that bridge when we come to it'?",
+    postCopy: "From April 2026, Making Tax Digital applies to sole traders earning over £50,000. From April 2027, it drops to £30,000.\n\nMost accountancy practices already have a significant chunk of those clients on their books.\n\nRight now, Bobby handles the annual return. Once MTD is fully rolled out, the same clients need quarterly submissions.\n\nThat's four times the work. Same team. Same systems. Same spreadsheets.\n\nThis isn't a future problem. The practices that fix their manual processes this year will handle the transition without breaking stride.\n\nThe ones that don't will just have a much busier Bobby.",
+    cta: "If MTD is on your radar but you haven't looked at what it means for your manual workflows yet, that's worth a conversation. I'm happy to start with a quick sense-check — no commitment, just clarity."
+  },
+  {
+    id: "af-bobby-8",
+    hook: "Your practice management software doesn't actually manage your practice. Bobby does.",
+    whiteboard: "\"The Software That Doesn't Help\"",
+    grade: 3, tag: "Unused", priority: false,
+    guidance: "This is the post that names the gap between what practice management tools promise and what actually happens on the ground. Most accountancy practices have Xero Practice Manager, Karbon, or similar — and they still have Bobby doing manual work around it. The tool exists. The integration between the tool and everything else doesn't. That's the gap. The emotional angle is mild frustration: the practice owner bought the software, paid for the implementation, and Bobby is still the connector between it and reality. You're not criticising the software — you're pointing out that software without proper automation around it is just a more expensive spreadsheet.",
+    prompts: "What are the most common practice management tools UK accountancy practices use? What's the gap between what those tools do well and what still gets done manually around them? What does 'proper automation' look like in this context — what specifically gets connected that wasn't before? What's the version of this that a practice owner who's already invested in software would most recognise?",
+    postCopy: "Most accountancy practices I speak to have practice management software. Xero Practice Manager, Karbon, something similar.\n\nThey've paid for it. Trained the team on it. It does what it says it does.\n\nAnd Bobby still starts Monday morning logging into four other systems to piece together a picture the software should theoretically have.\n\nThe problem isn't the software. It's the gap between what the software holds and what everything else needs.\n\nThat gap is where Bobby lives.\n\nConnecting those systems properly isn't glamorous. It's also not complicated. It's just never been done.\n\nThat's usually what I fix first.",
+    cta: "If your practice management software hasn't actually reduced Bobby's workload, something's not connected properly. Happy to take a look at what's missing — usually takes about twenty minutes to find it."
+  },
+  {
+    id: "af-bobby-9",
+    hook: "The accountancy practices I speak to aren't short of information. They're short of time to look at it.",
+    whiteboard: "\"Data Everywhere, Insight Nowhere\"",
+    grade: 2, tag: "Unused", priority: false,
+    guidance: "This is the information overload angle — the practice that has data in six places and insight in none of them. The emotional hook is the irony of being data-rich and decision-poor: the practice owner knows they should be looking at things proactively, they know they should be spotting trends in their client base, and instead they're reactive because the data they need takes too long to pull together to be useful in real time. You're positioning yourself not just as someone who fixes manual processes but as someone who makes the information the practice already has actually usable. Keep it grounded in specific examples rather than abstract data strategy language.",
+    prompts: "What's the most useful information a practice owner would want to see regularly that they currently can't easily get to? What does the difference look like between a practice that can see its own status at a glance versus one where building a status picture takes half a day? What's a specific decision that gets made better — or made at all — when the information is easily available?",
+    postCopy: "Every accountancy practice I speak to has data. Client records, submission status, billing history, outstanding work lists.\n\nIt lives in three or four different places. Pulling it together takes time that nobody has. So it doesn't get pulled together — or Bobby does it on a Friday afternoon when the week's already gone.\n\nThe practices that are genuinely on top of their operations aren't better at analysing data. They've just made the data easy to see.\n\nOne dashboard. One source of truth. Updated automatically.\n\nNot a data strategy. Just the information you already have, in one place, without Bobby having to assemble it.",
+    cta: "If you want to know what your practice status looks like at a glance and currently can't — that's a solvable problem. Drop me a message and I'll show you what that looks like in practice."
+  },
 ];
 
 const afMessaging = [
@@ -345,16 +429,16 @@ function IdeaCard({ idea, isSack = false, slug }: { idea: ContentIdea; isSack?: 
       </button>
       {open && (
         <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid #E0DBD3", display: "flex", flexDirection: "column" as const, gap: 10 }}>
-          {isSack && idea.postCopy && (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Post copy</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7, whiteSpace: "pre-wrap" as const }}>{idea.postCopy}</p>
-            </div>
-          )}
-          {!isSack && idea.guidance && (
+          {idea.guidance && (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Guidance</p>
               <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7 }}>{idea.guidance}</p>
+            </div>
+          )}
+          {idea.postCopy && (
+            <div>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Draft post copy</p>
+              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7, whiteSpace: "pre-wrap" as const }}>{idea.postCopy}</p>
             </div>
           )}
           {idea.prompts && (
