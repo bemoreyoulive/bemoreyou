@@ -657,11 +657,11 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
-            {/* New UPS drafts for accountancy niche */}
-            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
-              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Two new unique positioning statement drafts for networking events, updated for the accountancy niche. Agree the preferred version with Ben tomorrow.</p>
+            {/* UPS reference versions */}
+            <div style={{ background: "#eef4ef", border: "1px solid #7ec89a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#1a4a2e", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>Actioned — May 2026:</strong> UPS agreed and in use. The full agreed version is shown above. The drafts below are kept for reference — Option 2 closing paragraph was folded into the final version.</p>
             </div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Unique Positioning Statement — Accountancy Niche Drafts</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Unique Positioning Statement — Accountancy Niche Drafts (Reference)</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
               {[
                 {
@@ -683,11 +683,11 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            {/* New accountancy headline drafts */}
-            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
-              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Three new headline drafts below, written for the accountancy niche. Review with Ben, agree the live version, then update LinkedIn within 24 hours.</p>
+            {/* Accountancy headline reference versions */}
+            <div style={{ background: "#eef4ef", border: "1px solid #7ec89a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#1a4a2e", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>Actioned — May 2026:</strong> LinkedIn headline updated. Option 2 agreed and live — shown in the panel above. Drafts below kept for reference.</p>
             </div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>New Headline Drafts — Accountancy Niche</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Headline Drafts — Accountancy Niche (Reference)</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
               {afHeadlinesAccountancy.map((h, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 6, padding: "18px 22px" }}>
@@ -747,10 +747,10 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             </div>
 
             {/* New accountancy About drafts */}
-            <div style={{ background: "#fff8e6", border: "1px solid #c8850a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
-              <p style={{ fontSize: "0.78rem", color: "#5a3a00", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>To review in Session 9 (29th April):</strong> Two new About section drafts below, written for the accountancy niche. Review with Ben, agree the live version, then update LinkedIn within 24 hours.</p>
+            <div style={{ background: "#eef4ef", border: "1px solid #7ec89a", borderRadius: 6, padding: "14px 18px", marginBottom: 12 }}>
+              <p style={{ fontSize: "0.78rem", color: "#1a4a2e", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#1C1C1C" }}>Actioned — May 2026:</strong> About section updated on LinkedIn for the accountancy niche. The live version is shown above. Drafts below kept for reference.</p>
             </div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>New About Section Drafts — Accountancy Niche</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>About Section Drafts — Accountancy Niche (Reference)</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
               {afAboutVersionsAccountancy.map((v, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 8, padding: "28px 32px" }}>
@@ -1097,32 +1097,32 @@ const clientData: Record<string, {
       ],
     },
     positioning: {
-      headline: "I build the AI and automation systems that let founders step back without things falling apart.",
+      headline: "Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I fix that.",
       differentiators: [
-        "10–15 years of real systems-building experience — not a course graduate",
+        "20+ years of real systems-building experience — not a course graduate",
         "Implementer, not a consultant — you get something working, not a slide deck",
-        "Specialises in N8N, the open-source automation tool that doesn't lock you in",
-        "Focused on owner-absence — building businesses that run without the founder in every loop",
-        "East Midlands based — rare in this space, a genuine local advantage",
+        "Specialises in practice automation for UK accountancy firms — not a generalist",
+        "The 'Sheldon' of practice automation — systems-minded, detail-obsessed, no over-promising",
+        "Builds automation that scales without breaking long term — not duct-taped Zapier chains",
       ],
       audiences: [
-        { label: "Primary", detail: "Founders of 5–20 person businesses who are the single point of failure in their own company. They're doing work their systems should be doing." },
-        { label: "Secondary", detail: "Directors and ops leads at slightly larger SMEs who know they have a process problem but don't know what good looks like." },
-        { label: "Avoid", detail: "People who want AI tools recommended to them. People who want a course. People who aren't ready to change how they work." },
+        { label: "Primary", detail: "Practice owners and founding partners of UK accountancy firms running on retainers. Drowning in manual delivery admin — reporting, chasing, onboarding — with smart people burning out holding it together." },
+        { label: "Secondary", detail: "Dental practices — structurally similar to accountancy but harder to reach due to the receptionist gatekeeper. Revisit once accountancy niche is established." },
+        { label: "Avoid", detail: "Solopreneurs, charities, public sector. Businesses wanting shortcuts or someone to 'just make it work somehow'. Anyone who doesn't respect expertise." },
       ],
     },
     messaging: [
-      { frame: "The owner-absence test", notes: "If you couldn't step away for two weeks without the business wobbling — that's not a people problem, that's a systems problem. This is Andy's core provocation." },
-      { frame: "Humans shouldn't act as API connectors", notes: "If someone in your business is copy-pasting between systems, exporting CSVs, or re-entering data — that's automation work. It's not a job." },
-      { frame: "Repeatable beats heroic", notes: "Businesses that rely on one person's memory or heroic effort are fragile. Andy builds the repeatable infrastructure underneath." },
-      { frame: "Implementer, not consultant", notes: "You don't get a deck. You get a working system. That distinction matters and it's what separates Andy from most people in this space." },
+      { frame: "The retainer problem", notes: "Accountancy firms run on retainers — but most of the work inside those retainers is still manual. Client reporting built from scratch each month, update chasers sent by hand, documents assembled from three different places every time. That's the problem Andy fixes." },
+      { frame: "This is plumbing, not magic", notes: "Andy automates operational workflows properly — not duct-taped Zapier chains. He uses AI where it genuinely saves time, not where it creates risk. This is a counter-cultural stance in a space full of hype." },
+      { frame: "Repeatable beats heroic", notes: "Practices held together by smart people quietly filling in the gaps are fragile. When Bobby is doing the same manual task every month, that's not a people problem — it's a systems problem." },
+      { frame: "The Sheldon positioning", notes: "Often described (with affection) as 'the Sheldon of practice automation' — systems-minded, process-driven, detail-oriented. More interested in making things work properly than making them look impressive." },
     ],
     content: [
-      { angle: "SACK SALLY series", notes: "11 post ideas built around the owner-absence theme. Each one names a specific broken process (finance chasing, onboarding, reporting) and frames automation as the fix." },
-      { angle: "The holiday story", notes: "Personal story post with photos — Cruise, Norway, husky ride, the storm, the norovirus. Human, warm, shareable. Gets engagement before the harder business content." },
-      { angle: "Contrarian differentiator", notes: "\"Most people in this space took a course. I've been building systems for 10–15 years. They're not the same thing.\" Bold, direct, filters the right people in." },
-      { angle: "N8N community content", notes: "Share what you're learning and building in N8N. Positions you as a practitioner, not a theorist. Attracts peers and potential referrers." },
-      { angle: "Client results (when ready)", notes: "The PAPA AI search work, the Chris Dillon POC — once these are complete, the story of what the problem was, what you built, and what changed is gold." },
+      { angle: "Bobby series (accountancy)", notes: "Bobby is the junior accountant doing menial, non-revenue-moving tasks that a system should handle. Each post names a specific manual process (chasing clients, building reports, logging into six platforms) and positions automation as freeing Bobby for higher-value work. Hold new posts until accountant conversations are done — bottlenecks must come from real research, not assumption." },
+      { angle: "Contrarian differentiator", notes: "\"Most people in this space took a course. I've been building systems for 10–15 years. They're not the same thing.\" Bold, direct, filters the right people in. Strong fit with the accountancy niche." },
+      { angle: "When AI goes wrong", notes: "Post timed to news stories about poorly-implemented AI (e.g. GP surgery 'Emma' AI receptionist). Andy's expert take on why implementation matters as much as the idea. Timely, credibility-building, anti-hype." },
+      { angle: "N8N community content", notes: "Share what you're learning and building in N8N. Positions as a practitioner, not a theorist. Attracts peers and potential referrers." },
+      { angle: "Client results (when ready)", notes: "The PAPA AI search work, the Chris Dillon POC — once complete, the story of the problem, what was built, and what changed is gold. First accountancy case study will be the breakthrough piece." },
     ],
   },
   "andy-scott-barrett": {
