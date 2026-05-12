@@ -15,22 +15,24 @@ import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
-const AF_NEXT_MOVE = "Your priority this week: speak to at least three accountants. Not sales calls — research calls. Ask, listen, take notes. Send Ben the transcripts or notes as you go. That's the fuel for everything that comes next.";
+const AF_NEXT_MOVE = "Accountex is done. Now it's time to follow up. DM the warm and hot conversations within 24 hours. Book 20–30 minute calls with the best ones. Compile what you heard at the event — patterns, objections, language they used — and send Ben the notes. That intelligence feeds your next 6 weeks of content.";
 
 const afTodos = [
-  { id: "r1", text: "✅ First accountant research call done — Jaz Grewal, TaxAssist (May 2026)", subtext: "Well done. Transcript received and analysed. Key pain points confirmed: client chasing, practice visibility dashboard, duplicate document requests, staff email monitoring, onboarding complexity. Content ideas updated. Two more to go before Session 10.", section: "Accountant research — in progress" },
-  { id: "r2", text: "Speak to two more accountants before Session 10 (13 May)", subtext: "You've got one done. Book the next two this week — same format as the Jaz call worked brilliantly. Use the questions below on this page. Don't mention AI or automation in the ask. Send Ben the Otter AI transcript after each one and he'll update the content in real time.", section: "Accountant research — in progress" },
-  { id: "r4", text: "Send Ben the transcript or notes after each remaining conversation", subtext: "Same as before — raw is better. Don't filter it. If two accountants say the same thing Jaz said, that's a post waiting to be written.", section: "Accountant research — in progress" },
-  { id: "r3", text: "Post 'When AI goes wrong' this week", subtext: "The GP surgery Emma story is fresh. Write it today or tomorrow. Lead with the story, give your expert take on what went wrong and why, connect it back to what you do. That opinion is the most valuable part — don't just share the article.", section: "Accountant research — in progress" },
-  { id: "m1", text: "Update LinkedIn headline — agreed in Session 9", subtext: "Live version agreed: \"Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I fix that. | The 'Sheldon' of practice automation | Equate Digital\" — update this today if not already done.", section: "Messaging updates — do now" },
-  { id: "m2", text: "Update LinkedIn About section — first two sentences only", subtext: "Replace the opening with: 'Accountancy firms come to me when the retainer work is taking longer than it should. Not because the team isn't capable. Because too much of it is still manual — client reporting built from scratch each month, update chasers sent by hand, documents assembled from three different places every time.' Rest of the About stays the same.", section: "Messaging updates — do now" },
-  { id: "m3", text: "Set up warm email domains", subtext: "Still not done. Takes 14–21 days to warm up. Every day of delay pushes back your outreach start date. Do it this week.", section: "Messaging updates — do now" },
+  { id: "acc1", text: "✅ Accountex attended — 13 May 2026", subtext: "Well done. You had the one-liners, you had the intro, you had the plan. Now execute the follow-up before the event goes cold.", section: "Accountex follow-up — do this week" },
+  { id: "acc2", text: "DM warm and hot conversations within 24 hours", subtext: "Connect on LinkedIn at the event or same night. Message within 24hrs: 'Great to meet you at Accountex — would love to grab 20 mins to continue the conversation.' Keep it short. No pitch.", section: "Accountex follow-up — do this week" },
+  { id: "acc3", text: "Book 20–30 min calls with the best conversations", subtext: "Aim for 3–5 calls booked this week. These are the ones who reacted well, asked follow-up questions, or gave you specific pain points. Best leads first.", section: "Accountex follow-up — do this week" },
+  { id: "acc4", text: "Compile your Accountex intelligence doc and send to Ben", subtext: "Go through your voice notes. For each conversation: name, company, what they said, warm/hot/cold rating. Send Ben the doc — it becomes content and it feeds your ICP. Even cold conversations have data in them.", section: "Accountex follow-up — do this week" },
+  { id: "r1", text: "✅ First accountant research call done — Jaz Grewal, TaxAssist (May 2026)", subtext: "Transcript received and analysed. Key pain points confirmed: client chasing, practice visibility dashboard, duplicate document requests, staff email monitoring, onboarding complexity. Content ideas updated.", section: "Accountant research — in progress" },
+  { id: "r2", text: "Speak to two more accountants", subtext: "Same format as the Jaz call. Don't mention AI or automation in the ask. Send Ben the Otter AI transcript after each one.", section: "Accountant research — in progress" },
+  { id: "m3", text: "Set up warm email domains", subtext: "Takes 14–21 days to warm up. Every day of delay pushes back your outreach start date. Do it this week.", section: "Messaging & infrastructure" },
   { id: "p1", text: "David Maguire — partnership follow-up", subtext: "Still live. Likely converting in May.", section: "Pipeline actions" },
   { id: "p2", text: "Chris Dillon media-monitoring POC", subtext: "Draft commercial approach — he needs numbers.", section: "Pipeline actions" },
   { id: "p3", text: "Chase PAPA funding confirmation", subtext: "Case study post ready to draft once confirmed.", section: "Pipeline actions" },
-  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "New Bobby's Got a Brain content ideas are in the Content tab now. Use them once you've confirmed the bottlenecks from your accountant conversations.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
-  { id: "ob2", text: "Networking: 2 events per week", subtext: "Use the new UPS when it fits: 'Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I specialise in taking the manual heavy lifting out of that delivery...' Keep it short for small rooms.", section: "Ongoing baseline" },
+  { id: "p4", text: "Jaz Grewal — potential client conversation", subtext: "She knows your work now. When the time is right, that's a warm intro waiting to happen.", section: "Pipeline actions" },
+  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "Accountex content is gold. 'Here's what I heard at Accountex from practice owners' is a post that writes itself. Do it this week while it's fresh.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
+  { id: "ob2", text: "Networking: 2 events per week", subtext: "You've now got a field-tested intro and three proven one-liners. Use them at every room you walk into.", section: "Ongoing baseline" },
   { id: "ob3", text: "Continue N8N community contributions", subtext: "Long-game authority-building. Keep going.", section: "Ongoing baseline" },
+  { id: "s11", text: "Next session: Session 11 — 24 May 2026", subtext: "Bring your Accountex follow-up results, voice note intel, and any new pipeline conversations. We'll map out the next phase.", section: "Next session" },
 ];
 
 const afPositioningDiffs = [
@@ -639,6 +641,55 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AF_COLOR, margin: "0 0 4px" }}>Your Brand Foundation</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+
+            {/* ── ACCOUNTEX FINISHERS ── */}
+            <div style={{ background: "#1a1a1a", borderRadius: 6, padding: "28px 32px", marginBottom: 8 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#f59e0b", margin: "0 0 6px" }}>Accountex — 13 May 2026</p>
+              <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#fff", lineHeight: 1.5, margin: "0 0 20px" }}>Your intro &amp; one-liners</p>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 20, marginBottom: 20 }}>
+                <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.45)", margin: "0 0 10px" }}>Open with</p>
+                <p style={{ fontSize: "1rem", color: "#fff", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+                  {`"I'm Andy — often known as the Sheldon of practice automation. Accountancy firms come to me when the retainer work is taking longer than it should."`}
+                </p>
+              </div>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.45)", margin: "0 0 14px" }}>Then finish with one of these</p>
+              {[
+                { label: "The Sunday gut punch", line: `"I'm the reason practice owners stop crying into their laptop on a Sunday night."` },
+                { label: "The chaos image", line: `"I walk into an accountancy practice, find everything held together with spreadsheets and prayer, and I fix it before someone quits."` },
+                { label: "The horror image", line: `"I find the spreadsheet that's one accidental delete away from ending your career and I shoot it in the head."` },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "rgba(255,255,255,0.06)", borderRadius: 4, padding: "16px 20px", marginBottom: i < 2 ? 10 : 0 }}>
+                  <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#f59e0b", margin: "0 0 8px" }}>Option {i + 1} — {item.label}</p>
+                  <p style={{ fontSize: "0.97rem", fontWeight: 600, color: "#fff", lineHeight: 1.6, margin: 0 }}>{item.line}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ background: "#2a2a2a", borderRadius: "0 0 4px 4px", padding: "10px 18px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.5, margin: 0 }}>Rotate the finisher across conversations. Read the room. The horror image lands hardest with people who've actually lived the spreadsheet panic.</p>
+            </div>
+
+            {/* ── ACCOUNTEX EVENT PLAN ── */}
+            <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: 6, padding: "24px 28px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#92400e", margin: "0 0 6px" }}>Accountex Strategy — 13 May 2026</p>
+              <p style={{ fontSize: "1rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 20px" }}>Your plan for the day</p>
+              {[
+                { step: "Target 10 conversations", detail: "Not 50. Not 3. Ten meaningful conversations with practice owners or decision-makers. Quality over quantity — you're building intelligence, not collecting cards." },
+                { step: "Rotate your questions", detail: "Don't ask the same person everything. Spread the questions across different people: What's your biggest time drain right now? What do you wish your team spent less time on? What's the one thing you keep meaning to fix but never do? This gives you richer data and makes each conversation feel more like a chat than an interview." },
+                { step: "Voice note immediately after each conversation", detail: "Step away, hit record. Name, company, one unique detail about them, and warm/hot/cold rating. Do it while it's fresh — don't rely on memory at the end of the day." },
+                { step: "Connect on LinkedIn on the spot", detail: "Pull your phone out and connect before you move on. 'I'll find you later' never happens." },
+                { step: "DM within 24 hours", detail: "Same night or first thing tomorrow: 'Great to meet you at Accountex — loved what you said about X. Would you be up for a quick 20 mins to continue the conversation?' Short, warm, specific." },
+                { step: "Book 20–30 min calls with the best ones", detail: "Your goal is 3–5 booked calls by end of week. These aren't sales calls — they're the next stage of the research conversation. The sale follows naturally when you understand their world better than they expect." },
+                { step: "Compile an intelligence doc for Ben", detail: "After the event: go through your voice notes, write up each conversation (name, company, pain points, rating). Send it to Ben. That's your next 6 weeks of content and your ICP getting sharper in real time." },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: 14, marginBottom: i < 6 ? 16 : 0 }}>
+                  <div style={{ flexShrink: 0, width: 24, height: 24, borderRadius: "50%", background: "#f59e0b", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.7rem", fontWeight: 700, color: "#fff", marginTop: 2 }}>{i + 1}</div>
+                  <div>
+                    <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 4px" }}>{item.step}</p>
+                    <p style={{ fontSize: "0.85rem", color: "#4B4B4B", lineHeight: 1.6, margin: 0 }}>{item.detail}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             {/* Positioning statement */}
             <div style={{ background: AF_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 8 }}>
