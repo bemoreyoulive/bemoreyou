@@ -11,7 +11,7 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Post the discounting post this week — 'Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's on the dashboard, it's ready. Set the 30-minute timer and go. Then: implement time blocking this week — client calls Tue/Wed/Thu only, content and admin Mon/Fri. One structural change that makes everything else easier.";
+const ASB_NEXT_MOVE = "Session 5 is today — 13 May 2026. Three posts are now out: Martin Lewis, bank balance, discounting, and VAT. The rhythm is building. Use today's session to review what's landing, update the pipeline, and lock in the next two posts from the dashboard. Come with any conversation notes from the last two weeks — Ben will turn them into content ideas.";
 
 const asbTodos = [
   { id: "s4-1", text: "Post the discounting post this week — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's in Content Ideas, ready to go. 30-minute timer.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
@@ -48,7 +48,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Scott Barrett</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 4 of 6</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 5 of 6</p>
             </div>
           </div>
         </div>
@@ -68,21 +68,21 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
-            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 4 · 30 April 2026" animateIn />
+            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 5 · 13 May 2026" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>4</div>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>5</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 4 — 30 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Content cadence settled at 2 posts/week (one expertise, one personal). Transition to dashboard ideas for Friday Finance posts — discounting post lined up next. Bank balance post went out — bookkeeper/accountant/FD explanation landing well at networking, generating a warm referral. Pipeline: aerospace lead dead, startup re-activating, main client ongoing. Time management framework agreed — diary blocking, Outlook constraints, hard stops on calls. Prospect call question framework added to dashboard. Content-from-conversations workflow introduced — Andy to send Ben notes after calls. Next session: week of 14 May 2026.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 5 — 13 May 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Session notes to be added after today's call.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "4 of 6", sub: "Next: w/c 14 May 2026" },
+                { label: "Sessions done", value: "5 of 6", sub: "Today: 13 May 2026" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
-                { label: "Posts out", value: "2 posted", sub: "Martin Lewis + bank balance" },
+                { label: "Posts out", value: "4 posted", sub: "Martin Lewis · bank balance · VAT · discounting" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
