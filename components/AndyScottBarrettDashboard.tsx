@@ -11,17 +11,17 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Session 5 is today — 13 May 2026. Three posts are now out: Martin Lewis, bank balance, discounting, and VAT. The rhythm is building. Use today's session to review what's landing, update the pipeline, and lock in the next two posts from the dashboard. Come with any conversation notes from the last two weeks — Ben will turn them into content ideas.";
+const ASB_NEXT_MOVE = "Before Session 6 (27 May): batch-write 4 posts using the June content ideas on the dashboard and schedule them before you leave for Canada. New workflow — one Claude draft, copy to LinkedIn, edit there in 5 minutes. Don't go back and forth with Claude. On every networking call: identify a problem. Client until not proven client.";
 
 const asbTodos = [
-  { id: "s4-1", text: "Post the discounting post this week — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' It's in Content Ideas, ready to go. 30-minute timer.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "s4-2", text: "Implement diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, BD, content, follow-ups.", owner: "Andy" },
-  { id: "s4-3", text: "Tighten your Outlook calendar — block out client call slots on Tue/Wed/Thu only. When sending meeting invites, offer one or two fixed time windows rather than open availability.", owner: "Andy" },
-  { id: "s4-4", text: "Use the hard stop technique on all calls from now — announce at the start: 'I've got a hard stop at X.' Not rude. Makes both parties conscious of time.", owner: "Andy" },
-  { id: "s4-5", text: "After every prospect call, networking session or client meeting: write down 3–4 challenges, pain points, or misconceptions that came up. WhatsApp them to Ben to turn into content ideas.", owner: "Andy", tabLink: { label: "See Ben's Recommendations", tab: "recs" } },
-  { id: "s4-6", text: "Follow up with the strategy woman from networking — she mentioned doing webinars together. Neither of you followed up. Get back in touch.", owner: "Andy" },
-  { id: "s4-7", text: "Read Jo's 'Making the Sale' document before your next prospect call.", owner: "Andy" },
-  { id: "s4-8", text: "Use Ben's prospect call question framework for your next sales conversation — it's in Ben's Recommendations.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
+  { id: "s5-1", text: "Batch-write 4 posts using the June content ideas — get them scheduled before you leave for Canada. Use the new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes. Do not go back and forth with Claude.", owner: "Andy", tabLink: { label: "See June Content Ideas", tab: "content" } },
+  { id: "s5-2", text: "On every networking call going forward: treat everyone as a potential client until they prove otherwise. Your job is to identify a problem. If you can identify a problem you can solve — bingo. Use the prospect call framework questions as your mental map.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
+  { id: "s5-3", text: "Go back over your notes from recent 1-2-1 calls — extract the themes, pain points, and misconceptions. WhatsApp them to Ben. Conversations = clarity, content, and clients.", owner: "Andy" },
+  { id: "s5-4", text: "Follow up with Joe (Founders Network) when back from Canada — possible coaching/mentoring client.", owner: "Andy" },
+  { id: "s5-5", text: "Arrange the photo session with George's dad — meet him somewhere outside the house (café, co-working space, a walk) so he can't set up studio lighting. Natural environment only.", owner: "Andy" },
+  { id: "s5-6", text: "Send Ben the LinkedIn headline example you spotted — the '40-plus ex-corporate' style one that immediately resonated with you.", owner: "Andy" },
+  { id: "s4-2", text: "Diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, content, follow-ups.", owner: "Andy" },
+  { id: "s4-4", text: "Hard stop technique on all calls — announce it at the start: 'I've got a hard stop at X.'", owner: "Andy" },
   { id: "w1", text: "Website quick wins (5 changes, ~1 hour): name Rolls-Royce explicitly; move Richard Waine testimonial to homepage; replace contact page copy with Ben's version; fix name hyphenation to 'Andy Scott Barrett' throughout; update copyright year to 2026.", owner: "Andy" },
 ];
 
@@ -48,7 +48,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Scott Barrett</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 5 of 6</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 5 of 7</p>
             </div>
           </div>
         </div>
@@ -74,12 +74,12 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>5</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 5 — 13 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Session notes to be added after today's call.</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>LinkedIn content process overhauled — new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes, don't go back to Claude. Content posts published: Martin Lewis, bank balance, VAT, discounting. Canada trip: 4 posts to batch-write and schedule before leaving. Networking: shift to treating every 1-2-1 as a potential client conversation — identify a problem, use the prospect call questions. "Client until not proven client." Session 6: Tuesday 27 May. Final session: Wednesday 18 June.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "5 of 6", sub: "Today: 13 May 2026" },
+                { label: "Sessions done", value: "5 of 7", sub: "Next: Tue 27 May 2026" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "Posts out", value: "4 posted", sub: "Martin Lewis · bank balance · VAT · discounting" },
