@@ -11,15 +11,14 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Before Session 6 (27 May): batch-write 4 posts using the June content ideas on the dashboard and schedule them before you leave for Canada. New workflow — one Claude draft, copy to LinkedIn, edit there in 5 minutes. Don't go back and forth with Claude. On every networking call: identify a problem. Client until not proven client.";
+const ASB_NEXT_MOVE = "Before Session 6 (26 May): batch-write 4 posts using the June content ideas on the dashboard and schedule them before you leave for Canada. New workflow — one Claude draft, copy to LinkedIn, edit there in 5 minutes. Don't go back and forth with Claude. On every networking call: identify a problem. Client until not proven client.";
 
 const asbTodos = [
   { id: "s5-1", text: "Batch-write 4 posts using the June content ideas — get them scheduled before you leave for Canada. Use the new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes. Do not go back and forth with Claude.", owner: "Andy", tabLink: { label: "See June Content Ideas", tab: "content" } },
   { id: "s5-2", text: "On every networking call going forward: treat everyone as a potential client until they prove otherwise. Your job is to identify a problem. If you can identify a problem you can solve — bingo. Use the prospect call framework questions as your mental map.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
   { id: "s5-3", text: "Go back over your notes from recent 1-2-1 calls — extract the themes, pain points, and misconceptions. WhatsApp them to Ben. Conversations = clarity, content, and clients.", owner: "Andy" },
-  { id: "s5-4", text: "Follow up with Joe (Founders Network) when back from Canada — possible coaching/mentoring client.", owner: "Andy" },
+  { id: "s5-4", text: "Follow up with the contact from Founders Network who talks a lot — he might need coaching/mentoring support. Chase when back from Canada.", owner: "Andy" },
   { id: "s5-5", text: "Arrange the photo session with George's dad — meet him somewhere outside the house (café, co-working space, a walk) so he can't set up studio lighting. Natural environment only.", owner: "Andy" },
-  { id: "s5-6", text: "Send Ben the LinkedIn headline example you spotted — the '40-plus ex-corporate' style one that immediately resonated with you.", owner: "Andy" },
   { id: "s4-2", text: "Diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, content, follow-ups.", owner: "Andy" },
   { id: "s4-4", text: "Hard stop technique on all calls — announce it at the start: 'I've got a hard stop at X.'", owner: "Andy" },
   { id: "w1", text: "Website quick wins (5 changes, ~1 hour): name Rolls-Royce explicitly; move Richard Waine testimonial to homepage; replace contact page copy with Ben's version; fix name hyphenation to 'Andy Scott Barrett' throughout; update copyright year to 2026.", owner: "Andy" },
@@ -74,12 +73,12 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>5</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 5 — 13 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>LinkedIn content process overhauled — new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes, don't go back to Claude. Content posts published: Martin Lewis, bank balance, VAT, discounting. Canada trip: 4 posts to batch-write and schedule before leaving. Networking: shift to treating every 1-2-1 as a potential client conversation — identify a problem, use the prospect call questions. "Client until not proven client." Session 6: Tuesday 27 May. Final session: Wednesday 18 June.</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>LinkedIn content process overhauled — new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes, don't go back to Claude. Content posts published: Martin Lewis, bank balance, VAT, discounting. Canada trip: 4 posts to batch-write and schedule before leaving. Networking: shift to treating every 1-2-1 as a potential client conversation — identify a problem, use the prospect call questions. "Client until not proven client." Session 6: Tuesday 26 May. Final session: Wednesday 18 June.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "5 of 7", sub: "Next: Tue 27 May 2026" },
+                { label: "Sessions done", value: "5 of 7", sub: "Next: Tue 26 May 2026" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "Posts out", value: "4 posted", sub: "Martin Lewis · bank balance · VAT · discounting" },
@@ -807,9 +806,36 @@ function AsbContentTab({ slug }: { slug: string }) {
     <div>
       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>3-Month Content Strategy</p>
       <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 8px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, direction, questions to answer before you write, and a CTA. Set the 30-minute timer and go.</p>
-      <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 8, padding: "12px 16px", marginBottom: 20 }}>
-        <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>The rule:</strong> If you're still editing after 30 minutes, it's probably good enough. Give it one last read and hit post.</p>
+      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, direction, questions to answer before you write, and a CTA.</p>
+
+      {/* Content workflow strategy */}
+      <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
+        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 5 · 13 May 2026</p>
+        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write and Post in Under 30 Minutes</p>
+        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>The time problem isn't the writing — it's going back and forth with Claude trying to improve the draft. Stop doing that. One pass. Out. Here's the process.</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
+          {[
+            { step: "1", label: "Load the updated MD file into your Claude project", desc: "Ben will send you an updated client-facing version of your MD file. Add it to your Claude project. This is your style guide — Claude reads it every time and uses it to write in your voice. You don't need to re-explain yourself each session." },
+            { step: "2", label: "Pick a card from this dashboard and answer the questions", desc: "Copy the content idea card into Claude — the hook, direction, and questions to answer. Then answer those questions in your own words. Rough notes are fine. The more specific you are, the closer Claude gets first time." },
+            { step: "3", label: "Ask Claude to write the post — once", desc: "Ask Claude to write a LinkedIn post using your MD file and your answers. One attempt. Do not ask it to revise, refine, or improve. Take whatever it produces and move on." },
+            { step: "4", label: "Paste it into LinkedIn — edit there, not in Claude", desc: "Copy the full draft into LinkedIn's 'Write a post' box. This is where you make it yours. Add spacing — hit return between paragraphs to break up dense blocks. Remove em-dashes and replace with commas. Remove some full stops. Add a dot-dot-dot here and there. Maybe swap a spelled-out number for a numeral. These small changes make it read human, not AI." },
+            { step: "5", label: "Post it", desc: "That's it. If you've been editing in LinkedIn for more than 10 minutes, it's done. Stop. Post it. The audience never sees the draft — they only see whether you showed up." },
+          ].map((item, i) => (
+            <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+              <div style={{ width: 28, height: 28, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
+              <div>
+                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 3px" }}>{item.label}</p>
+                <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "12px 16px", marginBottom: 12 }}>
+          <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>The edits that make it human:</strong> spacing (new lines, no full stops), dot-dot-dots for continuation, numerals instead of written-out numbers, the occasional deliberate spelling slip. AI never does these things. You do.</p>
+        </div>
+        <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 6, padding: "10px 14px" }}>
+          <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>Note from Ben:</strong> Updated MD file (your client-facing version) to follow shortly — add it to your Claude project when it arrives.</p>
+        </div>
       </div>
 
       {/* Month sub-tabs */}
