@@ -727,12 +727,12 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
             <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.hook}</p>
           </div>
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Direction</p>
-            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.direction}</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>✍️ Questions for you to answer first</p>
+            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.questions}</p>
           </div>
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>❓ Questions first</p>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{idea.questions}</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Direction for Claude</p>
+            <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{idea.direction}</p>
           </div>
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>📣 CTA</p>
