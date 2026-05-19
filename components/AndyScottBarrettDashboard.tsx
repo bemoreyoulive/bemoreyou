@@ -660,6 +660,82 @@ type AsbIdea = {
   drafted?: boolean;
 };
 
+function AsbHookOptions({ hook }: { hook: string }) {
+  const parts = hook
+    .split(/(?=Option\s*\d+:)/i)
+    .map(s => s.trim())
+    .filter(Boolean);
+  if (parts.length < 2) {
+    return (
+      <div style={{ background: "#f7faf8", borderLeft: `3px solid ${ASB_COLOR}`, padding: "10px 14px", borderRadius: "0 6px 6px 0" }}>
+        <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.55, fontWeight: 500 }}>{hook}</p>
+      </div>
+    );
+  }
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+      {parts.map((p, i) => {
+        const match = p.match(/^Option\s*(\d+):\s*([\s\S]*)$/i);
+        const label = match ? `Option ${match[1]}` : `Option ${i + 1}`;
+        const text = match ? match[2].trim() : p;
+        return (
+          <div key={i} style={{ background: "#f7faf8", borderLeft: `3px solid ${ASB_COLOR}`, padding: "10px 14px", borderRadius: "0 6px 6px 0" }}>
+            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: ASB_COLOR, margin: "0 0 4px" }}>{label}</p>
+            <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.55, fontWeight: 500 }}>{text}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function AsbDirectionBlocks({ direction }: { direction: string }) {
+  const lines = direction.split("\n");
+  const blocks: React.ReactElement[] = [];
+  let i = 0;
+  let key = 0;
+  while (i < lines.length) {
+    const raw = lines[i];
+    const line = raw.trim();
+    if (!line) { i++; continue; }
+    if (line.startsWith('"') && line.endsWith('"') && line.length > 2) {
+      blocks.push(
+        <div key={key++} style={{ background: "#f7faf8", borderLeft: `3px solid ${ASB_COLOR}`, padding: "10px 14px", borderRadius: "0 6px 6px 0", margin: "2px 0" }}>
+          <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.55, fontStyle: "italic", fontWeight: 500 }}>{line}</p>
+        </div>
+      );
+      i++;
+      continue;
+    }
+    if (line.startsWith("(") && line.endsWith(")")) {
+      blocks.push(
+        <p key={key++} style={{ fontSize: "0.82rem", color: "#7A746E", margin: "2px 0", lineHeight: 1.6, fontStyle: "italic" }}>{line.slice(1, -1)}</p>
+      );
+      i++;
+      continue;
+    }
+    if (line.startsWith("(")) {
+      let buf = line;
+      let j = i + 1;
+      while (j < lines.length && !buf.trimEnd().endsWith(")")) {
+        buf += " " + lines[j].trim();
+        j++;
+      }
+      const inner = buf.replace(/^\(/, "").replace(/\)$/, "").trim();
+      blocks.push(
+        <p key={key++} style={{ fontSize: "0.82rem", color: "#7A746E", margin: "2px 0", lineHeight: 1.6, fontStyle: "italic" }}>{inner}</p>
+      );
+      i = j;
+      continue;
+    }
+    blocks.push(
+      <p key={key++} style={{ fontSize: "0.78rem", fontWeight: 700, color: "#1C1C1C", margin: "8px 0 2px", lineHeight: 1.5 }}>{line}</p>
+    );
+    i++;
+  }
+  return <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>{blocks}</div>;
+}
+
 function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
   const [open, setOpen] = useState(false);
   const [used, setUsed] = useState(false);
@@ -721,15 +797,15 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
         {open ? "Hide detail ▲" : "Show detail ▼"}
       </button>
       {open && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 10, paddingTop: 12, borderTop: "1px solid #E0DBD3" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14, paddingTop: 12, borderTop: "1px solid #E0DBD3" }}>
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🪝 The Hook</p>
-            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.hook}</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 6px" }}>🪝 The Hook (your first line)</p>
+            <AsbHookOptions hook={idea.hook} />
           </div>
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Structure for the post</p>
-            <p style={{ fontSize: "0.78rem", color: "#9CA3AF", lineHeight: 1.5, margin: "0 0 10px", fontStyle: "italic" }}>Suggestions to make it easier, not prescriptive. If a prompt doesn't apply or you can't answer it, skip it and move on.</p>
-            <div style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>{idea.direction}</div>
+            <p style={{ fontSize: "0.78rem", color: "#9CA3AF", lineHeight: 1.5, margin: "0 0 12px", fontStyle: "italic" }}>Suggestions to make it easier, not prescriptive. If a prompt doesn't apply or you can't answer it, skip it and move on.</p>
+            <AsbDirectionBlocks direction={idea.direction} />
           </div>
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>📣 CTA</p>
@@ -1040,7 +1116,7 @@ Your closing line before the CTA:
 
 (Then add 1 or 2 sentences here drawing the quiet parallel to business owners — carrying financial stress alone without realising the toll it takes. Don't labour it. Let it land.)
 
-Only write this when it feels right, not because the schedule says so.`, cta: '"Has your body ever told you something your brain was refusing to hear?"' },
+(A note from Ben: only write this when it feels right, not because the schedule says so.)`, cta: '"Has your body ever told you something your brain was refusing to hear?"' },
   { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "Option 1: The business was profitable. They were three months from running out of cash. Option 2: A supplier hadn't invoiced them in four months. The owner thought it was a good run of luck. It wasn't.", direction: `Your second line (if you opened with Option 1):
 "From the outside it looked like a healthy, growing business. From the inside it was about to hit a wall."
 
@@ -1256,20 +1332,19 @@ function AsbContentTab({ slug }: { slug: string }) {
     <div>
       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>3-Month Content Strategy</p>
       <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, direction, questions to answer before you write, and a CTA.</p>
+      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, the structure for the post (with prompts woven in), and a CTA.</p>
 
       {/* Content workflow strategy */}
       <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 5 · 13 May 2026</p>
-        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write and Post in Under 30 Minutes</p>
-        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>The time problem isn't the writing — it's going back and forth with Claude trying to improve the draft. Stop doing that. One pass. Out. Here's the process.</p>
+        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post in About 30 Minutes</p>
+        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>Most of the time problem isn't the writing itself. It's going back and forth with Claude trying to improve the draft. Don't do that. The cards now give you the structure. You just need to fill it in.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
           {[
-            { step: "1", label: "Load the updated MD file into your Claude project", desc: "Ben will send you an updated client-facing version of your MD file. Add it to your Claude project. This is your style guide — Claude reads it every time and uses it to write in your voice. You don't need to re-explain yourself each session." },
-            { step: "2", label: "Pick a card from this dashboard and answer the questions", desc: "Copy the content idea card into Claude — the hook, direction, and questions to answer. Then answer those questions in your own words. Rough notes are fine. The more specific you are, the closer Claude gets first time." },
-            { step: "3", label: "Ask Claude to write the post — once", desc: "Ask Claude to write a LinkedIn post using your MD file and your answers. One attempt. Do not ask it to revise, refine, or improve. Take whatever it produces and move on." },
-            { step: "4", label: "Paste it into LinkedIn — edit there, not in Claude", desc: "Copy the full draft into LinkedIn's 'Write a post' box. This is where you make it yours. Add spacing — hit return between paragraphs to break up dense blocks. Remove em-dashes and replace with commas. Remove some full stops. Add a dot-dot-dot here and there. Maybe swap a spelled-out number for a numeral. These small changes make it read human, not AI." },
-            { step: "5", label: "Post it", desc: "That's it. If you've been editing in LinkedIn for more than 10 minutes, it's done. Stop. Post it. The audience never sees the draft — they only see whether you showed up." },
+            { step: "1", label: "Pick a card from this dashboard", desc: "Open the content idea card you want to write — the hook is already there, and the structure below it tells you what each line of your post should be." },
+            { step: "2", label: "Answer the questions as best you can — give it 10 minutes", desc: "Read the bracketed prompts in the structure. They're there to jog your memory and add some juice to the post. Type your answers in your own words, filling in the gaps. If you can't answer one, skip it and move on. 10 minutes is the cap. Rough notes are fine. Specific is better than perfect." },
+            { step: "3", label: "(Optional) Put it to Claude to tidy the formatting", desc: "If you'd like Claude to help, paste your filled-in version in and ask it to format it for LinkedIn. Each sentence on a new line. No em-dashes. No short dramatic sentences. No changes to your words. Just the formatting. One attempt. Don't ask it to revise." },
+            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post into LinkedIn's 'Write a post' box. Add a dot-dot-dot here and there. Swap a spelled-out number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
           ].map((item, i) => (
             <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
               <div style={{ width: 28, height: 28, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
@@ -1280,11 +1355,14 @@ function AsbContentTab({ slug }: { slug: string }) {
             </div>
           ))}
         </div>
-        <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "12px 16px", marginBottom: 12 }}>
-          <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>The edits that make it human:</strong> spacing (new lines, no full stops), dot-dot-dots for continuation, numerals instead of written-out numbers, the occasional deliberate spelling slip. AI never does these things. You do.</p>
+        <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "12px 16px", marginBottom: 14 }}>
+          <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>The edits that make it human:</strong> sentences on their own lines, no em-dashes, no short dramatic fragments, dot-dot-dots for continuation, numerals instead of written-out numbers, the occasional deliberate spelling slip. AI doesn't do these things. You do.</p>
         </div>
-        <div style={{ background: "#fdf4e8", border: "1px solid #f5d89e", borderRadius: 6, padding: "10px 14px" }}>
-          <p style={{ fontSize: "0.83rem", color: "#92400E", margin: 0 }}><strong>Note from Ben:</strong> Updated MD file (your client-facing version) to follow shortly — add it to your Claude project when it arrives.</p>
+        <div style={{ background: "#fdf4e8", border: "1.5px solid #f5d89e", borderRadius: 6, padding: "14px 18px" }}>
+          <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>A gentle reminder from Ben</p>
+          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: "0 0 8px", lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's one of the most valuable things you can be doing right now.</p>
+          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: "0 0 8px", lineHeight: 1.7 }}>You'll get quicker the more you do it. That's how this works. And beyond the visibility, you're getting a lot more clarity on what you're doing, how you're helping people, and who you're talking to.</p>
+          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: 0, lineHeight: 1.7 }}>It's an incredibly beneficial exercise. Great for your knowledge, great for your expertise, and great for the conversations you'll have with future prospects and clients. You're ingraining what you know.</p>
         </div>
       </div>
 
