@@ -1328,7 +1328,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: COLOR, marginBottom: 8 }}>Finding Your Tribe</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Networking</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>From Ben — researching events and communities in London that are right for you. More coming soon.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Six events scouted for you in London — May and June 2026. Ben's take on each one is below.</p>
 
             {/* Ben's note */}
             <div style={{ background: COLOR, color: "#fff", borderRadius: 8, padding: "32px 36px", marginBottom: 32 }}>
@@ -1339,10 +1339,76 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "0.9rem", opacity: 0.9, lineHeight: 1.75, margin: 0 }}>So the goal isn't to find a network that looks useful. It's to find communities you'd genuinely want to show up to — founders groups, coaching and HR peer communities, LGBT+ business networks, speaker and panel circuits. Places where you walk in as yourself and leave feeling energised, not drained. I'm doing some research and I'll populate this tab with specific events and communities for you to explore. In the meantime: when you meet someone you like, ask who else you should be talking to. That's the whole game.</p>
             </div>
 
-            {/* Placeholder for events */}
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "32px 36px", marginBottom: 20 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 12px" }}>Events & Communities — Coming Soon</p>
-              <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Ben is researching London founder communities, coaching networks, LGBT+ business groups, and speaker opportunities that are the right fit for you. This tab will be updated with specific events, dates, and what to expect at each one.</p>
+            {/* Events list */}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 20px" }}>Upcoming Events — Scouted for You</p>
+
+            {/* Event 1: BOOM Networking */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16, marginBottom: 10 }}>
+                <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: 0 }}>BOOM Networking — Tattershall Castle</p>
+                <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20, background: `${COLOR}18`, color: COLOR, border: `1px solid ${COLOR}33` }}>Up Next</span>
+              </div>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Wed 27 May · 5:30–8pm · Tattershall Castle, London · £46.80</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>Premium networking aboard the Tattershall Castle on the Thames — 50+ curated founders and senior business leaders. Small enough to have real conversations. Attracts people from finance, technology, property, and professional services. The venue (The Bridge, with views of Big Ben and the Houses of Parliament) is designed for conversation, not chaos.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>Good fit. The calibre and size feel right for you — small enough to actually connect, senior enough to be worth your time. Founders and business leaders, not a generic LinkedIn mixer. Worth going once to see if the room is your kind of room.</p>
+              </div>
+            </div>
+
+            {/* Event 2: Gaydio Networking */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>Gaydio Networking: London — Pride Month Edition</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Thu 4 June · 6–9pm · Red Bull, London · £20–£25</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>Gaydio's London Pride Month event — speakers, drinks, and community. Marking the 20th anniversary of Gaydio on air. Backed by Ambassador Cruise Line, Eagle Labs, and other partners. An evening of connection, visibility, and storytelling.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>Left-field, and I'll be honest — not my strongest recommendation for you commercially. The crowd will skew younger and more community-focused than your usual professional orbit. That said, you live authentically and Pride Month matters to you personally. Worth knowing it exists. Go if it feels right for that reason, not because it's a pipeline move.</p>
+              </div>
+            </div>
+
+            {/* Event 3: Future of Work Summit */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>Future of Work Summit — Kingston Chamber of Commerce</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Fri 5 June · 8am–3pm · Kingston University Business School · £0–£18</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>A full-day summit for South West London businesses — roundtable discussions, peer learning, and practical insights. Theme: Navigating the Modern Workplace. Covers AI integration, leadership, employment law, and funding pressures on growing businesses.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>Solid option — and almost free, which removes any friction on attendance. The theme is squarely in your territory: people strategy, leadership, AI's impact on how organisations work. The South West London focus means SME founders and growing businesses — exactly the kind of leaders who need a fractional CPO or executive coach and don't yet know it. Could be a very good room to be visible in.</p>
+              </div>
+            </div>
+
+            {/* Event 4: Ukie HR Connect */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>Ukie HR Connect 2026</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Mon 15 June · 10am–5pm · RSM, London · £0–£32.60</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>The UK games industry's HR summit — senior HR and People Ops leaders exploring how to build more strategic, resilient, and future-ready HR functions. Theme: From Reactive to Strategic. Covers AI, new employment legislation, and global team operations. Lunch included.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>Interesting left-field option. You're not a games industry specialist, but the theme — HR moving from reactive to strategic — is your exact territory. Senior HR leaders who feel stuck in operational mode are exactly who you help. The question is whether you'd be seen as an outsider or a fresh perspective. My instinct: go as a curious peer, not as someone pitching. The conversations could be genuinely useful.</p>
+              </div>
+            </div>
+
+            {/* Event 5: PEL Network HR Networking */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>HR Networking Event — PEL Network</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Thu 18 June · 7–10:30pm · 100 Queen's Gate Hotel, Kensington · £5–£99.99</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>An HR-focused networking event at a Curio Collection by Hilton hotel in Kensington. PEL Network connects HR professionals, entrepreneurs, investors, and business leaders in premium London venues. Mixed crowd — HR professionals alongside broader business and investor community.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>Worth a look. The venue and format feel aligned with how you operate — premium, small, in a room. The broad mix (HR, founders, investors) means it's less of a specialist bubble and more of a genuine networking event. The wide ticket price range (£5 to £99) suggests tiered access — check what you're actually getting before booking the top tier.</p>
+              </div>
+            </div>
+
+            {/* Event 6: HR Leaders Unconference */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 16 }}>
+              <p style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>HR Leaders Unconference — Leading with Purpose in the People Profession</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px" }}>Mon 22 June · 9am–4:30pm · Wallacespace Clerkenwell, London · From £283.06</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>Third year of this sold-out unconference for senior HR, L&D, and OD leaders. Co-hosted by Fiona McBride Consulting and GK HR Networks. Designed to challenge how senior people leaders see their role and expand their impact. "Going fast" — limited availability.</p>
+              <div style={{ background: `${COLOR}0d`, border: `1px solid ${COLOR}22`, borderRadius: 6, padding: "12px 16px" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, color: COLOR, margin: "0 0 4px", letterSpacing: "0.05em", textTransform: "uppercase" }}>Ben's take</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>This is the strongest recommendation on this list. The unconference format means peer conversations, not presentations — which plays directly to your natural strengths. The room will be senior HR and OD leaders at inflection points in their careers: exactly who you coach, and exactly who could refer you or hire you. Purpose-led framing, sold-out track record, going fast. If you book one thing here, book this.</p>
+              </div>
             </div>
 
             <CommentBox clientName={NAME} tabName="Networking" slug={slug} />
