@@ -655,7 +655,7 @@ type AsbIdea = {
   title: string;
   hook: string;
   direction: string;
-  questions: string;
+  questions?: string;
   cta: string;
   drafted?: boolean;
 };
@@ -727,12 +727,9 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
             <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.hook}</p>
           </div>
           <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>✍️ Questions for you to answer first</p>
-            <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{idea.questions}</p>
-          </div>
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Direction for Claude</p>
-            <p style={{ fontSize: "0.85rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{idea.direction}</p>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>🧭 Structure for the post</p>
+            <p style={{ fontSize: "0.78rem", color: "#9CA3AF", lineHeight: 1.5, margin: "0 0 10px", fontStyle: "italic" }}>Suggestions to make it easier, not prescriptive. If a prompt doesn't apply or you can't answer it, skip it and move on.</p>
+            <div style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>{idea.direction}</div>
           </div>
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase" as const, letterSpacing: "0.08em", margin: "0 0 4px" }}>📣 CTA</p>
@@ -747,43 +744,496 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
 // ─── ASB CONTENT TAB ──────────────────────────────────────────────────────────
 
 const asbMayIdeas: AsbIdea[] = [
-  { id: "may-1", week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech", hook: "Option 1: There were references to Martin Lewis in my wedding speech. Option 2: I didn't choose finance. It chose me — probably to the mild irritation of everyone around me.", direction: "A warm, light, self-deprecating post. The Martin Lewis wedding speech reference is the hook — use it. Keep it human and slightly funny. This is an introduction post for people who don't know you yet. End on why that lifelong interest in money and numbers translates into something genuinely useful for business owners — not just knowing the theory, but caring about it.", questions: "What's the earliest memory you have of being interested in money? What did the best man's speech actually say? How has that trait shown up in ways that weren't always useful?", cta: '"Are you someone who naturally gets into the numbers — or do you do everything you can to avoid them?"', drafted: true },
-  { id: "may-2", week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Money's There. But Is It Actually Yours?", hook: "Option 1: That money in your account isn't all yours. Option 2: A lot of owners manage cash flow by just... not looking at it. Hoping it works itself out. Sometimes it does. Sometimes it really doesn't.", direction: "The bank balance is a trap — it shows a number, not the truth. Walk through the hidden claims that sit between the balance and what's actually spendable: VAT, corporation tax, committed supplier costs, pre-sold revenue not yet earned. Use a simple worked example — real numbers make this real. The cash flow 'working itself out' angle is a vivid, relatable way in: a lot of owners manage cash by hoping, not planning. The tone is calm and factual, with a slight edge of 'I've seen how this ends.' No jargon. No list posts. End on a practical question the reader can ask themselves tonight.", questions: "Have you worked with someone who found out their bank balance wasn't what they thought? What's the most common hidden claim owners don't account for? Can you give a worked example — e.g. £80k in the account, here's what's actually committed? Have you come across owners who describe managing cash by gut feel or just 'seeing how it goes' — if so, what usually happens next?", cta: '"Before you make your next big spend — do you know what\'s already committed from that balance?"' },
-  { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "Option 1: My boss called me in to tell me my job was safe. That wasn't the news I was hoping for. Option 2: I'd decided on 40 years old years before I actually got there. Not as a wish — as a plan.", direction: "The deliberate exit at 40 — not a redundancy, not a crisis, a decision that had been forming for years. The detail that makes this post: last day was exactly 20 years to the day from day one. Don't make it inspirational. Make it honest.", questions: "When did you first know 40 was the number? What had been stopping you before? What did the last morning feel like? What do you know now that you wish you'd known?", cta: '"Is there something you already know the answer to — but haven\'t done anything about yet?"' },
-  { id: "may-4", week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even", hook: "Option 1: A 10% discount on a low-margin product can mean selling 200% more just to break even. Option 2: Most business owners who discount regularly have never done this maths. Here it is.", direction: "From your networking talk — one of the sharpest, most counterintuitive insights in your toolkit. Walk through a simple worked example: a business with 20% gross margin discounts 10% — show what happens to the volume required. Acknowledge discounting is sometimes right — but it should be a considered decision, not a default.", questions: "What gross margin % to use for the example? What do owners say when you show them this maths? When is discounting actually the right call?", cta: '"Next time a customer asks for a discount — do you know what you\'d need to sell more of to make up for it?"' },
-  { id: "may-5", week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25", hook: "Option 1: At 25, I was sent to Beijing to sort out a finance operation held together with goodwill and optimism. Option 2: Most SME finance operations look a lot like that Beijing office did when I arrived.", direction: "Landing somewhere unfamiliar, finding a mess, building structure from scratch in a place where you didn't speak the language. The connection to now: most SME finance operations look a bit like that Beijing office. The thing you came away with: confidence that you can turn your hand to things.", questions: "What did it look like when you arrived — the actual state of the operation? What was the first thing you changed? How did you earn the local team's trust? What did you come back with that you didn't go with?", cta: '"Most of the businesses I work with have never had anyone look properly at their finances. When did you last take a proper look at yours?"' },
-  { id: "may-6", week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: One of Your Products Is Carrying the Rest. Do You Know Which One?", hook: "Option 1: I asked an owner which of their products made the most money. They said the one that sold the most. Those are two very different things. Option 2: One of your products is carrying the rest. Do you know which one?", direction: "This is a diagnosis post — not just 'do your numbers,' but 'do you know which part of your business is actually working?' You talked through this concept in a coaching session using physical building blocks — holding up the different pieces to show that not every block in the set carries the same weight. If you have a photo of that, or can recreate the image, it makes a strong visual to accompany the post. Walk through what product-level margin analysis actually shows, using an anonymised example if you have one. The punchline: finding the loser doesn't mean killing it. Sometimes there's a reason to keep it. But you should know you're keeping it.", questions: "What's the most common reaction when you show an owner their product-level margin breakdown for the first time? Can you share an anonymised example — what the owner thought vs. what the numbers showed? Are there legitimate reasons to keep a loss-making product in a range — and what are they? Have you worked with owners who had complex product ranges without knowing which ones were profitable — what does that usually mean for how they're pricing and selling?", cta: '"Do you know which of your products or services is your most profitable — not the one that sells the most, but the one that actually makes you the most money?"' },
-  { id: "may-7", week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep", hook: "Option 1: She told me she could finally sleep. That was the metric that mattered. Option 2: She knew her business was doing well. She just couldn't prove it fast enough, and it was grinding her down.", direction: "This is a client story post — told as a moment, not a case study. The transformation isn't the spreadsheet — it's the weight that lifted. Keep her anonymous throughout. A surprising number of SME owners manage finances completely alone, not because they're confident about it, but because they've never thought there was another option. That's the gap this post speaks to. The 'sleeping better' detail is the emotional anchor — don't bury it. Lead with the stress. Then the shift. Then what that actually looked like in her day-to-day. Resist the urge to explain what you did technically. The audience doesn't need the method. They need to feel the before and the after.", questions: "What was the atmosphere early on — was she stressed, resigned, resigned to being stressed? What specifically changed once planning was in place — was it a spreadsheet, a call, a forecast? What did 'sleeping better' look like practically? Did she describe managing finances alone as just 'how it was' — and if so, what shifted in how she saw that?", cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."' },
-  { id: "may-8", week: "Week 4 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: What Break-Even Actually Means — and Why Most People Get It Wrong", hook: "Option 1: Most business owners have a rough break-even number. Most rough numbers are wrong. Option 2: If you don't know your break-even point, every pricing decision involves some guesswork.", direction: "Break-even isn't just a formula — it's the foundation for pricing decisions, growth plans, and knowing whether a new hire is viable. Most owners who've heard of it have a rough number; most rough numbers are wrong. Walk through it clearly with an example — simple enough that someone with no finance background can follow, sharp enough that someone who thinks they already know feels something click. Pricing without understanding costs is a pattern that comes up again and again — break-even is often the missing piece behind that. End on what changes once someone actually has this number — what decisions feel different.", questions: "What's the most common mistake when people calculate their own break-even? Can you walk through a simple worked example — ideally one that produces a surprising result? What decisions typically change once someone knows their real break-even? In your experience, when owners are pricing without understanding costs, is break-even usually the missing piece?", cta: '"Do you know your break-even point — and does it account for your own time?"' },
+  { id: "may-1", week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech", hook: "Option 1: There were references to Martin Lewis in my wedding speech. Option 2: I didn't choose finance. It chose me — probably to the mild irritation of everyone around me.", direction: `Your second line (if you opened with Option 1):
+"I didn't choose finance because of a career plan."
+
+Your second line (if you opened with Option 2):
+"I was the kid saving pocket money to buy one big thing while everyone else spent theirs the moment they got it."
+
+(Then add 2 or 3 sentences here about an early memory of being interested in money. The earliest one that comes to mind. Could be the pocket money habit, the budget you kept at 18, or something else. Specific is better than general.)
+
+Your next line:
+"My friends and family have always come to me for money advice. So have a number of small business owners I know."
+
+(Then add 1 or 2 sentences here about how that trait has shown up in ways that weren't always useful. The Martin Lewis wedding speech reference goes here. Drop in what the best man actually said if you can remember the line.)
+
+Your closing line before the CTA:
+"There's a difference between someone who understands finance and someone who actually cares what the numbers mean for your business."
+
+(Then add 1 sentence here on what that means for the people you work with now. Something like: caring about this stuff for 30-odd years is probably why your clients get someone as invested in the numbers as they are.)`, cta: '"Are you someone who naturally gets into the numbers — or do you do everything you can to avoid them?"', drafted: true },
+  { id: "may-2", week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Money's There. But Is It Actually Yours?", hook: "Option 1: That money in your account isn't all yours. Option 2: A lot of owners manage cash flow by just... not looking at it. Hoping it works itself out. Sometimes it does. Sometimes it really doesn't.", direction: `Your second line (if you opened with Option 1):
+"The bank balance tells you what's there. It doesn't tell you what's already spoken for."
+
+Your second line (if you opened with Option 2):
+"Treating the bank balance as the measure of how you're doing financially is one of the most common mistakes I see. And an easy one to make."
+
+(Then add 2 or 3 sentences here listing the hidden claims that sit between the balance and what's actually spendable. VAT, corporation tax, committed supplier costs, pre-sold revenue not yet earned. Just name them plainly.)
+
+Your next line:
+"I knew a business owner who'd had a strong few months. Cash was sitting in the account."
+
+(Then add 3 or 4 sentences here walking through a worked example. Could be the one from your own experience where someone went and bought the new piece of kit and then the tax bill arrived. Or invent simple numbers, e.g. £80k in the account, here's what's already committed. Real numbers make this real.)
+
+Your closing line before the CTA:
+"A useful starting point is looking at what's due over the next three months. It's a simple question. Many business owners I speak to don't have the answer."
+
+(Then add 1 sentence here on what owners who manage cash by gut feel usually end up dealing with. Calm and factual, with a slight edge of "I've seen how this ends.")`, cta: '"Before you make your next big spend — do you know what\'s already committed from that balance?"' },
+  { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "Option 1: My boss called me in to tell me my job was safe. That wasn't the news I was hoping for. Option 2: I'd decided on 40 years old years before I actually got there. Not as a wish — as a plan.", direction: `Your second line (if you opened with Option 1):
+"I'd decided on 40 years old years before I actually got there. Not as a wish. As a plan."
+
+Your second line (if you opened with Option 2):
+"My share vesting aligned with my 40th birthday. The maths had been done a long time ago."
+
+(Then add 2 or 3 sentences here on when you first knew 40 was the number, and what had been stopping you before. Keep it honest, not inspirational.)
+
+Your next line:
+"My last day was exactly 20 years to the day after walking in as an intern."
+
+(Then add 2 or 3 sentences here on what the last morning actually felt like. The detail makes this post. Don't generalise, just describe it.)
+
+Your closing line before the CTA:
+"There's a difference between knowing something and acting on it."
+
+(Then add 1 sentence here on what you know now that you wish you'd known earlier about making that kind of call.)`, cta: '"Is there something you already know the answer to — but haven\'t done anything about yet?"' },
+  { id: "may-4", week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even", hook: "Option 1: A 10% discount on a low-margin product can mean selling 200% more just to break even. Option 2: Most business owners who discount regularly have never done this maths. Here it is.", direction: `Your second line (if you opened with Option 1):
+"Most people don't believe it when I first show them the maths."
+
+Your second line (if you opened with Option 2):
+"Offering a 10% discount feels like a small thing. If you had to make treble the sales just to make the same money though, would you do it?"
+
+(Then add 2 or 3 sentences here on why owners offer discounts in the first place. Someone said they were too expensive. Sales are slow. Confidence is low. Acknowledge that it's logical, even if the maths says otherwise.)
+
+Your next line:
+"Take a business selling something for £100 that costs £85 to produce. They make a £15 gross profit on every sale."
+
+(Then add 3 or 4 sentences here walking through the worked example. Discount by 10%, gross profit drops to £5, they now have to sell three of those products to get their £15 back. Pick whatever gross margin % feels right — keep the numbers simple.)
+
+Your closing line before the CTA:
+"I'm not saying discounting is never right."
+
+(Then add 2 or 3 sentences here on when it IS the right call. Shifting stock, early payment for cash flow, a deliberate commercial decision where you've understood the full consequences. Those are considered calls. Often it isn't that considered.)`, cta: '"Next time a customer asks for a discount — do you know what you\'d need to sell more of to make up for it?"' },
+  { id: "may-5", week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25", hook: "Option 1: At 25, I was sent to Beijing to sort out a finance operation held together with goodwill and optimism. Option 2: Most SME finance operations look a lot like that Beijing office did when I arrived.", direction: `Your second line (if you opened with Option 1):
+"I didn't speak the language. The team had been working in silos for years. The numbers were everywhere and nowhere."
+
+Your second line (if you opened with Option 2):
+"Messy, ad-hoc, held together by goodwill and the people who'd been there longest."
+
+(Then add 2 or 3 sentences here describing what it actually looked like when you arrived. The state of the operation. Be specific — what was missing, what was duplicated, what nobody had ever sat down and structured.)
+
+Your next line:
+"The first thing I did was sit with the local team and listen."
+
+(Then add 2 or 3 sentences here on how you earned their trust and what the first thing you changed was. Plain English. No corporate language.)
+
+Your closing line before the CTA:
+"I came back with something I didn't go out there with — the confidence that I can just turn my hand to stuff."
+
+(Then add 1 or 2 sentences here drawing the parallel to now. Most SME finance operations look a bit like that Beijing office did. Nobody's ever sat down and looked at them properly.)`, cta: '"Most of the businesses I work with have never had anyone look properly at their finances. When did you last take a proper look at yours?"' },
+  { id: "may-6", week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: One of Your Products Is Carrying the Rest. Do You Know Which One?", hook: "Option 1: I asked an owner which of their products made the most money. They said the one that sold the most. Those are two very different things. Option 2: One of your products is carrying the rest. Do you know which one?", direction: `Your second line (if you opened with Option 1):
+"Volume is not the same as profit. The one that sells the most might be the one that's quietly costing you money."
+
+Your second line (if you opened with Option 2):
+"Most owners can tell you which product sells the most. Far fewer can tell you which one actually makes the most money."
+
+(Then add 2 or 3 sentences here on what product-level margin analysis actually shows when you do it for the first time. The typical reaction. The bit that surprises people.)
+
+Your next line:
+"I worked with an owner who was convinced their best-seller was the engine of the business."
+
+(Then add 3 or 4 sentences here walking through an anonymised example. What they thought versus what the numbers showed. If you've got the Lego comparison handy, that fits well here — Lego had financial difficulties because they'd complicated their range and didn't know which pieces were carrying the rest.)
+
+Your closing line before the CTA:
+"Finding the loser doesn't mean killing it. Sometimes there's a reason to keep it."
+
+(Then add 1 or 2 sentences here on the legitimate reasons to keep a loss-making product in the range. A loss-leader that brings other business in, a customer relationship, a strategic call. The point isn't to cut it. The point is to know.)`, cta: '"Do you know which of your products or services is your most profitable — not the one that sells the most, but the one that actually makes you the most money?"' },
+  { id: "may-7", week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep", hook: "Option 1: She told me she could finally sleep. That was the metric that mattered. Option 2: She knew her business was doing well. She just couldn't prove it fast enough, and it was grinding her down.", direction: `Your second line (if you opened with Option 1):
+"The spreadsheet wasn't the win. The weight lifting off her shoulders was."
+
+Your second line (if you opened with Option 2):
+"Investors were asking questions about cash flow she couldn't answer fast enough. The business was fine. She wasn't."
+
+(Then add 2 or 3 sentences here on what the atmosphere was like early on. Was she stressed, resigned, resigned to being stressed. Specific is better than general. Keep her anonymous throughout.)
+
+Your next line:
+"Once we got the cash planning sorted, she wasn't on her own anymore."
+
+(Then add 2 or 3 sentences here on what actually changed. Was it a forecast, a call she could now answer, a question she could now hold her own on. Don't get into the technical detail of what you did. Stay with the shift.)
+
+Your closing line before the CTA:
+"A surprising number of business owners manage all of this completely on their own. Not because they're confident. Because they've never thought there was another option."
+
+(Then add 1 sentence here on what shifted in how she saw that. Or just leave it — sometimes the silence after that line is the point.)`, cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."' },
+  { id: "may-8", week: "Week 4 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: What Break-Even Actually Means — and Why Most People Get It Wrong", hook: "Option 1: Most business owners have a rough break-even number. Most rough numbers are wrong. Option 2: If you don't know your break-even point, every pricing decision involves some guesswork.", direction: `Your second line (if you opened with Option 1):
+"Break-even isn't just a number. It's the foundation for every pricing decision, every growth plan, and every decision about whether you can afford to hire."
+
+Your second line (if you opened with Option 2):
+"Most owners have heard of it. Far fewer have actually worked theirs out properly."
+
+(Then add 2 or 3 sentences here on the most common mistake people make when they calculate their own break-even. Usually it's missing their own time, or indirect costs, or fulfilment costs.)
+
+Your next line:
+"Let me walk through a simple example."
+
+(Then add 4 or 5 sentences here walking through a worked example. Simple enough that someone with no finance background can follow, sharp enough that someone who thinks they already know it feels something click. Pick numbers that produce a slightly surprising result.)
+
+Your closing line before the CTA:
+"Once someone actually has this number, the decisions start to feel different."
+
+(Then add 1 or 2 sentences here on what changes. Pricing conversations, hiring calls, when to take on a new contract. Plain English.)`, cta: '"Do you know your break-even point — and does it account for your own time?"' },
 ];
 
 const asbJuneIdeas: AsbIdea[] = [
-  { id: "jun-1", week: "Week 5 · Mid-week", type: "Personal", bold: "4/5", title: "Someone Slammed the Door. I Was Just the Messenger.", hook: "Option 1: One of them slammed his fist on the desk and walked out. The numbers were still right. Option 2: I once told a room full of senior people something they really didn't want to hear. That's still the most useful thing I've ever done in a meeting.", direction: "Set the scene — a high-stakes presentation, a product the room was heavily invested in, numbers that said it wasn't viable. Keep all identifying details out. The point: the most useful thing an adviser can do is give you the honest picture, even when it's not what you want to hear. Especially then. That experience shaped how you work with clients today — you're not there to validate decisions people have already made. Tie it to the SME context: how often do business owners avoid looking at numbers because they're worried about what they might find?", questions: "What was the atmosphere in the room before it went wrong? How did you hold your ground — what was going through your head? Has there been a moment like this with a client, where you had to say something uncomfortable? What happened as a result?", cta: '"Has anyone ever told you something about your business you didn\'t want to hear — but that turned out to be exactly what you needed?"' },
-  { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Three Questions Every Business Owner Should Be Able to Answer", hook: "Option 1: Three questions. You don't have to answer out loud. Option 2: I close every networking talk with these three questions. Most people in the room go quiet.", direction: "These three came directly from the close of your networking talk and they're strong enough to anchor a post on their own. No preamble needed — just the three questions, then your honest framing of what they reveal. 1) When you're making a big decision, do you go with gut feel or look at what the numbers are telling you? 2) Do you know which of your products or services is most profitable? 3) Do you know what your cash position will be in three months — and how much of that will be yours? End with: most business owners who can't answer these aren't failing. They just haven't had anyone help them look.", questions: "What proportion of owners you meet can genuinely answer all three? What's usually the one that stumps people most? What changes once someone can answer all three?", cta: '"Which of the three is your honest answer: \'yes\', \'not sure\', or \'I\'d rather not think about it\'?"' },
-  { id: "jun-3", week: "Week 6 · Mid-week", type: "Personal", bold: "2/5", title: "I'm Running My First Half Marathon. I'm Not Fast. That's Not the Point.", hook: "Option 1: I'm training for my first half marathon. My pace is best described as determined. Option 2: Last year I ran a 10k faster than I did at 23. This year I'm doing a half marathon. Slow progress is still progress.", direction: "A light, warm, relatable post about training for something you're not naturally built for. Last year you ran your first 10k in 17 years — faster than you managed at 23. This year it's a half marathon. The connection to your work is subtle but real: you measure progress, adjust the plan, and keep going even when the pace is slow. Don't labour the analogy — let it land on its own.", questions: "What made you decide on the half marathon this year? What does training currently look like — what are you running, how often, what's hard about it? What do you listen to when you run? What does finishing feel like as a goal compared to racing to win?", cta: '"Are you working towards something right now that has nothing to do with business? What is it?"' },
-  { id: "jun-4", week: "Week 6 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: How to Price Something You Actually Make Money From", hook: "Option 1: Most businesses price based on gut feel, competitors, or what the market will bear. None of those work without knowing your costs first. Option 2: If you can't tell me what your most popular product costs to deliver, you can't tell me if you're making money on it.", direction: "This post came directly from your networking talks and client work. Pricing without understanding costs is one of the most common patterns: owners setting prices based on instinct, competitors, or the market — without the cost foundation that makes any of those approaches defensible. The concept of 'defendable pricing' is central: if you don't know your costs, you can't hold your price in a negotiation. You're winging it and hoping the other person doesn't push back. A good analogy: it's a bit like going to a poker table without knowing the value of the cards. Walk through what proper cost analysis looks like — including the things owners routinely miss (their own time, indirect costs, fulfilment). End on what changes when the number is solid: you can say no without flinching.", questions: "What are the most commonly missed costs when businesses price their services or products? Can you share an example (anonymised) where understanding costs changed the price dramatically? What does 'defendable pricing' feel like in a real client conversation — what does the owner say when they realise they've been underpricing? In your experience, what's the most common culprit for mispricing — time, overheads, or fulfilment costs?", cta: '"Do you know the full cost of delivering your most popular product or service — or is there guesswork in there?"' },
-  { id: "jun-5", week: "Week 7 · Mid-week", type: "Personal", bold: "3/5", title: "Leaving the Corporate World Was Harder Than I Expected. And Easier.", hook: "Option 1: Everyone said leaving a stable corporate career was a big risk. They weren't wrong. They also weren't fully right. Option 2: I didn't leave because I was brave. I left because the alternative felt worse.", direction: "The honest version of the transition post — not a 'best decision I ever made' highlight reel. What was genuinely hard about the first few months (the quiet, the uncertainty, the lack of structure you didn't know you relied on)? What surprised you — both in the difficult direction and the unexpected freedom? Use your own words: 'It was either go back into all of that and I don't want to do that to myself, or coast. I didn't feel passionate about that either. Or come and do what I'm doing now. So I took the leap.'", questions: "What was the hardest moment in the first few months? What did you miss about corporate that you didn't expect to? What's better now in a way you couldn't have predicted? What would you tell yourself if you could go back to the day you handed in your notice?", cta: '"If you\'ve made a big leap — professionally or personally — what\'s the one thing nobody warned you about?"' },
-  { id: "jun-6", week: "Week 7 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Your Accountant Is Doing Their Job. That's the Problem.", hook: "Option 1: Your accountant is doing exactly what they're supposed to. That's the problem. Option 2: The accounts arrived. You glanced at them. You carried on. That's not on you — it's a gap nobody told you existed.", direction: "This is your core positioning post — the one that explains why a business can have an accountant and still be flying blind. Write it without any shade on accountants. They're doing exactly what they're supposed to. The gap isn't their fault. Compliance and forward-looking strategy are two genuinely different roles, and most SMEs only have one covered. Use the bookkeeper → accountant → FD ladder from Andy's networking talk — it's the clearest version of this argument he's made publicly. A recurring pattern is owners who think their accountant is their financial strategy, having never had anyone working in the business with them looking forward. The 'accountant who goes quiet for 11 months' detail is worth including — it's not a criticism, it's just not the same job. End with what the FD role actually looks like: not audit, not tax returns, but sitting alongside an owner making decisions with them.", questions: "What's the most common thing SME owners say about their accountant early in a conversation with you? What's the first question you ask that their accountant has never asked them? Have you worked with an owner whose accountant basically went quiet between filings — what had that silence cost? Do owners who are 'working in not on the business' tend to have this accountant gap too — does having an FD shift that?", cta: '"When did you last look at your numbers and actually know what to do next?"' },
-  { id: "jun-7", week: "Week 8 · Mid-week", type: "Personal", bold: "1/5", title: "We've Been Fostering Labradors. This Is What I've Learned.", hook: "Option 1: My wife and I have been fostering Labradors. Every single one has been different. All of them have taught us something. Option 2: We've been looking after dogs waiting for their forever home. I didn't expect it to teach me much. It has.", direction: "A warm, human post that shows a side of Andy most LinkedIn connections won't have seen. Don't try too hard to make a business point — let the story do the work. What has the fostering experience actually been like? The brief introductions, the different personalities, the moment when a dog goes to its permanent home. The connection to Andy's character (patience, staying calm under pressure, building trust through consistency) can be implicit rather than stated.", questions: "What made you start fostering? What does the handover moment feel like when a dog goes to its permanent home? Has fostering changed how you think about anything — relationships, patience, trust? Is there a particular dog that stands out?", cta: '"Does anyone else foster — or have you thought about it? Would love to hear other people\'s experiences."' },
-  { id: "jun-8", week: "Week 8 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Growth Should Feel Exciting. If It Feels Risky, Here's Why.", hook: "Option 1: Growth should feel exciting. If it feels risky, that's usually a numbers problem, not a courage problem. Option 2: Some businesses grow fast without realising it. Revenue up, headcount up, stress up. No plan underneath any of it.", direction: "Clarity doesn't just improve financial decisions — it changes how growth feels. Without it, every opportunity is a gamble. With it, you can take a calculated risk. Some owners describe growth that just happened — revenue going up, commitments piling up, new hires appearing — without any financial foundations underneath it. That's not a success story, it's a warning sign with good numbers on the surface. Think of it like building an extra floor on a house before checking the foundations. The floor goes up fine. For a while. There's also the flip side: owners who didn't take a good opportunity because the uncertainty felt too high — and they still don't know if it was the right call. Both of those are the same problem: operating without the information that makes growth feel intentional. End on what changes when clarity is there — not just better decisions, but a fundamentally different relationship with risk.", questions: "Have you worked with a client whose growth was entirely accidental — what did that look like from the inside, and when did the problem surface? Have you had an owner who turned down a good opportunity because the numbers felt unclear — what happened? What does 'a calculated risk' actually look like when you're working with someone on it? When a business has grown fast without the financial structure to match, what's the first thing you look at?", cta: '"Think of the last opportunity you hesitated on. Was it genuine caution — or did you not have the numbers to back yourself?"' },
+  { id: "jun-1", week: "Week 5 · Mid-week", type: "Personal", bold: "4/5", title: "Someone Slammed the Door. I Was Just the Messenger.", hook: "Option 1: One of them slammed his fist on the desk and walked out. The numbers were still right. Option 2: I once told a room full of senior people something they really didn't want to hear. That's still the most useful thing I've ever done in a meeting.", direction: `Your second line (if you opened with Option 1):
+"It was a high-stakes meeting. A product the room had invested years in. And the numbers said it wasn't going to work."
+
+Your second line (if you opened with Option 2):
+"The room had been built around the idea that this would work. The numbers were saying something different."
+
+(Then add 2 or 3 sentences here setting the scene. Keep all identifying details out — no nationality, no product, no company. What was the atmosphere in the room before it went wrong.)
+
+Your next line:
+"I was really just the messenger at that point."
+
+(Then add 2 or 3 sentences here on how you held your ground and what was going through your head. The honest version. You weren't there to win an argument, you were there because the numbers were what they were.)
+
+Your closing line before the CTA:
+"That moment shaped how I work with clients now. I'm not there to validate decisions people have already made."
+
+(Then add 1 or 2 sentences here tying it to SME owners. How often does someone avoid looking at the numbers because they're worried about what they might find? The most useful thing an adviser can do is tell you the truth.)`, cta: '"Has anyone ever told you something about your business you didn\'t want to hear — but that turned out to be exactly what you needed?"' },
+  { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Three Questions Every Business Owner Should Be Able to Answer", hook: "Option 1: Three questions. You don't have to answer out loud. Option 2: I close every networking talk with these three questions. Most people in the room go quiet.", direction: `Your second line (if you opened with Option 1):
+"Just answer them honestly in your head. That's enough."
+
+Your second line (if you opened with Option 2):
+"They're not difficult questions. That's part of why the silence is so telling."
+
+Your next part — the three questions, one per line:
+"1. When you're making a big decision, do you go with gut feel or look at what the numbers are telling you?"
+"2. Do you know which of your products or services is the most profitable?"
+"3. Do you know what your cash position will be in three months — and how much of that will actually be yours?"
+
+(Then add 2 or 3 sentences here on what proportion of owners can genuinely answer all three, and which one usually stumps people most. From your real experience at the talks.)
+
+Your closing line before the CTA:
+"Most business owners who can't answer these aren't failing. They just haven't had anyone help them look."
+
+(Then add 1 sentence here on what changes once someone can answer all three. Less stress, fewer surprises, more confident decisions.)`, cta: '"Which of the three is your honest answer: \'yes\', \'not sure\', or \'I\'d rather not think about it\'?"' },
+  { id: "jun-3", week: "Week 6 · Mid-week", type: "Personal", bold: "2/5", title: "I'm Running My First Half Marathon. I'm Not Fast. That's Not the Point.", hook: "Option 1: I'm training for my first half marathon. My pace is best described as determined. Option 2: Last year I ran a 10k faster than I did at 23. This year I'm doing a half marathon. Slow progress is still progress.", direction: `Your second line (if you opened with Option 1):
+"I'm not built for distance running. That's been very clear for a while."
+
+Your second line (if you opened with Option 2):
+"I never thought I'd say that. The plan was always to be more sensible as I got older. Apparently the plan changed."
+
+(Then add 2 or 3 sentences here on what made you sign up for the half marathon this year, and what training currently looks like. How often you run, what's hard about it, what you listen to. Specific details land better than general ones.)
+
+Your next line:
+"Finishing is the goal. Not racing to win."
+
+(Then add 2 or 3 sentences here on what that feels like. The kind of progress you don't really notice from one week to the next, but you do from one year to the next. Don't labour the parallel to business — let it land on its own.)
+
+Your closing line before the CTA:
+"Slow progress is still progress."
+
+(Then add 1 sentence here, if you want one. Otherwise leave it there and let it breathe.)`, cta: '"Are you working towards something right now that has nothing to do with business? What is it?"' },
+  { id: "jun-4", week: "Week 6 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: How to Price Something You Actually Make Money From", hook: "Option 1: Most businesses price based on gut feel, competitors, or what the market will bear. None of those work without knowing your costs first. Option 2: If you can't tell me what your most popular product costs to deliver, you can't tell me if you're making money on it.", direction: `Your second line (if you opened with Option 1):
+"All three of those are legitimate inputs. None of them work without the cost foundation underneath."
+
+Your second line (if you opened with Option 2):
+"If you don't know your costs, you can't hold your price in a negotiation. You're winging it and hoping the other person doesn't push back."
+
+(Then add 2 or 3 sentences here on the costs that owners routinely miss. Their own time. Indirect costs. Fulfilment. In your experience, which one is the most common culprit.)
+
+Your next line:
+"I worked with a business owner who realised, after we sat down with the actual numbers, that their headline product had been making them nothing."
+
+(Then add 3 or 4 sentences here walking through that anonymised example. What they thought the margin was versus what it actually was. What changed in the conversation once they could see it.)
+
+Your closing line before the CTA:
+"Defendable pricing means you can say no without flinching."
+
+(Then add 1 or 2 sentences here on what that actually looks like in a real conversation with a customer. The owner who can hold their price because they know exactly what they're being asked to give up.)`, cta: '"Do you know the full cost of delivering your most popular product or service — or is there guesswork in there?"' },
+  { id: "jun-5", week: "Week 7 · Mid-week", type: "Personal", bold: "3/5", title: "Leaving the Corporate World Was Harder Than I Expected. And Easier.", hook: "Option 1: Everyone said leaving a stable corporate career was a big risk. They weren't wrong. They also weren't fully right. Option 2: I didn't leave because I was brave. I left because the alternative felt worse.", direction: `Your second line (if you opened with Option 1):
+"The honest version isn't the highlight reel. It's more interesting than that."
+
+Your second line (if you opened with Option 2):
+"It was either go back into all of that and I didn't want to do that to myself, or coast. I didn't feel passionate about that either. Or come and do what I'm doing now. So I took the leap."
+
+(Then add 2 or 3 sentences here on what was actually hard about the first few months. The quiet, the uncertainty, the structure you didn't know you'd been relying on. Be specific. The hardest moment if you've got one.)
+
+Your next line:
+"There were also things I didn't expect."
+
+(Then add 2 or 3 sentences here on what surprised you in both directions. What you missed about corporate that you didn't think you would. What's better now in a way you couldn't have predicted.)
+
+Your closing line before the CTA:
+"If I could go back to the morning I handed in my notice, I'd tell myself one thing."
+
+(Then add 1 or 2 sentences here on what that one thing would be. Honest, not motivational. Whatever actually comes to mind.)`, cta: '"If you\'ve made a big leap — professionally or personally — what\'s the one thing nobody warned you about?"' },
+  { id: "jun-6", week: "Week 7 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Your Accountant Is Doing Their Job. That's the Problem.", hook: "Option 1: Your accountant is doing exactly what they're supposed to. That's the problem. Option 2: The accounts arrived. You glanced at them. You carried on. That's not on you — it's a gap nobody told you existed.", direction: `Your second line (if you opened with Option 1):
+"They're keeping you compliant. They're reporting what's already happened. That's their job and they do it well."
+
+Your second line (if you opened with Option 2):
+"It's not that you don't care. It's that nobody handed you the bit that would have told you what to actually do with them."
+
+(Then add 2 or 3 sentences here on what owners typically say about their accountant early in a conversation with you. No shade on accountants — the gap isn't their fault. Compliance and forward-looking strategy are genuinely different roles.)
+
+Your next line:
+"There's a ladder most businesses work their way up. Bookkeeper, accountant, finance director."
+
+(Then add 3 or 4 sentences here walking through the ladder. What each role does and where the gap shows up. The accountant who goes quiet for 11 months between filings is worth including — not a criticism, just not the same job as sitting alongside you while you make decisions.)
+
+Your closing line before the CTA:
+"The FD role isn't tax returns or audit. It's the person looking forward with you, not just reporting on what's already happened."
+
+(Then add 1 or 2 sentences here on what that actually looks like in practice. Sitting alongside an owner. Asking the questions their accountant has never asked them.)`, cta: '"When did you last look at your numbers and actually know what to do next?"' },
+  { id: "jun-7", week: "Week 8 · Mid-week", type: "Personal", bold: "1/5", title: "We've Been Fostering Labradors. This Is What I've Learned.", hook: "Option 1: My wife and I have been fostering Labradors. Every single one has been different. All of them have taught us something. Option 2: We've been looking after dogs waiting for their forever home. I didn't expect it to teach me much. It has.", direction: `Your second line (if you opened with Option 1):
+"They each arrive with their own personality, their own habits, their own way of working out whether they trust you."
+
+Your second line (if you opened with Option 2):
+"We started doing it for the dogs. It's ended up doing something for us too."
+
+(Then add 2 or 3 sentences here on what made you start fostering. Our own Lab Milly passing away is part of this if you want to include it. The fostering isn't incidental.)
+
+Your next line:
+"There's a moment when they leave for their permanent home."
+
+(Then add 2 or 3 sentences here on what that handover actually feels like. Is there a particular dog that stands out, you can drop that in here too.)
+
+Your closing line before the CTA:
+"Fostering has changed how I think about patience and trust in a way I didn't expect."
+
+(Then add 1 sentence here, if anything comes to mind. Don't force the business parallel — let the story do the work.)`, cta: '"Does anyone else foster — or have you thought about it? Would love to hear other people\'s experiences."' },
+  { id: "jun-8", week: "Week 8 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Growth Should Feel Exciting. If It Feels Risky, Here's Why.", hook: "Option 1: Growth should feel exciting. If it feels risky, that's usually a numbers problem, not a courage problem. Option 2: Some businesses grow fast without realising it. Revenue up, headcount up, stress up. No plan underneath any of it.", direction: `Your second line (if you opened with Option 1):
+"Without clarity, every opportunity is a gamble. With it, you can take a calculated risk."
+
+Your second line (if you opened with Option 2):
+"That's not a success story. It's a warning sign with good numbers on the surface."
+
+(Then add 2 or 3 sentences here on a client whose growth was entirely accidental. What it looked like from the inside, when the problem surfaced. Keep them anonymous.)
+
+Your next line:
+"There's also the flip side."
+
+(Then add 2 or 3 sentences here on the owner who turned down a good opportunity because the numbers felt unclear. Both situations come from the same root problem — operating without the information that makes growth feel intentional rather than scary.)
+
+Your closing line before the CTA:
+"A calculated risk isn't a brave one. It's just one you've actually looked at properly."
+
+(Then add 1 or 2 sentences here on what changes when clarity is there. Not just better decisions — a fundamentally different relationship with risk. Plain language.)`, cta: '"Think of the last opportunity you hesitated on. Was it genuine caution — or did you not have the numbers to back yourself?"' },
 ];
 
 const asbJulyIdeas: AsbIdea[] = [
-  { id: "jul-1", week: "Week 9 · Mid-week", type: "Personal", bold: "4/5", title: "I Woke Up One Morning and Everything Was Spinning", hook: "Option 1: I woke up one morning and the room was spinning. I hadn't been drinking. That was my body telling me something needed to change. Option 2: Pressure doesn't announce itself. It compounds. Then one day it does.", direction: "The vestibular migraine story — the stress-related health crisis during your Rolls-Royce years. This is 4/5 bold, but one of the most powerful posts available. The lesson isn't 'corporate life is toxic' — it's that pressure compounds silently, small habits make a significant difference, and paying attention to how you feel is as important as paying attention to your numbers. The parallel to what you see in business owners — carrying financial stress alone without realising the toll it takes — is implicit and real. Only write this when it feels right, not because the schedule says so.", questions: "What were the warning signs you missed before that morning? What was the recovery like — what actually changed? What habits made the biggest difference, and which surprised you? What do you notice now in other people that you didn't notice before?", cta: '"Has your body ever told you something your brain was refusing to hear?"' },
-  { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "Option 1: The business was profitable. They were three months from running out of cash. Option 2: A supplier hadn't invoiced them in four months. The owner thought it was a good run of luck. It wasn't.", direction: "This is a real client story — told as a moment, not a case study. A profitable business nearly ran out of cash within three months because of payment timing on larger contracts. Tell the story. Keep the client fully anonymous throughout. The pay-off: they said it was worse than they'd thought — but they could sleep at night, because they knew, and there was still time to act. Knowing is better than not knowing, even when what you find out is uncomfortable. If relevant, the detail of a supplier who hadn't invoiced for months — it felt like a lucky spell, it was actually a deferred liability — adds useful texture. Think of it like a delayed flight — the gate agent smiling and saying nothing doesn't mean everything's fine. At some point the truth arrives. End on: a forecast doesn't prevent problems, it gives you time to act.", questions: "What did the business look like from the outside when you first got involved — growing, healthy on the surface? When did the forecast first show what was coming — how far out were they? What exactly did they do to fix it? Have you come across owners managing cash flow by gut feel or hoping it 'works itself out' — if so, how does that usually play out?", cta: '"Do you have a forward-looking cash flow forecast — or just last month\'s accounts?"' },
-  { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner" — What Clients Actually Say', hook: "Option 1: The thing clients say most, once things are working: I wish I'd done this sooner. Option 2: Not 'that was useful' or 'glad we did that.' Specifically: sooner. Every time.", direction: "A reflection post on what 'sooner' actually means — the decisions that would have been better, the stress that could have been avoided, the time spent operating without visibility. Draw on the startup founder story: he could explain the business but couldn't articulate the financial story. Once he could, the decision was clear and game-changing. The emotional core of this post is constructive regret — the kind that makes people act now rather than wait.", questions: "What do clients typically mean when they say 'sooner'? How far back are they imagining? What's a concrete example of a decision that would have gone differently? What's the most common thing that stops people acting earlier?", cta: '"What\'s one thing in your business you\'ve been putting off — and what\'s actually stopping you?"' },
-  { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Option 1: He could explain the business brilliantly. The financial story was another matter. Option 2: In an investor conversation, your numbers need to hold up under questioning — not just your pitch.", direction: "Draw on your power sentence about the founder preparing to raise investment — he could explain the business but couldn't articulate the financial story. After working together, he could hold his own in those conversations. This isn't about the mechanics of raising investment — it's about credibility. What does 'the financial story' actually mean in practice?", questions: "What are the most common financial questions investors ask that founders aren't prepared for? What did it look like before and after for the founder in your power sentence? What's the simplest version of 'financial story' that a pre-investment founder could build in a short time?", cta: '"If an investor asked you to walk them through the financial story of your business right now — how confident would you feel?"' },
-  { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "Option 1: I've been learning Japanese every day for over 400 days. I'm not fluent. Not even close. But I'm significantly better than I was. Option 2: 400 days of daily practice teaches you something that has nothing to do with Japanese.", direction: "A post about consistency, small daily habits, and what compounds over time — told through language learning. French A* at GCSE, Mandarin across two spells in Beijing, now Japanese. The connection to Andy's broader point about small habits (which he's deeply passionate about, and connects to his vestibular migraine recovery) can be made without it becoming a lecture. Keep it warm and slightly self-deprecating about the Japanese.", questions: "Why Japanese specifically? What has 400 days of daily practice actually taught you beyond the language itself? What's the moment where you noticed real progress? What habit in your life or business has compounded in a way you didn't expect?", cta: '"What\'s a habit you\'ve kept going that\'s quietly made a difference — in life or in business?"' },
-  { id: "jul-6", week: "Week 11 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I Can Just Use AI for My Financial Strategy.\" Can You, Though?", hook: "Option 1: I keep hearing this: why would I need financial help when I can just use AI? It's a fair question. Here's my honest answer. Option 2: AI can produce a financial model. It can't tell you if the assumptions are right.", direction: "This is Andy's hot-take from his onboarding form, written almost verbatim. The argument: AI isn't the problem. The problem is using any tool without the ability to evaluate what it's producing. If you don't understand finance well enough to know when the AI output is wrong or incomplete, you won't know to question it. Write this in Andy's voice: not preachy, not dismissive of AI, just honest about where the real value sits.", questions: "Have you seen AI-generated financial output that looked plausible but was wrong in an important way? What's the role AI could genuinely play for SME owners — and where does it fall short? What would you say to someone who genuinely believes this objection?", cta: '"Have you tried using AI for financial decisions? What was useful and what didn\'t quite work?"' },
-  { id: "jul-7", week: "Week 12 · Mid-week", type: "Personal", bold: "3/5", title: "The Question I Ask Every New Client (That Nobody's Ever Asked Them Before)", hook: "Option 1: I ask every new client the same question. The reaction tells me everything I need to know. Option 2: Nobody's ever asked them this before. That's usually obvious from how long the pause is.", direction: "A post that's both personal (it reveals how Andy approaches client relationships) and expertise-adjacent (it shows the diagnostic instinct of someone who knows what to look for). The question itself — something like 'what are you getting from your accountant, and is it helping you run the business?' — is less important than the reaction. What does it look like when someone can't answer? This post closes the 3-month arc — by now the audience knows Andy, trusts his expertise, and this post invites them to imagine what that first conversation with him would actually be like.", questions: "What's the question — be specific? What are the different reactions you get and what do they tell you? What's the most surprising or memorable response you've ever received? What does it mean for the relationship when someone answers confidently vs. hesitates?", cta: '"How would you answer it?"' },
-  { id: "jul-8", week: "Week 12 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Costly Mistakes Don't Announce Themselves. They Show Up Afterwards.", hook: "Option 1: Costly mistakes don't announce themselves. They show up in the numbers three months later. Option 2: A decision that made sense at the time. A margin that disappeared. Nobody saw it coming because nobody was looking.", direction: "This post is about the cost of operating without financial visibility — told through real, anonymous examples. Not scary. Matter-of-fact. These things happen. Losing money on contracts without knowing why, outsourcing decisions made without financial analysis, complex product ranges that eat margin silently — use 2–3 concrete, anonymised scenarios from your own experience. A good analogy: it's a bit like flying a plane with the instrument panel turned off. The cockpit is perfectly functional. You just don't know what you don't know — until the warning lights come on. Finish on the constructive note: this isn't about being perfect. It's about having enough information to course-correct before things become serious. The difference between a mistake and a crisis is usually how quickly you found out.", questions: "What are the most common guesswork-driven mistakes you see — pricing, hiring, outsourcing? Can you share 2–3 anonymised examples where better information would have changed the decision? What's the earliest warning sign that a business is operating without enough financial visibility? Have you seen cases of losing money on contracts without knowing why, or outsourcing without financial analysis — do any of those map to real examples you can use anonymously?", cta: '"What\'s the most expensive decision you\'ve made based on gut feel — and how did it turn out?"' },
+  { id: "jul-1", week: "Week 9 · Mid-week", type: "Personal", bold: "4/5", title: "I Woke Up One Morning and Everything Was Spinning", hook: "Option 1: I woke up one morning and the room was spinning. I hadn't been drinking. That was my body telling me something needed to change. Option 2: Pressure doesn't announce itself. It compounds. Then one day it does.", direction: `Your second line (if you opened with Option 1):
+"Everything's spinning like you've had 10 pints. That's what a vestibular migraine feels like."
+
+Your second line (if you opened with Option 2):
+"Mine had been building for a while. I just hadn't been paying attention."
+
+(Then add 2 or 3 sentences here on the warning signs you missed before that morning. The pressure that had been building. Be specific without getting into anything you'd rather keep private — this is 4/5 bold for a reason.)
+
+Your next line:
+"Recovery wasn't dramatic. It was a lot of small things, one after the other."
+
+(Then add 2 or 3 sentences here on what actually changed. What habits made the biggest difference. Which ones surprised you. Plain detail beats sweeping statements.)
+
+Your closing line before the CTA:
+"I notice things in other people now that I didn't notice before."
+
+(Then add 1 or 2 sentences here drawing the quiet parallel to business owners — carrying financial stress alone without realising the toll it takes. Don't labour it. Let it land.)
+
+Only write this when it feels right, not because the schedule says so.`, cta: '"Has your body ever told you something your brain was refusing to hear?"' },
+  { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "Option 1: The business was profitable. They were three months from running out of cash. Option 2: A supplier hadn't invoiced them in four months. The owner thought it was a good run of luck. It wasn't.", direction: `Your second line (if you opened with Option 1):
+"From the outside it looked like a healthy, growing business. From the inside it was about to hit a wall."
+
+Your second line (if you opened with Option 2):
+"What felt like a lucky spell was actually a deferred liability sitting quietly on the side. At some point the invoices were going to land."
+
+(Then add 2 or 3 sentences here on what the business looked like from the outside when you first got involved. Growing, healthy on the surface. Keep them anonymous throughout.)
+
+Your next line:
+"Once we put a forecast in place, it became clear they would run out of cash in three months."
+
+(Then add 3 or 4 sentences here on what exactly they did to fix it. The contracts, the payment timing, the conversation with the supplier if relevant. The owner said it was worse than they'd thought, but they could sleep at night because they knew, and there was still time to act.)
+
+Your closing line before the CTA:
+"A forecast doesn't prevent problems. It gives you time to act on them."
+
+(Then add 1 or 2 sentences here on owners who manage cash flow by gut feel, or just hoping it works itself out. How that usually plays out. Knowing is better than not knowing, even when what you find out is uncomfortable.)`, cta: '"Do you have a forward-looking cash flow forecast — or just last month\'s accounts?"' },
+  { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner" — What Clients Actually Say', hook: "Option 1: The thing clients say most, once things are working: I wish I'd done this sooner. Option 2: Not 'that was useful' or 'glad we did that.' Specifically: sooner. Every time.", direction: `Your second line (if you opened with Option 1):
+"It's not just useful feedback. It's the same sentence almost word for word."
+
+Your second line (if you opened with Option 2):
+"There's something about that word that says everything. Sooner. Before the stress, before the surprise, before the decision they had to make blind."
+
+(Then add 2 or 3 sentences here on what clients typically mean when they say it. How far back are they imagining. What's the thing they wish they'd had earlier — visibility, a forecast, a second pair of eyes.)
+
+Your next line:
+"I worked with a founder preparing to raise investment. He could explain the business model clearly but couldn't articulate the financial story."
+
+(Then add 2 or 3 sentences here on what changed once he could. The decision in front of him became clearer. The conversations with investors went differently. Keep him anonymous.)
+
+Your closing line before the CTA:
+"The most common thing that stops people acting earlier isn't money. It's the belief that they should be able to figure it out on their own."
+
+(Then add 1 sentence here on the cost of waiting. Honest, not preachy.)`, cta: '"What\'s one thing in your business you\'ve been putting off — and what\'s actually stopping you?"' },
+  { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Option 1: He could explain the business brilliantly. The financial story was another matter. Option 2: In an investor conversation, your numbers need to hold up under questioning — not just your pitch.", direction: `Your second line (if you opened with Option 1):
+"That's a more common situation than founders realise. The pitch lands. The follow-up questions don't."
+
+Your second line (if you opened with Option 2):
+"A polished pitch is the easy part. The financial story is what the investor goes back to once the meeting's over."
+
+(Then add 2 or 3 sentences here on the most common financial questions investors ask that founders aren't prepared for. The bit that tends to derail an otherwise strong pitch.)
+
+Your next line:
+"I worked with a founder preparing to raise. He could explain the business model brilliantly. The financial story was another matter."
+
+(Then add 3 or 4 sentences here walking through the before and after. What he was struggling to articulate, what changed once we'd worked on it together, what those follow-up conversations looked like after.)
+
+Your closing line before the CTA:
+"The financial story isn't a separate document. It's the same story your business tells, told in numbers."
+
+(Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If an investor asked you to walk them through the financial story of your business right now — how confident would you feel?"' },
+  { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "Option 1: I've been learning Japanese every day for over 400 days. I'm not fluent. Not even close. But I'm significantly better than I was. Option 2: 400 days of daily practice teaches you something that has nothing to do with Japanese.", direction: `Your second line (if you opened with Option 1):
+"Some days it's 15 minutes. Some days it's 5. Some days it's 5 minutes I really didn't want to do."
+
+Your second line (if you opened with Option 2):
+"French A* at GCSE, Mandarin across two spells in Beijing, and now Japanese on Duolingo every morning. The pattern says more about me than the languages do."
+
+(Then add 2 or 3 sentences here on why Japanese specifically. What drew you to it. Self-deprecating about your progress is fine — you're not pretending to be fluent.)
+
+Your next line:
+"The moment I noticed real progress wasn't a moment. It was a slow realisation."
+
+(Then add 2 or 3 sentences here on what that looked like. A conversation you held longer than you expected. A sentence that came out without thinking. The kind of progress you don't really notice from one week to the next.)
+
+Your closing line before the CTA:
+"Small habits compound. The trick is being patient enough to let them."
+
+(Then add 1 or 2 sentences here on what habit in your life or business has compounded in a way you didn't expect. Don't labour the parallel — let it land naturally.)`, cta: '"What\'s a habit you\'ve kept going that\'s quietly made a difference — in life or in business?"' },
+  { id: "jul-6", week: "Week 11 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I Can Just Use AI for My Financial Strategy.\" Can You, Though?", hook: "Option 1: I keep hearing this: why would I need financial help when I can just use AI? It's a fair question. Here's my honest answer. Option 2: AI can produce a financial model. It can't tell you if the assumptions are right.", direction: `Your second line (if you opened with Option 1):
+"It's a completely fair question. I'd be asking it too."
+
+Your second line (if you opened with Option 2):
+"That's the bit that catches people. The model looks right. The assumptions underneath it are the part that matters."
+
+(Then add 2 or 3 sentences here on what AI can genuinely do well for SME owners. Drafting, summarising, working through scenarios. Acknowledge it properly — you're not being dismissive.)
+
+Your next line:
+"The problem isn't AI. It's using any tool without the ability to evaluate what it's producing."
+
+(Then add 3 or 4 sentences here on where it falls short. If you don't understand finance well enough to know when the output is wrong or incomplete, you won't know to question it. Have you seen an example of plausible-looking AI output that was wrong in an important way? Drop it in here, anonymised.)
+
+Your closing line before the CTA:
+"The value isn't in the model. It's in knowing whether to trust it."
+
+(Then add 1 sentence here on what you'd say to someone who genuinely believes the objection. Honest, not preachy.)`, cta: '"Have you tried using AI for financial decisions? What was useful and what didn\'t quite work?"' },
+  { id: "jul-7", week: "Week 12 · Mid-week", type: "Personal", bold: "3/5", title: "The Question I Ask Every New Client (That Nobody's Ever Asked Them Before)", hook: "Option 1: I ask every new client the same question. The reaction tells me everything I need to know. Option 2: Nobody's ever asked them this before. That's usually obvious from how long the pause is.", direction: `Your second line (if you opened with Option 1):
+"It's not a clever question. It's just one nobody else has thought to ask them."
+
+Your second line (if you opened with Option 2):
+"The pause is usually the most useful part of the conversation."
+
+Your next line — the question itself:
+(Drop in your real question here. Something like "what are you getting from your accountant, and is it helping you run the business?" — but use the actual one you ask. Word for word.)
+
+(Then add 2 or 3 sentences here on the different reactions you get. Confidence, hesitation, the long pause where someone realises they don't have an answer. What each one tells you.)
+
+Your next line:
+"The most memorable answer I've ever had came from a business owner who paused for what felt like a full minute."
+
+(Then add 2 or 3 sentences here on a surprising or memorable response. Could be the one above, or another one. Keep them anonymous. The detail makes the story.)
+
+Your closing line before the CTA:
+"The answer matters less than what happens in the room while someone's trying to find it."
+
+(Then add 1 sentence here, if anything else comes to mind. Otherwise leave it.)`, cta: '"How would you answer it?"' },
+  { id: "jul-8", week: "Week 12 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Costly Mistakes Don't Announce Themselves. They Show Up Afterwards.", hook: "Option 1: Costly mistakes don't announce themselves. They show up in the numbers three months later. Option 2: A decision that made sense at the time. A margin that disappeared. Nobody saw it coming because nobody was looking.", direction: `Your second line (if you opened with Option 1):
+"By the time the numbers say something's wrong, the decision that caused it was made a quarter ago."
+
+Your second line (if you opened with Option 2):
+"Nobody made a bad call. Nobody was reckless. There just wasn't anyone looking at the right thing at the right time."
+
+(Then add 2 or 3 sentences here on the most common guesswork-driven mistakes you see. Pricing without proper cost analysis. Hiring without modelling it out. Outsourcing decisions made on a hunch.)
+
+Your next line:
+"I've seen this play out in a few different ways."
+
+(Then add 3 or 4 sentences here walking through 2 or 3 anonymised examples. Could be a contract that quietly lost money for months. A complex product range that was eating margin without anyone noticing. Pick the ones that feel most relatable to your readers.)
+
+Your closing line before the CTA:
+"This isn't about being perfect. It's about having enough information to course-correct before things become serious."
+
+(Then add 1 or 2 sentences here on the difference between a mistake and a crisis. Usually how quickly you found out. Calm and factual, no scare tactics.)`, cta: '"What\'s the most expensive decision you\'ve made based on gut feel — and how did it turn out?"' },
 ];
 
 const asbAugustIdeas: AsbIdea[] = [
-  { id: "aug-1", week: "Week 13 · Mid-week", type: "Personal", bold: "3/5", title: "\"I'm Just Bad With Money.\" No. You're Not.", hook: "Option 1: I'm just bad with money. I hear this within the first ten minutes of most first conversations. It's almost never true. Option 2: The problem isn't that you don't understand numbers. It's that nobody's ever helped you understand what yours mean.", direction: "Address the self-limiting belief that stops right-fit clients from even considering getting help. The real issue isn't that they're bad with money — it's that nobody has ever helped them understand what their numbers mean and what to do next. Managing finances alone comes up repeatedly as just 'how it is.' Not because owners are confident. Because they've never thought there was another way. There's a specific version worth naming: knowing the 'what' (the figures) but not the 'so what' (what they mean for the business). That gap isn't a character flaw. It's a missing layer. Think of it like knowing how to read a map but having no idea where you're trying to get to — the skill is there, the context isn't. Keep this warm, not patronising. You're not telling people they're wrong. You're releasing them from a story they've been telling themselves for years. End on: the owners who say this are often the most coachable, because they're honest about what they don't know.", questions: "What do people usually mean when they say they're bad with money — is it numeracy, interpretation, or just anxiety? What's the most common thing that changes once someone understands their own numbers? Have you worked with someone who genuinely believed this about themselves — what was the moment something shifted? In your experience, do the 'I'm bad with money' belief and managing finances alone tend to go together?", cta: '"Do you consider yourself a numbers person — or have you always left that to someone else?"' },
-  { id: "aug-2", week: "Week 13 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: You Want to Sell the Business for £3 Million. What Does It Need to Look Like to Get There?", hook: "Option 1: Most business owners have an exit number in mind. Very few have mapped out what the business needs to look like to get there. Option 2: Ask an owner what their exit goal is and they'll tell you the number straight away. Ask what the business needs to look like financially to get there. Long pause.", direction: "This is a commercially powerful post because it speaks to aspirational owners, not just those in pain. The gap between ambition and roadmap is common — growth without financial foundations, an exit goal without a financial plan. Walk through what it actually takes to build a business that's saleable at a target value: margin trajectory, revenue quality (recurring vs. one-off), clean financials, reduced owner-dependency. The exit plan without financial architecture analogy: it's a bit like deciding you want to run a marathon in two years and then doing absolutely nothing differently today. The goal is real. The path doesn't exist yet. End on the core point: the business you want to exit isn't built at the end — it's built now. Every month without a plan is a month of compounding the gap.", questions: "What's the most common gap between what owners think the business is worth and what it would actually sell for — is it valuation multiples, owner-dependency, messy financials? What are the 2–3 financial levers that most affect exit value for an SME? If an owner said 'I want to sell in five years for £3 million,' what would you look at first? Have you had a conversation where an exit goal came up but there was no financial plan underneath it — can you use that (anonymised) to ground the hook?", cta: '"Do you have a number in mind — and do you know what the business needs to look like to get there?"' },
-  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation: I think this is exactly what I need, just not quite yet. Option 2: Readiness is a feeling, not a fact. And the thing you're waiting to sort out is usually exactly the thing that needs financial input.", direction: "Address the 'not ready yet' objection as a post — not as a sales tactic, but as a genuine observation about what waiting costs. Owners can get stuck in a loop of 'once X is sorted, I'll deal with Y' — working IN the business rather than ON it, not because they don't want to change, but because the thing they're waiting for is usually exactly the thing that needs financial input to resolve. The framing: readiness is a feeling, not a fact. A good analogy: it's a bit like saying you'll start thinking about your health once work calms down. Work never calms down. And the time you spent waiting? That's gone. Keep this non-pushy. You're reflecting back something real, not pressing for a sale. There is a version of 'not yet' that's legitimate — acknowledge it. That's what makes the post trustworthy.", questions: "What's the most common 'not yet' reason you hear — and what's usually underneath it? What has waiting actually cost people you've worked with — can you give a concrete, anonymised example? Is there a version of 'not yet' that IS legitimate — and how do you tell the difference? Do owners who are 'working in not on the business' tend to have the 'not yet' mindset too — are they often the same person?", cta: '"What are you waiting for — and is the waiting actually helping?"' },
-  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: \"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: I just need to run it past my business partner. Fine. But if they also don't know the numbers, you're about to have the conversation you've both been avoiding. Option 2: Two owners, neither with clear financial visibility, making a shared decision. That's a numbers problem, not a partnership problem.", direction: "The 'business partner' objection reframed as a positive. Two owners, neither of whom has proper financial visibility, now have to make a shared decision about getting it. That conversation is actually a version of the problem you'd be solving. Don't make this adversarial or clever — make it honest and slightly warm. The subtext: having a business partner doesn't make financial decisions easier. In some ways it makes them harder, because you need two people to see the same picture. That's exactly when an FD view becomes more valuable, not less.", questions: "Have you worked with businesses that have co-founders or business partners — what does financial decision-making look like in those relationships? What's usually the real concern behind 'I need to speak to my partner'? What would you say if someone asked you to explain the value proposition to their business partner in one sentence?", cta: '"If you have a business partner — do you both have a clear picture of the numbers? Or does one of you carry that more than the other?"' },
+  { id: "aug-1", week: "Week 13 · Mid-week", type: "Personal", bold: "3/5", title: "\"I'm Just Bad With Money.\" No. You're Not.", hook: "Option 1: I'm just bad with money. I hear this within the first ten minutes of most first conversations. It's almost never true. Option 2: The problem isn't that you don't understand numbers. It's that nobody's ever helped you understand what yours mean.", direction: `Your second line (if you opened with Option 1):
+"It's a story people have been telling themselves for years. And it's usually wrong."
+
+Your second line (if you opened with Option 2):
+"There's a difference between knowing the 'what' — the figures — and knowing the 'so what.' That gap isn't a character flaw. It's a missing layer."
+
+(Then add 2 or 3 sentences here on what people usually mean when they say it. Is it numeracy, interpretation, anxiety, or something else? Be honest — you've heard it enough times to know the pattern.)
+
+Your next line:
+"I worked with an owner who genuinely believed it about themselves."
+
+(Then add 2 or 3 sentences here on the moment something shifted. What changed once they could actually see what their numbers meant. Keep them anonymous.)
+
+Your closing line before the CTA:
+"The owners who say they're bad with money are often the most coachable. They're honest about what they don't know."
+
+(Then add 1 or 2 sentences here on the link between this belief and managing finances alone. Most don't think there's another way. Warm, not patronising — you're releasing people from a story, not telling them they're wrong.)`, cta: '"Do you consider yourself a numbers person — or have you always left that to someone else?"' },
+  { id: "aug-2", week: "Week 13 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: You Want to Sell the Business for £3 Million. What Does It Need to Look Like to Get There?", hook: "Option 1: Most business owners have an exit number in mind. Very few have mapped out what the business needs to look like to get there. Option 2: Ask an owner what their exit goal is and they'll tell you the number straight away. Ask what the business needs to look like financially to get there. Long pause.", direction: `Your second line (if you opened with Option 1):
+"The number isn't the problem. The path to it is the bit that's usually missing."
+
+Your second line (if you opened with Option 2):
+"That long pause is the gap between ambition and roadmap. It's a very common gap."
+
+(Then add 2 or 3 sentences here on the most common difference between what owners think their business is worth and what it would actually sell for. Valuation multiples. Owner-dependency. Messy financials. Pick whichever one comes up most often in your conversations.)
+
+Your next line:
+"There are usually two or three financial levers that most affect exit value for an SME."
+
+(Then add 3 or 4 sentences here walking through what they are. Margin trajectory. Revenue quality — recurring versus one-off. Clean financials. Reduced owner-dependency. Be specific without going into a textbook list.)
+
+Your closing line before the CTA:
+"The business you want to exit isn't built at the end. It's built now."
+
+(Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"Do you have a number in mind — and do you know what the business needs to look like to get there?"' },
+  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation: I think this is exactly what I need, just not quite yet. Option 2: Readiness is a feeling, not a fact. And the thing you're waiting to sort out is usually exactly the thing that needs financial input.", direction: `Your second line (if you opened with Option 1):
+"It's almost always genuine. And it's almost always more expensive than people realise."
+
+Your second line (if you opened with Option 2):
+"Once X is sorted, I'll deal with Y. That's the loop. The trouble is that X is usually the thing that needs financial input to sort."
+
+(Then add 2 or 3 sentences here on the most common "not yet" reason you hear, and what's usually underneath it. Often it's owners who are working in the business rather than on it.)
+
+Your next line:
+"I worked with an owner who had been telling themselves they'd sort the finances 'once things calmed down'."
+
+(Then add 2 or 3 sentences here on what the waiting actually cost them. Concrete, anonymised. Whatever the practical price was — missed decisions, slower growth, the stress of not knowing.)
+
+Your closing line before the CTA:
+"There is a version of 'not yet' that's legitimate. I'm not saying there isn't."
+
+(Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"What are you waiting for — and is the waiting actually helping?"' },
+  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: \"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: I just need to run it past my business partner. Fine. But if they also don't know the numbers, you're about to have the conversation you've both been avoiding. Option 2: Two owners, neither with clear financial visibility, making a shared decision. That's a numbers problem, not a partnership problem.", direction: `Your second line (if you opened with Option 1):
+"That's not a bad thing. It just means the conversation you're about to have is actually a version of the problem you'd be solving."
+
+Your second line (if you opened with Option 2):
+"Two heads aren't better than one if they're both working from the same blind spots."
+
+(Then add 2 or 3 sentences here on what financial decision-making looks like in businesses with co-founders or business partners. What's usually the real concern behind "I need to speak to my partner."  Don't be adversarial about it — most of the time it's a fair instinct.)
+
+Your next line:
+"Having a business partner doesn't make financial decisions easier."
+
+(Then add 2 or 3 sentences here on why. You need two people seeing the same picture. That's exactly when a finance director view becomes more valuable, not less. Plain English.)
+
+Your closing line before the CTA:
+"If someone asked me to explain the value of this to their business partner in one sentence, I'd say this."
+
+(Then add 1 sentence here — your actual one-line version of the value proposition for a co-founder conversation. Word for word.)`, cta: '"If you have a business partner — do you both have a clear picture of the numbers? Or does one of you carry that more than the other?"' },
 ];
 
 function AsbContentTab({ slug }: { slug: string }) {
