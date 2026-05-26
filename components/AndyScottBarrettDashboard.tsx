@@ -821,7 +821,7 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
 // ─── ASB CONTENT TAB ──────────────────────────────────────────────────────────
 
 const asbMayIdeas: AsbIdea[] = [
-  { id: "may-1", week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech", hook: "Option 1: There were references to Martin Lewis in my wedding speech. Option 2: I didn't choose finance. It chose me — probably to the mild irritation of everyone around me.", direction: `Your second line (if you opened with Option 1):
+  { id: "may-1", week: "Week 1 · Mid-week", type: "Personal", bold: "2/5", title: "There Were References to Martin Lewis in My Wedding Speech", hook: "Option 1: There were references to Martin Lewis in my wedding speech. Option 2: I didn't choose finance. It chose me, probably to the mild irritation of everyone around me.", direction: `Your second line (if you opened with Option 1):
 "I didn't choose finance because of a career plan."
 
 Your second line (if you opened with Option 2):
@@ -837,8 +837,8 @@ Your next line:
 Your closing line before the CTA:
 "There's a difference between someone who understands finance and someone who actually cares what the numbers mean for your business."
 
-(Then add 1 sentence here on what that means for the people you work with now. Something like: caring about this stuff for 30-odd years is probably why your clients get someone as invested in the numbers as they are.)`, cta: '"Are you someone who naturally gets into the numbers — or do you do everything you can to avoid them?"', drafted: true },
-  { id: "may-2", week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Money's There. But Is It Actually Yours?", hook: "Option 1: That money in your account isn't all yours. Option 2: A lot of owners manage cash flow by just... not looking at it. Hoping it works itself out. Sometimes it does. Sometimes it really doesn't.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here on what that means for the people you work with now. Something like: caring about this stuff for 30-odd years is probably why your clients get someone as invested in the numbers as they are.)`, cta: '"Are you someone who naturally gets into the numbers, or do you do everything you can to avoid them?"', drafted: true },
+  { id: "may-2", week: "Week 1 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: The Money's There. But Is It Actually Yours?", hook: "Option 1: That money in your account isn't all yours. Option 2: A lot of owners manage cash flow by just... not looking at it. Hoping it works itself out. Sometimes it does. Sometimes it really doesn't.", direction: `Your second line (if you opened with Option 1):
 "The bank balance tells you what's there. It doesn't tell you what's already spoken for."
 
 Your second line (if you opened with Option 2):
@@ -854,8 +854,8 @@ Your next line:
 Your closing line before the CTA:
 "A useful starting point is looking at what's due over the next three months. It's a simple question. Many business owners I speak to don't have the answer."
 
-(Then add 1 sentence here on what owners who manage cash by gut feel usually end up dealing with. Calm and factual, with a slight edge of "I've seen how this ends.")`, cta: '"If you\'re reading this and thinking \'I need to sort this out\' — drop me a message. I\'ll buy you a coffee."' },
-  { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "Option 1: My boss called me in to tell me my job was safe. That wasn't the news I was hoping for. Option 2: I'd decided on 40 years old years before I actually got there. Not as a wish — as a plan.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here on what owners who manage cash by gut feel usually end up dealing with. Calm and factual, with a slight edge of "I've seen how this ends.")`, cta: '"If you\'re reading this thinking you need to sort this out, drop me a message. I\'ll buy you a coffee."' },
+  { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "Option 1: My boss called me in to tell me my job was safe. That wasn't the news I was hoping for. Option 2: I'd decided on 40 years old years before I actually got there. Not as a wish, as a plan.", direction: `Your second line (if you opened with Option 1):
 "I'd decided on 40 years old years before I actually got there. Not as a wish. As a plan."
 
 Your second line (if you opened with Option 2):
@@ -871,8 +871,8 @@ Your next line:
 Your closing line before the CTA:
 "There's a difference between knowing something and acting on it."
 
-(Then add 1 sentence here on what you know now that you wish you'd known earlier about making that kind of call.)`, cta: '"Is there something you already know the answer to — but haven\'t done anything about yet?"' },
-  { id: "may-4", week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even", hook: "Option 1: A 10% discount on a low-margin product can mean selling 200% more just to break even. Option 2: Most business owners who discount regularly have never done this maths. Here it is.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here on what you know now that you wish you'd known earlier about making that kind of call.)`, cta: '"Is there something you already know the answer to, but haven\'t done anything about yet?"' },
+  { id: "may-4", week: "Week 2 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even", hook: "Option 1: A 10% discount on a low-margin product can mean selling 200% more just to break even. Option 2: Most business owners who discount regularly have never done this maths. Here it is.", direction: `Your second line (if you opened with Option 1):
 "Most people don't believe it when I first show them the maths."
 
 Your second line (if you opened with Option 2):
@@ -883,19 +883,19 @@ Your second line (if you opened with Option 2):
 Your next line:
 "Take a business selling something for £100 that costs £85 to produce. They make a £15 gross profit on every sale."
 
-(Then add 3 or 4 sentences here walking through the worked example. Discount by 10%, gross profit drops to £5, they now have to sell three of those products to get their £15 back. Pick whatever gross margin % feels right — keep the numbers simple.)
+(Then add 3 or 4 sentences here walking through the worked example. Discount by 10%, gross profit drops to £5, they now have to sell three of those products to get their £15 back. Pick whatever gross margin % feels right, keep the numbers simple.)
 
 Your closing line before the CTA:
 "I'm not saying discounting is never right."
 
-(Then add 2 or 3 sentences here on when it IS the right call. Shifting stock, early payment for cash flow, a deliberate commercial decision where you've understood the full consequences. Those are considered calls. Often it isn't that considered.)`, cta: '"If this has given you pause — drop me a message. I\'ll buy you a coffee."' },
+(Then add 2 or 3 sentences here on when it IS the right call. Shifting stock, early payment for cash flow, a deliberate commercial decision where you've understood the full consequences. Those are considered calls. Often it isn't that considered.)`, cta: '"If the discounting maths surprised you, worth a chat. Drop me a message."' },
   { id: "may-5", week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25", hook: "Option 1: At 25, I was sent to Beijing to sort out a finance operation held together with goodwill and optimism. Option 2: Most SME finance operations look a lot like that Beijing office did when I arrived.", direction: `Your second line (if you opened with Option 1):
 "I didn't speak the language. The team had been working in silos for years. The numbers were everywhere and nowhere."
 
 Your second line (if you opened with Option 2):
 "Messy, ad-hoc, held together by goodwill and the people who'd been there longest."
 
-(Then add 2 or 3 sentences here describing what it actually looked like when you arrived. The state of the operation. Be specific — what was missing, what was duplicated, what nobody had ever sat down and structured.)
+(Then add 2 or 3 sentences here describing what it actually looked like when you arrived. The state of the operation. Be specific, what was missing, what was duplicated, what nobody had ever sat down and structured.)
 
 Your next line:
 "The first thing I did was sit with the local team and listen."
@@ -903,10 +903,10 @@ Your next line:
 (Then add 2 or 3 sentences here on how you earned their trust and what the first thing you changed was. Plain English. No corporate language.)
 
 Your closing line before the CTA:
-"I came back with something I didn't go out there with — the confidence that I can just turn my hand to stuff."
+"I came back with something I didn't go out there with, the confidence that I can just turn my hand to stuff."
 
 (Then add 1 or 2 sentences here drawing the parallel to now. Most SME finance operations look a bit like that Beijing office did. Nobody's ever sat down and looked at them properly.)`, cta: '"Most of the businesses I work with have never had anyone look properly at their finances. When did you last take a proper look at yours?"' },
-  { id: "may-6", week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: One of Your Products Is Carrying the Rest. Do You Know Which One?", hook: "Option 1: I asked an owner which of their products made the most money. They said the one that sold the most. Those are two very different things. Option 2: One of your products is carrying the rest. Do you know which one?", direction: `Your second line (if you opened with Option 1):
+  { id: "may-6", week: "Week 3 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: One of Your Products Is Carrying the Rest. Do You Know Which One?", hook: "Option 1: I asked an owner which of their products made the most money. They said the one that sold the most. Those are two very different things. Option 2: One of your products is carrying the rest. Do you know which one?", direction: `Your second line (if you opened with Option 1):
 "Volume is not the same as profit. The one that sells the most might be the one that's quietly costing you money."
 
 Your second line (if you opened with Option 2):
@@ -917,12 +917,12 @@ Your second line (if you opened with Option 2):
 Your next line:
 "I worked with an owner who was convinced their best-seller was the engine of the business."
 
-(Then add 3 or 4 sentences here walking through an anonymised example. What they thought versus what the numbers showed. If you've got the Lego comparison handy, that fits well here — Lego had financial difficulties because they'd complicated their range and didn't know which pieces were carrying the rest.)
+(Then add 3 or 4 sentences here walking through an anonymised example. What they thought versus what the numbers showed. If you've got the Lego comparison handy, that fits well here, Lego had financial difficulties because they'd complicated their range and didn't know which pieces were carrying the rest.)
 
 Your closing line before the CTA:
 "Finding the loser doesn't mean killing it. Sometimes there's a reason to keep it."
 
-(Then add 1 or 2 sentences here on the legitimate reasons to keep a loss-making product in the range. A loss-leader that brings other business in, a customer relationship, a strategic call. The point isn't to cut it. The point is to know.)`, cta: '"If you\'ve never had this conversation about your own numbers — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on the legitimate reasons to keep a loss-making product in the range. A loss-leader that brings other business in, a customer relationship, a strategic call. The point isn't to cut it. The point is to know.)`, cta: '"If you\'ve never looked properly at which part of your business is carrying the rest, that\'s the conversation to have first. Drop me a message."' },
   { id: "may-7", week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep", hook: "Option 1: She told me she could finally sleep. That was the metric that mattered. Option 2: She knew her business was doing well. She just couldn't prove it fast enough, and it was grinding her down.", direction: `Your second line (if you opened with Option 1):
 "The spreadsheet wasn't the win. The weight lifting off her shoulders was."
 
@@ -939,8 +939,8 @@ Your next line:
 Your closing line before the CTA:
 "A surprising number of business owners manage all of this completely on their own. Not because they're confident. Because they've never thought there was another option."
 
-(Then add 1 sentence here on what shifted in how she saw that. Or just leave it — sometimes the silence after that line is the point.)`, cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."' },
-  { id: "may-8", week: "Week 4 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: What Break-Even Actually Means — and Why Most People Get It Wrong", hook: "Option 1: Most business owners have a rough break-even number. Most rough numbers are wrong. Option 2: If you don't know your break-even point, every pricing decision involves some guesswork.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here on what shifted in how she saw that. Or just leave it, sometimes the silence after that line is the point.)`, cta: '"Financial pressure is a weight most business owners carry alone. You don\'t have to."' },
+  { id: "may-8", week: "Week 4 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: What Break-Even Actually Means, and Why Most People Get It Wrong", hook: "Option 1: Most business owners have a rough break-even number. Most rough numbers are wrong. Option 2: If you don't know your break-even point, every pricing decision involves some guesswork.", direction: `Your second line (if you opened with Option 1):
 "Break-even isn't just a number. It's the foundation for every pricing decision, every growth plan, and every decision about whether you can afford to hire."
 
 Your second line (if you opened with Option 2):
@@ -956,7 +956,7 @@ Your next line:
 Your closing line before the CTA:
 "Once someone actually has this number, the decisions start to feel different."
 
-(Then add 1 or 2 sentences here on what changes. Pricing conversations, hiring calls, when to take on a new contract. Plain English.)`, cta: '"If you\'re not sure your break-even number is right — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on what changes. Pricing conversations, hiring calls, when to take on a new contract. Plain English.)`, cta: '"If your break-even number is a rough guess, happy to look at it with you. Drop me a message."' },
 ];
 
 const asbJuneIdeas: AsbIdea[] = [
@@ -966,7 +966,7 @@ const asbJuneIdeas: AsbIdea[] = [
 Your second line (if you opened with Option 2):
 "The room had been built around the idea that this would work. The numbers were saying something different."
 
-(Then add 2 or 3 sentences here setting the scene. Keep all identifying details out — no nationality, no product, no company. What was the atmosphere in the room before it went wrong.)
+(Then add 2 or 3 sentences here setting the scene. Keep all identifying details out, no nationality, no product, no company. What was the atmosphere in the room before it went wrong.)
 
 Your next line:
 "I was really just the messenger at that point."
@@ -976,24 +976,24 @@ Your next line:
 Your closing line before the CTA:
 "That moment shaped how I work with clients now. I'm not there to validate decisions people have already made."
 
-(Then add 1 or 2 sentences here tying it to SME owners. How often does someone avoid looking at the numbers because they're worried about what they might find? The most useful thing an adviser can do is tell you the truth.)`, cta: '"Has anyone ever told you something about your business you didn\'t want to hear — but that turned out to be exactly what you needed?"' },
-  { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Three Questions Every Business Owner Should Be Able to Answer", hook: "Option 1: Three questions. You don't have to answer out loud. Option 2: I close every networking talk with these three questions. Most people in the room go quiet.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here tying it to SME owners. How often does someone avoid looking at the numbers because they're worried about what they might find? The most useful thing an adviser can do is tell you the truth.)`, cta: '"Has anyone ever told you something about your business you didn\'t want to hear, but that turned out to be exactly what you needed?"' },
+  { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: Three Questions Every Business Owner Should Be Able to Answer", hook: "Option 1: Three questions. You don't have to answer out loud. Option 2: I close every networking talk with these three questions. Most people in the room go quiet.", direction: `Your second line (if you opened with Option 1):
 "Just answer them honestly in your head. That's enough."
 
 Your second line (if you opened with Option 2):
 "They're not difficult questions. That's part of why the silence is so telling."
 
-Your next part — the three questions, one per line:
+Your next part, the three questions, one per line:
 "1. When you're making a big decision, do you go with gut feel or look at what the numbers are telling you?"
 "2. Do you know which of your products or services is the most profitable?"
-"3. Do you know what your cash position will be in three months — and how much of that will actually be yours?"
+"3. Do you know what your cash position will be in three months, and how much of that will actually be yours?"
 
 (Then add 2 or 3 sentences here on what proportion of owners can genuinely answer all three, and which one usually stumps people most. From your real experience at the talks.)
 
 Your closing line before the CTA:
 "Most business owners who can't answer these aren't failing. They just haven't had anyone help them look."
 
-(Then add 1 sentence here on what changes once someone can answer all three. Less stress, fewer surprises, more confident decisions.)`, cta: '"If one of those three made you pause — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 sentence here on what changes once someone can answer all three. Less stress, fewer surprises, more confident decisions.)`, cta: '"If one of those three stopped you, drop me a message. I\'ll buy you a coffee."' },
   { id: "jun-3", week: "Week 6 · Mid-week", type: "Personal", bold: "2/5", title: "I'm Running My First Half Marathon. I'm Not Fast. That's Not the Point.", hook: "Option 1: I'm training for my first half marathon. My pace is best described as determined. Option 2: Last year I ran a 10k faster than I did at 23. This year I'm doing a half marathon. Slow progress is still progress.", direction: `Your second line (if you opened with Option 1):
 "I'm not built for distance running. That's been very clear for a while."
 
@@ -1005,13 +1005,13 @@ Your second line (if you opened with Option 2):
 Your next line:
 "Finishing is the goal. Not racing to win."
 
-(Then add 2 or 3 sentences here on what that feels like. The kind of progress you don't really notice from one week to the next, but you do from one year to the next. Don't labour the parallel to business — let it land on its own.)
+(Then add 2 or 3 sentences here on what that feels like. The kind of progress you don't really notice from one week to the next, but you do from one year to the next. Don't labour the parallel to business, let it land on its own.)
 
 Your closing line before the CTA:
 "Slow progress is still progress."
 
 (Then add 1 sentence here, if you want one. Otherwise leave it there and let it breathe.)`, cta: '"Are you working towards something right now that has nothing to do with business? What is it?"' },
-  { id: "jun-4", week: "Week 6 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: How to Price Something You Actually Make Money From", hook: "Option 1: Most businesses price based on gut feel, competitors, or what the market will bear. None of those work without knowing your costs first. Option 2: If you can't tell me what your most popular product costs to deliver, you can't tell me if you're making money on it.", direction: `Your second line (if you opened with Option 1):
+  { id: "jun-4", week: "Week 6 · Friday", type: "Expertise", bold: "1/5", title: "The Real Cost: How to Price Something You Actually Make Money From", hook: "Option 1: Most businesses price based on gut feel, competitors, or what the market will bear. None of those work without knowing your costs first. Option 2: If you can't tell me what your most popular product costs to deliver, you can't tell me if you're making money on it.", direction: `Your second line (if you opened with Option 1):
 "All three of those are legitimate inputs. None of them work without the cost foundation underneath."
 
 Your second line (if you opened with Option 2):
@@ -1027,7 +1027,7 @@ Your next line:
 Your closing line before the CTA:
 "Defendable pricing means you can say no without flinching."
 
-(Then add 1 or 2 sentences here on what that actually looks like in a real conversation with a customer. The owner who can hold their price because they know exactly what they're being asked to give up.)`, cta: '"If there\'s guesswork in your pricing — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on what that actually looks like in a real conversation with a customer. The owner who can hold their price because they know exactly what they're being asked to give up.)`, cta: '"If pricing feels more like guesswork than a decision, that\'s worth a conversation. Drop me a message."' },
   { id: "jun-5", week: "Week 7 · Mid-week", type: "Personal", bold: "3/5", title: "Leaving the Corporate World Was Harder Than I Expected. And Easier.", hook: "Option 1: Everyone said leaving a stable corporate career was a big risk. They weren't wrong. They also weren't fully right. Option 2: I didn't leave because I was brave. I left because the alternative felt worse.", direction: `Your second line (if you opened with Option 1):
 "The honest version isn't the highlight reel. It's more interesting than that."
 
@@ -1044,24 +1044,24 @@ Your next line:
 Your closing line before the CTA:
 "If I could go back to the morning I handed in my notice, I'd tell myself one thing."
 
-(Then add 1 or 2 sentences here on what that one thing would be. Honest, not motivational. Whatever actually comes to mind.)`, cta: '"If you\'ve made a big leap — professionally or personally — what\'s the one thing nobody warned you about?"' },
-  { id: "jun-6", week: "Week 7 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Your Accountant Is Doing Their Job. That's the Problem.", hook: "Option 1: Your accountant is doing exactly what they're supposed to. That's the problem. Option 2: The accounts arrived. You glanced at them. You carried on. That's not on you — it's a gap nobody told you existed.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on what that one thing would be. Honest, not motivational. Whatever actually comes to mind.)`, cta: '"If you\'ve made a big leap, professionally or personally, what\'s the one thing nobody warned you about?"' },
+  { id: "jun-6", week: "Week 7 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: Your Accountant Is Doing Their Job. That's the Problem.", hook: "Option 1: Your accountant is doing exactly what they're supposed to. That's the problem. Option 2: The accounts arrived. You glanced at them. You carried on. That's not on you, it's a gap nobody told you existed.", direction: `Your second line (if you opened with Option 1):
 "They're keeping you compliant. They're reporting what's already happened. That's their job and they do it well."
 
 Your second line (if you opened with Option 2):
 "It's not that you don't care. It's that nobody handed you the bit that would have told you what to actually do with them."
 
-(Then add 2 or 3 sentences here on what owners typically say about their accountant early in a conversation with you. No shade on accountants — the gap isn't their fault. Compliance and forward-looking strategy are genuinely different roles.)
+(Then add 2 or 3 sentences here on what owners typically say about their accountant early in a conversation with you. No shade on accountants, the gap isn't their fault. Compliance and forward-looking strategy are genuinely different roles.)
 
 Your next line:
 "There's a ladder most businesses work their way up. Bookkeeper, accountant, finance director."
 
-(Then add 3 or 4 sentences here walking through the ladder. What each role does and where the gap shows up. The accountant who goes quiet for 11 months between filings is worth including — not a criticism, just not the same job as sitting alongside you while you make decisions.)
+(Then add 3 or 4 sentences here walking through the ladder. What each role does and where the gap shows up. The accountant who goes quiet for 11 months between filings is worth including, not a criticism, just not the same job as sitting alongside you while you make decisions.)
 
 Your closing line before the CTA:
 "The FD role isn't tax returns or audit. It's the person looking forward with you, not just reporting on what's already happened."
 
-(Then add 1 or 2 sentences here on what that actually looks like in practice. Sitting alongside an owner. Asking the questions their accountant has never asked them.)`, cta: '"If that gap sounds familiar — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on what that actually looks like in practice. Sitting alongside an owner. Asking the questions their accountant has never asked them.)`, cta: '"If that gap sounds familiar, drop me a message. I\'ll buy you a coffee."' },
   { id: "jun-7", week: "Week 8 · Mid-week", type: "Personal", bold: "1/5", title: "We've Been Fostering Labradors. This Is What I've Learned.", hook: "Option 1: My wife and I have been fostering Labradors. Every single one has been different. All of them have taught us something. Option 2: We've been looking after dogs waiting for their forever home. I didn't expect it to teach me much. It has.", direction: `Your second line (if you opened with Option 1):
 "They each arrive with their own personality, their own habits, their own way of working out whether they trust you."
 
@@ -1078,8 +1078,8 @@ Your next line:
 Your closing line before the CTA:
 "Fostering has changed how I think about patience and trust in a way I didn't expect."
 
-(Then add 1 sentence here, if anything comes to mind. Don't force the business parallel — let the story do the work.)`, cta: '"Does anyone else foster — or have you thought about it? Would love to hear other people\'s experiences."' },
-  { id: "jun-8", week: "Week 8 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Growth Should Feel Exciting. If It Feels Risky, Here's Why.", hook: "Option 1: Growth should feel exciting. If it feels risky, that's usually a numbers problem, not a courage problem. Option 2: Some businesses grow fast without realising it. Revenue up, headcount up, stress up. No plan underneath any of it.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here, if anything comes to mind. Don't force the business parallel, let the story do the work.)`, cta: '"Does anyone else foster, or have you thought about it? Would love to hear other people\'s experiences."' },
+  { id: "jun-8", week: "Week 8 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: Growth Should Feel Exciting. If It Feels Risky, Here's Why.", hook: "Option 1: Growth should feel exciting. If it feels risky, that's usually a numbers problem, not a courage problem. Option 2: Some businesses grow fast without realising it. Revenue up, headcount up, stress up. No plan underneath any of it.", direction: `Your second line (if you opened with Option 1):
 "Without clarity, every opportunity is a gamble. With it, you can take a calculated risk."
 
 Your second line (if you opened with Option 2):
@@ -1090,12 +1090,12 @@ Your second line (if you opened with Option 2):
 Your next line:
 "There's also the flip side."
 
-(Then add 2 or 3 sentences here on the owner who turned down a good opportunity because the numbers felt unclear. Both situations come from the same root problem — operating without the information that makes growth feel intentional rather than scary.)
+(Then add 2 or 3 sentences here on the owner who turned down a good opportunity because the numbers felt unclear. Both situations come from the same root problem, operating without the information that makes growth feel intentional rather than scary.)
 
 Your closing line before the CTA:
 "A calculated risk isn't a brave one. It's just one you've actually looked at properly."
 
-(Then add 1 or 2 sentences here on what changes when clarity is there. Not just better decisions — a fundamentally different relationship with risk. Plain language.)`, cta: '"If growth is feeling more risky than exciting right now — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on what changes when clarity is there. Not just better decisions, a fundamentally different relationship with risk. Plain language.)`, cta: '"If growth is feeling more stressful than exciting right now, I\'d genuinely like to know what\'s underneath it. Drop me a message."' },
 ];
 
 const asbJulyIdeas: AsbIdea[] = [
@@ -1105,7 +1105,7 @@ const asbJulyIdeas: AsbIdea[] = [
 Your second line (if you opened with Option 2):
 "Mine had been building for a while. I just hadn't been paying attention."
 
-(Then add 2 or 3 sentences here on the warning signs you missed before that morning. The pressure that had been building. Be specific without getting into anything you'd rather keep private — this is 4/5 bold for a reason.)
+(Then add 2 or 3 sentences here on the warning signs you missed before that morning. The pressure that had been building. Be specific without getting into anything you'd rather keep private, this is 4/5 bold for a reason.)
 
 Your next line:
 "Recovery wasn't dramatic. It was a lot of small things, one after the other."
@@ -1115,10 +1115,10 @@ Your next line:
 Your closing line before the CTA:
 "I notice things in other people now that I didn't notice before."
 
-(Then add 1 or 2 sentences here drawing the quiet parallel to business owners — carrying financial stress alone without realising the toll it takes. Don't labour it. Let it land.)
+(Then add 1 or 2 sentences here drawing the quiet parallel to business owners, carrying financial stress alone without realising the toll it takes. Don't labour it. Let it land.)
 
 (A note from Ben: only write this when it feels right, not because the schedule says so.)`, cta: '"Has your body ever told you something your brain was refusing to hear?"' },
-  { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "Option 1: The business was profitable. They were three months from running out of cash. Option 2: A supplier hadn't invoiced them in four months. The owner thought it was a good run of luck. It wasn't.", direction: `Your second line (if you opened with Option 1):
+  { id: "jul-2", week: "Week 9 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: The Business Was Profitable. They Were Three Months From Running Out of Cash.", hook: "Option 1: The business was profitable. They were three months from running out of cash. Option 2: A supplier hadn't invoiced them in four months. The owner thought it was a good run of luck. It wasn't.", direction: `Your second line (if you opened with Option 1):
 "From the outside it looked like a healthy, growing business. From the inside it was about to hit a wall."
 
 Your second line (if you opened with Option 2):
@@ -1134,14 +1134,14 @@ Your next line:
 Your closing line before the CTA:
 "A forecast doesn't prevent problems. It gives you time to act on them."
 
-(Then add 1 or 2 sentences here on owners who manage cash flow by gut feel, or just hoping it works itself out. How that usually plays out. Knowing is better than not knowing, even when what you find out is uncomfortable.)`, cta: '"If you\'re running without a cash flow forecast — drop me a message. I\'ll buy you a coffee."' },
-  { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner" — What Clients Actually Say', hook: "Option 1: The thing clients say most, once things are working: I wish I'd done this sooner. Option 2: Not 'that was useful' or 'glad we did that.' Specifically: sooner. Every time.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on owners who manage cash flow by gut feel, or just hoping it works itself out. How that usually plays out. Knowing is better than not knowing, even when what you find out is uncomfortable.)`, cta: '"If you\'re running without a cash flow forecast, drop me a message. I\'ll buy you a coffee."' },
+  { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner", What Clients Actually Say', hook: "Option 1: The thing clients say most, once things are working: I wish I'd done this sooner. Option 2: Not 'that was useful' or 'glad we did that.' Specifically: sooner. Every time.", direction: `Your second line (if you opened with Option 1):
 "It's not just useful feedback. It's the same sentence almost word for word."
 
 Your second line (if you opened with Option 2):
 "There's something about that word that says everything. Sooner. Before the stress, before the surprise, before the decision they had to make blind."
 
-(Then add 2 or 3 sentences here on what clients typically mean when they say it. How far back are they imagining. What's the thing they wish they'd had earlier — visibility, a forecast, a second pair of eyes.)
+(Then add 2 or 3 sentences here on what clients typically mean when they say it. How far back are they imagining. What's the thing they wish they'd had earlier, visibility, a forecast, a second pair of eyes.)
 
 Your next line:
 "I worked with a founder preparing to raise investment. He could explain the business model clearly but couldn't articulate the financial story."
@@ -1151,8 +1151,8 @@ Your next line:
 Your closing line before the CTA:
 "The most common thing that stops people acting earlier isn't money. It's the belief that they should be able to figure it out on their own."
 
-(Then add 1 sentence here on the cost of waiting. Honest, not preachy.)`, cta: '"What\'s one thing in your business you\'ve been putting off — and what\'s actually stopping you?"' },
-  { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "Finance Simplified: If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Option 1: He could explain the business brilliantly. The financial story was another matter. Option 2: In an investor conversation, your numbers need to hold up under questioning — not just your pitch.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 sentence here on the cost of waiting. Honest, not preachy.)`, cta: '"What\'s one thing in your business you\'ve been putting off, and what\'s actually stopping you?"' },
+  { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "The Real Cost: If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Option 1: He could explain the business brilliantly. The financial story was another matter. Option 2: In an investor conversation, your numbers need to hold up under questioning, not just your pitch.", direction: `Your second line (if you opened with Option 1):
 "That's a more common situation than founders realise. The pitch lands. The follow-up questions don't."
 
 Your second line (if you opened with Option 2):
@@ -1168,14 +1168,14 @@ Your next line:
 Your closing line before the CTA:
 "The financial story isn't a separate document. It's the same story your business tells, told in numbers."
 
-(Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If you\'re preparing to raise and the financial story isn\'t as solid as the pitch — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If you\'re preparing to raise and the financial story isn\'t as solid as the pitch, I\'m happy to take a look. Drop me a message."' },
   { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "Option 1: I've been learning Japanese every day for over 400 days. I'm not fluent. Not even close. But I'm significantly better than I was. Option 2: 400 days of daily practice teaches you something that has nothing to do with Japanese.", direction: `Your second line (if you opened with Option 1):
 "Some days it's 15 minutes. Some days it's 5. Some days it's 5 minutes I really didn't want to do."
 
 Your second line (if you opened with Option 2):
 "French A* at GCSE, Mandarin across two spells in Beijing, and now Japanese on Duolingo every morning. The pattern says more about me than the languages do."
 
-(Then add 2 or 3 sentences here on why Japanese specifically. What drew you to it. Self-deprecating about your progress is fine — you're not pretending to be fluent.)
+(Then add 2 or 3 sentences here on why Japanese specifically. What drew you to it. Self-deprecating about your progress is fine, you're not pretending to be fluent.)
 
 Your next line:
 "The moment I noticed real progress wasn't a moment. It was a slow realisation."
@@ -1185,14 +1185,14 @@ Your next line:
 Your closing line before the CTA:
 "Small habits compound. The trick is being patient enough to let them."
 
-(Then add 1 or 2 sentences here on what habit in your life or business has compounded in a way you didn't expect. Don't labour the parallel — let it land naturally.)`, cta: '"What\'s a habit you\'ve kept going that\'s quietly made a difference — in life or in business?"' },
-  { id: "jul-6", week: "Week 11 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I Can Just Use AI for My Financial Strategy.\" Can You, Though?", hook: "Option 1: I keep hearing this: why would I need financial help when I can just use AI? It's a fair question. Here's my honest answer. Option 2: AI can produce a financial model. It can't tell you if the assumptions are right.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on what habit in your life or business has compounded in a way you didn't expect. Don't labour the parallel, let it land naturally.)`, cta: '"What\'s a habit you\'ve kept going that\'s quietly made a difference, in life or in business?"' },
+  { id: "jul-6", week: "Week 11 · Friday", type: "Expertise", bold: "3/5", title: "The Real Cost: \"I Can Just Use AI for My Financial Strategy.\" Can You, Though?", hook: "Option 1: I keep hearing this: why would I need financial help when I can just use AI? It's a fair question. Here's my honest answer. Option 2: AI can produce a financial model. It can't tell you if the assumptions are right.", direction: `Your second line (if you opened with Option 1):
 "It's a completely fair question. I'd be asking it too."
 
 Your second line (if you opened with Option 2):
 "That's the bit that catches people. The model looks right. The assumptions underneath it are the part that matters."
 
-(Then add 2 or 3 sentences here on what AI can genuinely do well for SME owners. Drafting, summarising, working through scenarios. Acknowledge it properly — you're not being dismissive.)
+(Then add 2 or 3 sentences here on what AI can genuinely do well for SME owners. Drafting, summarising, working through scenarios. Acknowledge it properly, you're not being dismissive.)
 
 Your next line:
 "The problem isn't AI. It's using any tool without the ability to evaluate what it's producing."
@@ -1202,15 +1202,15 @@ Your next line:
 Your closing line before the CTA:
 "The value isn't in the model. It's in knowing whether to trust it."
 
-(Then add 1 sentence here on what you'd say to someone who genuinely believes the objection. Honest, not preachy.)`, cta: '"If you\'re relying on AI for financial decisions and not sure what to trust — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 sentence here on what you'd say to someone who genuinely believes the objection. Honest, not preachy.)`, cta: '"If you\'re relying on AI for financial decisions and not quite sure what to trust, worth a conversation. Drop me a message."' },
   { id: "jul-7", week: "Week 12 · Mid-week", type: "Personal", bold: "3/5", title: "The Question I Ask Every New Client (That Nobody's Ever Asked Them Before)", hook: "Option 1: I ask every new client the same question. The reaction tells me everything I need to know. Option 2: Nobody's ever asked them this before. That's usually obvious from how long the pause is.", direction: `Your second line (if you opened with Option 1):
 "It's not a clever question. It's just one nobody else has thought to ask them."
 
 Your second line (if you opened with Option 2):
 "The pause is usually the most useful part of the conversation."
 
-Your next line — the question itself:
-(Drop in your real question here. Something like "what are you getting from your accountant, and is it helping you run the business?" — but use the actual one you ask. Word for word.)
+Your next line, the question itself:
+(Drop in your real question here. Something like "what are you getting from your accountant, and is it helping you run the business?", but use the actual one you ask. Word for word.)
 
 (Then add 2 or 3 sentences here on the different reactions you get. Confidence, hesitation, the long pause where someone realises they don't have an answer. What each one tells you.)
 
@@ -1223,7 +1223,7 @@ Your closing line before the CTA:
 "The answer matters less than what happens in the room while someone's trying to find it."
 
 (Then add 1 sentence here, if anything else comes to mind. Otherwise leave it.)`, cta: '"How would you answer it?"' },
-  { id: "jul-8", week: "Week 12 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: Costly Mistakes Don't Announce Themselves. They Show Up Afterwards.", hook: "Option 1: Costly mistakes don't announce themselves. They show up in the numbers three months later. Option 2: A decision that made sense at the time. A margin that disappeared. Nobody saw it coming because nobody was looking.", direction: `Your second line (if you opened with Option 1):
+  { id: "jul-8", week: "Week 12 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: Costly Mistakes Don't Announce Themselves. They Show Up Afterwards.", hook: "Option 1: Costly mistakes don't announce themselves. They show up in the numbers three months later. Option 2: A decision that made sense at the time. A margin that disappeared. Nobody saw it coming because nobody was looking.", direction: `Your second line (if you opened with Option 1):
 "By the time the numbers say something's wrong, the decision that caused it was made a quarter ago."
 
 Your second line (if you opened with Option 2):
@@ -1239,7 +1239,7 @@ Your next line:
 Your closing line before the CTA:
 "This isn't about being perfect. It's about having enough information to course-correct before things become serious."
 
-(Then add 1 or 2 sentences here on the difference between a mistake and a crisis. Usually how quickly you found out. Calm and factual, no scare tactics.)`, cta: '"If there are decisions in your business that felt right at the time but the numbers haven\'t backed up — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 or 2 sentences here on the difference between a mistake and a crisis. Usually how quickly you found out. Calm and factual, no scare tactics.)`, cta: '"If there are decisions in your business the numbers haven\'t backed up, drop me a message. I\'ll buy you a coffee."' },
 ];
 
 const asbAugustIdeas: AsbIdea[] = [
@@ -1247,9 +1247,9 @@ const asbAugustIdeas: AsbIdea[] = [
 "It's a story people have been telling themselves for years. And it's usually wrong."
 
 Your second line (if you opened with Option 2):
-"There's a difference between knowing the 'what' — the figures — and knowing the 'so what.' That gap isn't a character flaw. It's a missing layer."
+"There's a difference between knowing the 'what', the figures, and knowing the 'so what.' That gap isn't a character flaw. It's a missing layer."
 
-(Then add 2 or 3 sentences here on what people usually mean when they say it. Is it numeracy, interpretation, anxiety, or something else? Be honest — you've heard it enough times to know the pattern.)
+(Then add 2 or 3 sentences here on what people usually mean when they say it. Is it numeracy, interpretation, anxiety, or something else? Be honest, you've heard it enough times to know the pattern.)
 
 Your next line:
 "I worked with an owner who genuinely believed it about themselves."
@@ -1259,8 +1259,8 @@ Your next line:
 Your closing line before the CTA:
 "The owners who say they're bad with money are often the most coachable. They're honest about what they don't know."
 
-(Then add 1 or 2 sentences here on the link between this belief and managing finances alone. Most don't think there's another way. Warm, not patronising — you're releasing people from a story, not telling them they're wrong.)`, cta: '"Do you consider yourself a numbers person — or have you always left that to someone else?"' },
-  { id: "aug-2", week: "Week 13 · Friday", type: "Expertise", bold: "3/5", title: "Finance Simplified: You Want to Sell the Business for £3 Million. What Does It Need to Look Like to Get There?", hook: "Option 1: Most business owners have an exit number in mind. Very few have mapped out what the business needs to look like to get there. Option 2: Ask an owner what their exit goal is and they'll tell you the number straight away. Ask what the business needs to look like financially to get there. Long pause.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on the link between this belief and managing finances alone. Most don't think there's another way. Warm, not patronising, you're releasing people from a story, not telling them they're wrong.)`, cta: '"Do you consider yourself a numbers person, or have you always left that to someone else?"' },
+  { id: "aug-2", week: "Week 13 · Friday", type: "Expertise", bold: "3/5", title: "The Real Cost: You Want to Sell the Business for £3 Million. What Does It Need to Look Like to Get There?", hook: "Option 1: Most business owners have an exit number in mind. Very few have mapped out what the business needs to look like to get there. Option 2: Ask an owner what their exit goal is and they'll tell you the number straight away. Ask what the business needs to look like financially to get there. Long pause.", direction: `Your second line (if you opened with Option 1):
 "The number isn't the problem. The path to it is the bit that's usually missing."
 
 Your second line (if you opened with Option 2):
@@ -1271,13 +1271,13 @@ Your second line (if you opened with Option 2):
 Your next line:
 "There are usually two or three financial levers that most affect exit value for an SME."
 
-(Then add 3 or 4 sentences here walking through what they are. Margin trajectory. Revenue quality — recurring versus one-off. Clean financials. Reduced owner-dependency. Be specific without going into a textbook list.)
+(Then add 3 or 4 sentences here walking through what they are. Margin trajectory. Revenue quality, recurring versus one-off. Clean financials. Reduced owner-dependency. Be specific without going into a textbook list.)
 
 Your closing line before the CTA:
 "The business you want to exit isn't built at the end. It's built now."
 
-(Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"If you have an exit number but no plan to back it up — drop me a message. I\'ll buy you a coffee."' },
-  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation: I think this is exactly what I need, just not quite yet. Option 2: Readiness is a feeling, not a fact. And the thing you're waiting to sort out is usually exactly the thing that needs financial input.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"If you have an exit number but nothing mapped out behind it, drop me a message. I\'ll buy you a coffee."' },
+  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "The Real Cost: \"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation: I think this is exactly what I need, just not quite yet. Option 2: Readiness is a feeling, not a fact. And the thing you're waiting to sort out is usually exactly the thing that needs financial input.", direction: `Your second line (if you opened with Option 1):
 "It's almost always genuine. And it's almost always more expensive than people realise."
 
 Your second line (if you opened with Option 2):
@@ -1288,19 +1288,19 @@ Your second line (if you opened with Option 2):
 Your next line:
 "I worked with an owner who had been telling themselves they'd sort the finances 'once things calmed down'."
 
-(Then add 2 or 3 sentences here on what the waiting actually cost them. Concrete, anonymised. Whatever the practical price was — missed decisions, slower growth, the stress of not knowing.)
+(Then add 2 or 3 sentences here on what the waiting actually cost them. Concrete, anonymised. Whatever the practical price was, missed decisions, slower growth, the stress of not knowing.)
 
 Your closing line before the CTA:
 "There is a version of 'not yet' that's legitimate. I'm not saying there isn't."
 
-(Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"If you\'ve been putting it off and you know it — drop me a message. I\'ll buy you a coffee."' },
-  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: \"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: I just need to run it past my business partner. Fine. But if they also don't know the numbers, you're about to have the conversation you've both been avoiding. Option 2: Two owners, neither with clear financial visibility, making a shared decision. That's a numbers problem, not a partnership problem.", direction: `Your second line (if you opened with Option 1):
+(Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"If you\'ve been putting it off and you know it, drop me a message. I\'ll buy you a coffee."' },
+  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "The Real Cost: \"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: I just need to run it past my business partner. Fine. But if they also don't know the numbers, you're about to have the conversation you've both been avoiding. Option 2: Two owners, neither with clear financial visibility, making a shared decision. That's a numbers problem, not a partnership problem.", direction: `Your second line (if you opened with Option 1):
 "That's not a bad thing. It just means the conversation you're about to have is actually a version of the problem you'd be solving."
 
 Your second line (if you opened with Option 2):
 "Two heads aren't better than one if they're both working from the same blind spots."
 
-(Then add 2 or 3 sentences here on what financial decision-making looks like in businesses with co-founders or business partners. What's usually the real concern behind "I need to speak to my partner."  Don't be adversarial about it — most of the time it's a fair instinct.)
+(Then add 2 or 3 sentences here on what financial decision-making looks like in businesses with co-founders or business partners. What's usually the real concern behind "I need to speak to my partner."  Don't be adversarial about it, most of the time it's a fair instinct.)
 
 Your next line:
 "Having a business partner doesn't make financial decisions easier."
@@ -1310,7 +1310,7 @@ Your next line:
 Your closing line before the CTA:
 "If someone asked me to explain the value of this to their business partner in one sentence, I'd say this."
 
-(Then add 1 sentence here — your actual one-line version of the value proposition for a co-founder conversation. Word for word.)`, cta: '"If the financial picture isn\'t equally clear on both sides of the partnership — drop me a message. I\'ll buy you a coffee."' },
+(Then add 1 sentence here, your actual one-line version of the value proposition for a co-founder conversation. Word for word.)`, cta: '"If the financial picture isn\'t equally clear on both sides of the partnership, drop me a message. I\'ll buy you a coffee."' },
 ];
 
 function AsbContentTab({ slug }: { slug: string }) {
@@ -1338,15 +1338,14 @@ function AsbContentTab({ slug }: { slug: string }) {
       {/* Content workflow strategy */}
       <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 6 · 19 May 2026</p>
-        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post — Two Ways</p>
-        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>There are two ways to write a post using these cards. The typing route (slower, but fine). And the dictation route — which we did live in our last session and had a full draft in 14 minutes. Try the dictation route first.</p>
-        <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#3a6048", textTransform: "uppercase" as const, letterSpacing: "0.1em", margin: "0 0 10px" }}>Route A — Dictation (recommended)</p>
+        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post</p>
+        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>Pick a card, do a brain dump into Claude, and let it turn your words into a post. We did this together on the call and had a full draft in 14 minutes. That's the whole process.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
           {[
-            { step: "1", label: "Pick a card and open it", desc: "Open the content idea card you want to write. Read through the hooks and the structure so you know what it's asking." },
-            { step: "2", label: "Open Claude and hit the dictation button (microphone icon)", desc: "In Claude, open a new chat. Type this as your prompt first: 'I'm going to talk through a LinkedIn post. Just transcribe what I say and format it for LinkedIn at the end — each sentence on its own line, no em-dashes, no changes to my words.' Then hit the microphone icon and talk through the card's prompts out loud. Answer each one naturally. If you can't answer one, skip it and say 'moving on'. Don't stop to edit. Just talk." },
-            { step: "3", label: "Let Claude format it — one pass only", desc: "Once you've talked through everything, stop the dictation. Claude will produce a formatted draft. Read it once. If something's wrong, change it yourself. Do not ask Claude to revise it — that's where posts start to sound like AI." },
-            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post. Add a dot-dot-dot here and there. Swap a written number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
+            { step: "1", label: "Pick a card from this dashboard", desc: "Open it, read the hook and the prompts so you know roughly what you're covering." },
+            { step: "2", label: "Copy the card into Claude and do a brain dump", desc: "Paste the card into a new Claude chat. Then either hit the microphone icon and talk through the prompts out loud, or just type your answers underneath each one. Don't write a post. Just answer the questions in your own words, as you'd say them out loud. Delete the prompts as you go. Rough is fine. This is the brain dump." },
+            { step: "3", label: "Ask Claude to turn it into a LinkedIn post", desc: "Once you've answered the prompts, tell Claude: 'Turn this into a LinkedIn post in my voice. Each sentence on its own line. No em-dashes. Try to keep my words as much as possible.' Claude can shape and tighten it, but your words stay your words. One pass only. Don't ask it to revise." },
+            { step: "4", label: "Paste into LinkedIn and post it", desc: "Read it once. If something sounds wrong, change it yourself. Add a dot-dot-dot here and there if you want. If you've been in LinkedIn more than 10 minutes, you're done. Post it." },
           ].map((item, i) => (
             <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
               <div style={{ width: 28, height: 28, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
@@ -1357,30 +1356,9 @@ function AsbContentTab({ slug }: { slug: string }) {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.1em", margin: "0 0 10px" }}>Route B — Typing</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
-          {[
-            { step: "1", label: "Pick a card and open it", desc: "Open the content idea card. The hook is already there, and the structure tells you what each section of your post should be." },
-            { step: "2", label: "Fill in the blanks — 10 minutes max", desc: "Read the bracketed prompts. Type your answers in your own words, filling in the gaps. Rough notes are fine. Specific is better than perfect. If you can't answer a prompt, skip it and move on. 10 minutes is the cap." },
-            { step: "3", label: "(Optional) Put it to Claude to tidy the formatting only", desc: "If you want Claude's help, paste your filled-in version in and ask it to format it for LinkedIn. Each sentence on a new line. No em-dashes. No short dramatic sentences. No changes to your words. Just the formatting. One attempt only." },
-            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post. Add a dot-dot-dot here and there. Swap a written number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
-          ].map((item, i) => (
-            <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-              <div style={{ width: 28, height: 28, borderRadius: "50%", background: "#9CA3AF", color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
-              <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 3px" }}>{item.label}</p>
-                <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "12px 16px", marginBottom: 14 }}>
-          <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>The edits that make it human:</strong> sentences on their own lines, no em-dashes, no short dramatic fragments, dot-dot-dots for continuation, numerals instead of written-out numbers, the occasional deliberate spelling slip. AI doesn't do these things. You do.</p>
-        </div>
         <div style={{ background: "#fdf4e8", border: "1.5px solid #f5d89e", borderRadius: 6, padding: "14px 18px" }}>
-          <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>A reminder worth saying clearly</p>
-          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: "0 0 8px", lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's clarity and reps for client conversations. Every post you write is you getting better at explaining what you do, why it matters, and who it's for.</p>
-          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: 0, lineHeight: 1.7 }}>You'll get quicker the more you do it. And beyond the visibility, you're building the muscle that makes client conversations sharper. You're ingraining what you know.</p>
+          <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>Worth saying clearly</p>
+          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: 0, lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's clarity and reps for client conversations. Every post you write is you getting better at explaining what you do, why it matters, and who it's for. You're ingraining what you know.</p>
         </div>
       </div>
 
