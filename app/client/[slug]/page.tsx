@@ -11,6 +11,7 @@ import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 import AndyScottBarrettDashboard from "@/components/AndyScottBarrettDashboard";
 import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
+import AlexShiellDashboard from "@/components/AlexShiellDashboard";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -2652,6 +2653,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
   if (slug === "andy-scott-barrett") {
     return <AndyScottBarrettDashboard slug={slug} />;
+  }
+
+  if (slug === "alex-shiell") {
+    return <AlexShiellDashboard slug={slug} />;
   }
 
   if (!client) {

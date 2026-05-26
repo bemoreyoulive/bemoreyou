@@ -9,6 +9,7 @@ const hardcodedClients = [
   { slug: "nikki-mcreynolds", adminPath: "/client/nikki-mcreynolds", name: "Nikki McReynolds", role: "Founder, HushAway", started: "Nov 2025", sessions: 11, status: "Active", color: "#7c3aed", initials: "NM" },
   { slug: "james-hartley", adminPath: "/client/james-hartley", name: "James Hartley", role: "Interim CPO · Executive Coach · Strategic Advisor", started: "Jul 2025", sessions: 14, status: "Active", color: "#7A746E", initials: "JH" },
   { slug: "solve-people", adminPath: "/client/solve-people", name: "Solve People", role: "Luenna Knight & Brett Edyvane", started: "Feb 2026", sessions: 6, status: "Active", color: "#c95e00", initials: "SP" },
+  { slug: "alex-shiell", adminPath: "/client/alex-shiell", name: "Alex Shiell", role: "Founder, Shiell Joinery", started: "May 2026", sessions: 0, status: "Active", color: "#d97706", initials: "AS" },
 ];
 
 function initials(name: string) {
