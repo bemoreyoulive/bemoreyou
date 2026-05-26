@@ -5,6 +5,7 @@
 // 18-year-old founder of Shiell Joinery. 13 sessions over 6 months.
 // Mission: inspire the next generation to see the trades as a legitimate
 // business opportunity. Not commercial — about changing hearts and minds.
+// Platform: Instagram & TikTok (video-first). No LinkedIn.
 // Blueprint call: 26 May 2026. Fill in Brand Assets, Goals etc. after Session 1.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -51,14 +52,6 @@ const AS_POSITIONING = {
   audiences: [] as { label: string; detail: string }[],
 };
 
-// ─── HEADLINES ───────────────────────────────────────────────────────────────
-
-const AS_HEADLINES: { label: string; text: string; note: string }[] = [];
-
-// ─── ABOUT SECTION ───────────────────────────────────────────────────────────
-
-const AS_ABOUT: { label: string; text: string; note: string }[] = [];
-
 // ─── CONTENT IDEAS ───────────────────────────────────────────────────────────
 
 const AS_CONTENT: { hook: string; guidance: string; priority: boolean }[] = [];
@@ -81,8 +74,6 @@ const TABS = [
   { id: "sessions", label: "Sessions" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
-  { id: "headlines", label: "Headlines" },
-  { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
@@ -164,8 +155,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               {[
                 { label: "Sessions", value: "0 of 13", sub: "Blueprint call: 26 May 2026" },
                 { label: "Programme length", value: "6 months", sub: "May — November 2026" },
-                { label: "LinkedIn profile", value: "Pre-launch", sub: "Being built in Session 1" },
-                { label: "Content live", value: "Coming soon", sub: "First post after Session 1" },
+                { label: "Platform", value: "Instagram & TikTok", sub: "Video-first content" },
+                { label: "Content live", value: "Coming soon", sub: "First video after Session 1" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -192,9 +183,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
                   {[
                     "Your positioning — who you're speaking to and what you stand for",
-                    "LinkedIn headline options — the ones considered and the one chosen",
-                    "About section — finalised and ready to publish",
-                    "Content ideas — hooks, angles, and what to do with them",
+                    "Brand assets — your messaging, bio, and core narrative",
+                    "Content ideas — video hooks, angles, and what to do with them",
                     "Ben's recommendations from each session",
                     "Your short and long-term goals",
                     "A session-by-session record of your journey",
@@ -212,7 +202,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                     "A working document — not a polished presentation",
                     "Everything grounded in your own words and stories",
                     "Something to review together, not handed over and filed",
-                    "Not a script — it's scaffolding. You write in your own voice.",
+                    "Not a script — it's scaffolding. You film in your own voice.",
                     "Living — it gets updated after every session",
                     "Built for a mission, not a marketing funnel",
                   ].map((item, i) => (
@@ -224,7 +214,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
-            {/* About Alex — brief context card for him to read */}
+            {/* Why you're here */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
               <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
@@ -343,46 +333,6 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               </div>
             ) : <PlaceholderTab label="Brand Assets" />}
             <CommentBox clientName="Alex Shiell" tabName="Brand Assets" slug={slug} />
-          </div>
-        )}
-
-        {/* ── HEADLINES ── */}
-        {activeTab === "headlines" && (
-          <div>
-            {AS_HEADLINES.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>LinkedIn Headline Options</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Headlines</h2>
-                {AS_HEADLINES.map((h, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AS_COLOR, margin: "0 0 10px" }}>{h.label}</p>
-                    <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
-                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
-                  </div>
-                ))}
-              </div>
-            ) : <PlaceholderTab label="Headlines" />}
-            <CommentBox clientName="Alex Shiell" tabName="Headlines" slug={slug} />
-          </div>
-        )}
-
-        {/* ── ABOUT ── */}
-        {activeTab === "about" && (
-          <div>
-            {AS_ABOUT.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>LinkedIn About Section</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>About Section</h2>
-                {AS_ABOUT.map((v, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AS_COLOR, margin: "0 0 10px" }}>{v.label}</p>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
-                    <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
-                  </div>
-                ))}
-              </div>
-            ) : <PlaceholderTab label="About Section" />}
-            <CommentBox clientName="Alex Shiell" tabName="About Section" slug={slug} />
           </div>
         )}
 
