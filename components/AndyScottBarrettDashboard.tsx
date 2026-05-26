@@ -11,16 +11,17 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Before Session 6 (26 May): batch-write 4 posts using the June content ideas on the dashboard and schedule them before you leave for Canada. New workflow — one Claude draft, copy to LinkedIn, edit there in 5 minutes. Don't go back and forth with Claude. On every networking call: identify a problem. Client until not proven client.";
+const ASB_NEXT_MOVE = "Before Canada (this week): write and schedule 3 posts. 1 — the investor/financial story post (drafted in the session, just format it in LinkedIn). 2 — Edinburgh half marathon (include a photo, talk about the heat and the city). 3 — reflection on starting the business (dictate it on a walk, paste into Claude, format). Use the dictation workflow for all of them. Drop the 'Finance Simplified' intro — just write the post.";
 
 const asbTodos = [
-  { id: "s5-1", text: "Batch-write 4 posts using the June content ideas — get them scheduled before you leave for Canada. Use the new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes. Do not go back and forth with Claude.", owner: "Andy", tabLink: { label: "See June Content Ideas", tab: "content" } },
-  { id: "s5-2", text: "On every networking call going forward: treat everyone as a potential client until they prove otherwise. Your job is to identify a problem. If you can identify a problem you can solve — bingo. Use the prospect call framework questions as your mental map.", owner: "Andy", tabLink: { label: "See Prospect Call Framework", tab: "recs" } },
-  { id: "s5-3", text: "Go back over your notes from recent 1-2-1 calls — extract the themes, pain points, and misconceptions. WhatsApp them to Ben. Conversations = clarity, content, and clients.", owner: "Andy" },
-  { id: "s5-4", text: "Follow up with the contact from Founders Network who talks a lot — he might need coaching/mentoring support. Chase when back from Canada.", owner: "Andy" },
-  { id: "s5-5", text: "Arrange the photo session with George's dad — meet him somewhere outside the house (café, co-working space, a walk) so he can't set up studio lighting. Natural environment only.", owner: "Andy" },
+  { id: "s6-1", text: "PRIORITY — before Canada: format and post the investor/financial story post we drafted together on the call. New line for every full stop. Ellipses for continuation. Capitalise NUMBERS. End with: 'If you're reading this thinking I need to sort this out — drop me a message. I'll buy you a coffee.'", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s6-2", text: "PRIORITY — before Canada: write and schedule the Edinburgh half marathon post. Include a photo. Talk about the heat, the city, doing it despite the injury. Personal and relatable. Use the dictation workflow.", owner: "Andy" },
+  { id: "s6-3", text: "PRIORITY — before Canada: dictate the 'reflection on starting the business' post on a walk. Open your notes app, hit dictate, and just talk — when you started, what's been hard, what's surprised you, the emotional rollercoaster. Paste it into Claude, ask it to format only (new lines, no em-dashes, no fragments). Don't ask it to rewrite.", owner: "Andy" },
+  { id: "s6-4", text: "When you come back from Canada: follow up with the Paralympian contact — she's been engaging well on LinkedIn but may need a nudge. She's a possible client.", owner: "Andy" },
+  { id: "s6-5", text: "When you come back from Canada: follow up with the new paid networking group prospect.", owner: "Andy" },
+  { id: "s5-4", text: "Follow up with the contact from Founders Network when back from Canada — possible coaching/mentoring need.", owner: "Andy" },
+  { id: "s5-5", text: "Arrange the photo session with George's dad — meet outside the house (café, walk, co-working space). Natural environment only.", owner: "Andy" },
   { id: "s4-2", text: "Diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, content, follow-ups.", owner: "Andy" },
-  { id: "s4-4", text: "Hard stop technique on all calls — announce it at the start: 'I've got a hard stop at X.'", owner: "Andy" },
   { id: "w1", text: "Website quick wins (5 changes, ~1 hour): name Rolls-Royce explicitly; move Richard Waine testimonial to homepage; replace contact page copy with Ben's version; fix name hyphenation to 'Andy Scott Barrett' throughout; update copyright year to 2026.", owner: "Andy" },
 ];
 
@@ -47,7 +48,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Scott Barrett</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 5 of 7</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 6 of 7</p>
             </div>
           </div>
         </div>
@@ -67,21 +68,21 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
-            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 5 · 13 May 2026" animateIn />
+            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 6 · 26 May 2026" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>5</div>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>6</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 5 — 13 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>LinkedIn content process overhauled — new workflow: one Claude draft, paste into LinkedIn, edit there in 5 minutes, don't go back to Claude. Content posts published: Martin Lewis, bank balance, VAT, discounting. Canada trip: 4 posts to batch-write and schedule before leaving. Networking: shift to treating every 1-2-1 as a potential client conversation — identify a problem, use the prospect call questions. "Client until not proven client." Session 6: Tuesday 26 May. Final session: Wednesday 18 June.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 6 — 26 May 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Dictation workflow — write posts by talking through the prompts, not typing answers. Produced a full draft in 14 minutes on the call. Finance Simplified series dropped — expertise posts are now standalone wake-up calls, not explanations. Repetition in content explicitly endorsed. 3 posts to schedule before Canada. Product profitability / Lego post published. Final session: Wednesday 18 June.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "5 of 7", sub: "Next: Tue 26 May 2026" },
+                { label: "Sessions done", value: "6 of 7", sub: "Final: Wed 18 June 2026" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
-                { label: "Posts out", value: "4 posted", sub: "Martin Lewis · bank balance · VAT · discounting" },
+                { label: "Posts out", value: "5 posted", sub: "Martin Lewis · VAT · discounting · bank balance · product profitability" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -853,7 +854,7 @@ Your next line:
 Your closing line before the CTA:
 "A useful starting point is looking at what's due over the next three months. It's a simple question. Many business owners I speak to don't have the answer."
 
-(Then add 1 sentence here on what owners who manage cash by gut feel usually end up dealing with. Calm and factual, with a slight edge of "I've seen how this ends.")`, cta: '"Before you make your next big spend — do you know what\'s already committed from that balance?"' },
+(Then add 1 sentence here on what owners who manage cash by gut feel usually end up dealing with. Calm and factual, with a slight edge of "I've seen how this ends.")`, cta: '"If you\'re reading this and thinking \'I need to sort this out\' — drop me a message. I\'ll buy you a coffee."' },
   { id: "may-3", week: "Week 2 · Mid-week", type: "Personal", bold: "3/5", title: "My Boss Told Me My Job Was Safe. I Remember Thinking: That's Not Good News.", hook: "Option 1: My boss called me in to tell me my job was safe. That wasn't the news I was hoping for. Option 2: I'd decided on 40 years old years before I actually got there. Not as a wish — as a plan.", direction: `Your second line (if you opened with Option 1):
 "I'd decided on 40 years old years before I actually got there. Not as a wish. As a plan."
 
@@ -887,7 +888,7 @@ Your next line:
 Your closing line before the CTA:
 "I'm not saying discounting is never right."
 
-(Then add 2 or 3 sentences here on when it IS the right call. Shifting stock, early payment for cash flow, a deliberate commercial decision where you've understood the full consequences. Those are considered calls. Often it isn't that considered.)`, cta: '"Next time a customer asks for a discount — do you know what you\'d need to sell more of to make up for it?"' },
+(Then add 2 or 3 sentences here on when it IS the right call. Shifting stock, early payment for cash flow, a deliberate commercial decision where you've understood the full consequences. Those are considered calls. Often it isn't that considered.)`, cta: '"If this has given you pause — drop me a message. I\'ll buy you a coffee."' },
   { id: "may-5", week: "Week 3 · Mid-week", type: "Personal", bold: "2/5", title: "They Sent Me to Beijing at 25", hook: "Option 1: At 25, I was sent to Beijing to sort out a finance operation held together with goodwill and optimism. Option 2: Most SME finance operations look a lot like that Beijing office did when I arrived.", direction: `Your second line (if you opened with Option 1):
 "I didn't speak the language. The team had been working in silos for years. The numbers were everywhere and nowhere."
 
@@ -921,7 +922,7 @@ Your next line:
 Your closing line before the CTA:
 "Finding the loser doesn't mean killing it. Sometimes there's a reason to keep it."
 
-(Then add 1 or 2 sentences here on the legitimate reasons to keep a loss-making product in the range. A loss-leader that brings other business in, a customer relationship, a strategic call. The point isn't to cut it. The point is to know.)`, cta: '"Do you know which of your products or services is your most profitable — not the one that sells the most, but the one that actually makes you the most money?"' },
+(Then add 1 or 2 sentences here on the legitimate reasons to keep a loss-making product in the range. A loss-leader that brings other business in, a customer relationship, a strategic call. The point isn't to cut it. The point is to know.)`, cta: '"If you\'ve never had this conversation about your own numbers — drop me a message. I\'ll buy you a coffee."' },
   { id: "may-7", week: "Week 4 · Mid-week", type: "Personal", bold: "2/5", title: "She Could Finally Sleep", hook: "Option 1: She told me she could finally sleep. That was the metric that mattered. Option 2: She knew her business was doing well. She just couldn't prove it fast enough, and it was grinding her down.", direction: `Your second line (if you opened with Option 1):
 "The spreadsheet wasn't the win. The weight lifting off her shoulders was."
 
@@ -955,7 +956,7 @@ Your next line:
 Your closing line before the CTA:
 "Once someone actually has this number, the decisions start to feel different."
 
-(Then add 1 or 2 sentences here on what changes. Pricing conversations, hiring calls, when to take on a new contract. Plain English.)`, cta: '"Do you know your break-even point — and does it account for your own time?"' },
+(Then add 1 or 2 sentences here on what changes. Pricing conversations, hiring calls, when to take on a new contract. Plain English.)`, cta: '"If you\'re not sure your break-even number is right — drop me a message. I\'ll buy you a coffee."' },
 ];
 
 const asbJuneIdeas: AsbIdea[] = [
@@ -992,7 +993,7 @@ Your next part — the three questions, one per line:
 Your closing line before the CTA:
 "Most business owners who can't answer these aren't failing. They just haven't had anyone help them look."
 
-(Then add 1 sentence here on what changes once someone can answer all three. Less stress, fewer surprises, more confident decisions.)`, cta: '"Which of the three is your honest answer: \'yes\', \'not sure\', or \'I\'d rather not think about it\'?"' },
+(Then add 1 sentence here on what changes once someone can answer all three. Less stress, fewer surprises, more confident decisions.)`, cta: '"If one of those three made you pause — drop me a message. I\'ll buy you a coffee."' },
   { id: "jun-3", week: "Week 6 · Mid-week", type: "Personal", bold: "2/5", title: "I'm Running My First Half Marathon. I'm Not Fast. That's Not the Point.", hook: "Option 1: I'm training for my first half marathon. My pace is best described as determined. Option 2: Last year I ran a 10k faster than I did at 23. This year I'm doing a half marathon. Slow progress is still progress.", direction: `Your second line (if you opened with Option 1):
 "I'm not built for distance running. That's been very clear for a while."
 
@@ -1026,7 +1027,7 @@ Your next line:
 Your closing line before the CTA:
 "Defendable pricing means you can say no without flinching."
 
-(Then add 1 or 2 sentences here on what that actually looks like in a real conversation with a customer. The owner who can hold their price because they know exactly what they're being asked to give up.)`, cta: '"Do you know the full cost of delivering your most popular product or service — or is there guesswork in there?"' },
+(Then add 1 or 2 sentences here on what that actually looks like in a real conversation with a customer. The owner who can hold their price because they know exactly what they're being asked to give up.)`, cta: '"If there\'s guesswork in your pricing — drop me a message. I\'ll buy you a coffee."' },
   { id: "jun-5", week: "Week 7 · Mid-week", type: "Personal", bold: "3/5", title: "Leaving the Corporate World Was Harder Than I Expected. And Easier.", hook: "Option 1: Everyone said leaving a stable corporate career was a big risk. They weren't wrong. They also weren't fully right. Option 2: I didn't leave because I was brave. I left because the alternative felt worse.", direction: `Your second line (if you opened with Option 1):
 "The honest version isn't the highlight reel. It's more interesting than that."
 
@@ -1060,7 +1061,7 @@ Your next line:
 Your closing line before the CTA:
 "The FD role isn't tax returns or audit. It's the person looking forward with you, not just reporting on what's already happened."
 
-(Then add 1 or 2 sentences here on what that actually looks like in practice. Sitting alongside an owner. Asking the questions their accountant has never asked them.)`, cta: '"When did you last look at your numbers and actually know what to do next?"' },
+(Then add 1 or 2 sentences here on what that actually looks like in practice. Sitting alongside an owner. Asking the questions their accountant has never asked them.)`, cta: '"If that gap sounds familiar — drop me a message. I\'ll buy you a coffee."' },
   { id: "jun-7", week: "Week 8 · Mid-week", type: "Personal", bold: "1/5", title: "We've Been Fostering Labradors. This Is What I've Learned.", hook: "Option 1: My wife and I have been fostering Labradors. Every single one has been different. All of them have taught us something. Option 2: We've been looking after dogs waiting for their forever home. I didn't expect it to teach me much. It has.", direction: `Your second line (if you opened with Option 1):
 "They each arrive with their own personality, their own habits, their own way of working out whether they trust you."
 
@@ -1094,7 +1095,7 @@ Your next line:
 Your closing line before the CTA:
 "A calculated risk isn't a brave one. It's just one you've actually looked at properly."
 
-(Then add 1 or 2 sentences here on what changes when clarity is there. Not just better decisions — a fundamentally different relationship with risk. Plain language.)`, cta: '"Think of the last opportunity you hesitated on. Was it genuine caution — or did you not have the numbers to back yourself?"' },
+(Then add 1 or 2 sentences here on what changes when clarity is there. Not just better decisions — a fundamentally different relationship with risk. Plain language.)`, cta: '"If growth is feeling more risky than exciting right now — drop me a message. I\'ll buy you a coffee."' },
 ];
 
 const asbJulyIdeas: AsbIdea[] = [
@@ -1133,7 +1134,7 @@ Your next line:
 Your closing line before the CTA:
 "A forecast doesn't prevent problems. It gives you time to act on them."
 
-(Then add 1 or 2 sentences here on owners who manage cash flow by gut feel, or just hoping it works itself out. How that usually plays out. Knowing is better than not knowing, even when what you find out is uncomfortable.)`, cta: '"Do you have a forward-looking cash flow forecast — or just last month\'s accounts?"' },
+(Then add 1 or 2 sentences here on owners who manage cash flow by gut feel, or just hoping it works itself out. How that usually plays out. Knowing is better than not knowing, even when what you find out is uncomfortable.)`, cta: '"If you\'re running without a cash flow forecast — drop me a message. I\'ll buy you a coffee."' },
   { id: "jul-3", week: "Week 10 · Mid-week", type: "Personal", bold: "2/5", title: '"I Wish I\'d Done This Sooner" — What Clients Actually Say', hook: "Option 1: The thing clients say most, once things are working: I wish I'd done this sooner. Option 2: Not 'that was useful' or 'glad we did that.' Specifically: sooner. Every time.", direction: `Your second line (if you opened with Option 1):
 "It's not just useful feedback. It's the same sentence almost word for word."
 
@@ -1167,7 +1168,7 @@ Your next line:
 Your closing line before the CTA:
 "The financial story isn't a separate document. It's the same story your business tells, told in numbers."
 
-(Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If an investor asked you to walk them through the financial story of your business right now — how confident would you feel?"' },
+(Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If you\'re preparing to raise and the financial story isn\'t as solid as the pitch — drop me a message. I\'ll buy you a coffee."' },
   { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "Option 1: I've been learning Japanese every day for over 400 days. I'm not fluent. Not even close. But I'm significantly better than I was. Option 2: 400 days of daily practice teaches you something that has nothing to do with Japanese.", direction: `Your second line (if you opened with Option 1):
 "Some days it's 15 minutes. Some days it's 5. Some days it's 5 minutes I really didn't want to do."
 
@@ -1201,7 +1202,7 @@ Your next line:
 Your closing line before the CTA:
 "The value isn't in the model. It's in knowing whether to trust it."
 
-(Then add 1 sentence here on what you'd say to someone who genuinely believes the objection. Honest, not preachy.)`, cta: '"Have you tried using AI for financial decisions? What was useful and what didn\'t quite work?"' },
+(Then add 1 sentence here on what you'd say to someone who genuinely believes the objection. Honest, not preachy.)`, cta: '"If you\'re relying on AI for financial decisions and not sure what to trust — drop me a message. I\'ll buy you a coffee."' },
   { id: "jul-7", week: "Week 12 · Mid-week", type: "Personal", bold: "3/5", title: "The Question I Ask Every New Client (That Nobody's Ever Asked Them Before)", hook: "Option 1: I ask every new client the same question. The reaction tells me everything I need to know. Option 2: Nobody's ever asked them this before. That's usually obvious from how long the pause is.", direction: `Your second line (if you opened with Option 1):
 "It's not a clever question. It's just one nobody else has thought to ask them."
 
@@ -1238,7 +1239,7 @@ Your next line:
 Your closing line before the CTA:
 "This isn't about being perfect. It's about having enough information to course-correct before things become serious."
 
-(Then add 1 or 2 sentences here on the difference between a mistake and a crisis. Usually how quickly you found out. Calm and factual, no scare tactics.)`, cta: '"What\'s the most expensive decision you\'ve made based on gut feel — and how did it turn out?"' },
+(Then add 1 or 2 sentences here on the difference between a mistake and a crisis. Usually how quickly you found out. Calm and factual, no scare tactics.)`, cta: '"If there are decisions in your business that felt right at the time but the numbers haven\'t backed up — drop me a message. I\'ll buy you a coffee."' },
 ];
 
 const asbAugustIdeas: AsbIdea[] = [
@@ -1275,7 +1276,7 @@ Your next line:
 Your closing line before the CTA:
 "The business you want to exit isn't built at the end. It's built now."
 
-(Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"Do you have a number in mind — and do you know what the business needs to look like to get there?"' },
+(Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"If you have an exit number but no plan to back it up — drop me a message. I\'ll buy you a coffee."' },
   { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "Finance Simplified: \"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation: I think this is exactly what I need, just not quite yet. Option 2: Readiness is a feeling, not a fact. And the thing you're waiting to sort out is usually exactly the thing that needs financial input.", direction: `Your second line (if you opened with Option 1):
 "It's almost always genuine. And it's almost always more expensive than people realise."
 
@@ -1292,7 +1293,7 @@ Your next line:
 Your closing line before the CTA:
 "There is a version of 'not yet' that's legitimate. I'm not saying there isn't."
 
-(Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"What are you waiting for — and is the waiting actually helping?"' },
+(Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"If you\'ve been putting it off and you know it — drop me a message. I\'ll buy you a coffee."' },
   { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "Finance Simplified: \"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: I just need to run it past my business partner. Fine. But if they also don't know the numbers, you're about to have the conversation you've both been avoiding. Option 2: Two owners, neither with clear financial visibility, making a shared decision. That's a numbers problem, not a partnership problem.", direction: `Your second line (if you opened with Option 1):
 "That's not a bad thing. It just means the conversation you're about to have is actually a version of the problem you'd be solving."
 
@@ -1309,7 +1310,7 @@ Your next line:
 Your closing line before the CTA:
 "If someone asked me to explain the value of this to their business partner in one sentence, I'd say this."
 
-(Then add 1 sentence here — your actual one-line version of the value proposition for a co-founder conversation. Word for word.)`, cta: '"If you have a business partner — do you both have a clear picture of the numbers? Or does one of you carry that more than the other?"' },
+(Then add 1 sentence here — your actual one-line version of the value proposition for a co-founder conversation. Word for word.)`, cta: '"If the financial picture isn\'t equally clear on both sides of the partnership — drop me a message. I\'ll buy you a coffee."' },
 ];
 
 function AsbContentTab({ slug }: { slug: string }) {
@@ -1336,18 +1337,36 @@ function AsbContentTab({ slug }: { slug: string }) {
 
       {/* Content workflow strategy */}
       <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
-        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 5 · 13 May 2026</p>
-        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post in About 30 Minutes</p>
-        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>Most of the time problem isn't the writing itself. It's going back and forth with Claude trying to improve the draft. Don't do that. The cards now give you the structure. You just need to fill it in.</p>
+        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 6 · 19 May 2026</p>
+        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post — Two Ways</p>
+        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>There are two ways to write a post using these cards. The typing route (slower, but fine). And the dictation route — which we did live in our last session and had a full draft in 14 minutes. Try the dictation route first.</p>
+        <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#3a6048", textTransform: "uppercase" as const, letterSpacing: "0.1em", margin: "0 0 10px" }}>Route A — Dictation (recommended)</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
           {[
-            { step: "1", label: "Pick a card from this dashboard", desc: "Open the content idea card you want to write — the hook is already there, and the structure below it tells you what each line of your post should be." },
-            { step: "2", label: "Answer the questions as best you can — give it 10 minutes", desc: "Read the bracketed prompts in the structure. They're there to jog your memory and add some juice to the post. Type your answers in your own words, filling in the gaps. If you can't answer one, skip it and move on. 10 minutes is the cap. Rough notes are fine. Specific is better than perfect." },
-            { step: "3", label: "(Optional) Put it to Claude to tidy the formatting", desc: "If you'd like Claude to help, paste your filled-in version in and ask it to format it for LinkedIn. Each sentence on a new line. No em-dashes. No short dramatic sentences. No changes to your words. Just the formatting. One attempt. Don't ask it to revise." },
-            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post into LinkedIn's 'Write a post' box. Add a dot-dot-dot here and there. Swap a spelled-out number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
+            { step: "1", label: "Pick a card and open it", desc: "Open the content idea card you want to write. Read through the hooks and the structure so you know what it's asking." },
+            { step: "2", label: "Open Claude and hit the dictation button (microphone icon)", desc: "In Claude, open a new chat. Type this as your prompt first: 'I'm going to talk through a LinkedIn post. Just transcribe what I say and format it for LinkedIn at the end — each sentence on its own line, no em-dashes, no changes to my words.' Then hit the microphone icon and talk through the card's prompts out loud. Answer each one naturally. If you can't answer one, skip it and say 'moving on'. Don't stop to edit. Just talk." },
+            { step: "3", label: "Let Claude format it — one pass only", desc: "Once you've talked through everything, stop the dictation. Claude will produce a formatted draft. Read it once. If something's wrong, change it yourself. Do not ask Claude to revise it — that's where posts start to sound like AI." },
+            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post. Add a dot-dot-dot here and there. Swap a written number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
           ].map((item, i) => (
             <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
               <div style={{ width: 28, height: 28, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
+              <div>
+                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 3px" }}>{item.label}</p>
+                <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#7A746E", textTransform: "uppercase" as const, letterSpacing: "0.1em", margin: "0 0 10px" }}>Route B — Typing</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
+          {[
+            { step: "1", label: "Pick a card and open it", desc: "Open the content idea card. The hook is already there, and the structure tells you what each section of your post should be." },
+            { step: "2", label: "Fill in the blanks — 10 minutes max", desc: "Read the bracketed prompts. Type your answers in your own words, filling in the gaps. Rough notes are fine. Specific is better than perfect. If you can't answer a prompt, skip it and move on. 10 minutes is the cap." },
+            { step: "3", label: "(Optional) Put it to Claude to tidy the formatting only", desc: "If you want Claude's help, paste your filled-in version in and ask it to format it for LinkedIn. Each sentence on a new line. No em-dashes. No short dramatic sentences. No changes to your words. Just the formatting. One attempt only." },
+            { step: "4", label: "Paste it into LinkedIn and post it", desc: "Copy the post. Add a dot-dot-dot here and there. Swap a written number for a numeral if you want. If you've been in LinkedIn for more than 10 minutes, you're done. Post it." },
+          ].map((item, i) => (
+            <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+              <div style={{ width: 28, height: 28, borderRadius: "50%", background: "#9CA3AF", color: "#fff", fontSize: "0.75rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>{item.step}</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 3px" }}>{item.label}</p>
                 <p style={{ fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
@@ -1359,11 +1378,27 @@ function AsbContentTab({ slug }: { slug: string }) {
           <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}><strong>The edits that make it human:</strong> sentences on their own lines, no em-dashes, no short dramatic fragments, dot-dot-dots for continuation, numerals instead of written-out numbers, the occasional deliberate spelling slip. AI doesn't do these things. You do.</p>
         </div>
         <div style={{ background: "#fdf4e8", border: "1.5px solid #f5d89e", borderRadius: 6, padding: "14px 18px" }}>
-          <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>A gentle reminder from Ben</p>
-          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: "0 0 8px", lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's one of the most valuable things you can be doing right now.</p>
-          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: "0 0 8px", lineHeight: 1.7 }}>You'll get quicker the more you do it. That's how this works. And beyond the visibility, you're getting a lot more clarity on what you're doing, how you're helping people, and who you're talking to.</p>
-          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: 0, lineHeight: 1.7 }}>It's an incredibly beneficial exercise. Great for your knowledge, great for your expertise, and great for the conversations you'll have with future prospects and clients. You're ingraining what you know.</p>
+          <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>A reminder worth saying clearly</p>
+          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: "0 0 8px", lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's clarity and reps for client conversations. Every post you write is you getting better at explaining what you do, why it matters, and who it's for.</p>
+          <p style={{ fontSize: "0.85rem", color: "#6B4A1E", margin: 0, lineHeight: 1.7 }}>You'll get quicker the more you do it. And beyond the visibility, you're building the muscle that makes client conversations sharper. You're ingraining what you know.</p>
         </div>
+      </div>
+
+      {/* Content strategy evolution note */}
+      <div style={{ background: "#f9f8f6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
+        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Session 6 · Why Your Content Is Changing</p>
+        <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Finance Simplified isn't the frame anymore</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>The posts you were writing were useful — but they were explaining finance. The shift now is to stop telling people how finance works and start showing them what's at stake when they don't have it sorted.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>The old frame said: here's the thing, here's how it works, here's what to do. The new frame says: here's the problem, here's what it's costing you, here's the door.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>Don't give the solution in the post. Show the cost of the problem, then invite them in. That's where the CTAs come from — "if this sounds familiar, drop me a message."</p>
+      </div>
+
+      {/* Hooks AI concern note */}
+      <div style={{ background: "#f9f8f6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 24 }}>
+        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Session 6 · On Hooks Sounding AI-Written</p>
+        <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Some of the "it's not X, it's Y" hooks can feel a bit generated</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You raised this in our last session. You're right that the contrarian structure — "it's not about X, it's about Y" — is a pattern that AI overuses. If a hook feels like that when you read it, there's a simple fix.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>Add "But" and put it on its own line. So instead of <em>"It's not about the numbers. It's about what they mean."</em> — write it as <em>"It's not about the numbers.</em><br /><em>But what they mean? That's the part most owners have never had explained to them."</em> One word and a line break. That's usually enough to make it sound like a person.</p>
       </div>
 
       {/* Month sub-tabs */}
