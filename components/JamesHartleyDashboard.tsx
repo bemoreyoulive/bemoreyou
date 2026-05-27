@@ -15,7 +15,7 @@ const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
 const SESSION_LABEL = "Session 16 · 27 May 2026 · Next: 29 June";
-const NEXT_MOVE = "One priority for June: post. You've got everything — the ideas, the frameworks, the confidence. The Standard Chartered 'lower value human capital' rant is already a post. The Cat Clinic M&A journey is already half-written. The dictation trick is ready to use the moment you leave a high-energy conversation. The only thing left is doing it. Get at least two posts out before you leave for France.";
+const NEXT_MOVE = "One priority for June: post. You've got everything — the ideas, the frameworks, the confidence. The Standard Chartered 'lower value human capital' response is already a post. The Cat Clinic M&A journey is already half-written. The dictation trick is ready to use the moment you leave a high-energy conversation. The only thing left is doing it. Get at least two posts out before you leave for France.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -33,8 +33,8 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string; tabLink?: { label: string; tab: string } }[] = [
   {
     id: "jh1",
-    text: "Write the Standard Chartered post — your 'lower value human capital' rant",
-    subtext: "You went on a rant at the Odgers panel about a Standard Chartered exec who talked about eliminating 'lower value human capital.' There was massive agreement in the room. That's your post. You don't need a photo, you don't need to overthink the framing. Lead with the quote, explain why it's morally bankrupt, flip it: the people described as 'lower value' are often your biggest investment opportunity. It'll blow up.",
+    text: "Write the Standard Chartered post — your take on 'lower value human capital'",
+    subtext: "At the Odgers panel, a Standard Chartered exec talked about eliminating 'lower value human capital.' You pushed back hard — and there was massive agreement in the room. That's your post. You don't need a photo, you don't need to overthink the framing. Lead with the quote, explain why it's morally bankrupt, flip it: the people described as 'lower value' are often your biggest investment opportunity. It'll blow up.",
     section: "Priority — do this first",
     tabLink: { label: "→ See content ideas", tab: "content" },
   },
@@ -1006,7 +1006,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>15</div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 16 — 27 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Good energy. Mists clearing. Cat Clinic parent company commissioned two days of facilitation. Business magazine found you via LinkedIn — November feature in the works. New podcast invite. HR journalist mini-series planning confirmed. Active pipeline on multiple fronts. The Standard Chartered rant is your next post. Dictation tactic introduced. June is the month to prove it. Summer pause agreed — back 29 June, 10am.</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Good energy. Mists clearing. Cat Clinic parent company commissioned two days of facilitation. Business magazine found you via LinkedIn — November feature in the works. New podcast invite. HR journalist mini-series planning confirmed. Active pipeline on multiple fronts. The Standard Chartered post is ready to write. Dictation tactic introduced. June is the month to prove it. Summer pause agreed — back 29 June, 10am.</p>
               </div>
             </div>
 
