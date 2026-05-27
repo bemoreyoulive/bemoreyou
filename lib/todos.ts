@@ -8,18 +8,13 @@ export interface TodoDef {
 
 const clientTodos: Record<string, TodoDef[]> = {
   "andy-felton": [
-    { id: "c1", text: "Post the holiday story — with 2 or 3 photos (Cruise, Norway, husky ride, the storm, the norovirus)" },
-    { id: "c2", text: "Post one SACK SALLY — owner absence angle. Hook: \"You started a business because of freedom. But right now, you ain't living that dream.\"" },
-    { id: "c3", text: "Post the bold contrarian differentiator post: \"Most people in this space took a course. I've been building systems for 10 to 15 years. They're not the same thing.\"" },
-    { id: "p1", text: "See David Maguire at AI networking event (~week of 14th April) — ask how progress is going; ask if he'd comment on SACK SALLY post" },
-    { id: "p2", text: "Draft commercial approach for Chris Dillon media-monitoring POC" },
-    { id: "p3", text: "Send Ben voice note on PAPA AI search work (detail: what was the problem, what you proposed, what outcome will be)" },
-    { id: "o1", text: "Success manager call this week — send Ben recording or detailed notes" },
-    { id: "o2", text: "Main AI/automation coach session next week — send same to Ben" },
-    { id: "b1", text: "Maintain 2 posts per week on LinkedIn" },
-    { id: "b2", text: "Networking: 2 events per week (East Midlands Chamber and AI networking)" },
-    { id: "b3", text: "Land the first aligned implementation client" },
-    { id: "b4", text: "Continue N8N community contributions" },
+    { id: "w1", text: "Warm outreach — book 5 accountant conversations by end of June" },
+    { id: "w2", text: "Book your June networking events" },
+    { id: "w3", text: "Repost high-performing content from the last 5 months — and spread expertise posts to 1–2 per week, not 3–4" },
+    { id: "w4", text: "Reply to Olivia — she's booked a Coffee Chat (followed up 3 times)" },
+    { id: "a1", text: "Apply the two-step audit offer language to all future posts mentioning the audits" },
+    { id: "a2", text: "Reconnect with Jaz Grewal (TaxAssist) — first week of June" },
+    { id: "s12", text: "Next session: Session 12 — 9 June 2026 at 9am" },
   ],
   "andy-scott-barrett": [
     { id: "s4-1", text: "Post the discounting post — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' 30-minute timer." },

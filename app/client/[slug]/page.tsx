@@ -16,24 +16,16 @@ import AlexShiellDashboard from "@/components/AlexShiellDashboard";
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
-const AF_NEXT_MOVE = "Accountex is done. Now it's time to follow up. DM the warm and hot conversations within 24 hours. Book 20–30 minute calls with the best ones. Compile what you heard at the event — patterns, objections, language they used — and send Ben the notes. That intelligence feeds your next 6 weeks of content.";
+const AF_NEXT_MOVE = "Conversations are the priority right now. Your digital storefront is sorted, your UPS is working in rooms, and Bobby posts are live. Now it's about getting in front of the right people. Warm outreach to your list of accountants — target 5 conversations booked by end of June. Use the free audit offer as a foot in the door. And spread your content out — 1–2 expertise posts a week, story posts doing the heavy lifting.";
 
 const afTodos = [
-  { id: "acc1", text: "✅ Accountex attended — 13 May 2026", subtext: "Well done. You had the one-liners, you had the intro, you had the plan. Now execute the follow-up before the event goes cold.", section: "Accountex follow-up — do this week" },
-  { id: "acc2", text: "DM warm and hot conversations within 24 hours", subtext: "Connect on LinkedIn at the event or same night. Message within 24hrs: 'Great to meet you at Accountex — would love to grab 20 mins to continue the conversation.' Keep it short. No pitch.", section: "Accountex follow-up — do this week" },
-  { id: "acc3", text: "Book 20–30 min calls with the best conversations", subtext: "Aim for 3–5 calls booked this week. These are the ones who reacted well, asked follow-up questions, or gave you specific pain points. Best leads first.", section: "Accountex follow-up — do this week" },
-  { id: "acc4", text: "Compile your Accountex intelligence doc and send to Ben", subtext: "Go through your voice notes. For each conversation: name, company, what they said, warm/hot/cold rating. Send Ben the doc — it becomes content and it feeds your ICP. Even cold conversations have data in them.", section: "Accountex follow-up — do this week" },
-  { id: "r1", text: "✅ First accountant research call done — Jaz Grewal, TaxAssist (May 2026)", subtext: "Transcript received and analysed. Key pain points confirmed: client chasing, practice visibility dashboard, duplicate document requests, staff email monitoring, onboarding complexity. Content ideas updated.", section: "Accountant research — in progress" },
-  { id: "r2", text: "Speak to two more accountants", subtext: "Same format as the Jaz call. Don't mention AI or automation in the ask. Send Ben the Otter AI transcript after each one.", section: "Accountant research — in progress" },
-  { id: "m3", text: "Set up warm email domains", subtext: "Takes 14–21 days to warm up. Every day of delay pushes back your outreach start date. Do it this week.", section: "Messaging & infrastructure" },
-  { id: "p1", text: "David Maguire — partnership follow-up", subtext: "Still live. Likely converting in May.", section: "Pipeline actions" },
-  { id: "p2", text: "Chris Dillon media-monitoring POC", subtext: "Draft commercial approach — he needs numbers.", section: "Pipeline actions" },
-  { id: "p3", text: "Chase PAPA funding confirmation", subtext: "Case study post ready to draft once confirmed.", section: "Pipeline actions" },
-  { id: "p4", text: "Jaz Grewal — potential client conversation", subtext: "She knows your work now. When the time is right, that's a warm intro waiting to happen.", section: "Pipeline actions" },
-  { id: "ob1", text: "Maintain 2 posts per week on LinkedIn", subtext: "Accountex content is gold. 'Here's what I heard at Accountex from practice owners' is a post that writes itself. Do it this week while it's fresh.", section: "Ongoing baseline", tabLink: { label: "Browse Content Ideas", tab: "content" } },
-  { id: "ob2", text: "Networking: 2 events per week", subtext: "You've now got a field-tested intro and three proven one-liners. Use them at every room you walk into.", section: "Ongoing baseline" },
-  { id: "ob3", text: "Continue N8N community contributions", subtext: "Long-game authority-building. Keep going.", section: "Ongoing baseline" },
-  { id: "s11", text: "Next session: Session 11 — 24 May 2026", subtext: "Bring your Accountex follow-up results, voice note intel, and any new pipeline conversations. We'll map out the next phase.", section: "Next session" },
+  { id: "w1", text: "Warm outreach — book 5 accountant conversations by end of June", subtext: "You've got ~10 warm contacts who are accountants. Short personalised email + LinkedIn message to each. Framing: 'I'm focusing on accountancy practices now — love to grab 20–30 mins to pick your brain.' Follow up 24 hours later if no reply. These conversations feed your content, your ICP, and your pipeline.", section: "This week", tabLink: undefined as { label: string; tab: string } | undefined },
+  { id: "w2", text: "Book your June networking events", subtext: "May diary is done. June is empty. Review what's available and get it in the calendar this week.", section: "This week", tabLink: undefined as { label: string; tab: string } | undefined },
+  { id: "w3", text: "Repost high-performing content from the last 5 months", subtext: "Your impressions have dropped — too much 'wake up, fix your practice' content posted too frequently. Go back through your last 5 months, find posts that performed well, and schedule reposts. Check the language first — update 'marketing' to 'practice' where needed. Spread expertise posts to 1–2 per week max, not 3–4. Story posts should make up the majority.", section: "This week", tabLink: { label: "Browse Content Ideas", tab: "content" } },
+  { id: "w4", text: "Reply to Olivia — she's booked a Coffee Chat (she followed up 3 times)", subtext: "She handles business development at a client acquisition system company. Warm signal. Don't leave her waiting.", section: "This week", tabLink: undefined as { label: string; tab: string } | undefined },
+  { id: "a1", text: "Apply the two-step audit offer language to all future posts", subtext: "The current post confused 'discovery call' with the audit. They're separate steps: (1) short discovery call to check fit, (2) the audit itself. Template: 'This isn't some generic AI-generated audit. It's me, Sheldon (Andy), taking the time to properly review your practice, workflows, processes, and the connection between your team and your clients. First step is a discovery call — link in the comments.' Copy this structure for every post mentioning the audits.", section: "Content & offer", tabLink: undefined as { label: string; tab: string } | undefined },
+  { id: "a2", text: "Reconnect with Jaz Grewal (TaxAssist) — first week of June", subtext: "Their automation provider review meeting is end of May. Andy to reach out first week of June. Their existing provider is going stale — come in as the natural next step, not a cold pitch.", section: "Pipeline", tabLink: undefined as { label: string; tab: string } | undefined },
+  { id: "s12", text: "Next session: Session 12 — 9 June 2026 at 9am", subtext: "Penultimate session. Bring: accountant conversation notes, how the audit offer is landing, June networking booked, and any pipeline updates.", section: "Next session", tabLink: undefined as { label: string; tab: string } | undefined },
 ];
 
 const afPositioningDiffs = [
@@ -512,7 +504,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AF_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AF</div>
             <div>
               <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Felton</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · April 2026 · Session 9</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · May 2026 · Session 11</p>
             </div>
           </div>
           <div style={{ fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif" }}>BeMore<span style={{ color: "#4ec9d0" }}>You</span></div>
@@ -536,10 +528,10 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
-            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="April 2026 · Session 9" animateIn />
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="May 2026 · Session 11" animateIn />
 
-            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 9</h2>
-            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 9 on 29th April. Tick things off as you go.</p>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 11</h2>
+            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 11 on 27th May. Tick things off as you go.</p>
 
             <ClientTodoList
               items={afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy", subtext: t.subtext, section: t.section, tabLink: t.tabLink }))}
@@ -573,7 +565,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             </div>
 
             <Callout type="green">
-              <strong>Where we are, April 2026 — post Session 9:</strong> Niche confirmed — <strong>UK accountancy practices</strong>. LinkedIn headline and About section updated. UPS agreed. Content theme rebranded from SACK SALLY to <strong>Bobby&apos;s Got a Brain</strong> — Bobby is the junior accountant doing manual non-revenue work that a system should handle. Priority this fortnight: speak to at least 3 accountants, understand the real bottlenecks, send notes to Ben. That research feeds everything — content, messaging, outreach. <strong>Next session: 13 May, 10:30am BST.</strong>
+              <strong>Where we are, May 2026 — post Session 11:</strong> Positioning locked. Digital storefront sorted. UPS working in live networking. Bobby posts are live. Free AI/Automation Audit offer is out — two slots available in June, discovery call is step one. Priority now is conversations: warm outreach to accountants, the audit offer landing with the right people, and keeping content spread across story posts and expertise posts (1–2 expert posts per week, not 3–4). <strong>Next session: 9 June 2026, 9am.</strong>
             </Callout>
 
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
