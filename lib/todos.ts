@@ -46,11 +46,12 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "nm11", text: "Protect your mornings — the business needs your best thinking, not your most hours" },
   ],
   "james-hartley": [
-    { id: "jh1", text: "Write your power statements — use real client feedback, not your own assumptions about yourself" },
-    { id: "jh2", text: "Ring-fence one BD morning per week and protect it — structure beats willpower" },
-    { id: "jh3", text: "Follow up on open LinkedIn conversations within 48 hours — message anyone who engaged with a recent post" },
-    { id: "jh4", text: "Post at least once this week — one insight from a recent conversation is enough" },
-    { id: "jh5", text: "Revisit the About section once power statements are written — Ben will draft three options" },
+    { id: "jh1", text: "Write the Standard Chartered post — your 'lower value human capital' rant" },
+    { id: "jh2", text: "Try the dictation trick — right after your next high-energy moment" },
+    { id: "jh3", text: "Finish and post the Cat Clinic M&A piece" },
+    { id: "jh4", text: "Ask the business magazine: what specifically stood out about my profile?" },
+    { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
+    { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
   "solve-people": [
     { id: "t1", text: "Screenshot the troll comment and turn it into a follow-up post — this is content gold. Do this one first." },

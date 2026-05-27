@@ -14,8 +14,8 @@ const COLOR = "#7A746E";
 const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
-const SESSION_LABEL = "Session 15 · 29 April 2026 · Next: 27 May";
-const NEXT_MOVE = "Three priorities this month: nail the Odgers panel and follow up with 5–10 people afterwards (then write the post while it's fresh). Post at least once a week — your May plan is on the Content tab. And find at least one network in London you actually enjoy being part of — Ben is researching options and they'll be on the Networking tab.";
+const SESSION_LABEL = "Session 16 · 27 May 2026 · Next: 29 June";
+const NEXT_MOVE = "One priority for June: post. You've got everything — the ideas, the frameworks, the confidence. The Standard Chartered 'lower value human capital' rant is already a post. The Cat Clinic M&A journey is already half-written. The dictation trick is ready to use the moment you leave a high-energy conversation. The only thing left is doing it. Get at least two posts out before you leave for France.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -33,44 +33,43 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string; tabLink?: { label: string; tab: string } }[] = [
   {
     id: "jh1",
-    text: "Nail the Odgers panel — then follow up immediately",
-    subtext: "Speaking in front of 60–70 FTSE directors is a once-in-a-while opportunity. Prepare well, bring your point of view, and don't be modest. The day after: write the post while it's fresh. Don't make it about being chosen — make it about what you observed in the room. Tag 5–10 people you met. That's your follow-up and your post in one.",
+    text: "Write the Standard Chartered post — your 'lower value human capital' rant",
+    subtext: "You went on a rant at the Odgers panel about a Standard Chartered exec who talked about eliminating 'lower value human capital.' There was massive agreement in the room. That's your post. You don't need a photo, you don't need to overthink the framing. Lead with the quote, explain why it's morally bankrupt, flip it: the people described as 'lower value' are often your biggest investment opportunity. It'll blow up.",
     section: "Priority — do this first",
-    tabLink: { label: "→ See content ideas for the panel post", tab: "content" },
+    tabLink: { label: "→ See content ideas", tab: "content" },
   },
   {
     id: "jh2",
-    text: "Post at least once a week in May",
-    subtext: "Every week you don't post, someone who might have hired you doesn't know you exist. Your May plan is on the Content tab — two posts mapped out, one per fortnight to start. Pick one, write it, get it out. The people who will eventually hire you are watching before they ever reach out.",
+    text: "Try the dictation trick — right after your next high-energy moment",
+    subtext: "After the IgnitionCraft call with Rob, after the Odgers panel, after a good coaching session — that's when the energy and ideas are highest. Open your iPhone notes, hit the microphone, and just talk. Don't edit, don't structure, just wibble. Then paste it into AI and ask it to break it down into LinkedIn posts using your words. It still sounds like you. It takes 10 minutes. The energy that's been dissipating into the ether gets captured instead.",
     section: "Priority — do this first",
-    tabLink: { label: "→ See May content plan", tab: "content" },
   },
   {
     id: "jh3",
-    text: "Find your tribe — explore at least one new network this month",
-    subtext: "Your IgnitionCraft partner is getting real results from community networks in Oxford. You need the same in London — but the right ones, the ones you'd go to even if there was no work in the room. Ben has done some research. When you find one that fits, commit to showing up consistently. It's not about the people in the room — it's about who they know.",
+    text: "Finish and post the Cat Clinic M&A piece",
+    subtext: "You've had this half-written for weeks — the journey from building a business to selling it, doing M&A on yourself. The 9th birthday party just happened. The timing is perfect. It's emotional, honest, and a story only you can tell. Finish the draft, get it out before France.",
     section: "Priority — do this first",
-    tabLink: { label: "→ See Networking tab", tab: "networking" },
+    tabLink: { label: "→ See content ideas", tab: "content" },
   },
   {
     id: "jh4",
-    text: "Review your new positioning statements",
-    subtext: "Three people independently told you that leading with three service lines reads as hedging. Two new coaching-led options are on the Brand Assets tab for you to mull over. You don't need to decide today — just read them, sit with them, and bring your reaction to the next session.",
-    section: "Brand",
-    tabLink: { label: "→ See Brand Assets", tab: "brand" },
+    text: "Ask the business magazine: what specifically stood out about my profile?",
+    subtext: "You've got a call with their director. Before you say yes to anything, ask: 'Beyond the SME fit — was there anything specific about my profile that made you think I'd be a good voice here?' It impresses them, it tells you if these are the right readers, and it's a signal check on whether your brand is landing the way you intend it to.",
+    section: "Business development",
   },
   {
     id: "jh5",
-    text: "Keep a close eye on your signals",
-    subtext: "You have a tendency to write off progress that hasn't yet converted to cash. Don't. The headhunter who chose you for a panel of 60 directors. The CEO who referenced your LinkedIn post. The coaching prospect who said they enjoyed meeting you even when they didn't hire you. These are signals that your reputation is building — they matter. Note them down. Bring them to sessions. They're the proof that this is working.",
-    section: "Mindset",
-    tabLink: { label: "→ See Milestones & Signals", tab: "milestones" },
+    text: "Explore the London networks Ben sent — commit to one",
+    subtext: "The research is done. One good HR network in there in particular. Have a look, pick the one that feels right — not the most strategically useful one, the one you'd actually enjoy being in the room for. Then show up once. That's all you need to do to decide.",
+    section: "Business development",
+    tabLink: { label: "→ See Networking tab", tab: "networking" },
   },
   {
     id: "jh6",
-    text: "Ring-fence one BD morning per week",
-    subtext: "Structure beats willpower every time. Block the same morning every week and protect it. On that morning: follow up on live conversations, reach out to 3–4 new contacts, send your Calendly link to anyone who hasn't booked. Willpower runs out. A blocked calendar doesn't.",
-    section: "Business development",
+    text: "Keep a close eye on your signals — they're compounding",
+    subtext: "A year after posting from France, people at the Odgers panel were still referencing your shutters post. A business magazine found you via LinkedIn without you doing anything. An ex-client's new employer reached out with a proposal. These aren't luck — they're your brand doing its job. Note them. Bring them to sessions. They're the proof.",
+    section: "Mindset",
+    tabLink: { label: "→ See Milestones & Signals", tab: "milestones" },
   },
 ];
 
@@ -85,6 +84,29 @@ const SESSIONS: {
   agreed: string[];
   nextSession: string;
 }[] = [
+  {
+    number: 16,
+    date: "27 May 2026",
+    title: "The Mists Are Clearing — Energy, Pipeline and the Summer Plan",
+    summary: "James came in deliberately leading with positives — a conscious choice, and it showed. Good energy throughout. The Cat Clinic 9th birthday happened last week (engaging but draining), and the parent company CEO has already commissioned two days of facilitation off the back of watching James in action — one for new business partners, one for practice managers. On the pipeline: a CEO James had proposed to last year has re-engaged, potentially with a 6-month CPO/people strategy gig. An ExCo facilitation proposal submitted to an ex-colleague's new employer. An IgnitionCraft workshop proposal in with Rob's planning client. A meeting set with a panellist from the Odgers event to explore collaboration. An SME business magazine found James via LinkedIn and his website — reached out unsolicited about a November Organisation Design & Change feature. A new podcast invite for June. And the HR journalist mini-series planning morning is confirmed for next week. On LinkedIn: the ideas are there, the framework is there, the post from France a year ago is still being referenced at events. The only gap is converting energy into action. Ben introduced a new tactic: dictate immediately after high-energy moments (post-panel, post-call with Rob), paste it into AI, structure it into a post. It still sounds like James because it's his words. Agreed to use June as the month to prove it to himself before pausing for the summer.",
+    insights: [
+      "A year-old France post is still being referenced by people at events — memorability is proven, posting is the only gap",
+      "1% of LinkedIn users are creators. Of that 1%, 90% is AI noise. James is in the 0.1% when he posts.",
+      "Energy dissipates into the ether — the dictation trick captures it before it does",
+      "He defaults to easy tasks (clinic admin, personal admin) when harder BD tasks drift — he knows this, names it honestly",
+      "Self-imposed deadlines don't stick without a hard external event — the pattern from session 9 is still present",
+      "The business is doing a lot of heavy lifting without 100% effort — signals compounding from every direction",
+    ],
+    agreed: [
+      "Write the Standard Chartered 'lower value human capital' post — it's already written in your head",
+      "Try dictation: phone notes → AI → post, immediately after the next high-energy conversation",
+      "Finish and post the Cat Clinic M&A piece (half-written already)",
+      "Ask the business magazine director: what specifically stood out about your profile?",
+      "Explore London networks from Ben's research — commit to showing up to one",
+      "Sessions paused July and August — dashboard and Monday emails continue. Next session: 29 June, 10am",
+    ],
+    nextSession: "29 June 2026 · 10am",
+  },
   {
     number: 15,
     date: "29 April 2026",
@@ -983,17 +1005,17 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#f5f3f0", border: `1px solid #d9d4ce`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
               <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>15</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 15 — 29 April 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Strong session. Upcoming Odgers panel (60–70 FTSE directors), HR journalist podcast in the works, facilitation work from the new Cat Clinic owners. Big shift agreed: lead with coaching first, consulting second, CPO third. 10 content ideas mapped across May and June on the Content tab. Next: 27 May, 9am.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 16 — 27 May 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Good energy. Mists clearing. Cat Clinic parent company commissioned two days of facilitation. Business magazine found you via LinkedIn — November feature in the works. New podcast invite. HR journalist mini-series planning confirmed. Active pipeline on multiple fronts. The Standard Chartered rant is your next post. Dictation tactic introduced. June is the month to prove it. Summer pause agreed — back 29 June, 10am.</p>
               </div>
             </div>
 
             {/* Stat cards */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "15", sub: "Since July 2025" },
-                { label: "Next session", value: "27 May", sub: "9am · Monthly cadence" },
-                { label: "Content ideas", value: "10 new", sub: "From session 15 — Content tab" },
+                { label: "Sessions done", value: "16", sub: "Since July 2025" },
+                { label: "Next session", value: "29 June", sub: "10am · Back from France" },
+                { label: "Content ideas", value: "Ready to go", sub: "Dashboard + France — Content tab" },
                 { label: "Odgers panel", value: "Coming up", sub: "60–70 FTSE directors" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
