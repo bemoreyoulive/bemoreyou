@@ -11,7 +11,7 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "w1", text: "Warm outreach — book 5 accountant conversations by end of June" },
     { id: "w2", text: "Book your June networking events" },
     { id: "w3", text: "Repost high-performing content from the last 5 months — and spread expertise posts to 1–2 per week, not 3–4" },
-    { id: "w4", text: "Reply to Olivia — she's booked a Coffee Chat (followed up 3 times)" },
+    { id: "w4", text: "Coffee Chat with Olivia — booked for next Wednesday" },
     { id: "a1", text: "Apply the two-step audit offer language to all future posts mentioning the audits" },
     { id: "a2", text: "Reconnect with Jaz Grewal (TaxAssist) — first week of June" },
     { id: "s12", text: "Next session: Session 12 — 9 June 2026 at 9am" },
