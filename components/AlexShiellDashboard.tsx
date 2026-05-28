@@ -1,13 +1,11 @@
 "use client";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ALEX SHIELL DASHBOARD
-// 18-year-old founder of Shiell Joinery. 13 sessions over 6 months.
-// Mission: inspire the next generation to see the trades as a legitimate
-// business opportunity. Not commercial — about changing hearts and minds.
-// Platform: Instagram & TikTok (video-first). No LinkedIn.
-// Blueprint call: 26 May 2026. Fill in Brand Assets, Goals etc. after Session 1.
-// ─────────────────────────────────────────────────────────────────────────────
+// Alex Shiell Dashboard
+// 18yo founder, Shiell Joinery. 13 sessions over 6 months.
+// Mission: start a mini revolution. Not commercial. No LinkedIn.
+// No em-dashes anywhere in this file. Use commas or full stops instead.
+// No sunglasses in profile photo (Ben's rule).
+// NextMoveBox: 40-45 words MAX.
 
 import { useState } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
@@ -18,21 +16,20 @@ import MilestoneTracker from "@/components/MilestoneTracker";
 import NextMoveBox from "@/components/NextMoveBox";
 import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
-const AS_COLOR = "#d97706"; // Amber — trades energy, young, bold
+const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm): get the profile photo sorted — mysterious, holding a joinery tool. Then dictate answers to the two reflection questions below. Don't write, walk and talk. We lock messaging in the session.";
+const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm): get the profile photo sorted. Mysterious, no sunglasses, maybe holding a joinery tool. Then dictate answers to the two reflection questions below. Walk and talk. We lock messaging in the session.";
 
-// ─── TODOS ───────────────────────────────────────────────────────────────────
-// Updated after each session. Keep in sync with lib/todos.ts.
+// TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as1-1", text: "Get a profile photo sorted for Instagram + TikTok — mysterious (your word, and I agree it's the most authentic for you). Suggestion: hold a joinery tool in shot as a bit of satire / humour — raises curiosity, plants the trades flag, keeps the mystery.", owner: "Alex" },
-  { id: "as1-2", text: "Reflect on the two questions below — what does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate, don't write.", owner: "Alex" },
-  { id: "as1-3", text: "Send Ben a list of content creators you admire (any platform, any niche).", owner: "Alex" },
-  { id: "as1-4", text: "Next session: Wednesday 3 June 2026 at 6pm — locking messaging, finalising Instagram + TikTok, walking through this dashboard.", owner: "Alex" },
+  { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed). No sunglasses. Idea: hold a joinery tool as a bit of satire. Raises curiosity, plants the trades flag.", owner: "Alex" },
+  { id: "as1-2", text: "Reflect on the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate, don't write.", owner: "Alex" },
+  { id: "as1-3", text: "Send Ben a list of content creators you admire. Any platform, any niche.", owner: "Alex" },
+  { id: "as1-4", text: "Next session: Wednesday 3 June 2026 at 6pm. Locking messaging, finalising Instagram and TikTok, walking through this dashboard.", owner: "Alex" },
 ];
 
-// ─── SESSIONS ────────────────────────────────────────────────────────────────
+// SESSIONS
 
 const AS_SESSIONS: {
   number: number;
@@ -40,106 +37,125 @@ const AS_SESSIONS: {
   title: string;
   summary: string;
   insights: string[];
-  agreed: string[];
+  takeaways: string[];
   nextSession: string;
 }[] = [
   {
     number: 1,
     date: "26 May 2026",
-    title: "Blueprint Call — laying the foundation",
-    summary: "Our blueprint call ran 103 minutes — 13 minutes over — and that was a good sign. You arrived already articulate, already opinionated, already on camera comfortable, and already with content getting 100k-150k views without any positioning behind it. Most clients spend months unearthing their voice. You came pre-packaged. We spent the session pulling out the stories you've never told publicly — the £7.55 firing and the tribunal win, the four silent years at school, the McDonald's conversation that flipped your social confidence, the 30 rejected quotes, the Geronimo SMMA past. We agreed the mission is bigger than getting joinery enquiries — you're trying to start a 'mini revolution' aimed at the young people being sold get-rich-quick lies by SMMA gurus, dropshippers and Dubai crypto bros. The strategic frame we landed on: document the journey, don't lead with how-tos. Your enemy list is sharp (hustle culture, the manosphere, apprenticeship exploitation, old-school tradesmen, university as default). Your hero is Charlie Mullins. Your one-liner is 'become bigger than the company that fired me.' Platforms: TikTok primary, Instagram secondary, no LinkedIn for now. Cadence: minimum 2 pieces of content per week, no scripts, no pre-approval. You'll be away 1 July to mid-August — we're turning that travel into content, not letting it kill momentum.",
+    title: "Blueprint Call. Laying the foundation.",
+    summary: "The blueprint call ran 103 minutes, 13 over, and that was a good sign. You arrived already articulate, already opinionated, already comfortable on camera, and already with content hitting 100k to 150k views with zero positioning behind it. Most clients spend months finding their voice. You came pre-packaged. We spent the session pulling out the stories you've never told publicly: the £7.55 firing and the tribunal win, the four silent years at school, the McDonald's conversation that flipped your social confidence, the 30 rejected quotes, the SMMA past with Geronimo. The mission is bigger than joinery enquiries. You want to start a mini revolution aimed at young people being sold get-rich-quick lies by SMMA wankers, dropshippers and Dubai crypto bros. The strategic frame we landed on: document the journey, don't lead with how-tos. Your enemy list is sharp. Hustle culture, the manosphere, apprenticeship exploitation, old-school tradesmen, university as default. Your hero is Charlie Mullins. Your one-liner is become bigger than the company that fired me. Platforms: TikTok primary, Instagram secondary, no LinkedIn for now. Minimum 2 pieces of content per week. No scripts, no pre-approval. Away 1 July to mid-August. That travel becomes content, not a momentum killer.",
     insights: [
-      "You came pre-packaged — opinions, voice, on-camera confidence already there. That's rare. Our job is focus, not creation.",
-      "You're chasing clout, not money — and at 18 you intuitively get the long game. That's the unlock.",
+      "You came pre-packaged. Opinions, voice, on-camera confidence already there. That's rare. Our job is focus, not creation.",
+      "You're chasing clout, not money. At 18 you intuitively get the long game. That's the unlock.",
       "The £7.55 firing is the single biggest fuel source for everything you're building. Don't lose it.",
-      "'Documenting the journey' beats 'lived experiences' for you because you're 18 — the journey IS the content.",
-      "Your rant format works (100k-150k views with no positioning). Don't change the format. Point it at the right thing.",
+      "Documenting the journey beats lived experiences for you because you're 18. The journey IS the content.",
+      "Your rant format already works (100k to 150k views with no positioning). Don't change the format. Just point it at the right thing.",
     ],
-    agreed: [
-      "Post minimum 2 pieces of content per week — TikTok primary, Instagram secondary",
-      "Personal Instagram + TikTok to be set up properly in Session 2",
-      "No scripts, no pre-approval — film authentically, review at sessions",
-      "6-week travel (1 July – mid-August) becomes content goldmine, not a momentum killer",
-      "Ben delivers ~10 content ideas per fortnight, calibrate after Session 3",
-      "Reflect on 'what does happy actually look like' before Session 2",
+    takeaways: [
+      "Three to-dos set for before Session 2. Profile photo, two reflection questions, list of creators you admire.",
+      "Session 2 will lock messaging and positioning, finalise Instagram and TikTok profiles, and walk through this dashboard.",
+      "Content ideas and brand assets in this dashboard are starting points only. Nothing is confirmed until we review together.",
     ],
-    nextSession: "Session 2 — Wednesday 3 June 2026 at 6pm. Lock messaging + positioning, finalise Instagram & TikTok profiles, walk through this dashboard.",
+    nextSession: "Session 2. Wednesday 3 June 2026 at 6pm. Lock messaging and positioning, finalise Instagram and TikTok, walk through this dashboard.",
   },
 ];
 
-// ─── POSITIONING ─────────────────────────────────────────────────────────────
-// Filled in after Session 1.
+// POSITIONING. These are ideas and starting points only. Nothing confirmed until Session 2.
 
 const AS_POSITIONING = {
   headline: "Mogging the construction industry. 18, building Shiell Joinery in Edinburgh, and starting a mini revolution for a generation being sold get-rich-quick lies. Going to be bigger than the company that fired me.",
   differentiators: [
-    "18 years old, in the trades, with a business mindset and an anti-guru position — no-one else is in this lane.",
+    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane.",
     "Already lived the thing you're calling out. Did SMMA with Geronimo. Walked away. That's not theoretical, that's receipts.",
-    "Not a qualified joiner — run the business as a project manager. Itself a contrarian story: you don't need 15 years on the tools.",
-    "Format already proven — rant videos hitting 100k–150k views with zero positioning. We're just pointing it at the right thing.",
-    "You understand clout > money at 18. Most people don't get that until 40.",
+    "Not a qualified joiner. You run the business as a project manager. That's itself a contrarian story: you don't need 15 years on the tools.",
+    "Format already proven. Rant videos hitting 100k to 150k views with zero positioning. We're just pointing it at the right thing.",
+    "You understand clout over money at 18. Most people don't get that until 40.",
     "Articulate, fast-thinking, no filter. Pre-packaged voice. Most clients take months to find theirs.",
   ],
   audiences: [
-    { label: "Primary — Young people, 15–25", detail: "Apprentices being underpaid and underdeveloped. Kids being sold SMMA, dropshipping, crypto and 'make £10k from your laptop' lies. They're online looking for a way out — you're showing them a real one." },
-    { label: "Secondary — Older tradesmen (the controversy generators)", detail: "You want them disputing you in the comments. They've built the business by being in the game long enough, not because they're businessmen. They'll hate you. That's the algorithm working." },
-    { label: "Tertiary — People without an opinion yet", detail: "Not 'changing perspectives' — giving them a perspective they hadn't considered. The kid who hadn't thought about the trades at all." },
+    { label: "Primary. Young people, 15 to 25.", detail: "Apprentices being underpaid and underdeveloped. Kids being sold SMMA, dropshipping, crypto and make £10k from your laptop lies. They're online looking for a way out. You're showing them a real one." },
+    { label: "Secondary. Older tradesmen. The controversy generators.", detail: "You want them disputing you in the comments. They've built their business by being in the game long enough, not because they're proper businessmen. They'll hate you. That's the algorithm working." },
+    { label: "Tertiary. People without an opinion yet.", detail: "Not changing perspectives but giving them a perspective they hadn't considered. The kid who hadn't thought about the trades at all." },
   ],
   bios: [
-    { platform: "Instagram", text: "18 · Shiell Joinery, Edinburgh · Mogging the construction industry · Going to be bigger than the company that fired me · TikTok ↓" },
-    { platform: "Instagram (alt)", text: "Founder, Shiell Joinery · Starting a mini revolution in the trades · Edinburgh · 18" },
-    { platform: "TikTok", text: "18 · Joinery in Edinburgh · Trades is the new dropshipping (you're early) · Not a guru. Not in Dubai." },
-    { platform: "TikTok (alt)", text: "Building Shiell Joinery at 18 · Mogging the construction industry · Get your hands dirty" },
+    { platform: "Instagram (option 1)", text: "18 · Shiell Joinery, Edinburgh · Going to be bigger than the company that fired me" },
+    { platform: "Instagram (option 2)", text: "Founder, Shiell Joinery · Mogging the construction industry · Edinburgh · 18" },
+    { platform: "TikTok (option 1)", text: "18 · Joinery in Edinburgh · Trades is the new dropshipping. You're early." },
+    { platform: "TikTok (option 2)", text: "Building Shiell Joinery at 18 · Not a guru. Not in Dubai. · Get your hands dirty" },
   ],
   uniqueAngles: [
-    "The 'company van' bit — when you spot a building company van, snap a photo there and then. Later, film a short: 'Saw this van today. Here's what I'd do differently.' Recurring format. Audience starts sending you vans. Free content engine.",
+    "The company van series. Every time you spot a building company van, snap a photo. Film a short later: saw this van today, here's what I'd do differently. Recurring format. Audience starts sending you vans. Free content engine.",
     "The construction industry is living in 2005. You're here to drag it into now. Position every rant against that backdrop.",
-    "Call out hustle culture in real time every time you see it. Don't wait — quote-stitch a Tate clip, screen-record a Dubai dropshipper post, film a reaction. The contrarian voice has to be in the conversation, not adjacent to it.",
-    "The 'I'm not a qualified joiner' angle. Lean into it. The trades love telling young people they need 15 years on the tools — you're proof they don't.",
-    "Documenting the path to becoming bigger than the company that fired you. A long-running narrative thread. Every milestone — first employee, first 50k job, first piece of press — laddered back to the £7.55.",
+    "Call out hustle culture in real time every time you see it. Quote-stitch a Tate clip, screen-record a Dubai dropshipper post, film a reaction. The contrarian voice has to be in the conversation, not watching from the sidelines.",
+    "The I'm not a qualified joiner angle. Lean into it. The trades love telling young people they need 15 years on the tools. You're proof they don't.",
+    "Documenting the path to becoming bigger than the company that fired you. A long-running thread. Every milestone, first employee, first 50k job, first press mention, laddered back to the £7.55.",
   ],
   forAgainst: {
     for: [
-      "Young entrepreneurs in the trades — treating construction as a real business industry.",
-      "Apprentices being respected, paid fairly, taught business skills, not just labour.",
-      "Living a normal life while building a business — friends, dating, beach, parents.",
+      "Young entrepreneurs in the trades. Treating construction as a real, modern business industry.",
+      "Apprentices being respected, paid fairly, taught business skills and not just used as cheap labour.",
+      "Living a normal life while building a business. Friends, dating, beach, parents.",
       "Chasing experiences over money.",
       "Building wealth that doesn't cost your mental health.",
     ],
     against: [
-      "Hustle culture, cold-shower-monk-mode, the 'black pill guru' mentality.",
+      "Hustle culture, cold-shower-monk-mode, the black pill guru mentality.",
       "Andrew Tate and the manosphere.",
-      "SMMA, dropshipping, crypto, 'make £10k from a laptop in Dubai' gurus.",
+      "SMMA, dropshipping, crypto. The make £10k from a laptop in Dubai wankers.",
       "Old-school tradesmen who refuse to innovate.",
-      "Apprenticeship exploitation — paying labourer work at apprentice wages.",
+      "Apprenticeship exploitation. Paying labourer work at apprentice wages.",
       "University as the default, especially business degrees.",
-      "The '15 years on site before you can build something' mindset.",
+      "The 15 years on site before you can build something mindset.",
     ],
   },
   contentPillars: [
-    { title: "The Mini Revolution", body: "The big-picture contrarian takes. Trades as the new untapped opportunity. SMMA / dropshipping / Dubai bros are the wrong path. Joinery is the new dropshipping — you're early. Anchor pillar. Rant format. The £7.55 story, the school years, the 30 rejected quotes — all live here." },
-    { title: "Mogging the Construction Industry", body: "Calling out what's broken in trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. This is where the older tradesmen come and fight you in the comments — exactly what you want." },
-    { title: "Documenting the Journey", body: "Real-time business reality. Hiring your first employee. Quoting jobs. Winning jobs. Losing jobs. The path to becoming bigger than the company that fired you. Behind-the-scenes of running Shiell Joinery at 18. People follow this because it's actually happening — not a course, not a guru, a real business in real time." },
-    { title: "The Life Behind The Hustle", body: "The proof point. Friends, dating, parents, beach days, travelling 6 weeks at 18 while the business runs. You can be ambitious AND have a life. This pillar is the answer to the hustle bros — and the reason people trust you over them." },
+    { title: "The Mini Revolution", body: "The big-picture contrarian takes. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping. You're early. This is the anchor pillar. The £7.55 story, the school years, the 30 rejected quotes all live here. Rant format." },
+    { title: "Mogging the Construction Industry", body: "Calling out what's broken in trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. This is where the older tradesmen come and fight you in the comments. That's exactly what you want." },
+    { title: "Documenting the Journey", body: "Real-time business reality. Hiring your first employee. Quoting jobs. Winning jobs. Losing jobs. The path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. People follow this because it's actually happening. Not a course, not a guru, a real business in real time." },
+    { title: "The Life Behind The Business", body: "The proof point. Friends, dating, parents, beach days, travelling 6 weeks at 18 while the business runs. You can be ambitious and have a life. This pillar is the answer to the hustle bros and the reason people trust you over them." },
   ],
 };
 
-// ─── CONTENT IDEAS ───────────────────────────────────────────────────────────
+// CONTENT IDEAS
 
 const AS_CONTENT: { hook: string; guidance: string; priority: boolean }[] = [];
 
-// ─── RECOMMENDATIONS ─────────────────────────────────────────────────────────
+// RECOMMENDATIONS
 
 const AS_RECS: { title: string; body: string }[] = [];
 
-// ─── GOALS ───────────────────────────────────────────────────────────────────
+// GOALS
 
 const AS_GOALS = {
-  short: [] as string[],
-  long: [] as string[],
+  threeMonth: [
+    "Personal Instagram and TikTok set up properly with positioning, bio and a proper photo.",
+    "Followers starting to move. Low thousands on at least one platform.",
+    "A handful of videos that get real engagement under the new positioning.",
+    "DMs starting to come in. Apprentices, peers, the odd troll.",
+    "At least one signal worth logging. Recognition, an opportunity, a comment that shows the message is landing.",
+    "The way you talk about the work has started to shift. Less about follower counts, more about who you're reaching.",
+  ],
+  sixMonth: [
+    "A recognisable presence on TikTok and Instagram. The contrarian young-trades voice.",
+    "A real audience. Enough that a single post is reaching thousands.",
+    "Real-world signals. DMs from apprentices saying you changed their mind. Requests for podcast appearances. Trolls in the comments (the good kind).",
+    "Shiell Joinery has at least one full-time employee or a clear path to one.",
+    "You've started thinking about what monetisation could look like. Course, speaking, partnerships. Nothing has to land yet.",
+    "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels noticeably far away.",
+  ],
+  business: [
+    "6 employees on the Shiell Joinery payroll within 12 months.",
+    "Biggest joinery company in Edinburgh.",
+    "Bigger than the company that fired you.",
+  ],
+  notThisGame: [
+    "We are not chasing follower counts for the sake of it.",
+    "We are not optimising for views over authenticity.",
+    "We are not building a funnel or a personal brand to generate more joinery enquiries.",
+    "Vanity metrics are a side effect of doing it right. They are not the goal.",
+  ],
 };
-
-// ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
   { id: "home", label: "Home" },
@@ -202,7 +218,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "32px 32px" }}>
 
-        {/* ── HOME ── */}
+        {/* HOME */}
         {activeTab === "home" && (
           <div>
             <SessionPrepPrompt />
@@ -217,7 +233,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome, Alex.</p>
                 <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.65, margin: 0 }}>
-                  This is your personal brand dashboard — a working document that'll grow with you over the next 6 months and 13 sessions. It's not a polished deck. It's a strategy that lives and evolves. Everything in here is grounded in your own words, your own stories, and your own vision. After every session, Ben updates it and you'll find the latest thinking here.
+                  This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions. Not a polished deck. A strategy that lives and evolves. Everything in here is grounded in your own words, your own stories, your own vision. After every session Ben updates it and the latest thinking is here.
                 </p>
               </div>
             </div>
@@ -226,7 +242,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
                 { label: "Sessions", value: "1 of 13", sub: "Next: Wed 3 June, 6pm" },
-                { label: "Programme length", value: "6 months", sub: "May — November 2026" },
+                { label: "Programme length", value: "6 months", sub: "May to November 2026" },
                 { label: "Platform", value: "Instagram & TikTok", sub: "Video-first content" },
                 { label: "Content live", value: "Coming soon", sub: "First video after Session 2" },
               ].map((s, i) => (
@@ -248,25 +264,25 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               )}
             </div>
 
-            {/* Reflection prompts — sit with these before Session 2 */}
+            {/* Reflection prompts */}
             <div style={{ marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Sit With These</p>
               <h3 style={{ fontSize: "1.4rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 16px", letterSpacing: "-0.01em" }}>Two questions to bring to Session 2</h3>
 
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14 }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 1 — What does happy actually look like?</p>
-                <p style={{ fontSize: "0.92rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.55, margin: "0 0 12px" }}>Right now — not in 5 years, not when you've "made it" — what does happy actually look like for you?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said in the blueprint that you'd choose clout over money, that you'd rather chase experiences than chase a number. You said a family on £60k who go to Spain together is more successful than a rich family who barely see each other. So the question is — what's that look like for YOU? Beach days with your girlfriend? Time with your parents? A pint with the school mates who knew you when you didn't speak? Travelling for 6 weeks at 18 while your business runs in the background?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>This matters because the content only works if the life behind it is real. People follow you because you've cracked something they haven't — that you can be ambitious AND happy. Without an answer to this, the content drifts into the hustle-culture lane you've spent the last year calling out.</p>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 1. What does happy actually look like?</p>
+                <p style={{ fontSize: "0.92rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.55, margin: "0 0 12px" }}>Right now. Not in 5 years, not when you've made it. What does happy actually look like for you?</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said in the blueprint that you'd choose clout over money, that you'd rather chase experiences than chase a number. You said a family on £60k who go to Spain together is more successful than a rich family who barely see each other. So what does that look like for you? Beach days with your girlfriend? Time with your parents? A pint with the school mates who knew you when you didn't speak? Travelling 6 weeks at 18 while your business runs in the background?</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>This matters because the content only works if the life behind it is real. People follow you because you've cracked something they haven't. That you can be ambitious and happy. Without an answer to this, the content drifts into the hustle-culture lane you've spent the last year calling out.</p>
                 <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>How to do it: don't sit at a laptop. Go for a walk, hit dictate on your phone, talk for 5 minutes. Send it to Ben on WhatsApp or bring it to Session 2.</p>
               </div>
 
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "22px 26px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 2 — What do you want them walking away thinking?</p>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 2. What do you want them walking away thinking?</p>
                 <p style={{ fontSize: "0.92rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.55, margin: "0 0 12px" }}>Someone watches your content for 3 months. Then someone watches for 6 months. What do they walk away thinking, believing, or doing differently?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>Be specific. Not "they think trades are cool." That's not it. Is it the 16-year-old who was about to sign up to a business degree and instead picks up the phone to a local joinery firm? Is it the apprentice on £7.55/hr who finally pushes back on their boss? Is it the older tradesman in the comments arguing — and slowly realising you might be right? Is it the kid in Dubai who shuts the laptop and books a flight home?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said you want a "mini revolution" and you want people to think they're early. Early on what? Articulate the thing they're early on. The clearer you can describe the person at the end of the video — what they now believe that they didn't before — the easier every single piece of content gets to make.</p>
-                <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>How to do it: try answering it for both timeframes. 3 months: what's the first shift? 6 months: what's the bigger one? Dictate it. Don't overthink.</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>Be specific. Not "they think trades are cool." That's not it. Is it the 16-year-old who was about to sign up to a business degree and instead picks up the phone to a local joinery firm? Is it the apprentice on £7.55/hr who finally pushes back on their boss? Is it the older tradesman in the comments arguing, slowly realising you might be right? Is it the kid in Dubai who shuts the laptop and books a flight home?</p>
+                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said you want a mini revolution and you want people to think they're early. Early on what? Articulate the thing they're early on. The clearer you can describe the person at the end of the video, what they now believe that they didn't before, the easier every single piece of content gets to make.</p>
+                <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>How to do it: answer it for both timeframes. 3 months: what's the first shift? 6 months: what's the bigger one? Dictate it. Don't overthink.</p>
               </div>
             </div>
 
@@ -276,12 +292,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What's in this dashboard</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
                   {[
-                    "Your positioning — who you're speaking to and what you stand for",
-                    "Brand assets — your messaging, bio, and core narrative",
-                    "Content ideas — video hooks, angles, and what to do with them",
-                    "Ben's recommendations from each session",
-                    "Your short and long-term goals",
-                    "A session-by-session record of your journey",
+                    "Your positioning. Who you're speaking to and what you stand for.",
+                    "Brand assets. Your messaging, bio ideas, and core narrative.",
+                    "Content ideas. Video hooks, angles, and what to do with them.",
+                    "Ben's recommendations from each session.",
+                    "Your short and long-term goals.",
+                    "A session-by-session record of your journey.",
                   ].map((item, i) => (
                     <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
                       <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
@@ -293,12 +309,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What this is (and isn't)</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
                   {[
-                    "A working document — not a polished presentation",
-                    "Everything grounded in your own words and stories",
-                    "Something to review together, not handed over and filed",
-                    "Not a script — it's scaffolding. You film in your own voice.",
-                    "Living — it gets updated after every session",
-                    "Built for a mission, not a marketing funnel",
+                    "A working document. Not a polished presentation.",
+                    "Everything grounded in your own words and stories.",
+                    "Something to review together, not handed over and filed.",
+                    "Not a script. It's scaffolding. You film in your own voice.",
+                    "Living. It gets updated after every session.",
+                    "Built for a mission, not a marketing funnel.",
                   ].map((item, i) => (
                     <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
                       <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
@@ -312,7 +328,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
               <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
-                You're not building a personal brand to get more joinery enquiries. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission — and it's exactly the right reason to do this. The most credible personal brands come from people who genuinely mean it.
+                You're not building a personal brand to get more joinery enquiries. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission. And it's exactly the right reason to do this. The most credible personal brands come from people who genuinely mean it.
               </p>
             </div>
 
@@ -320,30 +336,30 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
-        {/* ── SESSIONS ── */}
+        {/* SESSIONS */}
         {activeTab === "sessions" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Your Journey</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 24px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
 
-            {/* Starting Line Snapshot — Day One baseline */}
+            {/* Starting Line Snapshot */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "24px 28px", marginBottom: 36 }}>
-              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot — 26 May 2026</p>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot. 26 May 2026.</p>
               <h3 style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.01em" }}>Where you are on Day One</h3>
               <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 16px" }}>A frozen picture of where you are the day this programme begins. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to compare. It's the only honest way to measure how far you've actually moved.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Audience</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal Instagram: ~43–45 followers, zero posts</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal TikTok: no active account — ~20 rant videos, some hit 100k–150k views</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal Instagram: ~43 to 45 followers, zero posts</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal TikTok: no active account. About 20 rant videos, some hitting 100k to 150k views</p>
                   <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Shiell Joinery Instagram: low followers, captions shifting from corporate to Gen Z</p>
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>The Business</p>
                   <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>8 months trading</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Zero employees, 2–3 subcontractors as needed</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Sales conversion ~1 in 2–3</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Zero employees, 2 to 3 subcontractors as needed</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Sales conversion roughly 1 in 2 to 3</p>
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Content output</p>
@@ -355,11 +371,11 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Mindset</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High energy. Excited. Hungry. Fixated on follower counts, views, likes. Impatient. No expressed anxiety.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High energy. Excited. Hungry. Numbers-driven right now, all about follower counts and views. Impatient. No expressed anxiety.</p>
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Stories never told publicly yet</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>The £7.55 firing + tribunal win, the four silent school years, McDonald's confidence moment, the 30 rejected quotes, the SMMA past, the "Dubai crypto bro" take.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>The £7.55 firing and tribunal win, the four silent school years, the McDonald's confidence moment, the 30 rejected quotes, the SMMA past, the Dubai crypto bro take.</p>
                 </div>
               </div>
             </div>
@@ -397,10 +413,10 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                             ))}
                           </div>
                           <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "14px 16px" }}>
-                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>What was agreed</p>
-                            {session.agreed.map((action, j) => (
+                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Takeaways</p>
+                            {session.takeaways.map((action, j) => (
                               <div key={j} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-                                <span style={{ color: "#2e7d4f", fontWeight: 700, flexShrink: 0, fontSize: "0.8rem" }}>✓</span>
+                                <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem" }}>→</span>
                                 <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{action}</p>
                               </div>
                             ))}
@@ -420,21 +436,40 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
-        {/* ── MILESTONES ── */}
+        {/* MILESTONES */}
         {activeTab === "milestones" && (
           <MilestoneTracker slug={slug} color={AS_COLOR} />
         )}
 
-        {/* ── BRAND ASSETS ── */}
+        {/* BRAND ASSETS */}
         {activeTab === "brand" && (
           <div>
             {AS_POSITIONING.headline ? (
               <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Who You're For & How You're Different</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
+                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+                <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we agree. Treat everything as a draft.</p>
+                </div>
 
-                <div style={{ background: AS_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 20 }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning Statement</p>
+                {/* Content pillars — top of brand tab */}
+                <div style={{ marginBottom: 24 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four buckets your content lives in. Every video drops into one of these. Rough mix over time. Feel it, don't measure it.</p>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+                    {AS_POSITIONING.contentPillars.map((p, i) => (
+                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 20px 22px" }}>
+                        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Pillar {i + 1}</p>
+                        <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
+                        <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Positioning idea */}
+                <div style={{ background: AS_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 16 }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning idea (draft)</p>
                   <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0 }}>{AS_POSITIONING.headline}</p>
                 </div>
 
@@ -462,10 +497,10 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   </div>
                 )}
 
-                {/* Bios — Instagram & TikTok */}
+                {/* Bios */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Bio options — Instagram & TikTok</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>Starting drafts. Pick one per platform in Session 2, or mix and match. Bios are cheap to swap — change them as you go.</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Bio ideas. Instagram and TikTok.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>Starting drafts only. We pick one per platform in Session 2, or write something fresh. Bios are cheap to change.</p>
                   {AS_POSITIONING.bios.map((b, i) => (
                     <div key={i} style={{ borderTop: i === 0 ? "none" : "1px solid #F0EBE3", paddingTop: i === 0 ? 0 : 12, marginTop: i === 0 ? 0 : 12 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, color: AS_COLOR, margin: "0 0 4px" }}>{b.platform}</p>
@@ -476,7 +511,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
                 {/* Unique angles */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Unique angles & opinions</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Unique angles and opinions</p>
                   <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The signature moves nobody else is doing in this space.</p>
                   {AS_POSITIONING.uniqueAngles.map((a, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12 }}>
@@ -486,10 +521,10 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   ))}
                 </div>
 
-                {/* Stand For / Stand Against — side by side */}
+                {/* Stand For / Stand Against */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>What you stand for & against</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Every piece of content should be plantable into one of these columns. If it doesn't fit either side, it's probably off-brand.</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>What you stand for and against</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Every piece of content should fit into one of these columns. If it doesn't, it's probably off-brand.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                     <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "16px 18px" }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#2e7d4f", margin: "0 0 12px", letterSpacing: "0.08em", textTransform: "uppercase" }}>Stand FOR</p>
@@ -511,31 +546,37 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                     </div>
                   </div>
                 </div>
-
-                {/* Content pillars */}
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four buckets your content lives in. Every video drops into one of these. Rough mix to aim for over time — feel it, don't measure it.</p>
-                  {AS_POSITIONING.contentPillars.map((p, i) => (
-                    <div key={i} style={{ borderTop: i === 0 ? "none" : "1px solid #F0EBE3", paddingTop: i === 0 ? 0 : 14, marginTop: i === 0 ? 0 : 14 }}>
-                      <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 6px" }}>{i + 1}. {p.title}</p>
-                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             ) : <PlaceholderTab label="Brand Assets" />}
             <CommentBox clientName="Alex Shiell" tabName="Brand Assets" slug={slug} />
           </div>
         )}
 
-        {/* ── CONTENT IDEAS ── */}
+        {/* CONTENT IDEAS */}
         {activeTab === "content" && (
           <div>
-            {AS_CONTENT.length > 0 ? (
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>Specific video ideas and hooks land here after each session. For now, start with the four pillars below. Every video you make fits into one of them.</p>
+
+            {/* Pillars in content tab */}
+            <div style={{ marginBottom: 32 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>These are the buckets. When you don't know what to film, come back here and pick a pillar. Then just talk.</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+                {AS_POSITIONING.contentPillars.map((p, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 20px 22px" }}>
+                    <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Pillar {i + 1}</p>
+                    <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
+                    <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {AS_CONTENT.length > 0 && (
               <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Content Strategy</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 14px" }}>Video ideas</p>
                 {AS_CONTENT.map((idea, i) => (
                   <div key={i} style={{ background: idea.priority ? "#fffbf2" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${AS_COLOR}` : "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
                     <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.5 }}>{idea.hook}</p>
@@ -543,12 +584,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   </div>
                 ))}
               </div>
-            ) : <PlaceholderTab label="Content Ideas" />}
+            )}
             <CommentBox clientName="Alex Shiell" tabName="Content Ideas" slug={slug} />
           </div>
         )}
 
-        {/* ── RECOMMENDATIONS ── */}
+        {/* RECOMMENDATIONS */}
         {activeTab === "recommendations" && (
           <div>
             {AS_RECS.length > 0 ? (
@@ -567,35 +608,55 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
-        {/* ── GOALS ── */}
+        {/* GOALS */}
         {activeTab === "goals" && (
           <div>
-            {AS_GOALS.short.length > 0 || AS_GOALS.long.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Where We're Headed</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Goals</h2>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>Short-term</p>
-                    {AS_GOALS.short.map((g, i) => (
-                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                        <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>Long-term</p>
-                    {AS_GOALS.long.map((g, i) => (
-                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                        <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                      </div>
-                    ))}
-                  </div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Where We're Headed</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics. They're the things that actually tell us the work is landing.</p>
+
+            {/* Not this game — top of goals */}
+            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 12px" }}>Not this game</p>
+              {AS_GOALS.notThisGame.map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: 10, marginBottom: 8 }}>
+                  <span style={{ color: "#c0392b", fontWeight: 700, flexShrink: 0, fontSize: "0.85rem" }}>✕</span>
+                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{item}</p>
                 </div>
+              ))}
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 20 }}>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>3 months. Late August 2026.</p>
+                {AS_GOALS.threeMonth.map((g, i) => (
+                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                    <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                  </div>
+                ))}
               </div>
-            ) : <PlaceholderTab label="Goals" />}
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>6 months. November 2026.</p>
+                {AS_GOALS.sixMonth.map((g, i) => (
+                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                    <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>The business. 12 months.</p>
+              {AS_GOALS.business.map((g, i) => (
+                <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                  <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
+                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                </div>
+              ))}
+            </div>
+
             <CommentBox clientName="Alex Shiell" tabName="Goals" slug={slug} />
           </div>
         )}
