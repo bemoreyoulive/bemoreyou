@@ -76,6 +76,7 @@ const SIGNALS: { id: string; label: string; description: string }[] = [
 interface Props {
   slug: string;
   color: string;
+  milestones?: { id: string; label: string; description: string }[];
 }
 
 function ItemCard({
@@ -167,7 +168,8 @@ function ItemCard({
   );
 }
 
-export default function MilestoneTracker({ slug, color }: Props) {
+export default function MilestoneTracker({ slug, color, milestones }: Props) {
+  const milestoneList = milestones ?? MILESTONES;
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [saving, setSaving] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
@@ -198,7 +200,7 @@ export default function MilestoneTracker({ slug, color }: Props) {
     setSaving(null);
   }
 
-  const mDone = MILESTONES.filter(m => !!completed[m.id]).length;
+  const mDone = milestoneList.filter(m => !!completed[m.id]).length;
   const sDone = SIGNALS.filter(s => !!completed[s.id]).length;
 
   if (!loaded) return null;
@@ -224,15 +226,15 @@ export default function MilestoneTracker({ slug, color }: Props) {
           <div style={{ marginBottom: 16 }}>
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 4 }}>
               <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1C1C1C", margin: 0 }}>Milestones</h3>
-              <span style={{ fontSize: "0.82rem", fontWeight: 700, color }}>{mDone}/{MILESTONES.length}</span>
+              <span style={{ fontSize: "0.82rem", fontWeight: 700, color }}>{mDone}/{milestoneList.length}</span>
             </div>
             <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: "0 0 10px", lineHeight: 1.5 }}>The key shifts and assets we've built together.</p>
             <div style={{ background: "#E0DBD3", borderRadius: 4, height: 5, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: `${Math.round((mDone / MILESTONES.length) * 100)}%`, background: color, borderRadius: 4, transition: "width 0.4s ease" }} />
+              <div style={{ height: "100%", width: `${Math.round((mDone / milestoneList.length) * 100)}%`, background: color, borderRadius: 4, transition: "width 0.4s ease" }} />
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {MILESTONES.map((m, i) => (
+            {milestoneList.map((m, i) => (
               <ItemCard
                 key={m.id}
                 item={m}

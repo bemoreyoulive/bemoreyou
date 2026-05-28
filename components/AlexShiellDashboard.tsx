@@ -18,15 +18,15 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm): get the profile photo sorted. Mysterious, no sunglasses, maybe holding a joinery tool. Then dictate answers to the two reflection questions below. Walk and talk. We lock messaging in the session.";
+const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm). Profile photo sorted, mysterious, no bloody sunglasses, joinery tool optional but funny. Then dictate the two reflection questions below. Walk and talk, don't write. We lock the messaging in the session, mate.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed). No sunglasses. Idea: hold a joinery tool as a bit of satire. Raises curiosity, plants the trades flag.", owner: "Alex" },
-  { id: "as1-2", text: "Reflect on the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate, don't write.", owner: "Alex" },
-  { id: "as1-3", text: "Send Ben a list of content creators you admire. Any platform, any niche.", owner: "Alex" },
-  { id: "as1-4", text: "Next session: Wednesday 3 June 2026 at 6pm. Locking messaging, finalising Instagram and TikTok, walking through this dashboard.", owner: "Alex" },
+  { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed, it suits you). No bloody sunglasses. Hold a joinery tool in shot if you fancy a bit of satire, raises curiosity and plants the trades flag straight away.", owner: "Alex" },
+  { id: "as1-2", text: "Sit with the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate it, don't write it, that's how you sound like you.", owner: "Alex" },
+  { id: "as1-3", text: "Send me a list of content creators you actually admire. Any platform, any niche. Helps me read your taste.", owner: "Alex" },
+  { id: "as1-4", text: "Next session: Wednesday 3 June 2026, 6pm. We lock messaging, finalise Instagram and TikTok, and I walk you through this dashboard properly.", owner: "Alex" },
 ];
 
 // SESSIONS
@@ -64,58 +64,75 @@ const AS_SESSIONS: {
 // POSITIONING. These are ideas and starting points only. Nothing confirmed until Session 2.
 
 const AS_POSITIONING = {
-  headline: "Mogging the construction industry. 18, building Shiell Joinery in Edinburgh, and starting a mini revolution for a generation being sold get-rich-quick lies. Going to be bigger than the company that fired me.",
+  headlineDrafts: [
+    { risk: 1, text: "18, building Shiell Joinery in Edinburgh. Documenting what it actually takes, the wins, the losses, the people I'm hiring along the way. Going to be GODDAMN bigger than the company that fired me." },
+    { risk: 1, text: "Founder of Shiell Joinery at 18. Showing you what nobody else in the trades is showing. The real numbers, the real jobs, the real graft. No gurus, no Dubai, no laptops in coffee shops." },
+    { risk: 2, text: "Building a proper joinery business at 18 while everyone else my age is being sold dropshipping dreams. Documenting the journey to becoming GODDAMN bigger than the company that fired me." },
+    { risk: 2, text: "18, no joinery qualifications, running a real construction business in Edinburgh. Trades is the new dropshipping, and you're early. Hiring my first employees on camera. Going to be GODDAMN bigger than the company that fired me." },
+    { risk: 3, text: "Starting a mini revolution in the trades. 18, founder of Shiell Joinery, going to be GODDAMN bigger than the company that fired me. Apprentices are being taken the piss out of and someone needs to bloody say it." },
+  ],
   differentiators: [
-    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane.",
-    "Already lived the thing you're calling out. Did SMMA with Geronimo. Walked away. That's not theoretical, that's receipts.",
-    "Not a qualified joiner. You run the business as a project manager. That's itself a contrarian story: you don't need 15 years on the tools.",
+    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now, mate.",
+    "You've already lived the thing you're calling out. Did SMMA with Geronimo. Walked away. That's not theoretical, that's receipts.",
+    "Not a qualified joiner. You run the business as a project manager. That's itself a contrarian story, you don't need 15 years on the tools.",
     "Format already proven. Rant videos hitting 100k to 150k views with zero positioning. We're just pointing it at the right thing.",
-    "You understand clout over money at 18. Most people don't get that until 40.",
+    "You understand clout over money at 18. Most people don't get that until they're 40 and already burnt out.",
     "Articulate, fast-thinking, no filter. Pre-packaged voice. Most clients take months to find theirs.",
   ],
   audiences: [
-    { label: "Primary. Young people, 15 to 25.", detail: "Apprentices being underpaid and underdeveloped. Kids being sold SMMA, dropshipping, crypto and make £10k from your laptop lies. They're online looking for a way out. You're showing them a real one." },
-    { label: "Secondary. Older tradesmen. The controversy generators.", detail: "You want them disputing you in the comments. They've built their business by being in the game long enough, not because they're proper businessmen. They'll hate you. That's the algorithm working." },
-    { label: "Tertiary. People without an opinion yet.", detail: "Not changing perspectives but giving them a perspective they hadn't considered. The kid who hadn't thought about the trades at all." },
+    { label: "Primary. Young people, 15 to 25.", detail: "Apprentices being underpaid and underdeveloped. Kids being sold SMMA, dropshipping, crypto and make £10k from your laptop lies. They're online looking for a way out, and you're showing them a real one." },
+    { label: "Secondary. Older tradesmen. The controversy generators.", detail: "You want them trolling you in the comments. They've built their business by being in the game long enough, not because they're proper businessmen. They'll hate you. That's the algorithm working." },
+    { label: "Tertiary. People without an opinion yet.", detail: "Not changing perspectives, but giving them a perspective they hadn't considered. The kid who hadn't thought about the trades at all." },
   ],
   bios: [
-    { platform: "Instagram (option 1)", text: "18 · Shiell Joinery, Edinburgh · Going to be bigger than the company that fired me" },
-    { platform: "Instagram (option 2)", text: "Founder, Shiell Joinery · Mogging the construction industry · Edinburgh · 18" },
+    { platform: "Instagram (option 1)", text: "18 · Founder of Shiell Joinery, Edinburgh · Going to be GODDAMN bigger than the company that fired me" },
+    { platform: "Instagram (option 2)", text: "Shiell Joinery · 18 · Documenting the journey · Edinburgh" },
     { platform: "TikTok (option 1)", text: "18 · Joinery in Edinburgh · Trades is the new dropshipping. You're early." },
-    { platform: "TikTok (option 2)", text: "Building Shiell Joinery at 18 · Not a guru. Not in Dubai. · Get your hands dirty" },
+    { platform: "TikTok (option 2)", text: "Building Shiell Joinery at 18 · Not a guru. Not in Dubai. · Documenting the lot" },
   ],
   uniqueAngles: [
-    "The company van series. Every time you spot a building company van, snap a photo. Film a short later: saw this van today, here's what I'd do differently. Recurring format. Audience starts sending you vans. Free content engine.",
+    "The company van series. Every time you spot a building company van, snap a photo. Film a short later: saw this van today, here's what I'd do differently. Recurring format, audience starts sending you vans, free content engine.",
     "The construction industry is living in 2005. You're here to drag it into now. Position every rant against that backdrop.",
-    "Call out hustle culture in real time every time you see it. Quote-stitch a Tate clip, screen-record a Dubai dropshipper post, film a reaction. The contrarian voice has to be in the conversation, not watching from the sidelines.",
-    "The I'm not a qualified joiner angle. Lean into it. The trades love telling young people they need 15 years on the tools. You're proof they don't.",
-    "Documenting the path to becoming bigger than the company that fired you. A long-running thread. Every milestone, first employee, first 50k job, first press mention, laddered back to the £7.55.",
+    "Call out hustle culture in real time, every time you see it. Quote-stitch a Tate clip, screen-record a Dubai dropshipper post, film a reaction. The contrarian voice has to be in the conversation, not watching from the sidelines.",
+    "The 'I'm not a qualified joiner' angle. Lean into it. The trades love telling young people they need 15 years on the tools. You're proof they don't.",
+    "Documenting the path to becoming GODDAMN bigger than the company that fired you. A long-running thread. Every milestone, first employee, first 50k job, first press mention, laddered back to the £7.55.",
   ],
   forAgainst: {
     for: [
       "Young entrepreneurs in the trades. Treating construction as a real, modern business industry.",
       "Apprentices being respected, paid fairly, taught business skills and not just used as cheap labour.",
       "Living a normal life while building a business. Friends, dating, beach, parents.",
-      "Chasing experiences over money.",
-      "Building wealth that doesn't cost your mental health.",
+      "Chasing experiences over money, always.",
+      "Building wealth that doesn't cost your mental health or your relationships.",
     ],
     against: [
       "Hustle culture, cold-shower-monk-mode, the black pill guru mentality.",
       "Andrew Tate and the manosphere.",
       "SMMA, dropshipping, crypto. The make £10k from a laptop in Dubai wankers.",
       "Old-school tradesmen who refuse to innovate.",
-      "Apprenticeship exploitation. Paying labourer work at apprentice wages.",
+      "Apprenticeship exploitation. Paying labourer work at apprentice wages, it's bloody criminal.",
       "University as the default, especially business degrees.",
       "The 15 years on site before you can build something mindset.",
     ],
   },
   contentPillars: [
-    { title: "The Mini Revolution", body: "The big-picture contrarian takes. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping. You're early. This is the anchor pillar. The £7.55 story, the school years, the 30 rejected quotes all live here. Rant format." },
-    { title: "Mogging the Construction Industry", body: "Calling out what's broken in trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. This is where the older tradesmen come and fight you in the comments. That's exactly what you want." },
-    { title: "Documenting the Journey", body: "Real-time business reality. Hiring your first employee. Quoting jobs. Winning jobs. Losing jobs. The path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. People follow this because it's actually happening. Not a course, not a guru, a real business in real time." },
-    { title: "The Life Behind The Business", body: "The proof point. Friends, dating, parents, beach days, travelling 6 weeks at 18 while the business runs. You can be ambitious and have a life. This pillar is the answer to the hustle bros and the reason people trust you over them." },
+    { title: "Documenting the Journey", body: "This is the big one, mate. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
+    { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you, mate." },
+    { title: "Calling Out What's Broken", body: "Calling out what's wrong in the trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. The bits of the industry that need dragging into now, said by someone actually inside it. Not a journalist, not an outsider, you.", short: "What's broken in the trades. Company van series, apprentice exploitation, customer service, the 2005 mindset. Said by someone inside the industry." },
+    { title: "You Can Have A Life And A Successful Business", body: "The proof point pillar. You don't need to grind 16 hour days, you don't need cold showers and 4am wake-ups, you don't need to sacrifice friends, family, dating, weekends. Show the balance. Beach days, parents, your girlfriend, travelling 6 weeks at 18 while the business still runs. This is the direct answer to the hustle bros, and it's the reason people will trust you over them.", short: "You don't need 16 hour days to win. Show the balance. Friends, family, travel, dating. The direct answer to the hustle bros." },
   ],
 };
+
+// MILESTONES (Alex-specific. No LinkedIn here, video-first.)
+
+const AS_MILESTONES = [
+  { id: "m1", label: "Blueprint complete", description: "Blueprint call done. Ben has the full picture, your stories, your enemy list, your audience, your mission. Foundation laid." },
+  { id: "m2", label: "Positioning statement finalised", description: "We've picked the positioning. Clear, specific, your voice, not soft. The thing you say in 10 seconds when someone asks what you're doing online." },
+  { id: "m3", label: "Social media profiles set up", description: "Personal Instagram and TikTok set up properly. Mysterious profile photo (no bloody sunglasses), bio locked, link in bio sorted. Account ready to ship." },
+  { id: "m4", label: "First aligned video published", description: "Your first piece of content under the new positioning. Sounds like you, points at the right enemy, lands in one of the four pillars." },
+  { id: "m5", label: "First inbound DM from content", description: "Someone reaches out because of a video. An apprentice, a peer, a podcast, anyone who found you through the content, not a referral." },
+  { id: "m6", label: "First 'you just get me' moment", description: "Someone tells you you've said the thing they've been thinking. The message has landed where you wanted it to land. That's the bullseye." },
+];
 
 // CONTENT IDEAS
 
@@ -130,30 +147,30 @@ const AS_RECS: { title: string; body: string }[] = [];
 const AS_GOALS = {
   threeMonth: [
     "Personal Instagram and TikTok set up properly with positioning, bio and a proper photo.",
-    "Followers starting to move. Low thousands on at least one platform.",
-    "A handful of videos that get real engagement under the new positioning.",
-    "DMs starting to come in. Apprentices, peers, the odd troll.",
-    "At least one signal worth logging. Recognition, an opportunity, a comment that shows the message is landing.",
-    "The way you talk about the work has started to shift. Less about follower counts, more about who you're reaching.",
+    "Followers actually moving. Low thousands on at least one platform.",
+    "A handful of videos that genuinely land under the new positioning.",
+    "DMs starting to come in. Apprentices, peers, the odd troll. We want all three.",
+    "At least one signal worth logging. Recognition, an opportunity, a comment that shows the message is landing where you want it.",
+    "How you talk about the work has shifted. Less about follower counts, more about who you're reaching.",
   ],
   sixMonth: [
-    "A recognisable presence on TikTok and Instagram. The contrarian young-trades voice.",
+    "A recognisable presence on TikTok and Instagram. The contrarian young-trades voice in the UK.",
     "A real audience. Enough that a single post is reaching thousands.",
-    "Real-world signals. DMs from apprentices saying you changed their mind. Requests for podcast appearances. Trolls in the comments (the good kind).",
+    "Real-world signals. DMs from apprentices saying you changed their mind. Podcast appearance requests. Trolls in the comments, the good kind.",
     "Shiell Joinery has at least one full-time employee or a clear path to one.",
-    "You've started thinking about what monetisation could look like. Course, speaking, partnerships. Nothing has to land yet.",
-    "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels noticeably far away.",
+    "Monetisation conversations starting to open up. Course ideas, speaking, partnerships, the kind of stuff that says the brand is doing actual work.",
+    "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels GODDAMN far away.",
   ],
   business: [
     "6 employees on the Shiell Joinery payroll within 12 months.",
     "Biggest joinery company in Edinburgh.",
-    "Bigger than the company that fired you.",
+    "GODDAMN bigger than the company that fired you.",
   ],
   notThisGame: [
     "We are not chasing follower counts for the sake of it.",
     "We are not optimising for views over authenticity.",
     "We are not building a funnel or a personal brand to generate more joinery enquiries.",
-    "Vanity metrics are a side effect of doing it right. They are not the goal.",
+    "Vanity metrics are a side effect of doing it right. They are not the goal, mate.",
   ],
 };
 
@@ -231,9 +248,9 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1.2rem", fontWeight: 700 }}>👋</div>
               </div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome, Alex.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome, mate.</p>
                 <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.65, margin: 0 }}>
-                  This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions. Not a polished deck. A strategy that lives and evolves. Everything in here is grounded in your own words, your own stories, your own vision. After every session Ben updates it and the latest thinking is here.
+                  This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions, not a polished deck. Everything in here is grounded in your own words, your own stories, your own vision, all pulled from the blueprint call. After every session I update it and the latest thinking lives here. Read it like I'm sat across from you, because that's how it's written.
                 </p>
               </div>
             </div>
@@ -328,7 +345,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
               <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
-                You're not building a personal brand to get more joinery enquiries. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission. And it's exactly the right reason to do this. The most credible personal brands come from people who genuinely mean it.
+                You're not building a personal brand to get more joinery enquiries, mate. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission and it's exactly the right bloody reason to do this. The most credible personal brands come from people who genuinely mean it, and you mean it.
               </p>
             </div>
 
@@ -438,39 +455,71 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
         {/* MILESTONES */}
         {activeTab === "milestones" && (
-          <MilestoneTracker slug={slug} color={AS_COLOR} />
+          <MilestoneTracker slug={slug} color={AS_COLOR} milestones={AS_MILESTONES} />
         )}
 
         {/* BRAND ASSETS */}
         {activeTab === "brand" && (
           <div>
-            {AS_POSITIONING.headline ? (
+            {AS_POSITIONING.headlineDrafts.length > 0 ? (
               <div>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
                 <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
                 <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we agree. Treat everything as a draft.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet, mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
                 </div>
 
-                {/* Content pillars — top of brand tab */}
+                {/* Content pillars — top of brand tab, colour-differentiated */}
                 <div style={{ marginBottom: 24 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four buckets your content lives in. Every video drops into one of these. Rough mix over time. Feel it, don't measure it.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four buckets your content lives in. Every video drops into one of these. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
-                    {AS_POSITIONING.contentPillars.map((p, i) => (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 20px 22px" }}>
-                        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Pillar {i + 1}</p>
-                        <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
-                        <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
-                      </div>
-                    ))}
+                    {AS_POSITIONING.contentPillars.map((p, i) => {
+                      const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
+                      const pc = pillarColors[i % pillarColors.length];
+                      return (
+                        <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${pc}`, borderRadius: 6, padding: "20px 20px 22px" }}>
+                          <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 8px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
+                          <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
+                          <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 
-                {/* Positioning idea */}
-                <div style={{ background: AS_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Positioning idea (draft)</p>
-                  <p style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.6, margin: 0 }}>{AS_POSITIONING.headline}</p>
+                {/* Positioning drafts — 5 options, risk-ranked */}
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning drafts. Pick one. Or mix bits.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Five options to mull over for Session 2. We can blend them. Ranked from safe to risky on a scale of 1 to 3 dots so you know what we're playing with.</p>
+                  {/* Risk legend */}
+                  <div style={{ display: "flex", gap: 14, flexWrap: "wrap", padding: "10px 14px", background: "#F9F8F6", borderRadius: 4, marginBottom: 18, fontSize: "0.75rem", color: "#3D3935" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <span style={{ color: "#16a34a", letterSpacing: "1px" }}>●</span>
+                      <span>Safe. Says what you do, leaves the spice for the content itself.</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <span style={{ color: "#d97706", letterSpacing: "1px" }}>●●</span>
+                      <span>Bit of edge. Plants a flag without picking a fight on the bio line.</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <span style={{ color: "#c0392b", letterSpacing: "1px" }}>●●●</span>
+                      <span>Loud and pointed. Filter's off. Some people won't follow because of it. That's the point.</span>
+                    </div>
+                  </div>
+                  {AS_POSITIONING.headlineDrafts.map((d, i) => {
+                    const riskColor = d.risk === 1 ? "#16a34a" : d.risk === 2 ? "#d97706" : "#c0392b";
+                    const riskDots = "●".repeat(d.risk);
+                    return (
+                      <div key={i} style={{ background: "#F9F8F6", border: `1px solid #E0DBD3`, borderLeft: `3px solid ${riskColor}`, borderRadius: 4, padding: "16px 20px", marginBottom: 12 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                          <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#7A746E", margin: 0, letterSpacing: "0.1em", textTransform: "uppercase" }}>Draft {i + 1}</p>
+                          <span style={{ color: riskColor, fontSize: "0.85rem", letterSpacing: "2px" }}>{riskDots}</span>
+                        </div>
+                        <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.6, margin: 0, fontFamily: "var(--font-dm-serif), serif" }}>{d.text}</p>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {AS_POSITIONING.differentiators.length > 0 && (
@@ -559,18 +608,22 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>Specific video ideas and hooks land here after each session. For now, start with the four pillars below. Every video you make fits into one of them.</p>
 
-            {/* Pillars in content tab */}
+            {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
             <div style={{ marginBottom: 32 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>These are the buckets. When you don't know what to film, come back here and pick a pillar. Then just talk.</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>The buckets your content drops into. When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
-                {AS_POSITIONING.contentPillars.map((p, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 20px 22px" }}>
-                    <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Pillar {i + 1}</p>
-                    <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
-                    <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
-                  </div>
-                ))}
+                {AS_POSITIONING.contentPillars.map((p, i) => {
+                  const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
+                  const pc = pillarColors[i % pillarColors.length];
+                  return (
+                    <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${pc}`, borderRadius: 6, padding: "20px 20px 22px" }}>
+                      <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 8px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
+                      <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
+                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>{p.short}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -613,7 +666,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Where We're Headed</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics. They're the things that actually tell us the work is landing.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics, mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
 
             {/* Not this game — top of goals */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 24 }}>

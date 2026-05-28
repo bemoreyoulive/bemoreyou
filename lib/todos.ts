@@ -49,10 +49,10 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
   "alex-shiell": [
-    { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed). No sunglasses. Idea: hold a joinery tool as a bit of satire. Raises curiosity, plants the trades flag." },
-    { id: "as1-2", text: "Reflect on the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate, don't write." },
-    { id: "as1-3", text: "Send Ben a list of content creators you admire. Any platform, any niche." },
-    { id: "as1-4", text: "Next session: Wednesday 3 June 2026 at 6pm. Locking messaging, finalising Instagram and TikTok, walking through this dashboard." },
+    { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed, it suits you). No bloody sunglasses. Hold a joinery tool in shot if you fancy a bit of satire, raises curiosity and plants the trades flag straight away." },
+    { id: "as1-2", text: "Sit with the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate it, don't write it, that's how you sound like you." },
+    { id: "as1-3", text: "Send me a list of content creators you actually admire. Any platform, any niche. Helps me read your taste." },
+    { id: "as1-4", text: "Next session: Wednesday 3 June 2026, 6pm. We lock messaging, finalise Instagram and TikTok, and I walk you through this dashboard properly." },
   ],
   "solve-people": [
     { id: "t1", text: "Screenshot the troll comment and turn it into a follow-up post — this is content gold. Do this one first." },
