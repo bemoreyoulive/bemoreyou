@@ -48,6 +48,12 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
+  "alex-shiell": [
+    { id: "as1-1", text: "Get a profile photo sorted for Instagram + TikTok — mysterious (your word, and I agree it's the most authentic for you). Suggestion: hold a joinery tool in shot as a bit of satire / humour — raises curiosity, plants the trades flag, keeps the mystery." },
+    { id: "as1-2", text: "Reflect on the two questions on the dashboard — what does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate, don't write." },
+    { id: "as1-3", text: "Send Ben a list of content creators you admire (any platform, any niche)." },
+    { id: "as1-4", text: "Next session: Wednesday 3 June 2026 at 6pm — locking messaging, finalising Instagram + TikTok, walking through this dashboard." },
+  ],
   "solve-people": [
     { id: "t1", text: "Screenshot the troll comment and turn it into a follow-up post — this is content gold. Do this one first." },
     { id: "t2", text: "LinkedIn to 250 connections by Session 7 (May 5) — connect with directors, accountants, site managers, CIS subcontractors" },
