@@ -20,7 +20,7 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber — trades energy, young, bold
 
-const AS_NEXT_MOVE = "Session 2 is Wednesday 3 June at 6pm. Before then: get the profile photo sorted — mysterious is the right call (your instinct, I agree). One idea — hold a joinery tool in the shot. A bit of satire, plants the trades flag, keeps the curiosity. Then sit with the two reflection questions on this page — what does happy actually look like right now, and what do you want someone watching your content in 3 or 6 months to walk away thinking. Don't write it, dictate it on a walk. In Session 2 we lock messaging, finalise Instagram + TikTok, and walk through this dashboard.";
+const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm): get the profile photo sorted — mysterious, holding a joinery tool. Then dictate answers to the two reflection questions below. Don't write, walk and talk. We lock messaging in the session.";
 
 // ─── TODOS ───────────────────────────────────────────────────────────────────
 // Updated after each session. Keep in sync with lib/todos.ts.
