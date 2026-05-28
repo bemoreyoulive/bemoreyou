@@ -65,11 +65,11 @@ const AS_SESSIONS: {
 
 const AS_POSITIONING = {
   headlineDrafts: [
-    { risk: 1, text: "18, building Shiell Joinery in Edinburgh. Documenting what it actually takes, the wins, the losses, the people I'm hiring along the way. Going to be GODDAMN bigger than the company that fired me." },
-    { risk: 1, text: "Founder of Shiell Joinery at 18. Showing you what nobody else in the trades is showing. The real numbers, the real jobs, the real graft. No gurus, no Dubai, no laptops in coffee shops." },
-    { risk: 2, text: "Building a proper joinery business at 18 while everyone else my age is being sold dropshipping dreams. Documenting the journey to becoming GODDAMN bigger than the company that fired me." },
-    { risk: 2, text: "18, no joinery qualifications, running a real construction business in Edinburgh. Trades is the new dropshipping, and you're early. Hiring my first employees on camera. Going to be GODDAMN bigger than the company that fired me." },
-    { risk: 3, text: "Starting a mini revolution in the trades. 18, founder of Shiell Joinery, going to be GODDAMN bigger than the company that fired me. Apprentices are being taken the piss out of and someone needs to bloody say it." },
+    { risk: 1, text: "18, founder of Shiell Joinery, Edinburgh.\nDocumenting the journey.\nGoing to be bigger than the company that fired me." },
+    { risk: 2, text: "18, building Shiell Joinery in Edinburgh.\nNo qualifications. No shortcuts.\nGoing to be bigger than the company that fired me." },
+    { risk: 2, text: "Joinery is the new dropshipping. You're early.\n18, Shiell Joinery, Edinburgh.\nHiring my first employees on camera." },
+    { risk: 3, text: "Starting a mini revolution in the trades.\n18, founder of Shiell Joinery.\nApprentices are being taken the piss out of and someone needs to say it." },
+    { risk: 3, text: "Not a guru.\nNot in Dubai.\nNot selling a course.\n18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me." },
   ],
   differentiators: [
     "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now, mate.",
@@ -84,18 +84,12 @@ const AS_POSITIONING = {
     { label: "Secondary. Older tradesmen. The controversy generators.", detail: "You want them trolling you in the comments. They've built their business by being in the game long enough, not because they're proper businessmen. They'll hate you. That's the algorithm working." },
     { label: "Tertiary. People without an opinion yet.", detail: "Not changing perspectives, but giving them a perspective they hadn't considered. The kid who hadn't thought about the trades at all." },
   ],
-  bios: [
-    { platform: "Instagram (option 1)", text: "18 · Founder of Shiell Joinery, Edinburgh · Going to be GODDAMN bigger than the company that fired me" },
-    { platform: "Instagram (option 2)", text: "Shiell Joinery · 18 · Documenting the journey · Edinburgh" },
-    { platform: "TikTok (option 1)", text: "18 · Joinery in Edinburgh · Trades is the new dropshipping. You're early." },
-    { platform: "TikTok (option 2)", text: "Building Shiell Joinery at 18 · Not a guru. Not in Dubai. · Documenting the lot" },
-  ],
   uniqueAngles: [
     "The company van series. Every time you spot a building company van, snap a photo. Film a short later: saw this van today, here's what I'd do differently. Recurring format, audience starts sending you vans, free content engine.",
     "The construction industry is living in 2005. You're here to drag it into now. Position every rant against that backdrop.",
     "Call out hustle culture in real time, every time you see it. Quote-stitch a Tate clip, screen-record a Dubai dropshipper post, film a reaction. The contrarian voice has to be in the conversation, not watching from the sidelines.",
     "The 'I'm not a qualified joiner' angle. Lean into it. The trades love telling young people they need 15 years on the tools. You're proof they don't.",
-    "Documenting the path to becoming GODDAMN bigger than the company that fired you. A long-running thread. Every milestone, first employee, first 50k job, first press mention, laddered back to the £7.55.",
+    "Documenting the path to becoming bigger than the company that fired you. A long-running thread. Every milestone, first employee, first 50k job, first press mention, laddered back to the £7.55.",
   ],
   forAgainst: {
     for: [
@@ -159,12 +153,12 @@ const AS_GOALS = {
     "Real-world signals. DMs from apprentices saying you changed their mind. Podcast appearance requests. Trolls in the comments, the good kind.",
     "Shiell Joinery has at least one full-time employee or a clear path to one.",
     "Monetisation conversations starting to open up. Course ideas, speaking, partnerships, the kind of stuff that says the brand is doing actual work.",
-    "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels GODDAMN far away.",
+    "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels noticeably far away.",
   ],
   business: [
     "6 employees on the Shiell Joinery payroll within 12 months.",
     "Biggest joinery company in Edinburgh.",
-    "GODDAMN bigger than the company that fired you.",
+    "Bigger than the company that fired you.",
   ],
   notThisGame: [
     "We are not chasing follower counts for the sake of it.",
@@ -472,7 +466,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Content pillars — top of brand tab, colour-differentiated */}
                 <div style={{ marginBottom: 24 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four buckets your content lives in. Every video drops into one of these. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four loose themes your content tends to fall into. Not a rulebook, not a percentage split, just general direction. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                     {AS_POSITIONING.contentPillars.map((p, i) => {
                       const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -488,10 +482,10 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   </div>
                 </div>
 
-                {/* Positioning drafts — 5 options, risk-ranked */}
+                {/* Positioning & bio drafts — same thing, 5 options, risk-ranked */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning drafts. Pick one. Or mix bits.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Five options to mull over for Session 2. We can blend them. Ranked from safe to risky on a scale of 1 to 3 dots so you know what we're playing with.</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning & bio drafts. Same thing. Pick one. Or mix bits.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Five options to mull over for Session 2. Each one is short enough to drop straight into your Instagram or TikTok bio, line breaks and all. Ranked safe to ballsy on a scale of 1 to 3 dots.</p>
                   {/* Risk legend */}
                   <div style={{ display: "flex", gap: 14, flexWrap: "wrap", padding: "10px 14px", background: "#F9F8F6", borderRadius: 4, marginBottom: 18, fontSize: "0.75rem", color: "#3D3935" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -504,19 +498,33 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                       <span style={{ color: "#c0392b", letterSpacing: "1px" }}>●●●</span>
-                      <span>Loud and pointed. Filter's off. Some people won't follow because of it. That's the point.</span>
+                      <span>Ballsy. Filter's off. Some people won't follow because of it. That's the point. My money's on you picking one of these, mate.</span>
                     </div>
                   </div>
                   {AS_POSITIONING.headlineDrafts.map((d, i) => {
                     const riskColor = d.risk === 1 ? "#16a34a" : d.risk === 2 ? "#d97706" : "#c0392b";
+                    const riskLabel = d.risk === 1 ? "Safe" : d.risk === 2 ? "Edge" : "Ballsy";
                     const riskDots = "●".repeat(d.risk);
+                    const isBallsy = d.risk === 3;
                     return (
-                      <div key={i} style={{ background: "#F9F8F6", border: `1px solid #E0DBD3`, borderLeft: `3px solid ${riskColor}`, borderRadius: 4, padding: "16px 20px", marginBottom: 12 }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                      <div key={i} style={{
+                        background: isBallsy ? "#fef3e7" : "#F9F8F6",
+                        border: isBallsy ? `1px solid ${riskColor}66` : `1px solid #E0DBD3`,
+                        borderLeft: `4px solid ${riskColor}`,
+                        borderRadius: 4,
+                        padding: "16px 20px",
+                        marginBottom: 12,
+                        boxShadow: isBallsy ? "0 1px 3px rgba(192,57,43,0.1)" : "none",
+                      }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
                           <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#7A746E", margin: 0, letterSpacing: "0.1em", textTransform: "uppercase" }}>Draft {i + 1}</p>
                           <span style={{ color: riskColor, fontSize: "0.85rem", letterSpacing: "2px" }}>{riskDots}</span>
+                          <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: riskColor }}>{riskLabel}</span>
+                          {isBallsy && (
+                            <span style={{ marginLeft: "auto", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 20, background: riskColor, color: "#fff" }}>Ben's hunch you'll love this</span>
+                          )}
                         </div>
-                        <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.6, margin: 0, fontFamily: "var(--font-dm-serif), serif" }}>{d.text}</p>
+                        <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.6, margin: 0, fontFamily: "var(--font-dm-serif), serif", whiteSpace: "pre-line" }}>{d.text}</p>
                       </div>
                     );
                   })}
@@ -535,28 +543,27 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 )}
 
                 {AS_POSITIONING.audiences.length > 0 && (
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
-                    {AS_POSITIONING.audiences.map((a, i) => (
-                      <div key={i} style={{ marginBottom: 16 }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color: AS_COLOR, margin: "0 0 4px" }}>{a.label}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
-                      </div>
-                    ))}
+                  <div style={{ marginBottom: 16 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your audience</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Three groups. Each one matters for a different reason.</p>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+                      {AS_POSITIONING.audiences.map((a, i) => {
+                        const audienceColors = [
+                          { bg: "#fef3e7", border: "#d97706", label: "#a85a05" },
+                          { bg: "#fce7f3", border: "#c0392b", label: "#9a2a1f" },
+                          { bg: "#e0f2f1", border: "#0891b2", label: "#0e7490" },
+                        ];
+                        const ac = audienceColors[i % audienceColors.length];
+                        return (
+                          <div key={i} style={{ background: ac.bg, border: `1px solid ${ac.border}55`, borderTop: `4px solid ${ac.border}`, borderRadius: 6, padding: "18px 18px 20px" }}>
+                            <p style={{ fontSize: "0.7rem", fontWeight: 700, color: ac.label, margin: "0 0 8px", lineHeight: 1.3, letterSpacing: "0.02em" }}>{a.label}</p>
+                            <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
-
-                {/* Bios */}
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Bio ideas. Instagram and TikTok.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>Starting drafts only. We pick one per platform in Session 2, or write something fresh. Bios are cheap to change.</p>
-                  {AS_POSITIONING.bios.map((b, i) => (
-                    <div key={i} style={{ borderTop: i === 0 ? "none" : "1px solid #F0EBE3", paddingTop: i === 0 ? 0 : 12, marginTop: i === 0 ? 0 : 12 }}>
-                      <p style={{ fontSize: "0.7rem", fontWeight: 700, color: AS_COLOR, margin: "0 0 4px" }}>{b.platform}</p>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{b.text}</p>
-                    </div>
-                  ))}
-                </div>
 
                 {/* Unique angles */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
@@ -573,7 +580,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Stand For / Stand Against */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>What you stand for and against</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Every piece of content should fit into one of these columns. If it doesn't, it's probably off-brand.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Most of your content will pull from one or the other. Not a rulebook, just a useful gut-check when something doesn't feel right.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                     <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "16px 18px" }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#2e7d4f", margin: "0 0 12px", letterSpacing: "0.08em", textTransform: "uppercase" }}>Stand FOR</p>
@@ -606,12 +613,18 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>Specific video ideas and hooks land here after each session. For now, start with the four pillars below. Every video you make fits into one of them.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
+
+            {/* IMPORTANT caveat — pillars are loose, not prescriptive. */}
+            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Read this before you look at the pillars, mate</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>The pillars are loose themes, NOT a rulebook. Every piece of content does NOT have to slot neatly into one of them. You do NOT need to do 25% of each. If you film something tomorrow that doesn't fit any of them and it's still you, post it. The pillars are there to help when you're stuck for an idea, not to box you in. Treat them like a compass, not a cage.</p>
+            </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
             <div style={{ marginBottom: 32 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>The buckets your content drops into. When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars (loose themes)</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>The general direction your content tends to fall in. When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                 {AS_POSITIONING.contentPillars.map((p, i) => {
                   const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
