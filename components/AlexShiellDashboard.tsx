@@ -465,8 +465,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
                 {/* Content pillars — top of brand tab, colour-differentiated */}
                 <div style={{ marginBottom: 24 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Four loose themes your content tends to fall into. Not a rulebook, not a percentage split, just general direction. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars. Your north star.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Content pillars are your brand's north star. They define the territory you own in your audience's mind, so that over time, every video reinforces a clear, consistent identity instead of feeling random. I've drafted four for you based on the blueprint, each one anchored to a story you already live, an enemy you already have, or a tension worth holding. Together they keep your voice coherent without restricting what you film. We'll review them properly in Session 2 and adjust where they don't feel right. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                     {AS_POSITIONING.contentPillars.map((p, i) => {
                       const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -615,16 +615,17 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
-            {/* IMPORTANT caveat — pillars are loose, not prescriptive. */}
-            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Read this before you look at the pillars, mate</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>The pillars are loose themes, NOT a rulebook. Every piece of content does NOT have to slot neatly into one of them. You do NOT need to do 25% of each. If you film something tomorrow that doesn't fit any of them and it's still you, post it. The pillars are there to help when you're stuck for an idea, not to box you in. Treat them like a compass, not a cage.</p>
+            {/* Why these pillars exist — high-level framing */}
+            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook, mate. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
             <div style={{ marginBottom: 32 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars (loose themes)</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>The general direction your content tends to fall in. When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars. Your north star.</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                 {AS_POSITIONING.contentPillars.map((p, i) => {
                   const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
