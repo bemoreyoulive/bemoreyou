@@ -65,11 +65,11 @@ const AS_SESSIONS: {
 
 const AS_POSITIONING = {
   headlineDrafts: [
-    { risk: 1, text: "18, founder of Shiell Joinery, Edinburgh.\nDocumenting the journey.\nGoing to be bigger than the company that fired me." },
-    { risk: 2, text: "18, building Shiell Joinery in Edinburgh.\nNo qualifications. No shortcuts.\nGoing to be bigger than the company that fired me." },
-    { risk: 2, text: "Joinery is the new dropshipping. You're early.\n18, Shiell Joinery, Edinburgh.\nHiring my first employees on camera." },
+    { risk: 1, text: "Not a guru.\nRefused to go to uni.\n18, founder of Shiell Joinery, Edinburgh.\nGoing to be bigger than the company that fired me." },
+    { risk: 2, text: "Refused to go to uni.\nNo qualifications.\nNo Dubai.\n18, building Shiell Joinery in Edinburgh on camera.", benTake: "This one's my favourite of the mid-risk lot. Strips out everything you're NOT and leaves the listener with the one thing you ARE, a kid actually building it, in public. My hunch, you'll love this." },
+    { risk: 2, text: "Not selling a course.\nNot in Dubai.\nNot on a laptop.\n18, on the tools in Edinburgh.\nGoing to be bigger than the company that fired me." },
     { risk: 3, text: "Starting a mini revolution in the trades.\n18, founder of Shiell Joinery.\nApprentices are being taken the piss out of and someone needs to say it." },
-    { risk: 3, text: "Not a guru.\nNot in Dubai.\nNot selling a course.\n18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me." },
+    { risk: 3, text: "Not a guru.\nNot in Dubai.\nNot selling a course.\n18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
   ],
   differentiators: [
     "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now, mate.",
@@ -498,33 +498,39 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                       <span style={{ color: "#c0392b", letterSpacing: "1px" }}>●●●</span>
-                      <span>Ballsy. Filter's off. Some people won't follow because of it. That's the point. My money's on you picking one of these, mate.</span>
+                      <span>Ballsy. Filter's off. Some people won't follow because of it. That's the point.</span>
                     </div>
                   </div>
                   {AS_POSITIONING.headlineDrafts.map((d, i) => {
                     const riskColor = d.risk === 1 ? "#16a34a" : d.risk === 2 ? "#d97706" : "#c0392b";
                     const riskLabel = d.risk === 1 ? "Safe" : d.risk === 2 ? "Edge" : "Ballsy";
                     const riskDots = "●".repeat(d.risk);
-                    const isBallsy = d.risk === 3;
+                    const hasBenTake = !!(d as { benTake?: string }).benTake;
                     return (
                       <div key={i} style={{
-                        background: isBallsy ? "#fef3e7" : "#F9F8F6",
-                        border: isBallsy ? `1px solid ${riskColor}66` : `1px solid #E0DBD3`,
+                        background: hasBenTake ? "#fef3e7" : "#F9F8F6",
+                        border: hasBenTake ? `1px solid ${riskColor}66` : `1px solid #E0DBD3`,
                         borderLeft: `4px solid ${riskColor}`,
                         borderRadius: 4,
                         padding: "16px 20px",
                         marginBottom: 12,
-                        boxShadow: isBallsy ? "0 1px 3px rgba(192,57,43,0.1)" : "none",
+                        boxShadow: hasBenTake ? "0 1px 3px rgba(192,57,43,0.1)" : "none",
                       }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
                           <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#7A746E", margin: 0, letterSpacing: "0.1em", textTransform: "uppercase" }}>Draft {i + 1}</p>
                           <span style={{ color: riskColor, fontSize: "0.85rem", letterSpacing: "2px" }}>{riskDots}</span>
                           <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: riskColor }}>{riskLabel}</span>
-                          {isBallsy && (
-                            <span style={{ marginLeft: "auto", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 20, background: riskColor, color: "#fff" }}>Ben's hunch you'll love this</span>
+                          {hasBenTake && (
+                            <span style={{ marginLeft: "auto", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 20, background: riskColor, color: "#fff" }}>Ben's pick</span>
                           )}
                         </div>
                         <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.6, margin: 0, fontFamily: "var(--font-dm-serif), serif", whiteSpace: "pre-line" }}>{d.text}</p>
+                        {(d as { benTake?: string }).benTake && (
+                          <div style={{ marginTop: 14, paddingTop: 12, borderTop: `1px dashed ${riskColor}55` }}>
+                            <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: riskColor, margin: "0 0 6px" }}>Ben's take</p>
+                            <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{(d as { benTake?: string }).benTake}</p>
+                          </div>
+                        )}
                       </div>
                     );
                   })}
