@@ -41,6 +41,7 @@ Differentiator: Nikki has lived experience — this isn't a product built by som
 Current momentum: School placement happening now. Meetings with UGC and paid ads agencies. LinkedIn content plan in place for May.
   `.trim(),
 
+  // Archived June 1, 2026 — Solve People into administration, Brett declaring bankruptcy. Kept for record; not used by any live dashboard.
   "solve-people": `
 Name: Solve People (Lue and Brett)
 Positioning: Payroll, compliance, and HR support for CIS subcontractors in the UK construction industry.

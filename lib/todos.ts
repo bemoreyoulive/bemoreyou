@@ -54,6 +54,7 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "as1-3", text: "Send me a list of content creators you actually admire. Any platform, any niche. Helps me read your taste." },
     { id: "as1-4", text: "Next session: Wednesday 3 June 2026, 6pm. We lock messaging, finalise Instagram and TikTok, and I walk you through this dashboard properly." },
   ],
+  // Archived June 1, 2026 — Solve People into administration, Brett declaring bankruptcy. Kept for record; not used by any live dashboard.
   "solve-people": [
     { id: "t1", text: "Screenshot the troll comment and turn it into a follow-up post — this is content gold. Do this one first." },
     { id: "t2", text: "LinkedIn to 250 connections by Session 7 (May 5) — connect with directors, accountants, site managers, CIS subcontractors" },

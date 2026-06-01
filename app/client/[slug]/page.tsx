@@ -1320,6 +1320,7 @@ const clientData: Record<string, {
       { angle: "55 children across the world", notes: "What they told you that no researcher could have. Real quotes from children: \"I felt brave.\" \"I feel safe.\" More powerful than any credential." },
     ],
   },
+  // Archived June 1, 2026 — Solve People into administration, Brett declaring bankruptcy. Hidden from admin dashboard; record kept here.
   "solve-people": {
     name: "Solve People",
     role: "Luenna Knight — Director",
