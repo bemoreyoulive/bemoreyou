@@ -462,28 +462,6 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               )}
             </div>
 
-            {/* Reflection prompts */}
-            <div style={{ marginBottom: 28 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Sit With These</p>
-              <h3 style={{ fontSize: "1.4rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 16px", letterSpacing: "-0.01em" }}>Two questions to bring to Session 2</h3>
-
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14 }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 1. What does happy actually look like?</p>
-                <p style={{ fontSize: "0.92rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.55, margin: "0 0 12px" }}>Right now. Not in 5 years, not when you've made it. What does happy actually look like for you?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said in the blueprint that you'd choose clout over money, that you'd rather chase experiences than chase a number. You said a family on £60k who go to Spain together is more successful than a rich family who barely see each other. So what does that look like for you? Beach days with your girlfriend? Time with your parents? A pint with the school mates who knew you when you didn't speak? Travelling 6 weeks at 18 while your business runs in the background?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>This matters because the content only works if the life behind it is real. People follow you because you've cracked something they haven't. That you can be ambitious and happy. Without an answer to this, the content drifts into the hustle-culture lane you've spent the last year calling out.</p>
-                <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>How to do it: don't sit at a laptop. Go for a walk, hit dictate on your phone, talk for 5 minutes. Send it to Ben on WhatsApp or bring it to Session 2.</p>
-              </div>
-
-              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "22px 26px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: AS_COLOR, margin: "0 0 10px" }}>Question 2. What do you want them walking away thinking?</p>
-                <p style={{ fontSize: "0.92rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.55, margin: "0 0 12px" }}>Someone watches your content for 3 months. Then someone watches for 6 months. What do they walk away thinking, believing, or doing differently?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>Be specific. Not "they think trades are cool." That's not it. Is it the 16-year-old who was about to sign up to a business degree and instead picks up the phone to a local joinery firm? Is it the apprentice on £7.55/hr who finally pushes back on their boss? Is it the older tradesman in the comments arguing, slowly realising you might be right? Is it the kid in Dubai who shuts the laptop and books a flight home?</p>
-                <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You said you want a mini revolution and you want people to think they're early. Early on what? Articulate the thing they're early on. The clearer you can describe the person at the end of the video, what they now believe that they didn't before, the easier every single piece of content gets to make.</p>
-                <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>How to do it: answer it for both timeframes. 3 months: what's the first shift? 6 months: what's the bigger one? Dictate it. Don't overthink.</p>
-              </div>
-            </div>
-
             {/* What's in this dashboard / what this is */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
