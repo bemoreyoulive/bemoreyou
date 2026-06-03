@@ -65,11 +65,11 @@ const AS_SESSIONS: {
 
 const AS_POSITIONING = {
   headlineDrafts: [
-    { risk: 1, text: "Not a guru.\nRefused to go to uni.\n18, founder of Shiell Joinery, Edinburgh.\nGoing to be bigger than the company that fired me." },
-    { risk: 2, text: "Refused to go to uni.\nNo qualifications.\nNo Dubai.\n18, building Shiell Joinery in Edinburgh on camera.", benTake: "This one's my favourite of the mid-risk lot. Strips out everything you're NOT and leaves the listener with the one thing you ARE, a kid actually building it, in public. My hunch, you'll love this." },
-    { risk: 2, text: "Not selling a course.\nNot in Dubai.\nNot on a laptop.\n18, on the tools in Edinburgh.\nGoing to be bigger than the company that fired me." },
-    { risk: 3, text: "Starting a mini revolution in the trades.\n18, founder of Shiell Joinery.\nApprentices are being taken the piss out of and someone needs to say it." },
-    { risk: 3, text: "Not a guru.\nNot in Dubai.\nNot selling a course.\n18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
+    { risk: 1, text: "Not a guru, refused to go to uni. 18, founder of Shiell Joinery in Edinburgh, going to be bigger than the company that fired me." },
+    { risk: 2, text: "Refused to go to uni, I've got no qualifications, and definitely not in Dubai. 18, building Shiell Joinery in Edinburgh on camera.", benTake: "This one's my favourite of the mid-risk lot. Strips out everything you're NOT and leaves the listener with the one thing you ARE, a kid actually building it, in public. My hunch, you'll love this." },
+    { risk: 2, text: "Not selling a course, not in Dubai, not on a laptop. 18, on the tools in Edinburgh, going to be bigger than the company that fired me." },
+    { risk: 3, text: "Starting a mini revolution in the trades. 18, founder of Shiell Joinery, and apprentices are getting taken the piss out of, so someone needs to say it." },
+    { risk: 3, text: "Not a guru, not in Dubai, not selling a course. 18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
   ],
   differentiators: [
     "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now, mate.",
@@ -134,9 +134,9 @@ type ContentIdea = {
   hook: string;
   pillar: 1 | 2 | 3 | 4;
   pillarLabel: string;
-  effort: "Low effort, van or phone" | "A bit of setup";
+  effort: "Low effort, phone only" | "A bit of setup";
   format: string;
-  guidance: string;
+  guidance: string[];
   noEdit?: boolean;
 };
 
@@ -145,57 +145,81 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     hook: "I'm 18, I run a joinery business in Edinburgh, and I'm about to do something most lads my age aren't.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Talking head on your phone, vertical, in the van or on a site, wherever you are.",
-    guidance: "This is your flag in the ground, mate, the first one out the gate. Say who you are, what you're building and why you're going to start posting properly from here on out. Don't overthink the words, just say it out loud. People landing on the profile in week one need to know within about five seconds that you're 18, you're in joinery in Edinburgh and you're not chasing the laptop life. Hit record, talk for thirty seconds and post it raw, no editing needed.",
+    guidance: [
+      "Say who you are in the first five seconds. 18, joinery, Edinburgh, not chasing the laptop life.",
+      "Talk it, don't script it. Hit record and say it out loud like you would to a mate.",
+      "This is your flag in the ground, so post it raw. It only needs to be real, not polished.",
+    ],
     noEdit: true,
   },
   {
     hook: "Everyone my age is trying to make money from a laptop in Dubai, and I'm doing the opposite.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Rant in the car, your proven format that's already pulled 100k plus views before.",
-    guidance: "This is your bread and butter, the format that's already hit 100k to 150k views without any positioning behind it. Just talk into the phone about why dropshipping, SMMA and the Dubai crypto bros are the wrong path, and why trades is the new untapped opportunity that people are about to be early on. Keep the energy up, keep the pauses out and get straight on to the next point, one take, no editing.",
+    guidance: [
+      "Point your proven rant format at the right enemy. Dropshipping, SMMA, the Dubai crypto bros.",
+      "Land the big idea. Trades is the untapped opportunity and the people watching are early.",
+      "One take, high energy, no pauses. Get straight on to the next point and post it.",
+    ],
     noEdit: true,
   },
   {
     hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
-    guidance: "The journey starts on day one, mate, not in week three when it feels ready. This is the most valuable footage you'll have in six months because nothing will ever be Day 1 of this again. Film yourself before walking in, talk about what you're looking for, how you read the house, how you read the client. Don't worry about whether it's interesting, because it is, and people love watching someone actually working their job rather than talking about working their job.",
+    guidance: [
+      "Film yourself before you walk in. What you're looking for, how you read the house and the client.",
+      "Don't judge whether it's interesting. People love watching someone actually do the job.",
+      "Grab this now, because nothing will ever be Day 1 of this business again.",
+    ],
     noEdit: true,
   },
   {
     hook: "Beach in the morning, quoting a job in the afternoon, so tell me again why I need to grind 16 hours a day.",
     pillar: 4,
     pillarLabel: "Have A Life AND A Business",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Lifestyle B roll plus one line to camera, or just B roll with one line of text on screen.",
-    guidance: "Don't say the words anti hustle anywhere, just show it. A clip of the beach, a clip of the van pulling up to the job, that's the whole video. Let the contrast do the work for you. This is the implicit anti hustle move I mentioned in the strategy, and for every one explicit rant against the Tate crowd you should post three of these where you just live it on camera. People will trust the proof a lot more than the preach.",
+    guidance: [
+      "Show it, never say the words anti hustle. Let the contrast do the work.",
+      "Beach clip, then the van pulling up to the job. That's the whole video right there.",
+      "Post three of these for every one rant. People trust the proof more than the preach.",
+    ],
     noEdit: true,
   },
   {
     hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Talking head in the car, straight to camera, no setup needed.",
-    guidance: "This is your origin story, the single biggest fuel source for everything you're building. Tell it the way you told me on the blueprint call, don't dress it up. Run through the exact line you used with them, I'm doing proper work and I deserve more than £7.55, they fired me for asking, I took them to tribunal and I won, and now I'm building to be bigger than them. End on that closing line and don't soften it, that's the whole video right there.",
+    guidance: [
+      "Tell it exactly how you told me on the call. Don't dress it up.",
+      "Hit the real line. I deserve more than £7.55, they fired me for asking, I took them to tribunal and won.",
+      "Close on building bigger than them and don't soften it. That's the whole video.",
+    ],
     noEdit: true,
   },
 ];
 
 const AS_CONTENT_WEEK_2: ContentIdea[] = [
   {
-    hook: "The most dreadful two months of my life were spent sweeping floors for £6.40 an hour, and here's what that taught me about the trades industry.",
+    hook: "The shittest two months of my life were spent sweeping floors for £6.40 an hour, and this is what it taught me about the trades industry.",
     pillar: 3,
     pillarLabel: "Calling Out What's Broken",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Talking head in the car or in the yard, straight to camera.",
-    guidance: "Your first apprenticeship at the windows and doors manufacturer, sweeping floors, repetitive tasks, no business skills taught at any point. The realisation that the trades industry is operating like it's still 2005. This is the warm up to the bigger apprentice exploitation rants further down the line, so keep it personal rather than preachy. You lived it, you're not reading about it on a podcast.",
+    guidance: [
+      "Keep it personal, not preachy. You lived this, you didn't read it on a podcast.",
+      "Make the point. The trades are still being run like it's 2005.",
+      "This is the warm up to the bigger apprentice exploitation rants, so plant the seed here.",
+    ],
     noEdit: true,
   },
   {
@@ -204,33 +228,49 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     pillarLabel: "Documenting the Journey",
     effort: "A bit of setup",
     format: "Day in the life format, multiple short clips through the day stitched together, phone only, raw.",
-    guidance: "Pick a busy day and film one short clip every hour or two as you go, driving to a site, on a call with a sub, picking up materials, eating a sandwich in the van, sending invoices late at night. No clever editing needed, just stitch them in chronological order and post the lot. This is the format Caleb Simpson and the dropshipping guys are using, and it works because the mundane is the magnet, younger people watch this kind of stuff for hours.",
+    guidance: [
+      "Film one short clip every hour or two. Driving to site, on a call with a sub, picking up materials, sandwich in the van, invoices late at night.",
+      "No clever editing needed. Stitch them in order and post the lot.",
+      "Lean into the mundane, that's the magnet. Younger people watch this stuff for hours.",
+    ],
   },
   {
     hook: "I had a friend doing 14 hour days on YouTube convinced he was going to be rich, and I told him in 50 years time he'd be happier he went to the beach instead.",
     pillar: 4,
     pillarLabel: "Have A Life AND A Business",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Talking head in the car, story format, conversational.",
-    guidance: "The hustle culture friend story, told exactly the way you told me on the call. Convincing him out of grinding for the sake of grinding, then land on that closing line about the beach. This one says everything you stand for without you having to lecture anyone, so keep it conversational rather than ranty, more reflection than rage. The story does the work for you.",
+    guidance: [
+      "Tell it like a story, not a rant. More reflection than rage.",
+      "Land the line about the beach over the 14 hour days. That's the bit people remember.",
+      "Let the story make the point, so you don't have to lecture anyone.",
+    ],
     noEdit: true,
   },
   {
     hook: "30 quotes in a row, won zero of them, and here's what changed everything.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Talking head, short story arc, two minutes max.",
-    guidance: "The 30 rejected quotes story, your resilience story, the one most 18 year olds would have packed in after the first five. You kept going, then you changed the sales language from we can to we will, when would you like us to come and do that for you, and now it's converting at one in two or three. Don't dress this up as a how to, just tell what actually happened and the lesson lands on its own.",
+    guidance: [
+      "Tell what actually happened. 30 quotes, won zero, most lads would have packed it in after five.",
+      "Share the shift. We can became we will, when would you like us to start, and now it converts.",
+      "Don't dress it up as a how to. The lesson lands on its own.",
+    ],
     noEdit: true,
   },
   {
     hook: "Walked past a building company van today and thought, that right there is exactly what's wrong with the trades.",
     pillar: 3,
     pillarLabel: "Calling Out What's Broken",
-    effort: "Low effort, van or phone",
+    effort: "Low effort, phone only",
     format: "Photo of the van plus talking head reaction, or just talking head with the photo on screen.",
-    guidance: "This is the start of the company van series I flagged in the brand assets tab. You spot a van that's doing it wrong, dirty, no branding, a mid 2000s logo, phone number scrawled on with marker pen, you snap it and then film a short later reacting to it and saying what you'd do differently if it was yours. Over time people will start sending you vans, it becomes a recurring format and a free content engine, but the first one is the one you need to actually shoot, so kick it off this week.",
+    guidance: [
+      "Snap a van that's doing it wrong. Dirty, no branding, mid 2000s logo, number scrawled on in marker pen.",
+      "Film a short reaction later. What you'd do differently if it was yours.",
+      "Shoot the first one this week. Over time people send you vans and it runs itself.",
+    ],
     noEdit: true,
   },
 ];
@@ -754,9 +794,19 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* What the next two weeks are about — Ben's note to Alex */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the next two weeks are about</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Right, mate, here's the frame for the next two weeks. We're doing three things at once and every one of these ten ideas serves at least one of them. First, you're planting your flag, so people landing on your profile know within five seconds that you're 18, you're in joinery in Edinburgh and you're the contrarian voice in this space. Second, you're starting to document the journey from day one, because Day 1 of this business only happens once and the footage you grab now is the most valuable footage you'll ever shoot. Third, we're using these two weeks as a diagnostic to test which of your four content pillars fires the hardest with your audience, so by Session 3 we know your shape and we can stop guessing.</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>A few ground rules to keep this sustainable so you don't burn out in week three. Most of these are designed so you can film them in the van between jobs on your phone, no editing, no setup, just hit record and post. If you can batch film three on the way home one evening, brilliant, but spread the posting out across the days so it feels consistent. Pick which idea goes out each weekday in the morning, don't plan tomorrow's video the night before, that's how the mental load doubles.</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>One last thing, if you can't log in to the dashboard when you're out on a job, take a screenshot of this page now and save it to your phone so you can refer back to it during the day when you're between sites. Don't make this complicated, mate, just film them and post them. We'll review the lot in Session 3 and work out what's working and what's not.</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 12px" }}>Three jobs over the next two weeks, mate, and every idea below serves at least one of them.</p>
+              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
+                {[
+                  "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
+                  "Document from Day 1. The footage you grab now is the most valuable you will ever shoot, because Day 1 of this business only happens once.",
+                  "Test the four pillars. We find out which one fires hardest with your audience, so by Session 3 we know your shape and stop guessing.",
+                  "Keep it simple. Film in the van on your phone between jobs, no editing, post one idea each weekday. Can't log in on site? Screenshot this page so you can refer back during the day.",
+                ].map((point, i) => (
+                  <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, paddingLeft: 18, position: "relative" }}>
+                    <span style={{ position: "absolute", left: 0, color: AS_COLOR, fontWeight: 700 }}>→</span>{point}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Week sub-tabs */}
@@ -793,7 +843,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               return (
                 <div style={{ marginBottom: 28 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{contentWeek === "week1" ? "Five ideas for week one" : "Five ideas for week two"}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are van or phone jobs you can shoot between sites, so don't overthink the production, just hit record.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record.</p>
                   {ideas.map((idea, i) => {
                     const pc = pillarColors[idea.pillar - 1];
                     return (
@@ -809,8 +859,14 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                         <p style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 14px", lineHeight: 1.5 }}>{idea.hook}</p>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Format</p>
                         <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.65, margin: "0 0 14px" }}>{idea.format}</p>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>How to approach it</p>
-                        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>How to approach it</p>
+                        <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: 0, padding: 0 }}>
+                          {idea.guidance.map((point, j) => (
+                            <li key={j} style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.55, paddingLeft: 18, position: "relative" }}>
+                              <span style={{ position: "absolute", left: 0, color: pc, fontWeight: 700 }}>→</span>{point}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     );
                   })}
