@@ -275,6 +275,29 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
   },
 ];
 
+// DAILY WATCH. Three things to keep an eye out for every day. Quick story content or a swap for the day's idea.
+
+const AS_DAILY_WATCH: { emoji: string; title: string; body: string; pillar: string }[] = [
+  {
+    emoji: "🍻",
+    title: "Out living your life",
+    body: "Girlfriend, mates, the beach. Quick clip on your story with a sarcastic caption like \"still no 18 hours a day\".",
+    pillar: "Pillar 4",
+  },
+  {
+    emoji: "🚐",
+    title: "A tradesman's van",
+    body: "Done well or a total state. Quick reaction on what you'd do differently.",
+    pillar: "Pillar 3",
+  },
+  {
+    emoji: "📱",
+    title: "A hustle bro's course",
+    body: "Flogging the laptop millionaire dream? Screen record it and fire back.",
+    pillar: "Pillar 2",
+  },
+];
+
 // RECOMMENDATIONS
 
 const AS_RECS: { title: string; body: string }[] = [];
@@ -327,6 +350,26 @@ function PlaceholderTab({ label }: { label: string }) {
       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 12px" }}>{label}</p>
       <p style={{ fontSize: "1rem", color: "#7A746E", margin: "0 0 8px" }}>Content coming after your next session with Ben.</p>
       <p style={{ fontSize: "0.82rem", color: "#B0A89E", margin: 0 }}>Check back here once Ben has updated your dashboard.</p>
+    </div>
+  );
+}
+
+function DailyWatchBox() {
+  return (
+    <div style={{ background: "linear-gradient(135deg, #1C1C1C 0%, #2b2118 100%)", border: "2px solid #f59e0b", borderRadius: 12, padding: "22px 26px", marginBottom: 28, boxShadow: "0 6px 22px rgba(217,119,6,0.22)" }}>
+      <div style={{ fontSize: "2rem", letterSpacing: "8px", margin: "0 0 8px" }}>🍻 🚐 📱</div>
+      <p style={{ fontSize: "0.9rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: "#f59e0b", margin: "0 0 4px" }}>Remember these three emojis every day</p>
+      <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.5, margin: "0 0 16px" }}>Any one is a quick story, or it can be your post for the day.</p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
+        {AS_DAILY_WATCH.map((w, i) => (
+          <div key={i} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(245,158,11,0.4)", borderRadius: 8, padding: "16px 18px" }}>
+            <div style={{ fontSize: "1.5rem", marginBottom: 8 }}>{w.emoji}</div>
+            <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", margin: "0 0 6px", lineHeight: 1.3 }}>{w.title}</p>
+            <p style={{ fontSize: "0.83rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.55, margin: "0 0 10px" }}>{w.body}</p>
+            <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#f59e0b", margin: 0 }}>{w.pillar}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -626,6 +669,9 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   </div>
                 </div>
 
+                {/* Daily watch — pillars turned into daily habits */}
+                <DailyWatchBox />
+
                 {/* Positioning & bio drafts — same thing, 5 options, risk-ranked */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning & bio drafts. Same thing. Pick one. Or mix bits.</p>
@@ -764,6 +810,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
+
+            <DailyWatchBox />
 
             {/* Why these pillars exist — high-level framing */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
