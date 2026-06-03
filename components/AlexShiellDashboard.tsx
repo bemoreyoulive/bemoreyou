@@ -18,7 +18,7 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm). Profile photo sorted, mysterious, no bloody sunglasses, joinery tool optional but funny. Then dictate the two reflection questions below. Walk and talk, don't write. We lock the messaging in the session, mate.";
+const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm). Profile photo sorted, mysterious, no bloody sunglasses, joinery tool optional but funny. Then dictate the two reflection questions below. Walk and talk, don't write. We lock the messaging in the session mate.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
@@ -72,7 +72,7 @@ const AS_POSITIONING = {
     { risk: 3, text: "Not a guru, not in Dubai, not selling a course. 18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
   ],
   differentiators: [
-    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now, mate.",
+    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now mate.",
     "You've already lived the thing you're calling out. Did SMMA with Geronimo. Walked away. That's not theoretical, that's receipts.",
     "Not a qualified joiner. You run the business as a project manager. That's itself a contrarian story, you don't need 15 years on the tools.",
     "Format already proven. Rant videos hitting 100k to 150k views with zero positioning. We're just pointing it at the right thing.",
@@ -110,8 +110,8 @@ const AS_POSITIONING = {
     ],
   },
   contentPillars: [
-    { title: "Documenting the Journey", body: "This is the big one, mate. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
-    { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you, mate." },
+    { title: "Documenting the Journey", body: "This is the big one mate. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
+    { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you mate." },
     { title: "Calling Out What's Broken", body: "Calling out what's wrong in the trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. The bits of the industry that need dragging into now, said by someone actually inside it. Not a journalist, not an outsider, you.", short: "What's broken in the trades. Company van series, apprentice exploitation, customer service, the 2005 mindset. Said by someone inside the industry." },
     { title: "You Can Have A Life And A Successful Business", body: "The proof point pillar. You don't need to grind 16 hour days, you don't need cold showers and 4am wake-ups, you don't need to sacrifice friends, family, dating, weekends. Show the balance. Beach days, parents, your girlfriend, travelling 6 weeks at 18 while the business still runs. This is the direct answer to the hustle bros, and it's the reason people will trust you over them.", short: "You don't need 16 hour days to win. Show the balance. Friends, family, travel, dating. The direct answer to the hustle bros." },
   ],
@@ -307,7 +307,7 @@ const AS_GOALS = {
     "We are not chasing follower counts for the sake of it.",
     "We are not optimising for views over authenticity.",
     "We are not building a funnel or a personal brand to generate more joinery enquiries.",
-    "Vanity metrics are a side effect of doing it right. They are not the goal, mate.",
+    "Vanity metrics are a side effect of doing it right. They are not the goal mate.",
   ],
 };
 
@@ -386,7 +386,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1.2rem", fontWeight: 700 }}>👋</div>
               </div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome, mate.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome mate.</p>
                 <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.65, margin: 0 }}>
                   This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions, not a polished deck. Everything in here is grounded in your own words, your own stories, your own vision, all pulled from the blueprint call. After every session I update it and the latest thinking lives here. Read it like I'm sat across from you, because that's how it's written.
                 </p>
@@ -483,7 +483,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
               <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
-                You're not building a personal brand to get more joinery enquiries, mate. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission and it's exactly the right bloody reason to do this. The most credible personal brands come from people who genuinely mean it, and you mean it.
+                You're not building a personal brand to get more joinery enquiries mate. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission and it's exactly the right bloody reason to do this. The most credible personal brands come from people who genuinely mean it, and you mean it.
               </p>
             </div>
 
@@ -604,7 +604,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
                 <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
                 <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet, mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
                 </div>
 
                 {/* Content pillars — top of brand tab, colour-differentiated */}
@@ -769,7 +769,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
               <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook, mate. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook mate. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
@@ -794,7 +794,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* What the next two weeks are about — Ben's note to Alex */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the next two weeks are about</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 12px" }}>Three jobs over the next two weeks, mate, and every idea below serves at least one of them.</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 12px" }}>Three jobs over the next two weeks mate, and every idea below serves at least one of them.</p>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
                 {[
                   "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
@@ -902,7 +902,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Where We're Headed</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics, mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
 
             {/* Not this game — top of goals */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 24 }}>
