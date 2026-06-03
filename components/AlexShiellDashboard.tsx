@@ -67,7 +67,7 @@ const AS_POSITIONING = {
   headlineDrafts: [
     { risk: 1, text: "Not a guru, refused to go to uni. 18, founder of Shiell Joinery in Edinburgh, going to be bigger than the company that fired me." },
     { risk: 2, text: "Refused to go to uni, I've got no qualifications, and definitely not in Dubai. 18, building Shiell Joinery in Edinburgh on camera.", benTake: "This one's my favourite of the mid-risk lot. Strips out everything you're NOT and leaves the listener with the one thing you ARE, a kid actually building it, in public. My hunch, you'll love this." },
-    { risk: 2, text: "Not selling a course, not in Dubai, not on a laptop. 18, on the tools in Edinburgh, going to be bigger than the company that fired me." },
+    { risk: 2, text: "THIS. As in building Shiell Joinery in Edinburgh, not going to Dubai, not working 18 hours a day. 18, on the tools, going to be bigger than the company that fired me.", benTake: "Playing on that THIS, not Dubai trend doing the rounds right now. Drop it over a video of you out on a job or out living your life and the bio line lands as the punchline. A proper quirk that only your generation fully gets." },
     { risk: 3, text: "Starting a mini revolution in the trades. 18, founder of Shiell Joinery, and apprentices are getting taken the piss out of, so someone needs to say it." },
     { risk: 3, text: "Not a guru, not in Dubai, not selling a course. 18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
   ],
@@ -811,8 +811,6 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
-            <DailyWatchBox />
-
             {/* Why these pillars exist — high-level framing */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
@@ -838,6 +836,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 })}
               </div>
             </div>
+
+            <DailyWatchBox />
 
             {/* What the next two weeks are about — Ben's note to Alex */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
