@@ -72,7 +72,7 @@ const AS_POSITIONING = {
     { risk: 3, text: "Not a guru, not in Dubai, not selling a course. 18, building Shiell Joinery in Edinburgh, going to be bigger than the company that fired me.", benTake: "Already the line you naturally fall into. Direct, anti-guru, plants the flag, sets up the comeback story. My hunch, you'll love this." },
   ],
   differentiators: [
-    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now mate.",
+    "18 years old, in the trades, with a business mindset and an anti-guru position. No one else is in this lane right now.",
     "You've already lived the thing you're calling out. Did SMMA with Geronimo. Walked away. That's not theoretical, that's receipts.",
     "Not a qualified joiner. You run the business as a project manager. That's itself a contrarian story, you don't need 15 years on the tools.",
     "Format already proven. Rant videos hitting 100k to 150k views with zero positioning. We're just pointing it at the right thing.",
@@ -110,8 +110,8 @@ const AS_POSITIONING = {
     ],
   },
   contentPillars: [
-    { title: "Documenting the Journey", body: "This is the big one mate. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
-    { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you mate." },
+    { title: "Documenting the Journey", body: "This is the big one. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
+    { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you." },
     { title: "Calling Out What's Broken", body: "Calling out what's wrong in the trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. The bits of the industry that need dragging into now, said by someone actually inside it. Not a journalist, not an outsider, you.", short: "What's broken in the trades. Company van series, apprentice exploitation, customer service, the 2005 mindset. Said by someone inside the industry." },
     { title: "You Can Have A Life And A Successful Business", body: "The proof point pillar. You don't need to grind 16 hour days, you don't need cold showers and 4am wake-ups, you don't need to sacrifice friends, family, dating, weekends. Show the balance. Beach days, parents, your girlfriend, travelling 6 weeks at 18 while the business still runs. This is the direct answer to the hustle bros, and it's the reason people will trust you over them.", short: "You don't need 16 hour days to win. Show the balance. Friends, family, travel, dating. The direct answer to the hustle bros." },
   ],
@@ -330,7 +330,7 @@ const AS_GOALS = {
     "We are not chasing follower counts for the sake of it.",
     "We are not optimising for views over authenticity.",
     "We are not building a funnel or a personal brand to generate more joinery enquiries.",
-    "Vanity metrics are a side effect of doing it right. They are not the goal mate.",
+    "Vanity metrics are a side effect of doing it right. They are not the goal.",
   ],
 };
 
@@ -815,7 +815,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
               <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook mate. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
