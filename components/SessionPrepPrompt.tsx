@@ -27,7 +27,7 @@ export default function SessionPrepPrompt() {
     <div
       style={{
         position: "fixed",
-        bottom: isMobile ? `calc(12px + env(safe-area-inset-bottom, 0px))` : 28,
+        bottom: isMobile ? 12 : 28,
         right: isMobile ? 12 : 28,
         width: (isMobile && minimised) ? "auto" : isMobile ? "calc(100vw - 24px)" : 320,
         zIndex: 999,

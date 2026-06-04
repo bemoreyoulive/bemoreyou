@@ -28,10 +28,6 @@ body {
 
 /* ── Responsive dashboard utilities ─────────────────────────────── */
 
-/* Sticky nav — clears Dynamic Island / notch on iPhone */
-.dash-nav {
-  padding-top: env(safe-area-inset-top, 0px);
-}
 
 .dash-nav-client { display: flex; }
 
