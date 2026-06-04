@@ -29,7 +29,7 @@ export default function SessionPrepPrompt() {
         position: "fixed",
         bottom: isMobile ? 12 : 28,
         right: isMobile ? 12 : 28,
-        width: isMobile ? "calc(100vw - 24px)" : 320,
+        width: (isMobile && minimised) ? "auto" : isMobile ? "calc(100vw - 24px)" : 320,
         zIndex: 999,
         transform: visible ? "translateY(0)" : "translateY(120%)",
         opacity: visible ? 1 : 0,
@@ -39,26 +39,27 @@ export default function SessionPrepPrompt() {
     >
       <div style={{
         background: "#1C1C1C",
-        borderRadius: 8,
-        boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+        borderRadius: (isMobile && minimised) ? 20 : 8,
+        boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
         overflow: "hidden",
       }}>
-        {/* Header */}
+        {/* Header / pill */}
         <div style={{
           background: "#E8521C",
-          padding: "12px 16px",
+          padding: (isMobile && minimised) ? "8px 14px" : "12px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          gap: 8,
           cursor: "pointer",
         }} onClick={() => setMinimised(m => !m)}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ fontSize: "0.95rem" }}>📋</span>
-            <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#fff", margin: 0 }}>
-              Session prep
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ fontSize: (isMobile && minimised) ? "0.8rem" : "0.95rem" }}>📋</span>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fff", margin: 0, whiteSpace: "nowrap" }}>
+              {(isMobile && minimised) ? "Prep" : "Session prep"}
             </p>
           </div>
-          <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75rem" }}>{minimised ? "▲" : "▼"}</span>
+          <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.65rem" }}>{minimised ? "▲" : "▼"}</span>
         </div>
 
         {/* Body */}

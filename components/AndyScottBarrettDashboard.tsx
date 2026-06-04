@@ -301,7 +301,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px" }}>
                   <div style={{ width: 22, height: 22, borderRadius: "50%", background: ASB_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>{msg.num}</div>
                   <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 6px" }}>{msg.title}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0 }}>{msg.body}</p>
+                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.45, margin: 0 }}>{msg.body}</p>
                   {msg.quote && (
                     <div style={{ background: "#edf4ef", borderLeft: `3px solid ${ASB_COLOR}`, borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10 }}>
                       <p style={{ fontSize: "0.78rem", fontStyle: "italic", color: "#3a6048", margin: 0 }}>{msg.quote}</p>
@@ -505,7 +505,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Added Session 4 · 30 April 2026</p>
               <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Content From Conversations — Your New Workflow</p>
-              <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 14px" }}>Every prospect call, networking session, and client conversation is a content tap. You're already hearing the objections, misconceptions, and questions that your audience has — you just haven't been converting them into posts yet.</p>
+              <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 14px" }}>Every prospect call, networking session, and client conversation is a content tap. You're already hearing the objections, misconceptions, and questions that your audience has — you just haven't been converting them into posts yet.</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 14 }}>
                 {[
                   { step: "1", text: "After every call or meeting — write down 3–4 challenges, pain points, misconceptions, or questions that came up." },
@@ -570,7 +570,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
                   <span style={{ fontSize: "1.2rem", fontWeight: 700, color: ASB_COLOR, flexShrink: 0, lineHeight: 1.2 }}>{r.num}</span>
                   <div>
                     <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>{r.title}</p>
-                    <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>{r.body}</p>
+                    <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{r.body}</p>
                   </div>
                 </div>
               </div>
@@ -1333,13 +1333,13 @@ function AsbContentTab({ slug }: { slug: string }) {
     <div>
       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>3-Month Content Strategy</p>
       <h2 style={{ fontSize: "2rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, the structure for the post (with prompts woven in), and a CTA.</p>
+      <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>2 posts a week — one mid-week personal post, one Friday expertise post. Each card has the hook, the structure for the post (with prompts woven in), and a CTA.</p>
 
       {/* Content workflow strategy */}
       <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "24px 28px", marginBottom: 24 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Updated Session 6 · 19 May 2026</p>
         <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 16px" }}>How to Write a Post</p>
-        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 20px" }}>Pick a card, do a brain dump into Claude, and let it turn your words into a post. We did this together on the call and had a full draft in 14 minutes. That's the whole process.</p>
+        <p style={{ fontSize: "0.87rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 20px" }}>Pick a card, do a brain dump into Claude, and let it turn your words into a post. We did this together on the call and had a full draft in 14 minutes. That's the whole process.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 20 }}>
           {[
             { step: "1", label: "Pick a card from this dashboard", desc: "Open it, read the hook and the prompts so you know roughly what you're covering." },
@@ -1358,7 +1358,7 @@ function AsbContentTab({ slug }: { slug: string }) {
         </div>
         <div style={{ background: "#fdf4e8", border: "1.5px solid #f5d89e", borderRadius: 6, padding: "14px 18px" }}>
           <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#92400E", margin: "0 0 8px" }}>Worth saying clearly</p>
-          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: 0, lineHeight: 1.7 }}>Writing these posts isn't wasted time. It's clarity and reps for client conversations. Every post you write is you getting better at explaining what you do, why it matters, and who it's for. You're ingraining what you know.</p>
+          <p style={{ fontSize: "0.86rem", color: "#5C3A0E", margin: 0, lineHeight: 1.5 }}>Writing these posts isn't wasted time. It's clarity and reps for client conversations. Every post you write is you getting better at explaining what you do, why it matters, and who it's for. You're ingraining what you know.</p>
         </div>
       </div>
 
@@ -1366,17 +1366,17 @@ function AsbContentTab({ slug }: { slug: string }) {
       <div style={{ background: "#f9f8f6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Session 6 · Why Your Content Is Changing</p>
         <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Finance Simplified isn't the frame anymore</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>The posts you were writing were useful — but they were explaining finance. The shift now is to stop telling people how finance works and start showing them what's at stake when they don't have it sorted.</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>The old frame said: here's the thing, here's how it works, here's what to do. The new frame says: here's the problem, here's what it's costing you, here's the door.</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>Don't give the solution in the post. Show the cost of the problem, then invite them in. That's where the CTAs come from — "if this sounds familiar, drop me a message."</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>The posts you were writing were useful — but they were explaining finance. The shift now is to stop telling people how finance works and start showing them what's at stake when they don't have it sorted.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>The old frame said: here's the thing, here's how it works, here's what to do. The new frame says: here's the problem, here's what it's costing you, here's the door.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Don't give the solution in the post. Show the cost of the problem, then invite them in. That's where the CTAs come from — "if this sounds familiar, drop me a message."</p>
       </div>
 
       {/* Hooks AI concern note */}
       <div style={{ background: "#f9f8f6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 24 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Session 6 · On Hooks Sounding AI-Written</p>
         <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Some of the "it's not X, it's Y" hooks can feel a bit generated</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 10px" }}>You raised this in our last session. You're right that the contrarian structure — "it's not about X, it's about Y" — is a pattern that AI overuses. If a hook feels like that when you read it, there's a simple fix.</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>Add "But" and put it on its own line. So instead of <em>"It's not about the numbers. It's about what they mean."</em> — write it as <em>"It's not about the numbers.</em><br /><em>But what they mean? That's the part most owners have never had explained to them."</em> One word and a line break. That's usually enough to make it sound like a person.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>You raised this in our last session. You're right that the contrarian structure — "it's not about X, it's about Y" — is a pattern that AI overuses. If a hook feels like that when you read it, there's a simple fix.</p>
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Add "But" and put it on its own line. So instead of <em>"It's not about the numbers. It's about what they mean."</em> — write it as <em>"It's not about the numbers.</em><br /><em>But what they mean? That's the part most owners have never had explained to them."</em> One word and a line break. That's usually enough to make it sound like a person.</p>
       </div>
 
       {/* Month sub-tabs */}

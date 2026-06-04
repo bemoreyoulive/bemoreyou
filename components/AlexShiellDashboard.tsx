@@ -430,7 +430,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               </div>
               <div>
                 <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome mate.</p>
-                <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.65, margin: 0 }}>
+                <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.45, margin: 0 }}>
                   This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions, not a polished deck. Everything in here is grounded in your own words, your own stories, your own vision, all pulled from the blueprint call. After every session I update it and the latest thinking lives here. Read it like I'm sat across from you, because that's how it's written.
                 </p>
               </div>
@@ -446,7 +446,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
-                  <p style={{ fontSize: "1.3rem", fontWeight: 700, color: "#1C1C1C", letterSpacing: "-0.02em", margin: "0 0 4px" }}>{s.value}</p>
+                  <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", letterSpacing: "-0.02em", margin: "0 0 4px" }}>{s.value}</p>
                   <p style={{ fontSize: "0.78rem", color: "#7A746E", margin: 0 }}>{s.sub}</p>
                 </div>
               ))}
@@ -503,7 +503,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Why you're here */}
             <div className="dash-card-lg" style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>
                 You're not building a personal brand to get more joinery enquiries mate. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission and it's exactly the right bloody reason to do this. The most credible personal brands come from people who genuinely mean it, and you mean it.
               </p>
             </div>
@@ -517,13 +517,13 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Your Journey</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 24px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 24px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
 
             {/* Starting Line Snapshot */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "24px 28px", marginBottom: 36 }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot. 26 May 2026.</p>
-              <h3 style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.01em" }}>Where you are on Day One</h3>
-              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 16px" }}>A frozen picture of where you are the day this programme begins. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to compare. It's the only honest way to measure how far you've actually moved.</p>
+              <h3 style={{ fontSize: "0.95rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 10px", letterSpacing: "-0.01em" }}>Where you are on Day One</h3>
+              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 16px" }}>A frozen picture of where you are the day this programme begins. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to compare. It's the only honest way to measure how far you've actually moved.</p>
               <div className="grid-2" style={{ gap: 14 }}>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Audience</p>
@@ -577,7 +577,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                             <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20, background: `${AS_COLOR}18`, color: AS_COLOR, border: `1px solid ${AS_COLOR}33` }}>Latest</span>
                           )}
                         </div>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 20px" }}>{session.summary}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.55, margin: "0 0 20px" }}>{session.summary}</p>
                         <div className="grid-2" style={{ marginBottom: 16 }}>
                           <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "14px 16px" }}>
                             <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Key insights</p>
@@ -625,13 +625,13 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
                 <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
                 <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Nothing in here is confirmed or approved yet mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
                 </div>
 
                 {/* Content pillars — top of brand tab, colour-differentiated */}
                 <div style={{ marginBottom: 24 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars. Your north star.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>Content pillars are your brand's north star. They define the territory you own in your audience's mind, so that over time, every video reinforces a clear, consistent identity instead of feeling random. I've drafted four for you based on the blueprint, each one anchored to a story you already live, an enemy you already have, or a tension worth holding. Together they keep your voice coherent without restricting what you film. We'll review them properly in Session 2 and adjust where they don't feel right. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 18px" }}>Content pillars are your brand's north star. They define the territory you own in your audience's mind, so that over time, every video reinforces a clear, consistent identity instead of feeling random. I've drafted four for you based on the blueprint, each one anchored to a story you already live, an enemy you already have, or a tension worth holding. Together they keep your voice coherent without restricting what you film. We'll review them properly in Session 2 and adjust where they don't feel right. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                     {AS_POSITIONING.contentPillars.map((p, i) => {
                       const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -639,8 +639,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                       return (
                         <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${pc}`, borderRadius: 6, padding: "20px 20px 22px" }}>
                           <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 8px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
-                          <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
-                          <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
+                          <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.3 }}>{p.title}</p>
+                          <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{p.body}</p>
                         </div>
                       );
                     })}
@@ -653,7 +653,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Positioning & bio drafts — same thing, 5 options, risk-ranked */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning & bio drafts. Same thing. Pick one. Or mix bits.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Five options to mull over for Session 2. Each one is short enough to drop straight into your Instagram or TikTok bio, line breaks and all. Ranked safe to ballsy on a scale of 1 to 3 dots.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 14px" }}>Five options to mull over for Session 2. Each one is short enough to drop straight into your Instagram or TikTok bio, line breaks and all. Ranked safe to ballsy on a scale of 1 to 3 dots.</p>
                   {/* Risk legend */}
                   <div style={{ display: "flex", gap: 14, flexWrap: "wrap", padding: "10px 14px", background: "#F9F8F6", borderRadius: 4, marginBottom: 18, fontSize: "0.75rem", color: "#3D3935" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -696,7 +696,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                         {(d as { benTake?: string }).benTake && (
                           <div style={{ marginTop: 14, paddingTop: 12, borderTop: `1px dashed ${riskColor}55` }}>
                             <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: riskColor, margin: "0 0 6px" }}>Ben's take</p>
-                            <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>{(d as { benTake?: string }).benTake}</p>
+                            <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.45, margin: 0, fontStyle: "italic" }}>{(d as { benTake?: string }).benTake}</p>
                           </div>
                         )}
                       </div>
@@ -719,7 +719,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {AS_POSITIONING.audiences.length > 0 && (
                   <div style={{ marginBottom: 16 }}>
                     <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your audience</p>
-                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Three groups. Each one matters for a different reason.</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 14px" }}>Three groups. Each one matters for a different reason.</p>
                     <div className="grid-3">
                       {AS_POSITIONING.audiences.map((a, i) => {
                         const audienceColors = [
@@ -742,11 +742,11 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Unique angles */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Unique angles and opinions</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The signature moves nobody else is doing in this space.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 16px" }}>The signature moves nobody else is doing in this space.</p>
                   {AS_POSITIONING.uniqueAngles.map((a, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12 }}>
                       <span style={{ color: AS_COLOR, fontWeight: 700, flexShrink: 0 }}>→</span>
-                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>{a}</p>
+                      <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.45, margin: 0 }}>{a}</p>
                     </div>
                   ))}
                 </div>
@@ -754,7 +754,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Stand For / Stand Against */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>What you stand for and against</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Most of your content will pull from one or the other. Not a rulebook, just a useful gut-check when something doesn't feel right.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 16px" }}>The enemy list and the flag list. Most of your content will pull from one or the other. Not a rulebook, just a useful gut-check when something doesn't feel right.</p>
                   <div className="grid-2">
                     <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "16px 18px" }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#2e7d4f", margin: "0 0 12px", letterSpacing: "0.08em", textTransform: "uppercase" }}>Stand FOR</p>
@@ -787,19 +787,19 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
             {/* Why these pillars exist — high-level framing */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
             <div style={{ marginBottom: 32 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars. Your north star.</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 18px" }}>When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 18px" }}>When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                 {AS_POSITIONING.contentPillars.map((p, i) => {
                   const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -807,8 +807,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   return (
                     <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${pc}`, borderRadius: 6, padding: "20px 20px 22px" }}>
                       <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 8px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
-                      <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</p>
-                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.65, margin: 0 }}>{p.short}</p>
+                      <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.3 }}>{p.title}</p>
+                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.45, margin: 0 }}>{p.short}</p>
                     </div>
                   );
                 })}
@@ -820,7 +820,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* What the next two weeks are about — Ben's note to Alex */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the next two weeks are about</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 12px" }}>Three jobs over the next two weeks mate, and every idea below serves at least one of them.</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Three jobs over the next two weeks mate, and every idea below serves at least one of them.</p>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
                 {[
                   "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
@@ -869,7 +869,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               return (
                 <div style={{ marginBottom: 28 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{contentWeek === "week1" ? "Five ideas for week one" : "Five ideas for week two"}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record.</p>
                   {ideas.map((idea, i) => {
                     const pc = pillarColors[idea.pillar - 1];
                     return (
@@ -882,9 +882,9 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                           )}
                         </div>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Idea {i + 1} · Hook</p>
-                        <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 14px", lineHeight: 1.5 }}>{idea.hook}</p>
+                        <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.45 }}>{idea.hook}</p>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Format</p>
-                        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.65, margin: "0 0 14px" }}>{idea.format}</p>
+                        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.45, margin: "0 0 14px" }}>{idea.format}</p>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>How to approach it</p>
                         <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: 0, padding: 0 }}>
                           {idea.guidance.map((point, j) => (
@@ -914,7 +914,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {AS_RECS.map((r, i) => (
                   <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                     <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{r.body}</p>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: 0, whiteSpace: "pre-wrap" }}>{r.body}</p>
                   </div>
                 ))}
               </div>
@@ -928,7 +928,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Where We're Headed</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 28px" }}>These aren't vanity metrics mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
 
             {/* Not this game — top of goals */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 24 }}>

@@ -41,7 +41,7 @@ body {
 
 /* Large serif heading used throughout dashboards */
 .dash-h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-family: var(--font-dm-serif), serif;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -94,8 +94,8 @@ body {
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
 
-  /* Shrink big headings */
-  .dash-h2 { font-size: 1.3rem !important; }
+  /* Headings already smaller via clamp, pin to floor on mobile */
+  .dash-h2 { font-size: 1.2rem !important; }
 
   /* Daily watch emojis */
   .daily-watch-emojis { font-size: 1.5rem; }

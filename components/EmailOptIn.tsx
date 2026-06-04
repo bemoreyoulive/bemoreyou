@@ -55,7 +55,7 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
           {opted ? "✓ You're all set" : "Stay connected between sessions"}
         </p>
         <p style={{
-          fontSize: "1.05rem",
+          fontSize: "0.88rem",
           fontWeight: 700,
           color: "#fff",
           margin: "0 0 8px",

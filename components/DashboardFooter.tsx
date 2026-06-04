@@ -98,7 +98,7 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
             <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
               {comments.map(c => (
                 <div key={c.id} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: "3px solid #E8521C", borderRadius: 3, padding: "14px 18px" }}>
-                  <p style={{ fontSize: "0.9rem", color: "#1C1C1C", margin: "0 0 6px", lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{c.text}</p>
+                  <p style={{ fontSize: "0.84rem", color: "#1C1C1C", margin: "0 0 6px", lineHeight: 1.5, whiteSpace: "pre-wrap" }}>{c.text}</p>
                   <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>
                     {new Date(c.created_at).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
                   </p>
