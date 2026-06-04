@@ -950,8 +950,8 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
 
       {/* Nav */}
-      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <nav className="dash-nav" style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3" }}>
+        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "12px 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div className="dash-nav-client" style={{ alignItems: "center", gap: 12 }}>
             <div style={{ width: 36, height: 36, borderRadius: 3, background: COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>
               {INITIALS}
@@ -975,14 +975,14 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               style={{
-                padding: "14px 20px",
-                fontSize: "0.72rem", fontWeight: 600,
-                letterSpacing: "0.12em", textTransform: "uppercase",
+                padding: "10px 14px",
+                fontSize: "0.68rem", fontWeight: 600,
+                letterSpacing: "0.1em", textTransform: "uppercase",
                 whiteSpace: "nowrap", border: "none", background: "transparent",
                 cursor: "pointer",
                 borderBottom: activeTab === tab.id ? `2px solid ${COLOR}` : "2px solid transparent",
                 marginBottom: -1,
-                color: activeTab === tab.id ? COLOR : "#7A746E",
+                color: activeTab === tab.id ? COLOR : "#9CA3AF",
               }}
             >
               {tab.label}
