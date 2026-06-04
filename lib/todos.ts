@@ -49,10 +49,10 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
   "alex-shiell": [
-    { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed, it suits you). No bloody sunglasses. Hold a joinery tool in shot if you fancy a bit of satire, raises curiosity and plants the trades flag straight away." },
-    { id: "as1-2", text: "Sit with the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate it, don't write it, that's how you sound like you." },
-    { id: "as1-3", text: "Send me a list of content creators you actually admire. Any platform, any niche. Helps me read your taste." },
-    { id: "as1-4", text: "Next session: Wednesday 3 June 2026, 6pm. We lock messaging, finalise Instagram and TikTok, and I walk you through this dashboard properly." },
+    { id: "as2-1", text: "Post your first two videos this week. Pick any idea from the content tab, film in the van on your phone, and post raw. No overthinking, no extra editing. You committed to two a week, so start now." },
+    { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from." },
+    { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up." },
+    { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to." },
   ],
   // Archived June 1, 2026 — Solve People into administration, Brett declaring bankruptcy. Kept for record; not used by any live dashboard.
   "solve-people": [

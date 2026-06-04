@@ -18,15 +18,15 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 2 (Wed 3 June, 6pm). Profile photo sorted, mysterious, no bloody sunglasses, joinery tool optional but funny. Then dictate the two reflection questions below. Walk and talk, don't write. We lock the messaging in the session mate.";
+const AS_NEXT_MOVE = "Before Session 3 (17 June, 6pm). Post and live your life between now and then. Come to the call ready to tell me what's happened, what's gone well, what's gone wrong, and any stories from the sites or the college. That's the whole session.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as1-1", text: "Get a profile photo sorted for Instagram and TikTok. Mysterious (your word, agreed, it suits you). No bloody sunglasses. Hold a joinery tool in shot if you fancy a bit of satire, raises curiosity and plants the trades flag straight away.", owner: "Alex" },
-  { id: "as1-2", text: "Sit with the two questions on this page. What does happy actually look like right now, and what do you want viewers walking away thinking in 3 or 6 months. Dictate it, don't write it, that's how you sound like you.", owner: "Alex" },
-  { id: "as1-3", text: "Send me a list of content creators you actually admire. Any platform, any niche. Helps me read your taste.", owner: "Alex" },
-  { id: "as1-4", text: "Next session: Wednesday 3 June 2026, 6pm. We lock messaging, finalise Instagram and TikTok, and I walk you through this dashboard properly.", owner: "Alex" },
+  { id: "as2-1", text: "Post your first two videos this week. Pick any idea from the content tab, film in the van on your phone, and post raw. No overthinking, no extra editing. You committed to two a week, so start now.", owner: "Alex" },
+  { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from.", owner: "Alex" },
+  { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up.", owner: "Alex" },
+  { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to.", owner: "Alex" },
 ];
 
 // SESSIONS
@@ -59,9 +59,28 @@ const AS_SESSIONS: {
     ],
     nextSession: "Session 2. Wednesday 3 June 2026 at 6pm. Lock messaging and positioning, finalise Instagram and TikTok, walk through this dashboard.",
   },
+  {
+    number: 2,
+    date: "3 June 2026",
+    title: "Dashboard walkthrough. Brand locked. The Wolf of Joinery.",
+    summary: "Seventy minutes. You came in with real news straight off the tools. You had to sack a subcontractor, Tyler, for going behind your back and offering quotes to your own clients while on your payroll. You handled it correctly and you were philosophical about it, which is exactly right, because bad people are just filters you never have to use again. The bigger news was the trades college: you pitched the owner on letting you run a free business class for self-employed and scaling tradespeople, and they said yes. That's a bigger deal than it might seem. It builds your presenting skills, puts you in front of real tradespeople every month, and the coaching model sitting behind it is exactly the longer-term direction you described. We walked through this dashboard properly for the first time, confirmed The Wolf of Joinery as the brand handle across TikTok and Instagram, locked the three emoji content framework (beer for living your life, van for calling out what's broken in the trades, phone for hustle bro culture), and talked through the bio. You wanted short and mysterious, no vanity stats, not try-hard. We had a brief conversation about putting fake revenue figures in the bio, Ben pushed back, and you took the point. Before the next morning you had already changed the username, updated the profile photo, and sorted the blue tick. That's the energy.",
+    insights: [
+      "Instagram snapshot, 4 June 2026. @thewolfofjoinery, 48 followers, 0 posts, blue tick paid, bio: 18, Edinburgh, modernising the trades industry, ai, systems, growth. One line to sharpen before Session 3: the ai, systems, growth bit reads startup-generic and doesn't sound like you.",
+      "You moved overnight. Username changed, photo updated, blue tick sorted before the next morning. Zero friction.",
+      "The trades college is worth taking seriously. It is a presenting school, a coaching proof of concept, and a monthly source of real tradespeople to talk to and make content about.",
+      "The LARPING temptation is real. You floated a fake revenue stat for the bio and Ben pushed back. That kind of move makes you the person you're calling out.",
+      "The three emoji system works because it gives you a daily filter. Any moment is either a beer, a van, or a phone. You don't need a content calendar, you need those three.",
+    ],
+    takeaways: [
+      "Four new to-dos in place. First videos this week, a proper profile photo, clean the old IG, review Ahmet Karakaya.",
+      "The brand is @thewolfofjoinery across both platforms. Own it.",
+      "Session 3 is fully reactive. Come with stories from the past two weeks and we work with whatever's there.",
+    ],
+    nextSession: "Session 3. Wednesday 17 June 2026 at 6pm. Fully reactive. No fixed agenda. You bring the stories, we work with what's there.",
+  },
 ];
 
-// POSITIONING. These are ideas and starting points only. Nothing confirmed until Session 2.
+// POSITIONING. Content pillars confirmed Session 2. Bio drafts kept for future reference.
 
 const AS_POSITIONING = {
   headlineDrafts: [
@@ -300,7 +319,12 @@ const AS_DAILY_WATCH: { emoji: string; title: string; body: string; pillar: stri
 
 // RECOMMENDATIONS
 
-const AS_RECS: { title: string; body: string }[] = [];
+const AS_RECS: { title: string; body: string }[] = [
+  {
+    title: "On authenticity. This is the ongoing work.",
+    body: "Something big came up in Session 2 and it will keep coming up. Right now you're in the phase where you're watching other people, borrowing their energy, trying different versions of yourself on for size. That's completely normal at 18, and honestly it's part of how you find your voice.\n\nThe tension I'm watching is this. You know instinctively that the gurus are fake, the LARPing is hollow, and that trust evaporates the moment people smell a performance. You told me as much yourself. And yet you're still being pulled that way. This isn't because you're dishonest. It's because you haven't yet found the crowd that validates the real you. So you're borrowing validation from people who already have it.\n\nWhen the first DM lands from someone who genuinely got something from your content, that pull will start to loosen. Until then, the job is to keep posting as you, not a polished version of someone else. The brand only works if it's actually you in it.",
+  },
+];
 
 // GOALS
 
@@ -390,7 +414,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AS_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AS</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Alex Shiell</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Shiell Joinery · Session 2 of 13</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Shiell Joinery · Session 3 of 13</p>
             </div>
           </div>
         </div>
@@ -421,7 +445,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AS_COLOR} />
-            <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Blueprint Call · 26 May 2026" animateIn />
+            <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Session 2 · 3 June 2026" animateIn />
 
             {/* Welcome card */}
             <div className="dash-card-xl" style={{ background: AS_COLOR, borderRadius: 8, marginBottom: 20, display: "flex", gap: 20, alignItems: "flex-start" }}>
@@ -439,10 +463,10 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions", value: "1 of 13", sub: "Next: Wed 3 June, 6pm" },
+                { label: "Sessions", value: "2 of 13", sub: "Next: Wed 17 June, 6pm" },
                 { label: "Programme length", value: "6 months", sub: "May to November 2026" },
-                { label: "Platform", value: "Instagram & TikTok", sub: "Video-first content" },
-                { label: "Content live", value: "Coming soon", sub: "First video after Session 2" },
+                { label: "Platform", value: "Instagram & TikTok", sub: "@thewolfofjoinery" },
+                { label: "Content live", value: "Starting this week", sub: "First video incoming" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -622,16 +646,25 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             {AS_POSITIONING.headlineDrafts.length > 0 ? (
               <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
-                <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Updated after Session 2</p>
+                <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 20px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+
+                {/* Live bio — confirmed post-Session 2 */}
+                <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderLeft: "4px solid #16a34a", borderRadius: 6, padding: "20px 24px", marginBottom: 16 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#16a34a", margin: "0 0 10px" }}>✓ Live bio · @thewolfofjoinery · 4 June 2026</p>
+                  <p style={{ fontSize: "1rem", color: "#1C1C1C", lineHeight: 1.7, margin: "0 0 12px", fontFamily: "var(--font-dm-serif), serif", whiteSpace: "pre-line" }}>{"18 | 📍 Edinburgh\nmodernising the trades industry\nai • systems • growth"}</p>
+                  <p style={{ fontSize: "0.78rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 6px" }}>Followers: 48 · Posts: 0 · Blue tick: paid</p>
+                  <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>One thing to revisit in Session 3: "ai • systems • growth" reads a bit startup-generic and doesn't quite match your contrarian voice. Worth sharpening to something with more of the mission in it.</p>
+                </div>
+
                 <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Nothing in here is confirmed or approved yet mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Content pillars confirmed in Session 2. Bio draft options below are kept for future reference as the brand develops.</p>
                 </div>
 
                 {/* Content pillars — top of brand tab, colour-differentiated */}
                 <div style={{ marginBottom: 24 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Content pillars. Your north star.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 18px" }}>Content pillars are your brand's north star. They define the territory you own in your audience's mind, so that over time, every video reinforces a clear, consistent identity instead of feeling random. I've drafted four for you based on the blueprint, each one anchored to a story you already live, an enemy you already have, or a tension worth holding. Together they keep your voice coherent without restricting what you film. We'll review them properly in Session 2 and adjust where they don't feel right. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 18px" }}>Four pillars, confirmed in Session 2. Each one is anchored to a story you already live, an enemy you already have, or a tension worth holding. Together they keep your voice coherent without restricting what you film. Documenting the Journey is the most important one for a guy your age, don't lose sight of that.</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
                     {AS_POSITIONING.contentPillars.map((p, i) => {
                       const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -653,7 +686,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 {/* Positioning & bio drafts — same thing, 5 options, risk-ranked */}
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Positioning & bio drafts. Same thing. Pick one. Or mix bits.</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 14px" }}>Five options to mull over for Session 2. Each one is short enough to drop straight into your Instagram or TikTok bio, line breaks and all. Ranked safe to ballsy on a scale of 1 to 3 dots.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 14px" }}>Ben's bio draft options, kept for future reference as your positioning develops. Each one is short enough to drop straight into your Instagram or TikTok bio. Ranked safe to ballsy on a scale of 1 to 3 dots.</p>
                   {/* Risk legend */}
                   <div style={{ display: "flex", gap: 14, flexWrap: "wrap", padding: "10px 14px", background: "#F9F8F6", borderRadius: 4, marginBottom: 18, fontSize: "0.75rem", color: "#3D3935" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -793,7 +826,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
               <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>I've drafted four based on your blueprint. Each one is anchored to something you already live (the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof). They're a starting framework, not a rulebook. We'll review them properly in Session 2 and rework anything that doesn't sit right with you.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Four pillars confirmed in Session 2. Each one is anchored to something you already live: the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof. They're a working framework, not a rulebook. If something doesn't feel right, tell Ben.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
