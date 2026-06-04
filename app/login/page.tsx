@@ -100,6 +100,7 @@ function LoginForm() {
     const next = [...code];
     next[index] = digit;
     setCode(next);
+    if (errorMsg) setErrorMsg("");
     if (digit && index < 7) codeRefs.current[index + 1]?.focus();
   }
 
@@ -152,7 +153,7 @@ function LoginForm() {
                   value={digit}
                   onChange={e => handleDigitChange(i, e.target.value)}
                   onKeyDown={e => handleDigitKeyDown(i, e)}
-                  onPaste={handlePaste}
+                  onPaste={e => { handlePaste(e); e.stopPropagation(); }}
                   style={{
                     width: 38, height: 48,
                     textAlign: "center",
@@ -197,7 +198,7 @@ function LoginForm() {
               Can&apos;t find it? Check your junk folder.
             </p>
             <button
-              onClick={() => { setStep("email"); setCode(["","","","","",""]); setStatus("idle"); setErrorMsg(""); }}
+              onClick={() => { setStep("email"); setCode(["","","","","","","",""]); setStatus("idle"); setErrorMsg(""); }}
               style={{ fontSize: "0.75rem", color: "#7A746E", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}
             >
               Use a different email
