@@ -41,12 +41,9 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
       borderRadius: 6,
       padding: "28px 32px",
       marginBottom: 32,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: 24,
       transition: "background 0.3s ease",
     }}>
+    <div className="email-optin-row">
       <div style={{ flex: 1 }}>
         <p style={{
           fontSize: "0.65rem",
@@ -111,6 +108,7 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
           boxShadow: "0 1px 4px rgba(0,0,0,0.3)",
         }} />
       </button>
+    </div>
     </div>
   );
 }

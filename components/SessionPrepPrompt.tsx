@@ -15,22 +15,22 @@ export default function SessionPrepPrompt() {
   const [minimised, setMinimised] = useState(false);
 
   useEffect(() => {
+    // Start minimised on mobile so it doesn't cover content
+    if (window.innerWidth < 640) setMinimised(true);
     const t = setTimeout(() => setVisible(true), 1200);
     return () => clearTimeout(t);
   }, []);
 
   return (
-    <div style={{
-      position: "fixed",
-      bottom: 28,
-      right: 28,
-      zIndex: 999,
-      width: 320,
-      transform: visible ? "translateY(0)" : "translateY(120%)",
-      opacity: visible ? 1 : 0,
-      transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
-      pointerEvents: visible ? "auto" : "none",
-    }}>
+    <div
+      className="session-prep-popup"
+      style={{
+        transform: visible ? "translateY(0)" : "translateY(120%)",
+        opacity: visible ? 1 : 0,
+        transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
+        pointerEvents: visible ? "auto" : "none",
+      }}
+    >
       <div style={{
         background: "#1C1C1C",
         borderRadius: 8,

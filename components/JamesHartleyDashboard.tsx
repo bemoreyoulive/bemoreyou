@@ -952,7 +952,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
       {/* Nav */}
       <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div className="dash-nav-client" style={{ alignItems: "center", gap: 12 }}>
             <div style={{ width: 36, height: 36, borderRadius: 3, background: COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>
               {INITIALS}
             </div>
@@ -969,7 +969,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
 
       {/* Tabs */}
       <div style={{ borderBottom: "1px solid #E0DBD3", background: "rgba(245,241,236,0.6)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", overflowX: "auto" }}>
+        <div className="dash-tabs-scroll" style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex" }}>
           {TABS.map(tab => (
             <button
               key={tab.id}
@@ -992,7 +992,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
       </div>
 
       {/* Content */}
-      <div style={{ maxWidth: 1160, margin: "0 auto", padding: "48px 36px" }}>
+      <div className="dash-page" style={{ maxWidth: 1160, margin: "0 auto" }}>
 
         {/* ── HOME ── */}
         {activeTab === "home" && (

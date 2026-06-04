@@ -43,7 +43,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
 
       {/* Nav */}
       <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.97)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "0 32px", display: "flex", alignItems: "stretch", gap: 0 }}>
-        <div style={{ display: "flex", alignItems: "center", paddingRight: 32, borderRight: "1px solid #E0DBD3", marginRight: 8, flexShrink: 0 }}>
+        <div className="dash-nav-client" style={{ alignItems: "center", paddingRight: 32, borderRight: "1px solid #E0DBD3", marginRight: 8, flexShrink: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
@@ -52,7 +52,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "stretch", gap: 0, overflowX: "auto" }}>
+        <div className="dash-tabs-scroll" style={{ display: "flex", alignItems: "stretch", gap: 0 }}>
           {asbTabs.map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{ display: "flex", alignItems: "center", padding: "0 18px", fontSize: "0.8rem", fontWeight: 500, color: activeTab === tab.id ? ASB_COLOR : "#7A746E", cursor: "pointer", border: "none", background: "none", borderBottom: activeTab === tab.id ? `2px solid ${ASB_COLOR}` : "2px solid transparent", whiteSpace: "nowrap", height: 52, transition: "color 0.15s" }}>
               {tab.label}
@@ -61,7 +61,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
         </div>
       </nav>
 
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "32px 32px" }}>
+      <div className="dash-page" style={{ maxWidth: 1080, margin: "0 auto" }}>
 
         {/* ── HOME ── */}
         <div style={{ display: activeTab === "home" ? "block" : "none" }}>

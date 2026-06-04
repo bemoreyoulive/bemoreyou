@@ -385,7 +385,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
       {/* Nav */}
       <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.97)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "0 32px", display: "flex", alignItems: "stretch", gap: 0 }}>
-        <div style={{ display: "flex", alignItems: "center", paddingRight: 32, borderRight: "1px solid #E0DBD3", marginRight: 8, flexShrink: 0 }}>
+        <div className="dash-nav-client" style={{ alignItems: "center", paddingRight: 32, borderRight: "1px solid #E0DBD3", marginRight: 8, flexShrink: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AS_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AS</div>
             <div>
@@ -394,7 +394,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "stretch", gap: 0, overflowX: "auto" }}>
+        <div className="dash-tabs-scroll" style={{ display: "flex", alignItems: "stretch", gap: 0 }}>
           {TABS.map(tab => (
             <button
               key={tab.id}
@@ -414,7 +414,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
         </div>
       </nav>
 
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "32px 32px" }}>
+      <div className="dash-page" style={{ maxWidth: 1080, margin: "0 auto" }}>
 
         {/* HOME */}
         {activeTab === "home" && (
@@ -463,7 +463,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             </div>
 
             {/* What's in this dashboard / what this is */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
+            <div className="grid-2" style={{ marginBottom: 28 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What's in this dashboard</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
@@ -524,7 +524,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot. 26 May 2026.</p>
               <h3 style={{ fontSize: "1.15rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.01em" }}>Where you are on Day One</h3>
               <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 16px" }}>A frozen picture of where you are the day this programme begins. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to compare. It's the only honest way to measure how far you've actually moved.</p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div className="grid-2" style={{ gap: 14 }}>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Audience</p>
                   <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal Instagram: ~43 to 45 followers, zero posts</p>
@@ -578,7 +578,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                           )}
                         </div>
                         <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 20px" }}>{session.summary}</p>
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                        <div className="grid-2" style={{ marginBottom: 16 }}>
                           <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "14px 16px" }}>
                             <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Key insights</p>
                             {session.insights.map((insight, j) => (
@@ -720,7 +720,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   <div style={{ marginBottom: 16 }}>
                     <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your audience</p>
                     <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 14px" }}>Three groups. Each one matters for a different reason.</p>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+                    <div className="grid-3">
                       {AS_POSITIONING.audiences.map((a, i) => {
                         const audienceColors = [
                           { bg: "#fef3e7", border: "#d97706", label: "#a85a05" },
@@ -755,7 +755,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>What you stand for and against</p>
                   <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.65, margin: "0 0 16px" }}>The enemy list and the flag list. Most of your content will pull from one or the other. Not a rulebook, just a useful gut-check when something doesn't feel right.</p>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                  <div className="grid-2">
                     <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "16px 18px" }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "#2e7d4f", margin: "0 0 12px", letterSpacing: "0.08em", textTransform: "uppercase" }}>Stand FOR</p>
                       {AS_POSITIONING.forAgainst.for.map((item, i) => (
@@ -941,7 +941,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 20 }}>
+            <div className="grid-2" style={{ gap: 20, marginBottom: 20 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 16px" }}>3 months. Late August 2026.</p>
                 {AS_GOALS.threeMonth.map((g, i) => (
