@@ -354,7 +354,7 @@ function Collapsible({ title, children, defaultOpen = false }: { title: string; 
         <span style={{ fontSize: "0.7rem", color: "#7A746E", marginLeft: 8, flexShrink: 0 }}>{open ? "▲" : "▼"}</span>
       </button>
       {open && (
-        <div style={{ padding: "0 20px 18px", background: "#fff", fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7 }}>
+        <div style={{ padding: "0 20px 18px", background: "#fff", fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5 }}>
           {children}
         </div>
       )}
@@ -439,25 +439,25 @@ function IdeaCard({ idea, isSack = false, slug }: { idea: ContentIdea; isSack?: 
           {idea.guidance && (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Guidance</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7 }}>{idea.guidance}</p>
+              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.guidance}</p>
             </div>
           )}
           {idea.postCopy && (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Draft post copy</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7, whiteSpace: "pre-wrap" as const }}>{idea.postCopy}</p>
+              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5, whiteSpace: "pre-wrap" as const }}>{idea.postCopy}</p>
             </div>
           )}
           {idea.prompts && (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Prompting questions</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7 }}>{idea.prompts}</p>
+              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.prompts}</p>
             </div>
           )}
           {idea.cta && (
             <div>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>CTA</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.7 }}>{idea.cta}</p>
+              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.cta}</p>
             </div>
           )}
         </div>
@@ -484,7 +484,7 @@ function Callout({ type, children }: { type: "green" | "amber" | "blue" | "orang
   };
   const s = styles[type];
   return (
-    <div style={{ background: s.background, borderLeft: `3px solid ${s.borderColor}`, borderRadius: 3, padding: "14px 18px", fontSize: "0.88rem", color: s.color, lineHeight: 1.7, marginBottom: 20 }}>
+    <div style={{ background: s.background, borderLeft: `3px solid ${s.borderColor}`, borderRadius: 3, padding: "14px 18px", fontSize: "0.88rem", color: s.color, lineHeight: 1.5, marginBottom: 20 }}>
       {children}
     </div>
   );
@@ -492,36 +492,37 @@ function Callout({ type, children }: { type: "green" | "amber" | "blue" | "orang
 
 function AndyFeltonDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
   const [contentSubTab, setContentSubTab] = useState("bobby");
 
   const afTodoItems = afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy" }));
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
-      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+      <nav className="dash-nav" style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3" }}>
+        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "10px 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div className="dash-nav-client" style={{ alignItems: "center", gap: 12 }}>
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AF_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AF</div>
             <div>
-              <p style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Felton</p>
+              <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Felton</p>
               <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · May 2026 · Session 11</p>
             </div>
           </div>
-          <div style={{ fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif" }}>BeMore<span style={{ color: "#4ec9d0" }}>You</span></div>
+          <div className="dash-nav-client" style={{ alignItems: "center", fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif" }}>BeMore<span style={{ color: "#4ec9d0" }}>You</span></div>
         </div>
       </nav>
 
       <div style={{ borderBottom: "1px solid #E0DBD3", background: "rgba(245,241,236,0.6)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 36px", display: "flex", overflowX: "auto" }}>
+        <div className="dash-tabs-scroll" style={{ maxWidth: 1160, margin: "0 auto", padding: "0 16px", display: "flex" }}>
           {AF_TABS.map(tab => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{ padding: "14px 20px", fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", whiteSpace: "nowrap", border: "none", background: "transparent", cursor: "pointer", borderBottom: activeTab === tab.id ? `2px solid ${AF_COLOR}` : "2px solid transparent", marginBottom: -1, color: activeTab === tab.id ? AF_COLOR : "#7A746E" }}>
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{ padding: "10px 14px", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap", border: "none", background: "transparent", cursor: "pointer", borderBottom: activeTab === tab.id ? `2px solid ${AF_COLOR}` : "2px solid transparent", marginBottom: -1, color: activeTab === tab.id ? AF_COLOR : "#9CA3AF" }}>
               {tab.label}
             </button>
           ))}
         </div>
       </div>
 
-      <div style={{ maxWidth: 1160, margin: "0 auto", padding: "48px 36px" }}>
+      <div className="dash-page" style={{ maxWidth: 1160, margin: "0 auto" }}>
 
         {/* ── HOME ── */}
         {activeTab === "home" && (
@@ -544,7 +545,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, margin: "40px 0 28px" }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
                 <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>What this is</h3>
-                <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>A working strategy document — not a polished deck. Everything in here is based on our sessions together. It'll evolve as things move forward. Use it to review, challenge, and track what we're building. If something doesn't feel right, say so.</p>
+                <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>A working strategy document — not a polished deck. Everything in here is based on our sessions together. It'll evolve as things move forward. Use it to review, challenge, and track what we're building. If something doesn't feel right, say so.</p>
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
                 <h3 style={{ fontSize: "0.95rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>What's in here</h3>
@@ -559,9 +560,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 28 }}>
               <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 6px" }}>Who you are and what you actually do</h2>
               <p style={{ fontSize: "0.78rem", color: "#7A746E", margin: "0 0 16px" }}>Plain English. No jargon. No buzzwords that make people glaze over.</p>
-              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 12px" }}>You're the founder of Equate Digital, a one-person implementation business based in the East Midlands. You build systems for growing businesses — connecting their tools, stripping out the manual processes that slow them down, getting rid of the fragile workarounds that only hold together because someone is doing it manually.</p>
-              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: "0 0 12px" }}>Your background is in bespoke software development. You built long-running platforms for RunBritain (UK Athletics), BUCScore (BUCS), OMS (SwimEngland), and the England Golf Handicapping system. Not small projects. That same instinct — edge cases, reliability, doing it properly — is what you bring now.</p>
-              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>You're deeply technical. Most people in this space aren't. That gap matters more than anything else on the list.</p>
+              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>You're the founder of Equate Digital, a one-person implementation business based in the East Midlands. You build systems for growing businesses — connecting their tools, stripping out the manual processes that slow them down, getting rid of the fragile workarounds that only hold together because someone is doing it manually.</p>
+              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Your background is in bespoke software development. You built long-running platforms for RunBritain (UK Athletics), BUCScore (BUCS), OMS (SwimEngland), and the England Golf Handicapping system. Not small projects. That same instinct — edge cases, reliability, doing it properly — is what you bring now.</p>
+              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>You're deeply technical. Most people in this space aren't. That gap matters more than anything else on the list.</p>
             </div>
 
             <Callout type="green">
@@ -570,7 +571,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
 
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
               <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 12px" }}>Why we're working on this</h2>
-              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>You pivoted from software development to process and systems implementation in early 2025 after the bespoke web dev market dried up. Strong skills, real integrity, no clear story about who you were for. Three months in, the positioning is largely sorted. Content is landing with the right people offline. The sticking point is converting the first properly-aligned client, and getting the LinkedIn work in front of enough of the right people — not just thrown against a wall and hoped for.</p>
+              <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>You pivoted from software development to process and systems implementation in early 2025 after the bespoke web dev market dried up. Strong skills, real integrity, no clear story about who you were for. Three months in, the positioning is largely sorted. Content is landing with the right people offline. The sticking point is converting the first properly-aligned client, and getting the LinkedIn work in front of enough of the right people — not just thrown against a wall and hoped for.</p>
             </div>
 
             {/* Accountant research questions */}
@@ -641,7 +642,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#fff", lineHeight: 1.5, margin: "0 0 20px" }}>Your intro &amp; one-liners</p>
               <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 20, marginBottom: 20 }}>
                 <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.45)", margin: "0 0 10px" }}>Open with</p>
-                <p style={{ fontSize: "1rem", color: "#fff", lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>
+                <p style={{ fontSize: "1rem", color: "#fff", lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>
                   {`"I'm Andy — often known as the Sheldon of practice automation. Accountancy firms come to me when the retainer work is taking longer than it should."`}
                 </p>
               </div>
@@ -687,7 +688,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             {/* Positioning statement */}
             <div style={{ background: AF_COLOR, borderRadius: 6, padding: "28px 32px", marginBottom: 8 }}>
               <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 10px" }}>Unique Positioning Statement — Agreed April 2026</p>
-              <p style={{ fontSize: "1.05rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontSize: "1.05rem", fontFamily: "var(--font-dm-serif), serif", color: "#fff", lineHeight: 1.5, margin: 0 }}>
                 {`"Accountancy firms run on retainers. Most of the work inside those retainers is still manual. I specialise in taking the manual heavy lifting out of accountancy retainer delivery — the reporting, the chasing, the recurring workflows that eat into every week. Often called (with affection) the 'Sheldon' of practice automation, I've spent 20+ years building complex systems that had to hold up under real conditions. I bring the same standard to accountancy practices that are drowning in delivery admin and ready to fix it properly."`}
               </p>
             </div>
@@ -733,7 +734,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
               ].map((ups, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${AF_COLOR}`, borderRadius: 6, padding: "22px 26px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: AF_COLOR, margin: "0 0 10px" }}>{ups.label}</p>
-                  <p style={{ fontSize: "0.93rem", fontWeight: 500, color: "#1C1C1C", lineHeight: 1.7, margin: "0 0 12px" }}>{ups.text}</p>
+                  <p style={{ fontSize: "0.93rem", fontWeight: 500, color: "#1C1C1C", lineHeight: 1.5, margin: "0 0 12px" }}>{ups.text}</p>
                   <p style={{ fontSize: "0.78rem", color: "#7A746E", lineHeight: 1.5, margin: 0 }}>{ups.note}</p>
                 </div>
               ))}
@@ -915,7 +916,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px" }}>
                   <div style={{ width: 22, height: 22, borderRadius: "50%", background: AF_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>{msg.num}</div>
                   <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 6px" }}>{msg.title}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0 }}>{msg.body}</p>
+                  <p style={{ fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.45, margin: 0 }}>{msg.body}</p>
                   {msg.quote && (
                     <div style={{ background: "#e8f0f7", borderLeft: `3px solid ${AF_COLOR}`, borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10 }}>
                       <p style={{ fontSize: "0.78rem", fontStyle: "italic", color: "#2d5a8e", margin: 0 }}>{msg.quote}</p>
@@ -1097,7 +1098,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 ].map((item, i) => (
                   <li key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                     <span style={{ width: 7, height: 7, borderRadius: "50%", background: AF_COLOR, flexShrink: 0, marginTop: 7 }} />
-                    <span style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.65 }}>{item}</span>
+                    <span style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.45 }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1109,7 +1110,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
 
             <div style={{ height: 1, background: "#E0DBD3", margin: "24px 0" }} />
             <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 8px" }}>The tension to hold</h3>
-            <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7 }}>Slow build, real deadline. The brand pulls people toward you. The outreach gets you in front of them. Neither works without the other.</p>
+            <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5 }}>Slow build, real deadline. The brand pulls people toward you. The outreach gets you in front of them. Neither works without the other.</p>
 
             <CommentBox clientName="Andy Felton" tabName="Goals" slug={slug} />
           </div>
@@ -1428,7 +1429,7 @@ function PendingDashboard({ slug }: { slug: string }) {
           <h2 style={{fontSize: "clamp(1.4rem, 2.5vw, 2rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 16px", lineHeight: 1.2}}>
             {placeholderMsg}
           </h2>
-          <p style={{fontSize: "0.9rem", color: "#7A746E", lineHeight: 1.7, margin: 0}}>
+          <p style={{fontSize: "0.9rem", color: "#7A746E", lineHeight: 1.5, margin: 0}}>
             Ben has your questionnaire answers and will have everything ready for you here after your first session. Speak soon.
           </p>
         </div>
@@ -1455,6 +1456,7 @@ const nmTodos = [
 
 function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
   const [openTensions, setOpenTensions] = useState<Record<number, boolean>>({});
   const [contentSubTab, setContentSubTab] = useState("video");
 
@@ -1469,8 +1471,8 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
 
   return (
     <div style={{minHeight: "100vh", background: "#f7f6f3"}}>
-      <nav style={{position: "sticky", top: 0, zIndex: 100, background: "rgba(247,246,243,0.97)", backdropFilter: "blur(14px)", borderBottom: "1px solid #e4e2dc", padding: "0 32px", display: "flex", alignItems: "stretch", gap: 0}}>
-        <div style={{display: "flex", alignItems: "center", paddingRight: 32, borderRight: "1px solid #e4e2dc", marginRight: 8, flexShrink: 0}}>
+      <nav className="dash-nav" style={{position: "sticky", top: 0, zIndex: 100, background: "rgba(247,246,243,0.97)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid #e4e2dc", padding: "0 16px", display: "flex", alignItems: "stretch", gap: 0}}>
+        <div className="dash-nav-client" style={{alignItems: "center", paddingRight: 24, borderRight: "1px solid #e4e2dc", marginRight: 8, flexShrink: 0}}>
           <div style={{display: "flex", alignItems: "center", gap: 10}}>
             <div style={{width: 36, height: 36, borderRadius: 3, background: NM_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700}}>NM</div>
             <div>
@@ -1479,16 +1481,16 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
             </div>
           </div>
         </div>
-        <div style={{display: "flex", alignItems: "stretch", gap: 0, overflowX: "auto"}}>
+        <div className="dash-tabs-scroll" style={{display: "flex", alignItems: "stretch", gap: 0}}>
           {nmTabs.map(tab => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{display: "flex", alignItems: "center", padding: "0 18px", fontSize: "0.8rem", fontWeight: 500, color: activeTab === tab.id ? NM_COLOR : "#6b6860", cursor: "pointer", border: "none", background: "none", borderBottom: activeTab === tab.id ? `2px solid ${NM_COLOR}` : "2px solid transparent", whiteSpace: "nowrap", height: 52, transition: "color 0.15s"}}>
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{display: "flex", alignItems: "center", padding: "0 14px", fontSize: "0.75rem", fontWeight: 500, color: activeTab === tab.id ? NM_COLOR : "#9CA3AF", cursor: "pointer", border: "none", background: "none", borderBottom: activeTab === tab.id ? `2px solid ${NM_COLOR}` : "2px solid transparent", whiteSpace: "nowrap", height: 44, transition: "color 0.15s"}}>
               {tab.label}
             </button>
           ))}
         </div>
       </nav>
 
-      <div style={{maxWidth: 1080, margin: "0 auto", padding: "32px 32px"}}>
+      <div className="dash-page" style={{maxWidth: 1080, margin: "0 auto"}}>
 
         {/* ── HOME ── */}
         {activeTab === "home" && (
@@ -1558,7 +1560,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
                 ].map((block, i) => (
                   <div key={i}>
                     <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>{block.title}</p>
-                    <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{block.body}</p>
+                    <p style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.45, margin: 0}}>{block.body}</p>
                   </div>
                 ))}
               </div>
@@ -1613,7 +1615,7 @@ function NikkiMcReynoldsDashboard({ slug }: { slug: string }) {
             {/* About section */}
             <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "24px 28px", marginBottom: 20}}>
               <p style={{fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9e9b94", margin: "0 0 14px"}}>About Section — Live on LinkedIn</p>
-              <p style={{fontSize: "0.88rem", color: "#3d3935", lineHeight: 1.8, margin: "0 0 10px", whiteSpace: "pre-wrap"}}>{`The PeacePath® and HushAway® exist for one simple reason: to give every child a place that feels like a hug when the world gets too loud.
+              <p style={{fontSize: "0.88rem", color: "#3d3935", lineHeight: 1.55, margin: "0 0 10px", whiteSpace: "pre-wrap"}}>{`The PeacePath® and HushAway® exist for one simple reason: to give every child a place that feels like a hug when the world gets too loud.
 
 I kept meeting parents who were exhausted, overwhelmed, and still showing up with so much love… and little ones who were carrying far more emotion than their tiny bodies could hold.
 
@@ -1730,7 +1732,7 @@ What we do:
                 <div key={i} style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 6, padding: "18px 20px"}}>
                   <div style={{width: 22, height: 22, borderRadius: "50%", background: NM_COLOR, color: "#fff", fontSize: "0.68rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10}}>{msg.num}</div>
                   <p style={{fontSize: "0.9rem", fontWeight: 600, color: "#1a1916", margin: "0 0 6px"}}>{msg.title}</p>
-                  <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.65, margin: 0}}>{msg.body}</p>
+                  <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.45, margin: 0}}>{msg.body}</p>
                   {msg.quote && (
                     <div style={{background: "#eef4f2", borderLeft: "3px solid #3d6b5e", borderRadius: "0 6px 6px 0", padding: "10px 14px", marginTop: 10}}>
                       <p style={{fontSize: "0.78rem", fontStyle: "italic", color: "#3d6b5e", margin: 0}}>{msg.quote}</p>
@@ -1759,7 +1761,7 @@ What we do:
             <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "24px 26px", marginBottom: 20}}>
               <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>The System</p>
               <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>How a stranger becomes a member — the 8-touchpoint nurture</h3>
-              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>Research is boringly consistent on this: most buyers need <strong>at least 8 meaningful touchpoints</strong> before they pay. LinkedIn alone can't deliver 8 — the feed moves too fast and people forget. This is why we push everything toward your owned channels (newsletter, YouTube, website). Those are the places where a stranger racks up the touches that turn into trust.</p>
+              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.45, margin: "0 0 20px"}}>Research is boringly consistent on this: most buyers need <strong>at least 8 meaningful touchpoints</strong> before they pay. LinkedIn alone can't deliver 8 — the feed moves too fast and people forget. This is why we push everything toward your owned channels (newsletter, YouTube, website). Those are the places where a stranger racks up the touches that turn into trust.</p>
 
               {/* Stage 1: Top of funnel */}
               <div style={{display: "grid", gridTemplateColumns: "110px 1fr", gap: 16, marginBottom: 14}}>
@@ -1834,7 +1836,7 @@ What we do:
             <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "24px 26px", marginBottom: 20}}>
               <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: NM_COLOR, margin: "0 0 6px"}}>Agreed in Session 12 — what happens next</p>
               <h3 style={{fontSize: "1.15rem", fontWeight: 700, color: "#1a1916", margin: "0 0 6px"}}>One final fortnightly → break → maintenance sessions from August</h3>
-              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.65, margin: "0 0 20px"}}>You said it yourself in Session 12: "one person landing on that website and turning and switching off is lost — I will never get them back." Pushing more LinkedIn content through a funnel that isn't converting is the wrong move. The right move is to pause fortnightly coaching, let the CMO fix the funnel over the next three months, and come back together once the back end is actually working. Then we go hell-for-leather on personal / opinion content to drive people to the newsletter and on to HushAway.</p>
+              <p style={{fontSize: "0.85rem", color: "#6b6860", lineHeight: 1.45, margin: "0 0 20px"}}>You said it yourself in Session 12: "one person landing on that website and turning and switching off is lost — I will never get them back." Pushing more LinkedIn content through a funnel that isn't converting is the wrong move. The right move is to pause fortnightly coaching, let the CMO fix the funnel over the next three months, and come back together once the back end is actually working. Then we go hell-for-leather on personal / opinion content to drive people to the newsletter and on to HushAway.</p>
 
               <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 16}}>
                 {[
@@ -1873,7 +1875,7 @@ What we do:
                   <div style={{width: 36, height: 36, borderRadius: 8, background: rec.iconBg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0}}>{rec.icon}</div>
                   <div style={{flex: 1}}>
                     <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 8, margin: "0 0 8px"}}>{rec.title}</h3>
-                    {rec.paras.map((p, j) => <p key={j} style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.65, margin: j < rec.paras.length - 1 ? "0 0 8px" : 0}}>{p}</p>)}
+                    {rec.paras.map((p, j) => <p key={j} style={{fontSize: "0.84rem", color: "#6b6860", lineHeight: 1.45, margin: j < rec.paras.length - 1 ? "0 0 8px" : 0}}>{p}</p>)}
                     <span style={{display: "inline-block", marginTop: 10, fontSize: "0.75rem", fontWeight: 600, padding: "4px 10px", borderRadius: 20, background: rec.flagBg, color: rec.flagColor}}>{rec.flag}</span>
                   </div>
                 </div>
@@ -2014,7 +2016,7 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
               <div style={{marginTop: 14}}>
                 <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Claude prompt — copy and paste this</p>
                 <div style={{background: "#eef4f2", borderRadius: 6, padding: "14px 16px"}}>
-                  <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.7, whiteSpace: "pre-wrap", margin: 0}}>{prompt}</p>
+                  <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.5, whiteSpace: "pre-wrap", margin: 0}}>{prompt}</p>
                 </div>
               </div>
             )}
@@ -2094,7 +2096,7 @@ function NikkiContentTab({ slug, contentSubTab, setContentSubTab }: { slug: stri
             <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", margin: "0 0 10px"}}>Claude starter prompt — for your first pass</p>
             <p style={{fontSize: "0.82rem", color: "#6b6860", lineHeight: 1.6, margin: "0 0 12px"}}>You said in Session 12 you'd do some work with Claude on this and send it over. Here's a prompt to get started. Copy it, paste into Claude, iterate — then drop your output in the comment box below so we can shape it together on 6 May.</p>
             <div style={{background: "#eef4f2", borderRadius: 6, padding: "14px 16px", marginBottom: 10}}>
-              <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.7, whiteSpace: "pre-wrap", margin: 0}}>{`I'm Nikki McReynolds, founder of HushAway — a sound-based emotional regulation platform for children aged 4–10.
+              <p style={{fontFamily: "monospace", fontSize: "0.78rem", color: "#1a1916", lineHeight: 1.5, whiteSpace: "pre-wrap", margin: 0}}>{`I'm Nikki McReynolds, founder of HushAway — a sound-based emotional regulation platform for children aged 4–10.
 
 I'm starting a weekly LinkedIn series called "Behind the Hush". It runs every Friday. Each post is one key insight or one watch-out from that week of building the business. The format is:
   - 30-second reel (filmed on my phone, no production)
@@ -2295,7 +2297,7 @@ function NikkiVideoTab({ slug }: { slug: string }) {
             </div>
             <div style={{marginTop: 14}}>
               <p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 6, margin: "0 0 6px"}}>Full script</p>
-              <div style={{background: "#f2f1ee", border: "1px solid #e4e2dc", borderRadius: 6, padding: "14px 16px"}}><p style={{fontSize: "0.8rem", color: "#1a1916", lineHeight: 1.75, whiteSpace: "pre-wrap", margin: 0}}>{script}</p></div>
+              <div style={{background: "#f2f1ee", border: "1px solid #e4e2dc", borderRadius: 6, padding: "14px 16px"}}><p style={{fontSize: "0.8rem", color: "#1a1916", lineHeight: 1.5, whiteSpace: "pre-wrap", margin: 0}}>{script}</p></div>
             </div>
             <div style={{background: "#eef4f2", borderRadius: 6, padding: "10px 14px", marginTop: 14}}><p style={{fontSize: "0.8rem", color: "#3d6b5e", margin: 0}}><strong>CTA:</strong> {cta}</p></div>
             <div style={{marginTop: 10}}><p style={{fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#9e9b94", marginBottom: 4, margin: "0 0 4px"}}>Repurpose as</p><p style={{fontSize: "0.8rem", color: "#6b6860", margin: 0}}>{repurpose}</p></div>
@@ -2314,9 +2316,9 @@ function NikkiVideoTab({ slug }: { slug: string }) {
 
       <div style={{background: "#fff", border: "1px solid #e4e2dc", borderRadius: 8, padding: "22px 24px", marginBottom: 20}}>
         <h3 style={{fontSize: "0.95rem", fontWeight: 600, color: "#1a1916", marginBottom: 10, margin: "0 0 10px"}}>The strategy — what we're building and why</h3>
-        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.65, margin: "0 0 12px"}}>The goal isn't to become a podcaster. It's to become a thought leader people have a reaction to — ideally "I really like her" or "she's not for me," both of which are fine. Indifference is the only thing that doesn't work. Short, punchy, solo talking-head videos where you are the content. Your opinion, your experience, your direct challenge to how things are currently done.</p>
-        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.65, margin: "0 0 12px"}}>Everything we've already built together — the LinkedIn posts, the newsletter, the messaging framework, the positioning work — feeds directly into this. These videos aren't separate from that work, they are the next layer of it. Each video becomes a LinkedIn post, a newsletter section, a short clip, a quote.</p>
-        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 14, lineHeight: 1.65, margin: "0 0 14px"}}>The three-month arc below is designed to build trust at scale. Month 1 is about introducing who you are. Month 2 is about expertise and taking stronger positions. Month 3 is about drawing potential HushAway members into your world. You batch record each month in one sitting — 4–6 videos, one Saturday morning.</p>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.45, margin: "0 0 12px"}}>The goal isn't to become a podcaster. It's to become a thought leader people have a reaction to — ideally "I really like her" or "she's not for me," both of which are fine. Indifference is the only thing that doesn't work. Short, punchy, solo talking-head videos where you are the content. Your opinion, your experience, your direct challenge to how things are currently done.</p>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 12, lineHeight: 1.45, margin: "0 0 12px"}}>Everything we've already built together — the LinkedIn posts, the newsletter, the messaging framework, the positioning work — feeds directly into this. These videos aren't separate from that work, they are the next layer of it. Each video becomes a LinkedIn post, a newsletter section, a short clip, a quote.</p>
+        <p style={{fontSize: "0.84rem", color: "#6b6860", marginBottom: 14, lineHeight: 1.45, margin: "0 0 14px"}}>The three-month arc below is designed to build trust at scale. Month 1 is about introducing who you are. Month 2 is about expertise and taking stronger positions. Month 3 is about drawing potential HushAway members into your world. You batch record each month in one sitting — 4–6 videos, one Saturday morning.</p>
         <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>
           {["2–4 mins per video", "Solo talking head — no guests needed", "Batch record 4–6 per session", "LinkedIn · Instagram · TikTok · YouTube", "Phone + tripod + natural light — that's all"].map((tag, i) => (
             <span key={i} style={{fontSize: "0.72rem", fontWeight: 600, padding: "3px 10px", borderRadius: 20, background: "#eef4f2", color: "#3d6b5e"}}>{tag}</span>
@@ -2821,7 +2823,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
               {client.messaging.map((m, i) => (
                 <div key={i} style={{background: "#fff", border: "1px solid #E0DBD3", borderRadius: 3, padding: "24px 28px"}}>
                   <p style={{fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: client.color, margin: "0 0 8px"}}>{m.frame}</p>
-                  <p style={{fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0}}>{m.notes}</p>
+                  <p style={{fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.5, margin: 0}}>{m.notes}</p>
                 </div>
               ))}
             </div>
@@ -2842,7 +2844,7 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
               {client.content.map((c, i) => (
                 <div key={i} style={{background: "#fff", border: "1px solid #E0DBD3", borderRadius: 3, padding: "24px 28px", borderLeft: `3px solid ${client.color}`}}>
                   <p style={{fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 8px"}}>{c.angle}</p>
-                  <p style={{fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: 0}}>{c.notes}</p>
+                  <p style={{fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: 0}}>{c.notes}</p>
                 </div>
               ))}
             </div>
