@@ -7,7 +7,7 @@
 // No sunglasses in profile photo (Ben's rule).
 // NextMoveBox: 40-45 words MAX.
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ClientTodoList from "@/components/ClientTodoList";
 import CommentBox from "@/components/CommentBox";
 import DashboardFooter from "@/components/DashboardFooter";
@@ -401,6 +401,8 @@ function DailyWatchBox() {
 export default function AlexShiellDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
   const [contentWeek, setContentWeek] = useState<"week1" | "week2">("week1");
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
 
   const todoItems = AS_TODOS.map(t => ({ id: t.id, text: t.text, owner: "Alex" }));
 
@@ -448,30 +450,34 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Session 2 · 3 June 2026" animateIn />
 
             {/* Welcome card */}
-            <div className="dash-card-xl" style={{ background: AS_COLOR, borderRadius: 8, marginBottom: 20, display: "flex", gap: 20, alignItems: "flex-start" }}>
-              <div style={{ flexShrink: 0 }}>
-                <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1.2rem", fontWeight: 700 }}>👋</div>
-              </div>
+            <div style={{ background: AS_COLOR, borderRadius: 8, marginBottom: 16, padding: isMobile ? "12px 14px" : "28px 32px", display: "flex", gap: isMobile ? 12 : 20, alignItems: "flex-start" }}>
+              {!isMobile && (
+                <div style={{ flexShrink: 0 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1.2rem", fontWeight: 700 }}>👋</div>
+                </div>
+              )}
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#fff", margin: "0 0 6px" }}>Welcome mate.</p>
-                <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.45, margin: 0 }}>
-                  This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions, not a polished deck. Everything in here is grounded in your own words, your own stories, your own vision, all pulled from the blueprint call. After every session I update it and the latest thinking lives here. Read it like I'm sat across from you, because that's how it's written.
+                <p style={{ fontSize: isMobile ? "0.78rem" : "0.88rem", fontWeight: 700, color: "#fff", margin: isMobile ? "0 0 3px" : "0 0 6px" }}>Welcome mate.</p>
+                <p style={{ fontSize: isMobile ? "0.75rem" : "0.84rem", color: "rgba(255,255,255,0.88)", lineHeight: isMobile ? 1.4 : 1.5, margin: 0 }}>
+                  {isMobile
+                    ? "Your personal brand dashboard. Updated after every session."
+                    : "This is your personal brand dashboard. A working document that grows with you over 6 months and 13 sessions, not a polished deck. Everything in here is grounded in your own words, your own stories, your own vision, all pulled from the blueprint call. After every session I update it and the latest thinking lives here. Read it like I'm sat across from you, because that's how it's written."}
                 </p>
               </div>
             </div>
 
             {/* Stats */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(auto-fit, minmax(180px, 1fr))", gap: isMobile ? 8 : 14, marginBottom: isMobile ? 16 : 28 }}>
               {[
                 { label: "Sessions", value: "2 of 13", sub: "Next: Wed 17 June, 6pm" },
                 { label: "Programme length", value: "6 months", sub: "May to November 2026" },
                 { label: "Platform", value: "Instagram & TikTok", sub: "@thewolfofjoinery" },
                 { label: "Content live", value: "Starting this week", sub: "First video incoming" },
               ].map((s, i) => (
-                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
-                  <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", letterSpacing: "-0.02em", margin: "0 0 4px" }}>{s.value}</p>
-                  <p style={{ fontSize: "0.78rem", color: "#7A746E", margin: 0 }}>{s.sub}</p>
+                <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: isMobile ? "10px 12px" : "18px 20px" }}>
+                  <p style={{ fontSize: "0.62rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 4px" }}>{s.label}</p>
+                  <p style={{ fontSize: isMobile ? "0.88rem" : "1.05rem", fontWeight: 700, color: "#1C1C1C", letterSpacing: "-0.02em", margin: "0 0 2px" }}>{s.value}</p>
+                  <p style={{ fontSize: "0.72rem", color: "#7A746E", margin: 0 }}>{s.sub}</p>
                 </div>
               ))}
             </div>
