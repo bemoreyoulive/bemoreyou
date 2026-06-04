@@ -943,6 +943,7 @@ function IdeaCard({ idea, index, slug }: { idea: ContentIdea; index: number; slu
 export default function JamesHartleyDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
   const [contentSubTab, setContentSubTab] = useState<"may" | "june" | "backup">("may");
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
 
   const todoItems = TODOS.map(t => ({ id: t.id, text: t.text, owner: "James", tabLink: t.tabLink }));
 

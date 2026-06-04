@@ -37,6 +37,7 @@ const asbTabs = [
 
 export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>

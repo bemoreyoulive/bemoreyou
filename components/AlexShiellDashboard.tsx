@@ -403,6 +403,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
   const [contentWeek, setContentWeek] = useState<"week1" | "week2">("week1");
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
 
   const todoItems = AS_TODOS.map(t => ({ id: t.id, text: t.text, owner: "Alex" }));
 
