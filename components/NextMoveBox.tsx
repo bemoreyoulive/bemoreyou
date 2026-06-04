@@ -52,17 +52,16 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
         )}
 
         {/* Fixed bottom-left — persistent, minimisable */}
-        <div style={{
-          position: "fixed",
-          bottom: 28,
-          left: 28,
-          zIndex: 999,
-          width: minimised ? 160 : 220,
-          transform: visible ? "translateX(0)" : "translateX(-120%)",
-          opacity: visible ? 1 : 0,
-          transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, width 0.2s ease",
-          pointerEvents: visible ? "auto" : "none",
-        }}>
+        <div
+          className="next-move-fixed"
+          style={{
+            width: minimised ? 160 : 220,
+            transform: visible ? "translateX(0)" : "translateX(-120%)",
+            opacity: visible ? 1 : 0,
+            transition: "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, width 0.2s ease",
+            pointerEvents: visible ? "auto" : "none",
+          }}
+        >
           {minimised ? (
             <button
               onClick={() => setMinimised(false)}

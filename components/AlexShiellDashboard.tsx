@@ -357,7 +357,7 @@ function PlaceholderTab({ label }: { label: string }) {
 function DailyWatchBox() {
   return (
     <div style={{ background: "linear-gradient(135deg, #1C1C1C 0%, #2b2118 100%)", border: "2px solid #f59e0b", borderRadius: 12, padding: "22px 26px", marginBottom: 28, boxShadow: "0 6px 22px rgba(217,119,6,0.22)" }}>
-      <div style={{ fontSize: "2rem", letterSpacing: "8px", margin: "0 0 8px" }}>🍻 🚐 📱</div>
+      <div className="daily-watch-emojis" style={{ letterSpacing: "8px", margin: "0 0 8px" }}>🍻 🚐 📱</div>
       <p style={{ fontSize: "0.9rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: "#f59e0b", margin: "0 0 4px" }}>Remember these three emojis every day</p>
       <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.5, margin: "0 0 16px" }}>Any one is a quick story, or it can be your post for the day.</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
@@ -424,7 +424,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Blueprint Call · 26 May 2026" animateIn />
 
             {/* Welcome card */}
-            <div style={{ background: AS_COLOR, borderRadius: 8, padding: "28px 32px", marginBottom: 20, display: "flex", gap: 20, alignItems: "flex-start" }}>
+            <div className="dash-card-xl" style={{ background: AS_COLOR, borderRadius: 8, marginBottom: 20, display: "flex", gap: 20, alignItems: "flex-start" }}>
               <div style={{ flexShrink: 0 }}>
                 <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "1.2rem", fontWeight: 700 }}>👋</div>
               </div>
@@ -501,7 +501,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             </div>
 
             {/* Why you're here */}
-            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
+            <div className="dash-card-lg" style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 8, marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: AS_COLOR, margin: "0 0 10px" }}>Why you're here</p>
               <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>
                 You're not building a personal brand to get more joinery enquiries mate. You're building it because you want to change the way a generation of young people think about the trades, about apprenticeships, about what's actually possible at 18. That's a bigger mission and it's exactly the right bloody reason to do this. The most credible personal brands come from people who genuinely mean it, and you mean it.
@@ -516,7 +516,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
         {activeTab === "sessions" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Your Journey</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
+            <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 24px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
 
             {/* Starting Line Snapshot */}
@@ -567,7 +567,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                       <div style={{ flexShrink: 0, width: 40, height: 40, borderRadius: "50%", background: i === 0 ? AS_COLOR : "#fff", border: `2px solid ${i === 0 ? AS_COLOR : "#E0DBD3"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.78rem", fontWeight: 700, color: i === 0 ? "#fff" : "#7A746E", zIndex: 1 }}>
                         {session.number}
                       </div>
-                      <div style={{ flex: 1, background: "#fff", border: "1px solid #E0DBD3", borderLeft: i === 0 ? `3px solid ${AS_COLOR}` : "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 4 }}>
+                      <div className="dash-card-lg" style={{ flex: 1, background: "#fff", border: "1px solid #E0DBD3", borderLeft: i === 0 ? `3px solid ${AS_COLOR}` : "1px solid #E0DBD3", borderRadius: 6, marginBottom: 4 }}>
                         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 16, gap: 12 }}>
                           <div>
                             <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 4px" }}>Session {session.number} · {session.date}</p>
@@ -623,7 +623,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {AS_POSITIONING.headlineDrafts.length > 0 ? (
               <div>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Ideas & Starting Points</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+                <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
                 <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "14px 18px", marginBottom: 28 }}>
                   <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Nothing in here is confirmed or approved yet mate. These are starting points built from the blueprint call. We work through them together in Session 2 and lock what we like. Mix and match, pick favourite bits, throw out the rest. Treat everything as a draft.</p>
                 </div>
@@ -786,7 +786,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
         {activeTab === "content" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+            <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
             {/* Why these pillars exist — high-level framing */}
@@ -873,7 +873,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   {ideas.map((idea, i) => {
                     const pc = pillarColors[idea.pillar - 1];
                     return (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `4px solid ${pc}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14 }}>
+                      <div key={i} className="dash-card-lg" style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `4px solid ${pc}`, borderRadius: 6, marginBottom: 14 }}>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
                           <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: pc, background: `${pc}15`, padding: "4px 10px", borderRadius: 3 }}>Pillar {idea.pillar} · {idea.pillarLabel}</span>
                           <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A746E", background: "#F5F1EC", padding: "4px 10px", borderRadius: 3 }}>{idea.effort}</span>
@@ -882,7 +882,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                           )}
                         </div>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Idea {i + 1} · Hook</p>
-                        <p style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 14px", lineHeight: 1.5 }}>{idea.hook}</p>
+                        <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 14px", lineHeight: 1.5 }}>{idea.hook}</p>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Format</p>
                         <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.65, margin: "0 0 14px" }}>{idea.format}</p>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>How to approach it</p>
@@ -910,7 +910,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {AS_RECS.length > 0 ? (
               <div>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>From Ben</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
+                <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
                 {AS_RECS.map((r, i) => (
                   <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
                     <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
@@ -927,7 +927,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
         {activeTab === "goals" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Where We're Headed</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
+            <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Goals</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 28px" }}>These aren't vanity metrics mate. They're the things that actually tell us the work is landing. Numbers will follow as a byproduct, not as the target.</p>
 
             {/* Not this game — top of goals */}

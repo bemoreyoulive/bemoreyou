@@ -36,10 +36,9 @@ export default function EmailOptIn({ slug, accentColor = "#E8521C" }: EmailOptIn
   if (opted === null) return null;
 
   return (
-    <div style={{
+    <div className="dash-card-xl" style={{
       background: opted ? accentColor : "#1C1C1C",
       borderRadius: 6,
-      padding: "28px 32px",
       marginBottom: 32,
       transition: "background 0.3s ease",
     }}>
