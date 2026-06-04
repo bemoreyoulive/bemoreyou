@@ -14,8 +14,10 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
   const firstName = clientName?.split(" ")[0];
   const [visible, setVisible] = useState(false);
   const [minimised, setMinimised] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 640);
     if (!animateIn) return;
     const t = setTimeout(() => setVisible(true), 2000);
     return () => clearTimeout(t);
@@ -37,13 +39,9 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
             }}>
               {sessionLabel}
             </p>
-            <h2 style={{
-              fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-              fontFamily: "var(--font-dm-serif), serif",
-              fontWeight: 400,
+            <h2 className="dash-h2" style={{
               color: "#1C1C1C",
               margin: 0,
-              letterSpacing: "-0.02em",
               lineHeight: 1.15,
             }}>
               {firstName} — Client Dashboard
@@ -51,8 +49,8 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
           </div>
         )}
 
-        {/* Fixed bottom-left — persistent, minimisable */}
-        <div
+        {/* Fixed bottom-left — hidden on mobile, inline version covers it */}
+        {!isMobile && <div
           className="next-move-fixed"
           style={{
             width: minimised ? 160 : 220,
@@ -90,7 +88,7 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
               <NeedleCard move={move} accentColor={accentColor} />
             </div>
           )}
-        </div>
+        </div>}
       </>
     );
   }
