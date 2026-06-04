@@ -15,6 +15,9 @@ interface Comment {
 }
 
 export default function DashboardFooter({ clientName, tabName, slug }: Props) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
+
   // ── Client comment state ──
   const [commentText, setCommentText] = useState("");
   const [comments, setComments] = useState<Comment[]>([]);
@@ -80,7 +83,7 @@ export default function DashboardFooter({ clientName, tabName, slug }: Props) {
 
   return (
     <div style={{ marginTop: 56, paddingTop: 40, borderTop: "1px solid #E0DBD3" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 24, alignItems: "start" }}>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "3fr 2fr", gap: isMobile ? 32 : 24, alignItems: "start" }}>
 
         {/* ── Client comment box (primary, left) ── */}
         <div>
