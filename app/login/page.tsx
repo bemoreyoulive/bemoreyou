@@ -22,7 +22,7 @@ function Logo() {
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [step, setStep] = useState<"email" | "code">("email");
-  const [code, setCode] = useState(["", "", "", "", "", ""]);
+  const [code, setCode] = useState(["", "", "", "", "", "", "", ""]);
   const [status, setStatus] = useState<"idle" | "sending" | "verifying" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const codeRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -53,7 +53,7 @@ function LoginForm() {
   async function handleCodeSubmit(e: React.FormEvent) {
     e.preventDefault();
     const token = code.join("");
-    if (token.length !== 6) return;
+    if (token.length !== 8) return;
     setStatus("verifying");
     setErrorMsg("");
 
@@ -67,7 +67,7 @@ function LoginForm() {
     if (error || !data.user) {
       setStatus("error");
       setErrorMsg("That code isn't right — check your email and try again.");
-      setCode(["", "", "", "", "", ""]);
+      setCode(["", "", "", "", "", "", "", ""]);
       setTimeout(() => codeRefs.current[0]?.focus(), 50);
       return;
     }
@@ -110,11 +110,11 @@ function LoginForm() {
   }
 
   function handlePaste(e: React.ClipboardEvent) {
-    const digits = e.clipboardData.getData("text").replace(/\D/g, "").slice(0, 6);
-    if (digits.length === 6) {
+    const digits = e.clipboardData.getData("text").replace(/\D/g, "").slice(0, 8);
+    if (digits.length === 8) {
       setCode(digits.split(""));
       e.preventDefault();
-      codeRefs.current[5]?.focus();
+      codeRefs.current[7]?.focus();
     }
   }
 
@@ -134,7 +134,7 @@ function LoginForm() {
               Check your email.
             </h1>
             <p style={{ fontSize: "0.82rem", color: "#7A746E", margin: 0 }}>
-              We sent a 6-digit code to <strong style={{ color: "#1C1C1C" }}>{email}</strong>
+              We sent an 8-digit code to <strong style={{ color: "#1C1C1C" }}>{email}</strong>
             </p>
           </div>
 
@@ -153,7 +153,7 @@ function LoginForm() {
                   onChange={e => handleDigitChange(i, e.target.value)}
                   onKeyDown={e => handleDigitKeyDown(i, e)}
                   style={{
-                    width: 48, height: 56,
+                    width: 40, height: 50,
                     textAlign: "center",
                     fontSize: "1.4rem", fontWeight: 700, color: "#1C1C1C",
                     background: "#fff",
@@ -261,7 +261,7 @@ function LoginForm() {
         </form>
 
         <p style={{ fontSize: "0.75rem", color: "#9CA3AF", marginTop: 16, lineHeight: 1.5, textAlign: "center" }}>
-          We&apos;ll email you a 6-digit code — no password needed.
+          We&apos;ll email you an 8-digit code — no password needed.
         </p>
       </div>
     </div>
