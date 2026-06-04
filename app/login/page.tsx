@@ -100,7 +100,7 @@ function LoginForm() {
     const next = [...code];
     next[index] = digit;
     setCode(next);
-    if (digit && index < 5) codeRefs.current[index + 1]?.focus();
+    if (digit && index < 7) codeRefs.current[index + 1]?.focus();
   }
 
   function handleDigitKeyDown(index: number, e: React.KeyboardEvent) {
@@ -139,8 +139,8 @@ function LoginForm() {
           </div>
 
           <form onSubmit={handleCodeSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            {/* 6-digit boxes */}
-            <div style={{ display: "flex", gap: 8, justifyContent: "center" }} onPaste={handlePaste}>
+            {/* 8-digit boxes — onPaste on both wrapper and each input for iOS Safari */}
+            <div style={{ display: "flex", gap: 6, justifyContent: "center" }} onPaste={handlePaste}>
               {code.map((digit, i) => (
                 <input
                   key={i}
@@ -152,10 +152,11 @@ function LoginForm() {
                   value={digit}
                   onChange={e => handleDigitChange(i, e.target.value)}
                   onKeyDown={e => handleDigitKeyDown(i, e)}
+                  onPaste={handlePaste}
                   style={{
-                    width: 40, height: 50,
+                    width: 38, height: 48,
                     textAlign: "center",
-                    fontSize: "1.4rem", fontWeight: 700, color: "#1C1C1C",
+                    fontSize: "1.3rem", fontWeight: 700, color: "#1C1C1C",
                     background: "#fff",
                     border: digit ? "2px solid #E8521C" : "1px solid #E0DBD3",
                     borderRadius: 6,
