@@ -14,8 +14,15 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BeMOREyou — Coaching Portal",
+  title: "BeMoreYou — Coaching Portal",
   description: "Your personal coaching portal",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "BeMoreYou",
+  },
+  themeColor: "#1C1C1C",
 };
 
 export default function RootLayout({
