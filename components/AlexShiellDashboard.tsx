@@ -24,8 +24,8 @@ const AS_NEXT_MOVE = "Before Session 3 (17 June, 6pm). Post and live your life b
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
   { id: "as2-7", text: "No video yet this week and it's Wednesday. Consistency is the whole game at this stage. Get one out today or tomorrow, it doesn't need to be perfect.", owner: "Alex" },
-  { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: follow along and I'll show you how. You've got the hook nailed, you just need to give them the next chapter.", owner: "Alex" },
-  { id: "as2-6", text: "Pick up a lapel mic. The audio on the first videos is slightly echoey. A clip-on is about 20 quid on Amazon and makes a noticeable difference over time.", owner: "Alex" },
+  { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: Drop me a follow and I'll show you my journey of how I did this. You've got the hook nailed, you just need to give them the next chapter.", owner: "Alex" },
+  { id: "as2-6", text: "Pick up a Hollyland lapel mic. The audio on the first videos is slightly echoey, and the cheap ones are worse than nothing. Ben uses Hollyland, worth getting the same.", owner: "Alex" },
   { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from.", owner: "Alex" },
   { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up.", owner: "Alex" },
   { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to.", owner: "Alex" },
@@ -838,7 +838,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               {[
                 {
                   label: "Add a consistent ending.",
-                  body: "Both videos end cold. You've got the hook sorted, now give people a reason to stay. Pick one line and end every single video the same way. Something like: follow along and I'll show you how. Simple, repeatable, and it turns viewers into followers instead of just passing traffic.",
+                  body: "Both videos end cold. You've got the hook sorted, now give people a reason to stay. Pick one line and end every single video the same way. Something like: Drop me a follow and I'll show you my journey of how I did this. Simple, repeatable, and it turns viewers into followers instead of just passing traffic.",
                 },
                 {
                   label: "Let the story do the work, not the number.",
