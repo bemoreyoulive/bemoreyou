@@ -8,12 +8,12 @@ export interface TodoDef {
 
 const clientTodos: Record<string, TodoDef[]> = {
   "andy-felton": [
-    { id: "w1", text: "Finalise the expo brochure and banner, with copy to the printers by Friday" },
+    { id: "w1", text: "Finalise the expo brochure and banner, and get them over to the expo organisers" },
     { id: "w2", text: "Prep and practise your 45-second BNI pitch for Friday" },
     { id: "w3", text: "Get this week's two accountant chats done, and book the new 1:1s" },
     { id: "c1", text: "Post your networking reflection, and make it a habit after every event" },
     { id: "p1", text: "Do the Chris Dillon R&D this week, ready for next week's call" },
-    { id: "m1", text: "Keep the momentum going: continue with Ben from July" },
+    { id: "m1", text: "Keep the momentum going: stay with Ben monthly so the traction doesn't stall" },
     { id: "s13", text: "Next session: Session 13 on 24 June 2026 at 9:30am" },
   ],
   "andy-scott-barrett": [
