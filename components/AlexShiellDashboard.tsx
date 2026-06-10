@@ -846,7 +846,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 },
                 {
                   label: "Pick up a lapel mic.",
-                  body: "Minor and not urgent, but the audio is slightly echoey. A basic clip-on is about 20 quid on Amazon and makes a noticeable difference over time.",
+                  body: "Minor and not urgent, but the audio is slightly echoey. Get a Hollyland lapel mic, same one Ben uses. The cheap ones are worse than nothing.",
                 },
               ].map((tip, i, arr) => (
                 <div key={i} style={{ display: "flex", gap: 10, marginBottom: i < arr.length - 1 ? 12 : 0 }}>
