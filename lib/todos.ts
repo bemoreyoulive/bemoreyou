@@ -8,13 +8,13 @@ export interface TodoDef {
 
 const clientTodos: Record<string, TodoDef[]> = {
   "andy-felton": [
-    { id: "w1", text: "Warm outreach — book 5 accountant conversations by end of June" },
-    { id: "w2", text: "Book your June networking events" },
-    { id: "w3", text: "Repost high-performing content from the last 5 months — and spread expertise posts to 1–2 per week, not 3–4" },
-    { id: "w4", text: "Coffee Chat with Olivia — booked for next Wednesday" },
-    { id: "a1", text: "Apply the two-step audit offer language to all future posts mentioning the audits" },
-    { id: "a2", text: "Reconnect with Jaz Grewal (TaxAssist) — first week of June" },
-    { id: "s12", text: "Next session: Session 12 — 9 June 2026 at 9am" },
+    { id: "w1", text: "Finalise the expo brochure and banner, with copy to the printers by Friday" },
+    { id: "w2", text: "Prep and practise your 45-second BNI pitch for Friday" },
+    { id: "w3", text: "Get this week's two accountant chats done, and book the new 1:1s" },
+    { id: "c1", text: "Post your networking reflection, and make it a habit after every event" },
+    { id: "p1", text: "Do the Chris Dillon R&D this week, ready for next week's call" },
+    { id: "m1", text: "Keep the momentum going: continue with Ben from July" },
+    { id: "s13", text: "Next session: Session 13 on 24 June 2026 at 9:30am" },
   ],
   "andy-scott-barrett": [
     { id: "s4-1", text: "Post the discounting post — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' 30-minute timer." },
