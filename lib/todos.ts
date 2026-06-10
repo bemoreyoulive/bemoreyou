@@ -49,7 +49,9 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
   "alex-shiell": [
-    { id: "as2-1", text: "Post your first two videos this week. Pick any idea from the content tab, film in the van on your phone, and post raw. No overthinking, no extra editing. You committed to two a week, so start now." },
+    { id: "as2-7", text: "No video yet this week and it's Wednesday. Consistency is the whole game at this stage. Get one out today or tomorrow, it doesn't need to be perfect." },
+    { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: follow along and I'll show you how. You've got the hook nailed, you just need to give them the next chapter." },
+    { id: "as2-6", text: "Pick up a lapel mic. The audio on the first videos is slightly echoey. A clip-on is about 20 quid on Amazon and makes a noticeable difference over time." },
     { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from." },
     { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up." },
     { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to." },

@@ -23,7 +23,9 @@ const AS_NEXT_MOVE = "Before Session 3 (17 June, 6pm). Post and live your life b
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as2-1", text: "Post your first two videos this week. Pick any idea from the content tab, film in the van on your phone, and post raw. No overthinking, no extra editing. You committed to two a week, so start now.", owner: "Alex" },
+  { id: "as2-7", text: "No video yet this week and it's Wednesday. Consistency is the whole game at this stage. Get one out today or tomorrow, it doesn't need to be perfect.", owner: "Alex" },
+  { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: follow along and I'll show you how. You've got the hook nailed, you just need to give them the next chapter.", owner: "Alex" },
+  { id: "as2-6", text: "Pick up a lapel mic. The audio on the first videos is slightly echoey. A clip-on is about 20 quid on Amazon and makes a noticeable difference over time.", owner: "Alex" },
   { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from.", owner: "Alex" },
   { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up.", owner: "Alex" },
   { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to.", owner: "Alex" },
@@ -828,6 +830,31 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
+
+            {/* Ben's notes on first two videos */}
+            <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderLeft: "4px solid #16a34a", borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#16a34a", margin: "0 0 10px" }}>Ben's notes · First two videos</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.55, margin: "0 0 16px" }}>Sent you a voice note but wanted it here too. Two videos in and you've already got the most important thing right: the energy is real, the camera presence is strong, and you are clearly not reading from a script. That's the hardest bit and you've nailed it. A few things to sharpen as you go.</p>
+              {[
+                {
+                  label: "Add a consistent ending.",
+                  body: "Both videos end cold. You've got the hook sorted, now give people a reason to stay. Pick one line and end every single video the same way. Something like: follow along and I'll show you how. Simple, repeatable, and it turns viewers into followers instead of just passing traffic.",
+                },
+                {
+                  label: "Let the story do the work, not the number.",
+                  body: "Video two opens with the firing story, which is powerful, and then lands on 30k last month without a reason for the viewer to care. The revenue figure on its own reads as a brag. If you use it, tie it straight to the journey: here's what happened next, and I'm going to show you how. Give them the next chapter, not just the headline.",
+                },
+                {
+                  label: "Pick up a lapel mic.",
+                  body: "Minor and not urgent, but the audio is slightly echoey. A basic clip-on is about 20 quid on Amazon and makes a noticeable difference over time.",
+                },
+              ].map((tip, i, arr) => (
+                <div key={i} style={{ display: "flex", gap: 10, marginBottom: i < arr.length - 1 ? 12 : 0 }}>
+                  <span style={{ color: "#16a34a", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>→</span>
+                  <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.55, margin: 0 }}><strong>{tip.label}</strong> {tip.body}</p>
+                </div>
+              ))}
+            </div>
 
             {/* Why these pillars exist — high-level framing */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
