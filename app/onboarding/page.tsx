@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 interface Question {
   id: string;
@@ -126,7 +125,6 @@ export default function OnboardingPage() {
   const [current, setCurrent] = useState(0);
   const [values, setValues] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
-  const router = useRouter();
 
   if (!started) {
     return (
@@ -210,14 +208,43 @@ export default function OnboardingPage() {
           answers: values,
         }),
       });
-      const slug = (values.name || "new-client")
-        .toLowerCase().trim()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "");
-      router.replace(`/client/${slug}`);
+      setStatus("done");
     } catch {
       setStatus("error");
     }
+  }
+
+  if (status === "done") {
+    return (
+      <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
+        <nav style={{ background: "rgba(245,241,236,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid #E0DBD3", padding: "14px 0" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <p style={{ fontSize: "1.05rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", margin: 0, fontFamily: "var(--font-dm-serif), serif" }}>
+              BeMore<span style={{ color: "#4ec9d0" }}>You</span>
+            </p>
+            <p style={{ fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7A746E", margin: 0 }}>New Client Onboarding</p>
+          </div>
+        </nav>
+
+        <div style={{ maxWidth: 680, margin: "0 auto", padding: "80px 36px" }}>
+          <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8521C", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ display: "inline-block", width: 24, height: 2, background: "#E8521C" }} />
+            You&apos;re all done
+          </p>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", lineHeight: 1.15 }}>
+            Thank you for being so candid.
+          </h1>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <p style={{ fontSize: "1rem", color: "#3D3935", lineHeight: 1.8, margin: 0 }}>
+              Genuinely appreciate you spending the time on this. It's bloody important that you did — and the depth you've gone into will make a real difference to the work we do together.
+            </p>
+            <p style={{ fontSize: "1rem", color: "#3D3935", lineHeight: 1.8, margin: 0 }}>
+              Ben has now safely received your answers and will get cracking on planning your Blueprint Session. You'll hear from him shortly with everything you need to know before that call.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
 
