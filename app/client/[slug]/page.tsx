@@ -562,7 +562,7 @@ function Callout({ type, children }: { type: "green" | "amber" | "blue" | "orang
 function AndyFeltonDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
-  const [contentSubTab, setContentSubTab] = useState("bobby");
+  const [contentSubTab, setContentSubTab] = useState("accountant-research");
 
   const afTodoItems = afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy" }));
 
@@ -1058,12 +1058,12 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
 
             <div style={{ display: "flex", gap: 6, marginBottom: 28, flexWrap: "wrap" as const }}>
               {[
+                { id: "accountant-research", label: "Accountant Research" },
                 { id: "bobby", label: "Bobby's Got a Brain" },
                 { id: "story", label: "Story" },
                 { id: "belief", label: "Belief / Opinion" },
                 { id: "bold", label: "Bold / Contrarian" },
                 { id: "practical", label: "Practical" },
-                { id: "accountant-research", label: "Accountant Research" },
                 { id: "sack", label: "SACK SALLY" },
               ].map(st => (
                 <button key={st.id} onClick={() => setContentSubTab(st.id)} style={{ padding: "9px 16px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", border: "1px solid #E0DBD3", borderRadius: 3, cursor: "pointer", background: contentSubTab === st.id ? (st.id === "sack" ? "#6b2a00" : st.id === "bobby" ? "#2e7d4f" : AF_COLOR) : "#fff", color: contentSubTab === st.id ? "#fff" : "#7A746E" }}>
