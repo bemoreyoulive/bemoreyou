@@ -574,7 +574,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AF_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AF</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Felton</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · May 2026 · Session 11</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Equate Digital · June 2026 · Session 12</p>
             </div>
           </div>
           <div className="dash-nav-client" style={{ alignItems: "center", fontSize: "1rem", fontWeight: 700, letterSpacing: "-0.02em", color: "#1C1C1C", fontFamily: "var(--font-dm-serif), serif" }}>BeMore<span style={{ color: "#4ec9d0" }}>You</span></div>
@@ -600,8 +600,8 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
             <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="June 2026 · Session 12" animateIn />
 
-            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 11</h2>
-            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 11 on 27th May. Tick things off as you go.</p>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 12</h2>
+            <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 12 on 10th June. Tick things off as you go.</p>
 
             <ClientTodoList
               items={afTodos.map(t => ({ id: t.id, text: t.text, owner: "Andy", subtext: t.subtext, section: t.section, tabLink: t.tabLink }))}
