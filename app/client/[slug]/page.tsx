@@ -201,8 +201,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: true,
-    guidance: "This is not about chasing. The Bobby posts cover that. This is about what happens to the rest of the day once something is missing: what gets parked, what gets shuffled, how long it sits in your head.\n\nStart with a specific day that went sideways. Walk through it. Don't explain the problem or pitch the solution. Just describe what happened.",
-    prompts: "What is the most specific version of this you have seen or heard? The more concrete the detail, the better.\n\nWhat does that day feel like from the inside, not just the lost time but the actual texture of it?\n\nWhat is the one detail that makes it feel real rather than generic?",
+    guidance: "You're sharing what Nic described: one thing missing from a client, and the whole day falls apart around it. You are not the accountant here. You're the person who heard it from outside the firm and recognised the pattern. Open with what Nic said happened that day: what moved, what got parked, how long it sat unresolved. You heard this. Write from that position.",
+    prompts: "What exactly did Nic describe? What moved, what got parked, what was still sitting there by Wednesday?\n\nWhat was the detail that made it feel real when you heard it on the call?\n\nWhy does this matter to the accountants reading your feed — what does it cost them that they haven't put a number on?",
     cta: "If Tuesday regularly looks like that, send me a message. Coffee's on me."
   },
   {
@@ -212,8 +212,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Ask the reader whether they have ever actually tracked where their week goes. Most haven't. Drop the number partway through: 25 hours on clients, and a meaningful chunk of it just overhead. Don't tell them what to do about it. Make them uncomfortable enough to count their own.",
-    prompts: "What is the most honest description you can give of how much of a typical engagement is actual thinking versus admin?\n\nWhat does it look like when someone is working hard but the work is mostly overhead?\n\nWhat is the version of this post that makes someone put their phone down for a second?",
+    guidance: "Nic tracked his hours and told you the number. Your job is to open by asking accountants reading this whether they have ever actually counted it themselves. Most haven't. Then bring in what Nic found. Drop the number plainly. No solution. Make them uncomfortable enough to count their own.",
+    prompts: "What number did Nic give you? How much of a typical week was chasing, waiting, overhead?\n\nWhat question could you open with that makes an accountant stop and think — when did you last actually track this?\n\nWhy haven't most of them counted it? What stops people from looking at this honestly?",
     cta: "If you have never tracked it, I suspect the number would be uncomfortable. Send me a message and let's look at it. Coffee's on me."
   },
   {
@@ -223,8 +223,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic and Jaz research calls",
     priority: false,
-    guidance: "Open with the quote and nothing else. Two people, same month, same sentence. Let the reader recognise themselves before you say anything else.\n\nThis is about a growth problem with a process cause. They have the demand. They don't have the capacity to take it on. Keep it short. No solution.",
-    prompts: "What does it actually look like when a practice is turning away work because of this? What do people say about it?\n\nWhat would the next 12 months look like for a practice that removed this constraint?\n\nHow would you describe this ceiling to someone in 30 seconds at a networking event?",
+    guidance: "You heard the same line from two different accountants, a month apart, unprompted. Open with both quotes. That is the whole post. You're the person who spotted the pattern because you've been talking to practices all month. Write from that vantage point: you're noticing something they haven't named yet.",
+    prompts: "What were the exact words? Both calls, as close to verbatim as you can get.\n\nWhy does this keep coming up? What is it about how practices are structured that creates this ceiling?\n\nWhat changes for a practice once this constraint is gone — what does the next 12 months look like?",
     cta: "If that ceiling is familiar, let's talk about what is in the way. I'll buy the coffee."
   },
   {
@@ -234,8 +234,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Start with the contrast: no questions for two years, then twenty in two minutes. Don't use the word AI. Don't explain what happened. Just describe what changed and let the reader work it out.\n\nThis post is an observation, not a warning. End with a question to the reader, not a conclusion.",
-    prompts: "What is the most specific version of this you could write about without identifying anyone?\n\nWhat does it actually mean for an accountant when clients start asking better questions than they used to?\n\nWhat would you say to someone who found this worrying rather than interesting?",
+    guidance: "This is Nic's story and you're retelling it as the person who heard it. Open with the contrast he described: same client, never a question in two years, then twenty in two minutes. You're not an accountant — you're the observer who recognises what's shifting. Don't explain the technology. Just describe what happened and ask whether they've seen the same thing.",
+    prompts: "What exactly did Nic say happened? How did he describe it?\n\nWhat does this shift mean for the accountant-client relationship — how does it change the dynamic?\n\nWhat question could you end on that makes accountants reading it feel like they need to reply?",
     cta: "If your clients are doing the same, it is worth a conversation. I'll buy the coffee."
   },
   {
@@ -245,8 +245,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Write the feeling, not the solution. Open on the uncertainty: you know something needs fixing, you just can't see it from where you're standing. Stay there for the whole post.\n\nDo not explain what you automate or how you work. The moment you give them enough to act without you, you have lost them. End with the invitation.",
-    prompts: "What is the most common way this uncertainty comes up when you talk to practice owners?\n\nWhat do you usually spot in the first 20 minutes that the owner hadn't noticed?\n\nWhat does the start of a useful first conversation actually look like for you?",
+    guidance: "You've been talking to accountants all month and keep hearing the same thing. This post names that pattern and reflects it back to the people who said it. Write from outside the practice: you're not guessing at the feeling, you heard it. Don't list what you fix or how you work. End with the invitation to have the conversation.",
+    prompts: "What have you heard across all the research calls that keeps coming back? What is the recurring thing they know but can't see clearly from the inside?\n\nHow do you usually spot the thing they've missed in the first 20 minutes of a real conversation?\n\nWhat does a first useful conversation with a practice owner actually look like for you?",
     cta: "If that is where you are, send me a message. I'll buy the coffee and we can work out where to look first."
   },
   {
@@ -256,8 +256,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Start with that contrast and describe the gap. Don't explain the system behind it or how to fix it.\n\nThis is about professional identity, not efficiency. The 'Faster is making accountancy firms poorer' post already covered the money angle, so don't go back there. This one is about the person and what the job turned into.",
-    prompts: "What is the most specific version of this gap you have seen, the most qualified person doing the least qualified task?\n\nWhat does it feel like to be in that position, not the frustration, but what does it say about how the week is going?\n\nWhat would they say if you asked whether this is what they had in mind when they started the practice?",
+    guidance: "Nic told you about his Tuesday. You are retelling it as an outside observer who heard it and recognised the gap between the job and the actual work. Open with the contrast: years of training, and Tuesday was mostly chasing a bank statement. You didn't live it — you heard it. Write from that position. Don't fix it in the post. Note: the 'Faster is making accountancy firms poorer' post already covered the money angle — this one is about professional identity.",
+    prompts: "What exactly did Nic say about what his Tuesday looked like? How specific was it?\n\nWhat does that gap between the training and the reality say about how accountancy practices are structured?\n\nIf you asked Nic whether this is what he imagined the job would be — what do you think he'd say?",
     cta: "If your week looks more like processing than advising, send me a message. I'll buy the coffee. No pitch."
   },
 ];
