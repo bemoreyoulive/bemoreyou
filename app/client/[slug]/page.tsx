@@ -193,6 +193,75 @@ const afContentAuthority = [
   { id: "af-auth-3", hook: "\"I implement process and systems for growing businesses. Here's what that actually involves — step by step.\"", grade: 1, tag: "Unused", badge: "Authority / Process post", priority: false, guidance: "A post that walks through what a real engagement looks like from your side. Discovery, diagnosis, build, testing, handover. No jargon — just plain English about how you work. This is the kind of content that makes a business owner think \"that's exactly what I need.\"", prompts: "What does a typical first conversation look like? What do you actually do in the first week? How do you know when the job is done properly?", cta: "If that's the kind of work you need doing, let's have a conversation." },
 ];
 
+const afContentNicResearch = [
+  {
+    id: "af-nic-1",
+    hook: "The diary shuffle nobody talks about",
+    grade: 3,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: true,
+    guidance: "The real cost of chasing clients for missing documents is not the five minutes sending the email. It is what happens next: the job gets parked, other work gets reshuffled, the diary gets rebuilt around what can actually be done, and the mental overhead of tracking five half-done files compounds across the whole week.\n\nNic described it exactly: 'I've got a plan in my diary, I go right I'm going to do that. Oh, I haven't got that, I've got to chase it. I can't do that. I end up moving things around in the diary. Next week I don't get it, I need to chase again.'\n\nJaz Grewal confirmed the same pattern from the other side: he spends four hours every Sunday evening manually reviewing his team's task lists specifically because he cannot see what is blocked or falling behind mid-week. Both calls point to the same root cause: there is no system that surfaces where things are stuck, so people build workarounds out of time and attention.\n\nLead with the cascade, not the chase itself. The practice owner reading this has rebuilt their diary mid-morning because of a missing bank statement. Name that specific moment. Note: the Bobby chasing posts already cover the chase email itself. This is the adjacent angle that has not been written yet. It is about the ripple effect, not the email.",
+    prompts: "What does the rest of the day actually look like when a client has not sent what you need? Which jobs get moved, which get parked, and how many times does one missing document touch the diary before it is resolved? What is the emotional texture of that: the mild frustration, the resignation, the slight dread when the same client name comes up again?",
+    cta: "If your diary reshuffles more often than it should because clients have not sent what you need, drop me a message. The fix is less complicated than the problem."
+  },
+  {
+    id: "af-nic-2",
+    hook: "One practice owner has been tracking his time for years. He spends roughly 25 hours a week on client work. He knows a fair chunk of it is just chasing.",
+    grade: 2,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: false,
+    guidance: "Nic has tracked his time for years: roughly 25 hours a week on client work and 5 hours on networking and meetings. His own estimate is that a meaningful portion of those 25 hours is chasing, iterations, and double-handling. His words: 'If I can get that down, even if that is five hours a week, that frees me up to do a lot more because that is another 20 to 25 percent of my time.'\n\nThat is a specific, quantified, self-reported cost from a real accountant. You do not need to name Nic. Take his frame and put it to the reader. Ask whether the practice owner has ever actually tracked how much of their week is admin overhead rather than billable thinking. Most have not. That question alone is worth raising.",
+    prompts: "Have you ever tracked where your client hours actually go in a typical week? What is the split between thinking and reviewing versus chasing and processing? If you recovered five hours a week of your own time, what would you do with it?",
+    cta: "If you have never tracked where your client hours actually go, that is the starting point. Book a slot and I will walk you through what we usually find."
+  },
+  {
+    id: "af-nic-3",
+    hook: "He cannot take on more clients. Not because the demand is not there. Because the process cannot handle any more volume.",
+    grade: 3,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: false,
+    guidance: "Nic is actively growing: planning a second office in Derby, his part-time employee Ginny is heading towards capacity, and he does not want to hire another person yet. His logic is clear: if he can free up his and Ginny's time through automation, the cost of that is less than the cost of a new employee. He cannot take on more clients until the per-client workload comes down.\n\nJaz Grewal made exactly the same point from a different angle. His words on client chasing: 'If everybody gave great information all the time, I'm sure we could probably take on double the amount of clients that we currently do.' Two accountants, independently, saying that process friction is the ceiling on their growth, not demand.\n\nThis is a growth ceiling created not by lack of demand but by process constraints. That is a specific, emotionally loaded situation for any practice owner who built the business to grow it. Lead with the ambition, then surface the constraint. The person reading this who has turned away good clients because the team is at capacity will recognise it immediately.",
+    prompts: "Have you ever turned down a client or slowed down taking new ones on because the capacity was not there? What did that moment feel like? What would it take to create meaningful headroom without adding another salary?",
+    cta: "If your team is at capacity but your pipeline is not, the answer is not always another hire. Let's talk about what is actually using up the time."
+  },
+  {
+    id: "af-nic-4",
+    hook: "His clients were feeding his returns into AI and coming back with twenty questions in two minutes. He spotted it straight away.",
+    grade: 3,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: false,
+    guidance: "Nic described two clients who feed his tax returns straight into AI and come back with questions within two minutes of receiving them. His words: 'I've gone, you've used AI for that because you never asked me any questions and now you're asking twenty in two minutes. That is 100 percent AI.'\n\nHe is not threatened by this. He is observant and pragmatic: 'I'm trying to see this as an opportunity rather than bearing my head and going I hope it goes away.'\n\nThe content angle is not about AI replacing accountants. It is subtler: your clients are already ahead of you on AI adoption. They are using it to interrogate your work, to ask questions they would not previously have known to ask, and to make faster decisions. That is a signal worth responding to. Position Andy as the person helping practices keep up, not the person warning about disruption.",
+    prompts: "Have you had a client come back with questions that felt AI-generated? What was the tell? What does it mean for how you communicate with clients if they are now running everything you send through an AI model? What is the opportunity in that rather than the threat?",
+    cta: "If your clients are already using AI to analyse your work, the question is not whether to engage with that. It is how to make it work in your favour. Happy to have that conversation."
+  },
+  {
+    id: "af-nic-5",
+    hook: "Every accountant I speak to for this research says roughly the same thing. 'I know there is something here. I just don't know what it is or where to start.'",
+    grade: 2,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: false,
+    guidance: "Both Nic and Andy used the phrase 'I don't know what I don't know' in this call. It is the most honest description of where most accountants sit on automation: they know they have process problems, they know AI is relevant, and they cannot see clearly what is solvable because they do not know what is automatable.\n\nNic's exact words: 'There probably are areas, but where it is and who I talk to and how it gets done, I don't know.' This is Andy's positioning in a sentence. He is the person who closes that gap.\n\nThe post is simple: name the feeling, validate it, make clear this is exactly the gap he fills. Do not give a list of automatable tasks. Let the reader feel understood rather than informed. The goal is curiosity, not self-sufficiency.",
+    prompts: "When you speak to accountants about AI and automation, what is the most common thing they say they are unsure about? What does it feel like to sit in the gap between 'I know this matters' and 'I don't know where to start'? What is usually the first thing you find when you look at a practice properly for the first time?",
+    cta: "If that is where you are, that is exactly where I start. Drop me a message. The first conversation is a sense-check, not a sales call."
+  },
+  {
+    id: "af-nic-6",
+    hook: "He said he got into accountancy to think, to review the numbers, to help clients make better decisions. He is spending most of his time on process.",
+    grade: 3,
+    tag: "Unused",
+    badge: "From Nic Cooper research call",
+    priority: false,
+    guidance: "Nic was direct: 'I want to get to a position where somebody or something else is doing the process stuff, and I'm doing the thinking and reviewing and analysing and talking to clients.' He is edging towards that. He is not there yet.\n\nThis is a professional identity post, not an efficiency post. The tension is between who a practice owner trained to be and what they actually spend their day doing. Lead with the gap between the advisor they wanted to be and the processor they have become. That is a more emotional, more honest, and more memorable angle than a time-saving argument.\n\nBe careful not to be condescending. Frame this as a system problem, not a character failing. Also note: this overlaps with the 'Faster is making accountancy firms poorer' post already published, which covered the economics of efficiency gains. This version is about professional identity. The framing is different enough to write, but open with the person rather than the pricing.",
+    prompts: "What is the version of accountancy that made you want to do this in the first place? What does a genuinely good day look like versus a typical day? What percentage of last week was actual thinking and reviewing versus processing and chasing? Where is the gap between those two?",
+    cta: "If you got into this to advise and you are spending most of your time on admin, that is a system problem. It is also a solvable one. Book a slot."
+  },
+];
+
 const afContentSack = [
   { id: "af-sack-1", hook: "The owner who can't step away", whiteboard: "\"You Started A Business For Freedom. So Why Can't You Leave?\"", grade: 3, tag: "Post this fortnight", priority: true, postCopy: "Most people start a business because of freedom. The idea that you'll work for yourself, set your own hours, take a proper holiday without your laptop open.\n\nBut I keep speaking to founders who can't take a week off without the business quietly wobbling.\n\nNot because their team isn't capable. Because too much of how things actually work lives in the owner's head.\n\nWhat to do when something breaks. How to handle the edge cases. What the process actually is when it isn't written down anywhere.\n\nThat's not a people problem. That's a systems problem.\n\nAnd it's exactly the kind of thing I fix.", cta: "If you couldn't step away from your business for two weeks without it feeling risky — let's talk about what that's actually costing you." },
   { id: "af-sack-2", hook: "Data copying between systems", whiteboard: "\"Stop Paying Humans To Copy & Paste\"", grade: 2, tag: "Unused", priority: false, postCopy: "If someone in your business is exporting CSVs, updating spreadsheets, and re-entering data into another system — that's exactly the kind of thing I fix. Humans shouldn't be acting as connectors between tools. If Sally is your integration layer, that's not efficiency. That's fragility. Copy and paste is not a growth strategy.", cta: "If Sally is holding your data together, let's have a conversation about what replaces her." },
@@ -616,6 +685,26 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                   </div>
                 </div>
               ))}
+              <div style={{ marginBottom: 20 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 10px" }}>Going deeper on emotional impact</p>
+                <Callout type="blue">
+                  <strong>Feedback from the Nic Cooper call (June 2026):</strong> The first two calls surfaced the pain clearly. What was missing was the emotional cost underneath it. Nic described the diary cascade and the capacity ceiling clearly, but Andy did not probe how those problems actually feel to sit in week after week. For the next calls, go one level deeper once a pain point surfaces. The questions below are specifically for that moment.
+                </Callout>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "4px 0" }}>
+                  {[
+                    "When that happens, what goes through your head in that moment?",
+                    "Walk me through the last time it actually went wrong. What did it cost you?",
+                    "If nothing changes in the next twelve months and you're still dealing with this the same way, what does that mean for you personally?",
+                    "What would your ideal week actually feel like if this problem just wasn't there?",
+                  ].map((q, j) => (
+                    <div key={j} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 20px", borderBottom: j < 3 ? "1px solid #F0EDE8" : "none" }}>
+                      <span style={{ color: AF_COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.85rem", marginTop: 1 }}>→</span>
+                      <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.6 }}>{q}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div style={{ background: "#e8f0f7", borderLeft: `3px solid ${AF_COLOR}`, borderRadius: "0 4px 4px 0", padding: "14px 18px" }}>
                 <p style={{ fontSize: "0.84rem", color: "#1a3a5c", lineHeight: 1.6, margin: 0 }}><strong>After the call:</strong> Send Ben the Otter AI transcript or a voice note summary. Don&apos;t filter it — raw is better. If two or three accountants say the same thing, that&apos;s a content post. If they say something surprising, that&apos;s an even better one.</p>
               </div>
@@ -974,7 +1063,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                 { id: "belief", label: "Belief / Opinion" },
                 { id: "bold", label: "Bold / Contrarian" },
                 { id: "practical", label: "Practical" },
-                { id: "authority", label: "Authority" },
+                { id: "accountant-research", label: "Accountant Research" },
                 { id: "sack", label: "SACK SALLY" },
               ].map(st => (
                 <button key={st.id} onClick={() => setContentSubTab(st.id)} style={{ padding: "9px 16px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", border: "1px solid #E0DBD3", borderRadius: 3, cursor: "pointer", background: contentSubTab === st.id ? (st.id === "sack" ? "#6b2a00" : st.id === "bobby" ? "#2e7d4f" : AF_COLOR) : "#fff", color: contentSubTab === st.id ? "#fff" : "#7A746E" }}>
@@ -1001,7 +1090,33 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
             {contentSubTab === "belief" && afContentBelief.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
             {contentSubTab === "bold" && afContentBold.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
             {contentSubTab === "practical" && afContentPractical.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
-            {contentSubTab === "authority" && afContentAuthority.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
+            {contentSubTab === "accountant-research" && (
+              <div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 20 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: AF_COLOR, margin: "0 0 6px" }}>Where these came from</p>
+                  <p style={{ fontSize: "1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 16px" }}>Real pain, in accountants' own words</p>
+                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 12px" }}>These ideas came directly from two research calls with practice owners. Every angle here was said out loud by a real accountant, not assumed from the outside.</p>
+                  <div style={{ display: "flex", flexDirection: "column" as const, gap: 10 }}>
+                    <div style={{ background: "#f7f9fc", border: "1px solid #c8d8ec", borderRadius: 4, padding: "14px 18px" }}>
+                      <p style={{ fontSize: "0.78rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 4px" }}>Jaz Grewal — TaxAssist franchise, Leicester (May 2026)</p>
+                      <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>13 staff, two offices, tech-forward. Confirmed pain: 4 hours every Sunday manually reviewing task lists, client chasing as the biggest time drain, onboarding complexity from changing AML requirements, no visibility into whether client managers are answering emails. His exact words on chasing: "If everybody gave great information all the time, I'm sure we could probably take on double the amount of clients that we currently do."</p>
+                    </div>
+                    <div style={{ background: "#f7f9fc", border: "1px solid #c8d8ec", borderRadius: 4, padding: "14px 18px" }}>
+                      <p style={{ fontSize: "0.78rem", fontWeight: 700, color: AF_COLOR, margin: "0 0 4px" }}>Nic Cooper — independent practice, Uttoxeter (June 2026)</p>
+                      <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Solo with one part-time employee, 75% limited companies, planning second office in Derby. Tracks his own time: roughly 25 hours a week on client work, 5 on networking. Confirmed the chasing pain independently, named the diary cascade as the hidden cost, and described his clients already using AI to interrogate the returns he sends them. His words: "I want to get to a position where somebody or something else is doing the process stuff, and I'm doing the thinking and reviewing and analysing and talking to clients."</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Callout type="blue">
+                  <strong>Note on posts already published:</strong> The Sunday night dashboard post (from Jaz) and the &apos;Bobby: your system forgot they already sent it&apos; post have both been published. The diary cascade, 20-25% quantification, growth ceiling, clients using AI, the &apos;I don&apos;t know what I don&apos;t know&apos; angle, and the advisor identity angle are all still unwritten. The post on &apos;Faster is making accountancy firms poorer&apos; overlaps loosely with the advisor trap idea, but the framing is different enough to write: that post was about economics, this one is about professional identity.
+                </Callout>
+
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 14px" }}>Content ideas from both calls</p>
+
+                {afContentNicResearch.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
+              </div>
+            )}
             {contentSubTab === "sack" && (
               <div>
                 <div style={{ background: "linear-gradient(135deg, #fff0e6, #fde8d4)", border: "1px solid #e8a87c", borderRadius: 4, padding: "18px 22px", marginBottom: 20 }}>
@@ -1025,7 +1140,9 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
                   <p style={{ fontSize: "0.85rem", color: "#2e7d4f", margin: 0 }}>Bobby is the junior accountant in a practice doing manual, non-revenue-moving tasks that a system should be handling. The format: name the specific process Bobby is doing, call out the cost to the practice, land on &quot;that&apos;s exactly the kind of thing I fix.&quot; Bobby isn&apos;t the problem — the lack of a system is.</p>
                 </div>
                 <Callout type="green">
-                  <strong>Research update — May 2026:</strong> Andy has now completed his first accountant research call (Jaz Grewal, TaxAssist, Leicester). The content below has been updated with real data from that call. Key confirmed pain points: chasing clients for records is the #1 non-productive time drain; practice manager visibility is a genuine weekly headache (Jaz spends 4 hours every Sunday manually reviewing task lists); onboarding is manually intensive. Two new content ideas have been added from the call — duplicate information requests and staff email monitoring — these are new angles not previously assumed. <strong>Bobby posts are now green to write.</strong>
+                  <strong>Research update — June 2026:</strong> Two accountant research calls completed. Jaz Grewal (TaxAssist franchise, Leicester, May 2026) and Nic Cooper (independent practice, Uttoxeter, June 2026) both confirmed client chasing as the single biggest time drain independently of each other. That is confirmation, not assumption. Write from it with confidence.
+
+                  <p style={{ margin: "10px 0 0" }}>Key confirmed pain points across both calls: client chasing is the #1 non-productive time sink; practice manager visibility is a genuine weekly problem (Jaz spends 4 hours every Sunday manually reviewing task lists); onboarding is manually intensive with AML compliance adding complexity; duplicate document requests damage client trust; and staff email response visibility is a blind spot for practices that have handed delivery to a team. The Accountant Research tab has six new content ideas built directly from Nic's call, enriched with Jaz's intel. <strong>Bobby posts are green to write.</strong></p>
                 </Callout>
                 {afContentBobby.map((idea, i) => <IdeaCard key={i} idea={idea} slug={slug} />)}
               </div>
