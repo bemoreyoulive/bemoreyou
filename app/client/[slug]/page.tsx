@@ -201,19 +201,19 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: true,
-    guidance: "Open on a specific Tuesday, not a concept. 'I had a plan. By 10am it was gone.' Don't introduce the topic — drop straight into the scene. The reader has lived this day. Let them recognise it before you've explained anything.\n\nThis is not the chasing post. The Bobby posts cover that. This post is about the cascade: the jobs that can't start, the diary shuffled around what's left, the quiet dread that builds by Wednesday when the same client still hasn't replied. Describe the day, not the problem.\n\nKeep it short and specific. Two or three concrete moments. No explaining, no solution. The post ends when the reader says 'that's me' — that's when they reach out.",
-    prompts: "What is the most specific version of this you have actually seen or heard described? The more exact the detail, the better the post.\n\nWhat does that day feel like from the inside? Not the inefficiency — the actual texture of it.\n\nWhat one detail makes it real rather than generic?",
+    guidance: "This is not about chasing. The Bobby posts cover that. This is about what happens to the rest of the day once something is missing: what gets parked, what gets shuffled, how long it sits in your head.\n\nStart with a specific day that went sideways. Walk through it. Don't explain the problem or pitch the solution. Just describe what happened.",
+    prompts: "What is the most specific version of this you have seen or heard? The more concrete the detail, the better.\n\nWhat does that day feel like from the inside, not just the lost time but the actual texture of it?\n\nWhat is the one detail that makes it feel real rather than generic?",
     cta: "If Tuesday regularly looks like that, send me a message. Coffee's on me."
   },
   {
     id: "af-nic-2",
-    hook: "He tracked every hour he worked, every week. One day he actually added up how much of it was just waiting for clients to send things.",
+    hook: "He tracked every hour he worked, every week. One day he added up how much of it was just waiting for clients to send things.",
     grade: 2,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Don't open with the number. Open with the challenge: 'When did you last actually track where your week went?' Most practice owners have a rough sense of how it feels. Almost none have put a real number on it. That gap between feeling and fact is where the post lives.\n\nDrop the number in the middle, as a gut-punch. Don't editorialize — just present it and let it sit. Then turn the question back at the reader. What's your number? Make them uncomfortable enough to count it themselves.\n\nThe post has no solution. That's intentional. The discomfort is the CTA.",
-    prompts: "What is the most honest thing you could say about how much of a typical engagement is actual thinking versus pushing paper around?\n\nWhat does it look like when a practice owner is running hard but getting nowhere? What would change if they tracked it honestly?\n\nWhat is the uncomfortable version of this post — the one that makes someone put their phone down for a second?",
+    guidance: "Ask the reader whether they have ever actually tracked where their week goes. Most haven't. Drop the number partway through: 25 hours on clients, and a meaningful chunk of it just overhead. Don't tell them what to do about it. Make them uncomfortable enough to count their own.",
+    prompts: "What is the most honest description you can give of how much of a typical engagement is actual thinking versus admin?\n\nWhat does it look like when someone is working hard but the work is mostly overhead?\n\nWhat is the version of this post that makes someone put their phone down for a second?",
     cta: "If you have never tracked it, I suspect the number would be uncomfortable. Send me a message and let's look at it. Coffee's on me."
   },
   {
@@ -223,19 +223,19 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic and Jaz research calls",
     priority: false,
-    guidance: "The hook is already written: two accountants, same month, same sentence, unprompted. Open with the quote — don't introduce it. Drop the reader straight in. Let the pattern land before you explain it.\n\nThe post is about naming a ceiling that practice owners feel but haven't articulated. They are not short of clients. They are short of capacity to take them on. That distinction matters. Don't frame this as a process problem — frame it as a growth problem that has a process cause.\n\nShort post. No solution. Just the pattern, clearly named, and the recognition that it's more common than they think.",
-    prompts: "What does it look like when a practice owner is actively leaving revenue on the table because of process? What do they say about it?\n\nWhat's the most direct way to describe this ceiling to someone at a networking event?\n\nWhat would change for a practice that removed this constraint? Be specific — what does the next 12 months look like?",
-    cta: "If that ceiling is familiar, let's talk about what is actually in the way. I'll buy the coffee."
+    guidance: "Open with the quote and nothing else. Two people, same month, same sentence. Let the reader recognise themselves before you say anything else.\n\nThis is about a growth problem with a process cause. They have the demand. They don't have the capacity to take it on. Keep it short. No solution.",
+    prompts: "What does it actually look like when a practice is turning away work because of this? What do people say about it?\n\nWhat would the next 12 months look like for a practice that removed this constraint?\n\nHow would you describe this ceiling to someone in 30 seconds at a networking event?",
+    cta: "If that ceiling is familiar, let's talk about what is in the way. I'll buy the coffee."
   },
   {
     id: "af-nic-4",
-    hook: "He had never once had a follow-up question from this client in two years. Then the client fed the return into AI. Twenty questions. Two minutes.",
+    hook: "He had never once had a follow-up question from this client in two years. Then the client got hold of the return. Twenty questions. Two minutes.",
     grade: 3,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Open on the contrast: never asked a question in two years, then twenty in two minutes. Don't explain what happened — let the reader work it out. That beat of recognition is the whole post.\n\nThis is not an AI post. Don't use the word. It is a post about a quiet shift in the relationship between accountant and client — one that's already happening, whether they've noticed it or not. The observation is the value. No prescription, no solution, no call to arms about the future of the profession.\n\nEnd with a question, not a conclusion. 'Have you noticed this yet?' gives the reader somewhere to go.",
-    prompts: "What's the most specific version of this you could describe without identifying who it is?\n\nWhat does it actually mean for an accountant when their clients are becoming better-informed faster than expected?\n\nWhat would you say to someone who found this alarming rather than interesting?",
+    guidance: "Start with the contrast: no questions for two years, then twenty in two minutes. Don't use the word AI. Don't explain what happened. Just describe what changed and let the reader work it out.\n\nThis post is an observation, not a warning. End with a question to the reader, not a conclusion.",
+    prompts: "What is the most specific version of this you could write about without identifying anyone?\n\nWhat does it actually mean for an accountant when clients start asking better questions than they used to?\n\nWhat would you say to someone who found this worrying rather than interesting?",
     cta: "If your clients are doing the same, it is worth a conversation. I'll buy the coffee."
   },
   {
@@ -245,9 +245,9 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Write from inside the feeling, not about it from the outside. The reader needs to feel seen, not diagnosed. Open on the uncertainty itself: 'You know something needs fixing. You just can't see it from where you're standing.' Hold that for the whole post — don't pivot to the solution.\n\nThe risk here is the post becomes a pitch. Resist it. The moment you list what's automatable or describe how you work, you've turned a post about them into a post about you. End with the invitation, not the answer. They reach out because they feel understood, not because they've been informed.\n\nDon't give them enough to act alone.",
-    prompts: "What's the most common form this uncertainty takes when you hear it at a networking event or in a first call?\n\nWhat do you usually find in the first 20 minutes with a practice that the owner hadn't spotted themselves?\n\nWhat does the start of a genuinely useful first conversation look like for you?",
-    cta: "If that is where you are sitting right now, send me a message. I'll buy the coffee and we can work out where to look first."
+    guidance: "Write the feeling, not the solution. Open on the uncertainty: you know something needs fixing, you just can't see it from where you're standing. Stay there for the whole post.\n\nDo not explain what you automate or how you work. The moment you give them enough to act without you, you have lost them. End with the invitation.",
+    prompts: "What is the most common way this uncertainty comes up when you talk to practice owners?\n\nWhat do you usually spot in the first 20 minutes that the owner hadn't noticed?\n\nWhat does the start of a useful first conversation actually look like for you?",
+    cta: "If that is where you are, send me a message. I'll buy the coffee and we can work out where to look first."
   },
   {
     id: "af-nic-6",
@@ -256,8 +256,8 @@ const afContentNicResearch = [
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "One sentence carries this entire post: he trained for years to give financial advice. He spent last Tuesday chasing a bank statement. Open with that contrast and sit in it. Don't diagnose, don't moralize, don't explain the system behind it. Just hold the gap up to the light.\n\nThis is an identity post, not an efficiency post. The 'Faster is making accountancy firms poorer' post covered the economics — don't go back there. This one is about the person. What they thought the job would be. What it actually is. That gap is where the feeling lives.\n\nEnd before the fix. The CTA does the work.",
-    prompts: "What is the most specific version of this gap you've seen — the most qualified person doing the least qualified task?\n\nWhat does it feel like professionally to be in that position? Not the frustration — what does it say about the week?\n\nWhat would they answer if you asked them: 'Is this what you had in mind when you started the practice?'",
+    guidance: "Start with that contrast and describe the gap. Don't explain the system behind it or how to fix it.\n\nThis is about professional identity, not efficiency. The 'Faster is making accountancy firms poorer' post already covered the money angle, so don't go back there. This one is about the person and what the job turned into.",
+    prompts: "What is the most specific version of this gap you have seen, the most qualified person doing the least qualified task?\n\nWhat does it feel like to be in that position, not the frustration, but what does it say about how the week is going?\n\nWhat would they say if you asked whether this is what they had in mind when they started the practice?",
     cta: "If your week looks more like processing than advising, send me a message. I'll buy the coffee. No pitch."
   },
 ];
