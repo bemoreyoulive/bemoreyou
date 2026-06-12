@@ -196,69 +196,69 @@ const afContentAuthority = [
 const afContentNicResearch = [
   {
     id: "af-nic-1",
-    hook: "The diary shuffle nobody talks about",
+    hook: "The chase email takes five minutes. What it does to the rest of your day takes three hours to sort out.",
     grade: 3,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: true,
-    guidance: "The real cost of chasing clients for missing documents is not the five minutes sending the email. It is what happens next: the job gets parked, other work gets reshuffled, the diary gets rebuilt around what can actually be done, and the mental overhead of tracking five half-done files compounds across the whole week.\n\nNic described it exactly: 'I've got a plan in my diary, I go right I'm going to do that. Oh, I haven't got that, I've got to chase it. I can't do that. I end up moving things around in the diary. Next week I don't get it, I need to chase again.'\n\nJaz Grewal confirmed the same pattern from the other side: he spends four hours every Sunday evening manually reviewing his team's task lists specifically because he cannot see what is blocked or falling behind mid-week. Both calls point to the same root cause: there is no system that surfaces where things are stuck, so people build workarounds out of time and attention.\n\nLead with the cascade, not the chase itself. The practice owner reading this has rebuilt their diary mid-morning because of a missing bank statement. Name that specific moment. Note: the Bobby chasing posts already cover the chase email itself. This is the adjacent angle that has not been written yet. It is about the ripple effect, not the email.",
-    prompts: "What does the rest of the day actually look like when a client has not sent what you need? Which jobs get moved, which get parked, and how many times does one missing document touch the diary before it is resolved? What is the emotional texture of that: the mild frustration, the resignation, the slight dread when the same client name comes up again?",
-    cta: "If your diary reshuffles more often than it should because clients have not sent what you need, drop me a message. The fix is less complicated than the problem."
+    guidance: "Nic described it exactly: 'I've got a plan in my diary, I go right I'm going to do that. Oh, I haven't got that, I've got to chase it. I can't do that. I end up moving things around in the diary. Next week I don't get it, I need to chase again.' That is not a quote about chasing. That is a quote about a day coming apart at the seams.\n\nThe Bobby posts cover the chase email. This is the angle alongside it: everything downstream. The diary that never quite runs as planned. The jobs parked half-finished. The low-level dread every time a certain client's name comes up on a Monday morning.\n\nJaz Grewal came at the same problem from the other direction: he spends four hours every Sunday evening manually reviewing task lists because he has no way to see what is blocked mid-week without going looking for it. Two practices, same root cause.",
+    prompts: "What does your Tuesday actually look like when three clients haven't sent what you needed?\n\nWhich jobs are the worst to have stuck mid-flow?\n\nWhat is it like to sit down on Monday already knowing some things won't move this week?",
+    cta: "If Tuesday regularly looks like that, send me a message. Coffee's on me."
   },
   {
     id: "af-nic-2",
-    hook: "One practice owner has been tracking his time for years. He spends roughly 25 hours a week on client work. He knows a fair chunk of it is just chasing.",
+    hook: "He tracked every hour he worked, every week. One day he actually added up how much of it was just waiting for clients to send things.",
     grade: 2,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Nic has tracked his time for years: roughly 25 hours a week on client work and 5 hours on networking and meetings. His own estimate is that a meaningful portion of those 25 hours is chasing, iterations, and double-handling. His words: 'If I can get that down, even if that is five hours a week, that frees me up to do a lot more because that is another 20 to 25 percent of my time.'\n\nThat is a specific, quantified, self-reported cost from a real accountant. You do not need to name Nic. Take his frame and put it to the reader. Ask whether the practice owner has ever actually tracked how much of their week is admin overhead rather than billable thinking. Most have not. That question alone is worth raising.",
-    prompts: "Have you ever tracked where your client hours actually go in a typical week? What is the split between thinking and reviewing versus chasing and processing? If you recovered five hours a week of your own time, what would you do with it?",
-    cta: "If you have never tracked where your client hours actually go, that is the starting point. Book a slot and I will walk you through what we usually find."
+    guidance: "Nic has tracked his own time for years: roughly 25 hours a week on client work, 5 on networking and meetings. He estimates that a meaningful chunk of those 25 hours is chasing, double-handling, and iterations. His own calculation: 'If I can shave five hours off that, that is another 20 to 25 percent of my time.'\n\nThe post is a challenge to the reader: when did you last actually count? Most practice owners have a rough sense of how their week feels. Fewer have ever put a number on how much of it is overhead rather than thinking. This post makes them do the maths.",
+    prompts: "Have you ever tracked your actual split between delivery and admin?\n\nIf you recovered five hours a week, what would you do with them? More clients? Earlier finish? Less Sunday dread?\n\nWhat would it take for your week to feel like it was under control rather than reactive?",
+    cta: "If you have never tracked it, I suspect the number would be uncomfortable. Send me a message and let's look at it. Coffee's on me."
   },
   {
     id: "af-nic-3",
-    hook: "He cannot take on more clients. Not because the demand is not there. Because the process cannot handle any more volume.",
+    hook: "Two accountants, same month, unprompted: 'I could probably take on twice the clients if they just sent what I needed.'",
     grade: 3,
     tag: "Unused",
-    badge: "From Nic Cooper research call",
+    badge: "From Nic and Jaz research calls",
     priority: false,
-    guidance: "Nic is actively growing: planning a second office in Derby, his part-time employee Ginny is heading towards capacity, and he does not want to hire another person yet. His logic is clear: if he can free up his and Ginny's time through automation, the cost of that is less than the cost of a new employee. He cannot take on more clients until the per-client workload comes down.\n\nJaz Grewal made exactly the same point from a different angle. His words on client chasing: 'If everybody gave great information all the time, I'm sure we could probably take on double the amount of clients that we currently do.' Two accountants, independently, saying that process friction is the ceiling on their growth, not demand.\n\nThis is a growth ceiling created not by lack of demand but by process constraints. That is a specific, emotionally loaded situation for any practice owner who built the business to grow it. Lead with the ambition, then surface the constraint. The person reading this who has turned away good clients because the team is at capacity will recognise it immediately.",
-    prompts: "Have you ever turned down a client or slowed down taking new ones on because the capacity was not there? What did that moment feel like? What would it take to create meaningful headroom without adding another salary?",
-    cta: "If your team is at capacity but your pipeline is not, the answer is not always another hire. Let's talk about what is actually using up the time."
+    guidance: "Nic is planning a second office. His part-time employee Ginny is heading towards capacity. He does not want another hire yet. His logic: if automation frees up their time, the cost of that is less than a new salary. The ceiling is not demand. It is how much manual work each client generates.\n\nJaz Grewal said it more directly: 'If everybody gave great information all the time, I'm sure we could probably take on double the amount of clients that we currently do.'\n\nTwo separate accountants naming the same ceiling. That is the post: not a theory about process improvement, but two real practice owners telling you exactly what is stopping them from growing.",
+    prompts: "Is there a point recently where you slowed down taking on clients because the team was at capacity?\n\nWhat would you need to see change in the practice before you felt comfortable adding 20 or 30 percent more volume?\n\nWhat is the actual cost of the ceiling, in revenue, in opportunity, in what the practice could be?",
+    cta: "If that ceiling is familiar, let's talk about what is actually in the way. I'll buy the coffee."
   },
   {
     id: "af-nic-4",
-    hook: "His clients were feeding his returns into AI and coming back with twenty questions in two minutes. He spotted it straight away.",
+    hook: "He had never once had a follow-up question from this client in two years. Then the client fed the return into AI. Twenty questions. Two minutes.",
     grade: 3,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Nic described two clients who feed his tax returns straight into AI and come back with questions within two minutes of receiving them. His words: 'I've gone, you've used AI for that because you never asked me any questions and now you're asking twenty in two minutes. That is 100 percent AI.'\n\nHe is not threatened by this. He is observant and pragmatic: 'I'm trying to see this as an opportunity rather than bearing my head and going I hope it goes away.'\n\nThe content angle is not about AI replacing accountants. It is subtler: your clients are already ahead of you on AI adoption. They are using it to interrogate your work, to ask questions they would not previously have known to ask, and to make faster decisions. That is a signal worth responding to. Position Andy as the person helping practices keep up, not the person warning about disruption.",
-    prompts: "Have you had a client come back with questions that felt AI-generated? What was the tell? What does it mean for how you communicate with clients if they are now running everything you send through an AI model? What is the opportunity in that rather than the threat?",
-    cta: "If your clients are already using AI to analyse your work, the question is not whether to engage with that. It is how to make it work in your favour. Happy to have that conversation."
+    guidance: "Nic spotted it immediately: 'I've gone, you've used AI for that because you never asked me any questions and now you're asking twenty in two minutes. That is 100 percent AI.'\n\nHe is not worried about it. His response: 'I'm trying to see this as an opportunity rather than bearing my head and going I hope it goes away.' That mindset is the post. Not the usual hand-wringing about AI replacing accountants. Something more specific and more interesting: your clients are already ahead of you on AI adoption. They are using it to interrogate your work, to ask questions they would not previously have known to ask. That is a signal worth writing about.\n\nLead with the observation. Make the reader recognise it. Let them draw the conclusion themselves.",
+    prompts: "Have you had a client come back with questions that felt AI-generated? What was the tell?\n\nIf clients are analysing everything you send with an AI model, what does that change about how you present your work or communicate your value?\n\nWhat is the opportunity version of this rather than the threat version?",
+    cta: "If your clients are doing the same, it is worth a conversation. I'll buy the coffee."
   },
   {
     id: "af-nic-5",
-    hook: "Every accountant I speak to for this research says roughly the same thing. 'I know there is something here. I just don't know what it is or where to start.'",
+    hook: "Every accountant I've spoken to this month has said some version of the same thing: 'I know something needs fixing. I just can't see it from the inside.'",
     grade: 2,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Both Nic and Andy used the phrase 'I don't know what I don't know' in this call. It is the most honest description of where most accountants sit on automation: they know they have process problems, they know AI is relevant, and they cannot see clearly what is solvable because they do not know what is automatable.\n\nNic's exact words: 'There probably are areas, but where it is and who I talk to and how it gets done, I don't know.' This is Andy's positioning in a sentence. He is the person who closes that gap.\n\nThe post is simple: name the feeling, validate it, make clear this is exactly the gap he fills. Do not give a list of automatable tasks. Let the reader feel understood rather than informed. The goal is curiosity, not self-sufficiency.",
-    prompts: "When you speak to accountants about AI and automation, what is the most common thing they say they are unsure about? What does it feel like to sit in the gap between 'I know this matters' and 'I don't know where to start'? What is usually the first thing you find when you look at a practice properly for the first time?",
-    cta: "If that is where you are, that is exactly where I start. Drop me a message. The first conversation is a sense-check, not a sales call."
+    guidance: "Nic said it plainly: 'There probably are areas where it could help, but where it is and who I talk to and how it gets done, I don't know.' He used the phrase himself: 'I don't know what I don't know.'\n\nThis is not resistance. It is not dismissiveness. It is the honest starting point for most practice owners who are not actively behind on tech: they know the problem is real, they cannot see what is solvable from inside it, and they have not found the right person to start the conversation with.\n\nThat gap is Andy's positioning in a sentence. The post is simple: name the feeling, make the reader feel understood, and make them curious rather than informed. The moment they feel informed enough to fix it themselves, you have written them out of needing you.",
+    prompts: "What is the most common reason practice owners give for not having sorted their processes yet?\n\nWhen you walk into a practice for the first time, what is the first thing you usually spot that they haven't noticed?\n\nWhat would you say to someone who said 'I wouldn't even know where to start'?",
+    cta: "If that is where you are sitting right now, send me a message. I'll buy the coffee and we can work out where to look first."
   },
   {
     id: "af-nic-6",
-    hook: "He said he got into accountancy to think, to review the numbers, to help clients make better decisions. He is spending most of his time on process.",
+    hook: "He trained for years to advise businesses on their finances. He spent most of last Tuesday chasing a bank statement.",
     grade: 3,
     tag: "Unused",
     badge: "From Nic Cooper research call",
     priority: false,
-    guidance: "Nic was direct: 'I want to get to a position where somebody or something else is doing the process stuff, and I'm doing the thinking and reviewing and analysing and talking to clients.' He is edging towards that. He is not there yet.\n\nThis is a professional identity post, not an efficiency post. The tension is between who a practice owner trained to be and what they actually spend their day doing. Lead with the gap between the advisor they wanted to be and the processor they have become. That is a more emotional, more honest, and more memorable angle than a time-saving argument.\n\nBe careful not to be condescending. Frame this as a system problem, not a character failing. Also note: this overlaps with the 'Faster is making accountancy firms poorer' post already published, which covered the economics of efficiency gains. This version is about professional identity. The framing is different enough to write, but open with the person rather than the pricing.",
-    prompts: "What is the version of accountancy that made you want to do this in the first place? What does a genuinely good day look like versus a typical day? What percentage of last week was actual thinking and reviewing versus processing and chasing? Where is the gap between those two?",
-    cta: "If you got into this to advise and you are spending most of your time on admin, that is a system problem. It is also a solvable one. Book a slot."
+    guidance: "Nic put it plainly: 'I want to get to a position where somebody or something else is doing the process stuff, and I'm doing the thinking and reviewing and analysing and talking to clients.' He built his practice specifically to have real relationships with small business owners. He is a management accountant. He is spending a significant chunk of his week on admin that has nothing to do with any of that.\n\nThe gap between who a practice owner trained to be and what they actually do on a Tuesday is the emotional core of this post. It is not an efficiency argument. It is an identity argument, and it lands harder.\n\nNote: 'Faster is making accountancy firms poorer' already went out and covered the economics of this. This version is different. That post was about pricing. This one is about the person. Open with the human, not the problem.",
+    prompts: "What is the thing you were actually trained to do that you find yourself doing least in a typical week?\n\nWhat does a genuinely good day look like, and how often does your week actually look like that?\n\nIf someone asked what you spend most of your time on, would the answer match why you became an accountant?",
+    cta: "If your week looks more like processing than advising, send me a message. I'll buy the coffee. No pitch."
   },
 ];
 
@@ -507,8 +507,12 @@ function IdeaCard({ idea, isSack = false, slug }: { idea: ContentIdea; isSack?: 
         <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid #E0DBD3", display: "flex", flexDirection: "column" as const, gap: 10 }}>
           {idea.guidance && (
             <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Guidance</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.guidance}</p>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 8px" }}>Guidance</p>
+              <div style={{ display: "flex", flexDirection: "column" as const, gap: 10 }}>
+                {idea.guidance.split("\n\n").map((para, j) => (
+                  <p key={j} style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.6 }}>{para}</p>
+                ))}
+              </div>
             </div>
           )}
           {idea.postCopy && (
@@ -519,14 +523,21 @@ function IdeaCard({ idea, isSack = false, slug }: { idea: ContentIdea; isSack?: 
           )}
           {idea.prompts && (
             <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Prompting questions</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.prompts}</p>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 8px" }}>Prompting questions</p>
+              <div style={{ display: "flex", flexDirection: "column" as const, gap: 8 }}>
+                {idea.prompts.split("\n\n").map((q, j) => (
+                  <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                    <span style={{ color: AF_COLOR, fontWeight: 700, flexShrink: 0, fontSize: "0.85rem", marginTop: 1 }}>→</span>
+                    <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.6 }}>{q}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {idea.cta && (
-            <div>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>CTA</p>
-              <p style={{ fontSize: "0.88rem", color: "#1C1C1C", margin: 0, lineHeight: 1.5 }}>{idea.cta}</p>
+            <div style={{ background: AF_COLOR, borderRadius: 4, padding: "14px 18px", marginTop: 4 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "rgba(255,255,255,0.6)", margin: "0 0 6px" }}>CTA</p>
+              <p style={{ fontSize: "0.92rem", fontWeight: 600, color: "#fff", margin: 0, lineHeight: 1.5 }}>{idea.cta}</p>
             </div>
           )}
         </div>
