@@ -48,6 +48,11 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
+  "neil-robbins": [
+    { id: "nr1", text: "Come to your blueprint call ready to be candid and open. There is nothing to prepare, just turn up honest. It runs 90 minutes and it sets the foundation for everything we build over the next six months." },
+    { id: "nr2", text: "Have a think about which one or two leaders at Silverbean might build their profiles alongside you in time. Nicky Yates and Rebecca Marnie already came up as people who do this well." },
+    { id: "nr3", text: "Keep an eye on your two hours a week. That is the only time commitment I am asking for. If you can protect it, the rest takes care of itself." },
+  ],
   "alex-shiell": [
     { id: "as2-7", text: "No video yet this week and it's Wednesday. Consistency is the whole game at this stage. Get one out today or tomorrow, it doesn't need to be perfect." },
     { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: Drop me a follow and I'll show you my journey of how I did this. You've got the hook nailed, you just need to give them the next chapter." },

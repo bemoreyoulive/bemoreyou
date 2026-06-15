@@ -12,6 +12,7 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 import AndyScottBarrettDashboard from "@/components/AndyScottBarrettDashboard";
 import JamesHartleyDashboard from "@/components/JamesHartleyDashboard";
 import AlexShiellDashboard from "@/components/AlexShiellDashboard";
+import NeilRobbinsDashboard from "@/components/NeilRobbinsDashboard";
 
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
@@ -2780,6 +2781,10 @@ export default function ClientDashboard({ params }: { params: Promise<{ slug: st
 
   if (slug === "alex-shiell") {
     return <AlexShiellDashboard slug={slug} />;
+  }
+
+  if (slug === "neil-robbins") {
+    return <NeilRobbinsDashboard slug={slug} />;
   }
 
   if (!client) {
