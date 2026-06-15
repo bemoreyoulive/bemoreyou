@@ -83,48 +83,11 @@ const HEADLINES: { label: string; text: string; note: string }[] = [];
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [];
 
 // ─── CONTENT IDEAS ───────────────────────────────────────────────────────────
-// Seeded from the discovery call and onboarding answers. These are draft angles
-// to validate on the blueprint call, not a confirmed plan. Everything here comes
-// from Neil's own words.
+// Left empty until after the blueprint call. Seed angles from his discovery call
+// and onboarding answers are held in the master MD, ready to add once positioning
+// is confirmed.
 
-const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [
-  {
-    hook: "Why senior marketers still misjudge affiliate, 20 years on",
-    guidance:
-      "Your sharpest take. The people who were marketing managers 20 years ago now lead marketing, and their view of the channel has not moved with it. Make the case for performance partnerships as a stable, cost-controllable route to growth while paid media costs keep climbing. This is the hill you said you are willing to die on.",
-    priority: true,
-  },
-  {
-    hook: "Everyone in affiliate is friends. They are not.",
-    guidance:
-      "Your contrarian view from the onboarding form. The tech businesses are owned by investment firms, the agencies play nicely in public and compete every day, and affiliates each need that last click to get paid. An honest insider take that earns respect and shows you say what others will not.",
-    priority: true,
-  },
-  {
-    hook: "How I built this company",
-    guidance:
-      "The keynote you secretly want to give. The mistakes you made, what you are proud of, the lessons learned, and the advice you would give anyone starting a business. This is a rich seam for a whole series, not a single post. It is also the thing you said you could talk about all day.",
-    priority: true,
-  },
-  {
-    hook: "People are 80% of your success and 80% of your failure",
-    guidance:
-      "Your never-shared-publicly lesson. Hire well, look after your people, cut your losses early, do not over-promote, and do not have too many people learning on the job at once. Founders will lean in because this is hard-won and specific.",
-    priority: false,
-  },
-  {
-    hook: "I have learned to take nothing personally",
-    guidance:
-      "Twenty-plus years running a people business selling to people. Setbacks, knock-backs and uninformed opinions, very rarely is any of it personal. A grounded, human angle that softens the harder industry takes and shows the person behind the CEO title.",
-    priority: false,
-  },
-  {
-    hook: "Last-click rewards and Media Mix Modelling are holding the channel back",
-    guidance:
-      "Two things you stand against. Only rewarding publishers on last click, and marketing leaders leaning on MMM that does not accurately reflect what the channel delivers. A confident, evidence-led opinion aimed squarely at decision-makers, not a controversy play.",
-    priority: false,
-  },
-];
+const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [];
 
 // ─── MESSAGING ───────────────────────────────────────────────────────────────
 const MESSAGING: { title: string; body: string }[] = [];
@@ -235,7 +198,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} />
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} animateIn />
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 32 }}>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
