@@ -6,8 +6,8 @@
 // 13 sessions. Blueprint (Session 1) done 16 June 2026. Session 2 (messaging &
 // positioning) is 23 June 2026, 10am — access granted to Neil then.
 // Voice rules: no em-dashes, no "quietly", no one or two word sentence fragments.
-// Any message/comment FROM Ben is written personally, second person, like writing
-// to a mate. NextMoveBox: 40-45 words MAX.
+// Messages from Ben: personal, second person, warm and direct. CEO-level humour
+// is welcome; he runs his business on it. NextMoveBox: 40-45 words MAX.
 
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase-browser";
@@ -23,7 +23,7 @@ const NR_CONFIG = {
   name: "Neil Robbins",
   role: "Founder & CEO, Silverbean",
   initials: "NR",
-  color: "#2E6F5E", // Deep Silverbean green
+  color: "#2E6F5E",
   sessionLabel: "Session 1 of 13 · June 2026",
   nextMove:
     "Welcome to your dashboard, Neil. Start in Brand Assets, those four content pillars are your north star. Our next session is the messaging and positioning one, Tuesday 23 June at 10am, where we turn your stories into how you actually sound.",
@@ -36,58 +36,43 @@ const TABS = [
   { id: "sessions", label: "Sessions" },
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
-  { id: "headlines", label: "Headlines" },
-  { id: "about", label: "About Section" },
   { id: "content", label: "Content Ideas" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
 ];
 
-// ─── CONTENT PILLARS ─────────────────────────────────────────────────────────
-// Four pillars set after the blueprint call. North star, not a rulebook.
-// Each has a full version (Brand Assets) and a short version (Content Ideas),
-// plus the target audience it mainly serves.
-
 const NR_PILLARS: { title: string; tag: string; body: string; short: string; audience: string }[] = [
   {
-    title: "Straight talk on performance marketing",
-    tag: "The Spike",
-    body: "Your unfiltered, plain-English view of the industry, the things most agency CEOs will not say out loud. Not anger, just honesty and a sharper eye than the rest. This is your differentiator and the engine of your authority, the reason senior people stop scrolling. Think senior marketers misjudging affiliate, only pay when it works against rising Google and Meta costs, and making the pie bigger rather than fighting over slices.",
-    short: "Your unfiltered, honest take on the industry. The contrarian edge that makes you worth listening to and sets you apart from the vanilla.",
+    title: "Calling a spade a spade on performance marketing",
+    tag: "The Hand Grenade",
+    body: "Your unfiltered, plain-English view of the industry, the things most agency CEOs will not say out loud. You are full of genuinely valuable contrarian views on performance marketing, and that is the engine of your authority, the reason senior people stop scrolling. Not anger, just honesty and a sharper eye than the rest. Think senior marketers leaving 15 to 20% of ecommerce revenue on the table because they misjudge affiliate, only pay when it works against rising Google and Meta costs, and why the industry keeps grabbing slices instead of making the pie much bigger.",
+    short: "Your unfiltered take on the industry. You have valuable contrarian views and you are not afraid to say them. That edge is what makes you worth listening to.",
     audience: "Senior marketing decision-makers, the CMOs and marketing leaders. Also reaches practitioners and industry peers.",
   },
   {
-    title: "Built from scratch: 24 years of founder lessons",
-    tag: "The Journey",
-    body: "The story of building, nearly losing and growing a market-leading agency. Credibility through scars, not theory. The Ferrari boss who taught you who not to be, the performance-only deal you did not want that saved you through the 2008 crash, downsizing before Christmas then rebuilding. This is the pillar that earns trust from founders and the people who might one day buy or back you.",
-    short: "The journey of building the agency over 24 years. The mistakes, the near-misses and the hard-won lessons.",
+    title: "24 years of graft",
+    tag: "The Graft",
+    body: "Twenty-four years of building, nearly losing and growing a market-leading agency from scratch. Not theory. Scars. The Ferrari boss who showed you exactly who not to be. The performance-only deal in Gibraltar that you hated but that kept the lights on through the 2008 crash. Downsizing before Christmas, then rebuilding. When you told a room of agency owners you had been at it for 24 years, most of them looked like you had just told them you climbed Everest in your lunch break. This is the pillar that earns trust from founders, fellow leaders and the people who might one day back you.",
+    short: "The story of building the agency over 24 years. The mistakes, the near-misses, the hard-won lessons and the scars that come with graft.",
     audience: "Founders, agency owners and potential acquirers or investors. It also deepens your authority with marketing leaders.",
   },
   {
-    title: "It's all about the people",
-    tag: "The Operator",
-    body: "The reality of leading 75 to 80 people across three continents. Hiring, culture and the calls that never make the highlight reel. People are 80% of your success and 80% of your failure, hiring Louise on attitude alone, leading through humour, and the values of fairness and enjoyment that sometimes cost you. This is the operator and the human behind the title.",
-    short: "The day-to-day of running the business and leading people. Hiring, culture and the lessons that come with it.",
+    title: "People, people, people",
+    tag: "The Gaffer",
+    body: "The reality of leading 75 to 80 people across three continents, and everything that comes with it. People are 80% of your success and 80% of your failure, and you have lived that truth in every direction. Hiring Louise from a barbecue on nothing more than attitude, 23 years later she is your Global Services Director with shares in the business. Leading through humour. Fairness and enjoyment as values that sometimes cost you. The calls that never make the highlight reel. This is the operator and the human behind the title.",
+    short: "The day-to-day of leading people. Hiring, culture and the calls that never make the highlight reel. The real stuff, not the managed version.",
     audience: "Your team and future talent, fellow leaders and founders. It also reassures potential buyers.",
   },
   {
-    title: "The man behind the agency",
-    tag: "The Human",
-    body: "You off the clock, the texture that makes the other three land. A London lad and a Man Utd fan since the age of six, coaching an U16 girls football team, the golf convert, and what happy and freedom actually mean to you. People follow people, so this is the trust-builder that stops you reading as a faceless CEO.",
-    short: "You off the clock. Football, family, golf and what really matters to you. The human glue that ties it all together.",
+    title: "Neil: the man, the myth, the legend",
+    tag: "Off the Clock",
+    body: "You off the clock, the texture that makes the other three land. A London lad, a copper's son, a Man Utd fan since the age of six. Coaching an U16 girls football team. The golf convert who got the bug and now plays three times a week. Three kids, a Geordie wife and a very clear sense of what freedom actually means to you. People follow people, not agencies. This is the connective tissue that stops you reading as a faceless CEO and makes everything else you put out feel human.",
+    short: "You off the clock. Football, family, golf and what actually matters to you. The human glue that ties it all together.",
     audience: "Everyone. This is the connective tissue across all your audiences.",
   },
 ];
 
-// ─── TODO LIST ───────────────────────────────────────────────────────────────
-// Empty until after Session 2 (messaging & positioning). First todos will be:
-// finalise LinkedIn headline + About, write first post. Keep in sync with lib/todos.ts.
-
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [];
-
-// ─── POSITIONING ─────────────────────────────────────────────────────────────
-// Filled in at Session 2. Pillars (above) render regardless; this is the
-// statement, differentiators and audiences, locked on 23 June.
 
 const POSITIONING: {
   headline: string;
@@ -102,10 +87,31 @@ const POSITIONING: {
 const HEADLINES: { label: string; text: string; note: string }[] = [];
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [];
 const MESSAGING: { title: string; body: string }[] = [];
-const RECOMMENDATIONS: { title: string; body: string }[] = [];
-const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [];
 
-// ─── SESSIONS ────────────────────────────────────────────────────────────────
+const RECOMMENDATIONS: { title: string; body: string }[] = [
+  {
+    title: "This process is going to do more for you than you think",
+    body: "You said you don't quite know what you want to build after Silverbean, and that is completely fine. But here is what I have seen again and again: the process of building your personal brand, of articulating your stories, your values and your point of view, has a funny way of bringing that into focus. Think of it as therapy without the awkward silences. You will come out of this six months with far more clarity about the next chapter than you went in with. For a lot of people at your stage, that turns out to be the main benefit.",
+  },
+  {
+    title: "Watch the jargon, even with the suits",
+    body: "Your audience is senior marketing decision-makers, the CMOs and brand leaders at ecommerce businesses. But here is the thing: many of them checked out of affiliate when it had a dodgy reputation, and words like 'channel', 'incrementality' and 'publisher mix' mean something very different depending on who you are talking to. Write for someone who is smart and commercially sharp but not steeped in your world. Plain English is not dumbing it down. It is how you earn the attention of people who have been burned by jargon before and have learned to ignore it.",
+  },
+  {
+    title: "Capture the hand grenade moments. Every single one.",
+    body: "Your best content is going to come from things that happen in the meeting room, on a client call, at a conference. The moment where you say something and the room goes quiet. The stat that stops a CMO in their tracks. The reframe that saves a client account. Those moments happen every week and they disappear unless you capture them. Voice note it immediately, then WhatsApp it to me. Thirty seconds is enough. You already named them yourself. Those are the posts that build reputations.",
+  },
+  {
+    title: "Your contrarian views are a competitive advantage, not a liability",
+    body: "You are full of genuinely valuable contrarian views on this industry, and that is the most brandable thing about you. Most agency CEOs play it safe, smile at conferences and say nothing interesting. You see things clearly, call them plainly, and you are willing to say the thing most people only think. That is rare at your level, and we are going to use it carefully and diplomatically, because the blue-chip clients are watching, but we are absolutely going to use it. In this industry, vanilla is the enemy, and you are already the opposite.",
+  },
+  {
+    title: "The danger zone: month two and three",
+    body: "I will always be straight with you about this one. The most common reason founders stop posting is not lack of ideas or time. It is posting for six or eight weeks, getting decent engagement, then hitting a quieter fortnight and thinking 'what is the point.' LinkedIn rewards consistency over months, not sprints. The algorithm is basically Ferguson: put the work in during pre-season and the results show up later. Month two and three is the danger zone, when the novelty has worn off and the traction has not fully arrived yet. If you are ever tempted to go quiet, message me first. That is exactly what I am here for.",
+  },
+];
+
+const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [];
 
 const SESSIONS: {
   number: number;
@@ -121,24 +127,22 @@ const SESSIONS: {
     date: "16 June 2026",
     title: "Blueprint call. Getting under the skin of who you are.",
     summary:
-      "Our 90 minute blueprint, and a brilliant first session. We went deep on your story, from a London copper's son who moved north for a Geordie wife, to building a market-leading performance partnerships agency over 24 years. The stories that become content came thick and fast: the wild boss and the Ferrari moment that pushed you to start your own thing at 25, the performance-only deal in Gibraltar that ended up saving the company through the 2008 crash, and hiring Louise from a barbecue with the line 'do you know how to use Google'. We landed your three values, progression, fairness and enjoyment, and the belief that runs through everything, that people are 80% of your success and 80% of your failure. The big realisation: you are not an angry contrarian, but you hold a lot of genuinely contrarian views about the industry, and that is exactly what we build the brand on. Your audience is the senior marketing decision-maker, so the language has to be plain and commercial, not affiliate jargon. Next week we turn all of this into your messaging and positioning.",
+      "Our 90 minute blueprint, and a brilliant first session. We went deep on your story, from a London copper's son who moved north for a Geordie wife, to building a market-leading performance partnerships agency over 24 years. The stories that become content came thick and fast: the wild boss and the Ferrari moment that pushed you to start your own thing at 25, the performance-only deal in Gibraltar that ended up saving the company through the 2008 crash, and hiring Louise from a barbecue with the line 'do you know how to use Google'. We landed your three values, progression, fairness and enjoyment, and the belief that runs through everything, that people are 80% of your success and 80% of your failure. The big realisation: you are not an angry contrarian, but you hold a lot of genuinely valuable contrarian views about this industry, and that is exactly what we build the brand on. Your audience is the senior marketing decision-maker, so the language has to be plain and commercial, not affiliate jargon. Next week we turn all of this into your messaging and positioning.",
     insights: [
-      "You are not angry, but you are full of contrarian views. That edge is the most brandable thing you have.",
+      "You are full of genuinely valuable contrarian views. Not anger, just clarity. That edge is the most brandable thing you have.",
       "Your authority comes from 24 years of scars, not theory. Lead with the stories only you can tell.",
-      "Your audience is the senior marketing leader, not the affiliate manager. The language has to change to match.",
-      "You are comfortable posting. The only real barrier is sitting down and doing it consistently.",
+      "Your audience is the senior marketing leader, not the affiliate manager. The language has to match.",
+      "You are comfortable posting, no real topics off-limits. The main risk is not starting, it is going quiet in month two or three when the traction is still building. That is the danger zone and we are going to watch it together.",
     ],
     agreed: [
       "Ben to draft your content pillars, positioning, headline and About section for Session 2.",
-      "You to start capturing 'hand grenade' moments and insights as voice notes, and WhatsApp them to Ben.",
+      "You to start capturing hand grenade moments and insights as voice notes, and WhatsApp them to Ben.",
       "Be more conscious of the conversations where you are making a difference.",
       "Next session booked, Tuesday 23 June at 10am, messaging and positioning.",
     ],
     nextSession: "Session 2 · Tuesday 23 June 2026, 10am — messaging & positioning",
   },
 ];
-
-// ─── GOALS ───────────────────────────────────────────────────────────────────
 
 const GOALS = {
   short: [
@@ -154,7 +158,19 @@ const GOALS = {
   ],
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
+const STARTING_LINE = {
+  now: [
+    "Posting on LinkedIn: not at all, zero posts so far",
+    "On LinkedIn every day, but only reading",
+    "Comfortable to post, no real topics off-limits",
+    "The only barrier is sitting down and doing it consistently",
+  ],
+  aim: [
+    "Show up consistently with a clear point of view, two hours a week",
+    "Be seen by senior marketing leaders as someone worth listening to",
+    "A measurable sales benefit for Silverbean within 12 months",
+  ],
+};
 
 function PlaceholderTab({ label, color }: { label: string; color: string }) {
   return (
@@ -166,7 +182,6 @@ function PlaceholderTab({ label, color }: { label: string; color: string }) {
   );
 }
 
-// Pillar card, used in both Brand Assets (full) and Content Ideas (short).
 function PillarCard({ pillar, index, mode }: { pillar: typeof NR_PILLARS[number]; index: number; mode: "full" | "short" }) {
   const pc = PILLAR_COLORS[index % PILLAR_COLORS.length];
   return (
@@ -245,11 +260,11 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <EmailOptIn slug={slug} accentColor={color} />
             <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} animateIn />
 
-            {/* A note from Ben — personal */}
+            {/* A note from Ben */}
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Right then Neil, welcome to your dashboard. This is home base for the next six months, and it grows with you after every session. Everything in here comes from your own words on our calls, so treat it as a working document, not a polished deck. Start in Brand Assets and have a proper look at the four content pillars I have pulled out for you. They are your north star, the territories we want you known for. Our next session is the messaging and positioning one, where we turn all those stories into how you actually sound. If anything in here does not feel like you, tell me. That is the whole point.
+                Welcome to your dashboard, Neil. This is home base for the next six months, and it gets richer after every session. Twenty-four years running Silverbean and you have never really told your story publicly, so this is where that changes. Everything in here comes from your own words on our calls, so treat it as a working document, not a polished deck. Start in Brand Assets and have a read through your content pillars, they are your north star. Anything that does not feel like you, tell me. And remember, every hand grenade moment between now and 23 June, voice note it immediately. Those are your first posts.
               </p>
             </div>
 
@@ -269,42 +284,13 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            {/* Your starting line — baseline to reflect against */}
-            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color, margin: "0 0 6px" }}>Your starting line · June 2026</p>
-              <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 18px" }}>A snapshot of where you are today, Neil, so we can look back in three and six months and see how far you have come.</p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <div style={{ background: "#F9F8F6", borderRadius: 6, padding: "16px 18px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Where you are now</p>
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
-                    {["Posting on LinkedIn: not at all, zero posts so far", "On LinkedIn every day, but only reading", "Comfortable to post, no real topics off-limits", "The only barrier is sitting down and doing it consistently"].map((item, i) => (
-                      <li key={i} style={{ fontSize: "0.83rem", color: "#3D3935", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
-                        <span style={{ position: "absolute", left: 0, color: color }}>–</span>{item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div style={{ background: "#F9F8F6", borderRadius: 6, padding: "16px 18px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>What we are aiming for</p>
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
-                    {["Show up consistently with a clear point of view, two hours a week", "Be seen by senior marketing leaders as someone worth listening to", "A measurable sales benefit for Silverbean within 12 months"].map((item, i) => (
-                      <li key={i} style={{ fontSize: "0.83rem", color: "#3D3935", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
-                        <span style={{ position: "absolute", left: 0, color: color }}>→</span>{item}
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ fontSize: "0.76rem", color: "#7A746E", margin: "12px 0 0" }}>Full list in the Goals tab.</p>
-                </div>
-              </div>
-            </div>
-
             {/* To-Do list */}
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 16px" }}>Your To-Do List</p>
               {todoItems.length > 0 ? (
                 <ClientTodoList items={todoItems} clientName={name} slug={slug} accentColor={color} onTabLink={setActiveTab} />
               ) : (
-                <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>Your first to-dos land after our next session on Tuesday 23 June. For now, have a read through your pillars in Brand Assets and your goals. Nothing else to do yet.</p>
+                <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>Your first to-dos land after our next session on Tuesday 23 June. Until then, have a read through your pillars in Brand Assets and check out your goals. Literally nothing else to do. For once.</p>
               )}
             </div>
 
@@ -313,7 +299,15 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What's in this dashboard</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
-                  {["Your four content pillars, the territories we want you known for", "Positioning, headline and About section, finalised in Session 2", "Content ideas with direction, added as we go", "Milestone tracker, your 6-month journey", "Ben's recommendations after each session", "Your goals, short and long term"].map((item, i) => (
+                  {[
+                    "Your four content pillars, the territories we want you known for",
+                    "Positioning, headline and About section, all in Brand Assets",
+                    "Content ideas with direction, added as we go",
+                    "Milestone tracker, your 6-month journey",
+                    "Ben's recommendations from every session",
+                    "Your goals, short and long term",
+                    "A record of every session, and where you started",
+                  ].map((item, i) => (
                     <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
                       <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
                     </li>
@@ -323,7 +317,13 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 22px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 10px" }}>What this is (and isn't)</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
-                  {["A working document, not a polished presentation", "Everything grounded in your own words and stories", "Something we review together, not handed over and filed", "Not a script. It is scaffolding. You write in your own voice.", "Living. It gets updated after every session."].map((item, i) => (
+                  {[
+                    "A working document, not a polished presentation",
+                    "Everything grounded in your own words and stories",
+                    "Something we review together, not handed over and filed",
+                    "Not a script. It is scaffolding. You write in your own voice.",
+                    "Living. It gets updated after every session.",
+                  ].map((item, i) => (
                     <li key={i} style={{ fontSize: "0.84rem", color: "#7A746E", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
                       <span style={{ position: "absolute", left: 0, color: "#9CA3AF" }}>–</span>{item}
                     </li>
@@ -336,179 +336,41 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
-        {/* ── MILESTONES ── */}
-        {activeTab === "milestones" && (
-          <MilestoneTracker slug={slug} color={color} />
-        )}
-
-        {/* ── BRAND ASSETS ── */}
-        {activeTab === "brand" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, margin: "0 0 4px" }}>Your Brand Foundation</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 28px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
-
-            {/* North-star blurb */}
-            <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 24 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Your content pillars · your north star</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>These aren't set in stone, Neil. They are general guidance, the north star for your content, not a rulebook. Not every post has to sit inside one, and the best ones often blend two. They are here to keep your voice coherent, so everything you put out adds up to a single, recognisable point of view over time.</p>
-            </div>
-
-            {/* Pillars — full version */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14, marginBottom: 28 }}>
-              {NR_PILLARS.map((p, i) => (
-                <PillarCard key={i} pillar={p} index={i} mode="full" />
-              ))}
-            </div>
-
-            {/* Positioning — locked Session 2 */}
-            {POSITIONING.headline ? (
-              <div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
-                  <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
-                </div>
-                {POSITIONING.differentiators.length > 0 && (
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>What makes you different</p>
-                    {POSITIONING.differentiators.map((d, i) => (
-                      <div key={i} style={{ display: "flex", gap: 12, marginBottom: 10 }}>
-                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{d}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {POSITIONING.audiences.length > 0 && (
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
-                    {POSITIONING.audiences.map((a, i) => (
-                      <div key={i} style={{ marginBottom: 16 }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 4px" }}>{a.label}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {MESSAGING.length > 0 && (
-                  <>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
-                    {MESSAGING.map((m, i) => (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
-                        <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
-                      </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            ) : (
-              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Coming next: positioning, headline & About</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your positioning statement, LinkedIn headline and About section get locked in at our messaging session on Tuesday 23 June. They will land here, and in the Headlines and About tabs, straight after.</p>
-              </div>
-            )}
-            <CommentBox clientName={name} tabName="Brand Assets" slug={slug} />
-          </div>
-        )}
-
-        {/* ── HEADLINES ── */}
-        {activeTab === "headlines" && (
-          <div>
-            {HEADLINES.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn Headline Options</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Headlines</h2>
-                {HEADLINES.map((h, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{h.label}</p>
-                    <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
-                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
-                  </div>
-                ))}
-              </div>
-            ) : <PlaceholderTab label="Headlines" color={color} />}
-            <CommentBox clientName={name} tabName="Headlines" slug={slug} />
-          </div>
-        )}
-
-        {/* ── ABOUT ── */}
-        {activeTab === "about" && (
-          <div>
-            {ABOUT_VERSIONS.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>LinkedIn About Section</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>About Section</h2>
-                {ABOUT_VERSIONS.map((v, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{v.label}</p>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
-                    <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
-                  </div>
-                ))}
-              </div>
-            ) : <PlaceholderTab label="About Section" color={color} />}
-            <CommentBox clientName={name} tabName="About Section" slug={slug} />
-          </div>
-        )}
-
-        {/* ── CONTENT IDEAS ── */}
-        {activeTab === "content" && (
-          <div>
-            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Content Strategy</p>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 24px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-
-            {/* North-star blurb — set the scene */}
-            <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 24 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Start here · your content pillars</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>A quick reminder before the ideas land, Neil. These four pillars are your north star, not set in stone. When you are not sure what to post, come back to this page, pick a pillar, and start from there. The full breakdown of each one lives in Brand Assets.</p>
-            </div>
-
-            {/* Pillars — short version */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14, marginBottom: 28 }}>
-              {NR_PILLARS.map((p, i) => (
-                <PillarCard key={i} pillar={p} index={i} mode="short" />
-              ))}
-            </div>
-
-            {CONTENT_IDEAS.length > 0 ? (
-              CONTENT_IDEAS.map((idea, i) => (
-                <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
-              ))
-            ) : (
-              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Post ideas coming soon</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Specific post ideas, hooks and angles get added here as we go, starting after your messaging session. For now, the pillars above set the direction.</p>
-              </div>
-            )}
-            <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
-          </div>
-        )}
-
-        {/* ── RECOMMENDATIONS ── */}
-        {activeTab === "recommendations" && (
-          <div>
-            {RECOMMENDATIONS.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>From Ben</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 32px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
-                {RECOMMENDATIONS.map((r, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
-                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0, whiteSpace: "pre-wrap" }}>{r.body}</p>
-                  </div>
-                ))}
-              </div>
-            ) : <PlaceholderTab label="Ben's Recommendations" color={color} />}
-            <CommentBox clientName={name} tabName="Recommendations" slug={slug} />
-          </div>
-        )}
-
         {/* ── SESSIONS ── */}
         {activeTab === "sessions" && (
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, margin: "0 0 6px" }}>Your Journey</p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 36px" }}>A running record of what we have covered, what shifted, and what was decided. Your whole journey, in one place.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>A running record of what we have covered, what shifted, and what was decided. Your whole journey, in one place.</p>
+
+            {/* Your starting line */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 36 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color, margin: "0 0 6px" }}>Your starting line · June 2026</p>
+              <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 18px" }}>A snapshot of where you are today, Neil, so we can look back in three and six months and see how far you have come.</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div style={{ background: "#F9F8F6", borderRadius: 6, padding: "16px 18px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>Where you are now</p>
+                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
+                    {STARTING_LINE.now.map((item, i) => (
+                      <li key={i} style={{ fontSize: "0.83rem", color: "#3D3935", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
+                        <span style={{ position: "absolute", left: 0, color: color }}>–</span>{item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div style={{ background: "#F9F8F6", borderRadius: 6, padding: "16px 18px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 10px" }}>What we are aiming for</p>
+                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
+                    {STARTING_LINE.aim.map((item, i) => (
+                      <li key={i} style={{ fontSize: "0.83rem", color: "#3D3935", paddingLeft: 14, position: "relative", lineHeight: 1.5 }}>
+                        <span style={{ position: "absolute", left: 0, color: color }}>→</span>{item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p style={{ fontSize: "0.76rem", color: "#7A746E", margin: "12px 0 0" }}>Full list in the Goals tab.</p>
+                </div>
+              </div>
+            </div>
 
             {SESSIONS.length === 0 ? (
               <PlaceholderTab label="Sessions" color={color} />
@@ -566,37 +428,176 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           </div>
         )}
 
+        {/* ── MILESTONES ── */}
+        {activeTab === "milestones" && (
+          <MilestoneTracker slug={slug} color={color} />
+        )}
+
+        {/* ── BRAND ASSETS ── */}
+        {activeTab === "brand" && (
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, margin: "0 0 4px" }}>Your Brand Foundation</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 28px", letterSpacing: "-0.02em" }}>Brand Assets</h2>
+
+            <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Your content pillars · your north star</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>These aren't set in stone, Neil. They are general guidance, the north star for your content, not a rulebook. Not every post has to sit inside one, and the best ones often blend two. They are here to keep your voice coherent, so everything you put out adds up to a single, recognisable point of view over time.</p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14, marginBottom: 28 }}>
+              {NR_PILLARS.map((p, i) => (
+                <PillarCard key={i} pillar={p} index={i} mode="full" />
+              ))}
+            </div>
+
+            {POSITIONING.headline ? (
+              <div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
+                  <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
+                </div>
+                {POSITIONING.differentiators.length > 0 && (
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>What makes you different</p>
+                    {POSITIONING.differentiators.map((d, i) => (
+                      <div key={i} style={{ display: "flex", gap: 12, marginBottom: 10 }}>
+                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{d}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {POSITIONING.audiences.length > 0 && (
+                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
+                    {POSITIONING.audiences.map((a, i) => (
+                      <div key={i} style={{ marginBottom: 16 }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 4px" }}>{a.label}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {HEADLINES.length > 0 && (
+                  <div style={{ marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>LinkedIn headline options</p>
+                    {HEADLINES.map((h, i) => (
+                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{h.label}</p>
+                        <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
+                        <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {ABOUT_VERSIONS.length > 0 && (
+                  <div style={{ marginBottom: 24 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>LinkedIn About section</p>
+                    {ABOUT_VERSIONS.map((v, i) => (
+                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{v.label}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
+                        <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {MESSAGING.length > 0 && (
+                  <>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
+                    {MESSAGING.map((m, i) => (
+                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
+                        <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
+                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
+                      </div>
+                    ))}
+                  </>
+                )}
+              </div>
+            ) : (
+              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Coming next: positioning, headline & About</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your positioning statement, LinkedIn headline and About section get locked in at our messaging session on Tuesday 23 June. They will all land here, straight after.</p>
+              </div>
+            )}
+            <CommentBox clientName={name} tabName="Brand Assets" slug={slug} />
+          </div>
+        )}
+
+        {/* ── CONTENT IDEAS ── */}
+        {activeTab === "content" && (
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Content Strategy</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 24px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
+
+            <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 24 }}>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Start here · your content pillars</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>A quick reminder before the ideas land, Neil. These four pillars are your north star, not set in stone. When you are not sure what to post, come back to this page, pick a pillar, and start from there. The full breakdown of each one lives in Brand Assets.</p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14, marginBottom: 28 }}>
+              {NR_PILLARS.map((p, i) => (
+                <PillarCard key={i} pillar={p} index={i} mode="short" />
+              ))}
+            </div>
+
+            {CONTENT_IDEAS.length > 0 ? (
+              CONTENT_IDEAS.map((idea, i) => (
+                <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
+              ))
+            ) : (
+              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Post ideas coming soon</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Specific post ideas, hooks and angles get added here as we go, starting after your messaging session. For now, the pillars above set the direction.</p>
+              </div>
+            )}
+            <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
+          </div>
+        )}
+
+        {/* ── RECOMMENDATIONS ── */}
+        {activeTab === "recommendations" && (
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>From Ben</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Ben's Recommendations</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Things I wanted to say to you after our blueprint call that did not fit neatly anywhere else. Read these, and if any of them do not land, tell me.</p>
+
+            {RECOMMENDATIONS.map((r, i) => (
+              <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${color}`, borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
+                <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px" }}>{r.title}</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.75, margin: 0 }}>{r.body}</p>
+              </div>
+            ))}
+            <CommentBox clientName={name} tabName="Recommendations" slug={slug} />
+          </div>
+        )}
+
         {/* ── GOALS ── */}
         {activeTab === "goals" && (
           <div>
-            {GOALS.short.length > 0 || GOALS.long.length > 0 ? (
-              <div>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Where We're Headed</p>
-                <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Goals</h2>
-                <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Pulled from our discovery call and the blueprint. We will keep sharpening these as we go.</p>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Short-term</p>
-                    {GOALS.short.map((g, i) => (
-                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                      </div>
-                    ))}
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color, marginBottom: 8 }}>Where We're Headed</p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Goals</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 32px" }}>Pulled from our discovery call and the blueprint. We will keep sharpening these as we go.</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Short-term</p>
+                {GOALS.short.map((g, i) => (
+                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                    <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
                   </div>
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Long-term</p>
-                    {GOALS.long.map((g, i) => (
-                      <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
-                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
-            ) : <PlaceholderTab label="Goals" color={color} />}
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 16px" }}>Long-term</p>
+                {GOALS.long.map((g, i) => (
+                  <div key={i} style={{ display: "flex", gap: 10, marginBottom: 10 }}>
+                    <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{g}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <CommentBox clientName={name} tabName="Goals" slug={slug} />
           </div>
         )}
