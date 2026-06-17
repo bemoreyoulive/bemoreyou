@@ -162,19 +162,6 @@ type ContentIdea = {
 
 const AS_CONTENT_WEEK_1: ContentIdea[] = [
   {
-    hook: "I'm 18, I run a joinery business in Edinburgh, and I'm about to do something most lads my age aren't.",
-    pillar: 1,
-    pillarLabel: "Documenting the Journey",
-    effort: "Low effort, phone only",
-    format: "Talking head on your phone, vertical, in the van or on a site, wherever you are.",
-    guidance: [
-      "Say who you are in the first five seconds. 18, joinery, Edinburgh, not chasing the laptop life.",
-      "Talk it, don't script it. Hit record and say it out loud like you would to a mate.",
-      "This is your flag in the ground, so post it raw. It only needs to be real, not polished.",
-    ],
-    noEdit: true,
-  },
-  {
     hook: "Everyone my age is trying to make money from a laptop in Dubai, and I'm doing the opposite.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
@@ -189,19 +176,6 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     status: "used",
   },
   {
-    hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
-    pillar: 1,
-    pillarLabel: "Documenting the Journey",
-    effort: "Low effort, phone only",
-    format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
-    guidance: [
-      "Film yourself before you walk in. What you're looking for, how you read the house and the client.",
-      "Don't judge whether it's interesting. People love watching someone actually do the job.",
-      "Grab this now, because nothing will ever be Day 1 of this business again.",
-    ],
-    noEdit: true,
-  },
-  {
     hook: "Beach in the morning, quoting a job in the afternoon, so tell me again why I need to grind 16 hours a day.",
     pillar: 4,
     pillarLabel: "Have A Life AND A Business",
@@ -214,19 +188,6 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     ],
     noEdit: true,
     status: "partial",
-  },
-  {
-    hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
-    pillar: 2,
-    pillarLabel: "Contrarian Takes & Mini Revolution",
-    effort: "Low effort, phone only",
-    format: "Talking head in the car, straight to camera, no setup needed.",
-    guidance: [
-      "Tell it exactly how you told me on the call. Don't dress it up.",
-      "Hit the real line. I deserve more than £7.55, they fired me for asking, I took them to tribunal and won.",
-      "Close on building bigger than them and don't soften it. That's the whole video.",
-    ],
-    noEdit: true,
   },
 ];
 
@@ -245,6 +206,48 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     noEdit: true,
     status: "partial",
   },
+];
+
+const AS_CONTENT_WEEK_3: ContentIdea[] = [
+  {
+    hook: "I'm 18, I run a joinery business in Edinburgh, and I'm about to do something most lads my age aren't.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Talking head on your phone, vertical, in the van or on a site, wherever you are.",
+    guidance: [
+      "Say who you are in the first five seconds. 18, joinery, Edinburgh, not chasing the laptop life.",
+      "Talk it, don't script it. Hit record and say it out loud like you would to a mate.",
+      "This is your flag in the ground. It only needs to be real, not polished.",
+    ],
+    noEdit: true,
+  },
+  {
+    hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
+    guidance: [
+      "Film yourself before you walk in. What you're looking for, how you read the house and the client.",
+      "Don't judge whether it's interesting. People love watching someone actually do the job.",
+      "Grab this now, because nothing will ever be Day 1 of this business again.",
+    ],
+    noEdit: true,
+  },
+  {
+    hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Talking head in the car, straight to camera, no setup needed.",
+    guidance: [
+      "Tell it exactly how you told me on the call. Don't dress it up.",
+      "Hit the real line. I deserve more than £7.55, they fired me for asking, I took them to tribunal and won.",
+      "Close on building bigger than them and don't soften it. That's the whole video.",
+    ],
+    noEdit: true,
+  },
   {
     hook: "Day in the life of an 18 year old running a joinery business, and spoiler, it's not glamorous.",
     pillar: 1,
@@ -257,6 +260,9 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
       "Lean into the mundane, that's the magnet. Younger people watch this stuff for hours.",
     ],
   },
+];
+
+const AS_CONTENT_WEEK_4: ContentIdea[] = [
   {
     hook: "I had a friend doing 14 hour days on YouTube convinced he was going to be rich, and I told him in 50 years time he'd be happier he went to the beach instead.",
     pillar: 4,
@@ -417,7 +423,7 @@ function DailyWatchBox() {
 
 export default function AlexShiellDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
-  const [contentWeek, setContentWeek] = useState<"week1" | "week2">("week1");
+  const [contentWeek, setContentWeek] = useState<"week1" | "week2" | "week3" | "week4">("week1");
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
@@ -846,22 +852,38 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
-            {/* Ben's notes on first two videos */}
+            {/* Ben's notes — since Session 2 */}
             <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderLeft: "4px solid #16a34a", borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#16a34a", margin: "0 0 10px" }}>Ben's notes · First two videos</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.55, margin: "0 0 16px" }}>Sent you a voice note but wanted it here too. Two videos in and you've already got the most important thing right: the energy is real, the camera presence is strong, and you are clearly not reading from a script. That's the hardest bit and you've nailed it. A few things to sharpen as you go.</p>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#16a34a", margin: "0 0 10px" }}>Ben's notes · Since Session 2</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.55, margin: "0 0 16px" }}>Brilliant camera presence, you've clearly got that. Sent voice notes on the first batch of videos, pulling the key points in here so they don't get lost.</p>
               {[
                 {
-                  label: "Add a consistent ending.",
-                  body: "Both videos end cold. You've got the hook sorted, now give people a reason to stay. Pick one line and end every single video the same way. Something like: Drop me a follow and I'll show you my journey of how I did this. Simple, repeatable, and it turns viewers into followers instead of just passing traffic.",
+                  label: "Written hook overlay is working, keep it up.",
+                  body: "Adding the text hook at the top is exactly right. Someone watching on mute needs to know in three seconds what the video is about. You've started doing it, don't stop.",
                 },
                 {
-                  label: "Let the story do the work, not the number.",
-                  body: "Video two opens with the firing story, which is powerful, and then lands on 30k last month without a reason for the viewer to care. The revenue figure on its own reads as a brag. If you use it, tie it straight to the journey: here's what happened next, and I'm going to show you how. Give them the next chapter, not just the headline.",
+                  label: "Film in daylight when you can.",
+                  body: "Last batch was a bit dark. No rush to film at night. Do them in your own time, in the light, when you're ready.",
                 },
                 {
-                  label: "Pick up a lapel mic.",
-                  body: "Minor and not urgent, but the audio is slightly echoey. Get a Hollyland lapel mic, same one Ben uses. The cheap ones are worse than nothing.",
+                  label: "Don't post back to back.",
+                  body: "If you record two or three in one session, stagger them. They compete against each other in the algorithm. Save the second one, post it another day. Instagram lets you schedule posts, which is the easiest way to manage it.",
+                },
+                {
+                  label: "Quality over quantity.",
+                  body: "One strong video is worth more than two average ones. Don't feel like you need to be posting every day. Post when it's good.",
+                },
+                {
+                  label: "Ideas in your Notes app, send them to Ben.",
+                  body: "Running content ideas in your phone notes as they come to you is exactly the right habit. Send them across in rough form, doesn't need to be polished, and Ben will develop them and get them up on the dashboard.",
+                },
+                {
+                  label: "Ending CTA, still not there.",
+                  body: "Every video still ends cold. Pick one line and close every single video with it. Something like: Drop me a follow and I'll show you my journey of how I did this. Simple, repeatable, turns viewers into followers.",
+                },
+                {
+                  label: "If you delete a video, wait a week before re-uploading.",
+                  body: "The algorithm needs time to reset. Re-upload too soon and you'll get the same result. Big creators repost old content after a few months, that's the right gap.",
                 },
               ].map((tip, i, arr) => (
                 <div key={i} style={{ display: "flex", gap: 10, marginBottom: i < arr.length - 1 ? 12 : 0 }}>
@@ -899,16 +921,15 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
             <DailyWatchBox />
 
-            {/* What the next two weeks are about — Ben's note to Alex */}
+            {/* What the content is building toward */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the next two weeks are about</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Three jobs over the next two weeks mate, and every idea below serves at least one of them.</p>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the content is building toward</p>
+              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Every idea in the tabs below serves at least one of these three jobs. Keep them in mind when you pick what to film.</p>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
                 {[
                   "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
-                  "Document from Day 1. The footage you grab now is the most valuable you will ever shoot, because Day 1 of this business only happens once.",
-                  "Test the four pillars. We find out which one fires hardest with your audience, so by Session 3 we know your shape and stop guessing.",
-                  "Keep it simple. Film in the van on your phone between jobs, no editing, post one idea each weekday. Can't log in on site? Screenshot this page so you can refer back during the day.",
+                  "Document the journey. The footage you grab now is the most valuable you will ever shoot, because early days only happen once.",
+                  "Balance the rants. The contrarian content is working. Now balance it with the personal story and the lifestyle proof. People need to know who you are, not just what you think.",
                 ].map((point, i) => (
                   <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, paddingLeft: 18, position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, color: AS_COLOR, fontWeight: 700 }}>→</span>{point}
@@ -918,10 +939,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             </div>
 
             {/* Week sub-tabs */}
-            <div style={{ display: "flex", gap: 0, borderBottom: "1px solid #E0DBD3", marginBottom: 24 }}>
+            <div style={{ display: "flex", gap: 0, borderBottom: "1px solid #E0DBD3", marginBottom: 24, flexWrap: "wrap" }}>
               {[
                 { id: "week1" as const, label: "Week One", count: AS_CONTENT_WEEK_1.length },
                 { id: "week2" as const, label: "Week Two", count: AS_CONTENT_WEEK_2.length },
+                { id: "week3" as const, label: "Week Three", count: AS_CONTENT_WEEK_3.length },
+                { id: "week4" as const, label: "Week Four", count: AS_CONTENT_WEEK_4.length },
               ].map(w => (
                 <button
                   key={w.id}
@@ -946,12 +969,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
 
             {/* Active week ideas */}
             {(() => {
-              const ideas = contentWeek === "week1" ? AS_CONTENT_WEEK_1 : AS_CONTENT_WEEK_2;
+              const ideas = contentWeek === "week1" ? AS_CONTENT_WEEK_1 : contentWeek === "week2" ? AS_CONTENT_WEEK_2 : contentWeek === "week3" ? AS_CONTENT_WEEK_3 : AS_CONTENT_WEEK_4;
               const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
               return (
                 <div style={{ marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{ideas.length} ideas for {contentWeek === "week1" ? "week one" : "week two"}</p>
-                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record.</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{ideas.length} ideas{contentWeek === "week3" || contentWeek === "week4" ? " · coming up" : ""}</p>
+                  <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 20px" }}>{contentWeek === "week3" || contentWeek === "week4" ? "Ideas moved here as the queue fills up. More will land after each session." : "One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record."}</p>
                   {ideas.map((idea, i) => {
                     const pc = pillarColors[idea.pillar - 1];
                     return (
