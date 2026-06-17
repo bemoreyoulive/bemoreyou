@@ -169,7 +169,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     format: "Rant in the car, your proven format that's already pulled 100k plus views before.",
     guidance: [
       "Open cold: 'Everyone my age is trying to make money from a laptop in Dubai, and I'm doing the opposite.' That's your first line. No warmup.",
-      "Name the enemy directly. Dropshipping, SMMA, Dubai crypto bros. Don't say 'some people' — say exactly who they are.",
+      "Name the enemy directly. Dropshipping, SMMA, Dubai crypto bros. Don't say 'some people', say exactly who they are.",
       "Close on: 'And I'm still early.' Say it and stop.",
     ],
     noEdit: true,
@@ -183,7 +183,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     format: "Lifestyle B roll plus one line to camera, or just B roll with one line of text on screen.",
     guidance: [
       "Don't open with words. Open with footage. Beach clip first, tools second. The contrast makes the argument without you saying a word.",
-      "The enemy is the 16-hours-a-day merchant. Don't name them — the footage does it for you.",
+      "The enemy is the 16-hours-a-day merchant. Don't name them. The footage does it for you.",
       "You already landed the close in one of your videos: 'There's no point having money if you've got nothing to show for it.' That's the line. Use it.",
     ],
     noEdit: true,
@@ -217,7 +217,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     format: "Talking head on your phone, vertical, in the van or on a site, wherever you are.",
     guidance: [
       "Open on: 'I'm 18. I run a joinery company in Edinburgh. And I'm about to show you something most lads my age aren't doing.' First line, no warmup.",
-      "This video has no enemy. It's entirely about you. The contrast with the laptop crowd is implicit — don't say it out loud.",
+      "This video has no enemy. It's entirely about you. The contrast with the laptop crowd is implicit, so don't say it out loud.",
       "This is the one video that needs the CTA. Close on: 'Drop me a follow and I'll show you exactly how this goes.'",
     ],
     noEdit: true,
@@ -230,7 +230,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
     guidance: [
       "Film it outside the property, before you go in: 'About to walk into this one. Here's what I'm actually thinking.' Real time is the whole point.",
-      "Anchor it with something specific — the type of work, the rough price, something about the house or the client. Vague is forgettable.",
+      "Anchor it with something specific: the type of work, the rough price, something about the house or the client. Vague is forgettable.",
       "Close in the van straight after. One line on how it went. Don't over-explain it.",
     ],
     noEdit: true,
@@ -256,7 +256,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     format: "Day in the life format, multiple short clips through the day stitched together, phone only, raw.",
     guidance: [
       "Film one clip every couple of hours throughout the day. Driving to site, picking up materials, eating in the van, chasing an invoice at 9pm. Don't plan it, just grab it.",
-      "The anchor is whatever is genuinely unglamorous that day — a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better.",
+      "The anchor is whatever is genuinely unglamorous that day: a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better.",
       "Close on: 'That's the job. I wouldn't swap it.' No lecture, just that.",
     ],
   },
@@ -284,7 +284,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     format: "Talking head, short story arc, two minutes max.",
     guidance: [
       "Open cold: '30 quotes. Zero wins. Most lads would've packed it in.' State it, don't explain it. Let it breathe.",
-      "The specific shift is the language — 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
+      "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
       "Close on: 'One change. That's all it took.' Don't oversell it.",
     ],
     noEdit: true,
@@ -297,7 +297,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     format: "Snap the van or screen record their Instagram page. Film with your face in the corner, floating head style, pointing at specific elements as you go through it. No script, just react out loud.",
     guidance: [
       "Open pointed at the subject, not the camera: 'Right, I'm going to show you what's killing this tradesman's business.' Then go straight in.",
-      "Anchor it in specifics. Not 'bad branding' — 'no logo, number scrawled in marker, Instagram with 3 posts from 2019.' That's what makes people share it.",
+      "Anchor it in specifics. Not 'bad branding'. Think 'no logo, number scrawled in marker, Instagram with 3 posts from 2019.' That's what makes people share it.",
       "Close on: 'This is 2026. There's no excuse for this.' You've already said versions of that line. It fits perfectly here.",
     ],
   },
