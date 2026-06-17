@@ -158,6 +158,7 @@ type ContentIdea = {
   guidance: string[];
   noEdit?: boolean;
   status?: "used" | "partial";
+  filmsWithMate?: boolean;
 };
 
 const AS_CONTENT_WEEK_1: ContentIdea[] = [
@@ -205,23 +206,11 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     ],
     noEdit: true,
     status: "partial",
+    filmsWithMate: true,
   },
 ];
 
 const AS_CONTENT_WEEK_3: ContentIdea[] = [
-  {
-    hook: "I'm 18, I run a joinery business in Edinburgh, and I'm about to do something most lads my age aren't.",
-    pillar: 1,
-    pillarLabel: "Documenting the Journey",
-    effort: "Low effort, phone only",
-    format: "Talking head on your phone, vertical, in the van or on a site, wherever you are.",
-    guidance: [
-      "Open on: 'I'm 18. I run a joinery company in Edinburgh. And I'm about to show you something most lads my age aren't doing.' First line, no warmup.",
-      "This video has no enemy. It's entirely about you. The contrast with the laptop crowd is implicit, so don't say it out loud.",
-      "This is the one video that needs the CTA. Close on: 'Drop me a follow and I'll show you exactly how this goes.'",
-    ],
-    noEdit: true,
-  },
   {
     hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
     pillar: 1,
@@ -234,6 +223,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
       "Close in the van straight after. One line on how it went. Don't over-explain it.",
     ],
     noEdit: true,
+    filmsWithMate: true,
   },
   {
     hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
@@ -259,6 +249,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
       "The anchor is whatever is genuinely unglamorous that day: a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better.",
       "Close on: 'That's the job. I wouldn't swap it.' No lecture, just that.",
     ],
+    filmsWithMate: true,
   },
 ];
 
@@ -970,6 +961,9 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                           <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A746E", background: "#F5F1EC", padding: "4px 10px", borderRadius: 3 }}>{idea.effort}</span>
                           {idea.noEdit && (
                             <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#16a34a", background: "#16a34a15", padding: "4px 10px", borderRadius: 3 }}>No editing needed</span>
+                          )}
+                          {idea.filmsWithMate && (
+                            <span style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff", background: "#2563eb", padding: "5px 12px", borderRadius: 4, boxShadow: "0 2px 6px rgba(37,99,235,0.35)" }}>🎥 Film with a mate</span>
                           )}
                           {idea.status === "used" && (
                             <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#15803d", background: "#dcfce7", border: "1px solid #bbf7d0", padding: "4px 10px", borderRadius: 3 }}>Posted</span>
