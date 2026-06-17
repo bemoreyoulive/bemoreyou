@@ -829,52 +829,37 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
             <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
 
-            {/* Ben's notes — since Session 2 */}
-            <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderLeft: "4px solid #16a34a", borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#16a34a", margin: "0 0 10px" }}>Ben's notes · Since Session 2</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.55, margin: "0 0 16px" }}>Brilliant camera presence, you've clearly got that. Sent voice notes on the first batch of videos, pulling the key points in here so they don't get lost.</p>
+            {/* Before you post checklist */}
+            <div style={{ background: "#1C1C1C", borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Before you post</p>
+              <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.4, margin: "0 0 20px" }}>Four questions. Answer them before you hit publish, every time.</p>
               {[
                 {
-                  label: "Written hook overlay is working, keep it up.",
-                  body: "Adding the text hook at the top is exactly right. Someone watching on mute needs to know in three seconds what the video is about. You've started doing it, don't stop.",
+                  num: "1",
+                  label: "Identity stamp.",
+                  body: "Did you open with who you are? Something like: \"I'm Alex, 18, running a joinery company in Edinburgh, and...\" Five seconds at the start, every video. Without it every video could be posted by anyone. You're not famous enough yet to skip this. That comes later.",
                 },
                 {
-                  label: "Film in daylight when you can.",
-                  body: "Last batch was a bit dark. No rush to film at night. Do them in your own time, in the light, when you're ready.",
+                  num: "2",
+                  label: "Close with the CTA.",
+                  body: "Did you end with the follow line? Pick one and commit to it: \"Follow me and I'll show you how this goes.\" Same line, every video. Not improvised, not optional.",
                 },
                 {
-                  label: "Don't post back to back.",
-                  body: "If you record two or three in one session, stagger them. They compete against each other in the algorithm. Save the second one, post it another day. Instagram lets you schedule posts, which is the easiest way to manage it.",
+                  num: "3",
+                  label: "Variety check.",
+                  body: "Are your last two videos both rants? Then this one needs to be something different. A story, something from your actual week, something from the job. Rants get views. Variety gets followers.",
                 },
                 {
-                  label: "Quality over quantity.",
-                  body: "One strong video is worth more than two average ones. Don't feel like you need to be posting every day. Post when it's good.",
+                  num: "4",
+                  label: "Overlay text.",
+                  body: "Is there a written hook at the top? Someone watching on mute should know in three seconds what this video is about.",
                 },
-                {
-                  label: "Ideas in your Notes app, send them to Ben.",
-                  body: "Running content ideas in your phone notes as they come to you is exactly the right habit. Send them across in rough form, doesn't need to be polished, and Ben will develop them and get them up on the dashboard.",
-                },
-                {
-                  label: "Ending CTA, still not there.",
-                  body: "Every video still ends cold. Pick one line and close every single video with it. Something like: Drop me a follow and I'll show you my journey of how I did this. Simple, repeatable, turns viewers into followers.",
-                },
-                {
-                  label: "If you delete a video, wait a week before re-uploading.",
-                  body: "The algorithm needs time to reset. Re-upload too soon and you'll get the same result. Big creators repost old content after a few months, that's the right gap.",
-                },
-              ].map((tip, i, arr) => (
-                <div key={i} style={{ display: "flex", gap: 10, marginBottom: i < arr.length - 1 ? 12 : 0 }}>
-                  <span style={{ color: "#16a34a", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>→</span>
-                  <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.55, margin: 0 }}><strong>{tip.label}</strong> {tip.body}</p>
+              ].map((item, i, arr) => (
+                <div key={i} style={{ display: "flex", gap: 14, marginBottom: i < arr.length - 1 ? 16 : 0, alignItems: "flex-start" }}>
+                  <span style={{ fontSize: "0.78rem", fontWeight: 800, color: AS_COLOR, flexShrink: 0, width: 20, paddingTop: 1 }}>{item.num}</span>
+                  <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.6, margin: 0 }}><strong style={{ color: "#fff" }}>{item.label}</strong> {item.body}</p>
                 </div>
               ))}
-            </div>
-
-            {/* Why these pillars exist — high-level framing */}
-            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "18px 22px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why I've built these pillars for you</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>Content pillars are the north star of your personal brand. They're the few, fixed territories you want to be known for, the ones your audience comes to associate with you over time. Without pillars, you post reactively, audience attention fragments, and the brand never compounds. With them, every video, however different on the surface, adds up to a single, recognisable point of view.</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Four pillars confirmed in Session 2. Each one is anchored to something you already live: the £7.55 firing, the SMMA past, the trades industry, the lifestyle proof. They're a working framework, not a rulebook. If something doesn't feel right, tell Ben.</p>
             </div>
 
             {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
