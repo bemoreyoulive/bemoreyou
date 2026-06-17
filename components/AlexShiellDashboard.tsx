@@ -23,10 +23,8 @@ const AS_NEXT_MOVE = "Before Session 3 (17 June, 6pm). Post and live your life b
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as2-7", text: "No video yet this week and it's Wednesday. Consistency is the whole game at this stage. Get one out today or tomorrow, it doesn't need to be perfect.", owner: "Alex" },
   { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: Drop me a follow and I'll show you my journey of how I did this. You've got the hook nailed, you just need to give them the next chapter.", owner: "Alex" },
   { id: "as2-6", text: "Pick up a Hollyland lapel mic. The audio on the first videos is slightly echoey, and the cheap ones are worse than nothing. Ben uses Hollyland, worth getting the same.", owner: "Alex" },
-  { id: "as2-2", text: "Come to Session 3 ready to share one moment from the past two weeks that felt completely natural and genuine. Something that happened at work, at the college pitch, or just in life. That is where the best content comes from.", owner: "Alex" },
   { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up.", owner: "Alex" },
   { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to.", owner: "Alex" },
 ];
@@ -159,6 +157,7 @@ type ContentIdea = {
   format: string;
   guidance: string[];
   noEdit?: boolean;
+  status?: "used" | "partial";
 };
 
 const AS_CONTENT_WEEK_1: ContentIdea[] = [
@@ -187,6 +186,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
       "One take, high energy, no pauses. Get straight on to the next point and post it.",
     ],
     noEdit: true,
+    status: "used",
   },
   {
     hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
@@ -213,6 +213,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
       "Post three of these for every one rant. People trust the proof more than the preach.",
     ],
     noEdit: true,
+    status: "partial",
   },
   {
     hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
@@ -242,6 +243,7 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
       "This is the warm up to the bigger apprentice exploitation rants, so plant the seed here.",
     ],
     noEdit: true,
+    status: "partial",
   },
   {
     hook: "Day in the life of an 18 year old running a joinery business, and spoiler, it's not glamorous.",
@@ -293,6 +295,19 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
       "Shoot the first one this week. Over time people send you vans and it runs itself.",
     ],
     noEdit: true,
+  },
+  {
+    hook: "I'm going to review this tradesman's van and social media so you can see exactly what's killing their business.",
+    pillar: 3,
+    pillarLabel: "Calling Out What's Broken",
+    effort: "A bit of setup",
+    format: "Screen record their socials or take a photo of their van. Film yourself with your face in the corner pointing at the specific problems as you go through it. No script, just react.",
+    guidance: [
+      "Find a real local tradesman or building company with a weak van, dodgy logo, or terrible Instagram. Don't use anyone you know personally.",
+      "Put your face in the bottom corner like a reaction video. Point at the problems as you talk through them. People watch this format for hours.",
+      "Cover the van, the branding, the social media, and tell them exactly what you'd change. Keep it honest, not nasty.",
+      "End with something like: this is 2026, there's no excuse. The tradesmen doing it right are cleaning up.",
+    ],
   },
 ];
 
@@ -935,7 +950,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
               return (
                 <div style={{ marginBottom: 28 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{contentWeek === "week1" ? "Five ideas for week one" : "Five ideas for week two"}</p>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>{ideas.length} ideas for {contentWeek === "week1" ? "week one" : "week two"}</p>
                   <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 20px" }}>One idea per weekday, posted in any order. Most are quick phone jobs you can film between sites, so don't overthink the production, just hit record.</p>
                   {ideas.map((idea, i) => {
                     const pc = pillarColors[idea.pillar - 1];
@@ -946,6 +961,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                           <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A746E", background: "#F5F1EC", padding: "4px 10px", borderRadius: 3 }}>{idea.effort}</span>
                           {idea.noEdit && (
                             <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#16a34a", background: "#16a34a15", padding: "4px 10px", borderRadius: 3 }}>No editing needed</span>
+                          )}
+                          {idea.status === "used" && (
+                            <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#15803d", background: "#dcfce7", border: "1px solid #bbf7d0", padding: "4px 10px", borderRadius: 3 }}>Posted</span>
+                          )}
+                          {idea.status === "partial" && (
+                            <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#b45309", background: "#fef3c7", border: "1px solid #fde68a", padding: "4px 10px", borderRadius: 3 }}>Angle covered</span>
                           )}
                         </div>
                         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Idea {i + 1} · Hook</p>
