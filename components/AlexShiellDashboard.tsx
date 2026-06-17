@@ -274,7 +274,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head, short story arc, two minutes max.",
     guidance: [
-      "Open cold: '30 quotes. Zero wins. Most lads would've packed it in.' State it, don't explain it. Let it breathe.",
+      "Open cold: '30 quotes. Zero wins. Most lads would've packed it in.' State it and don't explain it. Pause. Then continue.",
       "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
       "Close on: 'One change. That's all it took.' Don't oversell it.",
     ],
