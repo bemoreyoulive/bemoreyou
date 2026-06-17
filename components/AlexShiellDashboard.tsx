@@ -851,8 +851,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 },
                 {
                   num: "4",
-                  label: "Overlay text.",
-                  body: "Is there a written hook at the top? Someone watching on mute should know in three seconds what this video is about.",
+                  label: "Overlay text and captions.",
+                  body: "Is there a written hook at the top? Someone watching on mute should know in three seconds what this video is about. Add captions too — most people watch without sound, and TikTok's auto-captions are fine if you don't have anything better.",
                 },
               ].map((item, i, arr) => (
                 <div key={i} style={{ display: "flex", gap: 14, marginBottom: i < arr.length - 1 ? 16 : 0, alignItems: "flex-start" }}>
