@@ -261,7 +261,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     noEdit: true,
   },
   {
-    hook: "Day in the life of an 18 year old running a joinery business, and spoiler, it's not glamorous.",
+    hook: "Day in the life of an 18 year old running a joinery business, and it's mostly graft no one sees.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "A bit of setup",
