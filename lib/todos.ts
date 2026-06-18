@@ -52,10 +52,11 @@ const clientTodos: Record<string, TodoDef[]> = {
   // finalise LinkedIn headline + About, write first post.
   "neil-robbins": [],
   "alex-shiell": [
-    { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: Drop me a follow and I'll show you my journey of how I did this. You've got the hook nailed, you just need to give them the next chapter." },
-    { id: "as2-6", text: "Pick up a Hollyland lapel mic. The audio on the first videos is slightly echoey, and the cheap ones are worse than nothing. Ben uses Hollyland, worth getting the same." },
-    { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up." },
-    { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to." },
+    { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it." },
+    { id: "as3-2", text: "Send Ben your raw content ideas from your phone notes. Unpolished is exactly what is needed. That is the whole point." },
+    { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed." },
+    { id: "as3-4", text: "Film the going away piece before 1 July. Something like: I'm going away for four weeks at 18 and here is why I am not worried about the business. That is a strong piece of content before you leave." },
+    { id: "as3-5", text: "Van review exercise. Ben will send you a photo of a trades van. Record a voice note reaction and send it back. Ben will screen record it and send it to you to post on TikTok and Instagram Story." },
   ],
   // Archived June 1, 2026 — Solve People into administration, Brett declaring bankruptcy. Kept for record; not used by any live dashboard.
   "solve-people": [

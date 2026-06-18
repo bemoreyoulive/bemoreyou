@@ -18,15 +18,16 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 3 (17 June, 6pm). Post and live your life between now and then. Come to the call ready to tell me what's happened, what's gone well, what's gone wrong, and any stories from the sites or the college. That's the whole session.";
+const AS_NEXT_MOVE = "Before Session 4 (Tuesday 30 June, 6pm). Last session before the holiday. Come with your raw content notes from your phone, an update on the calm video, and anything from the sites worth talking about. We'll use the time to set you up properly before you leave.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
-  { id: "as2-5", text: "End every video with a consistent line that gives people a reason to follow the journey. Something like: Drop me a follow and I'll show you my journey of how I did this. You've got the hook nailed, you just need to give them the next chapter.", owner: "Alex" },
-  { id: "as2-6", text: "Pick up a Hollyland lapel mic. The audio on the first videos is slightly echoey, and the cheap ones are worse than nothing. Ben uses Hollyland, worth getting the same.", owner: "Alex" },
-  { id: "as2-3", text: "Delete the old Instagram highlights and posts that don't align with the new brand. Clean slate before the content starts going up.", owner: "Alex" },
-  { id: "as2-4", text: "Look up Ahmet Karakaya on TikTok and spend 20 minutes watching his content. You'll see straight away what kind of stuff to react to.", owner: "Alex" },
+  { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it.", owner: "Alex" },
+  { id: "as3-2", text: "Send Ben your raw content ideas from your phone notes. Unpolished is exactly what is needed. That is the whole point.", owner: "Alex" },
+  { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed.", owner: "Alex" },
+  { id: "as3-4", text: "Film the going away piece before 1 July. Something like: I'm going away for four weeks at 18 and here is why I am not worried about the business. That is a strong piece of content before you leave.", owner: "Alex" },
+  { id: "as3-5", text: "Van review exercise. Ben will send you a photo of a trades van. Record a voice note reaction and send it back. Ben will screen record it and send it to you to post on TikTok and Instagram Story.", owner: "Alex" },
 ];
 
 // SESSIONS
@@ -77,6 +78,27 @@ const AS_SESSIONS: {
       "Session 3 is fully reactive. Come with stories from the past two weeks and we work with whatever's there.",
     ],
     nextSession: "Session 3. Wednesday 17 June 2026 at 6pm. Fully reactive. No fixed agenda. You bring the stories, we work with what's there.",
+  },
+  {
+    number: 3,
+    date: "17 June 2026",
+    title: "Content review. Variety, virality, and your real voice.",
+    summary: "67 minutes. You came in after a long day on site, biggest job you've had, working toward finishing it by 24 June. You'd fired Tyler a few weeks earlier and the knock-on from that — a delayed project and an apology to a client — is exactly the kind of thing that sounds bad but is actually a masterclass in accountability. You handled it the right way.\n\nSince Session 2 you'd posted 8 or 9 videos. All rant format. Views coming through, troll activity in the comments — which is a healthy sign, it means the content is reaching people who have an opinion about it. Two videos stood out clearly above the rest: the don't go to uni piece and the joinery course one. Both outperformed because they spoke directly to topics a large existing audience already cares about. That is the template.\n\nThe main coaching point was variety. Every single video posted since Session 2 has been a rant. The rant format works and I am not asking you to stop it. But sustainable audience growth needs a mix. Behind the scenes, storytelling, the occasional candid moment where people get to know you properly. Views bring people to your page. The other stuff makes them stay.\n\nYou asked several times in this session how to get the video that goes viral. The honest answer is: make more videos. There is no golden nugget anyone can hand you. Make 100 videos and five or ten of them will break through. Until you hit 100 you do not have enough data to draw conclusions, and the algorithm rewards volume and consistency before it rewards any individual piece of content.\n\nA good conversation came up around your phone notes. You had been writing content ideas down but not sending them over because you thought they were too raw for Ben to understand. That is exactly the wrong call. Raw thoughts are better source material than polished scripts. Send them regardless.\n\nNew content directions confirmed: the old school mates piece, done in a calm storytelling mode rather than rant mode. A piece on tradespeople not showing up to jobs and why the industry just accepts it. The van review series, floating head over a van photo, short voice note reaction, posted on TikTok and Instagram Story.\n\nChallenge before Session 4: one calmer, more candid video. Not a rant. Eyes to camera, tell a story. The old school mates piece is the right subject for it.",
+    insights: [
+      "Your two best-performing videos both spoke to a massive existing audience: people weighing up trades versus university, people who have considered short courses. Find more topics like those.",
+      "All rants, no variety. Views come in, followers do not stick around at the same rate. The ratio changes when the content type changes.",
+      "Virality is a by-product of volume and an authentic voice. It is not a goal you can aim at directly.",
+      "Your early calm videos performed well. That mode is in you. It works. Use it.",
+      "Your raw content ideas from your phone are better starting material than anything written from scratch. Stop filtering them before sending.",
+    ],
+    takeaways: [
+      "One calm, candid video before Session 4. Old school mates piece. Storytelling mode, not rant mode.",
+      "Send Ben the raw notes from your phone. Unpolished is fine.",
+      "Post to drafts first. Do not film and upload at 9 or 10pm.",
+      "Van review exercise confirmed. Ben sends photo, you send voice note, Ben screen records for TikTok and Instagram Story.",
+      "Film the going away piece before 1 July.",
+    ],
+    nextSession: "Session 4. Tuesday 30 June 2026 at 6pm. Last session before the holiday. Setting you up properly before you leave.",
   },
 ];
 
@@ -324,6 +346,10 @@ const AS_RECS: { title: string; body: string }[] = [
     title: "On authenticity. This is the ongoing work.",
     body: "Something big came up in Session 2 and it will keep coming up. Right now you're in the phase where you're watching other people, borrowing their energy, trying different versions of yourself on for size. That's completely normal at 18, and honestly it's part of how you find your voice.\n\nThe tension I'm watching is this. You know instinctively that the gurus are fake, the LARPing is hollow, and that trust evaporates the moment people smell a performance. You told me as much yourself. And yet you're still being pulled that way. This isn't because you're dishonest. It's because you haven't yet found the crowd that validates the real you. So you're borrowing validation from people who already have it.\n\nWhen the first DM lands from someone who genuinely got something from your content, that pull will start to loosen. Until then, the job is to keep posting as you, not a polished version of someone else. The brand only works if it's actually you in it.",
   },
+  {
+    title: "On virality. The question you are asking is not the right one yet.",
+    body: "You asked me several times in Session 3 how to get the video that goes viral. I want to give you a proper answer, because the short version I gave on the call is only half of it.\n\nThe short version: make more videos. Virality is a numbers game. The more content you create, the higher the probability that something breaks through. Make 100 videos before you ask why nothing has gone viral. That is true and I stand by it.\n\nBut there is a longer version worth knowing.\n\nYou are already getting thousands of views. You are already getting troll comments, which is a sign of reach. If you hit 50,000 views tomorrow, would that feel like enough? Genuinely think about that. Because if the answer is no, it is worth understanding what you are actually chasing, because you might be chasing something that does not have a finish line.\n\nAnd here is the harder truth: virality for the wrong reasons, or built on a voice that is not really yours, is not a win. It is a trap. The wrong crowd floods in. People who followed you because you reminded them of someone they already follow, not because you said something that actually landed with them. You cannot monetise them. You cannot build anything with them. And you are exhausted trying to maintain a version of yourself you invented for the camera. The account grows and feels hollow, because it is.\n\nThe accounts that build something real, something that lasts and eventually pays, get there through two things: consistency and an authentic voice. Not a stage persona. Not an act. The actual person.\n\nYou have already got both in you. Your early calm videos worked precisely because they were unguarded. The rant energy gets views because it is energetic and direct, and I am not asking you to drop it. But it works best when it is rooted in something you actually feel, not a format you are performing to fit an idea of what gets views.\n\nSo the answer to your question is this. Stop asking when the viral video is coming. Start asking whether the person on camera is actually you. When those two things line up, the numbers stop feeling like the point.",
+  },
 ];
 
 // GOALS
@@ -417,7 +443,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AS_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AS</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Alex Shiell</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Shiell Joinery · Session 3 of 13</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Shiell Joinery · Session 4 of 13</p>
             </div>
           </div>
         </div>
@@ -470,7 +496,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(auto-fit, minmax(180px, 1fr))", gap: isMobile ? 8 : 14, marginBottom: isMobile ? 16 : 28 }}>
               {[
-                { label: "Sessions", value: "2 of 13", sub: "Next: Wed 17 June, 6pm" },
+                { label: "Sessions", value: "3 of 13", sub: "Next: Tue 30 June, 6pm" },
                 { label: "Programme length", value: "6 months", sub: "May to November 2026" },
                 { label: "Platform", value: "Instagram & TikTok", sub: "@thewolfofjoinery" },
                 { label: "Content live", value: "Starting this week", sub: "First video incoming" },
