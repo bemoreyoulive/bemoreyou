@@ -234,6 +234,46 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
 
 const AS_CONTENT_WEEK_3: ContentIdea[] = [
   {
+    hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
+    guidance: [
+      "Film it outside the property before you go in: 'About to walk into this one, here's what I'm actually thinking.' Filming it in the moment is what makes it work.",
+      "Anchor it with something specific: the type of work, the rough price, something about the house or the client. Anything vague gets forgotten. The behind the scenes peek is what pulls in anyone curious whether they could do this themselves.",
+      "Close in the van straight after, with one line on how it went, and leave it there.",
+    ],
+    noEdit: true,
+    filmsWithMate: true,
+  },
+  {
+    hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Talking head in the car, straight to camera, no setup needed.",
+    guidance: [
+      "Open cold: 'Last year I got fired for asking for a pay rise from £7.55 an hour.' Drop it without any setup and pause for a second before you carry on.",
+      "Use the exact figure, £7.55, rather than rounding it to 'nearly £8', because the precise number is what makes people feel it, and it lands with anyone who has ever been underpaid or undervalued at work.",
+      "Close on your own line: 'Become bigger than the company that fired you.' Then end it there.",
+    ],
+    noEdit: true,
+  },
+  {
+    hook: "Day in the life of an 18 year old running a joinery business, and spoiler, it's not glamorous.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "A bit of setup",
+    format: "Day in the life format, multiple short clips through the day stitched together, phone only, raw.",
+    guidance: [
+      "Film one clip every couple of hours throughout the day. Driving to site, picking up materials, eating in the van, chasing an invoice at 9pm. Don't plan it, just grab it.",
+      "The anchor is whatever is genuinely unglamorous that day: a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better, and the honesty is what pulls in everyone wondering if the trades are for them.",
+      "Close on: 'That's the job, and I wouldn't swap it.' Leave it there without adding a lecture.",
+    ],
+    filmsWithMate: true,
+  },
+  {
     hook: "It's funny who suddenly takes an interest in you the moment you start doing well.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
@@ -259,6 +299,9 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     ],
     noEdit: true,
   },
+];
+
+const AS_CONTENT_WEEK_4: ContentIdea[] = [
   {
     hook: "Half the comments call my business imaginary, so here's the difference between turnover and profit that none of them understand.",
     pillar: 2,
@@ -271,9 +314,32 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
       "This resonates because loads of people genuinely don't know the difference between turnover and profit, so you are teaching while you reply. Close on something dry and unbothered rather than angry. The calmer you are, the more it stings.",
     ],
   },
-];
-
-const AS_CONTENT_WEEK_4: ContentIdea[] = [
+  {
+    hook: "I had a friend doing 14 hour days on YouTube convinced he was going to be rich, and I told him in 50 years time he'd be happier he went to the beach instead.",
+    pillar: 4,
+    pillarLabel: "Have A Life AND A Business",
+    effort: "Low effort, phone only",
+    format: "Talking head in the car, story format, conversational.",
+    guidance: [
+      "Open on the friend, not the lesson: 'I had a mate doing 14-hour days on YouTube, convinced he was going to be rich.' Set the scene before you make the point.",
+      "The specific details are the 14 hours and the two years, so use those numbers. Where is he now? Whatever the answer is, that's your close. It resonates with everyone grinding away chasing online riches and wondering if it's actually worth it.",
+      "You already landed the line in another video: 'There's no point having money if you've got nothing to show for it.' It fits here too.",
+    ],
+    noEdit: true,
+  },
+  {
+    hook: "30 quotes in a row, won zero of them, and here's what changed everything.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Talking head, short story arc, two minutes max.",
+    guidance: [
+      "Open cold: '30 quotes, zero wins, and most lads would've packed it in.' State it plainly and move into the story without explaining it.",
+      "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away, and it speaks to anyone getting knocked back when they are starting out.",
+      "Close on: 'One change, that's all it took.' Leave it there without overselling it.",
+    ],
+    noEdit: true,
+  },
   {
     hook: "Here's why I'm letting my business slow right down for a month at 18, and why I'm not worried about it.",
     pillar: 4,
