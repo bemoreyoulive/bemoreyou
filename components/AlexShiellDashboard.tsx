@@ -336,7 +336,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     guidance: [
       "Open cold: 'I did 30 quotes in a row and won zero of them. Most lads would've packed it in by then.' Say it plainly and move into the story without explaining it.",
       "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away, and it speaks to anyone getting knocked back when they are starting out.",
-      "Close on: 'One change, that's all it took.' Leave it there without overselling it.",
+      "Close on the actual shift: 'I started talking to people like I'd already got the job.' That's the real change, so don't dress it up as one magic trick.",
     ],
     noEdit: true,
   },
