@@ -294,7 +294,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     format: "Talking head, your proven ranty style, in the van or on site. This one suits the energy.",
     guidance: [
       "Open straight in, no warmup: 'A bloke didn't turn up to my site today. And the worst bit isn't that he didn't show. It's that the whole industry just shrugs and accepts it like it's normal.'",
-      "Anchor it in the actual excuse you got off the chancer: the wife rear-ended, the kid crying down the phone, the lot. The real story beats a general moan, and it hits two crowds at once, every customer who's been let down by a tradesman and every grafter who's had to cover for a no-show.",
+      "Anchor it in what a no-show actually costs you: a day's work gone, a client you then have to apologise to, you ending up doing the job yourself. That's what makes it land, and it hits two crowds at once, every customer who's been let down by a tradesman and every grafter who's had to cover for someone.",
       "Keep the enemy the 'that's just how it is' attitude, not a type of person. Close on the reframe: I keep a list of who actually turns up, and the no-shows don't get a call again, and maybe if more of us did that these chancers would knock it off.",
     ],
     noEdit: true,
