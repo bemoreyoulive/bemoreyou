@@ -248,14 +248,14 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     filmsWithMate: true,
   },
   {
-    hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
+    hook: "Last year I got fired for refusing a pay cut to £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
     format: "Talking head in the car, straight to camera, no setup needed.",
     guidance: [
-      "Open cold: 'Last year I got binned for asking for a pay rise from £7.55 an hour.' Drop it with no setup and give it a beat before you carry on.",
-      "Use the exact figure, £7.55, not 'nearly £8', because the precise number is what makes people feel it, and it lands with anyone who's ever been underpaid and treated like a mug at work.",
+      "Open cold: 'Last year I got binned for refusing to drop to £7.55 an hour.' Drop it with no setup and give it a beat before you carry on.",
+      "Lean on the detail that you were on £8 and they tried to cut you to £7.55. The exact figures are what make people feel it, and it lands with anyone who's ever been underpaid and treated like a mug at work.",
       "Close on your own line: 'Become bigger than the company that fired you.' Then end it there.",
     ],
     noEdit: true,
