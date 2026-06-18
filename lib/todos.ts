@@ -52,6 +52,7 @@ const clientTodos: Record<string, TodoDef[]> = {
   // finalise LinkedIn headline + About, write first post.
   "neil-robbins": [],
   "alex-shiell": [
+    { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },
     { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it." },
     { id: "as3-2", text: "Send Ben your raw content ideas from your phone notes. Unpolished is exactly what is needed. That is the whole point." },
     { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed." },

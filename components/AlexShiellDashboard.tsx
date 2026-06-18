@@ -22,7 +22,8 @@ const AS_NEXT_MOVE = "Before Session 4 (Tuesday 30 June, 6pm). Last session befo
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
-const AS_TODOS: { id: string; text: string; subtext?: string; owner: string }[] = [
+const AS_TODOS: { id: string; text: string; subtext?: string; owner: string; tabLink?: { label: string; tab: string } }[] = [
+  { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak.", owner: "Alex", tabLink: { label: "Open Ben's Recommendations", tab: "recommendations" } },
   { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it.", owner: "Alex" },
   { id: "as3-2", text: "Send Ben your raw content ideas from your phone notes. Unpolished is exactly what is needed. That is the whole point.", owner: "Alex" },
   { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed.", owner: "Alex" },
@@ -482,7 +483,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
   useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
 
-  const todoItems = AS_TODOS.map(t => ({ id: t.id, text: t.text, owner: "Alex" }));
+  const todoItems = AS_TODOS.map(t => ({ id: t.id, text: t.text, owner: "Alex", subtext: t.subtext, tabLink: t.tabLink }));
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F1EC" }}>
