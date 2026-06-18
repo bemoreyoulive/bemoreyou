@@ -47,9 +47,9 @@ const AS_SESSIONS: {
     title: "Blueprint Call. Laying the foundation.",
     summary: "Blueprint call, 103 minutes. You came in pre-packaged: opinions, voice, on-camera confidence, content already at 100k+ views. We pulled out stories you'd never told and locked the mission: document the journey, start a mini revolution, TikTok first.",
     insights: [
-      "You came pre-packaged. Opinions, voice, on-camera confidence already there. That's rare. Our job is focus, not creation.",
-      "You're chasing clout, not money. At 18 you intuitively get the long game. That's the unlock.",
-      "The £7.55 firing is the single biggest fuel source for everything you're building. Don't lose it.",
+      "You came in with the opinions, the voice and the on-camera confidence already there, which most people take months to build. The job is focus, not creation.",
+      "You're chasing clout over money, and at 18 you already understand the long game, which is the thing most people don't get until much later.",
+      "The £7.55 firing is the single biggest fuel source for everything you're building. Keep coming back to it.",
       "Documenting the journey beats lived experiences for you because you're 18. The journey IS the content.",
       "Your rant format already works (100k to 150k views with no positioning). Don't change the format. Just point it at the right thing.",
     ],
@@ -67,14 +67,14 @@ const AS_SESSIONS: {
     summary: "Seventy minutes, straight off the tools. You'd sacked Tyler for going behind your back, and the trades college said yes to your free business class. We locked The Wolf of Joinery, the three emoji framework, and the bio direction.",
     insights: [
       "Instagram snapshot, 4 June 2026. @thewolfofjoinery, 48 followers, 0 posts, blue tick paid, bio: 18, Edinburgh, modernising the trades industry, ai, systems, growth. One line to sharpen before Session 3: the ai, systems, growth bit reads startup-generic and doesn't sound like you.",
-      "You moved overnight. Username changed, photo updated, blue tick sorted before the next morning. Zero friction.",
+      "You changed the username, updated the photo and sorted the blue tick before the next morning, off your own back.",
       "The trades college is worth taking seriously. It is a presenting school, a coaching proof of concept, and a monthly source of real tradespeople to talk to and make content about.",
       "The LARPING temptation is real. You floated a fake revenue stat for the bio and Ben pushed back. That kind of move makes you the person you're calling out.",
       "The three emoji system works because it gives you a daily filter. Any moment is either a beer, a van, or a phone. You don't need a content calendar, you need those three.",
     ],
     takeaways: [
       "Four new to-dos in place. First videos this week, a proper profile photo, clean the old IG, review Ahmet Karakaya.",
-      "The brand is @thewolfofjoinery across both platforms. Own it.",
+      "The brand is @thewolfofjoinery across TikTok and Instagram.",
       "Session 3 is fully reactive. Come with stories from the past two weeks and we work with whatever's there.",
     ],
     nextSession: "Session 3. Wednesday 17 June 2026 at 6pm. Fully reactive. No fixed agenda. You bring the stories, we work with what's there.",
@@ -193,7 +193,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     guidance: [
       "Open cold: 'Everyone my age is trying to make money from a laptop in Dubai, and I'm doing the opposite.' That's your first line. No warmup.",
       "Name the enemy directly. Dropshipping, SMMA, Dubai crypto bros. Don't say 'some people', say exactly who they are.",
-      "Close on: 'And I'm still early.' Say it and stop.",
+      "Close on: 'And I'm still early.' Then end the video there.",
     ],
     noEdit: true,
     status: "used",
@@ -205,9 +205,9 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Lifestyle B roll plus one line to camera, or just B roll with one line of text on screen.",
     guidance: [
-      "Don't open with words. Open with footage. Beach clip first, tools second. The contrast makes the argument without you saying a word.",
-      "The enemy is the 16-hours-a-day merchant. Don't name them. The footage does it for you.",
-      "You already landed the close in one of your videos: 'There's no point having money if you've got nothing to show for it.' That's the line. Use it.",
+      "Open with footage rather than words. Beach clip first, tools second, so the contrast makes the argument before you've said anything.",
+      "The enemy here is the 16-hours-a-day merchant, but you don't need to name him because the footage already does that job.",
+      "You already landed the close in one of your videos: 'There's no point having money if you've got nothing to show for it.' That line works well here.",
     ],
     noEdit: true,
     status: "partial",
@@ -222,8 +222,8 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head in the car or in the yard, straight to camera.",
     guidance: [
-      "Open on the number: '£6.40 an hour.' Not 'low wages', not 'not much money'. £6.40. Saying it out loud makes people wince, and that's the point.",
-      "The enemy is the old-school mentality: pay your dues, sweep the floors, that's how it's always been done. Describe what it was actually like. Don't lecture about it.",
+      "Open on the number itself: '£6.40 an hour.' Say the exact figure rather than 'low wages', because hearing it out loud is what makes people wince.",
+      "The enemy is the old-school mentality: pay your dues, sweep the floors, that's how it's always been done. Describe what it was actually like rather than lecturing about it.",
       "Close on the reframe: 'The trades are still run like it's 2005. That's the problem. Or the opportunity, depending on who you are.'",
     ],
     noEdit: true,
@@ -240,9 +240,9 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
     guidance: [
-      "Film it outside the property, before you go in: 'About to walk into this one. Here's what I'm actually thinking.' Real time is the whole point.",
-      "Anchor it with something specific: the type of work, the rough price, something about the house or the client. Vague is forgettable.",
-      "Close in the van straight after. One line on how it went. Don't over-explain it.",
+      "Film it outside the property before you go in: 'About to walk into this one, here's what I'm actually thinking.' Filming it in the moment is what makes it work.",
+      "Anchor it with something specific: the type of work, the rough price, something about the house or the client. Anything vague gets forgotten.",
+      "Close in the van straight after, with one line on how it went, and leave it there.",
     ],
     noEdit: true,
     filmsWithMate: true,
@@ -254,9 +254,9 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head in the car, straight to camera, no setup needed.",
     guidance: [
-      "Open cold: 'Last year I got fired for asking for a pay rise from £7.55 an hour.' Drop it without context. Let it land before you say another word.",
-      "The number is £7.55. Not 'nearly £8', not 'not much'. £7.55 exactly. That's what makes people feel it.",
-      "Close on your own line: 'Become bigger than the company that fired you.' Say it and stop.",
+      "Open cold: 'Last year I got fired for asking for a pay rise from £7.55 an hour.' Drop it without any setup and pause for a second before you carry on.",
+      "Use the exact figure, £7.55, rather than rounding it to 'nearly £8', because the precise number is what makes people feel it.",
+      "Close on your own line: 'Become bigger than the company that fired you.' Then end it there.",
     ],
     noEdit: true,
   },
@@ -269,7 +269,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     guidance: [
       "Film one clip every couple of hours throughout the day. Driving to site, picking up materials, eating in the van, chasing an invoice at 9pm. Don't plan it, just grab it.",
       "The anchor is whatever is genuinely unglamorous that day: a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better.",
-      "Close on: 'That's the job. I wouldn't swap it.' No lecture, just that.",
+      "Close on: 'That's the job, and I wouldn't swap it.' Leave it there without adding a lecture.",
     ],
     filmsWithMate: true,
   },
@@ -284,8 +284,8 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     format: "Talking head in the car, story format, conversational.",
     guidance: [
       "Open on the friend, not the lesson: 'I had a mate doing 14-hour days on YouTube, convinced he was going to be rich.' Set the scene before you make the point.",
-      "The specific details are 14 hours and two years. Use those numbers. What is he doing now? Whatever the answer is, that's your close.",
-      "You already landed the line in another video: 'There's no point having money if you've got nothing to show for it.' Use it here.",
+      "The specific details are the 14 hours and the two years, so use those numbers. Where is he now? Whatever the answer is, that's your close.",
+      "You already landed the line in another video: 'There's no point having money if you've got nothing to show for it.' It fits here too.",
     ],
     noEdit: true,
   },
@@ -296,9 +296,9 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head, short story arc, two minutes max.",
     guidance: [
-      "Open cold: '30 quotes. Zero wins. Most lads would've packed it in.' State it and don't explain it. Pause. Then continue.",
+      "Open cold: '30 quotes, zero wins, and most lads would've packed it in.' State it plainly and move into the story without explaining it.",
       "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
-      "Close on: 'One change. That's all it took.' Don't oversell it.",
+      "Close on: 'One change, that's all it took.' Leave it there without overselling it.",
     ],
     noEdit: true,
   },
@@ -310,7 +310,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     format: "Snap the van or screen record their Instagram page. Film with your face in the corner, floating head style, pointing at specific elements as you go through it. No script, just react out loud.",
     guidance: [
       "Open pointed at the subject, not the camera: 'Right, I'm going to show you what's killing this tradesman's business.' Then go straight in.",
-      "Anchor it in specifics. Not 'bad branding'. Think 'no logo, number scrawled in marker, Instagram with 3 posts from 2019.' That's what makes people share it.",
+      "Anchor it in specifics rather than 'bad branding': think 'no logo, number scrawled in marker, Instagram with 3 posts from 2019.' The specifics are what get it shared.",
       "Close on: 'This is 2026. There's no excuse for this.' You've already said versions of that line. It fits perfectly here.",
     ],
   },
@@ -600,7 +600,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Confidence on camera</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High. Zero barrier. Already comfortable filming solo phone videos in the car.</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High. Already comfortable filming solo phone videos in the car with no hesitation.</p>
                 </div>
                 <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
                   <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Mindset</p>
