@@ -222,7 +222,7 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head in the car or in the yard, straight to camera.",
     guidance: [
-      "Open on the number itself: '£6.40 an hour.' Say the exact figure, none of this 'low wages' fluff, because hearing it out loud makes people wince.",
+      "Open with the line and lean on the number: 'The two shittest months of my life, I spent sweeping floors for £6.40 an hour.' Say the exact figure, none of this 'low wages' fluff, because hearing it out loud makes people wince.",
       "The enemy is the old-school mentality, the pay your dues, sweep the floors, get taken the piss out of, that's just how it's always been done crowd. Tell them what it was actually like instead of lecturing. This lands with every apprentice getting shafted and every young lad weighing up the trades.",
       "Close on the reframe: 'The trades are still run like it's 2005. That's the problem, or the opportunity, depending what you're made of.'",
     ],
@@ -280,7 +280,7 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "This is the one to try calm and reflective, not ranty. Talking head, eyes to camera, filmed somewhere still rather than mid-rant in the car. Use it to show the quieter side of you.",
     guidance: [
-      "Open calm and straight to camera: 'It's funny how, the second you start building something, people who never gave you the time of day suddenly reappear.' Keep that quieter tone the whole way through.",
+      "Open calm and straight to camera: 'It's funny how, the moment you start doing well for yourself, people who never gave you the time of day suddenly take an interest.' Keep that quieter tone the whole way through.",
       "Keep it general, never about specific people by name. The less you name names, the more people see themselves in it: someone who left school early, came out of a dead-end job, got written off. That is exactly why it resonates, everyone has a version of this.",
       "Use your own line from our call: 'I was irrelevant back then, so why am I suddenly relevant now?' Close on something calm and high ground, like the fact they are still thinking about you tells you you are doing something right. No bitterness, no name calling, that is what makes it land.",
     ],
@@ -334,7 +334,7 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head, short story arc, two minutes max.",
     guidance: [
-      "Open cold: '30 quotes, zero wins, and most lads would've packed it in.' State it plainly and move into the story without explaining it.",
+      "Open cold: 'I did 30 quotes in a row and won zero of them. Most lads would've packed it in by then.' Say it plainly and move into the story without explaining it.",
       "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away, and it speaks to anyone getting knocked back when they are starting out.",
       "Close on: 'One change, that's all it took.' Leave it there without overselling it.",
     ],
