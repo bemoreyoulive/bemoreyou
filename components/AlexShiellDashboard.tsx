@@ -303,15 +303,15 @@ const AS_CONTENT_WEEK_3: ContentIdea[] = [
 
 const AS_CONTENT_WEEK_4: ContentIdea[] = [
   {
-    hook: "Half the comments call my business imaginary, so here's the difference between turnover and profit that none of them understand.",
+    hook: "People keep saying I don't make 30k a month and my business is imaginary, so let me explain why they've got it completely wrong.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
     format: "Talking head, calm and confident, not riled up. Screenshot the comment and overlay it on the video so people can see it is real.",
     guidance: [
-      "Open by reading the comment out: 'Got another one today, what's your imaginary business called. Right, let's sort this out for the lad.' Overlay the actual screenshot so there's proof.",
-      "Don't bite, that reads as insecurity. Beat them with the technical stuff instead: the difference between turnover and profit, and why you won't name the company out of respect for your customers and subbies. You come across as the one who actually knows what he's on about, while he hasn't got a clue.",
-      "This resonates because half of them genuinely don't know turnover from profit, so you're teaching while you reply. Close dry and unbothered, not angry. The calmer you are, the more it winds them up.",
+      "Open by reading the comment out: 'Another one today, you don't make 30k a month, what's your imaginary business called.' Overlay the screenshot so there's proof, then say: right, let me explain why you think that.",
+      "Here's the link that ties it together. They call it imaginary for two reasons: you won't name the company, which you don't out of respect for your customers and subbies, and they hear 30k and assume you're claiming that as profit. So put them right. You turn over 30k, your actual profit is a fraction of that, and turnover and profit are two completely different things. That's the bit they don't understand.",
+      "This resonates because half of them genuinely don't know turnover from profit, so you're teaching real business while you put them straight. Don't bite or get reactionary, that reads as insecurity. Stay dry, take the higher ground, and let them be the ones who look like they haven't got a clue.",
     ],
   },
   {
