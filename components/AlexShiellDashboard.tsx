@@ -192,7 +192,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     format: "Rant in the car, your proven format that's already pulled 100k plus views before.",
     guidance: [
       "Open cold: 'Everyone my age is trying to make money from a laptop in Dubai, and I'm doing the opposite.' That's your first line. No warmup.",
-      "Name the enemy directly. Dropshipping, SMMA, Dubai crypto bros. Don't say 'some people', say exactly who they are.",
+      "Name the enemy directly. Dropshipping, SMMA, Dubai crypto bros. Don't say 'some people', say exactly who they are. This resonates with every young person being sold the laptop-millionaire dream, which is a massive audience.",
       "Close on: 'And I'm still early.' Then end the video there.",
     ],
     noEdit: true,
@@ -206,7 +206,7 @@ const AS_CONTENT_WEEK_1: ContentIdea[] = [
     format: "Lifestyle B roll plus one line to camera, or just B roll with one line of text on screen.",
     guidance: [
       "Open with footage rather than words. Beach clip first, tools second, so the contrast makes the argument before you've said anything.",
-      "The enemy here is the 16-hours-a-day merchant, but you don't need to name him because the footage already does that job.",
+      "The enemy here is the 16-hours-a-day merchant, but you don't need to name him because the footage already does that job. It resonates with anyone being told to grind every hour of the day, which is most of your generation right now.",
       "You already landed the close in one of your videos: 'There's no point having money if you've got nothing to show for it.' That line works well here.",
     ],
     noEdit: true,
@@ -223,7 +223,7 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
     format: "Talking head in the car or in the yard, straight to camera.",
     guidance: [
       "Open on the number itself: '£6.40 an hour.' Say the exact figure rather than 'low wages', because hearing it out loud is what makes people wince.",
-      "The enemy is the old-school mentality: pay your dues, sweep the floors, that's how it's always been done. Describe what it was actually like rather than lecturing about it.",
+      "The enemy is the old-school mentality: pay your dues, sweep the floors, that's how it's always been done. Describe what it was actually like rather than lecturing about it. This lands with every apprentice being underpaid and every young person weighing up the trades.",
       "Close on the reframe: 'The trades are still run like it's 2005. That's the problem. Or the opportunity, depending on who you are.'",
     ],
     noEdit: true,
@@ -234,84 +234,69 @@ const AS_CONTENT_WEEK_2: ContentIdea[] = [
 
 const AS_CONTENT_WEEK_3: ContentIdea[] = [
   {
-    hook: "Quoting a job today, here's what actually goes through my head when I walk through the door.",
+    hook: "It's funny who suddenly takes an interest in you the moment you start doing well.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "Low effort, phone only",
-    format: "BTS on your phone, could be selfie style outside the property or talking head in the van straight after.",
+    format: "This is the one to try calm and reflective, not ranty. Talking head, eyes to camera, filmed somewhere still rather than mid-rant in the car. Use it to show the quieter side of you.",
     guidance: [
-      "Film it outside the property before you go in: 'About to walk into this one, here's what I'm actually thinking.' Filming it in the moment is what makes it work.",
-      "Anchor it with something specific: the type of work, the rough price, something about the house or the client. Anything vague gets forgotten.",
-      "Close in the van straight after, with one line on how it went, and leave it there.",
+      "Open calm and straight to camera: 'It's funny how, the second you start building something, people who never gave you the time of day suddenly reappear.' Keep that quieter tone the whole way through.",
+      "Keep it general, never about specific people by name. The less you name names, the more people see themselves in it: someone who left school early, came out of a dead-end job, got written off. That is exactly why it resonates, everyone has a version of this.",
+      "Use your own line from our call: 'I was irrelevant back then, so why am I suddenly relevant now?' Close on something calm and high ground, like the fact they are still thinking about you tells you you are doing something right. No bitterness, no name calling, that is what makes it land.",
     ],
     noEdit: true,
-    filmsWithMate: true,
   },
   {
-    hook: "Last year I got fired for asking for a pay rise from £7.55 an hour, I took them to tribunal, won, and now I'm building a business to be bigger than them.",
+    hook: "Someone didn't turn up to my site today, and the maddest part is the whole industry just shrugs and accepts it.",
+    pillar: 3,
+    pillarLabel: "Calling Out What's Broken",
+    effort: "Low effort, phone only",
+    format: "Talking head, your proven ranty style, in the van or on site. This one suits the energy.",
+    guidance: [
+      "Open straight into it, no warmup: 'Someone didn't turn up to my site today. And the worst part isn't that he didn't turn up. It's that everyone in the trades just accepts it.'",
+      "Anchor it in the actual excuse you got: the wife rear-ended, the kid crying down the phone. The specific story beats a general moan, and it hits two big audiences at once, every customer who has been let down by a tradesperson and every tradesperson who has had to cover for one.",
+      "Keep the enemy the 'that's just how it is' mentality, not a type of person. Close on the reframe: I keep a list of who actually turns up, the rest don't get called again, and maybe if more of us did that this would stop being normal.",
+    ],
+    noEdit: true,
+  },
+  {
+    hook: "Half the comments call my business imaginary, so here's the difference between turnover and profit that none of them understand.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
-    format: "Talking head in the car, straight to camera, no setup needed.",
+    format: "Talking head, calm and confident, not riled up. Screenshot the comment and overlay it on the video so people can see it is real.",
     guidance: [
-      "Open cold: 'Last year I got fired for asking for a pay rise from £7.55 an hour.' Drop it without any setup and pause for a second before you carry on.",
-      "Use the exact figure, £7.55, rather than rounding it to 'nearly £8', because the precise number is what makes people feel it.",
-      "Close on your own line: 'Become bigger than the company that fired you.' Then end it there.",
+      "Open by reading the comment out: 'Got another one today, what's your imaginary business called. Right, let's clear this up.' Overlay the actual screenshot so there is proof.",
+      "Don't get reactionary, that reads as insecurity. Beat them with the technical stuff instead: the difference between turnover and profit, and why you won't name the company out of respect for your customers' and subcontractors' privacy. You come across as the one who actually knows what he is doing.",
+      "This resonates because loads of people genuinely don't know the difference between turnover and profit, so you are teaching while you reply. Close on something dry and unbothered rather than angry. The calmer you are, the more it stings.",
     ],
-    noEdit: true,
-  },
-  {
-    hook: "Day in the life of an 18 year old running a joinery business, and spoiler, it's not glamorous.",
-    pillar: 1,
-    pillarLabel: "Documenting the Journey",
-    effort: "A bit of setup",
-    format: "Day in the life format, multiple short clips through the day stitched together, phone only, raw.",
-    guidance: [
-      "Film one clip every couple of hours throughout the day. Driving to site, picking up materials, eating in the van, chasing an invoice at 9pm. Don't plan it, just grab it.",
-      "The anchor is whatever is genuinely unglamorous that day: a traffic jam, a client who moved the goalposts, a supplier who let you down. The more specific, the better.",
-      "Close on: 'That's the job, and I wouldn't swap it.' Leave it there without adding a lecture.",
-    ],
-    filmsWithMate: true,
   },
 ];
 
 const AS_CONTENT_WEEK_4: ContentIdea[] = [
   {
-    hook: "I had a friend doing 14 hour days on YouTube convinced he was going to be rich, and I told him in 50 years time he'd be happier he went to the beach instead.",
+    hook: "Here's why I'm letting my business slow right down for a month at 18, and why I'm not worried about it.",
     pillar: 4,
     pillarLabel: "Have A Life AND A Business",
     effort: "Low effort, phone only",
-    format: "Talking head in the car, story format, conversational.",
+    format: "Talking head, calmer reflective style. Film a quick version before you fly out, or even while you are away.",
     guidance: [
-      "Open on the friend, not the lesson: 'I had a mate doing 14-hour days on YouTube, convinced he was going to be rich.' Set the scene before you make the point.",
-      "The specific details are the 14 hours and the two years, so use those numbers. Where is he now? Whatever the answer is, that's your close.",
-      "You already landed the line in another video: 'There's no point having money if you've got nothing to show for it.' It fits here too.",
+      "Open with the shock line you liked: 'I'm about to let my business slow right down for a month.' Then immediately give them the reason to keep watching: 'and here's why I'm not worried.'",
+      "Anchor it in the truth: you have the systems and the right person set up to cover things, and the marketing you can switch back on when you are home. That is why you can step away without it falling apart.",
+      "This resonates because losing momentum is the number one fear of nearly every business owner, so you are speaking straight to them. Close on your own line from our call: when else am I going to be 18? That is why I don't buy into hustle culture, everyone needs time off.",
     ],
     noEdit: true,
   },
   {
-    hook: "30 quotes in a row, won zero of them, and here's what changed everything.",
-    pillar: 1,
-    pillarLabel: "Documenting the Journey",
-    effort: "Low effort, phone only",
-    format: "Talking head, short story arc, two minutes max.",
-    guidance: [
-      "Open cold: '30 quotes, zero wins, and most lads would've packed it in.' State it plainly and move into the story without explaining it.",
-      "The specific shift is the language: 'We can' became 'We will', 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
-      "Close on: 'One change, that's all it took.' Leave it there without overselling it.",
-    ],
-    noEdit: true,
-  },
-  {
-    hook: "I'm reviewing this tradesman's van and their socials so you can see exactly what's holding them back.",
+    hook: "I'm reviewing tradesmen's vans and socials so you can see exactly what's costing them work.",
     pillar: 3,
     pillarLabel: "Calling Out What's Broken",
     effort: "A bit of setup",
-    format: "Snap the van or screen record their Instagram page. Film with your face in the corner, floating head style, pointing at specific elements as you go through it. No script, just react out loud.",
+    format: "Floating head style: a photo of the van or a screen recording of their Instagram in the background, your face in the corner pointing at what is wrong. Film it in one take and react out loud. I will send you van photos to react to.",
     guidance: [
-      "Open pointed at the subject, not the camera: 'Right, I'm going to show you what's killing this tradesman's business.' Then go straight in.",
-      "Anchor it in specifics rather than 'bad branding': think 'no logo, number scrawled in marker, Instagram with 3 posts from 2019.' The specifics are what get it shared.",
-      "Close on: 'This is 2026. There's no excuse for this.' You've already said versions of that line. It fits perfectly here.",
+      "Open pointed at the van, not the camera: 'Right, let me show you everything wrong with this tradesman's van.' Then go straight in, no intro.",
+      "Anchor it in specifics, not 'bad branding': no logo, a number scrawled in marker, an Instagram with three posts from 2019. This resonates because every tradesperson with a scruffy van feels called out and watches to the end, and every customer recognises exactly the kind of van you mean.",
+      "Close on your own line: this is 2026, there's no excuse for this. Keep it punchy but not cruel, you are calling out the work, not the person.",
     ],
   },
 ];
@@ -924,6 +909,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Why your two best videos worked */}
+            <div style={{ background: "#1C1C1C", borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why your two best videos worked</p>
+              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.6, margin: 0 }}>Your two strongest videos were the don't-go-to-uni one and the two-week joinery course one. They both did well for the same reason: they talk about something a huge number of people already care about and have a personal stake in. The second someone sees the word uni, anyone at uni or thinking about going stops and watches. Same with the course, thousands of people are weighing one up or have an opinion on them. So when you pick a topic, ask yourself who already cares about this and how big is that group. The bigger and more personal that audience, the harder the video works. Every idea below is built with that in mind.</p>
             </div>
 
             {/* Week sub-tabs */}
