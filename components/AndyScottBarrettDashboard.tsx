@@ -11,18 +11,14 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Before Canada (this week): write and schedule 3 posts. 1 — the investor/financial story post (drafted in the session, just format it in LinkedIn). 2 — Edinburgh half marathon (include a photo, talk about the heat and the city). 3 — reflection on starting the business (dictate it on a walk, paste into Claude, format). Use the dictation workflow for all of them. Drop the 'Finance Simplified' intro — just write the post.";
+const ASB_NEXT_MOVE = "Block one hour a week for content and protect it. Dictate each post like you're telling a mate in the pub, then format it in LinkedIn. Hold yourself to the hour, post it as it is, and chase new clients on the front foot.";
 
 const asbTodos = [
-  { id: "s6-1", text: "PRIORITY — before Canada: format and post the investor/financial story post we drafted together on the call. New line for every full stop. Ellipses for continuation. Capitalise NUMBERS. End with: 'If you're reading this thinking I need to sort this out — drop me a message. I'll buy you a coffee.'", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "s6-2", text: "PRIORITY — before Canada: write and schedule the Edinburgh half marathon post. Include a photo. Talk about the heat, the city, doing it despite the injury. Personal and relatable. Use the dictation workflow.", owner: "Andy" },
-  { id: "s6-3", text: "PRIORITY — before Canada: dictate the 'reflection on starting the business' post on a walk. Open your notes app, hit dictate, and just talk — when you started, what's been hard, what's surprised you, the emotional rollercoaster. Paste it into Claude, ask it to format only (new lines, no em-dashes, no fragments). Don't ask it to rewrite.", owner: "Andy" },
-  { id: "s6-4", text: "When you come back from Canada: follow up with the Paralympian contact — she's been engaging well on LinkedIn but may need a nudge. She's a possible client.", owner: "Andy" },
-  { id: "s6-5", text: "When you come back from Canada: follow up with the new paid networking group prospect.", owner: "Andy" },
-  { id: "s5-4", text: "Follow up with the contact from Founders Network when back from Canada — possible coaching/mentoring need.", owner: "Andy" },
-  { id: "s5-5", text: "Arrange the photo session with George's dad — meet outside the house (café, walk, co-working space). Natural environment only.", owner: "Andy" },
-  { id: "s4-2", text: "Diary blocking: client calls Tuesday, Wednesday, Thursday only. Block Monday and Friday for admin, content, follow-ups.", owner: "Andy" },
-  { id: "w1", text: "Website quick wins (5 changes, ~1 hour): name Rolls-Royce explicitly; move Richard Waine testimonial to homepage; replace contact page copy with Ben's version; fix name hyphenation to 'Andy Scott Barrett' throughout; update copyright year to 2026.", owner: "Andy" },
+  { id: "s7-1", text: "Block one hour a week in your diary for writing and scheduling posts, ideally a Monday or Friday, and protect it. The goal is a steady cadence, not a perfect post. Cap it at the hour and publish what you've got.", owner: "Andy" },
+  { id: "s7-2", text: "Use the dictation workflow properly: open Claude, hit dictate, and talk through the content card like you're telling a mate in the pub. Then delete what doesn't fit rather than going back and forth asking it to rewrite.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s7-3", text: "Get on the front foot with new clients. Pursue the warm leads to a clear yes or no and move on from the half-hearted ones, instead of letting them drift.", owner: "Andy" },
+  { id: "s7-4", text: "Follow up the warm signals now you're back: the new networking group (the lady who already knew you from LinkedIn), the Paralympian contact, the Founders Network contact, and the new paid networking group prospect.", owner: "Andy" },
+  { id: "s7-5", text: "Arrange the photo session with George's dad. Meet outside the house, a café, a walk or a co-working space, so it stays natural rather than a studio set-up.", owner: "Andy" },
 ];
 
 
@@ -49,7 +45,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: ASB_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700 }}>ASB</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Andy Scott Barrett</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Session 6 of 7</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Ascott Financial Direction · Monthly sessions</p>
             </div>
           </div>
         </div>
@@ -69,21 +65,21 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
-            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 6 · 26 May 2026" animateIn />
+            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 7 · 19 June 2026" cadence="month" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>6</div>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>7</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 6 — 26 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Dictation workflow — write posts by talking through the prompts, not typing answers. Produced a full draft in 14 minutes on the call. Finance Simplified series dropped — expertise posts are now standalone wake-up calls, not explanations. Repetition in content explicitly endorsed. 3 posts to schedule before Canada. Product profitability / Lego post published. Final session: Wednesday 18 June.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 7 — 19 June 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Back from Canada. Continuation confirmed: monthly sessions at £325, rolling with 30 days' notice, dashboard, WhatsApp and content ideas all continue. Positioning widened to two groups, now including smaller owners who need a financial partner. About section reworked to be more visceral around the emotional wins. The content blocker is process, not memory or confidence: block weekly time, dictate like you're talking to a mate, cap it at an hour. Renewed drive to chase new clients. Next session: Wednesday 16 July.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "6 of 7", sub: "Final: Wed 18 June 2026" },
+                { label: "Coaching", value: "Monthly", sub: "Rolling · next Wed 16 July 2026" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
-                { label: "Posts out", value: "5 posted", sub: "Martin Lewis · VAT · discounting · bank balance · product profitability" },
+                { label: "Posts out", value: "8 posted", sub: "Martin Lewis · VAT · discounting · bank balance · product profitability · investor story · half marathon · Canada trip" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -143,6 +139,22 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
               </p>
             </div>
 
+            {/* Closing lines to try — funny & memorable */}
+            <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 6, padding: "24px 28px", marginBottom: 20 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: ASB_COLOR, margin: "0 0 6px" }}>Closing Lines To Try — Funny & Memorable</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>A line to land at the end of a talk, intro or post — the bit people remember and repeat. Mine was "I put you in hospital faster than a heavyweight boxer." Pick a favourite, try it out loud, see which one gets the smile.</p>
+              {[
+                "I spent 20 years stress-testing jet engines at Rolls-Royce, so your cash flow forecast doesn't keep me up at night. It might be keeping you up though, which is roughly where I come in.",
+                "If your financial plan is a gut feeling and a quick look at the bank balance on a Monday morning, we should probably have a chat.",
+                "I've supported Wolves for 30 years, so I've had plenty of practice staying calm while the numbers fall apart. Turns out it's a transferable skill.",
+              ].map((line, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 0", borderBottom: i < 2 ? "1px solid #E0DBD3" : "none" }}>
+                  <span style={{ fontSize: "0.78rem", fontWeight: 700, color: ASB_COLOR, flexShrink: 0, marginTop: 2 }}>{i + 1}</span>
+                  <p style={{ fontSize: "0.92rem", color: "#1C1C1C", lineHeight: 1.55, margin: 0, fontStyle: "italic" }}>"{line}"</p>
+                </div>
+              ))}
+            </div>
+
             {/* Live LinkedIn profile */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
               <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 6, padding: "22px 24px" }}>
@@ -173,31 +185,35 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             {/* About section */}
             <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>About Section — Live on LinkedIn</p>
             <div style={{ background: "#fff", border: `2px solid ${ASB_COLOR}`, borderRadius: 8, padding: "36px 40px", marginBottom: 8 }}>
-              <p style={{ fontSize: "0.65rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>✓ Finalised — Session 3 · 15 April 2026</p>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, color: ASB_COLOR, textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 20px" }}>✓ Updated — Session 7 · 19 June 2026</p>
               <div style={{ fontSize: "0.97rem", lineHeight: 2, color: "#3D3935", display: "flex", flexDirection: "column", gap: 16 }}>
                 <p style={{ margin: 0 }}>Does this sound familiar?</p>
                 <p style={{ margin: 0 }}>Your accountant sends the accounts… you glance at the numbers.</p>
                 <p style={{ margin: 0 }}>You're not really sure what to do with them. So you carry on, making the big calls on gut feel and hoping for the best.</p>
                 <p style={{ margin: 0 }}>You're not doing anything wrong. Your accountant is doing exactly what they're supposed to do.</p>
                 <p style={{ margin: 0 }}>The problem is, reporting what happened and keeping you compliant isn't the same as helping you run the business.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>That's the gap I fill.</p>
-                <p style={{ margin: 0 }}>👋 I'm Andy, a Fractional Finance Director for growing UK SMEs, which in plain English means I'm the person who takes your financial data and turns it into actual decisions around:</p>
+                <p style={{ margin: 0, marginTop: 8 }}>I work with a small number of clients at a time that fall into two groups:</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingLeft: 4 }}>
+                  <p style={{ margin: 0 }}>👉 Small business owners who need a financial partner but don't need an in-house finance director that costs a fortune.</p>
+                  <p style={{ margin: 0 }}>👉 More established start-ups preparing for funding, or UK SME owners turning over between £500k and £10m, who have their accounting covered but want someone to help them actually use the numbers to grow the business.</p>
+                </div>
+                <p style={{ margin: 0, marginTop: 8 }}>👋 I'm Andy, a Fractional Finance Director for growing UK SMEs, which in plain English means I'm the person who takes your financial data and turns it into actual decisions around:</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 4 }}>
                   {["Growth plans", "Pricing", "Cash flow", "Where to invest and when to hire", "Launching new products", "Funding readiness"].map((item, i) => (
                     <p key={i} style={{ margin: 0 }}>👉 {item}</p>
                   ))}
                 </div>
                 <p style={{ margin: 0, marginTop: 8 }}>I spent 20 years at Rolls-Royce stress-testing business cases on jet engines and working directly with engineers, sales directors and management teams, not in the boardroom. I made the decision to leave at 40 to do work where you can really feel the difference it makes.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>I work with a small number of retained clients at a time, typically either start-ups preparing for funding or UK SME owners turning over between £500k and £10m. They have their accounting covered but want someone to help them actually use the numbers to run the business effectively.</p>
-                <p style={{ margin: 0 }}>Some are at a specific moment: a growth decision, an investor conversation, a cash flow worry that won't go away. Others have just outgrown the informal approach. Either way, the gap is the same.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>What my clients tell me, once we're working together:</p>
+                <p style={{ margin: 0, marginTop: 8 }}>Some are at a specific moment: a growth decision, an investor conversation, a cash flow worry that won't go away. Others have just outgrown what feels like winging it. Either way, the gap is the same.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>Once we're working together, my clients tell me they:</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingLeft: 4 }}>
-                  <p style={{ margin: 0 }}>👉 They make major decisions with confidence — because they know the financial impact before they commit, not after</p>
-                  <p style={{ margin: 0 }}>👉 They sleep better — because they're no longer carrying the numbers on their own, and they can see problems coming while there's still time to act</p>
-                  <p style={{ margin: 0 }}>👉 They feel in control — there's a clear plan, they know whether they're on track, and they're not waiting to be blindsided</p>
+                  <p style={{ margin: 0 }}>👉 Make the big calls with confidence, knowing the financial impact before they commit, so gut feel and 2am doubt turn into a decision they can actually sleep on.</p>
+                  <p style={{ margin: 0 }}>👉 Get their time back, because once it's clear where the money is really made, they stop pouring hours into the work that was losing it.</p>
+                  <p style={{ margin: 0 }}>👉 Can finally pay themselves properly, instead of propping up a business that takes more than it gives back.</p>
+                  <p style={{ margin: 0 }}>👉 Stop feeling alone with it, with someone in their corner to think the big decisions through with, rather than winging it on their own.</p>
                 </div>
-                <p style={{ margin: 0, marginTop: 8 }}>Based in Derby (and occasionally Portugal). Mandarin: decent conversation level, probably. Currently learning Japanese on Duolingo.</p>
-                <p style={{ margin: 0, marginTop: 8 }}>I'm not for everyone, but if any of this sounds like someone you'd want in your corner, I'm always up for a straightforward conversation to see if we're a good fit.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>I'm based in Derby in the East Midlands. Away from the numbers, I love travel and languages. Having learned Mandarin Chinese to conversational level whilst living in China, I'm now giving French and Japanese a good go on Duolingo. I'm a runner and a dog lover too.</p>
+                <p style={{ margin: 0, marginTop: 8 }}>If any of this sounds like someone you'd want in your corner, without the cost or commitment of an in-house FD or CFO, I'm always up for a straightforward conversation to see if we're a good fit.</p>
               </div>
             </div>
             <div style={{ background: "#F9F8F6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "14px 18px", marginBottom: 24 }}>

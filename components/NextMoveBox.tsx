@@ -8,9 +8,10 @@ interface Props {
   clientName?: string;
   sessionLabel?: string;
   animateIn?: boolean;
+  cadence?: string;
 }
 
-export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn }: Props) {
+export default function NextMoveBox({ move, accentColor, clientName, sessionLabel, animateIn, cadence = "week" }: Props) {
   const firstName = clientName?.split(" ")[0];
   const [visible, setVisible] = useState(false);
   const [minimised, setMinimised] = useState(false);
@@ -72,7 +73,7 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
               }}
             >
               <div style={{ width: 8, height: 8, borderRadius: "50%", background: accentColor, flexShrink: 0 }} />
-              <span style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)" }}>This week</span>
+              <span style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)" }}>This {cadence}</span>
             </button>
           ) : (
             <div style={{ position: "relative" }}>
@@ -85,7 +86,7 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
                   fontSize: "0.75rem", lineHeight: 1, padding: 0,
                 }}
               >▼</button>
-              <NeedleCard move={move} accentColor={accentColor} />
+              <NeedleCard move={move} accentColor={accentColor} cadence={cadence} />
             </div>
           )}
         </div>}
@@ -125,19 +126,19 @@ export default function NextMoveBox({ move, accentColor, clientName, sessionLabe
             {firstName} — Client Dashboard
           </h2>
         </div>
-        <NeedleCard move={move} accentColor={accentColor} />
+        <NeedleCard move={move} accentColor={accentColor} cadence={cadence} />
       </div>
     );
   }
 
   return (
     <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28 }}>
-      <NeedleCard move={move} accentColor={accentColor} />
+      <NeedleCard move={move} accentColor={accentColor} cadence={cadence} />
     </div>
   );
 }
 
-function NeedleCard({ move, accentColor }: { move: string; accentColor: string }) {
+function NeedleCard({ move, accentColor, cadence = "week" }: { move: string; accentColor: string; cadence?: string }) {
   return (
     <div style={{
       width: 220,
@@ -173,7 +174,7 @@ function NeedleCard({ move, accentColor }: { move: string; accentColor: string }
         margin: 0,
         lineHeight: 1.5,
       }}>
-        What will move<br />the needle this week
+        What will move<br />the needle this {cadence}
       </p>
 
       {/* Move text */}
