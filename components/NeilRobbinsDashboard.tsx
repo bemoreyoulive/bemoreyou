@@ -84,8 +84,86 @@ const POSITIONING: {
   audiences: [],
 };
 
-const HEADLINES: { label: string; text: string; note: string }[] = [];
-const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [];
+// Headlines: 5 options, max 220 characters. Scale 1 (ballsy) to 5 (beige) so
+// Neil can judge appetite in Session 2. Drafts, not final.
+const HEADLINES: { label: string; text: string; scale: number; note: string }[] = [
+  {
+    label: "Option 1",
+    scale: 1,
+    text: "Founder & CEO, Silverbean | Most senior marketers misjudge affiliate, and it costs them 15-20% of revenue | I say the things other agency CEOs won't | Performance partnerships in plain English",
+    note: "The full hand grenade. Leads with the number and the contrarian promise. Stands out a mile, and sets the expectation that you will be straight with people.",
+  },
+  {
+    label: "Option 2",
+    scale: 2,
+    text: "CEO, Silverbean | 24 years on the channel most marketers ignore, the one where you only pay when it works | Performance partnerships for DTC and ecommerce brands | Plain English, no jargon",
+    note: "Confident and commercial without picking a fight. The 'only pay when it works' line does the selling, the longevity does the credibility.",
+  },
+  {
+    label: "Option 3",
+    scale: 3,
+    text: "Founder & CEO at Silverbean | Helping DTC and ecommerce brands grow revenue through performance partnerships | 24 years in, still saying what most agency CEOs won't",
+    note: "The balanced middle. Clear on what you do and who for, with one line of edge at the end. A safe pick that still has a pulse.",
+  },
+  {
+    label: "Option 4",
+    scale: 4,
+    text: "Founder & CEO, Silverbean | Performance partnerships agency helping DTC and ecommerce brands grow revenue | 24 years building one of the UK's leading affiliate agencies",
+    note: "Credible and straight down the line. Reads well to a buyer who wants reassurance, but it does not turn many heads.",
+  },
+  {
+    label: "Option 5",
+    scale: 5,
+    text: "Founder & CEO @ Silverbean | Global Performance Partnerships Agency | Helping DTC Brands Grow Revenue Across 40+ Countries | Back-to-Back Global Agency of the Year",
+    note: "Close to what you have now, the beige benchmark. Nothing wrong with it, but it sounds like the agency talking, not you. Here so you can feel the difference.",
+  },
+];
+
+// Two About drafts: one short (~1250 chars), one long (~2000 chars). Both first
+// person, commercial, personal, with a wry smile. Drafts to review in Session 2.
+const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
+  {
+    label: "Option A · the short one (~1,250 characters)",
+    text: `I have been running an affiliate agency for 24 years, which in agency terms is roughly 9 lifetimes.
+
+I started Silverbean in 2002 selling performance marketing to bookmakers, back when most marketers thought affiliate was the slightly dodgy corner of the internet you did not bring up at dinner.
+
+A lot has changed. Performance partnerships now drive 15 to 20% of revenue for serious ecommerce brands. HelloFresh, John Lewis, New Balance and Under Armour all trust us with theirs.
+
+Here is the bit that still surprises people. Most senior marketers underrate it. They keep feeding Google and Meta as costs climb, while the one channel where you only pay when it actually works sits in the corner, underused.
+
+That is the thing I will keep banging on about here.
+
+24 years in, I have hired a director I met at a barbecue, survived a crash that wiped out our client base in 3 weeks, and learned the hard way that people are 80% of your success and 80% of your failure.
+
+I am here to share what I have picked up, and to say a few things most agency CEOs would rather I did not.
+
+Father of 3. Man Utd since I was 6. Still convinced this is our year.`,
+    note: "Punchy, scannable, ends on a smile. Strong default if you want something people actually read to the bottom of.",
+  },
+  {
+    label: "Option B · the long one (~2,000 characters)",
+    text: `I have been running a performance marketing agency for 24 years. In agency years that is roughly 9 lifetimes and at least 4 industry name changes.
+
+I started Silverbean in 2002, selling affiliate marketing to bookmakers, back when most marketers thought affiliate was the slightly dodgy corner of the internet you did not mention at dinner.
+
+The reason I started it at all was a boss. At 25 I worked for a man who came in one morning, told us he had been test driving Ferraris, and said if we all worked a bit harder he would buy one with cash. He was not joking. That night I wrote 'business plan' on a notepad. Best terrible boss I ever had.
+
+A year into Silverbean I pitched a betting client in Gibraltar. He stopped me mid flow and asked if the agency was just me. It was. He offered me a performance only deal, no fee, which I did not want. That deal kept the company alive when the 2008 crash wiped out nearly all our betting clients in 3 weeks. The thing I did not want saved the thing I had built.
+
+Two decades on, performance partnerships drive 15 to 20% of revenue for serious ecommerce brands. We look after it for HelloFresh, John Lewis, New Balance and Under Armour.
+
+And yet most senior marketers still misjudge the channel. They keep feeding Google and Meta as costs rise, while the one place you only pay when it works sits underused in the corner. That is the conversation I want to have here, in plain English, minus the jargon.
+
+A few things I believe after 24 years. People are 80% of your success and 80% of your failure. I once hired someone at a barbecue who knew nothing about marketing, and she is now our Global Services Director. Fairness costs you sometimes, and it is still worth it. And you should enjoy the thing you spend most of your life doing.
+
+Father of 3. Coach of an under 16 girls football team. Man Utd since I was 6, which has taught me more about suffering than business ever could.
+
+If you work in or around ecommerce, stick around. I will share what 24 years has taught me, and say a few things most agency CEOs would rather I did not.`,
+    note: "More room for the stories that make you you. Better if you want the profile to do the storytelling before you have posted much.",
+  },
+];
+
 const MESSAGING: { title: string; body: string }[] = [];
 
 const RECOMMENDATIONS: { title: string; body: string }[] = [
@@ -111,7 +189,88 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   },
 ];
 
-const CONTENT_IDEAS: { hook: string; guidance: string; priority: boolean }[] = [];
+// 5 starter content ideas. Each has two hook options (A and B), short guidance
+// on how to write it, rhetorical questions that make the reader think "yep,
+// that's me", and who it is aimed at.
+const CONTENT_IDEAS: {
+  pillar: string;
+  hookA: string;
+  hookB: string;
+  guidance: string;
+  questions: string[];
+  audience: string;
+}[] = [
+  {
+    pillar: "Pillar 1 · The Hand Grenade",
+    hookA: "Most CMOs are leaving 15 to 20% of their revenue on the table. And they have no idea.",
+    hookB: "There is a channel that only charges you when it works. Most senior marketers still ignore it.",
+    guidance:
+      "Your flagship contrarian take, and a strong first post. Open with the number, it stops the scroll. Then explain, calmly, why senior marketers underrate affiliate. No 'incrementality' or 'publisher mix', you are talking to a smart CMO who has been burned by jargon. End on a thought, not a pitch. Confident, never cross.",
+    questions: [
+      "When did you last properly interrogate where your performance budget actually goes?",
+      "If a channel only charged you when it delivered, why would you not look harder at it?",
+    ],
+    audience: "Senior marketing decision-makers (CMOs and brand leaders).",
+  },
+  {
+    pillar: "Pillar 2 · The Graft",
+    hookA: "The worst boss I ever had bought a Ferrari with money he did not have. He taught me everything.",
+    hookB: "At 25, my boss said he would buy a Ferrari with cash if we worked harder. That night I quit in my head.",
+    guidance:
+      "A story post, and people love a villain. Tell it like you would in the pub: the fantasy forecasts, the Ferrari, the moment you wrote 'business plan' on a notepad. Then land one lesson about leadership or over-promising. Do not over-explain the moral, let the story carry it. This builds the founder credibility that matters to peers and future backers.",
+    questions: [
+      "Have you ever worked for someone who taught you exactly who you did not want to become?",
+    ],
+    audience: "Founders, agency owners and peers.",
+  },
+  {
+    pillar: "Pillar 3 · The Gaffer",
+    hookA: "I hired our Global Services Director at a barbecue. She knew nothing about marketing.",
+    hookB: "The best hire I ever made could not use Google when I met her. 23 years later she has shares in the business.",
+    guidance:
+      "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the 23 year arc. The point underneath: hire for attitude and potential, not the CV. Keep it humble and human. This is the pillar that shows the operator behind the title, and it reassures anyone weighing up how you lead.",
+    questions: [
+      "How many brilliant people have you walked past because their CV did not tick the box?",
+    ],
+    audience: "Your team, future talent and fellow leaders.",
+  },
+  {
+    pillar: "Pillar 1 · The Hand Grenade",
+    hookA: "Everyone in affiliate says we are all friends. We are not.",
+    hookB: "At industry events we shake hands and smile. Then we go back and compete like our lives depend on it.",
+    guidance:
+      "A spicier grenade, so handle with a bit of care, clients are watching. The honesty is the value, not the aggression. Compare it to footballers at an awards do: handshakes off the pitch, ruthless on it. Make the point about why the industry fails to sell its own value upward to leaders. Confident opinion, never a rant. This is the post people remember you for.",
+    questions: [
+      "How many industries smile in public and knife each other in private?",
+    ],
+    audience: "Industry peers and senior marketers.",
+  },
+  {
+    pillar: "Pillar 4 · Off the Clock",
+    hookA: "I coach an under 16 girls football team. It has taught me more about motivation than 24 years in business.",
+    hookB: "Man Utd have taught me more about suffering than running a company ever has.",
+    guidance:
+      "A personal post to balance the sharper ones. Pick one thread, the coaching or the football, and tie it to something real about leadership, resilience or simply enjoying the thing you do. People follow people, so let your character show. Light, warm, a wry smile. Do not shoehorn a business lesson in if it does not fit. This is the glue that makes the other posts land.",
+    questions: [
+      "What did your hobby teach you that your job never could?",
+    ],
+    audience: "Everyone. The connective tissue across all your audiences.",
+  },
+];
+
+// Homepage "who you're for / not for", 4 bullets each.
+const WHO_FOR = [
+  "Senior marketing leaders at DTC and ecommerce brands who suspect they are underusing performance partnerships",
+  "Founders and agency owners who like a straight talker with 24 years of scars to show for it",
+  "Marketers who are tired of jargon and want the channel explained in plain English",
+  "People who would rather hear the honest version than the polished one",
+];
+const WHO_NOT_FOR = [
+  "Anyone after safe, vanilla, say-nothing LinkedIn content",
+  "Marketers who want to be sold to rather than made to think",
+  "People who get prickly when someone questions how the industry really works",
+  "Anyone hunting for buzzwords and frameworks for their own sake",
+];
 
 const SESSIONS: {
   number: number;
@@ -332,6 +491,30 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               </div>
             </div>
 
+            {/* Who you're for / not for */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 28 }}>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${color}`, borderRadius: 8, padding: "20px 22px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color, margin: "0 0 12px" }}>Who you're for</p>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 9, margin: 0, padding: 0 }}>
+                  {WHO_FOR.map((item, i) => (
+                    <li key={i} style={{ fontSize: "0.84rem", color: "#3D3935", paddingLeft: 18, position: "relative", lineHeight: 1.5 }}>
+                      <span style={{ position: "absolute", left: 0, color, fontWeight: 700 }}>✓</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: "4px solid #B0A89E", borderRadius: 8, padding: "20px 22px" }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#8A837B", margin: "0 0 12px" }}>Who you're not for</p>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 9, margin: 0, padding: 0 }}>
+                  {WHO_NOT_FOR.map((item, i) => (
+                    <li key={i} style={{ fontSize: "0.84rem", color: "#3D3935", paddingLeft: 18, position: "relative", lineHeight: 1.5 }}>
+                      <span style={{ position: "absolute", left: 0, color: "#B0A89E", fontWeight: 700 }}>✕</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
             <DashboardFooter clientName={name} tabName="Home" slug={slug} />
           </div>
         )}
@@ -450,76 +633,52 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
+            {/* Core positioning statement — locked Session 2 */}
             {POSITIONING.headline ? (
-              <div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
-                  <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
-                </div>
-                {POSITIONING.differentiators.length > 0 && (
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>What makes you different</p>
-                    {POSITIONING.differentiators.map((d, i) => (
-                      <div key={i} style={{ display: "flex", gap: 12, marginBottom: 10 }}>
-                        <span style={{ color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{d}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {POSITIONING.audiences.length > 0 && (
-                  <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Your audience</p>
-                    {POSITIONING.audiences.map((a, i) => (
-                      <div key={i} style={{ marginBottom: 16 }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 4px" }}>{a.label}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>{a.detail}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {HEADLINES.length > 0 && (
-                  <div style={{ marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>LinkedIn headline options</p>
-                    {HEADLINES.map((h, i) => (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{h.label}</p>
-                        <p style={{ fontSize: "1rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
-                        <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {ABOUT_VERSIONS.length > 0 && (
-                  <div style={{ marginBottom: 24 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>LinkedIn About section</p>
-                    {ABOUT_VERSIONS.map((v, i) => (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 10px" }}>{v.label}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
-                        <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {MESSAGING.length > 0 && (
-                  <>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 16px" }}>Messaging Angles</p>
-                    {MESSAGING.map((m, i) => (
-                      <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "24px 28px", marginBottom: 12 }}>
-                        <p style={{ fontSize: "0.88rem", fontWeight: 700, color, margin: "0 0 10px" }}>{m.title}</p>
-                        <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{m.body}</p>
-                      </div>
-                    ))}
-                  </>
-                )}
+              <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Core positioning statement</p>
+                <p style={{ fontSize: "1.1rem", fontFamily: "var(--font-dm-serif), serif", color: "#1C1C1C", lineHeight: 1.6, margin: 0 }}>{POSITIONING.headline}</p>
               </div>
             ) : (
-              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Coming next: positioning, headline & About</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your positioning statement, LinkedIn headline and About section get locked in at our messaging session on Tuesday 23 June. They will all land here, straight after.</p>
+              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "22px 26px", marginBottom: 32 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>One thing still to come: your positioning statement</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>We lock your single positioning line in together on Tuesday 23 June, once you have read the headline and About drafts below. That one stays blank on purpose, it is the one thing I do not want to write at you.</p>
               </div>
             )}
+
+            {/* LinkedIn About drafts */}
+            {ABOUT_VERSIONS.length > 0 && (
+              <div style={{ marginBottom: 36 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn About section · 2 drafts</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>Two directions to react to, Neil, not finished articles. Read them out loud. The one that sounds like you talking is the one we build from on the 23rd.</p>
+                {ABOUT_VERSIONS.map((v, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 14 }}>
+                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 12px" }}>{v.label}</p>
+                    <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
+                    <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* LinkedIn headline options with ballsy-to-beige meter */}
+            {HEADLINES.length > 0 && (
+              <div style={{ marginBottom: 24 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn headline · 5 options</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>All under LinkedIn's 220 character limit. The meter runs from ballsy to beige, so you can pick how much edge you are in the mood for. We choose one together on the 23rd.</p>
+                {HEADLINES.map((h, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
+                      <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{h.label} · {h.text.length} characters</p>
+                      <BallsyMeter scale={h.scale} color={color} />
+                    </div>
+                    <p style={{ fontSize: "0.95rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <CommentBox clientName={name} tabName="Brand Assets" slug={slug} />
           </div>
         )}
@@ -541,15 +700,17 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            {CONTENT_IDEAS.length > 0 ? (
-              CONTENT_IDEAS.map((idea, i) => (
-                <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
-              ))
-            ) : (
-              <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "28px 32px" }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Post ideas coming soon</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Specific post ideas, hooks and angles get added here as we go, starting after your messaging session. For now, the pillars above set the direction.</p>
-              </div>
+            {CONTENT_IDEAS.length > 0 && (
+              <>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
+                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>5 posts to get you off the mark</p>
+                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits.</p>
+                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}><strong>On a CTA:</strong> you are right, you do not need one. You are the CEO, not a course seller, and "book a call" at the bottom would cheapen it. Let the rhetorical question do the work and let people come to you. The only soft ask worth making now and then is an invitation to share their own take in the comments, because that feeds reach without ever looking like selling.</p>
+                </div>
+                {CONTENT_IDEAS.map((idea, i) => (
+                  <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
+                ))}
+              </>
             )}
             <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
           </div>
@@ -607,7 +768,24 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { hook: string; guidance: string; priority: boolean }; index: number; slug: string; color: string }) {
+// Ballsy-to-beige meter for headline options. scale 1 (ballsy) to 5 (beige).
+function BallsyMeter({ scale, color }: { scale: number; color: string }) {
+  const label = ["Ballsy", "Bold", "Balanced", "Safe", "Beige"][scale - 1] ?? "";
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Ballsy</span>
+      <div style={{ display: "flex", gap: 3 }}>
+        {[1, 2, 3, 4, 5].map(n => (
+          <span key={n} style={{ width: 9, height: 9, borderRadius: "50%", background: n === scale ? color : "#E4DED5", border: n === scale ? `1px solid ${color}` : "1px solid #E0DBD3" }} />
+        ))}
+      </div>
+      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Beige</span>
+      <span style={{ fontSize: "0.62rem", fontWeight: 700, color, marginLeft: 2 }}>{label}</span>
+    </div>
+  );
+}
+
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillar: string; hookA: string; hookB: string; guidance: string; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(false);
   const [saving, setSaving] = useState(false);
 
@@ -631,9 +809,9 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { hook: string; guid
   }
 
   return (
-    <div style={{ background: used ? "#f7f6f3" : idea.priority ? "#f0f7ed" : "#fff", border: "1px solid #E0DBD3", borderLeft: idea.priority ? `3px solid ${color}` : "1px solid #E0DBD3", borderRadius: 4, padding: "20px 24px", marginBottom: 12, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: idea.guidance ? 10 : 0 }}>
-        <p style={{ fontSize: "0.92rem", fontWeight: 600, color: used ? "#9CA3AF" : "#1C1C1C", margin: 0, lineHeight: 1.5, textDecoration: used ? "line-through" : "none", flex: 1 }}>{idea.hook}</p>
+    <div style={{ background: used ? "#f7f6f3" : "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${color}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
+        <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: 0 }}>Post {index + 1} · {idea.pillar}</p>
         <button
           onClick={toggleUsed}
           disabled={saving}
@@ -650,7 +828,32 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { hook: string; guid
           {used ? "Used ✓" : "Mark used"}
         </button>
       </div>
-      {idea.guidance && <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>{idea.guidance}</p>}
+
+      {/* Hook options A and B */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
+        {[{ k: "A", v: idea.hookA }, { k: "B", v: idea.hookB }].map(h => (
+          <div key={h.k} style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "12px 14px" }}>
+            <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 6px" }}>Hook {h.k}</p>
+            <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{h.v}</p>
+          </div>
+        ))}
+      </div>
+
+      <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>{idea.guidance}</p>
+
+      {idea.questions.length > 0 && (
+        <div style={{ background: `${color}0d`, border: `1px solid ${color}26`, borderRadius: 6, padding: "12px 14px", marginBottom: 14 }}>
+          <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Questions that make them think "yep, that's me"</p>
+          {idea.questions.map((q, j) => (
+            <div key={j} style={{ display: "flex", gap: 8, marginBottom: j === idea.questions.length - 1 ? 0 : 6 }}>
+              <span style={{ color, fontWeight: 700, flexShrink: 0, fontSize: "0.82rem" }}>?</span>
+              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>{q}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <p style={{ fontSize: "0.76rem", color: "#7A746E", margin: 0 }}><span style={{ fontWeight: 700, color: "#3D3935" }}>Aimed at:</span> {idea.audience}</p>
     </div>
   );
 }
