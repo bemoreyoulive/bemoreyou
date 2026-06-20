@@ -90,14 +90,14 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
   {
     label: "Option 1",
     scale: 1,
-    text: "Founder & CEO, Silverbean | Most senior marketers misjudge affiliate, and it costs them 15-20% of revenue | I say the things other agency CEOs won't | Performance partnerships in plain English",
-    note: "The full hand grenade. Leads with the number and the contrarian promise. Stands out a mile, and sets the expectation that you will be straight with people.",
+    text: "Founder & CEO, Silverbean | 24 years in the channel your finance team loves and your media plan forgets | I say the things other agency CEOs won't | Performance partnerships in plain English",
+    note: "The full hand grenade. The finance-versus-media-plan line is the hook, and it sets the expectation that you will be straight with people.",
   },
   {
     label: "Option 2",
     scale: 2,
-    text: "CEO, Silverbean | 24 years on the channel most marketers ignore, the one where you only pay when it works | Performance partnerships for DTC and ecommerce brands | Plain English, no jargon",
-    note: "Confident and commercial without picking a fight. The 'only pay when it works' line does the selling, the longevity does the credibility.",
+    text: "CEO, Silverbean | 24 years building an agency around the one channel that only charges you when it works | Performance partnerships for ecommerce brands | Plain English, no jargon",
+    note: "Confident and commercial without picking a fight. The 'only charges you when it works' line does the selling, the longevity does the credibility.",
   },
   {
     label: "Option 3",
@@ -124,43 +124,33 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
   {
     label: "Option A · the short one (~1,250 characters)",
-    text: `I have been running an affiliate agency for 24 years, which in agency terms is roughly 9 lifetimes.
+    text: `If you run marketing for an ecommerce brand, you have probably had this argument more times than you care to count. The cost of Google and Meta keeps climbing, the board wants more revenue from less budget, and somewhere in the plan sits affiliate, a channel half the room still thinks of as discount codes and dodgy pop-ups from 2010.
 
-I started Silverbean in 2002 selling performance marketing to bookmakers, back when most marketers thought affiliate was the slightly dodgy corner of the internet you did not bring up at dinner.
+I have spent 24 years trying to move that conversation somewhere more useful, mostly by being annoyingly persistent about one thing. It is the only channel where you genuinely only pay when it works. Done properly it pulls real weight. Treated as an afterthought, of course it lets you down.
 
-A lot has changed. Performance partnerships now drive 15 to 20% of revenue for serious ecommerce brands. HelloFresh, John Lewis, New Balance and Under Armour all trust us with theirs.
+So this is where I think out loud about all of it. What is actually working, what the industry would rather you did not notice, and the odd lesson from running an agency for longer than is probably sensible.
 
-Here is the bit that still surprises people. Most senior marketers underrate it. They keep feeding Google and Meta as costs climb, while the one channel where you only pay when it actually works sits in the corner, underused.
+For the record, I started Silverbean in 2002 with no real plan and a fair bit of nerve. Since then I have hired a director I met at a barbecue, come close to going under more than once, and learned that the people are the whole job.
 
-That is the thing I will keep banging on about here.
-
-24 years in, I have hired a director I met at a barbecue, survived a crash that wiped out our client base in 3 weeks, and learned the hard way that people are 80% of your success and 80% of your failure.
-
-I am here to share what I have picked up, and to say a few things most agency CEOs would rather I did not.
-
-Father of 3. Man Utd since I was 6. Still convinced this is our year.`,
-    note: "Punchy, scannable, ends on a smile. Strong default if you want something people actually read to the bottom of.",
+Dad of 3, coach of an under 16s girls football team, Man Utd fan since I was 6, which is its own kind of long-term suffering. If any of that sounds like your world, stick around.`,
+    note: "Opens with the reader's problem, lands the one big idea, then a bit about you at the end. Strong default if you want something people actually read to the bottom of.",
   },
   {
     label: "Option B · the long one (~2,000 characters)",
-    text: `I have been running a performance marketing agency for 24 years. In agency years that is roughly 9 lifetimes and at least 4 industry name changes.
+    text: `If you look after marketing for an ecommerce brand, some of this will sound familiar. The cost of paid keeps going up. The board wants growth without the budget to match. And affiliate, or performance partnerships if we are being grown up about it, sits in the corner of the plan getting either ignored or quietly blamed, usually by people whose only memory of it is discount codes and dodgy pop-ups from fifteen years ago.
 
-I started Silverbean in 2002, selling affiliate marketing to bookmakers, back when most marketers thought affiliate was the slightly dodgy corner of the internet you did not mention at dinner.
+I have spent 24 years trying to drag that conversation somewhere more useful. Not because I am evangelical about a channel, but because the maths is hard to argue with. It is the one place you only pay when it actually works. Get it right and it carries real weight. Treat it as an afterthought and, naturally, it disappoints you.
 
-The reason I started it at all was a boss. At 25 I worked for a man who came in one morning, told us he had been test driving Ferraris, and said if we all worked a bit harder he would buy one with cash. He was not joking. That night I wrote 'business plan' on a notepad. Best terrible boss I ever had.
+So this is where I work through all of it in plain English. What is genuinely working, what the industry would rather keep quiet, and the occasional lesson from doing this longer than is probably wise.
 
-A year into Silverbean I pitched a betting client in Gibraltar. He stopped me mid flow and asked if the agency was just me. It was. He offered me a performance only deal, no fee, which I did not want. That deal kept the company alive when the 2008 crash wiped out nearly all our betting clients in 3 weeks. The thing I did not want saved the thing I had built.
+The honest version of how I got here. I started Silverbean in 2002 because I had a boss who once announced he was buying a Ferrari with cash if we all worked a bit harder. He was not joking, and he could not afford it. That was the night I decided I would rather make my own mistakes than keep cleaning up his.
 
-Two decades on, performance partnerships drive 15 to 20% of revenue for serious ecommerce brands. We look after it for HelloFresh, John Lewis, New Balance and Under Armour.
+A year in, skint and pitching a client in Gibraltar, I got offered a deal I did not want. Performance only, no fee. That deal is the only reason the company survived 2008, when the crash took most of our clients inside a few weeks. Funny how the thing you resist is the thing that saves you.
 
-And yet most senior marketers still misjudge the channel. They keep feeding Google and Meta as costs rise, while the one place you only pay when it works sits underused in the corner. That is the conversation I want to have here, in plain English, minus the jargon.
+A few things I believe after all that. The people are 80% of it, in both directions. Being fair costs you sometimes and is still worth it. And you should probably enjoy the thing you give most of your waking life to.
 
-A few things I believe after 24 years. People are 80% of your success and 80% of your failure. I once hired someone at a barbecue who knew nothing about marketing, and she is now our Global Services Director. Fairness costs you sometimes, and it is still worth it. And you should enjoy the thing you spend most of your life doing.
-
-Father of 3. Coach of an under 16 girls football team. Man Utd since I was 6, which has taught me more about suffering than business ever could.
-
-If you work in or around ecommerce, stick around. I will share what 24 years has taught me, and say a few things most agency CEOs would rather I did not.`,
-    note: "More room for the stories that make you you. Better if you want the profile to do the storytelling before you have posted much.",
+Dad of 3. Football coach. Man Utd since I was 6, which has taught me more about patience than any quarter-end ever has. If this is your world too, you are in the right place.`,
+    note: "Same idea, more room for the stories. Better if you want the profile itself to do some storytelling before you have posted much.",
   },
 ];
 
@@ -187,13 +177,17 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
     title: "The danger zone: month two and three",
     body: "I will always be straight with you about this one. The most common reason founders stop posting is not lack of ideas or time. It is posting for six or eight weeks, getting decent engagement, then hitting a quieter fortnight and thinking 'what is the point.' LinkedIn rewards consistency over months, not sprints. The algorithm is basically Ferguson: put the work in during pre-season and the results show up later. Month two and three is the danger zone, when the novelty has worn off and the traction has not fully arrived yet. If you are ever tempted to go quiet, message me first. That is exactly what I am here for.",
   },
+  {
+    title: "You do not need a call to action",
+    body: "A quick word on something that trips a lot of people up. You will see endless posts that sign off with 'book a call' or 'DM me to find out more.' You do not need any of that, and at your level it would actually work against you. You are the founder of a 24 year old agency, not someone flogging a course from the back of the room. Your job here is to be worth listening to, not to chase a click. Let the writing earn the attention and let people come to you, because they will. The only soft ask worth making, now and then, is inviting people to share their own take in the comments. That lifts the reach of a post without ever looking like selling, and more often than not it starts the conversations that actually matter.",
+  },
 ];
 
 // 5 starter content ideas. Each has two hook options (A and B), short guidance
 // on how to write it, rhetorical questions that make the reader think "yep,
 // that's me", and who it is aimed at.
 const CONTENT_IDEAS: {
-  pillar: string;
+  pillars: number[];
   hookA: string;
   hookB: string;
   guidance: string;
@@ -201,61 +195,67 @@ const CONTENT_IDEAS: {
   audience: string;
 }[] = [
   {
-    pillar: "Pillar 1 · The Hand Grenade",
-    hookA: "Most CMOs are leaving 15 to 20% of their revenue on the table. And they have no idea.",
-    hookB: "There is a channel that only charges you when it works. Most senior marketers still ignore it.",
+    pillars: [0],
+    hookA: "Finance love affiliate. Marketing keep forgetting it exists. Worth asking why.",
+    hookB: "It is the one channel that only charges you when it works. So why does it still get treated like the poor relation?",
     guidance:
-      "Your flagship contrarian take, and a strong first post. Open with the number, it stops the scroll. Then explain, calmly, why senior marketers underrate affiliate. No 'incrementality' or 'publisher mix', you are talking to a smart CMO who has been burned by jargon. End on a thought, not a pitch. Confident, never cross.",
+      "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why a channel that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     questions: [
-      "When did you last properly interrogate where your performance budget actually goes?",
-      "If a channel only charged you when it delivered, why would you not look harder at it?",
+      "When did you last properly check where your performance budget actually ends up?",
+      "If something only charged you when it delivered, would you really leave it in the corner?",
     ],
-    audience: "Senior marketing decision-makers (CMOs and brand leaders).",
+    audience: "Senior marketing decision-makers and brand leaders.",
   },
   {
-    pillar: "Pillar 2 · The Graft",
-    hookA: "The worst boss I ever had bought a Ferrari with money he did not have. He taught me everything.",
-    hookB: "At 25, my boss said he would buy a Ferrari with cash if we worked harder. That night I quit in my head.",
+    pillars: [1],
+    hookA: "My old boss came in one Monday and said he was buying a Ferrari with cash if we worked harder. He could not afford lunch.",
+    hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     guidance:
-      "A story post, and people love a villain. Tell it like you would in the pub: the fantasy forecasts, the Ferrari, the moment you wrote 'business plan' on a notepad. Then land one lesson about leadership or over-promising. Do not over-explain the moral, let the story carry it. This builds the founder credibility that matters to peers and future backers.",
+      "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     questions: [
-      "Have you ever worked for someone who taught you exactly who you did not want to become?",
+      "Ever worked for someone who showed you exactly who you did not want to become?",
     ],
     audience: "Founders, agency owners and peers.",
   },
   {
-    pillar: "Pillar 3 · The Gaffer",
-    hookA: "I hired our Global Services Director at a barbecue. She knew nothing about marketing.",
-    hookB: "The best hire I ever made could not use Google when I met her. 23 years later she has shares in the business.",
+    pillars: [2, 1],
+    hookA: "I hired the person who now runs a big chunk of the company at a barbecue. She knew nothing about marketing at the time.",
+    hookB: "23 years ago I gave a job to someone who could not use Google. It is the best hiring decision I ever made.",
     guidance:
-      "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the 23 year arc. The point underneath: hire for attitude and potential, not the CV. Keep it humble and human. This is the pillar that shows the operator behind the title, and it reassures anyone weighing up how you lead.",
+      "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it quietly reassures anyone wondering how you actually lead.",
     questions: [
-      "How many brilliant people have you walked past because their CV did not tick the box?",
+      "How many good people have you walked past because their CV did not tick the box?",
     ],
     audience: "Your team, future talent and fellow leaders.",
   },
   {
-    pillar: "Pillar 1 · The Hand Grenade",
-    hookA: "Everyone in affiliate says we are all friends. We are not.",
-    hookB: "At industry events we shake hands and smile. Then we go back and compete like our lives depend on it.",
+    pillars: [0],
+    hookA: "Everyone in this industry says we are all friends. We are mostly not.",
+    hookB: "We shake hands at the awards do and compete like animals the rest of the year. Nobody says it out loud.",
     guidance:
-      "A spicier grenade, so handle with a bit of care, clients are watching. The honesty is the value, not the aggression. Compare it to footballers at an awards do: handshakes off the pitch, ruthless on it. Make the point about why the industry fails to sell its own value upward to leaders. Confident opinion, never a rant. This is the post people remember you for.",
+      "A spicier one, so handle with a bit of care given clients are watching. The honesty is the value, not the aggression. The footballers-at-an-awards-do comparison does the work nicely. Underneath it, make the real point: the industry is so busy competing that it never bothers to sell its own worth to the people holding the budget. Confident, never a rant.",
     questions: [
-      "How many industries smile in public and knife each other in private?",
+      "How many industries are all smiles in public and all elbows in private?",
     ],
     audience: "Industry peers and senior marketers.",
   },
   {
-    pillar: "Pillar 4 · Off the Clock",
-    hookA: "I coach an under 16 girls football team. It has taught me more about motivation than 24 years in business.",
-    hookB: "Man Utd have taught me more about suffering than running a company ever has.",
+    pillars: [3],
+    hookA: "I coach an under 16s girls football team. Some weeks it is the most useful management training I get.",
+    hookB: "Supporting Man Utd for 40 years has prepared me for business in ways I would rather not admit.",
     guidance:
-      "A personal post to balance the sharper ones. Pick one thread, the coaching or the football, and tie it to something real about leadership, resilience or simply enjoying the thing you do. People follow people, so let your character show. Light, warm, a wry smile. Do not shoehorn a business lesson in if it does not fit. This is the glue that makes the other posts land.",
+      "A personal one to balance the sharper posts. Pick a single thread, the coaching or the football, and tie it to something real about leading people, staying patient, or just enjoying what you do. Let your character show, that is the whole point of this pillar. Keep it light and a bit self-deprecating. Do not force a business lesson in if it does not belong.",
     questions: [
-      "What did your hobby teach you that your job never could?",
+      "What has something outside work taught you that the job never could?",
     ],
-    audience: "Everyone. The connective tissue across all your audiences.",
+    audience: "Everyone. The thread that ties the rest together.",
   },
+];
+
+// Content sub-tabs by month. Only Month 1 is live for now.
+const CONTENT_MONTHS = [
+  { id: "m1", label: "Month 1" },
+  { id: "m2", label: "Month 2" },
 ];
 
 // Homepage "who you're for / not for", 4 bullets each.
@@ -266,7 +266,7 @@ const WHO_FOR = [
 ];
 const WHO_NOT_FOR = [
   "Affiliate and digital managers after tactical, in-the-weeds how-tos. You write for the people they answer to",
-  "Anyone who wrote affiliate off 15 years ago and is not open to a rethink",
+  "Anyone who wants a polished, say-nothing corporate feed. You will have opinions and you will share them",
   "Anyone here for rage-bait and pile-ons. Your strong opinions come without the anger",
 ];
 
@@ -356,6 +356,7 @@ function PillarCard({ pillar, index, mode }: { pillar: typeof NR_PILLARS[number]
 
 export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
+  const [contentMonth, setContentMonth] = useState("m1");
   const config = NR_CONFIG;
   const { name, role, initials, color, sessionLabel } = config;
   const firstName = name.split(" ")[0];
@@ -700,14 +701,37 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
 
             {CONTENT_IDEAS.length > 0 && (
               <>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
-                  <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>5 posts to get you off the mark</p>
-                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits.</p>
-                  <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}><strong>On a CTA:</strong> you are right, you do not need one. You are the CEO, not a course seller, and "book a call" at the bottom would cheapen it. Let the rhetorical question do the work and let people come to you. The only soft ask worth making now and then is an invitation to share their own take in the comments, because that feeds reach without ever looking like selling.</p>
+                {/* Month sub-tabs */}
+                <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+                  {CONTENT_MONTHS.map(m => (
+                    <button
+                      key={m.id}
+                      onClick={() => m.id === "m1" && setContentMonth(m.id)}
+                      disabled={m.id !== "m1"}
+                      style={{
+                        fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+                        padding: "8px 16px", borderRadius: 20, cursor: m.id === "m1" ? "pointer" : "not-allowed",
+                        border: contentMonth === m.id ? `1px solid ${color}` : "1px solid #E0DBD3",
+                        background: contentMonth === m.id ? color : "#fff",
+                        color: contentMonth === m.id ? "#fff" : m.id === "m1" ? "#7A746E" : "#B0A89E",
+                      }}
+                    >
+                      {m.label}{m.id !== "m1" ? " · soon" : ""}
+                    </button>
+                  ))}
                 </div>
-                {CONTENT_IDEAS.map((idea, i) => (
-                  <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
-                ))}
+
+                {contentMonth === "m1" && (
+                  <>
+                    <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
+                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 5 posts to get you off the mark</p>
+                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
+                    </div>
+                    {CONTENT_IDEAS.map((idea, i) => (
+                      <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
+                    ))}
+                  </>
+                )}
               </>
             )}
             <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
@@ -766,26 +790,30 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
   );
 }
 
-// Ballsy-to-beige meter for headline options. scale 1 (ballsy) to 5 (beige).
+// Beige-to-ballsy meter for headline options. scale 1 (ballsy) to 5 (beige).
+// Rendered beige on the left, ballsy on the right, so the active dot sits at
+// visual position (6 - scale).
 function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   const label = ["Ballsy", "Bold", "Balanced", "Safe", "Beige"][scale - 1] ?? "";
+  const activePos = 6 - scale;
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Ballsy</span>
+      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Beige</span>
       <div style={{ display: "flex", gap: 3 }}>
         {[1, 2, 3, 4, 5].map(n => (
-          <span key={n} style={{ width: 9, height: 9, borderRadius: "50%", background: n === scale ? color : "#E4DED5", border: n === scale ? `1px solid ${color}` : "1px solid #E0DBD3" }} />
+          <span key={n} style={{ width: 9, height: 9, borderRadius: "50%", background: n === activePos ? color : "#E4DED5", border: n === activePos ? `1px solid ${color}` : "1px solid #E0DBD3" }} />
         ))}
       </div>
-      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Beige</span>
+      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E" }}>Ballsy</span>
       <span style={{ fontSize: "0.62rem", fontWeight: 700, color, marginLeft: 2 }}>{label}</span>
     </div>
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillar: string; hookA: string; hookB: string; guidance: string; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(false);
   const [saving, setSaving] = useState(false);
+  const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
 
   useEffect(() => {
     const supabase = createClient();
@@ -807,9 +835,19 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillar: string; ho
   }
 
   return (
-    <div style={{ background: used ? "#f7f6f3" : "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${color}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
+    <div style={{ background: used ? "#f7f6f3" : "#fff", border: "1px solid #E0DBD3", borderLeft: `3px solid ${primary}`, borderRadius: 6, padding: "22px 26px", marginBottom: 14, opacity: used ? 0.65 : 1, transition: "opacity 0.2s ease" }}>
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
-        <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: 0 }}>Post {index + 1} · {idea.pillar}</p>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF" }}>Post {index + 1}</span>
+          {idea.pillars.map(pi => {
+            const pc = PILLAR_COLORS[pi % PILLAR_COLORS.length];
+            return (
+              <span key={pi} style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: pc, background: `${pc}14`, border: `1px solid ${pc}40`, borderRadius: 20, padding: "3px 9px" }}>
+                {NR_PILLARS[pi].tag}
+              </span>
+            );
+          })}
+        </div>
         <button
           onClick={toggleUsed}
           disabled={saving}
@@ -831,7 +869,7 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillar: string; ho
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
         {[{ k: "A", v: idea.hookA }, { k: "B", v: idea.hookB }].map(h => (
           <div key={h.k} style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "12px 14px" }}>
-            <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 6px" }}>Hook {h.k}</p>
+            <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 6px" }}>Hook {h.k}</p>
             <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{h.v}</p>
           </div>
         ))}
@@ -840,11 +878,11 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillar: string; ho
       <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>{idea.guidance}</p>
 
       {idea.questions.length > 0 && (
-        <div style={{ background: `${color}0d`, border: `1px solid ${color}26`, borderRadius: 6, padding: "12px 14px", marginBottom: 14 }}>
-          <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Questions that make them think "yep, that's me"</p>
+        <div style={{ background: `${primary}0d`, border: `1px solid ${primary}26`, borderRadius: 6, padding: "12px 14px", marginBottom: 14 }}>
+          <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 8px" }}>Questions that make them think "yep, that's me"</p>
           {idea.questions.map((q, j) => (
             <div key={j} style={{ display: "flex", gap: 8, marginBottom: j === idea.questions.length - 1 ? 0 : 6 }}>
-              <span style={{ color, fontWeight: 700, flexShrink: 0, fontSize: "0.82rem" }}>?</span>
+              <span style={{ color: primary, fontWeight: 700, flexShrink: 0, fontSize: "0.82rem" }}>?</span>
               <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>{q}</p>
             </div>
           ))}
