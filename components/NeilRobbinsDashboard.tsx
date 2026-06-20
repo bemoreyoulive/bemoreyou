@@ -261,15 +261,13 @@ const CONTENT_IDEAS: {
 // Homepage "who you're for / not for", 4 bullets each.
 const WHO_FOR = [
   "Senior marketing leaders at DTC and ecommerce brands who suspect they are underusing performance partnerships",
-  "Founders and agency owners who like a straight talker with 24 years of scars to show for it",
-  "Marketers who are tired of jargon and want the channel explained in plain English",
-  "People who would rather hear the honest version than the polished one",
+  "Founders and agency owners who want the honest version of building a business, scars and all",
+  "Marketers who are tired of the jargon and want the channel explained in plain English",
 ];
 const WHO_NOT_FOR = [
-  "Anyone after safe, vanilla, say-nothing LinkedIn content",
-  "Marketers who want to be sold to rather than made to think",
-  "People who get prickly when someone questions how the industry really works",
-  "Anyone hunting for buzzwords and frameworks for their own sake",
+  "Affiliate and digital managers after tactical, in-the-weeds how-tos. You write for the people they answer to",
+  "Anyone who wrote affiliate off 15 years ago and is not open to a rethink",
+  "Anyone here for rage-bait and pile-ons. Your strong opinions come without the anger",
 ];
 
 const SESSIONS: {
