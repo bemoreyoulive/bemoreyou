@@ -856,7 +856,7 @@ Your closing line before the CTA:
 
 (Then add 1 or 2 sentences here tying it to SME owners. How often does someone avoid looking at the numbers because they're worried about what they might find? The most useful thing an adviser can do is tell you the truth.)`, cta: '"Has anyone ever told you something about your business you didn\'t want to hear, but that turned out to be exactly what you needed?"' },
   { id: "jun-2", week: "Week 5 · Friday", type: "Expertise", bold: "2/5", title: "Three Questions Every Business Owner Should Be Able to Answer", hook: "Option 1: There are three questions I think every business owner should be able to answer. You don't have to say them out loud, just be honest with yourself. Option 2: I close most of my networking talks with the same three questions, and the room usually goes quiet.", direction: `Your second line (if you opened with Option 1):
-"Just answer them honestly in your head. That's enough."
+"Just answer them honestly in your head, that's all it takes."
 
 Your second line (if you opened with Option 2):
 "They're not difficult questions. That's part of why the silence is so telling."
@@ -881,7 +881,7 @@ Your second line (if you opened with Option 2):
 (Then add 2 or 3 sentences here on what made you sign up for the half marathon this year, and what training currently looks like. How often you run, what's hard about it, what you listen to. Specific details land better than general ones.)
 
 Your next line:
-"Finishing is the goal. Not racing to win."
+"The goal is just to finish, not to race anyone."
 
 (Then add 2 or 3 sentences here on what that feels like. The kind of progress you don't really notice from one week to the next, but you do from one year to the next. Don't labour the parallel to business, let it land on its own.)
 
@@ -931,7 +931,7 @@ Your second line (if you opened with Option 2):
 (Then add 2 or 3 sentences here on what owners typically say about their accountant early in a conversation with you. No shade on accountants, the gap isn't their fault. Compliance and forward-looking strategy are genuinely different roles.)
 
 Your next line:
-"There's a ladder most businesses work their way up. Bookkeeper, accountant, finance director."
+"There's a ladder most businesses climb, from bookkeeper to accountant to finance director."
 
 (Then add 3 or 4 sentences here walking through the ladder. What each role does and where the gap shows up. The accountant who goes quiet for 11 months between filings is worth including, not a criticism, just not the same job as sitting alongside you while you make decisions.)
 
@@ -1016,7 +1016,7 @@ Your closing line before the CTA:
 "It's not just useful feedback. It's the same sentence almost word for word."
 
 Your second line (if you opened with Option 2):
-"There's something about that word that says everything. Sooner. Before the stress, before the surprise, before the decision they had to make blind."
+"There's something about that one word that says everything. They mean before the stress, before the surprise, before the big decision they had to make blind."
 
 (Then add 2 or 3 sentences here on what clients typically mean when they say it. How far back are they imagining. What's the thing they wish they'd had earlier, visibility, a forecast, a second pair of eyes.)
 
@@ -1030,7 +1030,7 @@ Your closing line before the CTA:
 
 (Then add 1 sentence here on the cost of waiting. Honest, not preachy.)`, cta: '"What\'s one thing in your business you\'ve been putting off, and what\'s actually stopping you?"' },
   { id: "jul-4", week: "Week 10 · Friday", type: "Expertise", bold: "1/5", title: "If You're Looking for Investment, Your Financial Story Needs to Match Your Business Story", hook: "Option 1: He could explain his business brilliantly. The financial side of the story was another matter entirely. Option 2: In front of an investor, it isn't only your pitch that has to stand up. Your numbers have to hold up under questioning too.", direction: `Your second line (if you opened with Option 1):
-"That's a more common situation than founders realise. The pitch lands. The follow-up questions don't."
+"That's more common than founders realise. The pitch itself goes down well, and then the financial questions afterwards are where it comes unstuck."
 
 Your second line (if you opened with Option 2):
 "A polished pitch is the easy part. The financial story is what the investor goes back to once the meeting's over."
@@ -1047,7 +1047,7 @@ Your closing line before the CTA:
 
 (Then add 1 sentence here on what the simplest version of that looks like for a pre-investment founder building it in a short window.)`, cta: '"If you\'re preparing to raise and the financial story isn\'t as solid as the pitch, I\'m happy to take a look. Drop me a message."' },
   { id: "jul-5", week: "Week 11 · Mid-week", type: "Personal", bold: "2/5", title: "I've Been Learning Japanese for 400 Days in a Row. Here's What That's Taught Me.", hook: "Option 1: I've been learning Japanese every single day for over 400 days now. I'm nowhere near fluent, but I'm a good deal better than when I started. Option 2: Practising something every day for 400 days teaches you something that has very little to do with the thing itself.", direction: `Your second line (if you opened with Option 1):
-"Some days it's 15 minutes. Some days it's 5. Some days it's 5 minutes I really didn't want to do."
+"Some days it's 15 minutes, some days it's 5, and some days it's 5 minutes I really didn't want to do."
 
 Your second line (if you opened with Option 2):
 "French A* at GCSE, Mandarin across two spells in Beijing, and now Japanese on Duolingo every morning. The pattern says more about me than the languages do."
@@ -1067,7 +1067,7 @@ Your closing line before the CTA:
 "It's a completely fair question. I'd be asking it too."
 
 Your second line (if you opened with Option 2):
-"That's the bit that catches people. The model looks right. The assumptions underneath it are the part that matters."
+"That's the bit that catches people out. The model looks right, but it's the assumptions underneath it that actually matter."
 
 (Then add 2 or 3 sentences here on what AI can genuinely do well for SME owners. Drafting, summarising, working through scenarios. Acknowledge it properly, you're not being dismissive.)
 
@@ -1104,7 +1104,7 @@ Your closing line before the CTA:
 "By the time the numbers say something's wrong, the decision that caused it was made a quarter ago."
 
 Your second line (if you opened with Option 2):
-"Nobody made a bad call. Nobody was reckless. There just wasn't anyone looking at the right thing at the right time."
+"Nobody made a bad call and nobody was reckless. There just wasn't anyone looking at the right thing at the right time."
 
 (Then add 2 or 3 sentences here on the most common guesswork-driven mistakes you see. Pricing without proper cost analysis. Hiring without modelling it out. Outsourcing decisions made on a hunch.)
 
@@ -1120,10 +1120,10 @@ Your closing line before the CTA:
 
 const asbAugustIdeas: AsbIdea[] = [
   { id: "aug-1", week: "Week 13 · Mid-week", type: "Personal", bold: "3/5", title: "\"I'm Just Bad With Money.\" No. You're Not.", hook: "Option 1: 'I'm just bad with money.' I hear that within the first ten minutes of most first conversations, and it's almost never actually true. Option 2: For most people it isn't that they can't understand numbers. It's that nobody has ever sat down and helped them understand what their own numbers mean.", direction: `Your second line (if you opened with Option 1):
-"It's a story people have been telling themselves for years. And it's usually wrong."
+"It's a story people have been telling themselves for years, and it's usually not true."
 
 Your second line (if you opened with Option 2):
-"There's a difference between knowing the 'what', the figures, and knowing the 'so what.' That gap isn't a character flaw. It's a missing layer."
+"There's a difference between knowing the 'what', the figures, and knowing the 'so what', and that gap isn't a character flaw, just a missing layer."
 
 (Then add 2 or 3 sentences here on what people usually mean when they say it. Is it numeracy, interpretation, anxiety, or something else? Be honest, you've heard it enough times to know the pattern.)
 
@@ -1149,14 +1149,14 @@ Your next line:
 (Then add 3 or 4 sentences here walking through what they are. Margin trajectory. Revenue quality, recurring versus one-off. Clean financials. Reduced owner-dependency. Be specific without going into a textbook list.)
 
 Your closing line before the CTA:
-"The business you want to exit isn't built at the end. It's built now."
+"The business you eventually sell is built now, not in the final stretch before you exit."
 
 (Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"If you have an exit number but nothing mapped out behind it, drop me a message. I\'ll buy you a coffee."' },
   { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "\"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation is some version of this. I think this is exactly what I need, just not quite yet. Option 2: Being ready tends to be a feeling rather than a fact. And the thing people want to sort out first is usually the very thing that needs the financial help.", direction: `Your second line (if you opened with Option 1):
 "It's almost always genuine. And it's almost always more expensive than people realise."
 
 Your second line (if you opened with Option 2):
-"Once X is sorted, I'll deal with Y. That's the loop. The trouble is that X is usually the thing that needs financial input to sort."
+"Once X is sorted I'll deal with Y, and round it goes. The trouble is that X is usually the very thing that needs financial input to sort in the first place."
 
 (Then add 2 or 3 sentences here on the most common "not yet" reason you hear, and what's usually underneath it. Often it's owners who are working in the business rather than on it.)
 
@@ -1220,7 +1220,7 @@ Your closing line before the CTA:
 
 (Add a line on how a second pair of eyes breaks the loop. Not more work for them, just fewer of the wrong calls.)`, cta: '"If you can\'t remember the last time you worked on the business rather than in it, drop me a message. I\'ll buy you a coffee."' },
   { id: "aug-7", week: "Week 16 · Mid-week", type: "Personal", bold: "3/5", title: "The Decisions That Feel Heaviest Are the Ones You Make on Your Own", hook: "Option 1: When I left Rolls-Royce, every decision was suddenly mine alone. There was no committee to share it with and no boss to sign it off. Option 2: For me, the hardest part of working for yourself was never the work itself. It was making the big calls with nobody there to check them against.", direction: `Your second line (if you opened with Option 1):
-"I'd spent 20 years somewhere big decisions had ten people round the table. Then there was one."
+"I'd spent 20 years somewhere the big decisions had ten people round the table, and now they all came down to me."
 
 Your second line (if you opened with Option 2):
 "You'd think that freedom would feel light. Some days it does, some days it's the opposite."
@@ -1327,7 +1327,7 @@ Your closing line before the CTA:
 "Colleagues, people far more senior than me, people I barely knew. Something made them feel safe enough to be straight with me."
 
 Your second line (if you opened with Option 2):
-"Maybe it's that I listen more than I talk. Maybe it's that I don't judge. I honestly don't know."
+"Maybe it's that I listen more than I talk, or that I don't judge. I honestly don't know."
 
 (Add 2 or 3 sentences on what you've noticed about the people behind the job titles. You don't need to name anyone or share a specific story if it's sensitive, the observation is enough.)
 
@@ -1459,7 +1459,7 @@ Your next line:
 (Add a couple of lines on what that sounds like. When a project grows beyond what was agreed, you flag it and you charge for it. Most good clients expect that.)
 
 Your closing line before the CTA:
-"Charging for the work you actually do isn't cheeky. It's just accurate."
+"Charging for the work you actually do isn't cheeky, it's just being accurate."
 
 (Add a line on what gets better when an owner gets this right. Healthier margins, and often better client relationships too.)`, cta: '"If your projects keep growing and the invoice never does, drop me a message. I\'ll buy you a coffee."' },
   { id: "oct-5", week: "Week 23 · Mid-week", type: "Personal", bold: "2/5", title: "I Once Took a Year Out, With No Job, to Go and Learn Mandarin", hook: "Option 1: Years ago I stepped away from my career for a year, with no job lined up, to go and learn Mandarin. It's one of the best decisions I've made. Option 2: Taking a year out with no plan beyond learning something sounds reckless. It turned out to be one of the most useful things I've done.", direction: `Your second line (if you opened with Option 1):
