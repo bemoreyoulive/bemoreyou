@@ -1592,14 +1592,6 @@ function AsbContentTab({ slug }: { slug: string }) {
         <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Don't give the solution in the post. Show the cost of the problem, then invite them in. That's where the CTAs come from — "if this sounds familiar, drop me a message."</p>
       </div>
 
-      {/* Hooks AI concern note */}
-      <div style={{ background: "#f9f8f6", border: "1px solid #E0DBD3", borderRadius: 8, padding: "20px 24px", marginBottom: 24 }}>
-        <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#7A746E", margin: "0 0 6px" }}>Session 6 · On Hooks Sounding AI-Written</p>
-        <p style={{ fontSize: "0.92rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 10px" }}>Some of the "it's not X, it's Y" hooks can feel a bit generated</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 10px" }}>You raised this in our last session. You're right that the contrarian structure — "it's not about X, it's about Y" — is a pattern that AI overuses. If a hook feels like that when you read it, there's a simple fix.</p>
-        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Add "But" and put it on its own line. So instead of <em>"It's not about the numbers. It's about what they mean."</em> — write it as <em>"It's not about the numbers.</em><br /><em>But what they mean? That's the part most owners have never had explained to them."</em> One word and a line break. That's usually enough to make it sound like a person.</p>
-      </div>
-
       {/* Examples reassurance note */}
       <div style={{ background: "#edf4ef", border: "1px solid #c2dbc9", borderRadius: 8, padding: "20px 24px", marginBottom: 24 }}>
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: ASB_COLOR, margin: "0 0 6px" }}>From Ben · On Examples</p>
