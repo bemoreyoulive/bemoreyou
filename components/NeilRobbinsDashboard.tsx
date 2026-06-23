@@ -668,6 +668,12 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {/* LinkedIn About drafts */}
             {ABOUT_VERSIONS.length > 0 && (
               <div style={{ marginBottom: 36 }}>
+                {/* A note from Ben about his current About */}
+                <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "18px 22px", marginBottom: 20 }}>
+                  <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>A note from Ben</p>
+                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Neil, a quick word before you read these. Your current About honestly isn't bad, and I quite like it. You lead with your why, that belief affiliate could be a serious growth driver, and there's genuine personality and history in there too, which most CEOs never manage. The one thing it's missing is you talking to the reader. It reads as Silverbean's story more than yours, and it's pitched at insiders rather than the leaders you want to reach. So have a read of these two, and we'll finalise the winner on the 23rd.</p>
+                </div>
+
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn About section · 2 drafts</p>
                 <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>Two directions to react to, Neil, not finished articles. Read them out loud. The one that sounds like you talking is the one we build from on the 23rd.</p>
                 {ABOUT_VERSIONS.map((v, i) => (
