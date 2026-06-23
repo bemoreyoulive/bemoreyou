@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 1 of 13 · June 2026",
+  sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Welcome to your dashboard, Neil. Start in Brand Assets, those four content pillars are your north star. Our next session is the messaging and positioning one, Tuesday 23 June at 10am, where we turn your stories into how you actually sound.",
+    "Two sessions in, Neil. Your to-do list is live. Two jobs for you this fortnight: pick your headline and About in Brand Assets, and get your first two posts out using the content ideas. Session 3 is Monday 7 July at 11am.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -72,7 +72,28 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
   },
 ];
 
-const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [];
+const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
+  {
+    id: "nr-headline",
+    text: "Review your five headline options in Brand Assets and pick the one that sounds most like you. Then update it on your LinkedIn profile.",
+    section: "brand",
+  },
+  {
+    id: "nr-about",
+    text: "Read Option A and Option B in Brand Assets and decide which direction to go. Drop Ben a note on anything that needs tweaking before you go live.",
+    section: "brand",
+  },
+  {
+    id: "nr-posts",
+    text: "Aim for two posts before Session 3 on 7 July. Use the content ideas in your Content tab. Pick a hook, build it, hit publish.",
+    section: "content",
+  },
+  {
+    id: "nr-grenades",
+    text: "Keep capturing grenade moments as they happen. Voice note it straight away, then WhatsApp it to Ben.",
+    section: "home",
+  },
+];
 
 const POSITIONING: {
   headline: string;
@@ -346,6 +367,26 @@ const SESSIONS: {
     ],
     nextSession: "Session 2 · Tuesday 23 June 2026, 10am · messaging & positioning",
   },
+  {
+    number: 2,
+    date: "23 June 2026",
+    title: "Messaging & positioning. Turning your story into how you sound.",
+    summary:
+      "Our 60 minute messaging session, and a good one. We walked through your pillars, headlines, About section drafts and content ideas together. Your honest verdict on your current LinkedIn was 'mildly interesting', and you are right, that is not the ceiling. You are leaning towards Option B on the About section and Option 5 on the headline, and you have the next two weeks to review, tweak and decide before we next speak. We also talked through the market problem you face in conversations every week, the CMOs stuck with 80% of their budget locked into paid, attribution chaos and boards wanting more from less. That is prime content territory. Carrie Rose at Rise at Seven is the benchmark you named for what this can look like at its best.",
+    insights: [
+      "Your honest read on your current LinkedIn: 'mildly interesting.' That is the right diagnosis, and it is exactly the bar we are raising.",
+      "Option B About and Option 5 headline are your leanings. Reader-first, credential-led, no jargon.",
+      "The CMO pain points you live with every week, paid dependency, attribution chaos, boards wanting more from a shrinking budget, are your richest content territory. Those are the posts that build authority.",
+      "Carrie Rose at Rise at Seven is the benchmark. That gives us a clear north star for what this looks like at its best.",
+    ],
+    agreed: [
+      "You to review the About and headline options over the next two weeks and decide which to go with before Session 3.",
+      "Aim for two posts before Session 3. Use the content ideas in your Content tab, pick a hook and go from there.",
+      "Keep capturing grenade moments as voice notes and WhatsApp them to Ben straight away.",
+      "Session 3 booked, Monday 7 July at 11am.",
+    ],
+    nextSession: "Session 3 · Monday 7 July 2026, 11am · content review and grenade harvest",
+  },
 ];
 
 const GOALS = {
@@ -469,17 +510,17 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Welcome to your dashboard, Neil. This is home base for the next six months, and it gets richer after every session. Twenty-four years running Silverbean and you have never really told your story publicly, so this is where that changes. Everything in here comes from your own words on our calls, so treat it as a working document, not a polished deck. Start in Brand Assets and have a read through your content pillars, they are your north star. Anything that does not feel like you, tell me. And remember, every hand grenade moment between now and 23 June, voice note it immediately. Those are your first posts.
+                Two sessions in, Neil. You have got your pillars, your headline options, your About drafts and your first five content ideas. Your to-do list is live below. The two things I want from you before Session 3: decide on your headline and About section, and get two posts out. Neither has to be perfect. The bar is showing up. Everything else follows from there.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "1 of 13", sub: "Next: Tue 23 June, 10am" },
+                { label: "Sessions done", value: "2 of 13", sub: "Next: Mon 7 July, 11am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
-                { label: "Headline", value: "Session 2", sub: "Being written with Ben" },
-                { label: "About section", value: "Session 2", sub: "Being written with Ben" },
+                { label: "Headline", value: "Draft ready", sub: "Review options in Brand Assets" },
+                { label: "About section", value: "Draft ready", sub: "Review options in Brand Assets" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -679,6 +720,25 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
+            {/* CMO challenges / market problem */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color, margin: "0 0 6px" }}>The market problem you speak to</p>
+              <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>The challenges your ideal clients are living with right now. These pain points, articulated in plain English, are the fuel for a lot of your best content.</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                {[
+                  { label: "Paid dependency", body: "Around 80% of most ecommerce budgets locked into Google and Meta. Costs climbing, returns flattening, and no easy way out." },
+                  { label: "Attribution chaos", body: "CMOs genuinely cannot tell the board what is working. Everything claims credit, nothing adds up, and the P&L pressure is relentless." },
+                  { label: "Board squeeze", body: "More revenue from a smaller budget. Every quarter. The CFO wants it controllable and provable, and most of what they are spending is neither." },
+                  { label: "Affiliate is underinvested", body: "Not written off, the smart ones know better than that now. But still sitting in the corner, treated as a nice extra rather than the fixed-cost, results-only growth driver it actually is." },
+                ].map((c, i) => (
+                  <div key={i} style={{ background: "#F9F8F6", borderRadius: 6, padding: "14px 16px" }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color, margin: "0 0 6px" }}>{c.label}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.55, margin: 0 }}>{c.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Core positioning statement — locked Session 2 */}
             {POSITIONING.headline ? (
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "28px 32px", marginBottom: 32 }}>
@@ -688,7 +748,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             ) : (
               <div style={{ background: "#fff", border: "1px dashed #E0DBD3", borderRadius: 6, padding: "22px 26px", marginBottom: 32 }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>One thing still to come: your positioning statement</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>We lock your single positioning line in together on Tuesday 23 June, once you have read the headline and About drafts below. That one stays blank on purpose, it is the one thing I do not want to write at you.</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>We will nail your single positioning line once you have locked the headline and About section. That one stays blank on purpose, it is the one thing I do not want to write at you.</p>
               </div>
             )}
 
@@ -698,11 +758,11 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                 {/* A note from Ben about his current About */}
                 <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "18px 22px", marginBottom: 20 }}>
                   <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>A note from Ben</p>
-                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Neil, a quick word before you read these. Your current About honestly isn't bad, and I quite like it. You lead with your why, that belief affiliate could be a serious growth driver, and there's genuine personality and history in there too, which most CEOs never manage. The one thing it's missing is you talking to the reader. It reads as Silverbean's story more than yours, and it's pitched at insiders rather than the leaders you want to reach. So have a read of these two, and we'll finalise the winner on the 23rd.</p>
+                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Neil, a quick word before you read these. Your current About honestly isn't bad, and I quite like it. You lead with your why, that belief affiliate could be a serious growth driver, and there's genuine personality and history in there too, which most CEOs never manage. The one thing it's missing is you talking to the reader. It reads as Silverbean's story more than yours, and it's pitched at insiders rather than the leaders you want to reach. So have a read of these two and send me any edits or notes before you go live.</p>
                 </div>
 
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn About section · 2 drafts</p>
-                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>Two directions to react to, Neil, not finished articles. Read them out loud. The one that sounds like you talking is the one we build from on the 23rd.</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>Two directions to react to, Neil, not finished articles. Read them out loud. The one that sounds like you talking is the one to go with. Send Ben any edits or notes before you update LinkedIn.</p>
                 {ABOUT_VERSIONS.map((v, i) => (
                   <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 14 }}>
                     <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 12px" }}>{v.label}</p>
@@ -717,7 +777,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {HEADLINES.length > 0 && (
               <div style={{ marginBottom: 24 }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn headline · 5 options</p>
-                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>All under LinkedIn's 220 character limit. The meter runs from ballsy to beige, so you can pick how much edge you are in the mood for. We choose one together on the 23rd.</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>All under LinkedIn's 220 character limit. The meter runs from ballsy to beige. Pick the one that sits where you want to sit, then update it on your profile.</p>
                 {HEADLINES.map((h, i) => (
                   <div key={i} style={{ background: h.favourite ? "#eef4f1" : "#fff", border: h.favourite ? `1px solid ${color}` : "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
@@ -783,7 +843,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                   <>
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 5 posts to get you off the mark</p>
-                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
                     </div>
                     {CONTENT_IDEAS.map((idea, i) => (
                       <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
