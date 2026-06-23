@@ -145,30 +145,32 @@ So if you're building something in performance marketing and fancy a proper conv
   },
   {
     label: "Option B · same substance, built to be skimmed",
-    text: `Most marketing leaders I talk to are in one of three camps:
+    text: `Most marketing leaders I talk to are stuck in one of three camps:
 
 👉 They're pouring budget into Google and Meta as the costs climb and the returns flatten
 👉 They suspect affiliate could be doing far more, but it's stuck being treated as a footnote
 👉 They're fed up of being sold to in jargon by people who can't explain it simply
 
-👋 I'm Neil. I started Silverbean back in 2002 because I believed affiliate could be a primary driver of real, measurable growth for ambitious brands, not the afterthought everyone had it down as.
+If any of that rings true, you're in good company, and you're in the right place.
+
+👋 I'm Neil. I started Silverbean back in 2002 because I believed affiliate could be a primary driver of real, measurable growth for ambitious brands, rather than the afterthought everyone had it down as.
 
 24 years and a fair few grey hairs later, that belief has been proven right more times than I can count.
 
-Today we're a global performance partnerships agency with teams across the UK, Australia and the US, working with DTC brands in 40+ countries. Our clients see an average 40% lift in affiliate revenue in their first 100 days, and we've been named Affiliate Agency of the Year back to back.
+These days we're a global performance partnerships agency with teams across the UK, Australia and the US, working with DTC brands in 40+ countries. Our clients see an average 40% lift in affiliate revenue in their first 100 days, and we've been named Affiliate Agency of the Year back to back.
 
-The bit I'm actually proudest of is the team we've built and the clients who've stuck with us for years.
+As nice as the awards are, the bit I'm actually proudest of is the team we've built and the clients who've stuck with us for years.
+
+After all this time, I've got a fairly good idea of who I'm most useful to. You'll get the most out of following me if:
 
 ✅ You suspect affiliate could be a serious growth driver and want someone to prove it
 ✅ You'd rather hear the truth than a nicely polished version of it
 ✅ You like your marketing explained in plain English, not buzzwords
 
-❌ You're after safe, vanilla advice that never ruffles a feather
-
-I also coach an under 16s girls football team, which has taught me more about leadership, patience and herding strong personalities than 24 years in business ever has.
+When I'm not banging that drum, I coach an under 16s girls football team, which has taught me more about leadership, patience and herding strong personalities than 24 years in business ever has.
 
 I'm not for everyone, and that's kinda the point. But if any of that sounds like you, come and connect.`,
-    note: "Same substance, laid out the way I'd structure a strong About. Reader's world first, then your why, your results, and who you are and aren't for. Easy to skim, full of you.",
+    note: "Same substance, laid out the way I'd structure a strong About. Reader's world first, then your why, your results, and who you're most useful to. Easy to skim, and it flows.",
   },
 ];
 
