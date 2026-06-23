@@ -89,9 +89,9 @@ const POSITIONING: {
 const HEADLINES: { label: string; text: string; scale: number; note: string }[] = [
   {
     label: "Option 1",
-    scale: 1,
-    text: "Founder & CEO, Silverbean | 24 years in affiliate, the bit your finance team loves and your media plan forgets | I say the things other agency CEOs won't | Performance partnerships in plain English",
-    note: "The full hand grenade. The finance-versus-media-plan line is the hook, and it sets the expectation that you will be straight with people.",
+    scale: 2,
+    text: "Founder & CEO, Silverbean. We grow ambitious ecommerce brands through affiliate. 24 years in. Still allergic to jargon.",
+    note: "Stripped back and simple, in the Amelia style you liked. Says what you do and who for, with a bit of you at the end.",
   },
   {
     label: "Option 2",
@@ -113,9 +113,9 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
   },
   {
     label: "Option 5",
-    scale: 5,
-    text: "Founder & CEO @ Silverbean | Global Performance Partnerships Agency | Helping DTC Brands Grow Revenue Across 40+ Countries | Back-to-Back Global Agency of the Year",
-    note: "Close to what you have now, the beige benchmark. Nothing wrong with it, but it sounds like the agency talking, not you. Here so you can feel the difference.",
+    scale: 4,
+    text: "Founder & CEO, Silverbean. We grow DTC and ecommerce brands through affiliate. Affiliate Agency of the Year, back to back.",
+    note: "Clean and credential-led, same simple style. Lets the Agency of the Year do the talking, no fuss.",
   },
 ];
 
