@@ -90,13 +90,13 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
   {
     label: "Option 1",
     scale: 1,
-    text: "Founder & CEO, Silverbean | 24 years in the channel your finance team loves and your media plan forgets | I say the things other agency CEOs won't | Performance partnerships in plain English",
+    text: "Founder & CEO, Silverbean | 24 years in affiliate, the bit your finance team loves and your media plan forgets | I say the things other agency CEOs won't | Performance partnerships in plain English",
     note: "The full hand grenade. The finance-versus-media-plan line is the hook, and it sets the expectation that you will be straight with people.",
   },
   {
     label: "Option 2",
     scale: 2,
-    text: "CEO, Silverbean | 24 years building an agency around the one channel that only charges you when it works | Performance partnerships for ecommerce brands | Plain English, no jargon",
+    text: "CEO, Silverbean | 24 years building an agency around the one kind of marketing that only charges you when it works | Performance partnerships for ecommerce brands | Plain English, no jargon",
     note: "Confident and commercial without picking a fight. The 'only charges you when it works' line does the selling, the longevity does the credibility.",
   },
   {
@@ -123,32 +123,54 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
 // person, commercial, personal, with a wry smile. Drafts to review in Session 2.
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
   {
-    label: "Option A · short and personal",
-    text: `I have spent the best part of 24 years building Silverbean into one of the leading performance marketing agencies in the country, and I still get a genuine kick out of it, which my wife finds mildly concerning.
+    label: "Option A · short, reader-first",
+    text: `If you run marketing for an ecommerce brand, you'll know the feeling.
 
-I started it back in 2002 because I believed affiliate could be a serious driver of revenue for ambitious brands, rather than the slightly dodgy afterthought that most marketers had it down as, and two decades on I am still cheerfully proving that point to anyone who will sit still long enough to listen.
+Paid costs keep climbing, the board wants more revenue from less budget, and affiliate sits in the corner of the plan, misunderstood and rarely given the credit it deserves.
 
-👉 The thing I am proudest of has not changed in all that time, and it has nothing to do with the awards, even though we have picked up a good few of those. It is the people I have built this with, some of whom have been alongside me for the best part of 20 years, and the clients who keep coming back because we tell them the truth rather than what they want to hear.
+I've spent the best part of 24 years trying to change that.
 
-For what it is worth, I am a London lad who somehow ended up in the North East, a dad of three, a Man United fan since I was six, and someone who genuinely loves this industry even on the days it does its best to test my patience.
+I started Silverbean back in 2002 because I believed affiliate could be a serious driver of growth for ambitious brands, and not the slightly dodgy afterthought most marketers had it down as.
 
-So if you run marketing for an ecommerce brand and you suspect there is more in this channel than you are currently getting out of it, or you simply like your opinions served straight rather than polished, then come and connect with me. I am not for everyone, and that is rather the point.`,
-    note: "Warmer and more personal, leads with your why and what you are proudest of. Good if you want something quick that still has you all over it.",
+Two decades on, I'm still cheerfully proving that point to anyone who'll sit still long enough to listen.
+
+👉 What I'm proudest of has very little to do with the awards, even though we've picked up a good few of those.
+
+It's the people I've built this with, some of them alongside me for nearly 20 years, and the clients who keep coming back because we tell them the truth rather than what they want to hear.
+
+For the record, I'm a London lad who somehow ended up in the North East, and a Man United fan since I was six, which has taught me more about patience than business ever has.
+
+This is where I share what I've learned over the years, the wins, the lessons, and the odd opinion the rest of the industry would rather I kept to myself.
+
+So if you reckon there's more to be had from affiliate than you're getting right now, or you just like your opinions served straight rather than polished, come and connect.
+
+I'm not for everyone, and that's kinda the point.`,
+    note: "Opens with the reader so they feel understood straight off, then your why and what you're proudest of. Quick, warm and still full of personality.",
   },
   {
-    label: "Option B · the longer one, told like a story",
-    text: `My old boss, about 25 years ago, once strolled into the office and announced that he was going to buy a Ferrari with cash if we all worked a little bit harder. He could not actually afford the Ferrari, or if I am honest much else, and that was the morning I decided I would rather make my own mistakes than keep covering for someone else's.
+    label: "Option B · the story open, belief-led",
+    text: `About 25 years ago, my boss told me he was buying a Ferrari with cash if we all worked a bit harder.
 
-So in 2002 I set up Silverbean, with no real plan, a fair bit of nerve, and a belief that most of the people around me thought was slightly mad. Affiliate marketing had a bit of a dodgy reputation back then, the sort of thing serious marketers left out of the plan altogether, and I was convinced it could become one of the most powerful ways for a brand to grow.
+He couldn't afford the Ferrari, or much else for that matter.
 
-A year in, completely skint and pitching for work down in Gibraltar, I was offered a deal I did not actually want, performance only, no fee, where I would get paid purely on the results I delivered. It turned out to be the very thing that kept the company alive when the 2008 crash wiped out most of our clients in a matter of weeks. Funny how the thing you resist the hardest ends up being the thing that saves you.
+That was the morning I decided to go and do my own thing, and in 2002 I started Silverbean.
 
-👉 Twenty four years later, that belief has well and truly been proven right. Silverbean is now a global agency with teams across the UK, Australia and the US, and I am as obsessed with this stuff as I was on day one, probably more so, which the people closest to me will happily tell you is both a blessing and a curse.
+Here's what I've believed ever since, and I'm more sure of it now than I've ever been.
 
-What I have learned along the way is that none of it is really about the channel. It is about the people, the long relationships, and being honest enough to tell a client the thing they do not necessarily want to hear but absolutely need to.
+Affiliate is one of the most powerful ways for a brand to grow, and most marketers still don't give it anything like the respect it deserves.
 
-This is where I share what 24 years in the trenches has taught me, the wins, the near misses, and the odd opinion that the rest of the industry would probably rather I kept to myself. If you run marketing for an ecommerce brand, or you are building something of your own and you prefer your advice straight rather than dressed up, then I think we will get on rather well. Come and connect with me, and stick around for the ride.`,
-    note: "Told like a story, opening on the Ferrari boss. More room for the journey and the passion. Strong if you want the profile itself to pull people in before you have posted much.",
+You should only ever pay for marketing that actually works, not for impressions or promises, but for real results that show up in the numbers.
+
+And the brands that win are the ones brave enough to hear the truth from people like me, even when it isn't what they were hoping for.
+
+👉 Silverbean is now a global agency with teams across the UK, Australia and the US, and I still love this stuff as much as I did at the very start, probably more, which the people closest to me will happily tell you is both a blessing and a curse.
+
+This is where I share what 24 years has taught me, strong opinions included.
+
+If you run marketing for an ecommerce brand, or you're building something of your own and you like your advice straight rather than dressed up, then I reckon we'll get on just fine.
+
+Come and connect, and stick around for the ride.`,
+    note: "Opens on the Ferrari, then gets straight into what you believe about the work. Punchy and opinionated, less life story. Good if you want the beliefs to do the pulling.",
   },
 ];
 
@@ -195,9 +217,9 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     hookA: "Finance love affiliate. Marketing keep forgetting it exists. Worth asking why.",
-    hookB: "It is the one channel that only charges you when it works. So why does it still get treated like the poor relation?",
+    hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     guidance:
-      "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why a channel that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
+      "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     questions: [
       "When did you last properly check where your performance budget actually ends up?",
       "If something only charged you when it delivered, would you really leave it in the corner?",
@@ -260,7 +282,7 @@ const CONTENT_MONTHS = [
 const WHO_FOR = [
   "Senior marketing leaders at DTC and ecommerce brands who suspect they are underusing performance partnerships",
   "Founders and agency owners who want the honest version of building a business, scars and all",
-  "Marketers who are tired of the jargon and want the channel explained in plain English",
+  "Marketers who are tired of the jargon and want affiliate explained in plain English",
 ];
 const WHO_NOT_FOR = [
   "Affiliate and digital managers after tactical, in-the-weeds how-tos. You write for the people they answer to",
@@ -309,7 +331,7 @@ const GOALS = {
   long: [
     "Build credibility ahead of the 2027 investment round, so the trust is already there before conversations start",
     "Create a personal profile that opens doors beyond Silverbean, for whatever you choose to build next",
-    "Raise the whole channel's reputation at senior level, the hill you said you are willing to die on",
+    "Raise affiliate's whole reputation at senior level, the hill you said you are willing to die on",
   ],
 };
 
