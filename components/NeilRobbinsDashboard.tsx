@@ -86,7 +86,7 @@ const POSITIONING: {
 
 // Headlines: 5 options, max 220 characters. Scale 1 (ballsy) to 5 (beige) so
 // Neil can judge appetite in Session 2. Drafts, not final.
-const HEADLINES: { label: string; text: string; scale: number; note: string }[] = [
+const HEADLINES: { label: string; text: string; scale: number; note: string; favourite?: boolean }[] = [
   {
     label: "Option 1",
     scale: 2,
@@ -114,6 +114,7 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
   {
     label: "Option 5",
     scale: 4,
+    favourite: true,
     text: "Founder & CEO, Silverbean. We grow DTC and ecommerce brands through affiliate. Affiliate Agency of the Year, back to back.",
     note: "Clean and credential-led, same simple style. Lets the Agency of the Year do the talking, no fuss.",
   },
@@ -211,6 +212,7 @@ const CONTENT_IDEAS: {
   hookA: string;
   hookB: string;
   guidance: string;
+  tips: string[];
   questions: string[];
   audience: string;
 }[] = [
@@ -220,6 +222,11 @@ const CONTENT_IDEAS: {
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
+    tips: [
+      "Find the one number or comparison that makes a CMO pause, like paid costs climbing while a results-only option sits unused. Lead with that, not the explanation.",
+      "Open with something mildly uncomfortable for the reader, the money going on impressions and promises, then show the alternative. A little discomfort earns the read.",
+      "Include a real figure and a plain example anyone could follow. Leave out 'incrementality', 'publisher mix' and anything that needs a glossary.",
+    ],
     questions: [
       "When did you last properly check where your performance budget actually ends up?",
       "If something only charged you when it delivered, would you really leave it in the corner?",
@@ -232,6 +239,11 @@ const CONTENT_IDEAS: {
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
+    tips: [
+      "Tell it as a proper story. Set the scene first, the boss, the Ferrari, the forecast with nothing behind it, before you go anywhere near the lesson.",
+      "The absurd detail is the hook. The cash, the fantasy numbers on the whiteboard. Specifics make people stop, vague life-lessons make them scroll.",
+      "Include the one thing it taught you about leadership or over-promising, in a full sentence. Leave out the tidy moral and the 'and that is why you should' ending.",
+    ],
     questions: [
       "Ever worked for someone who showed you exactly who you did not want to become?",
     ],
@@ -243,6 +255,11 @@ const CONTENT_IDEAS: {
     hookB: "23 years ago I gave a job to someone who could not use Google. It is the best hiring decision I ever made.",
     guidance:
       "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it reassures anyone wondering how you actually lead.",
+    tips: [
+      "The gap between how she started, could not use Google, and where she got to, Global Services Director with shares, is the whole point. Make that arc clear.",
+      "Open on the unlikely bit, hiring someone with no marketing experience off the back of a barbecue. It sounds reckless, which is exactly why people read on.",
+      "Include what you actually hired her for, attitude over CV. Keep her the hero and leave out anything that turns it into a humblebrag about you.",
+    ],
     questions: [
       "How many good people have you walked past because their CV did not tick the box?",
     ],
@@ -254,6 +271,11 @@ const CONTENT_IDEAS: {
     hookB: "We shake hands at the awards do and compete like animals the rest of the year. Nobody says it out loud.",
     guidance:
       "A spicier one, so handle with a bit of care given clients are watching. The honesty is the value, not the aggression. The footballers-at-an-awards-do comparison does the work nicely. Underneath it, make the real point: the industry is so busy competing that it never bothers to sell its own worth to the people holding the budget. Confident, never a rant.",
+    tips: [
+      "You are saying a quiet industry truth out loud, so be honest rather than bitter. You are describing how it works, not having a go at anyone by name.",
+      "The flat contradiction is the hook, everyone says we are all friends, we are not. The footballers-at-the-awards image then makes it land.",
+      "Include why it matters, that the infighting stops the industry selling its real worth to the people holding the budget. Leave out names and anything a blue-chip client would wince at.",
+    ],
     questions: [
       "How many industries are all smiles in public and all elbows in private?",
     ],
@@ -265,6 +287,11 @@ const CONTENT_IDEAS: {
     hookB: "Supporting Man Utd for 40 years has prepared me for business in ways I would rather not admit.",
     guidance:
       "A personal one to balance the sharper posts. Pick a single thread, the coaching or the football, and tie it to something real about leading people, staying patient, or just enjoying what you do. Let your character show, that is the whole point of this pillar. Keep it light and a bit self-deprecating. Do not force a business lesson in if it does not belong.",
+    tips: [
+      "Pick one thread, the coaching or the football, and one honest thing it has taught you. Do not try to cover your whole life in a single post.",
+      "The unexpected link is the draw, what an under 16s girls team has to do with running an 80-person business. Lean into that surprise up top.",
+      "Include a real moment from a session or a match. Leave out any forced business lesson if it does not genuinely fit, a bit of warmth is plenty.",
+    ],
     questions: [
       "What has something outside work taught you that the job never could?",
     ],
@@ -692,9 +719,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn headline · 5 options</p>
                 <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>All under LinkedIn's 220 character limit. The meter runs from ballsy to beige, so you can pick how much edge you are in the mood for. We choose one together on the 23rd.</p>
                 {HEADLINES.map((h, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
+                  <div key={i} style={{ background: h.favourite ? "#eef4f1" : "#fff", border: h.favourite ? `1px solid ${color}` : "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
-                      <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{h.label} · {h.text.length} characters</p>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{h.label} · {h.text.length} characters</p>
+                        {h.favourite && (
+                          <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#fff", background: color, borderRadius: 20, padding: "3px 9px" }}>⭐ Ben's favourite</span>
+                        )}
+                      </div>
                       <BallsyMeter scale={h.scale} color={color} />
                     </div>
                     <p style={{ fontSize: "0.95rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
@@ -836,7 +868,7 @@ function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(false);
   const [saving, setSaving] = useState(false);
   const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
@@ -902,6 +934,23 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
       </div>
 
       <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>{idea.guidance}</p>
+
+      {idea.tips.length > 0 && (
+        <div style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "14px 16px", marginBottom: 14 }}>
+          <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 10px" }}>How to build it</p>
+          {idea.tips.map((tip, j) => {
+            const label = ["What to think about", "How to turn heads", "What to include, what to leave out"][j] ?? "";
+            return (
+              <div key={j} style={{ display: "flex", gap: 9, marginBottom: j === idea.tips.length - 1 ? 0 : 10 }}>
+                <span style={{ color: primary, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem", lineHeight: 1.5 }}>{j + 1}</span>
+                <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>
+                  <span style={{ fontWeight: 700, color: "#1C1C1C" }}>{label}. </span>{tip}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {idea.questions.length > 0 && (
         <div style={{ background: `${primary}0d`, border: `1px solid ${primary}26`, borderRadius: 6, padding: "12px 14px", marginBottom: 14 }}>
