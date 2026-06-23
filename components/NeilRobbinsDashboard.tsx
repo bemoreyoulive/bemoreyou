@@ -123,54 +123,52 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
 // person, commercial, personal, with a wry smile. Drafts to review in Session 2.
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
   {
-    label: "Option A · short, reader-first",
-    text: `If you run marketing for an ecommerce brand, you'll know the feeling.
+    label: "Option A · close to your current, reader-first",
+    text: `If you run marketing for an ecommerce brand, you'll recognise this.
 
-Paid costs keep climbing, the board wants more revenue from less budget, and affiliate sits in the corner of the plan, misunderstood and rarely given the credit it deserves.
+Paid keeps getting more expensive, the board wants more revenue from a smaller budget, and affiliate sits in the corner of the plan, underused and written off as a bit of a footnote.
 
-I've spent the best part of 24 years trying to change that.
+I think that's daft, and I've spent 24 years proving it.
 
-I started Silverbean back in 2002 because I believed affiliate could be a serious driver of growth for ambitious brands, and not the slightly dodgy afterthought most marketers had it down as.
+I started Silverbean back in 2002 because I believed affiliate could be a primary driver of genuine, measurable growth for ambitious brands, rather than the footnote everyone had it down as. Two decades on, that belief has been proven right more times than I can count.
 
-Two decades on, I'm still cheerfully proving that point to anyone who'll sit still long enough to listen.
+Today Silverbean is a global performance partnerships agency, with teams across the UK, Australia and the US, working with DTC brands in more than 40 countries. Our clients see an average 40% lift in affiliate revenue inside their first 100 days, because we've spent 24 years building something across the whole buying journey that genuinely works.
 
-👉 What I'm proudest of has very little to do with the awards, even though we've picked up a good few of those.
+We've been named Affiliate Agency of the Year back to back, which is lovely, but it honestly isn't the bit I'm proudest of.
 
-It's the people I've built this with, some of them alongside me for nearly 20 years, and the clients who keep coming back because we tell them the truth rather than what they want to hear.
+That would be the team we've built, the clients who've stayed with us for years, and the fact we've grown from one bloke with a laptop into one of the leading affiliate agencies in the world without ever forgetting why we started.
 
-For the record, I'm a London lad who somehow ended up in the North East, and a Man United fan since I was six, which has taught me more about patience than business ever has.
+Away from the desk I coach an under 16s girls football team, which has taught me more about motivating people, managing strong characters and staying calm in total chaos than any leadership book ever has.
 
-This is where I share what I've learned over the years, the wins, the lessons, and the odd opinion the rest of the industry would rather I kept to myself.
-
-So if you reckon there's more to be had from affiliate than you're getting right now, or you just like your opinions served straight rather than polished, come and connect.
-
-I'm not for everyone, and that's kinda the point.`,
-    note: "Opens with the reader so they feel understood straight off, then your why and what you're proudest of. Quick, warm and still full of personality.",
+So if you're building something in performance marketing and fancy a proper conversation, whether you're a brand ready to take affiliate seriously or a business that sees the value in working together, come and connect.`,
+    note: "Closest to what you already have, which you were right to like. Keeps your why and your results, opens with the reader, and drops a bit more of you in. The under 16s line earns a smile.",
   },
   {
-    label: "Option B · the story open, belief-led",
-    text: `About 25 years ago, my boss told me he was buying a Ferrari with cash if we all worked a bit harder.
+    label: "Option B · same substance, built to be skimmed",
+    text: `Most marketing leaders I talk to are in one of three camps:
 
-He couldn't afford the Ferrari, or much else for that matter.
+👉 They're pouring budget into Google and Meta as the costs climb and the returns flatten
+👉 They suspect affiliate could be doing far more, but it's stuck being treated as a footnote
+👉 They're fed up of being sold to in jargon by people who can't explain it simply
 
-That was the morning I decided to go and do my own thing, and in 2002 I started Silverbean.
+👋 I'm Neil. I started Silverbean back in 2002 because I believed affiliate could be a primary driver of real, measurable growth for ambitious brands, not the afterthought everyone had it down as.
 
-Here's what I've believed ever since, and I'm more sure of it now than I've ever been.
+24 years and a fair few grey hairs later, that belief has been proven right more times than I can count.
 
-Affiliate is one of the most powerful ways for a brand to grow, and most marketers still don't give it anything like the respect it deserves.
+Today we're a global performance partnerships agency with teams across the UK, Australia and the US, working with DTC brands in 40+ countries. Our clients see an average 40% lift in affiliate revenue in their first 100 days, and we've been named Affiliate Agency of the Year back to back.
 
-You should only ever pay for marketing that actually works, not for impressions or promises, but for real results that show up in the numbers.
+The bit I'm actually proudest of is the team we've built and the clients who've stuck with us for years.
 
-And the brands that win are the ones brave enough to hear the truth from people like me, even when it isn't what they were hoping for.
+✅ You suspect affiliate could be a serious growth driver and want someone to prove it
+✅ You'd rather hear the truth than a nicely polished version of it
+✅ You like your marketing explained in plain English, not buzzwords
 
-👉 Silverbean is now a global agency with teams across the UK, Australia and the US, and I still love this stuff as much as I did at the very start, probably more, which the people closest to me will happily tell you is both a blessing and a curse.
+❌ You're after safe, vanilla advice that never ruffles a feather
 
-This is where I share what 24 years has taught me, strong opinions included.
+I also coach an under 16s girls football team, which has taught me more about leadership, patience and herding strong personalities than 24 years in business ever has.
 
-If you run marketing for an ecommerce brand, or you're building something of your own and you like your advice straight rather than dressed up, then I reckon we'll get on just fine.
-
-Come and connect, and stick around for the ride.`,
-    note: "Opens on the Ferrari, then gets straight into what you believe about the work. Punchy and opinionated, less life story. Good if you want the beliefs to do the pulling.",
+I'm not for everyone, and that's kinda the point. But if any of that sounds like you, come and connect.`,
+    note: "Same substance, laid out the way I'd structure a strong About. Reader's world first, then your why, your results, and who you are and aren't for. Easy to skim, full of you.",
   },
 ];
 
