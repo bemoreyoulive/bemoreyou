@@ -123,34 +123,32 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
 // person, commercial, personal, with a wry smile. Drafts to review in Session 2.
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
   {
-    label: "Option A · the short one (~1,250 characters)",
-    text: `If you run marketing for an ecommerce brand, you have probably had this argument more times than you care to count. The cost of Google and Meta keeps climbing, the board wants more revenue from less budget, and somewhere in the plan sits affiliate, a channel half the room still thinks of as discount codes and dodgy pop-ups from 2010.
+    label: "Option A · short and personal",
+    text: `I have spent the best part of 24 years building Silverbean into one of the leading performance marketing agencies in the country, and I still get a genuine kick out of it, which my wife finds mildly concerning.
 
-I have spent 24 years trying to move that conversation somewhere more useful, mostly by being annoyingly persistent about one thing. It is the only channel where you genuinely only pay when it works. Done properly it pulls real weight. Treated as an afterthought, of course it lets you down.
+I started it back in 2002 because I believed affiliate could be a serious driver of revenue for ambitious brands, rather than the slightly dodgy afterthought that most marketers had it down as, and two decades on I am still cheerfully proving that point to anyone who will sit still long enough to listen.
 
-So this is where I think out loud about all of it. What is actually working, what the industry would rather you did not notice, and the odd lesson from running an agency for longer than is probably sensible.
+👉 The thing I am proudest of has not changed in all that time, and it has nothing to do with the awards, even though we have picked up a good few of those. It is the people I have built this with, some of whom have been alongside me for the best part of 20 years, and the clients who keep coming back because we tell them the truth rather than what they want to hear.
 
-For the record, I started Silverbean in 2002 with no real plan and a fair bit of nerve. Since then I have hired a director I met at a barbecue, come close to going under more than once, and learned that the people are the whole job.
+For what it is worth, I am a London lad who somehow ended up in the North East, a dad of three, a Man United fan since I was six, and someone who genuinely loves this industry even on the days it does its best to test my patience.
 
-Dad of 3, coach of an under 16s girls football team, Man Utd fan since I was 6, which is its own kind of long-term suffering. If any of that sounds like your world, stick around.`,
-    note: "Opens with the reader's problem, lands the one big idea, then a bit about you at the end. Strong default if you want something people actually read to the bottom of.",
+So if you run marketing for an ecommerce brand and you suspect there is more in this channel than you are currently getting out of it, or you simply like your opinions served straight rather than polished, then come and connect with me. I am not for everyone, and that is rather the point.`,
+    note: "Warmer and more personal, leads with your why and what you are proudest of. Good if you want something quick that still has you all over it.",
   },
   {
-    label: "Option B · the long one (~2,000 characters)",
-    text: `If you look after marketing for an ecommerce brand, some of this will sound familiar. The cost of paid keeps going up. The board wants growth without the budget to match. And affiliate, or performance partnerships if we are being grown up about it, sits in the corner of the plan getting either ignored or quietly blamed, usually by people whose only memory of it is discount codes and dodgy pop-ups from fifteen years ago.
+    label: "Option B · the longer one, told like a story",
+    text: `My old boss, about 25 years ago, once strolled into the office and announced that he was going to buy a Ferrari with cash if we all worked a little bit harder. He could not actually afford the Ferrari, or if I am honest much else, and that was the morning I decided I would rather make my own mistakes than keep covering for someone else's.
 
-I have spent 24 years trying to drag that conversation somewhere more useful. Not because I am evangelical about a channel, but because the maths is hard to argue with. It is the one place you only pay when it actually works. Get it right and it carries real weight. Treat it as an afterthought and, naturally, it disappoints you.
+So in 2002 I set up Silverbean, with no real plan, a fair bit of nerve, and a belief that most of the people around me thought was slightly mad. Affiliate marketing had a bit of a dodgy reputation back then, the sort of thing serious marketers left out of the plan altogether, and I was convinced it could become one of the most powerful ways for a brand to grow.
 
-So this is where I work through all of it in plain English. What is genuinely working, what the industry would rather keep quiet, and the occasional lesson from doing this longer than is probably wise.
+A year in, completely skint and pitching for work down in Gibraltar, I was offered a deal I did not actually want, performance only, no fee, where I would get paid purely on the results I delivered. It turned out to be the very thing that kept the company alive when the 2008 crash wiped out most of our clients in a matter of weeks. Funny how the thing you resist the hardest ends up being the thing that saves you.
 
-The honest version of how I got here. I started Silverbean in 2002 because I had a boss who once announced he was buying a Ferrari with cash if we all worked a bit harder. He was not joking, and he could not afford it. That was the night I decided I would rather make my own mistakes than keep cleaning up his.
+👉 Twenty four years later, that belief has well and truly been proven right. Silverbean is now a global agency with teams across the UK, Australia and the US, and I am as obsessed with this stuff as I was on day one, probably more so, which the people closest to me will happily tell you is both a blessing and a curse.
 
-A year in, skint and pitching a client in Gibraltar, I got offered a deal I did not want. Performance only, no fee. That deal is the only reason the company survived 2008, when the crash took most of our clients inside a few weeks. Funny how the thing you resist is the thing that saves you.
+What I have learned along the way is that none of it is really about the channel. It is about the people, the long relationships, and being honest enough to tell a client the thing they do not necessarily want to hear but absolutely need to.
 
-A few things I believe after all that. The people are 80% of it, in both directions. Being fair costs you sometimes and is still worth it. And you should probably enjoy the thing you give most of your waking life to.
-
-Dad of 3. Football coach. Man Utd since I was 6, which has taught me more about patience than any quarter-end ever has. If this is your world too, you are in the right place.`,
-    note: "Same idea, more room for the stories. Better if you want the profile itself to do some storytelling before you have posted much.",
+This is where I share what 24 years in the trenches has taught me, the wins, the near misses, and the odd opinion that the rest of the industry would probably rather I kept to myself. If you run marketing for an ecommerce brand, or you are building something of your own and you prefer your advice straight rather than dressed up, then I think we will get on rather well. Come and connect with me, and stick around for the ride.`,
+    note: "Told like a story, opening on the Ferrari boss. More room for the journey and the passion. Strong if you want the profile itself to pull people in before you have posted much.",
   },
 ];
 
@@ -222,7 +220,7 @@ const CONTENT_IDEAS: {
     hookA: "I hired the person who now runs a big chunk of the company at a barbecue. She knew nothing about marketing at the time.",
     hookB: "23 years ago I gave a job to someone who could not use Google. It is the best hiring decision I ever made.",
     guidance:
-      "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it quietly reassures anyone wondering how you actually lead.",
+      "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it reassures anyone wondering how you actually lead.",
     questions: [
       "How many good people have you walked past because their CV did not tick the box?",
     ],
@@ -297,7 +295,7 @@ const SESSIONS: {
       "Be more conscious of the conversations where you are making a difference.",
       "Next session booked, Tuesday 23 June at 10am, messaging and positioning.",
     ],
-    nextSession: "Session 2 · Tuesday 23 June 2026, 10am — messaging & positioning",
+    nextSession: "Session 2 · Tuesday 23 June 2026, 10am · messaging & positioning",
   },
 ];
 
