@@ -90,8 +90,8 @@ const HEADLINES: { label: string; text: string; scale: number; note: string }[] 
   {
     label: "Option 1",
     scale: 2,
-    text: "Founder & CEO, Silverbean. We grow ambitious ecommerce brands through affiliate. 24 years in. Still allergic to jargon.",
-    note: "Stripped back and simple, in the Amelia style you liked. Says what you do and who for, with a bit of you at the end.",
+    text: "Founder & CEO, Silverbean. We grow ambitious ecommerce brands through affiliate. 24 years in, plain English throughout.",
+    note: "Stripped back and simple, in the Amelia style you liked. Says what you do, who for, and how long you've been at it.",
   },
   {
     label: "Option 2",
