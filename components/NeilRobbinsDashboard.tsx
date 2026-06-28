@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Two sessions in, Neil. Your to-do list is live. Two jobs for you this fortnight: pick your headline and About in Brand Assets, and get your first two posts out using the content ideas. Session 3 is Monday 7 July at 11am.",
+    "Neil, your profile is live. Headline and About done, and both are brilliant. Two posts before 7 July, that is the only job left. Use your Content Ideas tab, pick a hook and hit publish. Neither has to be perfect. The bar is just showing up.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,16 +74,6 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr-headline",
-    text: "Review your five headline options in Brand Assets and pick the one that sounds most like you. Then update it on your LinkedIn profile.",
-    section: "brand",
-  },
-  {
-    id: "nr-about",
-    text: "Read Option A and Option B in Brand Assets and decide which direction to go. Drop Ben a note on anything that needs tweaking before you go live.",
-    section: "brand",
-  },
-  {
     id: "nr-posts",
     text: "Aim for two posts before Session 3 on 7 July. Use the content ideas in your Content tab. Pick a hook, build it, hit publish.",
     section: "content",
@@ -105,77 +95,28 @@ const POSITIONING: {
   audiences: [],
 };
 
-// Headlines: 5 options, max 220 characters. Scale 1 (ballsy) to 5 (beige) so
-// Neil can judge appetite in Session 2. Drafts, not final.
-const HEADLINES: { label: string; text: string; scale: number; note: string; favourite?: boolean }[] = [
+// Live headline — what Neil went with after reviewing the options. Updated 28 June 2026.
+const HEADLINES: { label: string; text: string; note: string }[] = [
   {
-    label: "Option 1",
-    scale: 2,
-    text: "Founder & CEO, Silverbean. We grow ambitious ecommerce brands through affiliate. 24 years in, plain English throughout.",
-    note: "Stripped back and simple, in the Amelia style you liked. Says what you do, who for, and how long you've been at it.",
-  },
-  {
-    label: "Option 2",
-    scale: 2,
-    text: "CEO, Silverbean | 24 years building an agency around the one kind of marketing that only charges you when it works | Performance partnerships for ecommerce brands | Plain English, no jargon",
-    note: "Confident and commercial without picking a fight. The 'only charges you when it works' line does the selling, the longevity does the credibility.",
-  },
-  {
-    label: "Option 3",
-    scale: 3,
-    text: "Founder & CEO at Silverbean | Helping DTC and ecommerce brands grow revenue through performance partnerships | 24 years in, still saying what most agency CEOs won't",
-    note: "The balanced middle. Clear on what you do and who for, with one line of edge at the end. A safe pick that still has a pulse.",
-  },
-  {
-    label: "Option 4",
-    scale: 4,
-    text: "Founder & CEO, Silverbean | Performance partnerships agency helping DTC and ecommerce brands grow revenue | 24 years building one of the UK's leading affiliate agencies",
-    note: "Credible and straight down the line. Reads well to a buyer who wants reassurance, but it does not turn many heads.",
-  },
-  {
-    label: "Option 5",
-    scale: 4,
-    favourite: true,
-    text: "Founder & CEO, Silverbean. We grow DTC and ecommerce brands through affiliate. Affiliate Agency of the Year, back to back.",
-    note: "Clean and credential-led, same simple style. Lets the Agency of the Year do the talking, no fuss.",
+    label: "Live on LinkedIn · 26 June 2026",
+    text: "Founder & CEO, Silverbean. We build Affiliate, Creator, and PR growth engines for DTC & Ecommerce brands. Affiliate Agency of the Year, back to back.",
+    note: "Neil's own version, built on Option 5. He broadened it to include Creator and PR alongside Affiliate, which better reflects Silverbean's current offer. Cleaner and more confident than the old headline, and the Agency of the Year credential does the credibility work without any fuss.",
   },
 ];
 
-// Two About drafts: one short (~1250 chars), one long (~2000 chars). Both first
-// person, commercial, personal, with a wry smile. Drafts to review in Session 2.
+// Live About section — what Neil went with after reviewing the drafts. Updated 28 June 2026.
 const ABOUT_VERSIONS: { label: string; text: string; note: string }[] = [
   {
-    label: "Option A · close to your current, reader-first",
-    text: `If you run marketing for an ecommerce brand, you'll recognise this.
+    label: "Live on LinkedIn · 26 June 2026",
+    text: `I talk to many DTC and Ecommerce leaders responsible growth and I'm finding they are typically stuck in one of three camps:
 
-Paid keeps getting more expensive, the board wants more revenue from a smaller budget, and affiliate sits in the corner of the plan, underused and written off as a bit of a footnote.
-
-I think that's daft, and I've spent 24 years proving it.
-
-I started Silverbean back in 2002 because I believed affiliate could be a primary driver of genuine, measurable growth for ambitious brands, rather than the footnote everyone had it down as. Two decades on, that belief has been proven right more times than I can count.
-
-Today Silverbean is a global performance partnerships agency, with teams across the UK, Australia and the US, working with DTC brands in more than 40 countries. Our clients see an average 40% lift in affiliate revenue inside their first 100 days, because we've spent 24 years building something across the whole buying journey that genuinely works.
-
-We've been named Affiliate Agency of the Year back to back, which is lovely, but it honestly isn't the bit I'm proudest of.
-
-That would be the team we've built, the clients who've stayed with us for years, and the fact we've grown from one bloke with a laptop into one of the leading affiliate agencies in the world without ever forgetting why we started.
-
-Away from the desk I coach an under 16s girls football team, which has taught me more about motivating people, managing strong characters and staying calm in total chaos than any leadership book ever has.
-
-So if you're building something in performance marketing and fancy a proper conversation, whether you're a brand ready to take affiliate seriously or a business that sees the value in working together, come and connect.`,
-    note: "Closest to what you already have, which you were right to like. Keeps your why and your results, opens with the reader, and drops a bit more of you in. The under 16s line earns a smile.",
-  },
-  {
-    label: "Option B · same substance, built to be skimmed",
-    text: `Most marketing leaders I talk to are stuck in one of three camps:
-
-👉 They're pouring budget into Google and Meta as the costs climb and the returns flatten
-👉 They suspect affiliate could be doing far more, but it's stuck being treated as a footnote
-👉 They're fed up of being sold to in jargon by people who can't explain it simply
+👉 They're pouring budget into Google and Meta but the costs are climbing and the returns are diminishing
+👉 They suspect affiliate and partnerships could do more, but are concerned whether they will be paying for sale they would have got anyway
+👉 They're under pressure to deliver more growth and more profit but with no more budget and with a small team who give everything but who can't do anymore
 
 If any of that rings true, you're in good company, and you're in the right place.
 
-👋 I'm Neil. I started Silverbean back in 2002 because I believed affiliate could be a primary driver of real, measurable growth for ambitious brands, rather than the afterthought everyone had it down as.
+I started Silverbean back in 2002 because I believed affiliates could be a primary driver of real, measurable growth for ambitious brands, rather than the afterthought everyone had it down as.
 
 24 years and a fair few grey hairs later, that belief has been proven right more times than I can count.
 
@@ -185,14 +126,14 @@ As nice as the awards are, the bit I'm actually proudest of is the team we've bu
 
 After all this time, I've got a fairly good idea of who I'm most useful to. You'll get the most out of following me if:
 
-✅ You suspect affiliate could be a serious growth driver and want someone to prove it
+✅ You suspect affiliate and partnerships could be a serious growth driver and want to prove it
 ✅ You'd rather hear the truth than a nicely polished version of it
 ✅ You like your marketing explained in plain English, not buzzwords
 
-When I'm not banging that drum, I coach an under 16s girls football team, which has taught me more about leadership, patience and herding strong personalities than 24 years in business ever has.
+When I'm not banging that drum, I coach kids football teams, which has taught me more about leadership, patience and herding strong personalities than 24 years in business ever has.
 
-I'm not for everyone, and that's kinda the point. But if any of that sounds like you, come and connect.`,
-    note: "Same substance, laid out the way I'd structure a strong About. Reader's world first, then your why, your results, and who you're most useful to. Easy to skim, and it flows.",
+I don't try to be for everyone, and that's kinda the point. But if any of that sounds like you, come and connect.`,
+    note: "Neil's own version, built on Option B. He adapted the three-camps opening to start with 'I talk to many DTC and Ecommerce leaders' rather than 'Most marketing leaders', which grounds it in his experience. He also changed the green tick filter to say 'want to prove it' rather than 'want someone to prove it', which is subtly stronger. The structure is identical to Option B: reader's situation first, then why, results, filter, personal texture.",
   },
 ];
 
@@ -510,7 +451,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil. You have got your pillars, your headline options, your About drafts and your first five content ideas. Your to-do list is live below. The two things I want from you before Session 3: decide on your headline and About section, and get two posts out. Neither has to be perfect. The bar is showing up. Everything else follows from there.
+                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. One job left before Session 3 on Monday 7 July: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect. The bar is showing up.
               </p>
             </div>
 
@@ -519,8 +460,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
               {[
                 { label: "Sessions done", value: "2 of 13", sub: "Next: Mon 7 July, 11am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
-                { label: "Headline", value: "Draft ready", sub: "Review options in Brand Assets" },
-                { label: "About section", value: "Draft ready", sub: "Review options in Brand Assets" },
+                { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
+                { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -547,7 +488,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 7, margin: 0, padding: 0 }}>
                   {[
                     "Your four content pillars, the territories we want you known for",
-                    "Positioning, headline and About section, all in Brand Assets",
+                    "Positioning, live headline and About section in Brand Assets",
                     "Content ideas with direction, added as we go",
                     "Milestone tracker, your 6-month journey",
                     "Ben's recommendations from every session",
@@ -755,17 +696,20 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {/* LinkedIn About drafts */}
             {ABOUT_VERSIONS.length > 0 && (
               <div style={{ marginBottom: 36 }}>
-                {/* A note from Ben about his current About */}
+                {/* A note from Ben on why these work */}
                 <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "18px 22px", marginBottom: 20 }}>
                   <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>A note from Ben</p>
-                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Neil, a quick word before you read these. Your current About honestly isn't bad, and I quite like it. You lead with your why, that belief affiliate could be a serious growth driver, and there's genuine personality and history in there too, which most CEOs never manage. The one thing it's missing is you talking to the reader. It reads as Silverbean's story more than yours, and it's pitched at insiders rather than the leaders you want to reach. So have a read of these two and send me any edits or notes before you go live.</p>
+                  <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>Neil, both look great live. The About opens with the reader's situation, not yours or Silverbean's, and that is the key move. Anyone in your target audience reads the first line and recognises themselves before they know anything about you. That is the hardest thing to write, and you have got it right. The green tick filter at the end flips the same trick in reverse: instead of selling at someone, you are filtering for them, which makes the right person lean in rather than feel pitched at. The headline is cleaner and more confident than the old one, and the Agency of the Year credential does the credibility work so the rest does not have to. Both are working exactly as intended.</p>
                 </div>
 
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn About section · 2 drafts</p>
-                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>Two directions to react to, Neil, not finished articles. Read them out loud. The one that sounds like you talking is the one to go with. Send Ben any edits or notes before you update LinkedIn.</p>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn About section · live version</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>What is live on Neil's profile as of 26 June 2026. His own version, built on the Option B structure with a few smart tweaks.</p>
                 {ABOUT_VERSIONS.map((v, i) => (
-                  <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 14 }}>
-                    <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: "0 0 12px" }}>{v.label}</p>
+                  <div key={i} style={{ background: "#eef4f1", border: `1px solid ${color}`, borderRadius: 6, padding: "24px 28px", marginBottom: 14 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+                      <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{v.label}</p>
+                      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#fff", background: color, borderRadius: 20, padding: "3px 9px" }}>Live</span>
+                    </div>
                     <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.8, margin: "0 0 12px", whiteSpace: "pre-wrap" }}>{v.text}</p>
                     <p style={{ fontSize: "0.78rem", color: "#7A746E", borderTop: "1px solid #E0DBD3", paddingTop: 12, margin: 0 }}>{v.note}</p>
                   </div>
@@ -776,18 +720,13 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {/* LinkedIn headline options with ballsy-to-beige meter */}
             {HEADLINES.length > 0 && (
               <div style={{ marginBottom: 24 }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn headline · 5 options</p>
-                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>All under LinkedIn's 220 character limit. The meter runs from ballsy to beige. Pick the one that sits where you want to sit, then update it on your profile.</p>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>LinkedIn headline · live version</p>
+                <p style={{ fontSize: "0.84rem", color: "#7A746E", lineHeight: 1.6, margin: "0 0 16px" }}>What is live on Neil's profile as of 26 June 2026. His own version, built on Option 5, expanded to include Creator and PR alongside Affiliate.</p>
                 {HEADLINES.map((h, i) => (
-                  <div key={i} style={{ background: h.favourite ? "#eef4f1" : "#fff", border: h.favourite ? `1px solid ${color}` : "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                        <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{h.label} · {h.text.length} characters</p>
-                        {h.favourite && (
-                          <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#fff", background: color, borderRadius: 20, padding: "3px 9px" }}>⭐ Ben's favourite</span>
-                        )}
-                      </div>
-                      <BallsyMeter scale={h.scale} color={color} />
+                  <div key={i} style={{ background: "#eef4f1", border: `1px solid ${color}`, borderRadius: 6, padding: "20px 24px", marginBottom: 12 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+                      <p style={{ fontSize: "0.72rem", fontWeight: 700, color, margin: 0 }}>{h.label} · {h.text.length} characters</p>
+                      <span style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#fff", background: color, borderRadius: 20, padding: "3px 9px" }}>Live</span>
                     </div>
                     <p style={{ fontSize: "0.95rem", color: "#1C1C1C", fontWeight: 600, lineHeight: 1.5, margin: "0 0 12px" }}>{h.text}</p>
                     <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.6, margin: 0 }}>{h.note}</p>
