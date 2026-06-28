@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Neil, your profile is live. Headline and About done, and both are brilliant. Two posts before 7 July, that is the only job left. Use your Content Ideas tab, pick a hook and hit publish. Neither has to be perfect. The bar is just showing up.",
+    "Neil, your profile is live. Headline and About done, and both are brilliant. Two posts before 7 July, that is the only job left. Use your Content Ideas tab, pick a hook and hit publish. Neither has to be perfect.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -451,7 +451,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. One job left before Session 3 on Monday 7 July: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect. The bar is showing up.
+                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. One job left before Session 3 on Monday 7 July: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect.
               </p>
             </div>
 
