@@ -785,6 +785,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
                     </div>
+                    <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
+                      <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
+                      <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Schedule for <strong>07:30am</strong> before people start work. That is when it gets seen.</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Always add a photo. It does not have to be directly related to the post — even something from around that time in your life works and makes a real difference to engagement.</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>If your headline is a quote from someone else, put it in speech marks so people know it is a quote, not your own words.</li>
+                      </ul>
+                    </div>
                     {CONTENT_IDEAS.map((idea, i) => (
                       <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
                     ))}
