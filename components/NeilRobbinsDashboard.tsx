@@ -789,7 +789,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
                       <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Schedule for <strong>07:30am</strong> before people start work. That is when it gets seen.</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Always add a photo. It does not have to be directly related to the post — even something from around that time in your life works and makes a real difference to engagement.</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Always add a photo. It does not have to be directly related to the post, even something from around that time in your life works and makes a real difference to engagement.</li>
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>If your headline is a quote from someone else, put it in speech marks so people know it is a quote, not your own words.</li>
                       </ul>
                     </div>
