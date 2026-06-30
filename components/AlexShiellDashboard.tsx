@@ -1163,9 +1163,29 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               };
               return (
                 <div style={{ marginBottom: 28 }}>
-                  <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 28 }}>
+                  <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 16 }}>
                     <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>1 July to mid-August · Dubai, Japan, Thailand · 4 weeks</p>
                     <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust that — the best video of the trip will come from a moment, not a plan.</p>
+                  </div>
+                  <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px", marginBottom: 28 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 12px" }}>Keep your eyes open — the best ideas will find you</p>
+                    <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 14px" }}>You don't need to force content on this trip. The moments will come. Here's what to stay alert to:</p>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {[
+                        { emoji: "🚗", text: "Supercars and superyachts on display — is someone living it or staging it? That tension is the video." },
+                        { emoji: "📱", text: "Crypto bros and passive income guys filming content in public — notice the setup, notice the props, notice how much of it is borrowed." },
+                        { emoji: "🤝", text: "Anyone who's actually built something — entrepreneur, business owner, tradesperson. If you can get them talking on camera, do it." },
+                        { emoji: "😊", text: "Happy people and unhappy people in the same place — the contrast between who's grinding and who's present tells a story worth filming." },
+                        { emoji: "✏️", text: "Great marketing or branding you spot on your travels — a shop, a market stall, a restaurant. What are they doing right? What would you do differently? That's a great short video." },
+                        { emoji: "🏯", text: "In Japan and Thailand: a trade or craft being done properly — a carpenter, a market trader, a chef. Compare the culture of work there to what gets sold online as 'the hustle'." },
+                        { emoji: "💡", text: "Anything that makes you stop and think 'why doesn't anyone at home do it this way?' — film the thought, not just the thing." },
+                      ].map((item, idx) => (
+                        <div key={idx} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                          <span style={{ fontSize: "0.9rem", lineHeight: 1.5, flexShrink: 0 }}>{item.emoji}</span>
+                          <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>{item.text}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   {([1, 2, 3, 4] as const).map(weekNum => {
                     const weekIdeas = AS_CONTENT_HOLIDAY.filter(idea => idea.holidayWeek === weekNum);
