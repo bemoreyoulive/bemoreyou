@@ -718,44 +718,8 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Your Journey</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Sessions</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 24px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
-
-            {/* Starting Line Snapshot */}
-            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "24px 28px", marginBottom: 36 }}>
-              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot. 26 May 2026.</p>
-              <h3 style={{ fontSize: "0.95rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 10px", letterSpacing: "-0.01em" }}>Where you are on Day One</h3>
-              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 16px" }}>A frozen picture of where you are the day this programme begins. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to compare. It's the only honest way to measure how far you've actually moved.</p>
-              <div className="grid-2" style={{ gap: 14 }}>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Audience</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal Instagram: ~43 to 45 followers, zero posts</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal TikTok: no active account. About 20 rant videos, some hitting 100k to 150k views</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Shiell Joinery Instagram: low followers, captions shifting from corporate to Gen Z</p>
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>The Business</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>8 months trading</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Zero employees, 2 to 3 subcontractors as needed</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Sales conversion roughly 1 in 2 to 3</p>
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Content output</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Inconsistent rant videos. No schedule, no positioning, no call to action, no funnel. Just rants in the car with a backdrop.</p>
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Confidence on camera</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High. Already comfortable filming solo phone videos in the car with no hesitation.</p>
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Mindset</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High energy. Excited. Hungry. Numbers-driven right now, all about follower counts and views. Impatient. No expressed anxiety.</p>
-                </div>
-                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
-                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Stories never told publicly yet</p>
-                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>The £7.55 firing and tribunal win, the four silent school years, the McDonald's confidence moment, the 30 rejected quotes, the SMMA past, the Dubai crypto bro take.</p>
-                </div>
-              </div>
-            </div>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 6px" }}>A running record of what we've covered, what shifted, and what was decided. Your whole journey, in one place.</p>
+            <p style={{ fontSize: "0.78rem", color: "#B0A89E", margin: "0 0 24px" }}>Scroll to the bottom to see the Starting Line Snapshot — where you were on day one, 26 May 2026.</p>
 
             {AS_SESSIONS.length === 0 ? (
               <PlaceholderTab label="Sessions" />
@@ -809,6 +773,43 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 </div>
               </div>
             )}
+            {/* Starting Line Snapshot — moved to bottom as it was day one */}
+            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "24px 28px", marginTop: 36, marginBottom: 28 }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>📸 Starting Line Snapshot. 26 May 2026.</p>
+              <h3 style={{ fontSize: "0.95rem", fontFamily: "var(--font-dm-serif), serif", fontWeight: 400, color: "#1C1C1C", margin: "0 0 10px", letterSpacing: "-0.01em" }}>Where you were on Day One</h3>
+              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 16px" }}>A frozen picture of where you were the day this programme began. We don't update this. We come back to it at 3 months (late August) and 6 months (November) to see how far you've moved. It's the only honest way to measure progress.</p>
+              <div className="grid-2" style={{ gap: 14 }}>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Audience</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal Instagram: ~43 to 45 followers, zero posts</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Personal TikTok: no active account. About 20 rant videos, some hitting 100k to 150k views</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Shiell Joinery Instagram: low followers, captions shifting from corporate to Gen Z</p>
+                </div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>The Business</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>8 months trading</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: "0 0 4px" }}>Zero employees, 2 to 3 subcontractors as needed</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Sales conversion roughly 1 in 2 to 3</p>
+                </div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Content output</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Inconsistent rant videos. No schedule, no positioning, no call to action, no funnel. Just rants in the car with a backdrop.</p>
+                </div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Confidence on camera</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High. Already comfortable filming solo phone videos in the car with no hesitation.</p>
+                </div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Mindset</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>High energy. Excited. Hungry. Numbers-driven right now, all about follower counts and views. Impatient. No expressed anxiety.</p>
+                </div>
+                <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 4, padding: "14px 16px" }}>
+                  <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 8px" }}>Stories never told publicly yet</p>
+                  <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>The £7.55 firing and tribunal win, the four silent school years, the McDonald's confidence moment, the 30 rejected quotes, the SMMA past, the Dubai crypto bro take.</p>
+                </div>
+              </div>
+            </div>
+
             <CommentBox clientName="Alex Shiell" tabName="Sessions" slug={slug} />
           </div>
         )}
