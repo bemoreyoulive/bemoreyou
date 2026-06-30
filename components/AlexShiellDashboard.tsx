@@ -421,11 +421,11 @@ const AS_CONTENT_FEEDBACK: ContentFeedbackEntry[] = [
     title: "Stop copying what successful people do. Build what actually works for you.",
     dateSent: "30 June 2026",
     platform: "Instagram + TikTok",
-    videoSummary: "Landscape format. The cold shower, no drinking, no partying habits being sold as the secret to success. Your argument: stop asking what successful people do and start asking what allows you to be the best version of yourself. If a warm shower works, have a warm shower. Build a routine you can actually stick to for years rather than burning out chasing someone else's.",
+    videoSummary: "Landscape format. Stop copying other people's routines — build one that actually works for you and stick to it.",
     feedback: [
-      { type: "positive", text: "A lot more down to earth than your usual stuff, and you still come across with real conviction. The landscape format works fine. You can post this on both Instagram and TikTok, so do both." },
-      { type: "positive", text: "I quite like that it stands out from the usual format. These calmer, more reflective posts are doing well right now. Don't dismiss this mode just because it's not a rant." },
-      { type: "constructive", text: "One thing to build in going forward: weave in an introduction of who you are and your mission somewhere in the clip, and end with a CTA to follow. Not at the very start, but threaded through naturally. Without it, someone who enjoys the video and doesn't already know you will scroll on and forget who said it. That's the thing to fix next time." },
+      { type: "positive", text: "Down to earth and still has real conviction. Landscape format is fine. Post it on both Instagram and TikTok." },
+      { type: "positive", text: "Good to stand out from the rant format. Calmer, reflective posts are doing well right now." },
+      { type: "constructive", text: "Next time: weave a quick intro of who you are and a CTA to follow somewhere mid-video. Without it, new viewers watch, enjoy it, and scroll on with no idea who said it." },
     ],
   },
 ];
