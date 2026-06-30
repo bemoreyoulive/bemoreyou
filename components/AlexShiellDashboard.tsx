@@ -572,7 +572,7 @@ function DailyWatchBox() {
 
 export default function AlexShiellDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
-  const [contentWeek, setContentWeek] = useState<"week1" | "week2" | "week3" | "week4" | "holiday">("week1");
+  const [contentWeek, setContentWeek] = useState<"week1" | "week2" | "week3" | "week4" | "holiday">("holiday");
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
@@ -1089,11 +1089,11 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Week sub-tabs */}
             <div style={{ display: "flex", gap: 0, borderBottom: "1px solid #E0DBD3", marginBottom: 24, flexWrap: "wrap" }}>
               {[
+                { id: "holiday" as const, label: "Holiday", count: AS_CONTENT_HOLIDAY.length },
                 { id: "week1" as const, label: "Week One", count: AS_CONTENT_WEEK_1.length },
                 { id: "week2" as const, label: "Week Two", count: AS_CONTENT_WEEK_2.length },
                 { id: "week3" as const, label: "Week Three", count: AS_CONTENT_WEEK_3.length },
                 { id: "week4" as const, label: "Week Four", count: AS_CONTENT_WEEK_4.length },
-                { id: "holiday" as const, label: "Holiday", count: AS_CONTENT_HOLIDAY.length },
               ].map(w => (
                 <button
                   key={w.id}
