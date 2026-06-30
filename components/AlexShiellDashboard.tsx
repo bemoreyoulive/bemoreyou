@@ -29,6 +29,7 @@ const AS_TODOS: { id: string; text: string; subtext?: string; owner: string; tab
   { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed.", owner: "Alex" },
   { id: "as3-4", text: "Film the going away piece before 1 July. Something like: I'm going away for four weeks at 18 and here is why I am not worried about the business. That is a strong piece of content before you leave.", owner: "Alex" },
   { id: "as3-5", text: "Van review exercise. Ben will send you a photo of a trades van. Record a voice note reaction and send it back. Ben will screen record it and send it to you to post on TikTok and Instagram Story.", owner: "Alex" },
+  { id: "as3-6", text: "Order the Hollyland lapel mic I recommended. Wireless, clips to your collar, about £50. The audio in your videos is the one thing that's still holding them back and it's an easy fix.", owner: "Alex" },
 ];
 
 // SESSIONS
@@ -491,6 +492,7 @@ const AS_CONTENT_FEEDBACK: ContentFeedbackEntry[] = [
       { type: "positive", text: "Down to earth and still has real conviction. Landscape format is fine. Post it on both Instagram and TikTok." },
       { type: "positive", text: "Good to stand out from the rant format. Calmer, reflective posts are doing well right now." },
       { type: "constructive", text: "Next time: weave a quick intro of who you are and a CTA to follow somewhere mid-video. Without it, new viewers watch, enjoy it, and scroll on with no idea who said it." },
+      { type: "constructive", text: "Audio: still not using the Hollyland lapel mic I recommended. Get that ordered this week, it'll make an immediate difference to how your videos sound." },
     ],
   },
 ];
