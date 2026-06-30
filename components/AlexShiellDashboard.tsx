@@ -18,7 +18,7 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Before Session 4 (Tuesday 30 June, 6pm). Last session before the holiday. Come with your raw content notes from your phone, an update on the calm video, and anything from the sites worth talking about. We'll use the time to set you up properly before you leave.";
+const AS_NEXT_MOVE = "Session 4 is tomorrow morning, Wednesday 1 July at 8:30am. Last one before you go away. Come with your raw content notes from your phone, an update on the calm video, and anything from the sites worth talking about. We'll set you up properly before you leave.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
@@ -99,7 +99,7 @@ const AS_SESSIONS: {
       "Van review exercise confirmed. Ben sends photo, you send voice note, Ben screen records for TikTok and Instagram Story.",
       "Film the going away piece before 1 July.",
     ],
-    nextSession: "Session 4. Tuesday 30 June 2026 at 6pm. Last session before the holiday. Setting you up properly before you leave.",
+    nextSession: "Session 4. Wednesday 1 July 2026 at 8:30am. Last session before the holiday. Setting you up properly before you leave.",
   },
 ];
 
@@ -404,6 +404,32 @@ const AS_RECS: { title: string; body: string }[] = [
   },
 ];
 
+// CONTENT FEEDBACK
+
+type ContentFeedbackEntry = {
+  id: string;
+  title: string;
+  dateSent: string;
+  platform: string;
+  videoSummary: string;
+  feedback: { type: "positive" | "constructive"; text: string }[];
+};
+
+const AS_CONTENT_FEEDBACK: ContentFeedbackEntry[] = [
+  {
+    id: "cf1",
+    title: "Stop copying what successful people do. Build what actually works for you.",
+    dateSent: "30 June 2026",
+    platform: "Instagram + TikTok",
+    videoSummary: "Landscape format. The cold shower, no drinking, no partying habits being sold as the secret to success. Your argument: stop asking what successful people do and start asking what allows you to be the best version of yourself. If a warm shower works, have a warm shower. Build a routine you can actually stick to for years rather than burning out chasing someone else's.",
+    feedback: [
+      { type: "positive", text: "A lot more down to earth than your usual stuff, and you still come across with real conviction. The landscape format works fine. You can post this on both Instagram and TikTok, so do both." },
+      { type: "positive", text: "I quite like that it stands out from the usual format. These calmer, more reflective posts are doing well right now. Don't dismiss this mode just because it's not a rant." },
+      { type: "constructive", text: "One thing to build in going forward: weave in an introduction of who you are and your mission somewhere in the clip, and end with a CTA to follow. Not at the very start, but threaded through naturally. Without it, someone who enjoys the video and doesn't already know you will scroll on and forget who said it. That's the thing to fix next time." },
+    ],
+  },
+];
+
 // GOALS
 
 const AS_GOALS = {
@@ -442,6 +468,7 @@ const TABS = [
   { id: "milestones", label: "Milestones" },
   { id: "brand", label: "Brand Assets" },
   { id: "content", label: "Content Ideas" },
+  { id: "feedback", label: "Content Feedback" },
   { id: "recommendations", label: "Ben's Recommendations" },
   { id: "goals", label: "Goals" },
 ];
@@ -548,7 +575,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(auto-fit, minmax(180px, 1fr))", gap: isMobile ? 8 : 14, marginBottom: isMobile ? 16 : 28 }}>
               {[
-                { label: "Sessions", value: "3 of 13", sub: "Next: Tue 30 June, 6pm" },
+                { label: "Sessions", value: "3 of 13", sub: "Next: Wed 1 July, 8:30am" },
                 { label: "Programme length", value: "6 months", sub: "May to November 2026" },
                 { label: "Platform", value: "Instagram & TikTok", sub: "@thewolfofjoinery" },
                 { label: "Content live", value: "Starting this week", sub: "First video incoming" },
@@ -1061,6 +1088,42 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             })()}
 
             <CommentBox clientName="Alex Shiell" tabName="Content Ideas" slug={slug} />
+          </div>
+        )}
+
+        {/* CONTENT FEEDBACK */}
+        {activeTab === "feedback" && (
+          <div>
+            <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>From Ben</p>
+            <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 8px", letterSpacing: "-0.02em" }}>Content Feedback</h2>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 28px" }}>A running log of content you've posted and shared with Ben. Every entry has a title so you know which one it is, the date, and a few short bullet points of feedback. Positive and constructive. This builds over time as you keep posting.</p>
+
+            {AS_CONTENT_FEEDBACK.length === 0 ? (
+              <PlaceholderTab label="Content Feedback" />
+            ) : (
+              <div>
+                {AS_CONTENT_FEEDBACK.map((entry) => (
+                  <div key={entry.id} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "24px 28px", marginBottom: 16 }}>
+                    <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 4px" }}>{entry.dateSent} · {entry.platform}</p>
+                    <p style={{ fontSize: "0.98rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 12px", lineHeight: 1.3 }}>{entry.title}</p>
+                    <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 18px", fontStyle: "italic" }}>{entry.videoSummary}</p>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      {entry.feedback.map((point, j) => {
+                        const isPositive = point.type === "positive";
+                        return (
+                          <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "12px 14px", borderRadius: 4, background: isPositive ? "#f0fdf4" : "#fffbf2", border: isPositive ? "1px solid #86efac" : `1px solid ${AS_COLOR}44` }}>
+                            <span style={{ flexShrink: 0, fontSize: "0.8rem", color: isPositive ? "#16a34a" : AS_COLOR, fontWeight: 700 }}>{isPositive ? "✓" : "→"}</span>
+                            <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.55, margin: 0 }}>{point.text}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <CommentBox clientName="Alex Shiell" tabName="Content Feedback" slug={slug} />
           </div>
         )}
 
