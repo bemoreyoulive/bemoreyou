@@ -1032,48 +1032,54 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               ))}
             </div>
 
-            {/* Pillars in content tab — short summaries only, full versions in Brand Assets */}
-            <div style={{ marginBottom: 32 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 6px" }}>Your four content pillars. Your north star.</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 18px" }}>When you don't know what to film, come back here, pick a pillar, then just talk. Full breakdown of each lives in Brand Assets.</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+            {/* Pillars + daily filter — combined */}
+            <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 4px" }}>Your four content pillars</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 16px" }}>When you don't know what to film, pick a pillar and just talk. Full breakdown in Brand Assets.</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10, marginBottom: 20 }}>
                 {AS_POSITIONING.contentPillars.map((p, i) => {
                   const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
                   const pc = pillarColors[i % pillarColors.length];
                   return (
-                    <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderTop: `4px solid ${pc}`, borderRadius: 6, padding: "20px 20px 22px" }}>
-                      <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 8px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
-                      <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 8px", lineHeight: 1.3 }}>{p.title}</p>
-                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.45, margin: 0 }}>{p.short}</p>
+                    <div key={i} style={{ background: "#F9F8F6", border: `1px solid ${pc}33`, borderLeft: `3px solid ${pc}`, borderRadius: 5, padding: "14px 16px" }}>
+                      <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: pc, margin: "0 0 5px" }}>Pillar {i + 1}{i === 0 ? " · The Big One" : ""}</p>
+                      <p style={{ fontSize: "0.86rem", fontWeight: 700, color: "#1C1C1C", margin: "0 0 4px", lineHeight: 1.3 }}>{p.title}</p>
+                      <p style={{ fontSize: "0.8rem", color: "#5A5550", lineHeight: 1.4, margin: 0 }}>{p.short}</p>
                     </div>
                   );
                 })}
               </div>
+              <div style={{ borderTop: "1px solid #E0DBD3", paddingTop: 16 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Daily filter — 🍻 🚐 📱</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {AS_DAILY_WATCH.map((w, i) => (
+                    <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                      <span style={{ fontSize: "1rem", flexShrink: 0, lineHeight: 1.4 }}>{w.emoji}</span>
+                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.4, margin: 0 }}><strong>{w.title}</strong> — {w.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <DailyWatchBox />
-
-            {/* What the content is building toward */}
-            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}66`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>What the content is building toward</p>
-              <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Every idea in the tabs below serves at least one of these three jobs. Keep them in mind when you pick what to film.</p>
-              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, margin: 0, padding: 0 }}>
+            {/* What you're building + why the best ideas land — combined */}
+            <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}55`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
+              <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 12px" }}>What you're building + why the best ideas land</p>
+              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: "0 0 18px", padding: 0 }}>
                 {[
                   "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
                   "Document the journey. The footage you grab now is the most valuable you will ever shoot, because early days only happen once.",
-                  "Balance the rants. The contrarian content is working. Now balance it with the personal story and the lifestyle proof. People need to know who you are, not just what you think.",
+                  "Balance the rants. The contrarian content is working. Now balance it with the personal story and the lifestyle proof.",
                 ].map((point, i) => (
-                  <li key={i} style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.6, paddingLeft: 18, position: "relative" }}>
+                  <li key={i} style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.55, paddingLeft: 18, position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, color: AS_COLOR, fontWeight: 700 }}>→</span>{point}
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Why your two best videos worked */}
-            <div style={{ background: "#1C1C1C", borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
-              <p style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 10px" }}>Why your two best videos worked</p>
-              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.6, margin: 0 }}>Your two strongest videos were the don't-go-to-uni one and the two-week joinery course one. They both did well for the same reason: they talk about something a huge number of people already care about and have a personal stake in. The second someone sees the word uni, anyone at uni or thinking about going stops and watches. Same with the course, thousands of people are weighing one up or have an opinion on them. So when you pick a topic, ask yourself who already cares about this and how big is that group. The bigger and more personal that audience, the harder the video works. Every idea below is built with that in mind.</p>
+              <div style={{ borderTop: `1px solid ${AS_COLOR}33`, paddingTop: 14 }}>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Why your two best videos worked</p>
+                <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your two strongest videos — the don't-go-to-uni one and the two-week joinery course one — worked for the same reason: they talk about something a huge number of people already care about and have a personal stake in. Someone sees the word "uni" and anyone at uni or thinking about going stops and watches. When you pick a topic, ask yourself: who already cares about this, and how big is that group? Every idea below is built with that in mind.</p>
+              </div>
             </div>
 
             {/* Week sub-tabs */}
