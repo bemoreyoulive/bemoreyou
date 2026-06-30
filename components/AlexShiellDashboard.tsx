@@ -318,7 +318,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head before or just after landing. Calm and reflective, not a rant.",
     guidance: [
-      "Open on the shock: 'I've let my business slow right down for a month at 18.' The audience here is everyone who's ever felt trapped by their job or business and thinks they can never step away — which is most people. Lean into that directly.",
+      "Open on the shock: 'I've let my business slow right down for a month at 18.' The audience here is everyone who's ever felt trapped by their job or business and thinks they can never step away, which is most people. Lean into that directly.",
       "Anchor it in the truth: the right person is covering things and the marketing switches back on when you're home. That's why you can step away without it falling apart.",
       "Close on: 'When else am I going to be 18?' Anyone who's ever sacrificed time, relationships or their health for a job will feel that line.",
     ],
@@ -362,10 +362,10 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
-    format: "Reactive content — don't plan this one. This is a briefing on what to look for. The moment finds you.",
+    format: "Reactive content. Don't plan this one. This is a briefing on what to look for. The moment finds you.",
     guidance: [
       "A superyacht, a hypercar, or something eye-wateringly expensive on display: film yourself looking at it and talk about what it actually takes to own something like that versus what the crypto bros and passive income guys tell you it takes. The people watching are the ones who've been sold the shortcut.",
-      "A get-rich-quick type actively filming content — recording in front of a rented car, staging a shot on a borrowed boat. Don't call them out personally. Call out the pattern. That's the video people have been waiting for someone to make in real time.",
+      "A get-rich-quick type actively filming content, recording in front of a rented car, staging a shot on a borrowed boat. Don't call them out personally. Call out the pattern. That's the video people have been waiting for someone to make in real time.",
       "A genuine entrepreneur you get talking to in Dubai, someone who's actually built something. Get them on camera if you can. What did they actually do, how long did it take, what would they tell a lad of 18. That conversation is worth more than any rant you can write in advance.",
     ],
   },
@@ -380,7 +380,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     format: "Talking head, anywhere. Hotel room, outside, in transit. The backdrop doesn't matter for this one.",
     guidance: [
       "Open calm and straight to camera. Keep the quieter tone the whole way through. This is not a rant.",
-      "Keep it general, never about specific people by name. Everyone has a version of this — someone who wrote them off, someone who's now watching the videos — and the less you name names, the wider the audience who see themselves in it. That's exactly why it works.",
+      "Keep it general, never about specific people by name. Everyone has a version of this: someone who wrote them off, someone who's now watching the videos, and the less you name names, the wider the audience who see themselves in it. That's exactly why it works.",
       "Close high ground: the fact they're still thinking about you tells you you're doing something right. No bitterness. That's what makes it land.",
     ],
     noEdit: true,
@@ -395,7 +395,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     format: "Talking head, anywhere. The contrast between where you are now and where the story starts does half the work.",
     guidance: [
       "Open cold: 'I got fired for refusing to drop to £7.55 an hour.' Say the exact figure. Give it a beat before you carry on.",
-      "The audience here is everyone who's ever been underpaid, undervalued, or treated like a mug at work. That's most people who've ever had a job. Tell it straight — the tribunal, the win, what happened next. The detail that you were on £8 and they tried to cut you to £7.55 is what makes people feel it.",
+      "The audience here is everyone who's ever been underpaid, undervalued, or treated like a mug at work. That's most people who've ever had a job. Tell it straight: the tribunal, the win, what happened next. The detail that you were on £8 and they tried to cut you to £7.55 is what makes people feel it.",
       "Close on your own line: become bigger than the company that fired you. Then end it there.",
     ],
     noEdit: true,
@@ -410,7 +410,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head, straight to camera. Short story arc, two minutes max.",
     guidance: [
-      "Open on the number: 'I put out 30 quotes and won zero of them when I first started.' Anyone who's ever been knocked back repeatedly in sales, business, or job applications stops here — and that's a massive audience.",
+      "Open on the number: 'I put out 30 quotes and won zero of them when I first started.' Anyone who's ever been knocked back repeatedly in sales, business, or job applications stops here, and that's a massive audience.",
       "The specific shift: 'We can do that' became 'We will do that'. 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
       "Close on: 'I started talking to people like I'd already got the job.' That's the real change, so leave it there.",
     ],
@@ -425,7 +425,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Film this on the way home or just after you land back. Talking head, reflective. This is the one that closes the trip.",
     guidance: [
-      "Open with the simple fact: I've just spent a month away from my business at 18. The audience here is every business owner or would-be entrepreneur who's convinced they can never step away — which is most of them. Talk directly to that fear.",
+      "Open with the simple fact: I've just spent a month away from my business at 18. The audience here is every business owner or would-be entrepreneur who's convinced they can never step away, which is most of them. Talk directly to that fear.",
       "Tell them: it didn't collapse. The right systems and the right person meant things kept moving. That's the proof of concept for everything you're building.",
       "Close on the question you'll get: wasn't that irresponsible? Answer it honestly, then ask them what they think responsibility actually means at 18.",
     ],
@@ -486,7 +486,7 @@ const AS_CONTENT_FEEDBACK: ContentFeedbackEntry[] = [
     title: "Stop copying what successful people do. Build what actually works for you.",
     dateSent: "30 June 2026",
     platform: "Instagram + TikTok",
-    videoSummary: "Landscape format. Stop copying other people's routines — build one that actually works for you and stick to it.",
+    videoSummary: "Landscape format. Stop copying other people's routines, build one that actually works for you and stick to it.",
     feedback: [
       { type: "positive", text: "Down to earth and still has real conviction. Landscape format is fine. Post it on both Instagram and TikTok." },
       { type: "positive", text: "Good to stand out from the rant format. Calmer, reflective posts are doing well right now." },
@@ -1050,12 +1050,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 })}
               </div>
               <div style={{ borderTop: "1px solid #E0DBD3", paddingTop: 16 }}>
-                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Daily filter — 🍻 🚐 📱</p>
+                <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 10px" }}>Daily filter: 🍻 🚐 📱</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {AS_DAILY_WATCH.map((w, i) => (
                     <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                       <span style={{ fontSize: "1rem", flexShrink: 0, lineHeight: 1.4 }}>{w.emoji}</span>
-                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.4, margin: 0 }}><strong>{w.title}</strong> — {w.body}</p>
+                      <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.4, margin: 0 }}><strong>{w.title}</strong>: {w.body}</p>
                     </div>
                   ))}
                 </div>
@@ -1078,7 +1078,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               </ul>
               <div style={{ borderTop: `1px solid ${AS_COLOR}33`, paddingTop: 14 }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Why your two best videos worked</p>
-                <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your two strongest videos — the don't-go-to-uni one and the two-week joinery course one — worked for the same reason: they talk about something a huge number of people already care about and have a personal stake in. Someone sees the word "uni" and anyone at uni or thinking about going stops and watches. When you pick a topic, ask yourself: who already cares about this, and how big is that group? Every idea below is built with that in mind.</p>
+                <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your two strongest videos (the don't-go-to-uni one and the two-week joinery course one) worked for the same reason: they talk about something a huge number of people already care about and have a personal stake in. Someone sees the word "uni" and anyone at uni or thinking about going stops and watches. When you pick a topic, ask yourself: who already cares about this, and how big is that group? Every idea below is built with that in mind.</p>
               </div>
             </div>
 
@@ -1162,29 +1162,29 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {contentWeek === "holiday" && (() => {
               const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
               const weekLabels: Record<number, string> = {
-                1: "Week 1 — Dubai",
-                2: "Week 2 — Dubai",
-                3: "Week 3 — Japan and Thailand",
-                4: "Week 4 — Heading home",
+                1: "Week 1: Dubai",
+                2: "Week 2: Dubai",
+                3: "Week 3: Japan and Thailand",
+                4: "Week 4: Heading home",
               };
               return (
                 <div style={{ marginBottom: 28 }}>
                   <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 16 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>1 July to mid-August · Dubai, Japan, Thailand · 4 weeks</p>
-                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust that — the best video of the trip will come from a moment, not a plan.</p>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>1 July to mid-August · Dubai, Japan, Thailand · 6 weeks</p>
+                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust that. The best video of the trip will come from a moment, not a plan.</p>
                   </div>
                   <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px", marginBottom: 28 }}>
-                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 12px" }}>Keep your eyes open — the best ideas will find you</p>
-                    <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 14px" }}>You don't need to force content on this trip. The moments will come. Here's what to stay alert to:</p>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 12px" }}>Keep your eyes open: the best ideas will find you</p>
+                    <p style={{ fontSize: "0.83rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 14px" }}>I believe you don't need to force it on this trip. The ideas will find you. Here's what to stay alert to:</p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                       {[
-                        { emoji: "🚗", text: "Supercars and superyachts on display — is someone living it or staging it? That tension is the video." },
-                        { emoji: "📱", text: "Crypto bros and passive income guys filming content in public — notice the setup, notice the props, notice how much of it is borrowed." },
-                        { emoji: "🤝", text: "Anyone who's actually built something — entrepreneur, business owner, tradesperson. If you can get them talking on camera, do it." },
-                        { emoji: "😊", text: "Happy people and unhappy people in the same place — the contrast between who's grinding and who's present tells a story worth filming." },
-                        { emoji: "✏️", text: "Great marketing or branding you spot on your travels — a shop, a market stall, a restaurant. What are they doing right? What would you do differently? That's a great short video." },
-                        { emoji: "🏯", text: "In Japan and Thailand: a trade or craft being done properly — a carpenter, a market trader, a chef. Compare the culture of work there to what gets sold online as 'the hustle'." },
-                        { emoji: "💡", text: "Anything that makes you stop and think 'why doesn't anyone at home do it this way?' — film the thought, not just the thing." },
+                        { emoji: "🚗", text: "Supercars and superyachts on display. Ask yourself whether the person next to it actually owns it. Your audience already suspects they don't, and you saying it out loud is the video." },
+                        { emoji: "📱", text: "Crypto bros and passive income guys filming content in public. Notice the setup, notice the props, notice how much of it is borrowed." },
+                        { emoji: "🤝", text: "Anyone who's actually built something: entrepreneur, business owner, tradesperson. If you can get them talking on camera, do it." },
+                        { emoji: "😊", text: "Happy people and unhappy people in the same place. The contrast between who's grinding and who's present tells a story worth filming." },
+                        { emoji: "✏️", text: "Great marketing or branding you spot on your travels: a shop, a market stall, a restaurant. What are they doing right? What would you do differently? That's a great short video." },
+                        { emoji: "🏯", text: "In Japan and Thailand: a trade or craft being done properly: a carpenter, a market trader, a chef. Compare the culture of work there to what gets sold online as 'the hustle'." },
+                        { emoji: "💡", text: "Anything that makes you stop and think 'why doesn't anyone at home do it this way?' Film the thought, not just the thing." },
                       ].map((item, idx) => (
                         <div key={idx} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                           <span style={{ fontSize: "0.9rem", lineHeight: 1.5, flexShrink: 0 }}>{item.emoji}</span>
@@ -1211,13 +1211,13 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                               </div>
                               {idea.hookAlt ? (
                                 <>
-                                  <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>Hook — pick one</p>
+                                  <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>Hook: pick one</p>
                                   <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "12px 16px", marginBottom: 8 }}>
-                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>A — Conversational</p>
+                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>A: Conversational</p>
                                     <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{idea.hook}</p>
                                   </div>
                                   <div style={{ background: "#1C1C1C", borderRadius: 4, padding: "12px 16px", marginBottom: 14 }}>
-                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: pc, margin: "0 0 6px" }}>B — Bold</p>
+                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: pc, margin: "0 0 6px" }}>B: Bold</p>
                                     <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#fff", lineHeight: 1.45, margin: 0 }}>{idea.hookAlt}</p>
                                   </div>
                                 </>
