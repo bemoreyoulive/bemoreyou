@@ -461,6 +461,10 @@ const AS_DAILY_WATCH: { emoji: string; title: string; body: string; pillar: stri
 
 const AS_RECS: { title: string; body: string }[] = [
   {
+    title: "On clarity. The 26 June voice note told me something.",
+    body: "You sent me a voice note on 26 June saying you want to make your content more PR friendly because you've started a new company. I want to tell you what I heard in that.\n\nThe clarity process is working. A few weeks ago the question was how to go viral. Now you're thinking about what your brand should actually do for you in the real world. That's a completely different question, and it's the right one. Most people who start building a personal brand never get there. They stay chasing the number and the account grows and feels hollow.\n\nYou're starting to understand what you actually want from all of this. Not just the follower count, but the real thing underneath it. What your name and your voice should actually open up for you. That's what this process is supposed to surface, and the fact it's coming through this early tells me you're further along than you think.\n\nI want to ask you tomorrow what made you send that voice note. Not just what the company is, though we'll get into that too. I mean what shifted. What made you stop and think about it. Because I suspect the answer tells us something important about where this brand is really going.",
+  },
+  {
     title: "On authenticity. This is the ongoing work.",
     body: "Right now you're watching other people, borrowing their energy, trying different versions of yourself on for size. That's normal at 18, and it's part of how you find your voice. Here's what I'm watching:\n\n•  You already know the gurus are fake and the LARPing is hollow. You told me as much yourself.\n•  You're still pulled that way, because you haven't yet found the crowd that validates the real you.\n•  So you borrow validation from people who already have a crowd.\n•  When the first genuine DM lands, that pull starts to loosen.\n\nUntil then, keep posting as you, not a polished version of someone else. The brand only works if it's actually you in it.",
   },
