@@ -997,12 +997,12 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: AS_COLOR, marginBottom: 8 }}>Your Content Foundation</p>
             <h2 className="dash-h2" style={{ color: "#1C1C1C", margin: "0 0 12px", letterSpacing: "-0.02em" }}>Content Ideas</h2>
-            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. The four pillars below are a general direction, nothing more.</p>
+            <p style={{ fontSize: "0.88rem", color: "#7A746E", lineHeight: 1.5, margin: "0 0 20px" }}>Specific video ideas and hooks land here after each session. I see the four pillars below as a general direction, nothing more.</p>
 
             {/* Before you post checklist */}
             <div style={{ background: "#1C1C1C", borderRadius: 8, padding: "22px 26px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>Before you post</p>
-              <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.4, margin: "0 0 20px" }}>Four questions. Answer them before you hit publish, every time.</p>
+              <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.4, margin: "0 0 20px" }}>My four non-negotiables. Answer them before you hit publish, every time.</p>
               {[
                 {
                   num: "1",
@@ -1035,7 +1035,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* Pillars + daily filter — combined */}
             <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 4px" }}>Your four content pillars</p>
-              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 16px" }}>When you don't know what to film, pick a pillar and just talk. Full breakdown in Brand Assets.</p>
+              <p style={{ fontSize: "0.82rem", color: "#7A746E", lineHeight: 1.45, margin: "0 0 16px" }}>My advice: when you don't know what to film, pick a pillar and just talk. Full breakdown in Brand Assets.</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10, marginBottom: 20 }}>
                 {AS_POSITIONING.contentPillars.map((p, i) => {
                   const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
@@ -1065,6 +1065,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             {/* What you're building + why the best ideas land — combined */}
             <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}55`, borderLeft: `4px solid ${AS_COLOR}`, borderRadius: 6, padding: "20px 24px", marginBottom: 28 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 12px" }}>What you're building + why the best ideas land</p>
+              <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>Three things I want every piece of content to be doing for you right now.</p>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: "0 0 18px", padding: 0 }}>
                 {[
                   "Plant your flag. Anyone landing on your profile should know in five seconds that you're 18, in joinery in Edinburgh, and the contrarian voice in this space.",
@@ -1078,7 +1079,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
               </ul>
               <div style={{ borderTop: `1px solid ${AS_COLOR}33`, paddingTop: 14 }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 8px" }}>Why your two best videos worked</p>
-                <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>Your two strongest videos (the don't-go-to-uni one and the two-week joinery course one) worked for the same reason: they talk about something a huge number of people already care about and have a personal stake in. Someone sees the word "uni" and anyone at uni or thinking about going stops and watches. When you pick a topic, ask yourself: who already cares about this, and how big is that group? Every idea below is built with that in mind.</p>
+                <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>In my view, your two strongest videos (the don't-go-to-uni one and the two-week joinery course one) worked for the same reason: they talk about something a huge number of people already care about and have a personal stake in. Someone sees the word "uni" and anyone at uni or thinking about going stops and watches. When you pick a topic, ask yourself: who already cares about this, and how big is that group? Every idea below is built with that in mind.</p>
               </div>
             </div>
 
@@ -1171,7 +1172,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 <div style={{ marginBottom: 28 }}>
                   <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 16 }}>
                     <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>1 July to mid-August · Dubai, Japan, Thailand · 6 weeks</p>
-                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust that. The best video of the trip will come from a moment, not a plan.</p>
+                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust me on that. The best video of the trip will come from a moment, not a plan.</p>
                   </div>
                   <div style={{ background: "#F5F1EC", border: "1px solid #E0DBD3", borderRadius: 6, padding: "18px 20px", marginBottom: 28 }}>
                     <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A746E", margin: "0 0 12px" }}>Keep your eyes open: the best ideas will find you</p>
