@@ -182,6 +182,7 @@ type ContentIdea = {
   noEdit?: boolean;
   status?: "used" | "partial";
   filmsWithMate?: boolean;
+  holidayWeek?: 1 | 2 | 3 | 4;
 };
 
 const AS_CONTENT_WEEK_1: ContentIdea[] = [
@@ -368,6 +369,126 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
   },
 ];
 
+// HOLIDAY CONTENT. 4 weeks: Dubai (Wks 1-2), Japan/Thailand (Wk 3), Thailand/home (Wk 4). 2 ideas per week. Reuses unused Week 3-4 ideas where they travel well.
+
+const AS_CONTENT_HOLIDAY: ContentIdea[] = [
+  // WEEK 1 — DUBAI
+  {
+    holidayWeek: 1,
+    hook: "I'm letting my joinery business sit for a month while I travel the world at 18, and here's why I'm not losing sleep over it.",
+    pillar: 4,
+    pillarLabel: "Have A Life AND A Business",
+    effort: "Low effort, phone only",
+    format: "Talking head before or just after landing. Calm, reflective. Not a rant.",
+    guidance: [
+      "Open with the shock line: 'I'm letting my business slow right down for a month at 18.' Then immediately give them the reason to keep watching: here's why I'm not worried.",
+      "Anchor it in the truth: you have the right person covering things and the marketing switches back on when you're home. That's why you can step away without it falling apart.",
+      "Close on: 'When else am I going to be 18?' That's why hustle culture doesn't own me.",
+    ],
+    noEdit: true,
+  },
+  {
+    holidayWeek: 1,
+    hook: "I've just landed in Dubai. The place every online guru told me to move to. Here's what it actually looks like when you get here.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Short, straight to camera on arrival. Film it within the first few hours. Don't plan it.",
+    guidance: [
+      "Film it in the moment, not later. The first-reaction energy is what makes it work and you only get it once.",
+      "Keep it honest. If it looks incredible, say that. If it doesn't match the hype, say that too. The observation is the content.",
+      "No need for a full take in this one. You're just arriving. The follow-up videos do the heavier lifting.",
+    ],
+    noEdit: true,
+  },
+  // WEEK 2 — DUBAI
+  {
+    holidayWeek: 2,
+    hook: "I'm walking around Dubai and I keep seeing the same type of guy. He's on every course thumbnail you've ever been sold. I want to talk about that.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Walking and talking with Dubai as the backdrop, or straight to camera from your hotel. Real, not touristy.",
+    guidance: [
+      "Open pointing at what you're seeing: this is the same lifestyle they keep selling everyone at home, and most of the people selling it are renting the car and the backdrop for the day.",
+      "Use the mate example: a mate of mine was grinding in his bedroom every night because he thought this is where it led. Tell them what you actually told him.",
+      "Close on: I'm in Dubai this week and I'm having a good time. That's not the issue. The issue is the people who sell it as the destination.",
+    ],
+    noEdit: true,
+  },
+  {
+    holidayWeek: 2,
+    hook: "Keep your eyes open in Dubai this week. When you see one of these, that's the video.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Reactive content — don't plan this one in advance. This is a briefing on what to look for. The moment finds you, not the other way round.",
+    guidance: [
+      "A superyacht or a hypercar parked up: film yourself looking at it and say — this is what the course thumbnail promised you. Then talk about what it actually took to own one, versus what gets sold online to lads your age.",
+      "Someone staging a thumbnail photo in front of a rented car or boat: don't expose them personally, expose the pattern. That's the video your audience already knows is happening but never sees called out in real time.",
+      "A real builder or entrepreneur you get talking to in Dubai: get the conversation on camera. What did they actually do, how long did it take, what would they tell their 18-year-old self. That conversation is worth more than any rant.",
+    ],
+  },
+  // WEEK 3 — JAPAN / THAILAND
+  {
+    holidayWeek: 3,
+    hook: "Something funny happens when you start doing well. The people who said nothing when you started have a lot to say now. I'm filming this from the other side of the world.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Talking head, anywhere. Hotel room, outside, in transit. The backdrop doesn't matter for this one.",
+    guidance: [
+      "Open calm and straight to camera. 'It's funny, the moment you start doing well, people who never gave you the time of day suddenly take an interest.' Keep the quieter tone the whole way through.",
+      "Keep it general, never about specific people. Everyone has a version of this, and the less you name names, the more people see themselves in it.",
+      "Close high ground: the fact they're still thinking about you tells you you're doing something right.",
+    ],
+    noEdit: true,
+  },
+  {
+    holidayWeek: 3,
+    hook: "I'm going to tell you the story of the day I got fired for £7.55 an hour. I'm telling it from Japan, which feels about right.",
+    pillar: 2,
+    pillarLabel: "Contrarian Takes & Mini Revolution",
+    effort: "Low effort, phone only",
+    format: "Talking head, anywhere. The contrast between where you are now and where the story starts does half the work.",
+    guidance: [
+      "Open cold: 'I got fired for refusing to drop to £7.55 an hour.' Say the exact figure. Give it a beat before you carry on.",
+      "Tell it straight. The tribunal, the win, what happened next. The detail that you were on £8 and they tried to cut you to £7.55 is the bit that makes people feel it.",
+      "Close on your own line: become bigger than the company that fired you. Then end it there.",
+    ],
+    noEdit: true,
+  },
+  // WEEK 4 — THAILAND / HEADING HOME
+  {
+    holidayWeek: 4,
+    hook: "I did 30 quotes in a row and won zero of them. Here's the one thing I changed.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Talking head, straight to camera. Short story arc, two minutes max.",
+    guidance: [
+      "Open cold: 'I did 30 quotes in a row and won zero of them. Most lads would've packed it in by then.' Say it plainly and move into the story.",
+      "The specific shift: 'We can' became 'We will'. 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
+      "Close on: 'I started talking to people like I'd already got the job.' That's the real change, so don't dress it up.",
+    ],
+    noEdit: true,
+  },
+  {
+    holidayWeek: 4,
+    hook: "I've just spent a month away at 18 with the business running without me. Here's what that taught me that no guru ever admits.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Film this on the way home or just after you land back. Talking head, reflective. This is the one that closes the trip.",
+    guidance: [
+      "Open with the simple fact: I've just spent a month away from the business at 18. Here's what actually happened.",
+      "Tell them: it didn't collapse. The right systems and the right person in place meant things kept moving. That's the proof point for everything you're building.",
+      "Close on the question you'll get: wasn't that irresponsible? Answer it honestly. Then ask them what they think responsibility actually means at 18.",
+    ],
+    noEdit: true,
+  },
+];
+
 // DAILY WATCH. Three things to keep an eye out for every day. Quick story content or a swap for the day's idea.
 
 const AS_DAILY_WATCH: { emoji: string; title: string; body: string; pillar: string }[] = [
@@ -505,7 +626,7 @@ function DailyWatchBox() {
 
 export default function AlexShiellDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
-  const [contentWeek, setContentWeek] = useState<"week1" | "week2" | "week3" | "week4">("week1");
+  const [contentWeek, setContentWeek] = useState<"week1" | "week2" | "week3" | "week4" | "holiday">("week1");
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => { setIsMobile(window.innerWidth < 640); }, []);
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [activeTab]);
@@ -1018,6 +1139,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                 { id: "week2" as const, label: "Week Two", count: AS_CONTENT_WEEK_2.length },
                 { id: "week3" as const, label: "Week Three", count: AS_CONTENT_WEEK_3.length },
                 { id: "week4" as const, label: "Week Four", count: AS_CONTENT_WEEK_4.length },
+                { id: "holiday" as const, label: "Holiday", count: AS_CONTENT_HOLIDAY.length },
               ].map(w => (
                 <button
                   key={w.id}
@@ -1041,7 +1163,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             </div>
 
             {/* Active week ideas */}
-            {(() => {
+            {contentWeek !== "holiday" && (() => {
               const ideas = contentWeek === "week1" ? AS_CONTENT_WEEK_1 : contentWeek === "week2" ? AS_CONTENT_WEEK_2 : contentWeek === "week3" ? AS_CONTENT_WEEK_3 : AS_CONTENT_WEEK_4;
               const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
               return (
@@ -1080,6 +1202,58 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                             </li>
                           ))}
                         </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })()}
+
+            {contentWeek === "holiday" && (() => {
+              const pillarColors = ["#d97706", "#9333ea", "#0891b2", "#16a34a"];
+              const weekLabels: Record<number, string> = {
+                1: "Week 1 — Dubai",
+                2: "Week 2 — Dubai",
+                3: "Week 3 — Japan and Thailand",
+                4: "Week 4 — Heading home",
+              };
+              return (
+                <div style={{ marginBottom: 28 }}>
+                  <div style={{ background: "#fffbf2", border: `1px solid ${AS_COLOR}44`, borderLeft: `3px solid ${AS_COLOR}`, borderRadius: 6, padding: "16px 20px", marginBottom: 28 }}>
+                    <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 6px" }}>1 July to mid-August · Dubai, Japan, Thailand · 4 weeks</p>
+                    <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Two ideas per week, all phone-only jobs you can film between sightseeing. The trip itself is the content. Where it says to look out for something rather than film something specific, trust that — the best video of the trip will come from a moment, not a plan.</p>
+                  </div>
+                  {([1, 2, 3, 4] as const).map(weekNum => {
+                    const weekIdeas = AS_CONTENT_HOLIDAY.filter(idea => idea.holidayWeek === weekNum);
+                    return (
+                      <div key={weekNum} style={{ marginBottom: 32 }}>
+                        <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: AS_COLOR, margin: "0 0 14px", paddingBottom: 10, borderBottom: `1px solid ${AS_COLOR}33` }}>{weekLabels[weekNum]}</p>
+                        {weekIdeas.map((idea, i) => {
+                          const pc = pillarColors[idea.pillar - 1];
+                          return (
+                            <div key={i} className="dash-card-lg" style={{ background: "#fff", border: "1px solid #E0DBD3", borderLeft: `4px solid ${pc}`, borderRadius: 6, marginBottom: 14 }}>
+                              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
+                                <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: pc, background: `${pc}15`, padding: "4px 10px", borderRadius: 3 }}>Pillar {idea.pillar} · {idea.pillarLabel}</span>
+                                <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A746E", background: "#F5F1EC", padding: "4px 10px", borderRadius: 3 }}>{idea.effort}</span>
+                                {idea.noEdit && (
+                                  <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#16a34a", background: "#16a34a15", padding: "4px 10px", borderRadius: 3 }}>No editing needed</span>
+                                )}
+                              </div>
+                              <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Hook</p>
+                              <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.45 }}>{idea.hook}</p>
+                              <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Format</p>
+                              <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.45, margin: "0 0 14px" }}>{idea.format}</p>
+                              <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>{idea.holidayWeek === 2 && i === 1 ? "What to look out for" : "How to approach it"}</p>
+                              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, margin: 0, padding: 0 }}>
+                                {idea.guidance.map((point, j) => (
+                                  <li key={j} style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.55, paddingLeft: 18, position: "relative" }}>
+                                    <span style={{ position: "absolute", left: 0, color: pc, fontWeight: 700 }}>→</span>{point}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        })}
                       </div>
                     );
                   })}
