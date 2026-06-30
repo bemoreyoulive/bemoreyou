@@ -183,6 +183,7 @@ type ContentIdea = {
   status?: "used" | "partial";
   filmsWithMate?: boolean;
   holidayWeek?: 1 | 2 | 3 | 4;
+  hookAlt?: string;
 };
 
 const AS_CONTENT_WEEK_1: ContentIdea[] = [
@@ -304,91 +305,97 @@ const AS_CONTENT_WEEK_4: ContentIdea[] = [
   },
 ];
 
-// HOLIDAY CONTENT. 4 weeks: Dubai (Wks 1-2), Japan/Thailand (Wk 3), Thailand/home (Wk 4). 2 ideas per week. Reuses unused Week 3-4 ideas where they travel well.
+// HOLIDAY CONTENT. 4 weeks: Dubai (Wks 1-2), Japan/Thailand (Wk 3), Thailand/home (Wk 4). 2 ideas per week. Each has two hook options: A = conversational, B = bold.
 
 const AS_CONTENT_HOLIDAY: ContentIdea[] = [
   // WEEK 1 — DUBAI
   {
     holidayWeek: 1,
-    hook: "I'm letting my joinery business sit for a month while I travel the world at 18, and here's why I'm not losing sleep over it.",
+    hook: "I've just shut down my joinery business for a month to travel the world at 18, and before you say I'm mental, I want to explain why I think I'm right.",
+    hookAlt: "Taking a month off my business at 18 while every other lad my age is grinding himself into the ground, and I'm not even slightly sorry about it.",
     pillar: 4,
     pillarLabel: "Have A Life AND A Business",
     effort: "Low effort, phone only",
-    format: "Talking head before or just after landing. Calm, reflective. Not a rant.",
+    format: "Talking head before or just after landing. Calm and reflective, not a rant.",
     guidance: [
-      "Open with the shock line: 'I'm letting my business slow right down for a month at 18.' Then immediately give them the reason to keep watching: here's why I'm not worried.",
-      "Anchor it in the truth: you have the right person covering things and the marketing switches back on when you're home. That's why you can step away without it falling apart.",
-      "Close on: 'When else am I going to be 18?' That's why hustle culture doesn't own me.",
+      "Open on the shock: 'I've let my business slow right down for a month at 18.' The audience here is everyone who's ever felt trapped by their job or business and thinks they can never step away — which is most people. Lean into that directly.",
+      "Anchor it in the truth: the right person is covering things and the marketing switches back on when you're home. That's why you can step away without it falling apart.",
+      "Close on: 'When else am I going to be 18?' Anyone who's ever sacrificed time, relationships or their health for a job will feel that line.",
     ],
     noEdit: true,
   },
   {
     holidayWeek: 1,
-    hook: "I've just landed in Dubai. The place every online guru told me to move to. Here's what it actually looks like when you get here.",
+    hook: "I'm 18, I run a joinery company in Edinburgh, and I've just landed in Dubai, the city everyone keeps telling me I should be moving to. Give me 48 hours and I'll tell you what I actually think.",
+    hookAlt: "Everyone in my comments tells me to move to Dubai. I finally came to have a look. And I've got a few things to say about it.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
     format: "Short, straight to camera on arrival. Film it within the first few hours. Don't plan it.",
     guidance: [
-      "Film it in the moment, not later. The first-reaction energy is what makes it work and you only get it once.",
-      "Keep it honest. If it looks incredible, say that. If it doesn't match the hype, say that too. The observation is the content.",
-      "No need for a full take in this one. You're just arriving. The follow-up videos do the heavier lifting.",
+      "Film it in the first couple of hours of landing. The reaction is the content and you only get it once.",
+      "Anyone who's ever been sold the Dubai dream online will stop and watch what an 18-year-old from Edinburgh who's openly sceptical about it actually sees when he gets there. You don't need a fully formed take yet. You're arriving. That's the video.",
+      "No need to wrap it up neatly. The follow-up videos do the heavier lifting.",
     ],
     noEdit: true,
   },
   // WEEK 2 — DUBAI
   {
     holidayWeek: 2,
-    hook: "I'm walking around Dubai and I keep seeing the same type of guy. He's on every course thumbnail you've ever been sold. I want to talk about that.",
+    hook: "I've been in Dubai for a week and I keep bumping into the same type of bloke. He's the one who's been trying to sell you crypto, passive income, or some get-rich-quick bullshit online for the last three years. I think I've worked out what's actually going on.",
+    hookAlt: "Dubai is absolutely full of the guys who've been selling you courses and crypto on Instagram. I've been watching them all week and I want to talk about it.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
     format: "Walking and talking with Dubai as the backdrop, or straight to camera from your hotel. Real, not touristy.",
     guidance: [
-      "Open pointing at what you're seeing: this is the same lifestyle they keep selling everyone at home, and most of the people selling it are renting the car and the backdrop for the day.",
-      "Use the mate example: a mate of mine was grinding in his bedroom every night because he thought this is where it led. Tell them what you actually told him.",
-      "Close on: I'm in Dubai this week and I'm having a good time. That's not the issue. The issue is the people who sell it as the destination.",
+      "Open pointing at what you're seeing: this is the same lifestyle they keep flogging to everyone at home, and a lot of the people selling it are renting the car and the backdrop for the day.",
+      "The audience here is everyone who's ever been advertised to by a crypto bro, a passive income guy, or a make-£10k-from-your-laptop merchant. That's basically everyone your age who's been online in the last five years. They already know this is a con. You're just the one saying it out loud.",
+      "Close on: I'm in Dubai this week and I'm having a good time, that's not the issue. The issue is the people who sell it as the destination.",
     ],
     noEdit: true,
   },
   {
     holidayWeek: 2,
-    hook: "Keep your eyes open in Dubai this week. When you see one of these, that's the video.",
+    hook: "I'm in Dubai and I'm looking for something specific. When I find it, that's when I'm filming.",
+    hookAlt: "There are three things I'm keeping an eye out for in Dubai this week. When one of them shows up, you'll see the video.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
-    format: "Reactive content — don't plan this one in advance. This is a briefing on what to look for. The moment finds you, not the other way round.",
+    format: "Reactive content — don't plan this one. This is a briefing on what to look for. The moment finds you.",
     guidance: [
-      "A superyacht or a hypercar parked up: film yourself looking at it and say — this is what the course thumbnail promised you. Then talk about what it actually took to own one, versus what gets sold online to lads your age.",
-      "Someone staging a thumbnail photo in front of a rented car or boat: don't expose them personally, expose the pattern. That's the video your audience already knows is happening but never sees called out in real time.",
-      "A real builder or entrepreneur you get talking to in Dubai: get the conversation on camera. What did they actually do, how long did it take, what would they tell their 18-year-old self. That conversation is worth more than any rant.",
+      "A superyacht, a hypercar, or something eye-wateringly expensive on display: film yourself looking at it and talk about what it actually takes to own something like that versus what the crypto bros and passive income guys tell you it takes. The people watching are the ones who've been sold the shortcut.",
+      "A get-rich-quick type actively filming content — recording in front of a rented car, staging a shot on a borrowed boat. Don't call them out personally. Call out the pattern. That's the video people have been waiting for someone to make in real time.",
+      "A genuine entrepreneur you get talking to in Dubai, someone who's actually built something. Get them on camera if you can. What did they actually do, how long did it take, what would they tell a lad of 18. That conversation is worth more than any rant you can write in advance.",
     ],
   },
   // WEEK 3 — JAPAN / THAILAND
   {
     holidayWeek: 3,
-    hook: "Something funny happens when you start doing well. The people who said nothing when you started have a lot to say now. I'm filming this from the other side of the world.",
+    hook: "Something I've noticed since I started building Shiell Joinery in public: the people who had the least to say when I was grafting are suddenly very interested in what I'm doing. I'm filming this from Japan and I wanted to talk about it.",
+    hookAlt: "The second you start doing well for yourself, the people who said absolutely nothing when you were starting out suddenly have a lot of opinions about your choices. I'm on the other side of the world and I can't stop thinking about this.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "Low effort, phone only",
     format: "Talking head, anywhere. Hotel room, outside, in transit. The backdrop doesn't matter for this one.",
     guidance: [
-      "Open calm and straight to camera. 'It's funny, the moment you start doing well, people who never gave you the time of day suddenly take an interest.' Keep the quieter tone the whole way through.",
-      "Keep it general, never about specific people. Everyone has a version of this, and the less you name names, the more people see themselves in it.",
-      "Close high ground: the fact they're still thinking about you tells you you're doing something right.",
+      "Open calm and straight to camera. Keep the quieter tone the whole way through. This is not a rant.",
+      "Keep it general, never about specific people by name. Everyone has a version of this — someone who wrote them off, someone who's now watching the videos — and the less you name names, the wider the audience who see themselves in it. That's exactly why it works.",
+      "Close high ground: the fact they're still thinking about you tells you you're doing something right. No bitterness. That's what makes it land.",
     ],
     noEdit: true,
   },
   {
     holidayWeek: 3,
-    hook: "I'm going to tell you the story of the day I got fired for £7.55 an hour. I'm telling it from Japan, which feels about right.",
+    hook: "I'm going to tell you about the day I got fired for refusing to drop to £7.55 an hour. At the time it felt like the worst thing that'd happened to me. I'm filming this from Japan at 18, so it obviously didn't turn out that way.",
+    hookAlt: "The company that fired me for refusing £7.55 an hour is still out there doing the same thing to other lads. Meanwhile I'm 18, I'm filming this from Japan, and I'm building something that'll be bigger than them.",
     pillar: 2,
     pillarLabel: "Contrarian Takes & Mini Revolution",
     effort: "Low effort, phone only",
     format: "Talking head, anywhere. The contrast between where you are now and where the story starts does half the work.",
     guidance: [
       "Open cold: 'I got fired for refusing to drop to £7.55 an hour.' Say the exact figure. Give it a beat before you carry on.",
-      "Tell it straight. The tribunal, the win, what happened next. The detail that you were on £8 and they tried to cut you to £7.55 is the bit that makes people feel it.",
+      "The audience here is everyone who's ever been underpaid, undervalued, or treated like a mug at work. That's most people who've ever had a job. Tell it straight — the tribunal, the win, what happened next. The detail that you were on £8 and they tried to cut you to £7.55 is what makes people feel it.",
       "Close on your own line: become bigger than the company that fired you. Then end it there.",
     ],
     noEdit: true,
@@ -396,29 +403,31 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
   // WEEK 4 — THAILAND / HEADING HOME
   {
     holidayWeek: 4,
-    hook: "I did 30 quotes in a row and won zero of them. Here's the one thing I changed.",
+    hook: "When I first started Shiell Joinery I put out 30 quotes and won zero of them. That's 30 conversations, 30 nos, and most lads would've walked away. I want to talk about what actually changed.",
+    hookAlt: "I lost 30 jobs in a row when I was getting Shiell Joinery off the ground. What turned it around had nothing to do with the price I was charging.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "Low effort, phone only",
     format: "Talking head, straight to camera. Short story arc, two minutes max.",
     guidance: [
-      "Open cold: 'I did 30 quotes in a row and won zero of them. Most lads would've packed it in by then.' Say it plainly and move into the story.",
-      "The specific shift: 'We can' became 'We will'. 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
-      "Close on: 'I started talking to people like I'd already got the job.' That's the real change, so don't dress it up.",
+      "Open on the number: 'I put out 30 quotes and won zero of them when I first started.' Anyone who's ever been knocked back repeatedly in sales, business, or job applications stops here — and that's a massive audience.",
+      "The specific shift: 'We can do that' became 'We will do that'. 'When would you like us to start?' instead of waiting to be chosen. That's the concrete thing people take away.",
+      "Close on: 'I started talking to people like I'd already got the job.' That's the real change, so leave it there.",
     ],
     noEdit: true,
   },
   {
     holidayWeek: 4,
-    hook: "I've just spent a month away at 18 with the business running without me. Here's what that taught me that no guru ever admits.",
+    hook: "I'm heading home after a month away at 18. My joinery business is still running, nobody's died, and I've learnt more about building something properly in the last four weeks than I have in the last year.",
+    hookAlt: "I left my joinery business in someone else's hands for a month at 18 and went travelling. I flew back this week and found something I genuinely didn't expect.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "Low effort, phone only",
     format: "Film this on the way home or just after you land back. Talking head, reflective. This is the one that closes the trip.",
     guidance: [
-      "Open with the simple fact: I've just spent a month away from the business at 18. Here's what actually happened.",
-      "Tell them: it didn't collapse. The right systems and the right person in place meant things kept moving. That's the proof point for everything you're building.",
-      "Close on the question you'll get: wasn't that irresponsible? Answer it honestly. Then ask them what they think responsibility actually means at 18.",
+      "Open with the simple fact: I've just spent a month away from my business at 18. The audience here is every business owner or would-be entrepreneur who's convinced they can never step away — which is most of them. Talk directly to that fear.",
+      "Tell them: it didn't collapse. The right systems and the right person meant things kept moving. That's the proof of concept for everything you're building.",
+      "Close on the question you'll get: wasn't that irresponsible? Answer it honestly, then ask them what they think responsibility actually means at 18.",
     ],
     noEdit: true,
   },
@@ -1174,8 +1183,24 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
                                   <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#16a34a", background: "#16a34a15", padding: "4px 10px", borderRadius: 3 }}>No editing needed</span>
                                 )}
                               </div>
-                              <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Hook</p>
-                              <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.45 }}>{idea.hook}</p>
+                              {idea.hookAlt ? (
+                                <>
+                                  <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>Hook — pick one</p>
+                                  <div style={{ background: "#F9F8F6", borderRadius: 4, padding: "12px 16px", marginBottom: 8 }}>
+                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", margin: "0 0 6px" }}>A — Conversational</p>
+                                    <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{idea.hook}</p>
+                                  </div>
+                                  <div style={{ background: "#1C1C1C", borderRadius: 4, padding: "12px 16px", marginBottom: 14 }}>
+                                    <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: pc, margin: "0 0 6px" }}>B — Bold</p>
+                                    <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#fff", lineHeight: 1.45, margin: 0 }}>{idea.hookAlt}</p>
+                                  </div>
+                                </>
+                              ) : (
+                                <>
+                                  <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Hook</p>
+                                  <p style={{ fontSize: "0.86rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 10px", lineHeight: 1.45 }}>{idea.hook}</p>
+                                </>
+                              )}
                               <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 6px" }}>Format</p>
                               <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.45, margin: "0 0 14px" }}>{idea.format}</p>
                               <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B0A89E", margin: "0 0 8px" }}>{idea.holidayWeek === 2 && i === 1 ? "What to look out for" : "How to approach it"}</p>
