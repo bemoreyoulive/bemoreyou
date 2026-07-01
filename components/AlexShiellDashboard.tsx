@@ -28,7 +28,7 @@ const AS_TODOS: { id: string; text: string; subtext?: string; owner: string; tab
   { id: "as4-2", text: "Interview a digital nomad in Dubai. Keep it casual, film on your phone, get them talking.", owner: "Alex" },
   { id: "as4-3", text: "Pick up a lapel mic in Japan. Hollyland is the brand I'd go for. Find one that's compatible with your phone before you start filming in Japan and Thailand.", owner: "Alex" },
   { id: "as4-4", text: "Add a founder section to the Calico Joinery website while you're away. Real photos, your actual story. It's a beautiful site with no face behind it and that's the gap to close.", owner: "Alex" },
-  { id: "as3-2", text: "Send Ben your raw content ideas from your phone. Unpolished is exactly what is needed. That is the whole point.", owner: "Alex" },
+  { id: "as3-2", text: "Send Ben your raw content ideas from your phone. Unpolished, unfiltered, exactly as they came to you.", owner: "Alex" },
   { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed.", owner: "Alex" },
 ];
 
