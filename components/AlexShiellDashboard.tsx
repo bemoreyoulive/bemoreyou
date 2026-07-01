@@ -340,7 +340,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
     effort: "Low effort, phone only",
     format: "Talking head, straight to camera. Film it early in Dubai while the decision is still fresh.",
     guidance: [
-      "Be completely candid about what was actually going on in your head. Not the polished version. I want to know: why did YOU feel Shiell was too small? Was it a business decision or was it ego telling you your name isn't big enough yet? Because those are two very different answers and your audience will know which one is real.",
+      "Be completely candid about what was actually going on in your head. I want to know: why did YOU feel Shiell was too small? Was it a business decision or was it ego telling you your name isn't big enough yet? Because those are two very different answers and your audience will know which one is real.",
       "The more honest you are about the real motivation, the better this lands. If it was ego, say so. If it was genuine ambition to build something that outlasts you, say that. If you're not sure yet, say that too. The uncertainty is more interesting than a clean answer.",
       "Close on the question you haven't fully answered yet: 'I changed the name so the business can grow bigger than me. But am I actually ready to build something bigger than me?' That's the thing your audience wants to hear you sit with.",
     ],
