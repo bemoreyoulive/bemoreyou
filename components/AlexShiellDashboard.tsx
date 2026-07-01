@@ -1,7 +1,7 @@
 "use client";
 
 // Alex Shiell Dashboard
-// 18yo founder, Shiell Joinery. 13 sessions over 6 months.
+// 18yo founder, Calico Joinery (rebranded from Fuel/Shiell Joinery, July 2026). 13 sessions over 6 months.
 // Mission: start a mini revolution. Not commercial. No LinkedIn.
 // No em-dashes anywhere in this file. Use commas or full stops instead.
 // No sunglasses in profile photo (Ben's rule).
@@ -18,18 +18,18 @@ import SessionPrepPrompt from "@/components/SessionPrepPrompt";
 
 const AS_COLOR = "#d97706"; // Amber, trades energy, young, bold
 
-const AS_NEXT_MOVE = "Session 4 is tomorrow morning, Wednesday 1 July at 8:30am. Last one before you go away. Come with your raw content notes from your phone, an update on the calm video, and anything from the sites worth talking about. We'll set you up properly before you leave.";
+const AS_NEXT_MOVE = "Session 4 done. You're off on your travels. Your content plan is in the holiday tab and I've set you up properly for what's ahead. I'm on WhatsApp while you're away. Session 5 is 15 July, 12pm UK, 8pm Tokyo. Go enjoy it.";
 
 // TODOS. Updated after each session. Keep in sync with lib/todos.ts.
 
 const AS_TODOS: { id: string; text: string; subtext?: string; owner: string; tabLink?: { label: string; tab: string } }[] = [
-  { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak.", owner: "Alex", tabLink: { label: "Open Ben's Recommendations", tab: "recommendations" } },
-  { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it.", owner: "Alex" },
-  { id: "as3-2", text: "Send Ben your raw content ideas from your phone notes. Unpolished is exactly what is needed. That is the whole point.", owner: "Alex" },
+  { id: "as4-0", text: "Get your mate to take the ShiellCEO Instagram account down before you travel. A real potential client could find it and think it's you.", owner: "Alex" },
+  { id: "as4-1", text: "Post the going away video today. Wrapping up jobs, leaving for six weeks at 18. It's strong content and the timing is perfect.", owner: "Alex" },
+  { id: "as4-2", text: "Interview a digital nomad in Dubai. Ben is sending you three questions before you land. Keep it casual, film on your phone, get them talking.", owner: "Alex" },
+  { id: "as4-3", text: "Pick up a lapel mic in Japan. Hollyland is the brand I'd go for. Find one that's compatible with your phone before you start filming in Japan and Thailand.", owner: "Alex" },
+  { id: "as4-4", text: "Add a founder section to the Calico Joinery website while you're away. Real photos, your actual story. It's a beautiful site with no face behind it and that's the gap to close.", owner: "Alex" },
+  { id: "as3-2", text: "Send Ben your raw content ideas from your phone. Unpolished is exactly what is needed. That is the whole point.", owner: "Alex" },
   { id: "as3-3", text: "Post to drafts first. Film it, sit on it, then post at a sensible time. Not 9 or 10pm when most people are already in bed.", owner: "Alex" },
-  { id: "as3-4", text: "Film the going away piece before 1 July. Something like: I'm going away for four weeks at 18 and here is why I am not worried about the business. That is a strong piece of content before you leave.", owner: "Alex" },
-  { id: "as3-5", text: "Van review exercise. Ben will send you a photo of a trades van. Record a voice note reaction and send it back. Ben will screen record it and send it to you to post on TikTok and Instagram Story.", owner: "Alex" },
-  { id: "as3-6", text: "Order the Hollyland lapel mic I recommended. Wireless, clips to your collar, about £70 on Amazon. The audio in your videos is the one thing that's still holding them back and it's an easy fix.", owner: "Alex" },
 ];
 
 // SESSIONS
@@ -102,6 +102,27 @@ const AS_SESSIONS: {
     ],
     nextSession: "Session 4. Wednesday 1 July 2026 at 8:30am. Last session before the holiday. Setting you up properly before you leave.",
   },
+  {
+    number: 4,
+    date: "1 July 2026",
+    title: "Calico Joinery, the clarity shift, and setting you up for the trip.",
+    summary: "62 minutes on the morning you left for your travels. You'd rebranded to Calico Joinery, posted one calm video that landed, and came in with the most energy of any session so far. The big shift: for the first time you connected your personal brand directly to your business.",
+    insights: [
+      "The Calico Joinery website looks sharp. But there's no founder story and no real photos. Beautiful site, zero face behind it. That's the gap to close on holiday.",
+      "You said it yourself in session: 'I can't come on calling apprentices little dogs for their boss anymore because now I am the employer.' That clarity came from being challenged, not from going away and thinking alone.",
+      "Your best content idea yet: money and happiness. Jordan Belfort cuts, money printing machines, then the challenge. Say it exactly as you said it to me, to camera.",
+      "ShiellCEO on Instagram is a fake account made by a friend as a joke. AI images, Trump and Elon Musk. A real client could find it. Get it taken down before you travel.",
+      "You mentioned in passing that you used to have bad social anxiety. Worth coming back to when you're home.",
+    ],
+    takeaways: [
+      "Your personal brand and Calico Joinery are linked going forward. The balance between authentic and PR-friendly is the ongoing work.",
+      "Post the going away video today. Then let the content find you on the trip.",
+      "Pick up a lapel mic in Japan. Your content ideas are strong and the audio is the one thing holding the videos back.",
+      "Ben is sending you three interview questions for Dubai before you land. Use them.",
+      "Session 5 is 15 July, 12pm UK, 8pm Tokyo. Holiday content review and deciding what comes next.",
+    ],
+    nextSession: "Session 5. 15 July 2026, 12pm UK / 8pm Tokyo. Holiday content review, Calico positioning, and deciding what the next phase looks like.",
+  },
 ];
 
 // POSITIONING. Content pillars confirmed Session 2. Bio drafts kept for future reference.
@@ -153,7 +174,7 @@ const AS_POSITIONING = {
     ],
   },
   contentPillars: [
-    { title: "Documenting the Journey", body: "This is the big one. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Shiell Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
+    { title: "Documenting the Journey", body: "This is the big one. The most important pillar. Real-time business reality, hiring your first employee, quoting jobs, winning jobs, losing jobs, the path to becoming bigger than the company that fired you. Behind the scenes of running Calico Joinery at 18. Younger people build trust and familiarity by watching the journey unfold, not by being lectured at. This is how they end up rooting for you. People follow this because it's actually happening, not a course, not a guru, a real business in real time.", short: "The big one. Real-time business reality, hiring, quoting, winning, losing. Younger people build trust by watching the journey unfold. This is the pillar that compounds." },
     { title: "Contrarian Takes & Mini Revolution", body: "The big-picture contrarian opinions. Trades as the new untapped opportunity. SMMA, dropshipping, Dubai bros are the wrong path. Joinery is the new dropshipping, you're early. The £7.55 story, the school years, the 30 rejected quotes, all live here. Rant format you already know works. This is where the older tradesmen come and troll you in the comments, exactly what you want.", short: "The contrarian opinions and the rant format. Joinery is the new dropshipping. The £7.55 story. Where the older tradesmen come and troll you." },
     { title: "Calling Out What's Broken", body: "Calling out what's wrong in the trades. The company van series. Apprenticeship exploitation. Tradesmen who think it's 2005. Customer service in an industry that has none. The bits of the industry that need dragging into now, said by someone actually inside it. Not a journalist, not an outsider, you.", short: "What's broken in the trades. Company van series, apprentice exploitation, customer service, the 2005 mindset. Said by someone inside the industry." },
     { title: "You Can Have A Life And A Successful Business", body: "The proof point pillar. You don't need to grind 16 hour days, you don't need cold showers and 4am wake-ups, you don't need to sacrifice friends, family, dating, weekends. Show the balance. Beach days, parents, your girlfriend, travelling 6 weeks at 18 while the business still runs. This is the direct answer to the hustle bros, and it's the reason people will trust you over them.", short: "You don't need 16 hour days to win. Show the balance. Friends, family, travel, dating. The direct answer to the hustle bros." },
@@ -312,6 +333,21 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
   // WEEK 1 — DUBAI
   {
     holidayWeek: 1,
+    hook: "I changed the name of my joinery company this week, the same week I flew out to Dubai. Rebranded from Shiell Joinery to Calico Joinery. Not because things were going wrong. Because Shiell was always too small a name for what I actually want to build.",
+    hookAlt: "I renamed my entire company this week, the week I flew to Dubai. From Shiell Joinery to Calico Joinery. I'll tell you what shifted in my head, and why I think most tradespeople are making the same mistake I was.",
+    pillar: 1,
+    pillarLabel: "Documenting the Journey",
+    effort: "Low effort, phone only",
+    format: "Talking head, straight to camera. Film it early in Dubai while the decision is still fresh.",
+    guidance: [
+      "The core of this: Shiell is just a surname. It puts a ceiling on the business because the whole identity lives in one person. Calico Joinery is a brand. That's the shift you're making.",
+      "Most tradespeople slap their surname on a van and call it a business. That's a small ambition dressed up as a business. Your audience feels that. Call it out.",
+      "Close on the honest thing: 'I don't know yet if Calico is the right name forever. But Shiell definitely wasn't.' That uncertainty is more interesting than a clean answer.",
+    ],
+    noEdit: true,
+  },
+  {
+    holidayWeek: 1,
     hook: "I've just shut down my joinery business for a month to travel the world at 18, and before you say I'm mental, I want to explain why I think I'm right.",
     hookAlt: "Taking a month off my business at 18 while every other lad my age is grinding himself into the ground, and I'm not even slightly sorry about it.",
     pillar: 4,
@@ -373,7 +409,7 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
   // WEEK 3 — JAPAN / THAILAND
   {
     holidayWeek: 3,
-    hook: "Something I've noticed since I started building Shiell Joinery in public: the people who had the least to say when I was grafting are suddenly very interested in what I'm doing. I'm filming this from Japan and I wanted to talk about it.",
+    hook: "Something I've noticed since I started building Calico Joinery in public: the people who had the least to say when I was grafting are suddenly very interested in what I'm doing. I'm filming this from Japan and I wanted to talk about it.",
     hookAlt: "The second you start doing well for yourself, the people who said absolutely nothing when you were starting out suddenly have a lot of opinions about your choices. I'm on the other side of the world and I can't stop thinking about this.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
@@ -404,8 +440,8 @@ const AS_CONTENT_HOLIDAY: ContentIdea[] = [
   // WEEK 4 — THAILAND / HEADING HOME
   {
     holidayWeek: 4,
-    hook: "When I first started Shiell Joinery I put out 30 quotes and won zero of them. That's 30 conversations, 30 nos, and most lads would've walked away. I want to talk about what actually changed.",
-    hookAlt: "I lost 30 jobs in a row when I was getting Shiell Joinery off the ground. What turned it around had nothing to do with the price I was charging.",
+    hook: "When I first started Calico Joinery I put out 30 quotes and won zero of them. That's 30 conversations, 30 nos, and most lads would've walked away. I want to talk about what actually changed.",
+    hookAlt: "I lost 30 jobs in a row when I was getting Calico Joinery off the ground. What turned it around had nothing to do with the price I was charging.",
     pillar: 1,
     pillarLabel: "Documenting the Journey",
     effort: "Low effort, phone only",
@@ -461,8 +497,8 @@ const AS_DAILY_WATCH: { emoji: string; title: string; body: string; pillar: stri
 
 const AS_RECS: { title: string; body: string }[] = [
   {
-    title: "On clarity. The 26 June voice note told me something.",
-    body: "You sent me a voice note on 26 June saying you want to make your content more PR friendly because you've started a new company. I want to tell you what I heard in that.\n\nThe clarity process is working. A few weeks ago the question was how to go viral. Now you're thinking about what your brand should actually do for you in the real world. That's a completely different question, and it's the right one. Most people who start building a personal brand never get there. They stay chasing the number and the account grows and feels hollow.\n\nYou're starting to understand what you actually want from all of this. Not just the follower count, but the real thing underneath it. What your name and your voice should actually open up for you. That's what this process is supposed to surface, and the fact it's coming through this early tells me you're further along than you think.\n\nI want to ask you tomorrow what made you send that voice note. Not just what the company is, though we'll get into that too. I mean what shifted. What made you stop and think about it. Because I suspect the answer tells us something important about where this brand is really going.",
+    title: "On clarity. The rebrand told me where this is going.",
+    body: "You sent me a voice note on 26 June saying you want to make your content more PR friendly because you've started a new company. In Session 4 we worked out what you actually meant.\n\nYou said it out loud yourself: 'I can't come on calling apprentices little dogs for their boss anymore because now I am the employer.' That's the real shift. Your position in the story has changed and your content needs to catch up with where you are now.\n\nThat doesn't mean going corporate or sanding down the edges. Authenticity means not pleasing everyone, and the contrarian voice still works. What changes is that you're building something real with your name on it and your content should start to reflect that.\n\nCalico Joinery needs a founder with a face and a story. Your personal brand and your business are the same thing now. That's the clarity. Don't lose it while you're away.",
   },
   {
     title: "On authenticity. This is the ongoing work.",
@@ -516,19 +552,19 @@ const AS_GOALS = {
     "A recognisable presence on TikTok and Instagram. The contrarian young-trades voice in the UK.",
     "A real audience. Enough that a single post is reaching thousands.",
     "Real-world signals. DMs from apprentices saying you changed their mind. Podcast appearance requests. Trolls in the comments, the good kind.",
-    "Shiell Joinery has at least one full-time employee or a clear path to one.",
+    "Calico Joinery has at least one full-time employee or a clear path to one.",
     "Monetisation conversations starting to open up. Course ideas, speaking, partnerships, the kind of stuff that says the brand is doing actual work.",
     "You look back at the Day One snapshot on the Sessions tab and the May 2026 version of you feels noticeably far away.",
   ],
   business: [
-    "6 employees on the Shiell Joinery payroll within 12 months.",
+    "6 employees on the Calico Joinery payroll within 12 months.",
     "Biggest joinery company in Edinburgh.",
     "Bigger than the company that fired you.",
   ],
   notThisGame: [
     "We are not chasing follower counts for the sake of it.",
     "We are not optimising for views over authenticity.",
-    "We are not building a funnel or a personal brand to generate more joinery enquiries.",
+    "We are not building a short-term leads funnel. The brand opens doors. It doesn't replace a proper sales process.",
     "Vanity metrics are a side effect of doing it right. They are not the goal.",
   ],
 };
@@ -593,7 +629,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
             <div style={{ width: 36, height: 36, borderRadius: 3, background: AS_COLOR, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.05em" }}>AS</div>
             <div>
               <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", margin: 0 }}>Alex Shiell</p>
-              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Shiell Joinery · Session 4 of 13</p>
+              <p style={{ fontSize: "0.68rem", color: "#7A746E", margin: 0 }}>Founder, Calico Joinery · Session 5 of 13</p>
             </div>
           </div>
         </div>
@@ -624,7 +660,7 @@ export default function AlexShiellDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AS_COLOR} />
-            <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Session 2 · 3 June 2026" animateIn />
+            <NextMoveBox move={AS_NEXT_MOVE} accentColor={AS_COLOR} clientName="Alex Shiell" sessionLabel="Session 4 · 1 July 2026" animateIn />
 
             {/* Welcome card */}
             <div style={{ background: AS_COLOR, borderRadius: 8, marginBottom: 16, padding: isMobile ? "12px 14px" : "28px 32px", display: "flex", gap: isMobile ? 12 : 20, alignItems: "flex-start" }}>
