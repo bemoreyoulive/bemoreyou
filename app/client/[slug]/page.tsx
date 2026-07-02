@@ -17,7 +17,7 @@ import NeilRobbinsDashboard from "@/components/NeilRobbinsDashboard";
 // ─── ANDY FELTON DASHBOARD ───────────────────────────────────────────────────
 
 const AF_COLOR = "#2d5a8e";
-const AF_NEXT_MOVE = "The expo is Wednesday. Conversations and names are the goal. Door-knock Loughborough accountants next week. Prep for Angela's meeting Thursday morning; she coaches accountants and is already amplifying your content. Reflection session with Ben at 8am Thursday. Chris Dillon R&D still needs doing.";
+const AF_NEXT_MOVE = "Programme's paused for now, so this is about your own momentum. Keep the two posts a week going, book those expo coffee chats, and push the Chris Dillon R&D over the line. Review your networking groups and come back when you know what's next.";
 
 const afTodos = [
   { id: "af1", text: "Keep the two-posts-a-week rhythm going", subtext: "This is the thing that's actually working right now, so don't let it slip just because the sessions have paused. Keep leaning on real conversations, expo chats, and accountancy news for material rather than starting from a blank page each time.", section: "Ongoing", tabLink: undefined as { label: string; tab: string } | undefined },
@@ -609,7 +609,7 @@ function AndyFeltonDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={AF_COLOR} />
-            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="June 2026 · Session 13" animateIn />
+            <NextMoveBox move={AF_NEXT_MOVE} accentColor={AF_COLOR} clientName="Andy Felton" sessionLabel="July 2026 · Session 14" cadence="month" animateIn />
 
             <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1C1C1C", margin: "0 0 4px" }}>Your To-Do List — Post Session 13</h2>
             <p style={{ fontSize: "0.8rem", color: "#7A746E", margin: "0 0 20px" }}>Updated after Session 13 on 24th June. Tick things off as you go.</p>
