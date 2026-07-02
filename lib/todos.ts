@@ -8,13 +8,12 @@ export interface TodoDef {
 
 const clientTodos: Record<string, TodoDef[]> = {
   "andy-felton": [
-    { id: "w1", text: "Finalise the expo brochure and banner, and get them over to the expo organisers" },
-    { id: "w2", text: "Prep and practise your 45-second BNI pitch for Friday" },
-    { id: "w3", text: "Get this week's two accountant chats done, and book the new 1:1s" },
-    { id: "c1", text: "Post your networking reflection, and make it a habit after every event" },
-    { id: "p1", text: "Do the Chris Dillon R&D this week, ready for next week's call" },
-    { id: "m1", text: "Keep the momentum going: stay with Ben monthly so the traction doesn't stall" },
-    { id: "s13", text: "Next session: Session 13 on 24 June 2026 at 9:30am" },
+    { id: "af1", text: "Keep the two-posts-a-week rhythm going" },
+    { id: "af2", text: "Work through your expo contacts when you get a window" },
+    { id: "af3", text: "Review your networking groups and cut the ones that aren't earning their place" },
+    { id: "af4", text: "Get the Chris Dillon Phase 1 R&D over the line" },
+    { id: "af5", text: "Set up the warm email domains" },
+    { id: "af6", text: "Come back to Ben once you know what you need next" },
   ],
   "andy-scott-barrett": [
     { id: "s4-1", text: "Post the discounting post — 'Finance Simplified: Discounting by 10% Might Mean You Need to Sell 200% More Just to Break Even.' 30-minute timer." },
