@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Neil, your profile is live. Headline and About done, and both are brilliant. Session 3 has moved to Friday 10 July at 11am. Two posts before then is the only job left. Use your Content Ideas tab, pick a hook and hit publish.",
+    "Neil, your first two posts are posted and doing really well, the Ferrari one especially. Keep replying to every comment, that is half the job. Session 3 has moved to Friday 10 July at 11am, we will build the next batch and lock in the twice-weekly rhythm together.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -75,7 +75,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "nr-posts",
-    text: "Aim for two posts before Session 3 on Friday 10 July. Use the content ideas in your Content tab. Pick a hook, build it, hit publish.",
+    text: "Your first two posts are posted and getting real engagement. Keep replying to every comment, especially on the Ferrari post, that is what turns a good post into a relationship.",
     section: "content",
   },
   {
@@ -177,11 +177,16 @@ const CONTENT_IDEAS: {
   tips: string[];
   questions: string[];
   audience: string;
+  used?: boolean;
+  resultNote?: string;
 }[] = [
   {
     pillars: [0],
     hookA: "Finance love affiliate. Marketing keep forgetting it exists. Worth asking why.",
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
+    used: true,
+    resultNote:
+      "Posted. Neil took this one and made it his own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance conversation rather than a marketing one. Good engagement.",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     tips: [
@@ -199,6 +204,9 @@ const CONTENT_IDEAS: {
     pillars: [1],
     hookA: "My old boss came in one Monday and said he was buying a Ferrari with cash if we worked harder. He could not afford lunch.",
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
+    used: true,
+    resultNote:
+      "Posted, and the best performer yet. Around 75 likes and a strong run of comments, and Neil replied to every one of them, which is exactly the habit to keep. This is the pillar and the tone to lean into again.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
@@ -386,6 +394,7 @@ function PillarCard({ pillar, index, mode }: { pillar: typeof NR_PILLARS[number]
 export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
   const [contentMonth, setContentMonth] = useState("m1");
+  const [contentFilter, setContentFilter] = useState<"used" | "unused">("used");
   const config = NR_CONFIG;
   const { name, role, initials, color, sessionLabel } = config;
   const firstName = name.split(" ")[0];
@@ -451,7 +460,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. Session 3 has moved to Friday 10 July at 11am. One job left before then: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect.
+                Two sessions in, Neil, and your first two posts are out. The Finance Director pivot post and the Ferrari boss story, both landing well, and the Ferrari one especially, around 75 likes and a great run of comments you have replied to. Keep that up, it matters as much as the post itself. Session 3 has moved to Friday 10 July at 11am, see you then.
               </p>
             </div>
 
@@ -783,7 +792,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 5 posts to get you off the mark</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Two are posted already, the Finance Director pivot and the Ferrari boss story, both doing well. Use the tabs below to flick between what is out there and what is still in the tank.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
@@ -793,7 +803,30 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>If your headline is a quote from someone else, put it in speech marks so people know it is a quote, not your own words.</li>
                       </ul>
                     </div>
-                    {CONTENT_IDEAS.map((idea, i) => (
+
+                    {/* Used / not-yet-used sub-tabs */}
+                    <div style={{ display: "flex", gap: 8, marginBottom: 18, flexWrap: "wrap" }}>
+                      {[
+                        { id: "used" as const, label: `Posted (${CONTENT_IDEAS.filter(x => x.used).length})` },
+                        { id: "unused" as const, label: `Not posted yet (${CONTENT_IDEAS.filter(x => !x.used).length})` },
+                      ].map(f => (
+                        <button
+                          key={f.id}
+                          onClick={() => setContentFilter(f.id)}
+                          style={{
+                            fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+                            padding: "8px 16px", borderRadius: 20, cursor: "pointer",
+                            border: contentFilter === f.id ? `1px solid ${color}` : "1px solid #E0DBD3",
+                            background: contentFilter === f.id ? color : "#fff",
+                            color: contentFilter === f.id ? "#fff" : "#7A746E",
+                          }}
+                        >
+                          {f.label}
+                        </button>
+                      ))}
+                    </div>
+
+                    {CONTENT_IDEAS.map((idea, i) => (idea.used ?? false) === (contentFilter === "used") && (
                       <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
                     ))}
                   </>
@@ -876,8 +909,8 @@ function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string }; index: number; slug: string; color: string }) {
-  const [used, setUsed] = useState(false);
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string; used?: boolean; resultNote?: string }; index: number; slug: string; color: string }) {
+  const [used, setUsed] = useState(idea.used ?? false);
   const [saving, setSaving] = useState(false);
   const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
 
@@ -930,6 +963,13 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
           {used ? "Used ✓" : "Mark used"}
         </button>
       </div>
+
+      {used && idea.resultNote && (
+        <div style={{ background: `${color}0d`, border: `1px solid ${color}33`, borderRadius: 6, padding: "12px 14px", marginBottom: 16 }}>
+          <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 6px" }}>How it did</p>
+          <p style={{ fontSize: "0.84rem", color: "#3D3935", lineHeight: 1.55, margin: 0 }}>{idea.resultNote}</p>
+        </div>
+      )}
 
       {/* Hook options A and B */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
