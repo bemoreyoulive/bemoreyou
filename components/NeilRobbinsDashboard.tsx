@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Neil, your first two posts are posted and doing really well, the Ferrari one especially. Keep replying to every comment, that is half the job. Session 3 has moved to Friday 10 July at 11am, we will build the next batch and lock in the twice-weekly rhythm together.",
+    "Neil, your first two posts are out and landing well, the Ferrari one especially. Keep replying to comments yourself, don't let them sit there unanswered. Session 3 has moved to Friday 10 July at 11am, we will build the next batch and get you properly into a twice weekly rhythm.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -75,7 +75,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "nr-posts",
-    text: "Your first two posts are posted and getting real engagement. Keep replying to every comment, especially on the Ferrari post, that is what turns a good post into a relationship.",
+    text: "Your first two posts are out and getting proper engagement. Reply to every comment yourself, especially on the Ferrari post, rather than leaving people hanging.",
     section: "content",
   },
   {
@@ -186,7 +186,7 @@ const CONTENT_IDEAS: {
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     used: true,
     resultNote:
-      "Posted. You took this one and made it your own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance conversation rather than a marketing one. Good engagement.",
+      "You made this one properly your own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance problem rather than a marketing one, and it has landed well with a decent run of comments.",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     tips: [
@@ -206,7 +206,7 @@ const CONTENT_IDEAS: {
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     used: true,
     resultNote:
-      "Posted, and the best performer yet. Around 75 likes and a strong run of comments, and you replied to every one of them, which is exactly the habit to keep. This is the pillar and the tone to lean into again.",
+      "This is your best performer yet, about 75 likes and a proper run of comments, and you replied to every single one of them yourself.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
@@ -460,7 +460,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil, and your first two posts are out. The Finance Director pivot post and the Ferrari boss story, both landing well, and the Ferrari one especially, around 75 likes and a great run of comments you have replied to. Keep that up, it matters as much as the post itself. Session 3 has moved to Friday 10 July at 11am, see you then.
+                Two sessions in, Neil, and your first two posts are out. The Finance Director pivot and the Ferrari boss story, both landing well, and the Ferrari one especially: about 75 likes and a proper run of comments, all of which you replied to yourself. Keep doing that on every post. Session 3 has moved to Friday 10 July at 11am, see you then.
               </p>
             </div>
 
