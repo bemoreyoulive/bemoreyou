@@ -186,7 +186,7 @@ const CONTENT_IDEAS: {
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     used: true,
     resultNote:
-      "You made this one your own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance problem rather than a marketing one, and it has landed well with a decent run of comments.",
+      "You made this one your own, posted as 'The 5% pivot your Finance Director will thank you for'. It reframes rising Meta costs as a finance problem, not a marketing one, and it has landed well. The 60% and 68% stats up front are doing the real work, a CMO can't scroll past numbers like that. One note for next time: the ending hedges, 'or at least gives a nod of acceptance' softens the point right when it should land hardest.",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     tips: [
@@ -206,7 +206,7 @@ const CONTENT_IDEAS: {
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     used: true,
     resultNote:
-      "This is your best performer yet, about 75 likes and a strong run of comments, and you replied to every single one of them yourself.",
+      "This is your best performer yet, about 75 likes and a strong run of comments, and you replied to every single one of them yourself. The specific detail sells it: 9pm, the office, him bowling in fresh from test-driving Ferraris. People stopped scrolling for the details, not the moral at the end. Two things to catch next time: 'it was of those miserable winter nights' is missing a word, and the lessons list at the close isn't needed, the story already told us that.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
