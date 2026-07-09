@@ -186,7 +186,7 @@ const CONTENT_IDEAS: {
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     used: true,
     resultNote:
-      "Posted. Neil took this one and made it his own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance conversation rather than a marketing one. Good engagement.",
+      "Posted. You took this one and made it your own, posted as 'The 5% pivot your Finance Director will thank you for', reframing rising Meta costs as a finance conversation rather than a marketing one. Good engagement.",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     tips: [
@@ -206,7 +206,7 @@ const CONTENT_IDEAS: {
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     used: true,
     resultNote:
-      "Posted, and the best performer yet. Around 75 likes and a strong run of comments, and Neil replied to every one of them, which is exactly the habit to keep. This is the pillar and the tone to lean into again.",
+      "Posted, and the best performer yet. Around 75 likes and a strong run of comments, and you replied to every one of them, which is exactly the habit to keep. This is the pillar and the tone to lean into again.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
