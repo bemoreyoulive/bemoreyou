@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Neil, your profile is live. Headline and About done, and both are brilliant. Two posts before 7 July, that is the only job left. Use your Content Ideas tab, pick a hook and hit publish. Neither has to be perfect.",
+    "Neil, your profile is live. Headline and About done, and both are brilliant. Session 3 has moved to Friday 10 July at 11am. Two posts before then is the only job left. Use your Content Ideas tab, pick a hook and hit publish.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -75,7 +75,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "nr-posts",
-    text: "Aim for two posts before Session 3 on 7 July. Use the content ideas in your Content tab. Pick a hook, build it, hit publish.",
+    text: "Aim for two posts before Session 3 on Friday 10 July. Use the content ideas in your Content tab. Pick a hook, build it, hit publish.",
     section: "content",
   },
   {
@@ -324,9 +324,9 @@ const SESSIONS: {
       "You to review the About and headline options over the next two weeks and decide which to go with before Session 3.",
       "Aim for two posts before Session 3. Use the content ideas in your Content tab, pick a hook and go from there.",
       "Keep capturing grenade moments as voice notes and WhatsApp them to Ben straight away.",
-      "Session 3 booked, Monday 7 July at 11am.",
+      "Session 3 booked, Monday 7 July at 11am, since moved to Friday 10 July at 11am.",
     ],
-    nextSession: "Session 3 · Monday 7 July 2026, 11am · content review and grenade harvest",
+    nextSession: "Session 3 · Friday 10 July 2026, 11am · content review and grenade harvest",
   },
 ];
 
@@ -451,14 +451,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. One job left before Session 3 on Monday 7 July: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect.
+                Two sessions in, Neil. Your pillars are set, your LinkedIn profile is live with the new headline and About, and your content ideas are ready. Session 3 has moved to Friday 10 July at 11am. One job left before then: two posts. Pick a hook from your Content Ideas tab and hit publish. Neither has to be perfect.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "2 of 13", sub: "Next: Mon 7 July, 11am" },
+                { label: "Sessions done", value: "2 of 13", sub: "Next: Fri 10 July, 11am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
