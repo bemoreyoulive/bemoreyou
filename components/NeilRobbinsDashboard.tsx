@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 2 of 13 · June 2026",
   nextMove:
-    "Neil, your first two posts are out and landing well, the Ferrari one especially. Keep replying to comments yourself, don't let them sit there unanswered. Session 3 has moved to Friday 10 July at 11am, we will build the next batch and get you into a steady twice weekly rhythm.",
+    "Neil, three posts are out and landing well, especially the Ferrari story and this morning's hiring post. Keep replying to every comment yourself. Session 3 is at 11am today, we'll build your next batch and lock in a steady twice weekly rhythm.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -75,7 +75,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "nr-posts",
-    text: "Your first two posts are out and getting real engagement. Reply to every comment yourself, especially on the Ferrari post, rather than leaving people hanging.",
+    text: "Three posts are out now and getting real engagement. Reply to every comment yourself, and next time add a photo, the hiring post would have hit even harder with one.",
     section: "content",
   },
   {
@@ -223,6 +223,9 @@ const CONTENT_IDEAS: {
     pillars: [2, 1],
     hookA: "I hired the person who now runs a big chunk of the company at a barbecue. She knew nothing about marketing at the time.",
     hookB: "23 years ago I gave a job to someone who could not use Google. It is the best hiring decision I ever made.",
+    used: true,
+    resultNote:
+      "You took this one further than the brief, two hiring stories in one, Louise from the barbecue and the 2006 account exec who now runs Sydney. It works as both appreciation and thought leadership at once, appreciation for the people, thought leadership on twenty years of hiring instinct, which builds trust and authority together. The one miss is no photo, a shot from that era would have given it context and stopped the scroll before anyone started reading.",
     guidance:
       "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it reassures anyone wondering how you actually lead.",
     tips: [
@@ -460,7 +463,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil, and your first two posts are out. The Finance Director pivot and the Ferrari boss story, both landing well, and the Ferrari one especially: about 75 likes and a strong run of comments, all of which you replied to yourself. Keep doing that on every post. Session 3 has moved to Friday 10 July at 11am, see you then.
+                Two sessions in, Neil, and three posts are out now. The Finance Director pivot, the Ferrari boss story and this morning's barbecue hire post, all landing well, and the Ferrari one especially: about 75 likes and a strong run of comments, all of which you replied to yourself. Keep doing that on every post, and start adding a photo, this morning's post would have hit even harder with one. See you at 11am.
               </p>
             </div>
 
@@ -793,7 +796,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 5 posts to get you off the mark</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Two are posted already, the Finance Director pivot and the Ferrari boss story, both doing well. Use the tabs below to flick between what is out there and what is still in the tank.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what is out there and what is still in the tank.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
