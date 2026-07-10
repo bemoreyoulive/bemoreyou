@@ -456,9 +456,9 @@ const SESSIONS: {
   {
     number: 3,
     date: "10 July 2026",
-    title: "Progress check. The change happening underneath the posts.",
+    title: "Coaching session three. The change happening underneath the posts.",
     summary:
-      "Our 60 minute progress check, and a genuinely good one. Three posts are out and landing well, especially the Ferrari story and this morning's hiring post, and you told me writing one now takes about half an hour and comes easily. What stood out most is not the posts themselves, it is what is changing behind them: you are slowing down before forming opinions, checking yourself before you speak because you are now representing the company as well as yourself, and colleagues are starting to notice and mention it to you directly. We locked in your next four posts, including the girls coaching story and a piece on how AI is reshaping search, agreed a simple approach to photos, and started looking at panels and industry events worth exploring, selectively, once you are back from your break.",
+      "Our 60 minute session, and a genuinely good one. Three posts are out and landing well, especially the Ferrari story and this morning's hiring post, and you told me writing one now takes about half an hour and comes easily. What stood out most is not the posts themselves, it is what is changing behind them: you are slowing down before forming opinions, checking yourself before you speak because you are now representing the company as well as yourself, and colleagues are starting to notice and mention it to you directly. We locked in your next four posts, including the girls coaching story and a piece on how AI is reshaping search, agreed a simple approach to photos, and started looking at panels and industry events worth exploring, selectively, once you are back from your break.",
     insights: [
       "You are slowing down before forming opinions now, checking yourself before you speak because you represent the company as well as yourself. That discipline is already spilling into how you lead.",
       "Writing has got easier, about half an hour a post, and colleagues are starting to notice and mention your posts to you directly. That is the internal trust building already.",
@@ -471,7 +471,7 @@ const SESSIONS: {
       "Connect with clients and industry contacts on LinkedIn, and keep an eye out for panel and event invites worth exploring.",
       "Session 4 booked, Monday 11 August at 9.30am.",
     ],
-    nextSession: "Session 4 · Monday 11 August 2026, 9:30am · content batch and progress check",
+    nextSession: "Session 4 · Monday 11 August 2026, 9:30am · content review and next batch",
   },
 ];
 
