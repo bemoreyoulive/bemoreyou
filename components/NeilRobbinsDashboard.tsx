@@ -293,8 +293,8 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [1],
-    hookA: "A buyer once stopped me mid-pitch and said, 'Is this agency just you? Tell me the truth.' I said yes. What happened next saved the company.",
-    hookB: "The deal I didn't want turned out to be the one that saved us. No fee, performance only, and it kept us alive through 2008.",
+    hookA: "A buyer stopped me mid-pitch and asked if the agency was actually just me. Said yes, it was. Didn't think much of it at the time, turned out to be one of the best things that happened to the business.",
+    hookB: "Took on a deal in 2003 I didn't really want, performance only, no fee. Turned out to be the contract that got us through 2008 in one piece.",
     guidance:
       "Tell it the way you told the Ferrari story, one short paragraph per beat rather than big blocks of text. Start with the pitch and the buyer stopping you cold, then the honest yes and the performance-only deal you didn't want, then the turn, 2008, nearly every betting client gone in three weeks, and that one contract's earn-out is what carried you through. Land it on one plain line, no dressed-up lesson, the same way the Ferrari post ended on the bullet points and let them speak for themselves.",
     tips: [
@@ -310,8 +310,8 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
-    hookA: "A client was about to shut down a channel making them a million pounds. I asked one question that changed the conversation.",
-    hookB: "'Should we shut it down?' Wrong question. 'How do we beat Nike and Adidas?' That's the one that kept New Balance's channel open.",
+    hookA: "Had a client about to pull the plug on a channel making them a million quid. Asked one question and it changed the whole conversation.",
+    hookB: "New Balance were ready to shut a channel making them a million quid. I asked how we beat Nike and Adidas with it instead. Kept it open, and built our whole progression model off the back of that one chat.",
     guidance:
       "Tell the New Balance story in short, plain lines like your other two posts. A channel delivering serious revenue was on the chopping block. Instead of defending the number, you asked a different question. Let the reframe land on its own short line, the same abrupt pivot as 'Nope, because he told me' in the Ferrari post, then explain what came from it, the progression model, built in about an hour. This one shows a CMO exactly how you think, not just what you did.",
     tips: [
@@ -326,8 +326,8 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
-    hookA: "We cut a publisher's commission from 7% to 2% and they hated us for it. We'd do it again tomorrow.",
-    hookB: "Cutting a partner's income by 70% is not a popular move. It's still the right one when the client isn't getting real value.",
+    hookA: "We cut a publisher's commission from 7% down to 1 or 2%. They weren't happy about it. We'd do exactly the same again.",
+    hookB: "Cutting a partner's income by 70% doesn't win you many friends. Still the right call when the client isn't getting proper value for it.",
     guidance:
       "Open on the stat the way you opened the Finance pivot post, straight in with the number, 7% down to 1 or 2%, before you explain anything. Then the plain reasoning: you drop cashback and voucher-site commissions when the incremental value isn't there, even though it costs those publishers 60 to 70% of their income and it damages the relationship. Land the point in one short line, you choose the client over the easy partner relationship, every time. Confident, not smug.",
     tips: [
@@ -342,8 +342,8 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [1],
-    hookA: "I mentioned in passing that Silverbean is 24 years old. The room went quiet, then someone said 'bloody hell, well done'. I hadn't even clocked it myself.",
-    hookB: "Most of the agency owners in that room had been going 6 or 7 years. I said 24 without thinking twice about it. The reaction taught me something.",
+    hookA: "'Bloody hell, well done.' That's what someone said when I mentioned in passing that Silverbean's 24 years old. Hadn't even clocked it myself.",
+    hookB: "Most of the agency owners in that room had only been going 6 or 7 years. I said 24 without even thinking about it. Their faces said more than mine did.",
     guidance:
       "Write it the way you wrote the Ferrari post, short lines, one beat at a time. Set the scene at the London event, most owners in the room 6 or 7 years in. Land the number, 24 years, plainly, no fanfare, because that's how you said it yourself. Then the reaction, the stunned pause, someone saying 'bloody hell, well done', and you realising you'd never once stopped to think about it. Close on one honest line about progression driving you so hard that you forget to notice what you've actually built.",
     tips: [
@@ -358,8 +358,8 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
-    hookA: "ChatGPT, Claude and Gemini are rewriting how affiliate marketing gets paid. Here's what's actually happening, and why it might be good news for us.",
-    hookB: "Everyone's asking whether AI kills affiliate marketing. Wrong question. The right one is who gets rewarded when nobody clicks through anymore.",
+    hookA: "ChatGPT, Claude and Gemini are changing how affiliate marketing gets paid. Might actually be decent news for us, not bad news.",
+    hookB: "Everyone keeps asking if AI's going to kill affiliate marketing. Don't think that's the right question. It's more about who gets paid once nobody's clicking through anymore.",
     guidance:
       "Don't try to land the whole picture in one post, this opens a theme you'll keep coming back to, not a one-off explainer. Structure it like the Finance pivot post, plain stat or observation up top, short lines building the case, then a soft closing line rather than a hard conclusion, that post ended on 'it could be a decision your Finance Director smiles at, or at least gives a small nod of acceptance', land this one with the same understated tone. Just the opening tension: AI answers are citing third-party content, exactly where Silverbean plays through PR and partnerships, but people are clicking through less, which makes commission tracking harder. Name that it's still evolving, then stop. Save the mechanics, the client conversations and where Silverbean's position lands for future posts, through into 2027.",
     tips: [
@@ -376,7 +376,7 @@ const CONTENT_IDEAS: {
   {
     pillars: [2],
     hookA: "Every year I stand up in front of the whole company and try to sum up twelve months without sounding like a shareholder update. This year I want to talk about the people instead.",
-    hookB: "We just wrapped our financial year and had our All Hands. The numbers are one story. The people who got us there are the one worth telling.",
+    hookB: "Just wrapped the financial year and had our All Hands. Could talk numbers, but the people who actually got us there are the better story.",
     guidance:
       "Write this one after the meeting, not before, so it has real texture and emotion rather than a pre-written summary. Focus on people and culture, not numbers or anything commercially sensitive. Capture a specific moment or reaction from the room rather than a generic 'great year' wrap-up. If a lesson falls out of it, consider a short bullet list to land it, the way the Ferrari post's three 'Don't' lines did it better than a paragraph would have.",
     tips: [
