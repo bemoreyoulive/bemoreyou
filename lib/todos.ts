@@ -47,9 +47,14 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
-  // Blueprint done 16 June 2026. First real todos added after Session 2 (messaging & positioning, 23 June):
-  // finalise LinkedIn headline + About, write first post.
-  "neil-robbins": [],
+  // Blueprint done 16 June 2026. Session 3 (progress check, 10 July) todos below.
+  "neil-robbins": [
+    { id: "nr3-write", text: "Write your four posts before you go away on 20 July, schedule one a week through August" },
+    { id: "nr3-photo", text: "Add a photo to two of the next four posts" },
+    { id: "nr3-connect", text: "Connect with clients and industry leaders on LinkedIn so they see your posts" },
+    { id: "nr3-events", text: "Look into panels and industry events worth taking part in, but be selective" },
+    { id: "nr-grenades", text: "Keep capturing hand grenade moments and story angles as they happen" },
+  ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },
     { id: "as3-1", text: "Film one calm, candid video before Session 4. Not a rant. Storytelling mode, eyes to camera. The old school mates topic is the right one for it." },

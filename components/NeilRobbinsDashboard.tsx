@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 2 of 13 · June 2026",
+  sessionLabel: "Session 3 of 13 · July 2026",
   nextMove:
-    "Neil, three posts are out and landing well, especially the Ferrari story and this morning's hiring post. Keep replying to every comment yourself. Session 3 is at 11am today, we'll build your next batch and lock in a steady twice weekly rhythm.",
+    "Neil, this is your focus for the next four weeks. Write and publish one post a week to hold the cadence, connect with clients and industry leaders so they see your posts, and look into panels and events that fit you. See you 11 August.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,13 +74,28 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr-posts",
-    text: "Three posts are out now and getting real engagement. Reply to every comment yourself, and next time add a photo, the hiring post would have hit even harder with one.",
+    id: "nr3-write",
+    text: "Write your four posts before you go away on 20 July: the All Hands post, the girls coaching story, the AI and search piece, and the deal that looked terrible but saved the company. Schedule one a week through August so the cadence holds while you're off.",
     section: "content",
   },
   {
+    id: "nr3-photo",
+    text: "Add a photo to two of the next four posts. It doesn't need to directly relate, an old photo from your camera roll works just as well and gives people a reason to stop scrolling.",
+    section: "content",
+  },
+  {
+    id: "nr3-connect",
+    text: "Connect with your clients and industry leaders on LinkedIn so they start seeing your posts land in their feed. No message needed, they'll already recognise your name.",
+    section: "home",
+  },
+  {
+    id: "nr3-events",
+    text: "Look into panels and industry events worth taking part in, but be selective. The wrong stage can do real damage to the brand you're building, so it has to genuinely fit you.",
+    section: "home",
+  },
+  {
     id: "nr-grenades",
-    text: "Keep capturing grenade moments as they happen. Voice note it straight away, then WhatsApp it to Ben.",
+    text: "Keep capturing hand grenade moments and story angles as they happen. Voice note it straight away, then WhatsApp it to Ben.",
     section: "home",
   },
 ];
@@ -338,6 +353,26 @@ const SESSIONS: {
       "Session 3 booked, Monday 7 July at 11am, since moved to Friday 10 July at 11am.",
     ],
     nextSession: "Session 3 · Friday 10 July 2026, 11am · content review and grenade harvest",
+  },
+  {
+    number: 3,
+    date: "10 July 2026",
+    title: "Progress check. The change happening underneath the posts.",
+    summary:
+      "Our 60 minute progress check, and a genuinely good one. Three posts are out and landing well, especially the Ferrari story and this morning's hiring post, and you told me writing one now takes about half an hour and comes easily. What stood out most is not the posts themselves, it is what is changing behind them: you are slowing down before forming opinions, checking yourself before you speak because you are now representing the company as well as yourself, and colleagues are starting to notice and mention it to you directly. We locked in your next four posts, including the girls coaching story and a piece on how AI is reshaping search, agreed a simple approach to photos, and started looking at panels and industry events worth exploring, selectively, once you are back from your break.",
+    insights: [
+      "You are slowing down before forming opinions now, checking yourself before you speak because you represent the company as well as yourself. That discipline is already spilling into how you lead.",
+      "Writing has got easier, about half an hour a post, and colleagues are starting to notice and mention your posts to you directly. That is the internal trust building already.",
+      "Photos are still missing from all three posts. Two of your next four will carry one, an old photo works just as well as a new one, so nothing more to force here.",
+      "Panels and events are worth exploring, but selectively. A personal brand is built in thimbles and lost in buckets, so only the right stage is worth the trip.",
+    ],
+    agreed: [
+      "Write the next four posts before 20 July and schedule one a week through August so the cadence holds while you're away.",
+      "Add a photo to two of the next four posts, the other two can stay text only.",
+      "Connect with clients and industry contacts on LinkedIn, and keep an eye out for panel and event invites worth exploring.",
+      "Session 4 booked, Monday 11 August at 9.30am.",
+    ],
+    nextSession: "Session 4 · Monday 11 August 2026, 9:30am · content batch and progress check",
   },
 ];
 
