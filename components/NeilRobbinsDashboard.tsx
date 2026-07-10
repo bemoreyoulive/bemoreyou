@@ -960,7 +960,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                     {/* Used / not-yet-used sub-tabs */}
                     <div style={{ display: "flex", gap: 8, marginBottom: 18, flexWrap: "wrap" }}>
                       {[
-                        { id: "used" as const, label: `Posted (${CONTENT_IDEAS.filter(x => x.used).length})` },
+                        { id: "used" as const, label: `Posted with feedback (${CONTENT_IDEAS.filter(x => x.used).length})` },
                         { id: "unused" as const, label: `Not posted yet (${CONTENT_IDEAS.filter(x => !x.used).length})` },
                       ].map(f => (
                         <button
