@@ -46,7 +46,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
     title: "Calling a spade a spade on performance marketing",
     tag: "The Hand Grenade",
     body: "Your unfiltered, plain-English view of the industry, the things most agency CEOs will not say out loud. You are full of genuinely valuable contrarian views on performance marketing, and that is the engine of your authority, the reason senior people stop scrolling, coming from honesty and a sharper eye rather than any kind of anger. Think senior marketers leaving 15 to 20% of ecommerce revenue on the table because they misjudge affiliate, only pay when it works against rising Google and Meta costs, and why the industry keeps grabbing slices instead of making the pie much bigger.",
-    short: "Your unfiltered take on the industry, the valuable contrarian views you are not afraid to say out loud, and the edge that makes you worth listening to.",
+    short: "Your unfiltered take on the industry, the valuable contrarian views you're not afraid to say out loud, and the edge that makes you worth listening to.",
     audience: "Senior marketing decision-makers, the CMOs and marketing leaders. Also reaches practitioners and industry peers.",
   },
   {
@@ -206,7 +206,7 @@ const CONTENT_IDEAS: {
     hookB: "It's the one kind of marketing that only charges you when it works. So why does it still get treated like the poor relation?",
     used: true,
     resultNote:
-      "You made this one your own, posted as 'The 5% pivot your Finance Director will thank you for'. It reframes rising Meta costs as a finance problem, not a marketing one, and it has landed well. The 60% and 68% stats up front are doing the real work, a CMO can't scroll past numbers like that. One note for next time: the ending hedges, 'or at least gives a nod of acceptance' softens the point right when it should land hardest.",
+      "You made this one your own, posted as 'The 5% pivot your Finance Director will thank you for'. It reframes rising Meta costs as a finance problem, not a marketing one, and it's landed well. The 60% and 68% stats up front are doing the real work, a CMO can't scroll past numbers like that. One note for next time: the ending hedges, 'or at least gives a nod of acceptance' softens the point right when it should land hardest.",
     guidance:
       "A strong first post and the cleanest way into your point of view. Make the case calmly, in plain English, for why something that only pays out on results gets sidelined while paid keeps eating the budget. No 'incrementality' or 'publisher mix'. You are talking to a smart marketing leader who has been put off by jargon before. End on a thought, not a pitch.",
     tips: [
@@ -222,51 +222,51 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [1],
-    hookA: "My old boss came in one Monday and said he was buying a Ferrari with cash if we worked harder. He could not afford lunch.",
+    hookA: "My old boss came in one Monday and said he was buying a Ferrari with cash if we worked harder. He couldn't afford lunch.",
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     used: true,
     resultNote:
       "This is your best performer yet, about 75 likes and a strong run of comments, and you replied to every single one of them yourself. It reads like something a writer sat down and crafted, well structured, taking the reader through the whole story start to finish. Two things for next time: add a photo, it gives context and gives people a reason to stop scrolling, and let more of your own voice in, a phrase you'd actually use, even a mild swear, only if that's genuinely how you'd tell it.",
     guidance:
-      "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
+      "A story post, and people love a good villain. Tell it the way you'd in the pub: the fantasy forecasts, the Ferrari, the moment you decided you'd rather make your own mistakes. Then land one quiet point about leadership or over-promising. Don't spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
       "Tell it as a proper story. Set the scene first, the boss, the Ferrari, the forecast with nothing behind it, before you go anywhere near the lesson.",
       "The absurd detail is the hook. The cash, the fantasy numbers on the whiteboard. Specifics make people stop, vague life-lessons make them scroll.",
-      "Include the one thing it taught you about leadership or over-promising, in a full sentence. Leave out the tidy moral and the 'and that is why you should' ending.",
+      "Include the one thing it taught you about leadership or over-promising, in a full sentence. Leave out the tidy moral and the 'and that's why you should' ending.",
     ],
     questions: [
-      "Ever worked for someone who showed you exactly who you did not want to become?",
+      "Ever worked for someone who showed you exactly who you didn't want to become?",
     ],
     audience: "Founders, agency owners and peers.",
   },
   {
     pillars: [2, 1],
     hookA: "I hired the person who now runs a big chunk of the company at a barbecue. She knew nothing about marketing at the time.",
-    hookB: "23 years ago I gave a job to someone who could not use Google. It is the best hiring decision I ever made.",
+    hookB: "23 years ago I gave a job to someone who couldn't use Google. It's the best hiring decision I ever made.",
     used: true,
     resultNote:
       "You took this one further than the brief, two hiring stories in one, Louise from the barbecue and the 2006 account exec who now runs Sydney. It works as both appreciation and thought leadership at once, appreciation for the people, thought leadership on twenty years of hiring instinct, which builds trust and authority together. The one miss is no photo, a shot from that era would have given it context and stopped the scroll before anyone started reading.",
     guidance:
       "A people-first story with a warm payoff. Set the scene, the barbecue, the daft interview question, then the long arc of where she got to. The point underneath is simple: hire for attitude and potential, not the CV. Keep it humble. This is the one that shows the human behind the title, and it reassures anyone wondering how you actually lead.",
     tips: [
-      "The gap between how she started, could not use Google, and where she got to, Global Services Director with shares, is the whole point. Make that arc clear.",
+      "The gap between how she started, couldn't use Google, and where she got to, Global Services Director with shares, is the whole point. Make that arc clear.",
       "Open on the unlikely bit, hiring someone with no marketing experience off the back of a barbecue. It sounds reckless, which is exactly why people read on.",
       "Include what you actually hired her for, attitude over CV. Keep her the hero and leave out anything that turns it into a humblebrag about you.",
     ],
     questions: [
-      "How many good people have you walked past because their CV did not tick the box?",
+      "How many good people have you walked past because their CV didn't tick the box?",
     ],
     audience: "Your team, future talent and fellow leaders.",
   },
   {
     pillars: [0],
-    hookA: "Everyone in this industry says we are all friends. We are mostly not.",
+    hookA: "Everyone in this industry says we're all friends. We're mostly not.",
     hookB: "We shake hands at the awards do and compete like animals the rest of the year. Nobody says it out loud.",
     guidance:
       "A spicier one, so handle with a bit of care given clients are watching. The honesty is the value, not the aggression. The footballers-at-an-awards-do comparison does the work nicely. Underneath it, make the real point: the industry is so busy competing that it never bothers to sell its own worth to the people holding the budget. Confident, never a rant.",
     tips: [
       "You are saying a quiet industry truth out loud, so be honest rather than bitter. You are describing how it works, not having a go at anyone by name.",
-      "The flat contradiction is the hook, everyone says we are all friends, we are not. The footballers-at-the-awards image then makes it land.",
+      "The flat contradiction is the hook, everyone says we're all friends, we're not. The footballers-at-the-awards image then makes it land.",
       "Include why it matters, that the infighting stops the industry selling its real worth to the people holding the budget. Leave out names and anything a blue-chip client would wince at.",
     ],
     questions: [
@@ -276,14 +276,14 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [3],
-    hookA: "I coach an under 16s girls football team. Some weeks it is the most useful management training I get.",
-    hookB: "Supporting Man Utd for 40 years has prepared me for business in ways I would rather not admit.",
+    hookA: "I coach an under 16s girls football team. Some weeks it's the most useful management training I get.",
+    hookB: "Supporting Man Utd for 40 years has prepared me for business in ways I'd rather not admit.",
     guidance:
-      "A personal one to balance the sharper posts. Pick a single thread, the coaching or the football, and tie it to something real about leading people, staying patient, or just enjoying what you do. Let your character show, that is the whole point of this pillar. Keep it light and a bit self-deprecating. Do not force a business lesson in if it does not belong.",
+      "A personal one to balance the sharper posts. Pick a single thread, the coaching or the football, and tie it to something real about leading people, staying patient, or just enjoying what you do. Let your character show, that's the whole point of this pillar. Keep it light and a bit self-deprecating. Don't force a business lesson in if it doesn't belong.",
     tips: [
-      "Pick one thread, the coaching or the football, and one honest thing it has taught you. Do not try to cover your whole life in a single post.",
+      "Pick one thread, the coaching or the football, and one honest thing it's taught you. Don't try to cover your whole life in a single post.",
       "The unexpected link is the draw, what an under 16s girls team has to do with running an 80-person business. Lean into that surprise up top.",
-      "Include a real moment from a session or a match. Leave out any forced business lesson if it does not genuinely fit, a bit of warmth is plenty.",
+      "Include a real moment from a session or a match. Leave out any forced business lesson if it doesn't genuinely fit, a bit of warmth is plenty.",
     ],
     questions: [
       "What has something outside work taught you that the job never could?",
@@ -365,7 +365,7 @@ const CONTENT_IDEAS: {
     tips: [
       "Lead with the tension: AI is rewarding the type of content you specialise in, while making the classic sales-tracking model harder. That contradiction is the hook, and it's enough for one post.",
       "Most people are only asking whether AI kills a channel. Reframe it as a bigger structural shift nobody's fully worked out yet, that's the sharper, CEO-level angle.",
-      "Include just the plain mechanic for this first one, third-party content earns AI citations, tracking commission on it is the hard part. Leave out technical SEO jargon, firm predictions and anything about Silverbean's own solution, save that for later.",
+      "Include just the plain mechanic for this first one, third-party content earns AI citations, tracking commission on it's the hard part. Leave out technical SEO jargon, firm predictions and anything about Silverbean's own solution, save that for later.",
     ],
     questions: [
       "If your customers get answers straight from AI instead of clicking through to buy, who deserves the credit, and who gets paid?",
@@ -378,7 +378,7 @@ const CONTENT_IDEAS: {
     hookA: "Every year I stand up in front of the whole company and try to sum up twelve months without sounding like a shareholder update. This year I want to talk about the people instead.",
     hookB: "Just wrapped the financial year and had our All Hands. Could talk numbers, but the people who actually got us there are the better story.",
     guidance:
-      "Write this one after the meeting, not before, so it has real texture and emotion rather than a pre-written summary. Focus on people and culture, not numbers or anything commercially sensitive. Capture a specific moment or reaction from the room rather than a generic 'great year' wrap-up. If a lesson falls out of it, consider a short bullet list to land it, the way the Ferrari post's three 'Don't' lines did it better than a paragraph would have.",
+      "Write this one after the meeting, not before, so it's got real texture and emotion rather than a pre-written summary. Focus on people and culture, not numbers or anything commercially sensitive. Capture a specific moment or reaction from the room rather than a generic 'great year' wrap-up. If a lesson falls out of it, consider a short bullet list to land it, the way the Ferrari post's three 'Don't' lines did it better than a paragraph would have.",
     tips: [
       "Capture a specific moment or reaction from the room, not a generic 'great year' summary. The specifics are what make it feel real.",
       "Open with the tension of standing up to sum up a whole year in one meeting, that's relatable to any leader reading this.",
@@ -899,7 +899,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
 
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 24 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Start here · your content pillars</p>
-              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>A quick reminder before the ideas land, Neil. These four pillars are your north star, not set in stone. When you are not sure what to post, come back to this page, pick a pillar, and start from there. The full breakdown of each one lives in Brand Assets.</p>
+              <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6, margin: 0 }}>A quick reminder before the ideas land, Neil. These four pillars are your north star, not set in stone. When you're not sure what to post, come back to this page, pick a pillar, and start from there. The full breakdown of each one lives in Brand Assets.</p>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14, marginBottom: 28 }}>
@@ -934,16 +934,16 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                   <>
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 11 posts to draw from</p>
-                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what is in the tank right now, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what is out there and what is still in the tank.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it's for. I've also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that's me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what's out there and what's still in the tank.</p>
                     </div>
                     <div style={{ background: "#fdf0e0", border: "1px solid #e0a94666", borderLeft: "4px solid #c9822b", borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a5c1a", margin: "0 0 10px" }}>Before you go away, write these 4</p>
                       <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The Gibraltar deal, the one you did not want that saved the company</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The Gibraltar deal, the one you didn't want that saved the company</li>
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The under-16s girls coaching story</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The AI and search piece, the opener on the new theme, do not try to cover it all in one go</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The AI and search piece, the opener on the new theme, don't try to cover it all in one go</li>
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The All Hands wrap-up, but only write this one after Thursday's meeting, not before</li>
                       </ul>
                       <p style={{ fontSize: "0.8rem", color: "#8a5c1a", lineHeight: 1.6, margin: "10px 0 0" }}>Each is flagged on its card below. Get the first three done whenever suits this week, save the All Hands post until after Thursday.</p>
@@ -952,8 +952,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
                       <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
                         <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Schedule for <strong>07:30am</strong> before people start work. That is when it gets seen.</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Always add a photo. It does not have to be directly related to the post, even something from around that time in your life works and makes a real difference to engagement.</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>If your headline is a quote from someone else, put it in speech marks so people know it is a quote, not your own words.</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>Always add a photo. It doesn't have to be directly related to the post, even something from around that time in your life works and makes a real difference to engagement.</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>If your headline is a quote from someone else, put it in speech marks so people know it's a quote, not your own words.</li>
                       </ul>
                     </div>
 
