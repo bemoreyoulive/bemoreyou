@@ -492,7 +492,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} animateIn />
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="month" animateIn />
 
             {/* A note from Ben */}
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
@@ -505,7 +505,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "2 of 13", sub: "Next: Fri 10 July, 11am" },
+                { label: "Sessions done", value: "3 of 13", sub: "Next: Mon 11 August, 9:30am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
