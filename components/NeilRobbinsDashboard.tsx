@@ -979,9 +979,16 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       ))}
                     </div>
 
-                    {CONTENT_IDEAS.map((idea, i) => (idea.used ?? false) === (contentFilter === "used") && (
-                      <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
-                    ))}
+                    {CONTENT_IDEAS
+                      .map((idea, i) => ({ idea, i }))
+                      .filter(({ idea }) => (idea.used ?? false) === (contentFilter === "used"))
+                      // Ideas with a deadline (the posts due before Neil's holiday) float to the
+                      // top of the list. Sort is stable, so original order holds otherwise, and
+                      // the index passed down stays the same for Supabase's persisted used state.
+                      .sort((a, b) => (b.idea.deadline ? 1 : 0) - (a.idea.deadline ? 1 : 0))
+                      .map(({ idea, i }) => (
+                        <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
+                      ))}
                   </>
                 )}
               </>
