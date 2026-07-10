@@ -181,9 +181,13 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   },
 ];
 
-// 5 starter content ideas. Each has two hook options (A and B), short guidance
-// on how to write it, rhetorical questions that make the reader think "yep,
-// that's me", and who it is aimed at.
+// Content ideas. Each has two hook options (A and B), short guidance on how
+// to write it, rhetorical questions that make the reader think "yep, that's
+// me", and who it is aimed at. Ideas 6-11 added after Session 3 (10 July),
+// 4 of them (Gibraltar deal, girls coaching, AI/search, All Hands) are the
+// posts Neil needs to write before he goes away on 20 July, flagged via
+// `deadline`. New ideas are always appended, never inserted, so existing
+// array indices (and their persisted "used" state) stay stable.
 const CONTENT_IDEAS: {
   pillars: number[];
   hookA: string;
@@ -194,6 +198,7 @@ const CONTENT_IDEAS: {
   audience: string;
   used?: boolean;
   resultNote?: string;
+  deadline?: string;
 }[] = [
   {
     pillars: [0],
@@ -284,6 +289,106 @@ const CONTENT_IDEAS: {
       "What has something outside work taught you that the job never could?",
     ],
     audience: "Everyone. The thread that ties the rest together.",
+    deadline: "Write before 20 July, any day this week works.",
+  },
+  {
+    pillars: [1],
+    hookA: "A buyer once stopped me mid-pitch and said, 'Is this agency just you? Tell me the truth.' I said yes. What happened next saved the company.",
+    hookB: "The deal I didn't want turned out to be the one that saved us. No fee, performance only, and it kept us alive through 2008.",
+    guidance:
+      "Tell it the way you told the Ferrari story, one short paragraph per beat rather than big blocks of text. Start with the pitch and the buyer stopping you cold, then the honest yes and the performance-only deal you didn't want, then the turn, 2008, nearly every betting client gone in three weeks, and that one contract's earn-out is what carried you through. Land it on one plain line, no dressed-up lesson, the same way the Ferrari post ended on the bullet points and let them speak for themselves.",
+    tips: [
+      "Open on a concrete detail the way you opened the Finance pivot post with the 60% and 68% stats. Here it's the three weeks, or how much of the client base disappeared. A specific number stops the scroll.",
+      "Nobody expects 'I said yes, it's just me' to be the moment that saves a company. That gap between the low point and the payoff is the hook.",
+      "Include the 2008 timeline and what that one contract carried you through. Leave out exact figures if they feel too commercially sensitive, the shape of the story does the work.",
+    ],
+    questions: [
+      "Ever taken a deal you didn't want, only to have it save you later?",
+    ],
+    audience: "Founders, agency owners and potential acquirers or investors. Also strengthens authority with marketing leaders.",
+    deadline: "Write before 20 July, any day this week works.",
+  },
+  {
+    pillars: [0],
+    hookA: "A client was about to shut down a channel making them a million pounds. I asked one question that changed the conversation.",
+    hookB: "'Should we shut it down?' Wrong question. 'How do we beat Nike and Adidas?' That's the one that kept New Balance's channel open.",
+    guidance:
+      "Tell the New Balance story in short, plain lines like your other two posts. A channel delivering serious revenue was on the chopping block. Instead of defending the number, you asked a different question. Let the reframe land on its own short line, the same abrupt pivot as 'Nope, because he told me' in the Ferrari post, then explain what came from it, the progression model, built in about an hour. This one shows a CMO exactly how you think, not just what you did.",
+    tips: [
+      "This is a thinking-out-loud story. The value is in showing your reasoning live, not just announcing the result.",
+      "The reframe is the hook, not 'should we close it' but 'how do we beat Nike and Adidas'. Open with the wrong question before you show the right one.",
+      "Include the pace, a grid built in an hour on the back of one conversation. Leave out the technical detail of the model itself, that's not the point of this post.",
+    ],
+    questions: [
+      "When did you last reframe the question instead of just answering the one you were asked?",
+    ],
+    audience: "Senior marketing decision-makers and brand leaders, shows exactly how you think rather than telling them.",
+  },
+  {
+    pillars: [0],
+    hookA: "We cut a publisher's commission from 7% to 2% and they hated us for it. We'd do it again tomorrow.",
+    hookB: "Cutting a partner's income by 70% is not a popular move. It's still the right one when the client isn't getting real value.",
+    guidance:
+      "Open on the stat the way you opened the Finance pivot post, straight in with the number, 7% down to 1 or 2%, before you explain anything. Then the plain reasoning: you drop cashback and voucher-site commissions when the incremental value isn't there, even though it costs those publishers 60 to 70% of their income and it damages the relationship. Land the point in one short line, you choose the client over the easy partner relationship, every time. Confident, not smug.",
+    tips: [
+      "This one is a genuine hand grenade, so keep it about the principle, not naming names or getting personal about specific partners.",
+      "The size of the cut, 7% down to 1 or 2%, is the number that stops people scrolling. Lead with that, then explain why.",
+      "Include the plain logic, paying for sales you'd have got anyway isn't real value. Leave out anything that could read as a dig at a named publisher.",
+    ],
+    questions: [
+      "Who are you still paying out of habit rather than because they're actually earning it?",
+    ],
+    audience: "Senior marketing decision-makers and industry peers, a proper hand grenade moment.",
+  },
+  {
+    pillars: [1],
+    hookA: "I mentioned in passing that Silverbean is 24 years old. The room went quiet, then someone said 'bloody hell, well done'. I hadn't even clocked it myself.",
+    hookB: "Most of the agency owners in that room had been going 6 or 7 years. I said 24 without thinking twice about it. The reaction taught me something.",
+    guidance:
+      "Write it the way you wrote the Ferrari post, short lines, one beat at a time. Set the scene at the London event, most owners in the room 6 or 7 years in. Land the number, 24 years, plainly, no fanfare, because that's how you said it yourself. Then the reaction, the stunned pause, someone saying 'bloody hell, well done', and you realising you'd never once stopped to think about it. Close on one honest line about progression driving you so hard that you forget to notice what you've actually built.",
+    tips: [
+      "Say the number flat, the way you said it in the room, no build-up. The gap between how casually you said it and how the room reacted is the whole story.",
+      "This is a quiet realisation, not a big lesson, so don't force a moral onto it. A short closing line does more than a paragraph of reflection.",
+      "Include the detail that stuck with you, the pause, the exact reaction. Leave out anything that turns it into a humblebrag about the agency's success.",
+    ],
+    questions: [
+      "When did you last stop long enough to notice what you've actually built?",
+    ],
+    audience: "Founders, agency owners and fellow leaders. Universally human, and it deepens the Graft pillar.",
+  },
+  {
+    pillars: [0],
+    hookA: "ChatGPT, Claude and Gemini are rewriting how affiliate marketing gets paid. Here's what's actually happening, and why it might be good news for us.",
+    hookB: "Everyone's asking whether AI kills affiliate marketing. Wrong question. The right one is who gets rewarded when nobody clicks through anymore.",
+    guidance:
+      "Don't try to land the whole picture in one post, this opens a theme you'll keep coming back to, not a one-off explainer. Structure it like the Finance pivot post, plain stat or observation up top, short lines building the case, then a soft closing line rather than a hard conclusion, that post ended on 'it could be a decision your Finance Director smiles at, or at least gives a small nod of acceptance', land this one with the same understated tone. Just the opening tension: AI answers are citing third-party content, exactly where Silverbean plays through PR and partnerships, but people are clicking through less, which makes commission tracking harder. Name that it's still evolving, then stop. Save the mechanics, the client conversations and where Silverbean's position lands for future posts, through into 2027.",
+    tips: [
+      "Lead with the tension: AI is rewarding the type of content you specialise in, while making the classic sales-tracking model harder. That contradiction is the hook, and it's enough for one post.",
+      "Most people are only asking whether AI kills a channel. Reframe it as a bigger structural shift nobody's fully worked out yet, that's the sharper, CEO-level angle.",
+      "Include just the plain mechanic for this first one, third-party content earns AI citations, tracking commission on it is the hard part. Leave out technical SEO jargon, firm predictions and anything about Silverbean's own solution, save that for later.",
+    ],
+    questions: [
+      "If your customers get answers straight from AI instead of clicking through to buy, who deserves the credit, and who gets paid?",
+    ],
+    audience: "Senior marketing decision-makers and industry peers, this is the theme you'll come back to right through into 2027.",
+    deadline: "Write before 20 July, any day this week works. Just the opening tension, save the detail for later posts.",
+  },
+  {
+    pillars: [2],
+    hookA: "Every year I stand up in front of the whole company and try to sum up twelve months without sounding like a shareholder update. This year I want to talk about the people instead.",
+    hookB: "We just wrapped our financial year and had our All Hands. The numbers are one story. The people who got us there are the one worth telling.",
+    guidance:
+      "Write this one after the meeting, not before, so it has real texture and emotion rather than a pre-written summary. Focus on people and culture, not numbers or anything commercially sensitive. Capture a specific moment or reaction from the room rather than a generic 'great year' wrap-up. If a lesson falls out of it, consider a short bullet list to land it, the way the Ferrari post's three 'Don't' lines did it better than a paragraph would have.",
+    tips: [
+      "Capture a specific moment or reaction from the room, not a generic 'great year' summary. The specifics are what make it feel real.",
+      "Open with the tension of standing up to sum up a whole year in one meeting, that's relatable to any leader reading this.",
+      "Include people and change. Leave out anything numbers-related or commercially sensitive, that's not what this post is for.",
+    ],
+    questions: [
+      "What does your team actually need to hear from you once a year, if it's not just the numbers?",
+    ],
+    audience: "Your team and fellow business leaders.",
+    deadline: "Write after Thursday's All Hands (17 July), publish 18 July. Not before.",
   },
 ];
 
@@ -828,10 +933,20 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                 {contentMonth === "m1" && (
                   <>
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
-                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 5 posts to get you off the mark</p>
+                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 11 posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it is for. I have also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that is me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These five are a starting point, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what is in the tank right now, not the full picture. After each session, we add more, built around what has been happening in the business, who you have been talking to, and what has come up in your life outside it. The library grows with you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what is out there and what is still in the tank.</p>
+                    </div>
+                    <div style={{ background: "#fdf0e0", border: "1px solid #e0a94666", borderLeft: "4px solid #c9822b", borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
+                      <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a5c1a", margin: "0 0 10px" }}>Before you go away, write these 4</p>
+                      <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The Gibraltar deal, the one you did not want that saved the company</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The under-16s girls coaching story</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The AI and search piece, the opener on the new theme, do not try to cover it all in one go</li>
+                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The All Hands wrap-up, but only write this one after Thursday's meeting, not before</li>
+                      </ul>
+                      <p style={{ fontSize: "0.8rem", color: "#8a5c1a", lineHeight: 1.6, margin: "10px 0 0" }}>Each is flagged on its card below. Get the first three done whenever suits this week, save the All Hands post until after Thursday.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
@@ -947,7 +1062,7 @@ function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string; used?: boolean; resultNote?: string }; index: number; slug: string; color: string }) {
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string; used?: boolean; resultNote?: string; deadline?: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(idea.used ?? false);
   const [saving, setSaving] = useState(false);
   const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
@@ -1001,6 +1116,13 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
           {used ? "Used ✓" : "Mark used"}
         </button>
       </div>
+
+      {!used && idea.deadline && (
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "#fdf0e0", border: "1px solid #e0a94640", borderRadius: 20, padding: "5px 12px", marginBottom: 14 }}>
+          <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#c9822b", flexShrink: 0 }} />
+          <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "#8a5c1a" }}>{idea.deadline}</span>
+        </div>
+      )}
 
       {used && idea.resultNote && (
         <div style={{ background: `${color}0d`, border: `1px solid ${color}33`, borderRadius: 6, padding: "12px 14px", marginBottom: 16 }}>
