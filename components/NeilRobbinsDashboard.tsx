@@ -392,12 +392,6 @@ const CONTENT_IDEAS: {
   },
 ];
 
-// Content sub-tabs by month. Only Month 1 is live for now.
-const CONTENT_MONTHS = [
-  { id: "m1", label: "Month 1" },
-  { id: "m2", label: "Month 2" },
-];
-
 // Homepage "who you're for / not for", 4 bullets each.
 const WHO_FOR = [
   "Senior marketing leaders at DTC and ecommerce brands who suspect they are underusing performance partnerships",
@@ -536,7 +530,6 @@ function PillarCard({ pillar, index, mode }: { pillar: typeof NR_PILLARS[number]
 
 export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
   const [activeTab, setActiveTab] = useState("home");
-  const [contentMonth, setContentMonth] = useState("m1");
   const [contentFilter, setContentFilter] = useState<"used" | "unused">("used");
   const config = NR_CONFIG;
   const { name, role, initials, color, sessionLabel } = config;
@@ -910,30 +903,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
 
             {CONTENT_IDEAS.length > 0 && (
               <>
-                {/* Month sub-tabs */}
-                <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
-                  {CONTENT_MONTHS.map(m => (
-                    <button
-                      key={m.id}
-                      onClick={() => m.id === "m1" && setContentMonth(m.id)}
-                      disabled={m.id !== "m1"}
-                      style={{
-                        fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
-                        padding: "8px 16px", borderRadius: 20, cursor: m.id === "m1" ? "pointer" : "not-allowed",
-                        border: contentMonth === m.id ? `1px solid ${color}` : "1px solid #E0DBD3",
-                        background: contentMonth === m.id ? color : "#fff",
-                        color: contentMonth === m.id ? "#fff" : m.id === "m1" ? "#7A746E" : "#B0A89E",
-                      }}
-                    >
-                      {m.label}{m.id !== "m1" ? " · soon" : ""}
-                    </button>
-                  ))}
-                </div>
-
-                {contentMonth === "m1" && (
-                  <>
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
-                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>Month 1 · 11 posts to draw from</p>
+                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>11 posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it's for. I've also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that's me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what's out there and what's still in the tank.</p>
@@ -989,8 +960,6 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       .map(({ idea, i }) => (
                         <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
                       ))}
-                  </>
-                )}
               </>
             )}
             <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
