@@ -206,7 +206,7 @@ const CONTENT_IDEAS: {
     hookB: "I started my agency because of a boss, a Ferrari, and a forecast with nothing behind it.",
     used: true,
     resultNote:
-      "This is your best performer yet, about 75 likes and a strong run of comments, and you replied to every single one of them yourself. The specific detail sells it: 9pm, the office, him bowling in fresh from test-driving Ferraris. People stopped scrolling for the details, not the moral at the end. Two things to catch next time: 'it was of those miserable winter nights' is missing a word, and the lessons list at the close isn't needed, the story already told us that.",
+      "This is your best performer yet, about 75 likes and a strong run of comments, and you replied to every single one of them yourself. It reads like something a writer sat down and crafted, well structured, taking the reader through the whole story start to finish. Two things for next time: add a photo, it gives context and gives people a reason to stop scrolling, and let more of your own voice in, a phrase you'd actually use, even a mild swear, only if that's genuinely how you'd tell it.",
     guidance:
       "A story post, and people love a good villain. Tell it the way you would in the pub: the fantasy forecasts, the Ferrari, the moment you decided you would rather make your own mistakes. Then land one quiet point about leadership or over-promising. Do not spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
