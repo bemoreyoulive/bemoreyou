@@ -11,14 +11,15 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "Block one hour a week for content and protect it. Dictate each post like you're telling a mate in the pub, then format it in LinkedIn. Hold yourself to the hour, post it as it is, and chase new clients on the front foot.";
+const ASB_NEXT_MOVE = "Write this week's post from whatever client work is in front of you right now, not the back catalogue. Voice note ideas the moment you come off a call. Then chase the community investment company decision, you've earned a clear yes or no.";
 
 const asbTodos = [
-  { id: "s7-1", text: "Block one hour a week in your diary for writing and scheduling posts, ideally a Monday or Friday, and protect it. The goal is a steady cadence, not a perfect post. Cap it at the hour and publish what you've got.", owner: "Andy" },
-  { id: "s7-2", text: "Use the dictation workflow properly: open Claude, hit dictate, and talk through the content card like you're telling a mate in the pub. Then delete what doesn't fit rather than going back and forth asking it to rewrite.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "s7-3", text: "Get on the front foot with new clients. Pursue the warm leads to a clear yes or no and move on from the half-hearted ones, instead of letting them drift.", owner: "Andy" },
-  { id: "s7-4", text: "Follow up the warm signals now you're back: the new networking group (the lady who already knew you from LinkedIn), the Paralympian contact, the Founders Network contact, and the new paid networking group prospect.", owner: "Andy" },
-  { id: "s7-5", text: "Arrange the photo session with George's dad. Meet outside the house, a café, a walk or a co-working space, so it stays natural rather than a studio set-up.", owner: "Andy" },
+  { id: "s8-1", text: "Write this week's post from the client work in front of you right now rather than the older cards. Anonymise it and get it out. The stuff at the top of your mind is always the fastest to write.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s8-2", text: "Come off every sales call and voice note the content ideas straight away, before you move on to the next thing. A rough one-minute ramble into Claude or your phone is enough to capture it.", owner: "Andy" },
+  { id: "s8-3", text: "Have a go at the objection-based posts. Start with 'we'll just see how that goes', it's the one you hear most, and the cards are ready in the new Objection-based section of Content Ideas.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s8-4", text: "Buy an A3 or A2 whiteboard and use it for post visuals instead of AI graphics. Your own handwriting beats a generated image every time, and you can bring it onto client calls to explain things too.", owner: "Andy" },
+  { id: "s8-5", text: "Get some photos of you actually working: laptop out, on a call, in a cafe. You work from wherever you like now and people should see that. Fold it into the photo session with George's dad.", owner: "Andy" },
+  { id: "s8-6", text: "Follow up the community investment company prospect once she's spoken to her fellow directors, and keep the other warm leads moving to a clear yes or no.", owner: "Andy" },
 ];
 
 
@@ -65,21 +66,21 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
-            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 7 · 19 June 2026" cadence="month" animateIn />
+            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 8 · 16 July 2026" cadence="month" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>7</div>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>8</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 7 — 19 June 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>Back from Canada. Continuation confirmed: monthly sessions at £325, rolling with 30 days' notice, dashboard, WhatsApp and content ideas all continue. Positioning widened to two groups, now including smaller owners who need a financial partner. About section reworked to be more visceral around the emotional wins. The content blocker is process, not memory or confidence: block weekly time, dictate like you're talking to a mate, cap it at an hour. Renewed drive to chase new clients. Next session: Wednesday 16 July.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 8 — 16 July 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>A busy few weeks of heavy client delivery, and the structure held: client work through the middle of the week, business development on Mondays and Fridays. The bigger shift is on sales calls. A prospect said she didn't think she needed you, and instead of taking that at face value you dug deeper, found the real problem and reshaped the offer live on the call. That is a different Andy to three months ago, and the confidence walking into rooms is showing. New direction on content: write from the client work in front of you this week, and turn your three recurring objections into posts. The whiteboard replaces AI graphics for visuals. Next session lands mid-August, date to follow.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Coaching", value: "Monthly", sub: "Rolling · next Wed 16 July 2026" },
+                { label: "Coaching", value: "Monthly", sub: "Rolling · next session mid-August, date to follow" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
-                { label: "Posts out", value: "8 posted", sub: "Martin Lewis · VAT · discounting · bank balance · product profitability · investor story · half marathon · Canada trip" },
+                { label: "Posts out", value: "Weekly", sub: "One a week since January with just one missed. The working on the business post landed well, this week's is in progress" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -676,6 +677,7 @@ type AsbIdea = {
   questions?: string;
   cta: string;
   drafted?: boolean;
+  objection?: boolean;
 };
 
 function AsbHookOptions({ hook }: { hook: string }) {
@@ -792,6 +794,7 @@ function AsbIdeaCard({ idea, slug }: { idea: AsbIdea; slug: string }) {
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", flex: 1 }}>
           <span style={{ background: isPersonal ? "#EEF2FF" : "#F0FDF4", color: isPersonal ? "#4338CA" : ASB_COLOR, border: `1px solid ${isPersonal ? "#C7D2FE" : "#c2dbc9"}`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em", textTransform: "uppercase" as const, flexShrink: 0 }}>{idea.week}</span>
           <p style={{ fontSize: "0.9rem", fontWeight: 600, color: used ? "#9CA3AF" : "#1C1C1C", margin: 0, textDecoration: used ? "line-through" : "none", lineHeight: 1.4 }}>{idea.title}</p>
+          {idea.objection && <span style={{ background: "#fdf4e8", color: "#92400E", border: "1px solid #f5d89e", borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", letterSpacing: "0.05em", textTransform: "uppercase" as const, flexShrink: 0 }}>Objection-based</span>}
           <span style={{ fontSize: "0.72rem", color: "#9CA3AF", marginLeft: "auto", flexShrink: 0 }}>{idea.type} · Bold: {idea.bold}</span>
           {idea.drafted && <span style={{ background: "#edf4ef", color: ASB_COLOR, border: `1px solid #c2dbc9`, borderRadius: 9999, fontSize: "0.65rem", fontWeight: 700, padding: "2px 10px", flexShrink: 0 }}>Draft written</span>}
         </div>
@@ -1152,7 +1155,7 @@ Your closing line before the CTA:
 "The business you eventually sell is built now, not in the final stretch before you exit."
 
 (Then add 1 or 2 sentences here on what that actually means in practice. Every month without a plan is a month of compounding the gap. Real, not motivational.)`, cta: '"If you have an exit number but nothing mapped out behind it, drop me a message. I\'ll buy you a coffee."' },
-  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", title: "\"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation is some version of this. I think this is exactly what I need, just not quite yet. Option 2: Being ready tends to be a feeling rather than a fact. And the thing people want to sort out first is usually the very thing that needs the financial help.", direction: `Your second line (if you opened with Option 1):
+  { id: "aug-3", week: "Week 14 · Mid-week", type: "Expertise", bold: "3/5", objection: true, title: "\"I'm Not Ready Yet.\" What That's Usually Costing You.", hook: "Option 1: The most common thing I hear at the end of a good conversation is some version of this. I think this is exactly what I need, just not quite yet. Option 2: Being ready tends to be a feeling rather than a fact. And the thing people want to sort out first is usually the very thing that needs the financial help.", direction: `Your second line (if you opened with Option 1):
 "It's almost always genuine. And it's almost always more expensive than people realise."
 
 Your second line (if you opened with Option 2):
@@ -1168,7 +1171,7 @@ Your closing line before the CTA:
 "There is a version of 'not yet' that's legitimate. I'm not saying there isn't."
 
 (Then add 1 or 2 sentences here on how you tell the difference. When it's a real call versus when it's a story someone's telling themselves. Honest, not pushy.)`, cta: '"If you\'ve been putting it off and you know it, drop me a message. I\'ll buy you a coffee."' },
-  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", title: "\"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: 'I just need to run it past my business partner.' That's fair enough, but if they don't know the numbers either, you're about to have the conversation you've both been putting off. Option 2: When two owners are making a shared decision and neither has a clear view of the finances, that's not really a partnership problem. It's a numbers one.", direction: `Your second line (if you opened with Option 1):
+  { id: "aug-4", week: "Week 14 · Friday", type: "Expertise", bold: "2/5", objection: true, title: "\"I Need to Speak to My Business Partner.\" Great. Here's What to Tell Them.", hook: "Option 1: 'I just need to run it past my business partner.' That's fair enough, but if they don't know the numbers either, you're about to have the conversation you've both been putting off. Option 2: When two owners are making a shared decision and neither has a clear view of the finances, that's not really a partnership problem. It's a numbers one.", direction: `Your second line (if you opened with Option 1):
 "That's not a bad thing. It just means the conversation you're about to have is actually a version of the problem you'd be solving."
 
 Your second line (if you opened with Option 2):
@@ -1202,7 +1205,7 @@ Your closing line before the CTA:
 "So if you've let yours slip, I'm not going to judge you. I've been there myself this month."
 
 (Add one sentence on the one small thing that helps you keep on top of it, if you want to. Otherwise leave it and let the honesty land.)`, cta: '"What\'s the job in your business you know you should keep on top of, but somehow never quite get to?"' },
-  { id: "aug-6", week: "Week 15 · Friday", type: "Expertise", bold: "2/5", title: "Too Busy Working In the Business to Work On It", hook: "Option 1: \"I'm too busy working in the business to find time to work on it. I know I need to, but I can't break the cycle.\" That's how a business owner described it to me, and I hear a version of it constantly. Option 2: The work that actually moves your business forward is rarely the work shouting loudest at you today.", direction: `Your second line (if you opened with Option 1):
+  { id: "aug-6", week: "Week 15 · Friday", type: "Expertise", bold: "2/5", objection: true, title: "Too Busy Working In the Business to Work On It", hook: "Option 1: \"I'm too busy working in the business to find time to work on it. I know I need to, but I can't break the cycle.\" That's how a business owner described it to me, and I hear a version of it constantly. Option 2: The work that actually moves your business forward is rarely the work shouting loudest at you today.", direction: `Your second line (if you opened with Option 1):
 "It's one of the most common things I hear, and one of the most expensive."
 
 Your second line (if you opened with Option 2):
@@ -1411,7 +1414,7 @@ Your closing line before the CTA:
 "If you feel like a fraud now and then, it might just mean you care about doing it well."
 
 (Add one honest line rather than a motivational one, or leave it.)`, cta: '"Does imposter syndrome ever catch you out, even when you know you\'re good at what you do?"' },
-  { id: "oct-2", week: "Week 21 · Friday", type: "Expertise", bold: "3/5", title: "\"I'm Too Small to Need a Finance Person.\" Here's the Maths.", hook: "Option 1: \"I'm too small a business to pay for any extra support on the finance side.\" I hear it a lot, and it's often the businesses who say it that need it most. Option 2: A good finance director should pay for themselves many times over. If they don't, you've got the wrong one.", direction: `Your second line (if you opened with Option 1):
+  { id: "oct-2", week: "Week 21 · Friday", type: "Expertise", bold: "3/5", objection: true, title: "\"I'm Too Small to Need a Finance Person.\" Here's the Maths.", hook: "Option 1: \"I'm too small a business to pay for any extra support on the finance side.\" I hear it a lot, and it's often the businesses who say it that need it most. Option 2: A good finance director should pay for themselves many times over. If they don't, you've got the wrong one.", direction: `Your second line (if you opened with Option 1):
 "Too small usually means there's no spare money for mistakes, which is exactly when getting the numbers right matters most."
 
 Your second line (if you opened with Option 2):
@@ -1532,6 +1535,39 @@ Your closing line before the CTA:
 (Add a line on what owners gain from putting a real wage in, even a modest one. An honest view of whether the business actually works.)`, cta: '"If you\'re not taking a proper wage and you\'re not sure what that\'s hiding, drop me a message."' },
 ];
 
+// New objection-based cards from Session 8 (16 July 2026). These only appear in the Objection-based sub-tab.
+const asbObjectionNewIdeas: AsbIdea[] = [
+  { id: "obj-1", week: "Session 8 · New", type: "Expertise", bold: "3/5", objection: true, title: "\"We'll Just See How That Goes First.\" Then What?", hook: "Option 1: 'We'll just see how that goes for a bit.' The new hire, the dashboard you built yourselves, the accounting thing you're sorting out first. I hear a version of this all the time. Option 2: Most owners saying 'I'll do it when' aren't really putting off that decision. They're putting off getting a clear view of the business while they make it.", direction: `Your second line (if you opened with Option 1):
+"And the moment when you've properly 'seen how it goes' somehow never arrives."
+
+(Add 2 or 3 sentences on the pattern, in your own words. Deciding to do it later feels good because it feels like a plan, but later relies on perfect conditions turning up, and you've never once seen the perfect conditions actually arrive. Let this one be a bit ranty, it comes from real frustration, just keep the warmth in it.)
+
+Your next line:
+"Whatever you're waiting on, the benefit starts when you start."
+
+(Add a sentence or two on why earlier beats later. The decisions you're waiting to make, the hire, the expansion, the new product, are exactly the ones that go better with someone across the numbers. And if you're honest with yourself, waiting can just be the polite version of no.)
+
+Your closing line before the CTA:
+"If you're reading this thinking, that's me, you don't have to like this post or comment on it."
+
+(This line matters. Plenty of people will recognise themselves and won't want to admit it publicly, so give them a private way in.)`, cta: '"Message me instead and we can have a conversation in confidence. Nobody else needs to know."' },
+  { id: "obj-2", week: "Session 8 · New", type: "Expertise", bold: "2/5", objection: true, title: "\"It's a Cost We Can't Justify Right Now.\" Fair. Let's Talk About It.", hook: "Option 1: 'It's a cost we can't really justify right now.' That's a fair challenge, so here's how I think about whether I'm worth it. Option 2: The whole intention of working with someone like me is that it pays for itself. Not in a vague, trust-me way, in a specific one.", direction: `Your second line (if you opened with Option 1):
+"The whole intention is for it to pay for itself in some way."
+
+(Add 2 or 3 sentences on where the payback actually comes from, in your own words. Sometimes it's a pricing decision put right or a loss-making product spotted. Sometimes it's a mistake avoided before it was made. And sometimes it's the same money coming in but a much easier life running the business. You said all of this on a recent call, use that language.)
+
+Your next line:
+"And there's an honest caveat, because I won't promise it blind."
+
+(Add a sentence on the only-if. The fee pays for itself only if we find something worth fixing and fix it. That honesty is the point. You're not selling magic, you're selling a clear look at the numbers and what to do about them.)`, cta: '"If the cost is the thing holding you back, that\'s exactly the conversation worth having. Drop me a message."' },
+];
+
+// The Objection-based sub-tab: the flagged cards from the monthly plan (same cards, same used-state) plus the new Session 8 ones.
+const asbObjectionIdeas: AsbIdea[] = [
+  ...[...asbAugustIdeas, ...asbOctoberIdeas].filter(i => i.objection),
+  ...asbObjectionNewIdeas,
+];
+
 function AsbContentTab({ slug }: { slug: string }) {
   const [activeMonth, setActiveMonth] = useState("june");
   const months = [
@@ -1540,14 +1576,16 @@ function AsbContentTab({ slug }: { slug: string }) {
     { id: "august", label: "August — Weeks 13–16" },
     { id: "september", label: "September — Weeks 17–20" },
     { id: "october", label: "October — Weeks 21–24" },
+    { id: "objection", label: "Objection-based" },
   ];
-  const ideas = activeMonth === "june" ? asbJuneIdeas : activeMonth === "july" ? asbJulyIdeas : activeMonth === "august" ? asbAugustIdeas : activeMonth === "september" ? asbSeptemberIdeas : asbOctoberIdeas;
+  const ideas = activeMonth === "june" ? asbJuneIdeas : activeMonth === "july" ? asbJulyIdeas : activeMonth === "august" ? asbAugustIdeas : activeMonth === "september" ? asbSeptemberIdeas : activeMonth === "october" ? asbOctoberIdeas : asbObjectionIdeas;
   const descriptions: Record<string, string> = {
     june: "The audience is warming up. The personal posts get a little more revealing, the expertise posts get sharper. The door-slammer post in Week 5 is a bold one, so save it for when the habit is solid.",
     july: "By now the rhythm is established. Go deeper and bolder. The personal posts tackle the stories you haven't shared publicly yet, and the expertise posts push into sharper, more opinionated territory.",
     august: "Weeks 13 and 14 came from your first batch of conversation notes, a prospect call on 30 April. Weeks 15 onwards come from the ideas you captured yourself in June, in client and networking conversations. The workflow is working, conversations becoming content.",
     september: "All from the ideas you captured in June, in your own conversations with clients, prospects and at networking. Expertise posts on what getting the finances wrong actually costs, paired with personal posts that show the human behind the numbers.",
     october: "The back half of your June ideas, mapped out so you've got a runway well past our last session. Keep the rhythm going: two posts a week, one personal and one expertise.",
+    objection: "From Session 8. The three objections you actually hear on sales calls, in order: they need to speak to someone else, they'll do it when, and the cost. These posts answer the objection before the call ever happens, so prospects arrive with their concerns already quashed. The amber-badged cards also sit in their original months, and marking one used marks it everywhere.",
   };
 
   return (
