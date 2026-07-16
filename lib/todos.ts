@@ -16,7 +16,7 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "af6", text: "Come back to Ben once you know what you need next" },
   ],
   "andy-scott-barrett": [
-    { id: "s8-1", text: "Write this week's post from the client work in front of you right now rather than the older cards. Anonymise it and get it out." },
+    { id: "s8-1", text: "Keep using the content cards, and when one feels slow, write this week's post from the client work in front of you instead. Anonymise it and get it out." },
     { id: "s8-2", text: "Come off every sales call and voice note the content ideas straight away, before you move on to the next thing." },
     { id: "s8-3", text: "Have a go at the objection-based posts, starting with 'we'll just see how that goes'. Cards are in the Objection-based section of Content Ideas." },
     { id: "s8-4", text: "Buy an A3 or A2 whiteboard and use it for post visuals instead of AI graphics." },
