@@ -190,11 +190,11 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
 // array indices (and their persisted "used" state) stay stable.
 const CONTENT_IDEAS: {
   pillars: number[];
-  hookA: string;
-  hookB: string;
-  guidance: string;
-  tips: string[];
-  questions: string[];
+  hookA?: string;
+  hookB?: string;
+  guidance?: string;
+  tips?: string[];
+  questions?: string[];
   audience: string;
   used?: boolean;
   resultNote?: string;
@@ -392,21 +392,9 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [1, 0],
-    hookA: "$1 for 1 pixel. What was that all about.",
-    hookB: "I still remember faxing affiliate reports at the end of the month. That's how much this industry has changed.",
     used: true,
     resultNote:
-      "You came up with this one entirely on your own, no brief from me, and it's one of your best yet. The dollar-a-pixel and Wayne Rooney's metatarsal are exactly the specific, odd details that make people stop scrolling, and the fax machine line lands the joke without spelling it out. What's doing the real work underneath the humour is the nostalgia itself, twenty-plus years in this game reads as authority without you having to say it once. Keep logging ideas like this yourself.",
-    guidance:
-      "A nostalgia post dressed up as a laugh, but really it's the Graft pillar doing its job. Catching up with an old colleague and swapping industry war stories from 2002-2010 (the Million Dollar Homepage, faxing reports, ten-day deliveries) reads as pure fun on the surface, while it reminds a reader in the background that you've been doing this long enough to have the stories at all.",
-    tips: [
-      "Reach for the daft, hyper-specific detail from the era, a fax machine, a grainy product photo, rather than a general 'things were different' line. Specifics are what make people who lived it laugh and people who didn't want to read on.",
-      "Never state the years of experience directly. Let the reader do the maths from the details and land on it themselves.",
-      "Keep it self-deprecating throughout, the 'sounding like a Dad telling his kids' line is doing exactly that, so nostalgia never tips into a lecture about how good the old days were.",
-    ],
-    questions: [
-      "What's the maddest thing about how your industry used to work that would sound made up to anyone starting out today?",
-    ],
+      "This is your best post yet in my opinion, though that's not what the impressions show, so don't judge it against likes and comments alone. What stands out is craft: it's the first of your posts with a photo attached, a shot of the actual Million Dollar Homepage website. That works as a visual hook to stop the scroll, and for anyone who remembers the site, it triggers nostalgia before they've read a word. You wrote the whole thing off your own back too, no brief from me.",
     audience: "Industry peers and marketing leaders, reinforces two decades of scars without ever stating it outright.",
   },
 ];
@@ -1065,7 +1053,7 @@ function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA: string; hookB: string; guidance: string; tips: string[]; questions: string[]; audience: string; used?: boolean; resultNote?: string; deadline?: string }; index: number; slug: string; color: string }) {
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA?: string; hookB?: string; guidance?: string; tips?: string[]; questions?: string[]; audience: string; used?: boolean; resultNote?: string; deadline?: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(idea.used ?? false);
   const [saving, setSaving] = useState(false);
   const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
@@ -1134,25 +1122,29 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
         </div>
       )}
 
-      {/* Hook options A and B */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-        {[{ k: "A", v: idea.hookA }, { k: "B", v: idea.hookB }].map(h => (
-          <div key={h.k} style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "12px 14px" }}>
-            <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 6px" }}>Hook {h.k}</p>
-            <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{h.v}</p>
-          </div>
-        ))}
-      </div>
+      {/* Hook options A and B — only for ideas Ben briefed, not ones Neil originated himself */}
+      {idea.hookA && idea.hookB && (
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
+          {[{ k: "A", v: idea.hookA }, { k: "B", v: idea.hookB }].map(h => (
+            <div key={h.k} style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "12px 14px" }}>
+              <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 6px" }}>Hook {h.k}</p>
+              <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1C1C1C", lineHeight: 1.45, margin: 0 }}>{h.v}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
-      <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>{idea.guidance}</p>
+      {idea.guidance && (
+        <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 14px" }}>{idea.guidance}</p>
+      )}
 
-      {idea.tips.length > 0 && (
+      {idea.tips && idea.tips.length > 0 && (
         <div style={{ background: "#F9F8F6", border: "1px solid #ECE7DF", borderRadius: 6, padding: "14px 16px", marginBottom: 14 }}>
           <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 10px" }}>How to build it</p>
           {idea.tips.map((tip, j) => {
             const label = ["What to think about", "How to turn heads", "What to include, what to leave out"][j] ?? "";
             return (
-              <div key={j} style={{ display: "flex", gap: 9, marginBottom: j === idea.tips.length - 1 ? 0 : 10 }}>
+              <div key={j} style={{ display: "flex", gap: 9, marginBottom: j === idea.tips!.length - 1 ? 0 : 10 }}>
                 <span style={{ color: primary, fontWeight: 700, flexShrink: 0, fontSize: "0.8rem", lineHeight: 1.5 }}>{j + 1}</span>
                 <p style={{ fontSize: "0.82rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>
                   <span style={{ fontWeight: 700, color: "#1C1C1C" }}>{label}. </span>{tip}
@@ -1163,11 +1155,11 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
         </div>
       )}
 
-      {idea.questions.length > 0 && (
+      {idea.questions && idea.questions.length > 0 && (
         <div style={{ background: `${primary}0d`, border: `1px solid ${primary}26`, borderRadius: 6, padding: "12px 14px", marginBottom: 14 }}>
           <p style={{ fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: primary, margin: "0 0 8px" }}>Questions that make them think "yep, that's me"</p>
           {idea.questions.map((q, j) => (
-            <div key={j} style={{ display: "flex", gap: 8, marginBottom: j === idea.questions.length - 1 ? 0 : 6 }}>
+            <div key={j} style={{ display: "flex", gap: 8, marginBottom: j === idea.questions!.length - 1 ? 0 : 6 }}>
               <span style={{ color: primary, fontWeight: 700, flexShrink: 0, fontSize: "0.82rem" }}>?</span>
               <p style={{ fontSize: "0.85rem", color: "#3D3935", lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>{q}</p>
             </div>
