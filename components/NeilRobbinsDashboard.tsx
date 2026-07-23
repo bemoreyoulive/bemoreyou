@@ -390,6 +390,25 @@ const CONTENT_IDEAS: {
     audience: "Your team and fellow business leaders.",
     deadline: "Write after Thursday's All Hands (17 July), publish 18 July. Not before.",
   },
+  {
+    pillars: [1, 0],
+    hookA: "$1 for 1 pixel. What was that all about.",
+    hookB: "I still remember faxing affiliate reports at the end of the month. That's how much this industry has changed.",
+    used: true,
+    resultNote:
+      "You came up with this one entirely on your own, no brief from me, and it's one of your best yet. The dollar-a-pixel and Wayne Rooney's metatarsal are exactly the specific, odd details that make people stop scrolling, and the fax machine line lands the joke without spelling it out. What's doing the real work underneath the humour is the nostalgia itself, twenty-plus years in this game reads as authority without you having to say it once. Keep logging ideas like this yourself.",
+    guidance:
+      "A nostalgia post dressed up as a laugh, but really it's the Graft pillar doing its job. Catching up with an old colleague and swapping industry war stories from 2002-2010 (the Million Dollar Homepage, faxing reports, ten-day deliveries) reads as pure fun on the surface, while it reminds a reader in the background that you've been doing this long enough to have the stories at all.",
+    tips: [
+      "Reach for the daft, hyper-specific detail from the era, a fax machine, a grainy product photo, rather than a general 'things were different' line. Specifics are what make people who lived it laugh and people who didn't want to read on.",
+      "Never state the years of experience directly. Let the reader do the maths from the details and land on it themselves.",
+      "Keep it self-deprecating throughout, the 'sounding like a Dad telling his kids' line is doing exactly that, so nostalgia never tips into a lecture about how good the old days were.",
+    ],
+    questions: [
+      "What's the maddest thing about how your industry used to work that would sound made up to anyone starting out today?",
+    ],
+    audience: "Industry peers and marketing leaders, reinforces two decades of scars without ever stating it outright.",
+  },
 ];
 
 // Homepage "who you're for / not for", 4 bullets each.
@@ -950,16 +969,24 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       ))}
                     </div>
 
-                    {CONTENT_IDEAS
-                      .map((idea, i) => ({ idea, i }))
-                      .filter(({ idea }) => (idea.used ?? false) === (contentFilter === "used"))
-                      // Ideas with a deadline (the posts due before Neil's holiday) float to the
-                      // top of the list. Sort is stable, so original order holds otherwise, and
-                      // the index passed down stays the same for Supabase's persisted used state.
-                      .sort((a, b) => (b.idea.deadline ? 1 : 0) - (a.idea.deadline ? 1 : 0))
-                      .map(({ idea, i }) => (
-                        <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
-                      ))}
+                    {(() => {
+                      const filtered = CONTENT_IDEAS
+                        .map((idea, i) => ({ idea, i }))
+                        .filter(({ idea }) => (idea.used ?? false) === (contentFilter === "used"));
+                      // Used ideas are always appended to the end of CONTENT_IDEAS in posting
+                      // order, so reverse for display to show the most recently posted first.
+                      // This never touches the `i` passed down, so Supabase's persisted used
+                      // state (keyed by original array index) stays intact.
+                      const ordered = contentFilter === "used" ? [...filtered].reverse() : filtered;
+                      return ordered
+                        // Ideas with a deadline (the posts due before Neil's holiday) float to
+                        // the top of the not-yet-posted list. Sort is stable, so order above
+                        // holds otherwise.
+                        .sort((a, b) => (b.idea.deadline ? 1 : 0) - (a.idea.deadline ? 1 : 0))
+                        .map(({ idea, i }) => (
+                          <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
+                        ));
+                    })()}
               </>
             )}
             <CommentBox clientName={name} tabName="Content Ideas" slug={slug} />
