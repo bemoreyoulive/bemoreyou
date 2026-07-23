@@ -394,7 +394,7 @@ const CONTENT_IDEAS: {
     pillars: [1, 0],
     used: true,
     resultNote:
-      "This is your best post yet in my opinion, though that's not what the impressions show, so don't judge it against likes and comments alone. What stands out is craft: it's the first of your posts with a photo attached, a shot of the actual Million Dollar Homepage website. That works as a visual hook to stop the scroll, and for anyone who remembers the site, it triggers nostalgia before they've read a word. You wrote the whole thing off your own back too, no brief from me.",
+      "Your \"$1 for 1 pixel\" post is the best yet in my opinion, though that's not what the impressions show, so don't judge it against likes and comments alone. What stands out is craft: your first post with a photo attached, a shot of the actual Million Dollar Homepage website. That works as a visual hook to stop the scroll, and for anyone who remembers the site, it triggers nostalgia before they've read a word. You wrote it off your own back too, no brief from me.",
     audience: "Industry peers and marketing leaders, reinforces two decades of scars without ever stating it outright.",
   },
 ];
