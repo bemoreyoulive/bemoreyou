@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 3 of 13 · July 2026",
+  sessionLabel: "Session 4 of 13 · August 2026",
   nextMove:
-    "Neil, this is your focus for the next four weeks. Write and publish one post a week to hold the cadence, connect with clients and industry leaders so they see your posts, and look into panels and events that fit you. See you 11 August.",
+    "Neil, publish the Performance Partnerships and Brazil posts this week, keep the five-minutes-a-day ICP connections habit going, and confirm the Sunderland talk. The Moonpig lead proves this already works. Two more posts land next week, keep the momentum from this session.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,23 +74,23 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr3-write",
-    text: "Write your four posts before you go away on 20 July: the All Hands post, the girls coaching story, the AI and search piece, and the deal that looked terrible but saved the company. Schedule one a week through August so the cadence holds while you're off.",
+    id: "nr4-write",
+    text: "Write and publish the four posts locked in this session: Performance Partnerships, The Missed Opportunity, the Brazil holiday post, the industry-coming-together piece, and the short-termism piece. Two this week, two scheduled for next week.",
     section: "content",
   },
   {
-    id: "nr3-photo",
-    text: "Add a photo to two of the next four posts. It doesn't need to directly relate, an old photo from your camera roll works just as well and gives people a reason to stop scrolling.",
-    section: "content",
-  },
-  {
-    id: "nr3-connect",
-    text: "Connect with your clients and industry leaders on LinkedIn so they start seeing your posts land in their feed. No message needed, they'll already recognise your name.",
+    id: "nr4-connect",
+    text: "Spend five minutes a day searching LinkedIn for MD and CEO job titles in your ICP and sending a blank connection request, no note attached.",
     section: "home",
   },
   {
-    id: "nr3-events",
-    text: "Look into panels and industry events worth taking part in, but be selective. The wrong stage can do real damage to the brand you're building, so it has to genuinely fit you.",
+    id: "nr4-comment",
+    text: "Comment on a handful of relevant posts each day so you're an active part of the conversation, not just posting into the void.",
+    section: "home",
+  },
+  {
+    id: "nr4-sunderland",
+    text: "Follow up the Sunderland event organiser this week and confirm whether the September talk is still on.",
     section: "home",
   },
   {
@@ -176,6 +176,10 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
     body: "I will always be straight with you about this one. The most common reason founders stop posting is not lack of ideas or time. It is posting for six or eight weeks, getting decent engagement, then hitting a quieter fortnight and thinking 'what is the point.' LinkedIn rewards consistency over months, not sprints. The algorithm is basically Ferguson: put the work in during pre-season and the results show up later. Month two and three is the danger zone, when the novelty has worn off and the traction has not fully arrived yet. If you are ever tempted to go quiet, message me first. That is exactly what I am here for.",
   },
   {
+    title: "Conversation equals clarity, content and clients",
+    body: "This is worth holding onto as a simple filter for where your next post comes from. Conversations give you clarity about who you are and how you think, that's what happened when a chat with Louise turned into your pixel post. They also feed you content, most of your best posts so far started as something you said to someone else first. And eventually they turn into clients too, which is exactly what happened with Moonpig. So don't go looking for content in a vacuum. Keep having the conversations, inside the business and out, and jot down the moment something lands. The connection-building habit we agreed this session works the same way, five minutes a day reaching the right people means more of those conversations happen in the first place.",
+  },
+  {
     title: "You do not need a call to action",
     body: "A quick word on something that trips a lot of people up. You will see endless posts that sign off with 'book a call' or 'DM me to find out more.' You do not need any of that, and at your level it would actually work against you. You are the founder of a 24 year old agency, not someone flogging a course from the back of the room. Your job here is to be worth listening to, not to chase a click. Let the writing earn the attention and let people come to you, because they will. The only soft ask worth making, now and then, is inviting people to share their own take in the comments. That lifts the reach of a post without ever looking like selling, and more often than not it starts the conversations that actually matter.",
   },
@@ -199,6 +203,7 @@ const CONTENT_IDEAS: {
   used?: boolean;
   resultNote?: string;
   deadline?: string;
+  archived?: boolean;
 }[] = [
   {
     pillars: [0],
@@ -289,7 +294,7 @@ const CONTENT_IDEAS: {
       "What has something outside work taught you that the job never could?",
     ],
     audience: "Everyone. The thread that ties the rest together.",
-    deadline: "Write before 20 July, any day this week works.",
+    archived: true,
   },
   {
     pillars: [1],
@@ -306,7 +311,7 @@ const CONTENT_IDEAS: {
       "Ever taken a deal you didn't want, only to have it save you later?",
     ],
     audience: "Founders, agency owners and potential acquirers or investors. Also strengthens authority with marketing leaders.",
-    deadline: "Write before 20 July, any day this week works.",
+    archived: true,
   },
   {
     pillars: [0],
@@ -371,7 +376,7 @@ const CONTENT_IDEAS: {
       "If your customers get answers straight from AI instead of clicking through to buy, who deserves the credit, and who gets paid?",
     ],
     audience: "Senior marketing decision-makers and industry peers, this is the theme you'll come back to right through into 2027.",
-    deadline: "Write before 20 July, any day this week works. Just the opening tension, save the detail for later posts.",
+    archived: true,
   },
   {
     pillars: [2],
@@ -388,14 +393,58 @@ const CONTENT_IDEAS: {
       "What does your team actually need to hear from you once a year, if it's not just the numbers?",
     ],
     audience: "Your team and fellow business leaders.",
-    deadline: "Write after Thursday's All Hands (17 July), publish 18 July. Not before.",
+    archived: true,
   },
   {
     pillars: [1, 0],
     used: true,
     resultNote:
-      "Your \"$1 for 1 pixel\" post is the best yet in my opinion, though that's not what the impressions show, so don't judge it against likes and comments alone. What stands out is craft: your first post with a photo attached, a shot of the actual Million Dollar Homepage website. That works as a visual hook to stop the scroll, and for anyone who remembers the site, it triggers nostalgia before they've read a word. You wrote it off your own back too, no brief from me.",
+      "Your \"$1 for 1 pixel\" post is the best yet in my opinion, though that's not what the impressions show, so don't judge it against likes and comments alone. What stands out is craft: your first post with a photo attached, a shot of the actual Million Dollar Homepage website. That works as a visual hook to stop the scroll, and for anyone who remembers the site, it triggers nostalgia before they've read a word. You wrote it off your own back too, no brief from me. Now I know where it came from too, a conversation with Louise in your office, reminiscing about the early days. That's the exact model to repeat, a conversation sparking a post, not sitting down to force one out. It picked up 3 to 4k impressions with barely any comments, which is completely fine, impressions are not unique viewers, and you only need a handful of the right people nodding along, not a crowd.",
     audience: "Industry peers and marketing leaders, reinforces two decades of scars without ever stating it outright.",
+  },
+  {
+    pillars: [0],
+    guidance:
+      "This is the one that got held back while the website piece caught up, so it carries a bit of built-up energy already. You know this territory better than anyone, the industry underinvests because the upside isn't understood, not because affiliate has been written off. Keep the post itself standalone and complete, don't make the reader feel like they're missing something if they don't click through to the website piece, that's a bonus, not the point.",
+    tips: [
+      "Lead with the gap, not the definition. Say what leaders are missing before you explain what performance partnerships actually are.",
+      "Link out to the Silverbean piece in the comments once it's live, not the post itself, so the post still stands alone if the timing slips again.",
+    ],
+    audience: "Senior marketing decision-makers and brand leaders.",
+    deadline: "Publish this week, the one you're partway through already.",
+  },
+  {
+    pillars: [3],
+    guidance:
+      "Keep this one properly personal, don't force a business lesson onto it. The real thread worth pulling is why you come back more refreshed from an adventure holiday than the old poolside-with-a-business-book version, that's relatable to any leader reading it. If it feels right, there's a second angle in here too, the fact the business ran fine without you for three weeks says more about the team you've built than any post about hiring ever could.",
+    tips: [
+      "Pick one moment, not the itinerary. A single scene does more work than a list of places you went.",
+      "If you use the team-running-without-you angle, make it about them, not you. Let it read as pride in what they've built, not relief that you got away.",
+    ],
+    audience: "Everyone. The thread that ties the rest together, and a nice one for the team to see too.",
+    deadline: "Publish this week.",
+  },
+  {
+    pillars: [0],
+    guidance:
+      "This builds on the AI and search theme you opened up before you went away. The angle now is sharper, this isn't a future risk anymore, it's already starting to bite, and for the first time in years you're seeing the industry actually try to organise a response instead of everyone quietly protecting their own patch. Keep it hopeful rather than alarmist, you're pointing at an opportunity to lead, not just a problem.",
+    tips: [
+      "Open with the shift, not the threat. People clicking through less because AI answers the question first is the hook.",
+      "Name the moment you're seeing signs of collaboration starting, without overselling how far it's actually got.",
+    ],
+    audience: "Senior marketing decision-makers and industry peers, the theme you'll keep coming back to through into 2027.",
+    deadline: "Publish next week, while you're in Mallorca.",
+  },
+  {
+    pillars: [0],
+    guidance:
+      "This one's got a real example sitting behind it, so let the story do the work rather than the theory. A marketing leader under pressure to hit a number fast chose speed over the right call, and it's already looking shaky. You don't need to name names or details, the shape of the story is enough. Land it on the wider point, marketing leaders can't plan properly anymore because the ground keeps shifting under them, so a bit of empathy for that goes a long way.",
+    tips: [
+      "Open on the pressure, not the outcome. A leader needing results yesterday is the relatable bit.",
+      "Keep this one focused on the marketing-leadership planning problem. Save the wider culture and consumerism angle for a separate post another time.",
+    ],
+    audience: "Senior marketing decision-makers, speaks directly to the pressure they're under.",
+    deadline: "Publish next week, while you're in Mallorca.",
   },
 ];
 
@@ -479,6 +528,26 @@ const SESSIONS: {
       "Session 4 booked, Monday 11 August at 9.30am.",
     ],
     nextSession: "Session 4 · Monday 11 August 2026, 9:30am · content review and next batch",
+  },
+  {
+    number: 4,
+    date: "11 August 2026",
+    title: "Coaching session four. Sharpening who you write for, and the first real lead lands.",
+    summary:
+      "Our first session back after your break, and a genuinely productive one. You'd already done real thinking before you got back, working out who you're actually writing for, CEO to CEO and marketing leadership only, and leaving the tactical, day-to-day content to your team. We locked in the next four posts: the Performance Partnerships piece, a personal post, the industry-coming-together piece on the AI and search shift, and a short-termism piece drawn from a live example this week. Best news of the session: the Moonpig enquiry is progressing into real discussions this month, the first genuine inbound lead of the whole engagement, from exactly the seniority we're targeting. We also agreed a simple daily habit, five minutes building your ICP connections plus commenting on other people's posts, so your content has a better chance of reaching the right people once it's out. Events are moving too, a September talk in Sunderland to get some reps in, plus two more in the pipeline.",
+    insights: [
+      "You did the hardest bit of positioning yourself, working out that CEO-level content is your lane and tactical affiliate content is your team's. That's a real shift in how you think about this, not just what you post.",
+      "The Moonpig lead moving into real discussions this month is the first proof the whole thing works commercially, not just reputationally.",
+      "Content plus connections. Posting alone isn't enough, five minutes a day building your network is what gets your content in front of the right people.",
+      "You're already thinking about pacing your visibility, treating Sunderland as practice before the bigger stages. That's exactly the right instinct.",
+    ],
+    agreed: [
+      "Publish the Performance Partnerships and Brazil posts this week, the industry-coming-together and short-termism posts next week.",
+      "Five minutes a day connecting with ICP job titles, no note, plus commenting on relevant posts.",
+      "Confirm the Sunderland talk this week.",
+      "Session 5 booked, Wednesday 26 August at 1.30pm.",
+    ],
+    nextSession: "Session 5 · Wednesday 26 August 2026, 1:30pm · content check-in and events update",
   },
 ];
 
@@ -597,20 +666,20 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="month" animateIn />
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="week" animateIn />
 
             {/* A note from Ben */}
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Two sessions in, Neil, and three posts are out now. The Finance Director pivot, the Ferrari boss story and this morning's barbecue hire post, all landing well, and the Ferrari one especially: about 75 likes and a strong run of comments, all of which you replied to yourself. Keep doing that on every post, and start adding a photo, this morning's post would have hit even harder with one. See you at 11am.
+                Good to have you back, Neil. That "$1 for 1 pixel" post while you were away was a brilliant bit of self-starting, straight out of a conversation with Louise, exactly the instinct we want more of. And the Moonpig lead moving into real discussions this month is proof the whole thing works, a genuine inbound enquiry from the exact seniority we're targeting. You've landed on real clarity too, writing CEO to CEO and leaving the tactical stuff to the team, plus a proper habit now for building your network daily. Four posts locked in for the next fortnight, get stuck in. See you 26 August.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "3 of 13", sub: "Next: Mon 11 August, 9:30am" },
+                { label: "Sessions done", value: "4 of 13", sub: "Next: Wed 26 August, 1:30pm" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
@@ -911,20 +980,10 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             {CONTENT_IDEAS.length > 0 && (
               <>
                     <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 6, padding: "20px 24px", marginBottom: 20 }}>
-                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>11 posts to draw from</p>
-                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you two hook options, A and B, so you pick the opener that feels most like you. Then a few words on how to write it and who it's for. I've also dropped in a rhetorical question or two per post, the kind that make the right reader think "yep, that's me". Use one to open or close if it fits. The colour tags show which pillar or two each post leans on.</p>
+                      <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>{CONTENT_IDEAS.filter(x => !x.archived).length} posts to draw from</p>
+                      <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you a steer on how to write it, who it's for, and why it'll land. The colour tags show which pillar or two each post leans on. Where I've briefed the idea you'll also get two hook options, A and B, so you pick the opener that feels most like you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Three are posted already, the Finance Director pivot, the Ferrari boss story and the barbecue hire story, all doing well. Use the tabs below to flick between what's out there and what's still in the tank.</p>
-                    </div>
-                    <div style={{ background: "#fdf0e0", border: "1px solid #e0a94666", borderLeft: "4px solid #c9822b", borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
-                      <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a5c1a", margin: "0 0 10px" }}>Before you go away, write these 4</p>
-                      <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 8 }}>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The Gibraltar deal, the one you didn't want that saved the company</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The under-16s girls coaching story</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The AI and search piece, the opener on the new theme, don't try to cover it all in one go</li>
-                        <li style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.6 }}>The All Hands wrap-up, but only write this one after Thursday's meeting, not before</li>
-                      </ul>
-                      <p style={{ fontSize: "0.8rem", color: "#8a5c1a", lineHeight: 1.6, margin: "10px 0 0" }}>Each is flagged on its card below. Get the first three done whenever suits this week, save the All Hands post until after Thursday.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Four are posted already, the Finance Director pivot, the Ferrari boss story, the barbecue hire story and the pixel post, all doing well. Use the tabs below to flick between what's out there and what's still in the tank.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
@@ -938,8 +997,8 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                     {/* Used / not-yet-used sub-tabs */}
                     <div style={{ display: "flex", gap: 8, marginBottom: 18, flexWrap: "wrap" }}>
                       {[
-                        { id: "used" as const, label: `Posted with feedback (${CONTENT_IDEAS.filter(x => x.used).length})` },
-                        { id: "unused" as const, label: `Not posted yet (${CONTENT_IDEAS.filter(x => !x.used).length})` },
+                        { id: "used" as const, label: `Posted with feedback (${CONTENT_IDEAS.filter(x => x.used && !x.archived).length})` },
+                        { id: "unused" as const, label: `Not posted yet (${CONTENT_IDEAS.filter(x => !x.used && !x.archived).length})` },
                       ].map(f => (
                         <button
                           key={f.id}
@@ -960,16 +1019,17 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                     {(() => {
                       const filtered = CONTENT_IDEAS
                         .map((idea, i) => ({ idea, i }))
-                        .filter(({ idea }) => (idea.used ?? false) === (contentFilter === "used"));
+                        .filter(({ idea }) => !idea.archived && (idea.used ?? false) === (contentFilter === "used"));
                       // Used ideas are always appended to the end of CONTENT_IDEAS in posting
                       // order, so reverse for display to show the most recently posted first.
                       // This never touches the `i` passed down, so Supabase's persisted used
                       // state (keyed by original array index) stays intact.
                       const ordered = contentFilter === "used" ? [...filtered].reverse() : filtered;
                       return ordered
-                        // Ideas with a deadline (the posts due before Neil's holiday) float to
-                        // the top of the not-yet-posted list. Sort is stable, so order above
-                        // holds otherwise.
+                        // Ideas with a deadline (the currently committed posts) float to the
+                        // top of the not-yet-posted list. Sort is stable, so order above holds
+                        // otherwise. Archived ideas are filtered out above, kept in the array
+                        // with stable indices so they can be reactivated later if needed.
                         .sort((a, b) => (b.idea.deadline ? 1 : 0) - (a.idea.deadline ? 1 : 0))
                         .map(({ idea, i }) => (
                           <NeilIdeaCard key={i} idea={idea} index={i} slug={slug} color={color} />
