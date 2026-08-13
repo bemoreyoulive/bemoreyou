@@ -220,7 +220,7 @@ const CONTENT_IDEAS: {
       "Include a real figure and a plain example anyone could follow. Leave out 'incrementality', 'publisher mix' and anything that needs a glossary.",
     ],
     questions: [
-      "When did you last properly check where your performance budget actually ends up?",
+      "When did you last actually check where your performance budget ends up?",
       "If something only charged you when it delivered, would you really leave it in the corner?",
     ],
     audience: "Senior marketing decision-makers and brand leaders.",
@@ -235,7 +235,7 @@ const CONTENT_IDEAS: {
     guidance:
       "A story post, and people love a good villain. Tell it the way you'd in the pub: the fantasy forecasts, the Ferrari, the moment you decided you'd rather make your own mistakes. Then land one quiet point about leadership or over-promising. Don't spell out the moral, let the story carry it. This is the stuff that builds credibility with founders and the people who might back you one day.",
     tips: [
-      "Tell it as a proper story. Set the scene first, the boss, the Ferrari, the forecast with nothing behind it, before you go anywhere near the lesson.",
+      "Tell it like you're telling a mate in the pub. Set the scene first, the boss, the Ferrari, the forecast with nothing behind it, before you go anywhere near the lesson.",
       "The absurd detail is the hook. The cash, the fantasy numbers on the whiteboard. Specifics make people stop, vague life-lessons make them scroll.",
       "Include the one thing it taught you about leadership or over-promising, in a full sentence. Leave out the tidy moral and the 'and that's why you should' ending.",
     ],
@@ -332,7 +332,7 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     hookA: "We cut a publisher's commission from 7% down to 1 or 2%. They weren't happy about it. We'd do exactly the same again.",
-    hookB: "Cutting a partner's income by 70% doesn't win you many friends. Still the right call when the client isn't getting proper value for it.",
+    hookB: "Cutting a partner's income by 70% doesn't win you many friends. Still the right call when the client isn't getting real value for it.",
     guidance:
       "Open on the stat the way you opened the Finance pivot post, straight in with the number, 7% down to 1 or 2%, before you explain anything. Then the plain reasoning: you drop cashback and voucher-site commissions when the incremental value isn't there, even though it costs those publishers 60 to 70% of their income and it damages the relationship. Land the point in one short line, you choose the client over the easy partner relationship, every time. Confident, not smug.",
     tips: [
@@ -343,7 +343,7 @@ const CONTENT_IDEAS: {
     questions: [
       "Who are you still paying out of habit rather than because they're actually earning it?",
     ],
-    audience: "Senior marketing decision-makers and industry peers, a proper hand grenade moment.",
+    audience: "Senior marketing decision-makers and industry peers, a genuine hand grenade moment.",
   },
   {
     pillars: [1],
@@ -416,7 +416,7 @@ const CONTENT_IDEAS: {
   {
     pillars: [3],
     guidance:
-      "Keep this one properly personal, don't force a business lesson onto it. The real thread worth pulling is why you come back more refreshed from an adventure holiday than the old poolside-with-a-business-book version, that's relatable to any leader reading it. If it feels right, there's a second angle in here too, the fact the business ran fine without you for three weeks says more about the team you've built than any post about hiring ever could.",
+      "Keep this one personal, don't force a business lesson onto it. The real thread worth pulling is why you come back more refreshed from an adventure holiday than the old poolside-with-a-business-book version, that's relatable to any leader reading it. If it feels right, there's a second angle in here too, the fact the business ran fine without you for three weeks says more about the team you've built than any post about hiring ever could.",
     tips: [
       "Pick one moment, not the itinerary. A single scene does more work than a list of places you went.",
       "If you use the team-running-without-you angle, make it about them, not you. Let it read as pride in what they've built, not relief that you got away.",
@@ -438,7 +438,7 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     guidance:
-      "This one's got a real example sitting behind it, so let the story do the work rather than the theory. A marketing leader under pressure to hit a number fast chose speed over the right call, and it's already looking shaky. You don't need to name names or details, the shape of the story is enough. Land it on the wider point, marketing leaders can't plan properly anymore because the ground keeps shifting under them, so a bit of empathy for that goes a long way.",
+      "This one's got a real example sitting behind it, so let the story do the work rather than the theory. A marketing leader under pressure to hit a number fast chose speed over the right call, and it's already looking shaky. You don't need to name names or details, the shape of the story is enough. Land it on the wider point, marketing leaders can't plan long-term anymore because the ground keeps shifting under them, so a bit of empathy for that goes a long way.",
     tips: [
       "Open on the pressure, not the outcome. A leader needing results yesterday is the relatable bit.",
       "Keep this one focused on the marketing-leadership planning problem. Save the wider culture and consumerism angle for a separate post another time.",
@@ -672,7 +672,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Good to have you back, Neil. That "$1 for 1 pixel" post while you were away was a brilliant bit of self-starting, straight out of a conversation with Louise, exactly the instinct we want more of. And the Moonpig lead moving into real discussions this month is proof the whole thing works, a genuine inbound enquiry from the exact seniority we're targeting. You've landed on real clarity too, writing CEO to CEO and leaving the tactical stuff to the team, plus a proper habit now for building your network daily. Four posts locked in for the next fortnight, get stuck in. See you 26 August.
+                Good to have you back, Neil. That "$1 for 1 pixel" post while you were away was a brilliant bit of self-starting, straight out of a conversation with Louise, exactly the instinct we want more of. And the Moonpig lead moving into real discussions this month is proof the whole thing works, a genuine inbound enquiry from the exact seniority we're targeting. You've landed on real clarity too, writing CEO to CEO and leaving the tactical stuff to the team, plus you've built yourself a daily habit for growing your network. Four posts locked in for the next fortnight, get stuck in. See you 26 August.
               </p>
             </div>
 
