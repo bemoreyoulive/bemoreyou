@@ -194,6 +194,7 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
 // array indices (and their persisted "used" state) stay stable.
 const CONTENT_IDEAS: {
   pillars: number[];
+  title?: string;
   hookA?: string;
   hookB?: string;
   guidance?: string;
@@ -404,6 +405,7 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
+    title: "Performance Partnerships: The Missed Opportunity",
     guidance:
       "This is the one that got held back while the website piece caught up, so it carries a bit of built-up energy already. You know this territory better than anyone, the industry underinvests because the upside isn't understood, not because affiliate has been written off. Keep the post itself standalone and complete, don't make the reader feel like they're missing something if they don't click through to the website piece, that's a bonus, not the point.",
     tips: [
@@ -415,6 +417,7 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [3],
+    title: "The Brazil holiday post",
     guidance:
       "Keep this one personal, don't force a business lesson onto it. The real thread worth pulling is why you come back more refreshed from an adventure holiday than the old poolside-with-a-business-book version, that's relatable to any leader reading it. If it feels right, there's a second angle in here too, the fact the business ran fine without you for three weeks says more about the team you've built than any post about hiring ever could.",
     tips: [
@@ -426,6 +429,7 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
+    title: "Is this the year the industry comes together?",
     guidance:
       "This builds on the AI and search theme you opened up before you went away. The angle now is sharper, this isn't a future risk anymore, it's already starting to bite, and for the first time in years you're seeing the industry actually try to organise a response instead of everyone quietly protecting their own patch. Keep it hopeful rather than alarmist, you're pointing at an opportunity to lead, not just a problem.",
     tips: [
@@ -437,6 +441,7 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
+    title: "Is short-termism killing marketing?",
     guidance:
       "This one's got a real example sitting behind it, so let the story do the work rather than the theory. A marketing leader under pressure to hit a number fast chose speed over the right call, and it's already looking shaky. You don't need to name names or details, the shape of the story is enough. Land it on the wider point, marketing leaders can't plan long-term anymore because the ground keeps shifting under them, so a bit of empathy for that goes a long way.",
     tips: [
@@ -1113,7 +1118,7 @@ function BallsyMeter({ scale, color }: { scale: number; color: string }) {
   );
 }
 
-function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; hookA?: string; hookB?: string; guidance?: string; tips?: string[]; questions?: string[]; audience: string; used?: boolean; resultNote?: string; deadline?: string }; index: number; slug: string; color: string }) {
+function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[]; title?: string; hookA?: string; hookB?: string; guidance?: string; tips?: string[]; questions?: string[]; audience: string; used?: boolean; resultNote?: string; deadline?: string }; index: number; slug: string; color: string }) {
   const [used, setUsed] = useState(idea.used ?? false);
   const [saving, setSaving] = useState(false);
   const primary = PILLAR_COLORS[idea.pillars[0] % PILLAR_COLORS.length];
@@ -1167,6 +1172,10 @@ function NeilIdeaCard({ idea, index, slug, color }: { idea: { pillars: number[];
           {used ? "Used ✓" : "Mark used"}
         </button>
       </div>
+
+      {idea.title && (
+        <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1C1C1C", lineHeight: 1.35, margin: "0 0 12px" }}>{idea.title}</p>
+      )}
 
       {!used && idea.deadline && (
         <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "#fdf0e0", border: "1px solid #e0a94640", borderRadius: 20, padding: "5px 12px", marginBottom: 14 }}>
