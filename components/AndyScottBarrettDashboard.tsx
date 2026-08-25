@@ -69,18 +69,18 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
             <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 9 · 20 August 2026" cadence="quarter" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
-              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>8</div>
+              <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>9</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 8 — 16 July 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>What a shift this session. A few months ago that prospect says "I don't think I need you" and you'd have politely packed up and gone home. This time you dug in, found the real problem and rebuilt the offer on the spot. That's the version of you I've been waiting to see, and honestly, it's the biggest win of the last three months. The diary structure is holding too, client work midweek and business development on Mondays and Fridays, even with a heavy few weeks of delivery. Busy is good, remember that. On content, keep using the cards, they're doing their job, but lean on whatever's on your desk this week too, because the stuff at the top of your mind will always be the fastest post to write. And start hitting those three objections you keep hearing. And get a whiteboard, your scribbles will beat an AI graphic every day of the week. Next session mid-August, date to follow.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: ASB_COLOR, margin: "0 0 4px" }}>Session 9 — 20 August 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#3a6048", margin: 0, lineHeight: 1.6 }}>We agreed to pause the coaching for now. You were honest that it's not about the value, it's that you need to prove to yourself you can keep the visibility going without a session behind you, and I respect that completely. This dashboard stays live either way. The relationships you've already built are worth more right now than meeting new people, so keep nurturing those. Give BNI a genuine go next time you're there, and follow up the farm-business contact when the September networking session lands at her place. When a post is ready, just post it, don't let it sit waiting to be perfect. Whenever you want to pick coaching back up, just say the word.</p>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Coaching", value: "Monthly", sub: "Rolling · next session mid-August, date to follow" },
+                { label: "Coaching", value: "Paused", sub: "By your choice, pick it back up whenever suits" },
                 { label: "Headline", value: "✓ Live", sub: "On LinkedIn" },
                 { label: "About section", value: "✓ Live", sub: "On LinkedIn" },
-                { label: "Posts out", value: "Weekly", sub: "One a week since January with just one missed. The working on the business post landed well, this week's is in progress" },
+                { label: "Posts out", value: "When ready", sub: "No pressure on frequency for now, a rough honest post beats one that never goes out" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
