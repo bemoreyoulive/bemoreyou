@@ -16,12 +16,12 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "af6", text: "Come back to Ben once you know what you need next" },
   ],
   "andy-scott-barrett": [
-    { id: "s8-1", text: "Keep using the content cards, and when one feels slow, write this week's post from the client work in front of you instead. Anonymise it and get it out." },
-    { id: "s8-2", text: "Come off every sales call and voice note the content ideas straight away, before you move on to the next thing." },
-    { id: "s8-3", text: "Have a go at the objection-based posts, starting with 'we'll just see how that goes'. Cards are in the Objection-based section of Content Ideas." },
-    { id: "s8-4", text: "Buy an A3 or A2 whiteboard and use it for post visuals instead of AI graphics." },
-    { id: "s8-5", text: "Get some photos of you actually working: laptop out, on a call, in a cafe. Fold it into the photo session with George's dad." },
-    { id: "s8-6", text: "Follow up the community investment company prospect once she's spoken to her fellow directors, and keep the other warm leads moving to a clear yes or no." },
+    { id: "s9-1", text: "Keep nurturing the relationships you've already built rather than chasing new introductions." },
+    { id: "s9-2", text: "Give BNI a real go as a visitor, going in expecting to learn from strong networkers and get close to well connected MDs." },
+    { id: "s9-3", text: "Follow up the family business on the farm when the September networking session is held at her place." },
+    { id: "s9-4", text: "Keep voice-noting content ideas the moment you come off a call, even without a session to bring them to." },
+    { id: "s9-5", text: "When a post is ready, just post it. A rough honest post beats a polished one that never goes out." },
+    { id: "s9-6", text: "Send over the LinkedIn testimonial whenever you get a minute, no rush." },
   ],
   "nikki-mcreynolds": [
     { id: "nm1", text: "HushAway Pod — travel to Huddersfield, meet the head teacher, get it set up. Build a simple case study framework for the 2-month placement" },

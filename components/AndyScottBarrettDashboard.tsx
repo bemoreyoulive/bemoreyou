@@ -11,15 +11,15 @@ import DashboardFooter from "@/components/DashboardFooter";
 import CommentBox from "@/components/CommentBox";
 
 const ASB_COLOR = "#2e7d4f";
-const ASB_NEXT_MOVE = "When a content card feels slow, write from the client work in front of you instead, it's the quickest post you'll write. Voice note ideas the moment you come off a call. Chase the community investment company decision, you've earned a clear yes or no.";
+const ASB_NEXT_MOVE = "Keep the visibility going without the weekly sessions. Nurture the relationships you've already built rather than chase new ones, follow up the farm-business contact at her place in September, and go into BNI with an open mind. Just post when something's ready.";
 
 const asbTodos = [
-  { id: "s8-1", text: "Keep using the content cards, and when one feels slow, write this week's post from the client work in front of you instead. Anonymise it and get it out. The stuff at the top of your mind is always the fastest to write.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "s8-2", text: "Come off every sales call and voice note the content ideas straight away, before you move on to the next thing. A rough one-minute ramble into Claude or your phone is enough to capture it.", owner: "Andy" },
-  { id: "s8-3", text: "Have a go at the objection-based posts. Start with 'we'll just see how that goes', it's the one you hear most, and the cards are ready in the new Objection-based section of Content Ideas.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
-  { id: "s8-4", text: "Buy an A3 or A2 whiteboard and use it for post visuals instead of AI graphics. Your own handwriting beats a generated image every time, and you can bring it onto client calls to explain things too.", owner: "Andy" },
-  { id: "s8-5", text: "Get some photos of you actually working: laptop out, on a call, in a cafe. You work from wherever you like now and people should see that. Fold it into the photo session with George's dad.", owner: "Andy" },
-  { id: "s8-6", text: "Follow up the community investment company prospect once she's spoken to her fellow directors, and keep the other warm leads moving to a clear yes or no.", owner: "Andy" },
+  { id: "s9-1", text: "Keep nurturing the relationships you've already built rather than chasing new introductions. That's where the referrals will actually come from, not another first conversation with a stranger.", owner: "Andy" },
+  { id: "s9-2", text: "Give BNI a real go as a visitor. Go in expecting to learn from strong networkers and get close to well connected MDs, not to judge it after one morning.", owner: "Andy" },
+  { id: "s9-3", text: "Follow up the family business on the farm when the September networking session is held at her place. Ask how they decide when to launch the next line.", owner: "Andy" },
+  { id: "s9-4", text: "Keep voice-noting content ideas the moment you come off a call, even without a session to bring them to. It's still the fastest way to capture them.", owner: "Andy" },
+  { id: "s9-5", text: "When a post is ready, just post it. A rough honest post beats a polished one that never goes out.", owner: "Andy", tabLink: { label: "See Content Ideas", tab: "content" } },
+  { id: "s9-6", text: "Send over the LinkedIn testimonial whenever you get a minute, no rush.", owner: "Andy" },
 ];
 
 
@@ -66,7 +66,7 @@ export default function AndyScottBarrettDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={ASB_COLOR} />
-            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 8 · 16 July 2026" cadence="month" animateIn />
+            <NextMoveBox move={ASB_NEXT_MOVE} accentColor={ASB_COLOR} clientName="Andy Scott Barrett" sessionLabel="Session 9 · 20 August 2026" cadence="quarter" animateIn />
 
             <div style={{ background: "#edf4ef", border: `1px solid #c2dbc9`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 14 }}>
               <div style={{ width: 36, height: 36, background: ASB_COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>8</div>
