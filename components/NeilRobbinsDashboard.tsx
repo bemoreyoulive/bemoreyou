@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 4 of 13 · August 2026",
+  sessionLabel: "Session 5 of 13 · August 2026",
   nextMove:
-    "Neil, publish the Performance Partnerships and Brazil posts this week, keep the five-minutes-a-day ICP connections habit going, and confirm the Sunderland talk. The Moonpig lead proves this already works. Two more posts land next week, keep the momentum from this session.",
+    "Neil, publish the car rental rant and the honest 'pulled from pillar to post' post this week, then the AI truth-versus-hype and three-day week pieces next week. Keep the ten-a-day connections going every morning, and check in on the events pipeline with Mary.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,29 +74,29 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr4-write",
-    text: "Write and publish the four posts locked in this session: Performance Partnerships, The Missed Opportunity, the Brazil holiday post, the industry-coming-together piece, and the short-termism piece. Two this week, two scheduled for next week.",
+    id: "nr5-write",
+    text: "Write and publish the four posts locked in this session: the car rental rant, the honest 'pulled from pillar to post' piece, separating AI truth from AI hype, and the three-day week trial. Two this week, two next week.",
     section: "content",
   },
   {
-    id: "nr4-connect",
-    text: "Spend five minutes a day searching LinkedIn for MD and CEO job titles in your ICP and sending a blank connection request, no note attached.",
+    id: "nr5-connect",
+    text: "Keep the ten-a-day connection habit going each morning, your advised cap, and keep watching for the right seniority among the requests coming in.",
     section: "home",
   },
   {
-    id: "nr4-comment",
-    text: "Comment on a handful of relevant posts each day so you're an active part of the conversation, not just posting into the void.",
+    id: "nr5-comment",
+    text: "Stay selective with comments, only on posts you genuinely rate, no forcing it. It takes a fraction of the time of a post and people still see your name.",
     section: "home",
   },
   {
-    id: "nr4-sunderland",
-    text: "Follow up the Sunderland event organiser this week and confirm whether the September talk is still on.",
+    id: "nr5-pr",
+    text: "Revisit the Sunderland fallout and the wider speaking-opportunities pipeline with Mary at Monday's internal meeting, is it actually happening or not.",
     section: "home",
   },
   {
-    id: "nr-grenades",
-    text: "Keep capturing hand grenade moments and story angles as they happen. Voice note it straight away, then WhatsApp it to Ben.",
-    section: "home",
+    id: "nr5-dictate",
+    text: "Try voice-dictating a post via the iPhone Notes mic while driving, starting with the car rental one, then polish rather than let AI write it from scratch.",
+    section: "content",
   },
 ];
 
@@ -413,7 +413,7 @@ const CONTENT_IDEAS: {
       "Link out to the Silverbean piece in the comments once it's live, not the post itself, so the post still stands alone if the timing slips again.",
     ],
     audience: "Senior marketing decision-makers and brand leaders.",
-    deadline: "Publish this week, the one you're partway through already.",
+    deadline: "Still pending, waiting on the Silverbean website piece to go live first.",
   },
   {
     pillars: [3],
@@ -439,7 +439,7 @@ const CONTENT_IDEAS: {
       "Name the moment you're seeing signs of collaboration starting, without overselling how far it's actually got.",
     ],
     audience: "Senior marketing decision-makers and industry peers, the theme you'll keep coming back to through into 2027.",
-    deadline: "Publish next week, while you're in Mallorca.",
+    deadline: "Still pending, whenever it fits, same territory as \"can fractious industries create industry growth?\"",
   },
   {
     pillars: [0],
@@ -454,6 +454,91 @@ const CONTENT_IDEAS: {
       "Keep this one focused on the marketing-leadership planning problem. Save the wider culture and consumerism angle for a separate post another time.",
     ],
     audience: "Senior marketing decision-makers, speaks directly to the pressure they're under.",
+  },
+  {
+    pillars: [3, 0],
+    title: "This Industry Has Never Improved. Not Once.",
+    guidance:
+      "Your own words when you told it live, so write it exactly that way, in full rant mode. The minibus with no directions, writing everything out on paper despite having entered it all online already, the upsell insurance nobody needs, the tenuous damage diagram, not trusting the half-full fuel line, the row in the office, then handing the key back and them looking almost disgusted you didn't damage it. Keep every bit of the venting in, that's what makes it funny. Land it on the line you said yourself, there has to be a human-less way, code in, locker opens, key's inside, done. Then a wink at the wider point, this is what happens to an industry that stops thinking about the customer.",
+    tips: [
+      "Write it exactly like you told it on the call, one absurd beat after another, no need to soften any of it.",
+      "The forgettable brand names are a great closing detail, the whole industry is built to be forgotten and re-booked on price alone.",
+      "Land it on your own line about the human-less version, code, locker, keys, done. That's the hook that turns a rant into a point.",
+    ],
+    questions: [
+      "Which industries do you use constantly and still can't tell you who you used last time?",
+    ],
+    audience: "Everyone. A bit of comic relief that still lands a real point about customer experience.",
+    deadline: "Next up, straight off the back of this session, he's already fired up about it.",
+  },
+  {
+    pillars: [2],
+    title: "Pulled From Pillar To Post",
+    guidance:
+      "The honest one, straight from this session. A supposedly quiet fortnight, and within days of landing back you're in a pitch, reshaping the sales approach with a new head of sales, and signing off revised targets, watching content slide from a top-three Monday priority down to number eight by Friday. Don't spell it out as a confession, ask it as a question instead: have I built the right conditions, have I actually delegated enough. That keeps you reading as the guy already working the problem, not someone airing internal dirty laundry. Land it on the real point, that the business still runs on more dependency on you personally than you'd like.",
+    tips: [
+      "Open on the gap between what you expected the week to look like and what actually happened. That gap is the whole hook.",
+      "Use rhetorical questions rather than statements when you get to the self-reflection, have I done this, could I have done that. Keeps it thoughtful, not self-critical.",
+      "Land it on the dependency point plainly. Leave out any specific names or internal detail that could read as a dig at anyone.",
+    ],
+    questions: [
+      "When did a supposedly quiet week last completely get away from you?",
+    ],
+    audience: "Senior leaders and CMOs juggling competing priorities, and honest proof of what building a personal brand while running a business actually looks like.",
+    deadline: "Also next up, the other post agreed live on the call.",
+  },
+  {
+    pillars: [0],
+    title: "Separating AI Truth From AI Hype",
+    guidance:
+      "Your own filter, not a definitive verdict, for sorting genuine AI progress from noise. Comes from your own line, that the loudest voices are usually the 1%ers trying to make money out of it. Ground it in Silverbean's real journey rather than theory: you were meant to start an AI plan a year ago, the person meant to lead it moved on partly over stalled progress, and only now do you have a proper working group running three live workstreams with an outside build partner in Edinburgh. Being honest that you don't have the answers, just your own way of looking at it, is more useful to a CMO than false confidence would be.",
+    tips: [
+      "Open with the noise, not the solution. Everyone shouting about AI online is the relatable, slightly funny starting point.",
+      "Your own stalled year is the credibility builder here, admitting you were slow is more useful to the reader than pretending you had it figured out early.",
+      "Include the three-workstream, one-external-partner detail, it's concrete and shows real thinking rather than a hot take. Leave out any prediction about where AI ends up.",
+    ],
+    questions: [
+      "How are you telling the difference between genuine AI progress and someone just very good at marketing themselves around it?",
+    ],
+    audience: "Senior marketing and business leaders navigating the same noise, also lands well with founders and agency peers.",
+    deadline: "One of the four for the next fortnight.",
+  },
+  {
+    pillars: [2],
+    title: "Two Days Or Three? We're About To Find Out.",
+    guidance:
+      "Not a verdict, you haven't decided yet, that's what makes it worth writing. Silverbean is trialling three days in the office just through the Christmas trading period, October to December, before any decision on making it permanent in the new year. Be honest that you're genuinely unsure, you're convinced two days versus three isn't a clear-cut productivity call either way, it's a real trade-off between output and disruption you're actually weighing up live. That candour is the whole point, plenty of other leaders are wrestling with exactly the same call right now.",
+    tips: [
+      "Open with the genuine uncertainty, not a stance. You testing something you don't already have the answer to is more interesting than another hot take on hybrid work.",
+      "Name the trial window plainly, October to December, and that a permanent call comes after. Specifics make it read as a real decision, not a vague musing.",
+      "Include your honest read on the output-versus-disruption trade-off. Leave out any dig at companies who've gone further either way, four or five days back, or fully remote.",
+    ],
+    questions: [
+      "Are you still figuring out your own office policy, or has your business already landed on an answer?",
+    ],
+    audience: "CMOs and business leaders navigating the same office-versus-home question right now.",
+    deadline: "Last of the four for the next fortnight.",
+  },
+  {
+    pillars: [0],
+    title: "Why CFOs Need To Understand Marketing Metrics",
+    guidance:
+      "From your own growing topic list. The person signing off the marketing budget often doesn't speak the same language as the person spending it. Make the case plainly for why that gap costs both sides, and what marketing needs to do to report in terms a CFO actually trusts.",
+    audience: "CFOs and marketing leaders navigating the same budget conversation from opposite sides of the table.",
+  },
+  {
+    pillars: [0],
+    title: "We Need To Give Our Marketing Leaders A Break",
+    guidance:
+      "Ties straight to the CMO 18-month average tenure point that's already landing well in the short-termism post's comments. A supportive angle rather than another hand grenade, marketing leadership is one of the hardest, most exposed seats in a business, and it's worth saying so plainly.",
+    audience: "Senior marketing leaders, a supportive one rather than a challenge, good for building trust with the audience you most need onside.",
+  },
+  {
+    pillars: [0],
+    title: "Do Award Wins Actually Make A Difference?",
+    guidance:
+      "A genuine hand grenade because it cuts against your own agency, Silverbean's won big awards back to back, and your honest personal view is they don't move the needle much. You nearly stopped entering altogether seven or eight years ago. Say why, plainly, without undermining the team who do the work to win them.",
+    audience: "Agency owners and marketing leaders, an honest, slightly contrarian one from someone who could easily just wave the trophies around instead.",
   },
 ];
 
@@ -557,6 +642,26 @@ const SESSIONS: {
       "Session 5 booked, Wednesday 26 August at 1.30pm.",
     ],
     nextSession: "Session 5 · Wednesday 26 August 2026, 1:30pm · content check-in and events update",
+  },
+  {
+    number: 5,
+    date: "26 August 2026",
+    title: "Coaching session five. The dependency problem, and reading the analytics properly.",
+    summary:
+      "Our first session back after Mallorca, and a properly honest one. You told me straight: despite a quiet-looking fortnight, you landed back into a pitch, a new head of sales reshaping the commercial approach, and revised targets, and watched content slip from a top-three Monday priority to number eight by the end of the week. That's not a failure, it's the real story, and it became today's best content idea on the spot. Only two of the four posts got written, the Brazil one and the short-termism piece, both landing well, and you deliberately held the other two back rather than post something needing a reply while you were off the grid. We looked at post analytics properly for the first time together, job titles and locations behind the numbers, not just likes, and found fifteen CEOs had viewed the short-termism post alone. Connections and comments are properly live now, ten a day, though still bronze not gold. Sunderland fell through, it clashed with a same-day acquisition-interest visit, so the speaking-opportunities pipeline is now the live question for Monday's internal meeting.",
+    insights: [
+      "The real insight of the session: content sliding from a top-three priority to number eight in days says more about how much the business still runs through you personally than it does about time management. That's worth a post in itself.",
+      "You're finally reading analytics properly, not just likes and comments. Fifteen CEOs viewed the short-termism post, and a senior leader liking a post that calls out short-termism is basically them admitting guilt publicly, so quiet doesn't mean it isn't landing.",
+      "Holding back the other two posts while you were unreachable in Mallorca was the right call, not a miss. Reactionary, in-the-moment content, like the car rental rant, is still your best material.",
+      "You're generating your own content pipeline now without needing a brief from me: a running list of about a dozen topics, plus Silverbean's own AI-summarised sales call trends as an ongoing source.",
+    ],
+    agreed: [
+      "Publish the car rental rant and the pillar-to-post piece this week, the AI truth-versus-hype and three-day week pieces next week.",
+      "Keep the ten-a-day connection habit and stay selective with comments, only on posts you genuinely rate.",
+      "Revisit the Sunderland fallout and the wider speaking-opportunities pipeline at Monday's internal meeting with Mary.",
+      "Session 6 booked, Wednesday 9 September at 3pm.",
+    ],
+    nextSession: "Session 6 · Wednesday 9 September 2026, 3pm · content pipeline and events check-in",
   },
 ];
 
@@ -681,14 +786,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Good to have you back, Neil. That "$1 for 1 pixel" post while you were away was a brilliant bit of self-starting, straight out of a conversation with Louise, exactly the instinct we want more of. And the Moonpig lead moving into real discussions this month is proof the whole thing works, a genuine inbound enquiry from the exact seniority we're targeting. You've landed on real clarity too, writing CEO to CEO and leaving the tactical stuff to the team, plus you've built yourself a daily habit for growing your network. Four posts locked in for the next fortnight, get stuck in. See you 26 August.
+                Good session today, Neil. That car rental rant had me laughing down the phone, keep every bit of that when you write it up. But the bit I want you to actually sit with is the other thing you said, about content dropping from your top three to number eight within days of landing back. That's not a content problem, that's the real story, and it might be your most honest post yet. You've also started reading your analytics properly for the first time, fifteen CEOs on the short-termism post alone. Four posts, ten connections a day, keep the rhythm going. See you 9 September.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "4 of 13", sub: "Next: Wed 26 August, 1:30pm" },
+                { label: "Sessions done", value: "5 of 13", sub: "Next: Wed 9 September, 3pm" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
