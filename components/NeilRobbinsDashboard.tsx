@@ -418,6 +418,9 @@ const CONTENT_IDEAS: {
   {
     pillars: [3],
     title: "The Brazil holiday post",
+    used: true,
+    resultNote:
+      "Neither of these last two posts screams AI, and this one especially reads like you actually lived it, the motorbike, the AK47 line, apologising for your son's dodgy camera work. That's the stuff that makes people trust you before they've even read the point, and it ties nicely into the detaching-from-work idea. One for next time: the three bullet stats on detachment, the 20 to 30% creative problem solving line and the rest, are the one bit that doesn't sound like you, they read like they've been pulled from a report. Either drop them or say it in your own words, the rest of the post earns its point through the story, not borrowed stats.",
     guidance:
       "Keep this one personal, don't force a business lesson onto it. The real thread worth pulling is why you come back more refreshed from an adventure holiday than the old poolside-with-a-business-book version, that's relatable to any leader reading it. If it feels right, there's a second angle in here too, the fact the business ran fine without you for three weeks says more about the team you've built than any post about hiring ever could.",
     tips: [
@@ -425,7 +428,6 @@ const CONTENT_IDEAS: {
       "If you use the team-running-without-you angle, make it about them, not you. Let it read as pride in what they've built, not relief that you got away.",
     ],
     audience: "Everyone. The thread that ties the rest together, and a nice one for the team to see too.",
-    deadline: "Publish this week.",
   },
   {
     pillars: [0],
@@ -442,6 +444,9 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     title: "Is short-termism killing marketing?",
+    used: true,
+    resultNote:
+      "This is thought leadership doing exactly what it's meant to, changing how a CMO reading it thinks about the trade-off, not just entertaining them. It's landing because it's clearly you, straight from your head onto the page, not a comms team, and you've already got 20-odd years running a big team behind you so people give it weight before they've finished the first line. Calling CMOs out directly at the end, no soft landing, is exactly the confidence this pillar needs, and a 250 year plan is a bold thing to put your name next to. One for next time: you had a real, live example sitting right there, the prospect who wanted £1m in 8 weeks, said no to you and went with a competitor who's now visibly struggling. That would've hit harder than Matsushita and Panasonic, because nobody else on LinkedIn can tell that story but you.",
     guidance:
       "This one's got a real example sitting behind it, so let the story do the work rather than the theory. A marketing leader under pressure to hit a number fast chose speed over the right call, and it's already looking shaky. You don't need to name names or details, the shape of the story is enough. Land it on the wider point, marketing leaders can't plan long-term anymore because the ground keeps shifting under them, so a bit of empathy for that goes a long way.",
     tips: [
@@ -449,7 +454,6 @@ const CONTENT_IDEAS: {
       "Keep this one focused on the marketing-leadership planning problem. Save the wider culture and consumerism angle for a separate post another time.",
     ],
     audience: "Senior marketing decision-makers, speaks directly to the pressure they're under.",
-    deadline: "Publish next week, while you're in Mallorca.",
   },
 ];
 
