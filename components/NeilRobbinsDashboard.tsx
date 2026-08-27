@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 5 of 13 · August 2026",
   nextMove:
-    "Neil, publish the car rental rant and the honest 'pulled from pillar to post' post this week, then the AI truth-versus-hype and three-day week pieces next week. Keep the ten-a-day connections going every morning, and check in on the events pipeline with Mary.",
+    "Neil, publish the car rental rant and the honest 'pulled from pillar to post' post this week, then the AI truth-versus-hype piece next week. Keep the ten-a-day connections going every morning, and check in on the speaking-opportunities pipeline with Mary.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -75,7 +75,7 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
     id: "nr5-write",
-    text: "Write and publish the four posts locked in this session: the car rental rant, the honest 'pulled from pillar to post' piece, separating AI truth from AI hype, and the three-day week trial. Two this week, two next week.",
+    text: "Write and publish the three posts locked in this session: the car rental rant, the honest 'pulled from pillar to post' piece, and separating AI truth from AI hype. Two this week, one next week.",
     section: "content",
   },
   {
@@ -90,7 +90,7 @@ const TODOS: { id: string; text: string; subtext?: string; section: string }[] =
   },
   {
     id: "nr5-pr",
-    text: "Revisit the Sunderland fallout and the wider speaking-opportunities pipeline with Mary at Monday's internal meeting, is it actually happening or not.",
+    text: "Revisit the speaking-opportunities pipeline with Mary at Monday's internal meeting, is it actually happening or not.",
     section: "home",
   },
   {
@@ -504,22 +504,6 @@ const CONTENT_IDEAS: {
     deadline: "One of the four for the next fortnight.",
   },
   {
-    pillars: [2],
-    title: "Two Days Or Three? We're About To Find Out.",
-    guidance:
-      "Not a verdict, you haven't decided yet, that's what makes it worth writing. Silverbean is trialling three days in the office just through the Christmas trading period, October to December, before any decision on making it permanent in the new year. Be honest that you're genuinely unsure, you're convinced two days versus three isn't a clear-cut productivity call either way, it's a real trade-off between output and disruption you're actually weighing up live. That candour is the whole point, plenty of other leaders are wrestling with exactly the same call right now.",
-    tips: [
-      "Open with the genuine uncertainty, not a stance. You testing something you don't already have the answer to is more interesting than another hot take on hybrid work.",
-      "Name the trial window plainly, October to December, and that a permanent call comes after. Specifics make it read as a real decision, not a vague musing.",
-      "Include your honest read on the output-versus-disruption trade-off. Leave out any dig at companies who've gone further either way, four or five days back, or fully remote.",
-    ],
-    questions: [
-      "Are you still figuring out your own office policy, or has your business already landed on an answer?",
-    ],
-    audience: "CMOs and business leaders navigating the same office-versus-home question right now.",
-    deadline: "Last of the four for the next fortnight.",
-  },
-  {
     pillars: [0],
     title: "Why CFOs Need To Understand Marketing Metrics",
     guidance:
@@ -628,17 +612,17 @@ const SESSIONS: {
     date: "11 August 2026",
     title: "Coaching session four. Sharpening who you write for, and the first real lead lands.",
     summary:
-      "Our first session back after your break, and a genuinely productive one. You'd already done real thinking before you got back, working out who you're actually writing for, CEO to CEO and marketing leadership only, and leaving the tactical, day-to-day content to your team. We locked in the next four posts: the Performance Partnerships piece, a personal post, the industry-coming-together piece on the AI and search shift, and a short-termism piece drawn from a live example this week. Best news of the session: the Moonpig enquiry is progressing into real discussions this month, the first genuine inbound lead of the whole engagement, from exactly the seniority we're targeting. We also agreed a simple daily habit, five minutes building your ICP connections plus commenting on other people's posts, so your content has a better chance of reaching the right people once it's out. Events are moving too, a September talk in Sunderland to get some reps in, plus two more in the pipeline.",
+      "Our first session back after your break, and a genuinely productive one. You'd already done real thinking before you got back, working out who you're actually writing for, CEO to CEO and marketing leadership only, and leaving the tactical, day-to-day content to your team. We locked in the next four posts: the Performance Partnerships piece, a personal post, the industry-coming-together piece on the AI and search shift, and a short-termism piece drawn from a live example this week. Best news of the session: the Moonpig enquiry is progressing into real discussions this month, the first genuine inbound lead of the whole engagement, from exactly the seniority we're targeting. We also agreed a simple daily habit, five minutes building your ICP connections plus commenting on other people's posts, so your content has a better chance of reaching the right people once it's out. Events are moving too, a first speaking opportunity to get some reps in, plus two more in the pipeline.",
     insights: [
       "You did the hardest bit of positioning yourself, working out that CEO-level content is your lane and tactical affiliate content is your team's. That's a real shift in how you think about this, not just what you post.",
       "The Moonpig lead moving into real discussions this month is the first proof the whole thing works commercially, not just reputationally.",
       "Content plus connections. Posting alone isn't enough, five minutes a day building your network is what gets your content in front of the right people.",
-      "You're already thinking about pacing your visibility, treating Sunderland as practice before the bigger stages. That's exactly the right instinct.",
+      "You're already thinking about pacing your visibility, treating early speaking opportunities as practice before the bigger stages. That's exactly the right instinct.",
     ],
     agreed: [
       "Publish the Performance Partnerships and Brazil posts this week, the industry-coming-together and short-termism posts next week.",
       "Five minutes a day connecting with ICP job titles, no note, plus commenting on relevant posts.",
-      "Confirm the Sunderland talk this week.",
+      "Confirm the September speaking opportunity this week.",
       "Session 5 booked, Wednesday 26 August at 1.30pm.",
     ],
     nextSession: "Session 5 · Wednesday 26 August 2026, 1:30pm · content check-in and events update",
@@ -648,7 +632,7 @@ const SESSIONS: {
     date: "26 August 2026",
     title: "Coaching session five. The dependency problem, and reading the analytics properly.",
     summary:
-      "Our first session back after Mallorca, and a properly honest one. You told me straight: despite a quiet-looking fortnight, you landed back into a pitch, a new head of sales reshaping the commercial approach, and revised targets, and watched content slip from a top-three Monday priority to number eight by the end of the week. That's not a failure, it's the real story, and it became today's best content idea on the spot. Only two of the four posts got written, the Brazil one and the short-termism piece, both landing well, and you deliberately held the other two back rather than post something needing a reply while you were off the grid. We looked at post analytics properly for the first time together, job titles and locations behind the numbers, not just likes, and found fifteen CEOs had viewed the short-termism post alone. Connections and comments are properly live now, ten a day, though still bronze not gold. Sunderland fell through, it clashed with a same-day acquisition-interest visit, so the speaking-opportunities pipeline is now the live question for Monday's internal meeting.",
+      "Our first session back after Mallorca, and a properly honest one. You told me straight: despite a quiet-looking fortnight, you landed back into a pitch, a new head of sales reshaping the commercial approach, and revised targets, and watched content slip from a top-three Monday priority to number eight by the end of the week. That's not a failure, it's the real story, and it became today's best content idea on the spot. Only two of the four posts got written, the Brazil one and the short-termism piece, both landing well, and you deliberately held the other two back rather than post something needing a reply while you were off the grid. We looked at post analytics properly for the first time together, job titles and locations behind the numbers, not just likes, and found fifteen CEOs had viewed the short-termism post alone. Connections and comments are properly live now, ten a day, though still bronze not gold. The speaking-opportunities pipeline is now the live question for Monday's internal meeting, is Mary actually making progress on it or not.",
     insights: [
       "The real insight of the session: content sliding from a top-three priority to number eight in days says more about how much the business still runs through you personally than it does about time management. That's worth a post in itself.",
       "You're finally reading analytics properly, not just likes and comments. Fifteen CEOs viewed the short-termism post, and a senior leader liking a post that calls out short-termism is basically them admitting guilt publicly, so quiet doesn't mean it isn't landing.",
@@ -656,9 +640,9 @@ const SESSIONS: {
       "You're generating your own content pipeline now without needing a brief from me: a running list of about a dozen topics, plus Silverbean's own AI-summarised sales call trends as an ongoing source.",
     ],
     agreed: [
-      "Publish the car rental rant and the pillar-to-post piece this week, the AI truth-versus-hype and three-day week pieces next week.",
+      "Publish the car rental rant and the pillar-to-post piece this week, the AI truth-versus-hype piece next week.",
       "Keep the ten-a-day connection habit and stay selective with comments, only on posts you genuinely rate.",
-      "Revisit the Sunderland fallout and the wider speaking-opportunities pipeline at Monday's internal meeting with Mary.",
+      "Revisit the speaking-opportunities pipeline at Monday's internal meeting with Mary.",
       "Session 6 booked, Wednesday 9 September at 3pm.",
     ],
     nextSession: "Session 6 · Wednesday 9 September 2026, 3pm · content pipeline and events check-in",
@@ -786,7 +770,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Good session today, Neil. That car rental rant had me laughing down the phone, keep every bit of that when you write it up. But the bit I want you to actually sit with is the other thing you said, about content dropping from your top three to number eight within days of landing back. That's not a content problem, that's the real story, and it might be your most honest post yet. You've also started reading your analytics properly for the first time, fifteen CEOs on the short-termism post alone. Four posts, ten connections a day, keep the rhythm going. See you 9 September.
+                Good session today, Neil. That car rental rant had me laughing on the call, keep every bit of that when you write it up. But the bit I want you to actually sit with is the other thing you said, about content dropping from your top three to number eight within days of landing back. That's not a content problem, that's the real story, and it might be your most honest post yet. You've also started reading your analytics properly for the first time, fifteen CEOs on the short-termism post alone. Three posts, ten connections a day, keep the rhythm going. See you 9 September.
               </p>
             </div>
 
