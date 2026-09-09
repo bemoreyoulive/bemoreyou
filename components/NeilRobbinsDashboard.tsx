@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 5 of 13 · August 2026",
+  sessionLabel: "Session 6 of 13 · September 2026",
   nextMove:
-    "Neil, publish the car rental rant and the honest 'pulled from pillar to post' post this week, then the AI truth-versus-hype piece next week. Keep the ten-a-day connections going every morning, and check in on the speaking-opportunities pipeline with Mary.",
+    "Neil, three posts this fortnight, the Premier League one first to prime the algorithm, then the industry sabotaging itself, then the many hats of a CEO with the stacked hat photo. Open one with a quote, and keep the ten a day connections going.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,28 +74,28 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr5-write",
-    text: "Write and publish the three posts locked in this session: the car rental rant, the honest 'pulled from pillar to post' piece, and separating AI truth from AI hype. Two this week, one next week.",
+    id: "nr6-premier",
+    text: "Write and post the Premier League piece first this fortnight, then the industry sabotaging itself piece the same week. Keep the football one personal and let the question, what other industries have done the same, pull the comments.",
     section: "content",
   },
   {
-    id: "nr5-connect",
-    text: "Keep the ten-a-day connection habit going each morning, your advised cap, and keep watching for the right seniority among the requests coming in.",
+    id: "nr6-hats",
+    text: "Call Sean for five minutes to catch up, then write the many hats of a CEO post with a photo of you under a stack of hats.",
+    section: "content",
+  },
+  {
+    id: "nr6-hooks",
+    text: "On at least one post this fortnight, open with a quote as the hook. 'Must be easy for Neil' is sitting right there. Speech marks around it so people know it is not your own words.",
+    section: "content",
+  },
+  {
+    id: "nr6-connect",
+    text: "Keep the ten a day connection requests going every morning, no note attached, and stay selective with comments, only on posts you genuinely rate.",
     section: "home",
   },
   {
-    id: "nr5-comment",
-    text: "Stay selective with comments, only on posts you genuinely rate, no forcing it. It takes a fraction of the time of a post and people still see your name.",
-    section: "home",
-  },
-  {
-    id: "nr5-pr",
-    text: "Revisit the speaking-opportunities pipeline with Mary at Monday's internal meeting, is it actually happening or not.",
-    section: "home",
-  },
-  {
-    id: "nr5-dictate",
-    text: "Try voice-dictating a post via the iPhone Notes mic while driving, starting with the car rental one, then polish rather than let AI write it from scratch.",
+    id: "nr6-dictate",
+    text: "Try dictating one post into your phone on a drive, then tidy it up yourself rather than letting AI write it from scratch.",
     section: "content",
   },
 ];
@@ -182,6 +182,10 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   {
     title: "You do not need a call to action",
     body: "A quick word on something that trips a lot of people up. You will see endless posts that sign off with 'book a call' or 'DM me to find out more.' You do not need any of that, and at your level it would actually work against you. You are the founder of a 24 year old agency, not someone flogging a course from the back of the room. Your job here is to be worth listening to, not to chase a click. Let the writing earn the attention and let people come to you, because they will. The only soft ask worth making, now and then, is inviting people to share their own take in the comments. That lifts the reach of a post without ever looking like selling, and more often than not it starts the conversations that actually matter.",
+  },
+  {
+    title: "Your hook is half the job. Try leading with a quote.",
+    body: "Most people read your first line and nothing else before they decide to stop or scroll, so that line is doing most of the work. One of the most reliable openers is a quote, someone else's words in speech marks, dropped in with no setup. The car rental post worked partly because the absurd detail sat right at the top. The call-to-arms post would have hit harder with the 'grubby little people in grubby studios' line as line one, on its own. And 'Must be easy for Neil' is a hook waiting to happen. When you draft a post, hunt for the sharpest thing anyone said, yours or theirs, and see what happens if you open with it.",
   },
 ];
 
@@ -406,6 +410,9 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     title: "Performance Partnerships: The Missed Opportunity",
+    used: true,
+    resultNote:
+      "This finally went out once the Silverbean piece was live, and it was quiet, barely any engagement. Do not read too much into that. Positive, here-is-the-opportunity posts almost always travel less far than the ones with an edge, and the right people still see them, so keep writing them and just expect the pattern. Two smaller notes for next time: the AI polish left tells on this one, the long dashes and the emoji bullets are not how you write, so strip those out, and lead with the gap a leader is missing before you explain what performance partnerships actually are.",
     guidance:
       "This is the one that got held back while the website piece caught up, so it carries a bit of built-up energy already. You know this territory better than anyone, the industry underinvests because the upside isn't understood, not because affiliate has been written off. Keep the post itself standalone and complete, don't make the reader feel like they're missing something if they don't click through to the website piece, that's a bonus, not the point.",
     tips: [
@@ -413,7 +420,6 @@ const CONTENT_IDEAS: {
       "Link out to the Silverbean piece in the comments once it's live, not the post itself, so the post still stands alone if the timing slips again.",
     ],
     audience: "Senior marketing decision-makers and brand leaders.",
-    deadline: "Still pending, waiting on the Silverbean website piece to go live first.",
   },
   {
     pillars: [3],
@@ -432,14 +438,16 @@ const CONTENT_IDEAS: {
   {
     pillars: [0],
     title: "Is this the year the industry comes together?",
+    used: true,
+    resultNote:
+      "Only a couple of comments on this one, which makes sense, you were calling people out and most would rather not do that in public. It did the job a different way, direct messages from long-standing contacts saying they felt the same and were glad you said it. That is the right people responding, just not where everyone can see it. One thing for next time: the Nick Robertson line, grubby little people in grubby studios growing income at our expense, should have been your hook, sitting on its own at the very top in speech marks. A line like that stops the scroll before anyone knows what the post is about.",
     guidance:
-      "This builds on the AI and search theme you opened up before you went away. The angle now is sharper, this isn't a future risk anymore, it's already starting to bite, and for the first time in years you're seeing the industry actually try to organise a response instead of everyone quietly protecting their own patch. Keep it hopeful rather than alarmist, you're pointing at an opportunity to lead, not just a problem.",
+      "This builds on the AI and search theme you opened up before you went away. The angle now is sharper, this isn't a future risk anymore, it's already starting to bite, and for the first time in years you're seeing the industry actually try to organise a response. Keep it hopeful rather than alarmist, you're pointing at an opportunity to lead, not just a problem.",
     tips: [
       "Open with the shift, not the threat. People clicking through less because AI answers the question first is the hook.",
       "Name the moment you're seeing signs of collaboration starting, without overselling how far it's actually got.",
     ],
     audience: "Senior marketing decision-makers and industry peers, the theme you'll keep coming back to through into 2027.",
-    deadline: "Still pending, whenever it fits, same territory as \"can fractious industries create industry growth?\"",
   },
   {
     pillars: [0],
@@ -458,6 +466,9 @@ const CONTENT_IDEAS: {
   {
     pillars: [3, 0],
     title: "This Industry Has Never Improved. Not Once.",
+    used: true,
+    resultNote:
+      "This is the one, Neil, around sixty comments and still running days after you posted it, with people queuing up to share their own car hire horror stories. You kept every bit of the venting in, which is exactly why it worked, and you wrote it in half an hour because it came from a real moment rather than a topic you forced. You even had to cut good material to fit the character limit, which is a good problem to have. The lesson to bank is that this reactionary, story-led stuff is your strongest material, so keep capturing the moments as they happen.",
     guidance:
       "Your own words when you told it live, so write it exactly that way, in full rant mode. The minibus with no directions, writing everything out on paper despite having entered it all online already, the upsell insurance nobody needs, the tenuous damage diagram, not trusting the half-full fuel line, the row in the office, then handing the key back and them looking almost disgusted you didn't damage it. Keep every bit of the venting in, that's what makes it funny. Land it on the line you said yourself, there has to be a human-less way, code in, locker opens, key's inside, done. Then a wink at the wider point, this is what happens to an industry that stops thinking about the customer.",
     tips: [
@@ -469,7 +480,6 @@ const CONTENT_IDEAS: {
       "Which industries do you use constantly and still can't tell you who you used last time?",
     ],
     audience: "Everyone. A bit of comic relief that still lands a real point about customer experience.",
-    deadline: "Next up, straight off the back of this session, he's already fired up about it.",
   },
   {
     pillars: [2],
@@ -485,13 +495,12 @@ const CONTENT_IDEAS: {
       "When did a supposedly quiet week last completely get away from you?",
     ],
     audience: "Senior leaders and CMOs juggling competing priorities, and honest proof of what building a personal brand while running a business actually looks like.",
-    deadline: "Also next up, the other post agreed live on the call.",
   },
   {
     pillars: [0],
     title: "Separating AI Truth From AI Hype",
     guidance:
-      "Your own filter, not a definitive verdict, for sorting genuine AI progress from noise. Comes from your own line, that the loudest voices are usually the 1%ers trying to make money out of it. Ground it in Silverbean's real journey rather than theory: you were meant to start an AI plan a year ago, the person meant to lead it moved on partly over stalled progress, and only now do you have a proper working group running three live workstreams with an outside build partner in Edinburgh. Being honest that you don't have the answers, just your own way of looking at it, is more useful to a CMO than false confidence would be.",
+      "Your own filter, not a definitive verdict, for sorting genuine AI progress from noise. Comes from your own line, that the loudest voices are usually the 1%ers trying to make money out of it. Ground it in Silverbean's real journey rather than theory: you were meant to start an AI plan a year ago, the person meant to lead it moved on partly over stalled progress, and only now do you have a working group running three live workstreams with an outside build partner in Edinburgh. Being honest that you don't have the answers, just your own way of looking at it, is more useful to a CMO than false confidence would be.",
     tips: [
       "Open with the noise, not the solution. Everyone shouting about AI online is the relatable, slightly funny starting point.",
       "Your own stalled year is the credibility builder here, admitting you were slow is more useful to the reader than pretending you had it figured out early.",
@@ -501,7 +510,6 @@ const CONTENT_IDEAS: {
       "How are you telling the difference between genuine AI progress and someone just very good at marketing themselves around it?",
     ],
     audience: "Senior marketing and business leaders navigating the same noise, also lands well with founders and agency peers.",
-    deadline: "One of the four for the next fortnight.",
   },
   {
     pillars: [0],
@@ -523,6 +531,57 @@ const CONTENT_IDEAS: {
     guidance:
       "A genuine hand grenade because it cuts against your own agency, Silverbean's won big awards back to back, and your honest personal view is they don't move the needle much. You nearly stopped entering altogether seven or eight years ago. Say why, plainly, without undermining the team who do the work to win them.",
     audience: "Agency owners and marketing leaders, an honest, slightly contrarian one from someone who could easily just wave the trophies around instead.",
+  },
+  {
+    pillars: [3, 0],
+    title: "Football Is Eating Itself",
+    guidance:
+      "Write this one as the frustrated fan you actually are, forty years in and being priced out of your own game. The clubs want tourists who spend three hundred pounds on a ticket and a chicken basket in a warehouse near the ground, not the working supporter who wants a pint, a sing-song and to still afford it next season. Man Utd, Liverpool and Newcastle are all heading the same way. Keep it personal and let the frustration sit under it rather than on top, then turn it outward with the question that does the real work in the comments.",
+    tips: [
+      "Open on a specific loss, an away ticket that went to the wrong people, a matchday price that made you wince. One concrete detail beats a general moan.",
+      "This is a conversation starter, not a lecture. The football fans will pile in, and a fair few of them run marketing budgets.",
+      "Land it on the open question, what other industries have done the same to the people who built them. That is the line that turns a football rant into something a marketing leader shares.",
+    ],
+    questions: [
+      "What else do you pay more for every year while liking it less?",
+      "Which industries forgot who actually made them?",
+    ],
+    audience: "Everyone, and it is bait for the wider business crowd who will recognise the pattern in their own world.",
+    deadline: "This fortnight, post it first to warm the algorithm up before the industry piece.",
+  },
+  {
+    pillars: [0],
+    title: "The Industry Is Sabotaging Itself",
+    guidance:
+      "Same shape as the Premier League post, a grab for short-term money that wrecks the thing everyone depends on. Some publishers, some networks paid on total revenue, and the odd agency all keep taking the easy money through poor practice, and every time they do it chips away at how brands see affiliate. You have a live example, a brand referred to you in June went with a cheaper agency against your advice, got a mess, and is now questioning whether affiliate is worth doing at all. It is worth doing, they just saw the worst version of it first. Position yourself and Silverbean as the ones who clean it up, principled and on the client's side, without naming anyone.",
+    tips: [
+      "Lead with the cost, not the theory. A good brand nearly walked away from affiliate altogether because someone did it badly.",
+      "Keep it about the practice, not people. You are describing how the incentives work, not having a go at a named firm.",
+      "Land it on the plain point, everyone loses when brands stop trusting the work, so cleaning it up is the whole industry's job.",
+    ],
+    questions: [
+      "How much of your budget goes on sales you would have made anyway?",
+      "Who in your supply chain is paid to look the other way?",
+    ],
+    audience: "Senior marketing decision-makers and industry peers, a hand grenade that also makes the case for how you work.",
+    deadline: "This fortnight, straight after the Premier League post, same week.",
+  },
+  {
+    pillars: [2, 1],
+    title: "\"Must Be Easy For Neil\"",
+    guidance:
+      "The honest, human one. An old colleague, Sean, who left to start his own agency, told you over a coffee he had no idea how you kept showing up so steady, now that he is the one sacking clients and letting people go and fixing everything himself. You have also had people over the years assume you have it easy because you don't do the client work any more. The point underneath is simple, nobody knows what a job takes until they have done it, and a CEO's job is mostly invisible. Do it with warmth, build Sean up rather than pick him apart, and land it on how the two of you understand each other now.",
+    tips: [
+      "The photo is the hook here. You under a stack of hats, literal and daft. It stops the scroll and tells the whole story before a word is read.",
+      "Open with the quote, Must be easy for Neil, in speech marks so people know it is not you saying it. Quotes make strong openers.",
+      "Keep Sean the hero, not the punchline. This works because you are generous about him, and it doubles as something your own team will value seeing.",
+    ],
+    questions: [
+      "Whose job did you write off until you had to do it yourself?",
+      "What does your team think you do all day?",
+    ],
+    audience: "Fellow founders and CEOs, and your own team, the post that makes another leader think Neil is one of us.",
+    deadline: "This fortnight, once you have had the quick call with Sean.",
   },
 ];
 
@@ -647,6 +706,27 @@ const SESSIONS: {
     ],
     nextSession: "Session 6 · Wednesday 9 September 2026, 3pm · content pipeline and events check-in",
   },
+  {
+    number: 6,
+    date: "9 September 2026",
+    title: "Coaching session six. Widening the content, and the signals starting to stack up.",
+    summary:
+      "Our sixth session, and a strong one. The car rental rant did exactly what we hoped, around sixty comments and still running days later, with people queuing up to share their own stories. That is the reactionary, story-led content you write in half an hour, and it is your best material by a distance. The bigger news was what came back off the other posts. You had direct messages from long-standing industry contacts on the call-to-arms piece, people saying they felt the same but did not feel they could say it out loud. Mary raised your LinkedIn activity unprompted in the internal PR meeting. And a podcast invite landed the day after your latest post, an agency leaders roundtable in London for October, which you have already accepted. Connection requests are shifting up market too, more consultants and investment people coming through. We agreed the next move is to widen the mix, less pure industry commentary, more of what it is actually like to run an agency of your size, the day to day another founder would recognise.",
+    insights: [
+      "Your best posts are the ones you barely plan. The car rental rant took half an hour and outperformed everything, because it started as a real moment, not a topic you sat down to force.",
+      "The signals are stacking up, DMs from peers who felt the same, Mary noticing without being told, a podcast invite off a single post, none of it happening three months ago.",
+      "The industry commentary lands, but it leans jargon heavy for an outsider. The gap in your mix is the CEO day to day, the stuff that makes another founder think Neil is one of us.",
+      "Challenge posts pull engagement and positive ones stay quiet, and that is fine. You still need both, and the quieter ones still reach the right people.",
+    ],
+    agreed: [
+      "Post the Premier League piece first this fortnight, then the industry sabotaging itself piece the same week.",
+      "Call Sean, then write the many hats of a CEO post with the stacked hat photo.",
+      "Try opening at least one post with a quote as the hook, in speech marks.",
+      "Keep the ten a day connections going, and try dictating a post on a drive.",
+      "Session 7 booked, Tuesday 23 September at 2pm.",
+    ],
+    nextSession: "Session 7 · Tuesday 23 September 2026, 2pm · content review and the CEO day-to-day series",
+  },
 ];
 
 const GOALS = {
@@ -764,20 +844,20 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="week" animateIn />
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="fortnight" animateIn />
 
             {/* A note from Ben */}
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Good session today, Neil. That car rental rant had me laughing on the call, keep every bit of that when you write it up. But the bit I want you to actually sit with is the other thing you said, about content dropping from your top three to number eight within days of landing back. That's not a content problem, that's the real story, and it might be your most honest post yet. You've also started reading your analytics properly for the first time, fifteen CEOs on the short-termism post alone. Three posts, ten connections a day, keep the rhythm going. See you 9 September.
+                Really good session today, Neil. The car rental post doing what it did, sixty odd comments and still running, tells you exactly where your best material comes from, and now we widen it out. You have three posts this fortnight, the Premier League one first, then the industry sabotaging itself, then the many hats of a CEO with you buried under a stack of them. The other thing worth sitting with is the signals stacking up, the DMs from people who felt the same but would not say it, Mary noticing without being told, a podcast invite off a single post. That is the compound effect starting to show. Keep the ten a day connections going and I will see you on the 23rd.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "5 of 13", sub: "Next: Wed 9 September, 3pm" },
+                { label: "Sessions done", value: "6 of 13", sub: "Next: Tue 23 September, 2pm" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
@@ -1081,7 +1161,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>{CONTENT_IDEAS.filter(x => !x.archived).length} posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you a steer on how to write it, who it's for, and why it'll land. The colour tags show which pillar or two each post leans on. Where I've briefed the idea you'll also get two hook options, A and B, so you pick the opener that feels most like you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>Four are posted already, the Finance Director pivot, the Ferrari boss story, the barbecue hire story and the pixel post, all doing well. Use the tabs below to flick between what's out there and what's still in the tank.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant is the standout so far, sixty odd comments and still going.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>

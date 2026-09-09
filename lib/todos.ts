@@ -44,13 +44,13 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
-  // Blueprint done 16 June 2026. Session 3 (progress check, 10 July) todos below.
+  // Session 6 done 9 September 2026. Fortnightly cadence. Todos below.
   "neil-robbins": [
-    { id: "nr3-write", text: "Write your four posts before you go away on 20 July, schedule one a week through August" },
-    { id: "nr3-photo", text: "Add a photo to two of the next four posts" },
-    { id: "nr3-connect", text: "Connect with clients and industry leaders on LinkedIn so they see your posts" },
-    { id: "nr3-events", text: "Look into panels and industry events worth taking part in, but be selective" },
-    { id: "nr-grenades", text: "Keep capturing hand grenade moments and story angles as they happen" },
+    { id: "nr6-premier", text: "Write and post the Premier League piece first this fortnight, then the industry sabotaging itself piece the same week. Keep the football one personal and let the question, what other industries have done the same, pull the comments." },
+    { id: "nr6-hats", text: "Call Sean for five minutes to catch up, then write the many hats of a CEO post with a photo of you under a stack of hats." },
+    { id: "nr6-hooks", text: "On at least one post this fortnight, open with a quote as the hook. 'Must be easy for Neil' is sitting right there. Speech marks around it so people know it is not your own words." },
+    { id: "nr6-connect", text: "Keep the ten a day connection requests going every morning, no note attached, and stay selective with comments, only on posts you genuinely rate." },
+    { id: "nr6-dictate", text: "Try dictating one post into your phone on a drive, then tidy it up yourself rather than letting AI write it from scratch." },
   ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },
