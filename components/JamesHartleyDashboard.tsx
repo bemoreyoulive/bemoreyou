@@ -33,8 +33,8 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string; tabLink?: { label: string; tab: string } }[] = [
   {
     id: "jh1",
-    text: "Immigration attorney call (16 Sept) — get a definitive answer on working legally from France",
-    subtext: "A long-stay visa is easy to get but bans you from working. Go into the call with the direct question: what visa or status actually lets me run a fractional CPO, consulting and coaching practice from South-West France? Come out with a yes/no on the legal path, not a feeling. Everything else on this list depends on the answer.",
+    text: "Promote your TheCareerPTPod episode the moment it lands",
+    subtext: "Anthony and Hayley reached out because of your pivot story and the personal posts you've shared — that's real validation of the approach. When your episode goes live, don't just link it. Post about why you said yes, what surprised you in the recording, and what you'd tell the version of you starting out today. Let it feed content for weeks, not one post.",
     section: "Priority — this quarter",
   },
   {
@@ -307,7 +307,7 @@ const POSITIONING: {
     },
     {
       title: "Founder credibility through skin in the game",
-      body: "Co-owns the London Cat Clinic with his husband Javier. Has lived through the highs and lows of having personal money at risk. He understands what founders actually feel.",
+      body: "Co-owns the London Cat Clinic with his husband. Has lived through the highs and lows of having personal money at risk. He understands what founders actually feel.",
     },
   ],
   audiences: [
@@ -1037,7 +1037,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
                 { label: "Sessions done", value: "17", sub: "Since Aug 2025" },
                 { label: "Next session", value: "Ad hoc", sub: "Book whenever you're ready" },
                 { label: "Associate firms", value: "6 signed, 2 live", sub: "4 still to convert this quarter" },
-                { label: "France pivot", value: "In motion", sub: "Immigration attorney — 16 Sept" },
+                { label: "France pivot", value: "In motion", sub: "Target list, network, content underway" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
@@ -1058,7 +1058,7 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Who you are</p>
                 <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: "0 0 12px" }}>30 years in corporate HR — most recently in contention for the top people role at Swiss Re — before walking away to build something of his own. Now operating as an interim and fractional CPO, an executive coach, and a consulting partner through IgnitionCraft.</p>
-                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Based in London. Spends time in South-West France. Married to Javier. Francophile, cook, entertainer. Optimistic by default — and honest about when that slips.</p>
+                <p style={{ fontSize: "0.88rem", color: "#3D3935", lineHeight: 1.5, margin: 0 }}>Based in London. Spends time in South-West France. Married to his husband. Francophile, cook, entertainer. Optimistic by default — and honest about when that slips.</p>
               </div>
               <div style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "22px 24px" }}>
                 <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 12px" }}>Why we're working together</p>
