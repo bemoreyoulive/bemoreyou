@@ -15,7 +15,7 @@ const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
 const SESSION_LABEL = "Session 17 · 15 Sept 2026 · Next: TBC";
-const NEXT_MOVE = "This quarter, the priority is conversations, not content. Line up the France calls: immigration attorney, your French friend, the Business Association contact, plus UK follow-ups. Post once a week to stay visible while you do it. Conversations move the needle further than posts ever will.";
+const NEXT_MOVE = "This quarter, keep both going: your weekly post to stay visible, and the conversations that actually convert — France groundwork, headhunters, the associate firms not yet delivering. Content builds the audience. Conversations turn it into paid work and your move to France.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -33,39 +33,39 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string; tabLink?: { label: string; tab: string } }[] = [
   {
     id: "jh1",
-    text: "Get clear on the real route to working from France",
-    subtext: "You're meeting an immigration attorney to find out what's actually possible. A long-stay visa is easy, but it doesn't let you work. Get the full picture this quarter so the France plan is built on facts, not hope. This one conversation shapes everything else on this list.",
+    text: "Immigration attorney call (16 Sept) — get a definitive answer on working legally from France",
+    subtext: "A long-stay visa is easy to get but bans you from working. Go into the call with the direct question: what visa or status actually lets me run a fractional CPO, consulting and coaching practice from South-West France? Come out with a yes/no on the legal path, not a feeling. Everything else on this list depends on the answer.",
     section: "Priority — this quarter",
   },
   {
     id: "jh2",
-    text: "Build your Bordeaux and Toulouse target list and start connecting",
-    subtext: "Use AI the way you did for the superyacht brokers: ask it for coaches, consultants and SME businesses with an international angle around Bordeaux and Toulouse. Connect on LinkedIn with no pitch, no agenda. Let them see your content first. This is a quarter-long project, not a one-off task.",
+    text: "Build the Bordeaux/Toulouse target list with ChatGPT, then start connecting on LinkedIn",
+    subtext: "Same method that worked for the superyacht brokers: tell it you're a fractional CPO, consultant and coach based near Bordeaux and Toulouse, and ask for individuals and SME businesses in tech, finance or anything with a UK/Europe crossover. Connect with no pitch, no agenda. Let your content do the talking before you ever send a voice note. This is a quarter-long build, not a one-afternoon task.",
     section: "Priority — this quarter",
   },
   {
     id: "jh3",
-    text: "Sort things at home, then go public with the France mission",
-    subtext: "Your France posts from a year ago are still the ones people remember and mention to you. Once you've had that conversation at home, write the post: this is the mission, here's why, who do you know? Story first, ask second. This could be the biggest post you write all year.",
+    text: "Lunch with your French friend + the French Business Association contact (next France trip, ~3 weeks out)",
+    subtext: "With your friend: ask specifically how and where he found his local network since leaving corporate, and whether he sees any openings for someone doing what you do. With the Business Association contact: find out what it actually takes to get in front of that community. Both conversations feed straight into the target list.",
     section: "Priority — this quarter",
   },
   {
     id: "jh4",
-    text: "Keep posting once a week, even while the bigger plan is moving",
-    subtext: "The cultural tablecloth post and the running drumbeat post are ready to go. Rereading your old posts reminded you how well they've worked. Don't let the France excitement become the new reason to go quiet. Keep the weekly rhythm running underneath everything else this quarter.",
+    text: "Sort things at home, then post the France mission publicly",
+    subtext: "Once that conversation's had, write the post the way you talked it through on the call: this is the mission, here's why South-West France, here's what I'm building, who do you know? Mirror the honesty of your France posts from a year ago — still the ones people bring up to you now. Ask your network directly for names, introductions or company suggestions.",
+    section: "Priority — this quarter",
+  },
+  {
+    id: "jh5",
+    text: "Publish the cultural tablecloth and running-drumbeat posts, then hold a post a week through the quarter",
+    subtext: "Both are written or close to it. Get them out, then keep the weekly rhythm going underneath the France work rather than letting the pivot excitement become the new reason to go quiet — that's the pattern from earlier this year.",
     section: "Business development",
     tabLink: { label: "→ See content ideas", tab: "content" },
   },
   {
-    id: "jh5",
-    text: "Ask your friend who won the big contract where his motivation comes from",
-    subtext: "You noticed a flicker of envy when he told you about it. That's worth following, not brushing off. Ask him properly how he stays on top of follow-ups and outreach. You won't do it his way, but there'll be something useful in it for you.",
-    section: "Business development",
-  },
-  {
     id: "jh6",
-    text: "Turn two of your six associate firms into four",
-    subtext: "Six firms signed, only two have given you work so far. Reach out to the other four this quarter and find out what it would actually take to convert. Pair it with the French Business Association contact and the lunch with your friend near Bordeaux — same principle, more conversations, more doors.",
+    text: "Ask the friend who won the big contract exactly how he stays on top of follow-up",
+    subtext: "You noticed the flicker of envy when he told you — that's worth following properly, not brushing off. Ask him directly what his BD routine actually looks like day to day. You won't copy it wholesale, but there'll be one thing in there worth stealing.",
     section: "Business development",
   },
 ];
@@ -1020,24 +1020,24 @@ export default function JamesHartleyDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={COLOR} />
-            <NextMoveBox move={NEXT_MOVE} accentColor={COLOR} clientName={NAME} sessionLabel={SESSION_LABEL} animateIn />
+            <NextMoveBox move={NEXT_MOVE} accentColor={COLOR} clientName={NAME} sessionLabel={SESSION_LABEL} cadence="quarter" animateIn />
 
             {/* Latest session recap */}
             <div style={{ background: "#f5f3f0", border: `1px solid #d9d4ce`, borderRadius: 8, padding: "18px 22px", display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 28 }}>
-              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>15</div>
+              <div style={{ width: 36, height: 36, background: COLOR, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.8rem", fontWeight: 700, flexShrink: 0 }}>17</div>
               <div>
-                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 16 — 27 May 2026</p>
-                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>Good energy. Mists clearing. Cat Clinic parent company commissioned two days of facilitation. Business magazine found you via LinkedIn — November feature in the works. New podcast invite. HR journalist mini-series planning confirmed. Active pipeline on multiple fronts. The Standard Chartered post is ready to write. Dictation tactic introduced. June is the month to prove it. Summer pause agreed — back 29 June, 10am.</p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: COLOR, margin: "0 0 4px" }}>Session 17 — 15 September 2026</p>
+                <p style={{ fontSize: "0.84rem", color: "#5a544e", margin: 0, lineHeight: 1.6 }}>High-energy catch-up after the summer. You read out your 2026 achievements — goal weight, half marathon training, fully clear of the Cat Clinic, more time in France than any year yet. Six associate firms signed, two delivering, two coaching clients live. Biggest thread of the session: a serious look at relocating your practice to South-West France, sparked by hearing Ben's own pivot back into the superyacht industry. Immigration attorney call booked for 16 September. Sessions now ad hoc, booked whenever you want one.</p>
               </div>
             </div>
 
             {/* Stat cards */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "16", sub: "Since July 2025" },
-                { label: "Next session", value: "29 June", sub: "10am · Back from France" },
-                { label: "Content ideas", value: "Ready to go", sub: "Dashboard + France — Content tab" },
-                { label: "Odgers panel", value: "Coming up", sub: "60–70 FTSE directors" },
+                { label: "Sessions done", value: "17", sub: "Since Aug 2025" },
+                { label: "Next session", value: "Ad hoc", sub: "Book whenever you're ready" },
+                { label: "Associate firms", value: "6 signed, 2 live", sub: "4 still to convert this quarter" },
+                { label: "France pivot", value: "In motion", sub: "Immigration attorney — 16 Sept" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", border: "1px solid #E0DBD3", borderRadius: 8, padding: "18px 20px" }}>
                   <p style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#9CA3AF", margin: "0 0 6px" }}>{s.label}</p>
