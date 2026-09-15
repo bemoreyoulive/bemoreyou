@@ -14,8 +14,8 @@ const COLOR = "#7A746E";
 const NAME = "James Hartley";
 const INITIALS = "JH";
 const ROLE = "Interim CPO · Executive Coach · Strategic Advisor";
-const SESSION_LABEL = "Session 16 · 27 May 2026 · Next: 29 June";
-const NEXT_MOVE = "One priority for June: post. You've got everything — the ideas, the frameworks, the confidence. The Standard Chartered 'lower value human capital' response is already a post. The Cat Clinic M&A journey is already half-written. The dictation trick is ready to use the moment you leave a high-energy conversation. The only thing left is doing it. Get at least two posts out before you leave for France.";
+const SESSION_LABEL = "Session 17 · 15 Sept 2026 · Next: TBC";
+const NEXT_MOVE = "This quarter, the priority is conversations, not content. Line up the France calls: immigration attorney, your French friend, the Business Association contact, plus UK follow-ups. Post once a week to stay visible while you do it. Conversations move the needle further than posts ever will.";
 
 const TABS = [
   { id: "home", label: "Home & To-Do" },
@@ -33,43 +33,40 @@ const TABS = [
 const TODOS: { id: string; text: string; subtext?: string; section: string; tabLink?: { label: string; tab: string } }[] = [
   {
     id: "jh1",
-    text: "Write the Standard Chartered post — your take on 'lower value human capital'",
-    subtext: "At the Odgers panel, a Standard Chartered exec talked about eliminating 'lower value human capital.' You pushed back hard — and there was massive agreement in the room. That's your post. You don't need a photo, you don't need to overthink the framing. Lead with the quote, explain why it's morally bankrupt, flip it: the people described as 'lower value' are often your biggest investment opportunity. It'll blow up.",
-    section: "Priority — do this first",
-    tabLink: { label: "→ See content ideas", tab: "content" },
+    text: "Get clear on the real route to working from France",
+    subtext: "You're meeting an immigration attorney to find out what's actually possible. A long-stay visa is easy, but it doesn't let you work. Get the full picture this quarter so the France plan is built on facts, not hope. This one conversation shapes everything else on this list.",
+    section: "Priority — this quarter",
   },
   {
     id: "jh2",
-    text: "Try the dictation trick — right after your next high-energy moment",
-    subtext: "After the IgnitionCraft call with Rob, after the Odgers panel, after a good coaching session — that's when the energy and ideas are highest. Open your iPhone notes, hit the microphone, and just talk. Don't edit, don't structure, just wibble. Then paste it into AI and ask it to break it down into LinkedIn posts using your words. It still sounds like you. It takes 10 minutes. The energy that's been dissipating into the ether gets captured instead.",
-    section: "Priority — do this first",
+    text: "Build your Bordeaux and Toulouse target list and start connecting",
+    subtext: "Use AI the way you did for the superyacht brokers: ask it for coaches, consultants and SME businesses with an international angle around Bordeaux and Toulouse. Connect on LinkedIn with no pitch, no agenda. Let them see your content first. This is a quarter-long project, not a one-off task.",
+    section: "Priority — this quarter",
   },
   {
     id: "jh3",
-    text: "Finish and post the Cat Clinic M&A piece",
-    subtext: "You've had this half-written for weeks — the journey from building a business to selling it, doing M&A on yourself. The 9th birthday party just happened. The timing is perfect. It's emotional, honest, and a story only you can tell. Finish the draft, get it out before France.",
-    section: "Priority — do this first",
-    tabLink: { label: "→ See content ideas", tab: "content" },
+    text: "Sort things at home, then go public with the France mission",
+    subtext: "Your France posts from a year ago are still the ones people remember and mention to you. Once you've had that conversation at home, write the post: this is the mission, here's why, who do you know? Story first, ask second. This could be the biggest post you write all year.",
+    section: "Priority — this quarter",
   },
   {
     id: "jh4",
-    text: "Ask the business magazine: what specifically stood out about my profile?",
-    subtext: "You've got a call with their director. Before you say yes to anything, ask: 'Beyond the SME fit — was there anything specific about my profile that made you think I'd be a good voice here?' It impresses them, it tells you if these are the right readers, and it's a signal check on whether your brand is landing the way you intend it to.",
+    text: "Keep posting once a week, even while the bigger plan is moving",
+    subtext: "The cultural tablecloth post and the running drumbeat post are ready to go. Rereading your old posts reminded you how well they've worked. Don't let the France excitement become the new reason to go quiet. Keep the weekly rhythm running underneath everything else this quarter.",
     section: "Business development",
+    tabLink: { label: "→ See content ideas", tab: "content" },
   },
   {
     id: "jh5",
-    text: "Explore the London networks Ben sent — commit to one",
-    subtext: "The research is done. One good HR network in there in particular. Have a look, pick the one that feels right — not the most strategically useful one, the one you'd actually enjoy being in the room for. Then show up once. That's all you need to do to decide.",
+    text: "Ask your friend who won the big contract where his motivation comes from",
+    subtext: "You noticed a flicker of envy when he told you about it. That's worth following, not brushing off. Ask him properly how he stays on top of follow-ups and outreach. You won't do it his way, but there'll be something useful in it for you.",
     section: "Business development",
-    tabLink: { label: "→ See Networking tab", tab: "networking" },
   },
   {
     id: "jh6",
-    text: "Keep a close eye on your signals — they're compounding",
-    subtext: "A year after posting from France, people at the Odgers panel were still referencing your shutters post. A business magazine found you via LinkedIn without you doing anything. An ex-client's new employer reached out with a proposal. These aren't luck — they're your brand doing its job. Note them. Bring them to sessions. They're the proof.",
-    section: "Mindset",
-    tabLink: { label: "→ See Milestones & Signals", tab: "milestones" },
+    text: "Turn two of your six associate firms into four",
+    subtext: "Six firms signed, only two have given you work so far. Reach out to the other four this quarter and find out what it would actually take to convert. Pair it with the French Business Association contact and the lunch with your friend near Bordeaux — same principle, more conversations, more doors.",
+    section: "Business development",
   },
 ];
 
@@ -84,6 +81,29 @@ const SESSIONS: {
   agreed: string[];
   nextSession: string;
 }[] = [
+  {
+    number: 17,
+    date: "15 September 2026",
+    title: "A Year in Review — Achievements, Ben's Pivot, and Choosing France",
+    summary: "First session in nearly four months, and both came in high energy. Ben shared his own pivot back into the superyacht and content industry, using his personal brand as leverage to re-enter a market he already knows. Hearing it live sparked something real in James: a serious look at relocating his coaching, consulting and interim CPO work to South-West France, where he already has strong personal ties. James described getting 'butterflies' talking it through out loud. Before diving into the plan, James read out his own list of 2026 achievements: hit his goal weight, training for a half marathon in four weeks, fully extricated from the London Cat Clinic, and more time in France than any year prior. Honest too about what hasn't landed yet — pipeline is thin and coaching client numbers are still low. Current standing: six associate and delivery firms signed, two already generating work, two live coaching clients, a London Vet Show speaking slot, and more podcasts in motion alongside TheCareerPTPod, who reached out directly because of his corporate pivot story and the personal posts he's shared. Reflecting on the past thirteen to fourteen months of coaching, James called it genuinely transformational — not just professionally, but in how he sees himself. He's found his way back to being James Hartley, not the buttoned-up corporate version he thought he had to present when he first went independent. The petulant child pattern is largely quiet these days, only flickering once recently around a friend's big contract win. We closed by agreeing this isn't goodbye — sessions move to an ad hoc basis from here, booked as and when James wants one, rather than on a fixed monthly rhythm.",
+    insights: [
+      "Hearing someone else's pivot story sparked his own — watching momentum build in someone else is as motivating as building your own",
+      "The France posts from a year ago are still the most-remembered content he's ever written — memorability compounds over time",
+      "The petulant child pattern is largely at bay now — it surfaces rarely, and even then redirects into a useful question rather than a spiral",
+      "Writing down actual achievements broke the 'nothing's happening' spiral before it took hold — worth repeating whenever the story starts turning negative",
+      "Six associate firms signed, two delivering — the model is proving out, slowly",
+      "Dictation has become a habit organically, through voice notes on runs, without needing reminding",
+    ],
+    agreed: [
+      "Meet an immigration attorney to understand the real route to working from France",
+      "Build a target list for Bordeaux and Toulouse, and start warm LinkedIn conversations",
+      "Sort things at home before posting anything public about the France plan",
+      "Publish at least one LinkedIn post a week, starting with the two already drafted",
+      "Ask the friend who landed a big contract how he approaches follow-up and outreach",
+      "Sessions move to ad hoc, booked whenever James wants one — no fixed date set",
+    ],
+    nextSession: "Ad hoc — not yet booked",
+  },
   {
     number: 16,
     date: "27 May 2026",
