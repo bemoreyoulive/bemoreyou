@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 6 of 13 · September 2026",
+  sessionLabel: "Session 7 of 13 · October 2026",
   nextMove:
-    "Neil, three posts this fortnight, the Premier League one first to prime the algorithm, then the industry sabotaging itself, then the many hats of a CEO with the stacked hat photo. Open one with a quote, and keep the ten a day connections going.",
+    "Neil, Undercover Boss goes out early next week with the fancy dress photo. Then Thursday's podcast, pink polo on, ask for stills, and post about the day. Follow it up the week after, and give my Monday emails a read every week.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,29 +74,34 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr6-premier",
-    text: "Write and post the Premier League piece first this fortnight, then the industry sabotaging itself piece the same week. Keep the football one personal and let the question, what other industries have done the same, pull the comments.",
+    id: "nr7-undercover",
+    text: "Post the Undercover Boss piece early next week. Open with 'Do you remember Undercover Boss?' on its own line, use a fancy dress photo (the Smurf or the headless man), and write it for fellow CEOs as what the lost pitch taught you rather than as advice.",
     section: "content",
   },
   {
-    id: "nr6-hats",
-    text: "Call Sean for five minutes to catch up, then write the many hats of a CEO post with a photo of you under a stack of hats.",
-    section: "content",
-  },
-  {
-    id: "nr6-hooks",
-    text: "On at least one post this fortnight, open with a quote as the hook. 'Must be easy for Neil' is sitting right there. Speech marks around it so people know it is not your own words.",
-    section: "content",
-  },
-  {
-    id: "nr6-connect",
-    text: "Keep the ten a day connection requests going every morning, no note attached, and stay selective with comments, only on posts you genuinely rate.",
+    id: "nr7-webgames",
+    text: "Before Thursday's podcast, chase the host for the agenda, who's coming and whether you're solo or in a group, and ask them to grab a few stills of you mid-conversation. Wear the bright pink polo so you stand out on camera.",
     section: "home",
   },
   {
-    id: "nr6-dictate",
-    text: "Try dictating one post into your phone on a drive, then tidy it up yourself rather than letting AI write it from scratch.",
+    id: "nr7-podcastposts",
+    text: "Post about the podcast day the same week, then turn the best leadership themes from the roundtable into follow-up posts the week after.",
     section: "content",
+  },
+  {
+    id: "nr7-emails",
+    text: "Give my Monday 9am email a read each week. It's automated, but I update it after every session, so it's your live to-do list.",
+    section: "home",
+  },
+  {
+    id: "nr7-balm",
+    text: "Have a look at Balm's LinkedIn, the Dutch SEO agency founder, and note anything in his value-led posts you could do your own way.",
+    section: "content",
+  },
+  {
+    id: "nr7-connect",
+    text: "Keep the daily connection requests going to your target market, so when we add the monthly deep dives the right people are already there to see them.",
+    section: "home",
   },
 ];
 
@@ -186,6 +191,10 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   {
     title: "Your hook is half the job. Try leading with a quote.",
     body: "Most people read your first line and nothing else before they decide to stop or scroll, so that line is doing most of the work. One of the most reliable openers is a quote, someone else's words in speech marks, dropped in with no setup. The car rental post worked partly because the absurd detail sat right at the top. The call-to-arms post would have hit harder with the 'grubby little people in grubby studios' line as line one, on its own. And 'Must be easy for Neil' is a hook waiting to happen. When you draft a post, hunt for the sharpest thing anyone said, yours or theirs, and see what happens if you open with it.",
+  },
+  {
+    title: "Stay reactive. It's your strength.",
+    body: "Your best posts lately have come straight out of your week, the pitch you lost, your wife's Sunday question about meetings, a genuine ask for podcast recommendations. You write those in minutes because they're real, and they land because people can tell. So keep doing it. Some ideas from our calls will go cold by the time you sit down to write, and that's fine. Once your network has more of the right people in it, we'll add a monthly deep dive tied to the Silverbean webinars and a few value-led posts for heads of ecommerce and marketing, but keep those to a fifth of what you post at most. And don't spend twenty minutes hunting for a picture. Use a personal one when it's natural and post without one when it isn't.",
   },
 ];
 
@@ -547,7 +556,6 @@ const CONTENT_IDEAS: {
       "Which industries forgot who actually made them?",
     ],
     audience: "Everyone, and it is bait for the wider business crowd who will recognise the pattern in their own world.",
-    deadline: "This fortnight, post it first to warm the algorithm up before the industry piece.",
   },
   {
     pillars: [0],
@@ -564,7 +572,6 @@ const CONTENT_IDEAS: {
       "Who in your supply chain is paid to look the other way?",
     ],
     audience: "Senior marketing decision-makers and industry peers, a hand grenade that also makes the case for how you work.",
-    deadline: "This fortnight, straight after the Premier League post, same week.",
   },
   {
     pillars: [2, 1],
@@ -581,7 +588,100 @@ const CONTENT_IDEAS: {
       "What does your team think you do all day?",
     ],
     audience: "Fellow founders and CEOs, and your own team, the post that makes another leader think Neil is one of us.",
-    deadline: "This fortnight, once you have had the quick call with Sean.",
+  },
+  {
+    pillars: [1, 0],
+    title: "I Lost A Pitch Last Week",
+    used: true,
+    resultNote:
+      "Your best post yet, Neil, thirty nine reactions and it moved fast. It worked because you led with a loss and joked about it, won nought and lost one and not wanting to make it nought and two, and people warm to a leader who can laugh at himself. The point about what well run influencer programmes deliver still landed underneath it. Next time, think about putting the 'give some of our existing influencers some codes' line right at the top as the hook.",
+    audience: "Senior marketing leaders and fellow agency founders.",
+  },
+  {
+    pillars: [3],
+    title: "Ecommerce Podcast Recommendations",
+    used: true,
+    resultNote:
+      "Nineteen comments off a genuine ask, your best comment count so far. Everyone with a podcast wanted to put theirs forward, and every one of them saw your name. It also brought ecommerce consultants into your network, the kind of people who refer work. Keep a simple ask like this in the mix every so often, because it costs you five minutes.",
+    audience: "Ecommerce leaders, consultants and anyone with a podcast to recommend.",
+  },
+  {
+    pillars: [2, 3],
+    title: "Every Sunday My Wife Asks If I'm Going To Have A Busy Week",
+    used: true,
+    resultNote:
+      "This is the day in the life of a CEO stuff we talked about, and it landed. Your wife's Sunday question is a great opener because everyone has that conversation at home, and asking people how they've cut their meetings in half gave them an easy way in. I'd love more of these, because they make other founders think you're one of them.",
+    audience: "Fellow founders and CEOs, and your own team.",
+  },
+  {
+    pillars: [1, 2],
+    title: "I Once Had No Choice But To Walk Away From \u00a3100,000",
+    used: true,
+    resultNote:
+      "A strong story with a great moment in it, you closing the notebook on slide three. The handwritten Dear Client note was a clever way round having no photo, personal and on topic. Asking client-side teams how they get the best from their agencies turned a war story into a conversation, and the hook told people exactly what was coming, which is why it pulled them in.",
+    audience: "Agency founders, and client-side marketing teams who work with agencies.",
+  },
+  {
+    pillars: [0],
+    title: "There Has Been A Call For An AI Slowdown",
+    used: true,
+    resultNote:
+      "A good reactive post on the back of the news, and your real point, people outsourcing their thinking to AI, is sharper than the headline. 'Please don't ask AI' is a great sign off. It sits close to the AI truth versus hype idea, so you've half written that one already.",
+    audience: "Senior marketing and business leaders.",
+  },
+  {
+    pillars: [0],
+    title: "Winning AI Search Budget (Webinar)",
+    used: true,
+    resultNote:
+      "Good call writing this as yourself rather than sharing the company post, and the FD who still uses Bing made me laugh. Promo posts will always travel less far than your stories, so keep them occasional and keep a bit of your humour in them like you did here.",
+    audience: "Marketing teams trying to win budget from their FD.",
+  },
+  {
+    pillars: [2, 1],
+    title: "Do You Remember Undercover Boss?",
+    hookA: "Do you remember Undercover Boss?",
+    hookB: "I went back into the weeds on a pitch this summer. It taught me more than any report could have.",
+    guidance:
+      "The pitch you lost put you right back in the detail, and you came out of it seeing things you'd never have spotted from the top. Like the bosses on the telly, you saw first-hand how little time the marketing leaders you want to reach actually have, and it changed how you think about reaching them. Write it for fellow CEOs as what you learnt by dropping back into the weeds, not as a lecture on what they should be doing. Keep it light, because the photo is half the joke.",
+    tips: [
+      "Use a fancy dress photo, the Smurf or the headless man. If it's the headless man, there's a headless chicken line in there about running a business without seeing what's really going on.",
+      "Put the question on its own line at the top. People will picture you in disguise in your own office before they've read another word.",
+      "Share two or three specific things you noticed, then hand it back to the reader with a question about the last time they did the job their team does every day.",
+    ],
+    questions: [
+      "When did you last spend a day in your team's shoes?",
+      "What did you learn the last time you went back into the detail?",
+    ],
+    audience: "Fellow founders and CEOs, and your own team, who'll see the boss getting stuck in.",
+    deadline: "Early next week, before the podcast.",
+  },
+  {
+    pillars: [2, 3],
+    title: "A Day In London With 20 Agency Leaders",
+    guidance:
+      "Post about the Web Games day itself while it's fresh. Give people a feel for the room, twenty agency leaders round a table in King's Cross, and share the one conversation or line that stuck with you. Keep it about what you took away rather than what you said, and tag a couple of the people you met if it feels natural.",
+    tips: [
+      "Use one of the stills you asked for. A shot of you mid-conversation behind a big microphone says thought leader before anyone reads a word.",
+      "One takeaway is plenty. Save the rest for the follow-ups the week after.",
+    ],
+    questions: [
+      "What's the best thing you've learnt from sitting in a room with your competitors?",
+    ],
+    audience: "Agency founders and peers, plus the people who'll want to hear the podcast.",
+    deadline: "The same week, after Thursday 8 October.",
+  },
+  {
+    pillars: [2, 0],
+    title: "What 20 Agency Leaders Taught Me",
+    guidance:
+      "You reckoned you'd come away from the roundtable with a dozen leadership angles, so turn the best two or three into their own posts. Pick the ones where you agreed or disagreed most strongly with the room, because that's where your view comes through. Write each one as your take on what was said, not a summary of the day.",
+    tips: [
+      "One theme per post. A single sharp point travels further than a round-up.",
+      "Where you disagreed with someone, say so plainly and kindly, without naming them.",
+    ],
+    audience: "Agency founders and senior marketing leaders.",
+    deadline: "The week after the podcast.",
   },
 ];
 
@@ -727,6 +827,27 @@ const SESSIONS: {
     ],
     nextSession: "Session 7 · Tuesday 23 September 2026, 2pm · content review and the CEO day-to-day series",
   },
+  {
+    number: 7,
+    date: "1 October 2026",
+    title: "Coaching session seven. The first measurable value, and why being reactive works for you.",
+    summary:
+      "Our seventh session, and the one where it started paying out in black and white. You told me there'd been measurable value from LinkedIn this week. A simple post asking for ecommerce podcast recommendations pulled nineteen comments and brought ecommerce consultants into your network, the kind of people who refer work your way. A couple of genuine partnership opportunities came through from companies you already wanted to talk to, and the Web Games podcast in London next Thursday came straight off a post. Your lost pitch post was your best yet at thirty nine reactions, because you laughed at yourself and people love a leader who admits a loss. The meetings post was your first real day in the life of a CEO piece, exactly the gap we talked about last time. You also said you're enjoying it now, starting the week thinking about which posts to write rather than dreading them. We agreed you stay reactive, because it's your strength, and later on, once your network has more of the right people in it, we add a monthly deep dive and some value-led posts.",
+    insights: [
+      "Admitting a loss beat every helpful post you've written. The lost pitch post flew because you were honest and funny about it, and people trust a leader who can laugh at himself.",
+      "A simple ask can do more than a clever opinion. The podcast recommendations post pulled nineteen comments and brought the right people into your network.",
+      "Going back into the detail on that pitch showed you how little time the marketing leaders you want to reach actually have. That's worth remembering every time you write for them.",
+      "You don't need a picture on every post. Your imageless posts are doing fine, so use a personal photo when there's a natural one and don't waste twenty minutes hunting.",
+    ],
+    agreed: [
+      "Post Undercover Boss early next week with a fancy dress photo, written for fellow CEOs.",
+      "Chase Web Games for the agenda and format, ask for stills, and wear the pink polo on Thursday.",
+      "Post about the podcast day, then follow-ups the week after.",
+      "Read the Monday 9am emails, because they're your live to-do list.",
+      "Session 8 booked, Friday 16 October at 9am.",
+    ],
+    nextSession: "Session 8 \u00b7 Friday 16 October 2026, 9am \u00b7 podcast debrief and content review",
+  },
 ];
 
 const GOALS = {
@@ -850,14 +971,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Really good session today, Neil. The car rental post doing what it did, sixty odd comments and still running, tells you exactly where your best material comes from, and now we widen it out. You have three posts this fortnight, the Premier League one first, then the industry sabotaging itself, then the many hats of a CEO with you buried under a stack of them. The other thing worth sitting with is the signals stacking up, the DMs from people who felt the same but would not say it, Mary noticing without being told, a podcast invite off a single post. That is the compound effect starting to show. Keep the ten a day connections going and I will see you on the 23rd.
+                Brilliant session today, Neil. You said it yourself, there's been measurable value from LinkedIn this week, with new partnership conversations, ecommerce consultants connecting off the back of a simple podcast question, and a seat at the table in London. That's the compound effect starting to pay out. The lost pitch post was your best yet because you laughed at yourself, so keep doing that. Next week is a big one, with Undercover Boss early on and then the podcast on Thursday in that pink polo. Ask for the stills, and I'll see you on Friday the 16th at 9am.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "6 of 13", sub: "Next: Tue 23 September, 2pm" },
+                { label: "Sessions done", value: "7 of 13", sub: "Next: Fri 16 October, 9am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
@@ -1161,7 +1282,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>{CONTENT_IDEAS.filter(x => !x.archived).length} posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you a steer on how to write it, who it's for, and why it'll land. The colour tags show which pillar or two each post leans on. Where I've briefed the idea you'll also get two hook options, A and B, so you pick the opener that feels most like you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant is the standout so far, sixty odd comments and still going.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant and the lost pitch post are your standouts so far, one for comments and one for reactions.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>

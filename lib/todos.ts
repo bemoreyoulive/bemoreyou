@@ -44,13 +44,14 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
-  // Session 6 done 9 September 2026. Fortnightly cadence. Todos below.
+  // Session 7 done 1 October 2026. Fortnightly cadence. Todos below.
   "neil-robbins": [
-    { id: "nr6-premier", text: "Write and post the Premier League piece first this fortnight, then the industry sabotaging itself piece the same week. Keep the football one personal and let the question, what other industries have done the same, pull the comments." },
-    { id: "nr6-hats", text: "Call Sean for five minutes to catch up, then write the many hats of a CEO post with a photo of you under a stack of hats." },
-    { id: "nr6-hooks", text: "On at least one post this fortnight, open with a quote as the hook. 'Must be easy for Neil' is sitting right there. Speech marks around it so people know it is not your own words." },
-    { id: "nr6-connect", text: "Keep the ten a day connection requests going every morning, no note attached, and stay selective with comments, only on posts you genuinely rate." },
-    { id: "nr6-dictate", text: "Try dictating one post into your phone on a drive, then tidy it up yourself rather than letting AI write it from scratch." },
+    { id: "nr7-undercover", text: "Post the Undercover Boss piece early next week. Open with 'Do you remember Undercover Boss?' on its own line, use a fancy dress photo (the Smurf or the headless man), and write it for fellow CEOs as what the lost pitch taught you rather than as advice." },
+    { id: "nr7-webgames", text: "Before Thursday's podcast, chase the host for the agenda, who's coming and whether you're solo or in a group, and ask them to grab a few stills of you mid-conversation. Wear the bright pink polo so you stand out on camera." },
+    { id: "nr7-podcastposts", text: "Post about the podcast day the same week, then turn the best leadership themes from the roundtable into follow-up posts the week after." },
+    { id: "nr7-emails", text: "Give my Monday 9am email a read each week. It's automated, but I update it after every session, so it's your live to-do list." },
+    { id: "nr7-balm", text: "Have a look at Balm's LinkedIn, the Dutch SEO agency founder, and note anything in his value-led posts you could do your own way." },
+    { id: "nr7-connect", text: "Keep the daily connection requests going to your target market, so when we add the monthly deep dives the right people are already there to see them." },
   ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },
