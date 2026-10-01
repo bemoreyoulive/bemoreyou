@@ -49,7 +49,7 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "nr7-undercover", text: "Post the Undercover Boss piece early next week. Open with 'Do you remember Undercover Boss?' on its own line, use a fancy dress photo (the Smurf or the headless man), and write it for fellow CEOs as what the lost pitch taught you rather than as advice." },
     { id: "nr7-webgames", text: "Before Thursday's podcast, chase the host for the agenda, who's coming and whether you're solo or in a group, and ask them to grab a few stills of you mid-conversation. Wear the bright pink polo so you stand out on camera." },
     { id: "nr7-podcastposts", text: "Post about the podcast day the same week, then turn the best leadership themes from the roundtable into follow-up posts the week after." },
-    { id: "nr7-emails", text: "Give my Monday 9am email a read each week. It's automated, but I update it after every session, so it's your live to-do list." },
+    { id: "nr7-emails", text: "Give my Monday 9am email a glance at least each week. It's automated, but I update it after every session, so it's your live to-do list." },
     { id: "nr7-balm", text: "Have a look at Balm's LinkedIn, the Dutch SEO agency founder, and note anything in his value-led posts you could do your own way." },
     { id: "nr7-connect", text: "Keep the daily connection requests going to your target market, so when we add the monthly deep dives the right people are already there to see them." },
   ],

@@ -26,7 +26,7 @@ const NR_CONFIG = {
   color: "#2E6F5E",
   sessionLabel: "Session 7 of 13 · October 2026",
   nextMove:
-    "Neil, Undercover Boss goes out early next week with the fancy dress photo. Then Thursday's podcast, pink polo on, ask for stills, and post about the day. Follow it up the week after, and give my Monday emails a read every week.",
+    "Neil, Undercover Boss goes out early next week with the fancy dress photo. Then Thursday's podcast, pink polo on, ask for stills, and post about the day. Follow it up the week after, and give my Monday emails a glance at least.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -90,7 +90,7 @@ const TODOS: { id: string; text: string; subtext?: string; section: string }[] =
   },
   {
     id: "nr7-emails",
-    text: "Give my Monday 9am email a read each week. It's automated, but I update it after every session, so it's your live to-do list.",
+    text: "Give my Monday 9am email a glance at least each week. It's automated, but I update it after every session, so it's your live to-do list.",
     section: "home",
   },
   {
@@ -843,7 +843,7 @@ const SESSIONS: {
       "Post Undercover Boss early next week with a fancy dress photo, written for fellow CEOs.",
       "Chase Web Games for the agenda and format, ask for stills, and wear the pink polo on Thursday.",
       "Post about the podcast day, then follow-ups the week after.",
-      "Read the Monday 9am emails, because they're your live to-do list.",
+      "Glance at the Monday 9am emails at least, because they're your live to-do list.",
       "Session 8 booked, Friday 16 October at 9am.",
     ],
     nextSession: "Session 8 \u00b7 Friday 16 October 2026, 9am \u00b7 podcast debrief and content review",
