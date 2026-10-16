@@ -46,12 +46,12 @@ const clientTodos: Record<string, TodoDef[]> = {
   ],
   // Session 7 done 1 October 2026. Fortnightly cadence. Todos below.
   "neil-robbins": [
-    { id: "nr7-undercover", text: "Post the Undercover Boss piece early next week. Open with 'Do you remember Undercover Boss?' on its own line, use a fancy dress photo (the Smurf or the headless man), and write it for fellow CEOs as what the lost pitch taught you rather than as advice." },
-    { id: "nr7-webgames", text: "Before Thursday's podcast, chase the host for the agenda, who's coming and whether you're solo or in a group, and ask them to grab a few stills of you mid-conversation. Wear the bright pink polo so you stand out on camera." },
-    { id: "nr7-podcastposts", text: "Post about the podcast day the same week, then turn the best leadership themes from the roundtable into follow-up posts the week after." },
-    { id: "nr7-emails", text: "Give my Monday 9am email a glance at least each week. It's automated, but I update it after every session, so it's your live to-do list." },
-    { id: "nr7-balm", text: "Have a look at Balm's LinkedIn, the Dutch SEO agency founder, and note anything in his value-led posts you could do your own way." },
-    { id: "nr7-connect", text: "Keep the daily connection requests going to your target market, so when we add the monthly deep dives the right people are already there to see them." },
+    { id: "nr8-podcast", text: "Write and schedule the podcast day post first. Tell it as a story rather than a list of what you did, use the best of the stills, and finish by saying you're open to more podcast invitations." },
+    { id: "nr8-measurement", text: "Write the measurement post from the client's side of the table. Your 'too many cooks in the kitchen' line is the heart of it, so picture who'll read it and feel heard." },
+    { id: "nr8-visible", text: "Write up what you've learnt from becoming visible on LinkedIn, the conversations and opportunities it's opened up, and pitch it at your own team so they want to start posting too." },
+    { id: "nr8-ceo", text: "Write the running a smaller company right now post, everything you're juggling at once, and land it on the fact that every founder is dealing with the same pressures whatever their industry." },
+    { id: "nr8-undercover", text: "Schedule Undercover Boss for around Halloween with a costume photo, still opening with 'Do you remember Undercover Boss?' on its own line." },
+    { id: "nr8-podlink", text: "Send me the Web Games podcast link as soon as it's out next month, and keep the daily connection requests going to your target market." },
   ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },

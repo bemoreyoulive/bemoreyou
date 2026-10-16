@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 7 of 13 · October 2026",
+  sessionLabel: "Session 8 of 13 · October 2026",
   nextMove:
-    "Neil, Undercover Boss goes out early next week with the fancy dress photo. Then Thursday's podcast, pink polo on, ask for stills, and post about the day. Follow it up the week after, and give my Monday emails a glance at least.",
+    "Neil, write and schedule your four posts this week, starting with the podcast day told as a story with the stills. Then do measurement, what being visible has brought you, and running a smaller company right now. Undercover Boss goes out around Halloween.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,33 +74,33 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr7-undercover",
-    text: "Post the Undercover Boss piece early next week. Open with 'Do you remember Undercover Boss?' on its own line, use a fancy dress photo (the Smurf or the headless man), and write it for fellow CEOs as what the lost pitch taught you rather than as advice.",
+    id: "nr8-podcast",
+    text: "Write and schedule the podcast day post first. Tell it as a story rather than a list of what you did, use the best of the stills, and finish by saying you're open to more podcast invitations.",
     section: "content",
   },
   {
-    id: "nr7-webgames",
-    text: "Before Thursday's podcast, chase the host for the agenda, who's coming and whether you're solo or in a group, and ask them to grab a few stills of you mid-conversation. Wear the bright pink polo so you stand out on camera.",
-    section: "home",
-  },
-  {
-    id: "nr7-podcastposts",
-    text: "Post about the podcast day the same week, then turn the best leadership themes from the roundtable into follow-up posts the week after.",
+    id: "nr8-measurement",
+    text: "Write the measurement post from the client's side of the table. Your 'too many cooks in the kitchen' line is the heart of it, so picture who'll read it and feel heard.",
     section: "content",
   },
   {
-    id: "nr7-emails",
-    text: "Give my Monday 9am email a glance at least each week. It's automated, but I update it after every session, so it's your live to-do list.",
-    section: "home",
-  },
-  {
-    id: "nr7-balm",
-    text: "Have a look at Balm's LinkedIn, the Dutch SEO agency founder, and note anything in his value-led posts you could do your own way.",
+    id: "nr8-visible",
+    text: "Write up what you've learnt from becoming visible on LinkedIn, the conversations and opportunities it's opened up, and pitch it at your own team so they want to start posting too.",
     section: "content",
   },
   {
-    id: "nr7-connect",
-    text: "Keep the daily connection requests going to your target market, so when we add the monthly deep dives the right people are already there to see them.",
+    id: "nr8-ceo",
+    text: "Write the running a smaller company right now post, everything you're juggling at once, and land it on the fact that every founder is dealing with the same pressures whatever their industry.",
+    section: "content",
+  },
+  {
+    id: "nr8-undercover",
+    text: "Schedule Undercover Boss for around Halloween with a costume photo, still opening with 'Do you remember Undercover Boss?' on its own line.",
+    section: "content",
+  },
+  {
+    id: "nr8-podlink",
+    text: "Send me the Web Games podcast link as soon as it's out next month, and keep the daily connection requests going to your target market.",
     section: "home",
   },
 ];
@@ -195,6 +195,14 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   {
     title: "Stay reactive. It's your strength.",
     body: "Your best posts lately have come straight out of your week, the pitch you lost, your wife's Sunday question about meetings, a genuine ask for podcast recommendations. You write those in minutes because they're real, and they land because people can tell. So keep doing it. Some ideas from our calls will go cold by the time you sit down to write, and that's fine. Once your network has more of the right people in it, we'll add a monthly deep dive tied to the Silverbean webinars and a few value-led posts for heads of ecommerce and marketing, but keep those to a fifth of what you post at most. And don't spend twenty minutes hunting for a picture. Use a personal one when it's natural and post without one when it isn't.",
+  },
+  {
+    title: "Shout out others when your brain's fried.",
+    body: "Your podcast recommendation post took five minutes and still travelled, because Ryan Bartlett reposted it and his crowd piled in. That's what shouting out other people does. It's generous and it starts relationships, and anyone who already rates the person you've tagged warms to you straight away. So when a week runs away with you, don't skip it. Share a podcast, a book or a post you rate, tag the person behind it and say why it's worth someone's time. It keeps you showing up when you've got nothing left in the tank, and you never know where it leads, as the voucher proved.",
+  },
+  {
+    title: "Answer the objection before anyone raises it.",
+    body: "Your sales calls keep surfacing the same worries, people wary of agency retainers after getting burnt elsewhere and everyone fighting to protect their margin. Those worries are content. Every so often, write a post that names one of them plainly, shows you understand why someone would feel that way, and explains how you'd handle it. A head of marketing who's read that before a pitch, or just before they think about pulling the plug, already has your answer in their head. You don't need a whole series, just fold it into the posts you're already writing when it fits.",
   },
 ];
 
@@ -645,7 +653,7 @@ const CONTENT_IDEAS: {
     guidance:
       "The pitch you lost put you right back in the detail, and you came out of it seeing things you'd never have spotted from the top. Like the bosses on the telly, you saw first-hand how little time the marketing leaders you want to reach actually have, and it changed how you think about reaching them. Write it for fellow CEOs as what you learnt by dropping back into the weeds, not as a lecture on what they should be doing. Keep it light, because the photo is half the joke.",
     tips: [
-      "Use a fancy dress photo, the Smurf or the headless man. If it's the headless man, there's a headless chicken line in there about running a business without seeing what's really going on.",
+      "Use a Halloween costume photo now it's going out at the end of October. If you can find something headless, there's a headless chicken line in there about running a business without seeing what's really going on.",
       "Put the question on its own line at the top. People will picture you in disguise in your own office before they've read another word.",
       "Share two or three specific things you noticed, then hand it back to the reader with a question about the last time they did the job their team does every day.",
     ],
@@ -654,26 +662,28 @@ const CONTENT_IDEAS: {
       "What did you learn the last time you went back into the detail?",
     ],
     audience: "Fellow founders and CEOs, and your own team, who'll see the boss getting stuck in.",
-    deadline: "Early next week, before the podcast.",
+    deadline: "Around Halloween, scheduled with a costume photo.",
   },
   {
     pillars: [2, 3],
     title: "A Day In London With 20 Agency Leaders",
     guidance:
-      "Post about the Web Games day itself while it's fresh. Give people a feel for the room, twenty agency leaders round a table in King's Cross, and share the one conversation or line that stuck with you. Keep it about what you took away rather than what you said, and tag a couple of the people you met if it feels natural.",
+      "Tell the story of the day rather than listing what you did, because a run-down of sessions is dull as dishwater. You walked in expecting a chat about agency leadership, found the agenda was all about the work itself with two competitors at the table, and then one of their co-founders came back from recording his own episode to tell you he'd just named Silverbean as the agency he most admires. Share the moment your view differed from the room, kindly, and talk about recording your episode on agency profitability without giving away what Web Games are saving for the release. Finish by saying you're up for more podcast invitations.",
     tips: [
-      "Use one of the stills you asked for. A shot of you mid-conversation behind a big microphone says thought leader before anyone reads a word.",
-      "One takeaway is plenty. Save the rest for the follow-ups the week after.",
+      "Use the best of the stills Web Games sent over. You behind a big microphone does a lot of the work before anyone reads a word.",
+      "Open on the moment the agenda landed and you spotted two competitors on the list. Every founder knows that feeling.",
+      "Close with a line saying you're open to more podcast invitations, so the right hosts know to ask.",
     ],
     questions: [
       "What's the best thing you've learnt from sitting in a room with your competitors?",
     ],
-    audience: "Agency founders and peers, plus the people who'll want to hear the podcast.",
-    deadline: "The same week, after Thursday 8 October.",
+    audience: "Agency founders and peers, the people who'll want to hear the podcast, and the hosts who might invite you on theirs.",
+    deadline: "First of your four, scheduled this week.",
   },
   {
     pillars: [2, 0],
     title: "What 20 Agency Leaders Taught Me",
+    archived: true,
     guidance:
       "You reckoned you'd come away from the roundtable with a dozen leadership angles, so turn the best two or three into their own posts. Pick the ones where you agreed or disagreed most strongly with the room, because that's where your view comes through. Write each one as your take on what was said, not a summary of the day.",
     tips: [
@@ -681,7 +691,111 @@ const CONTENT_IDEAS: {
       "Where you disagreed with someone, say so plainly and kindly, without naming them.",
     ],
     audience: "Agency founders and senior marketing leaders.",
-    deadline: "The week after the podcast.",
+  },
+  {
+    pillars: [2],
+    title: "Rebecca Marley's Creator Insights (Reshare)",
+    used: true,
+    resultNote:
+      "Good to see you backing Rebecca in public, because that's the flywheel we talked about, you go first and bring your people with you. A one-line reshare won't travel far on its own though. Next time add two or three lines of your own take on her numbers, what surprised you or what a fashion brand should do about it, and it becomes your post as well as hers.",
+    audience: "Marketing leaders at fashion brands, and your own team watching you back one of their own.",
+  },
+  {
+    pillars: [3],
+    title: "A Podcast Recommendation You Can't Miss",
+    used: true,
+    resultNote:
+      "As easy as a post gets, and it still travelled. You closed the loop on your podcast question, thanked Ted Parry by name, and Buddy the perfect passenger stole the show in the photo. Then Ryan Bartlett reposted it and brought a flurry of activity with him, which is what happens when you shout out the people behind something you rate. Keep this kind of post in your back pocket for the weeks your brain's fried.",
+    audience: "Ecommerce and growth leaders, plus everyone who follows Ryan Bartlett and Open Residency.",
+  },
+  {
+    pillars: [0],
+    title: "Too Many Cooks In The Kitchen",
+    hookA: "There are too many cooks in the kitchen when it comes to measuring affiliate.",
+    hookB: "Sit twenty agency leaders round a table to talk about measurement and you'll hear twenty versions of the truth.",
+    guidance:
+      "This came straight out of the roundtable, and it's your clearest view. Google gives a brand one way to measure and so does Meta, but affiliate has dozens of agencies, tech platforms and thousands of publishers, each with their own story about how it should be done. No wonder brands are confused and don't know who to trust. Write it from the client's side of the table, a head of marketing being told five different things by five different people, and keep it in plain English without the technical detail the room got lost in. If you want a second angle later, try the thing nobody said out loud at the roundtable.",
+    tips: [
+      "Picture who'll read this and feel heard. A head of ecommerce who's been confused by measurement should finish it thinking someone finally gets it.",
+      "Keep it about the industry's habits, not any one firm or person in the room.",
+      "Land it on clarity and honesty, because that's what clients want and what you can offer.",
+    ],
+    questions: [
+      "How many different answers have you been given about what's actually working?",
+    ],
+    audience: "Heads of ecommerce and marketing trying to work out who to trust.",
+    deadline: "Second of your four.",
+  },
+  {
+    pillars: [2, 1],
+    title: "What I've Learnt By Becoming Visible On LinkedIn",
+    guidance:
+      "Four months ago you were reading LinkedIn every day and never posting. Since then a podcast invite, partnership conversations, client leads and new people in your network have all come off the back of showing up, even when your topics were all over the place. Share that honestly, here's what I did, here's what happened, and here's why I think you should try it. The real audience is your own team, because the more of them who post, the easier selling gets for everyone. Keep it about the web of opportunities rather than blowing your own trumpet.",
+    tips: [
+      "Be specific about one or two things that came in, without naming anyone who wouldn't want naming.",
+      "Admit the messy bits, the weeks you didn't post and the topics that went nowhere. That's what makes it believable.",
+      "End with a nudge to anyone on the fence, especially your own people.",
+    ],
+    questions: [
+      "What's actually stopping you from posting?",
+    ],
+    audience: "Your own team first, then fellow founders and leaders sitting on the fence about LinkedIn.",
+    deadline: "Third of your four.",
+  },
+  {
+    pillars: [2],
+    title: "Running A Smaller Company Right Now",
+    guidance:
+      "You've got eighty-odd people and you still have to drive the changes yourself. Write about what the boss of a smaller business is juggling at the moment, AI changing how everything works, people wanting different things from a place to work, the noise you have to cut through to be heard, clients expecting more, and budgets that can vanish at the last minute. Don't make it a moan. Make it the kind of post that makes another founder think it's not just them, whatever industry they're in.",
+    tips: [
+      "Open on the gap between the size of the team and how hard you still have to push. People assume a bigger business runs itself.",
+      "Pick the three or four pressures you're feeling most rather than listing everything.",
+      "Hand it back with a question so other founders can add what's on their plate.",
+    ],
+    questions: [
+      "What's on your plate right now that nobody outside the business sees?",
+    ],
+    audience: "Fellow founders and CEOs of smaller businesses, in any industry.",
+    deadline: "Fourth of your four.",
+  },
+  {
+    pillars: [3, 1],
+    title: "Who Remembers Purple Nasty?",
+    hookA: "Who remembers Purple Nasty?",
+    guidance:
+      "Your idea, and a great one. Open on a photo of a snakebite and black and the uni days you were known for drinking it, then joke that it has absolutely nothing to do with Silverbean's brand being so purple. From there, tell the real story of where the name and the colours came from, because people ask you all the time. Finish by asking people for the story behind their own brand.",
+    tips: [
+      "Lead with the drink, not the brand. Anyone of a certain age will be in the comments before they know where it's going.",
+    ],
+    audience: "Everyone, especially founders with a brand story of their own.",
+  },
+  {
+    pillars: [0, 3],
+    title: "Imagine If We Priced Our Work Like Split Train Tickets",
+    guidance:
+      "Three tickets to sit in the same seat from Newcastle to London, because somehow that's the cheapest way to buy it. Make light of how daft that is, then flip it and imagine if you priced your own work that way. It's observational, the kind of thing people nod along to because someone's finally said it.",
+    audience: "Anyone who's ever booked a train, and every marketing leader who's had a confusing proposal.",
+  },
+  {
+    pillars: [0],
+    title: "Spray And Pray",
+    guidance:
+      "The volume of lazy, unpersonalised outreach landing in your inbox and on LinkedIn has gone wild. Your angle is effort, because people buy from people, and if you want someone to reply you have to put the work in. Build it around one message that made you laugh or wince, then make the wider point about cutting through the noise.",
+    audience: "Founders and senior leaders drowning in the same messages, and anyone tempted to automate their outreach.",
+  },
+  {
+    pillars: [0, 3],
+    title: "What Man City And A Badly Run Affiliate Programme Have In Common",
+    guidance:
+      "Your football brain meets your day job. Use the Man City verdict as the way in, then make the point about affiliate programmes that look great on paper because the revenue's inflated with sales that would have happened anyway. Keep it light on the football and clear on the lesson for brands.",
+    audience: "Football fans who run marketing budgets, and brands wondering whether their numbers are real.",
+  },
+  {
+    pillars: [1],
+    title: "Not Every Year Is A Good Year",
+    guidance:
+      "Everyone on LinkedIn seems to be having a record year, and you know that isn't true. Be honest that in twenty-four years Silverbean has had great years, good years and some not so good ones, and talk about what profit really looks like for an agency. It sits nicely alongside your podcast on agency profitability once that's out.",
+    audience: "Fellow founders and agency owners, and potential buyers who'll respect the honesty.",
   },
 ];
 
@@ -848,6 +962,27 @@ const SESSIONS: {
     ],
     nextSession: "Session 8 \u00b7 Friday 16 October 2026, 9am \u00b7 podcast debrief and content review",
   },
+  {
+    number: 8,
+    date: "16 October 2026",
+    title: "Coaching session eight. The web of opportunities, and keeping going when your brain's fried.",
+    summary:
+      "Our eighth session, and a good reminder that showing up pays out even when you're flat out. You'd had a fortnight so busy you were fried and posting dipped, but the opportunities kept coming anyway. The founder of a sports affiliate network got in touch off the back of your LinkedIn, you met him in King's Cross after the podcast, and he's coming up to Newcastle at the end of the month to talk partnership. At the Web Games day a competitor's co-founder named Silverbean on his own podcast as the agency he most admires, and you connected with everyone in the room afterwards. Your simple podcast recommendation post got reposted by Ryan Bartlett himself. As you put it, it becomes a web. We talked through the roundtable, where everyone was polite and agreed with each other, and found your strongest angle in the measurement conversation, too many cooks in the kitchen. You left with four posts to write and schedule, and a bank of your own ideas for after that.",
+    insights: [
+      "Opportunities don't wait for a perfect content plan. Your topics have been all over the place and you still had a partnership conversation, a podcast shout-out and client leads come in, because you've been visible.",
+      "When your brain's fried, shout out someone else. The podcast recommendation post took five minutes and Ryan Bartlett's repost did the rest.",
+      "Your sharpest view came out of the room, not a topic list. Too many cooks in the kitchen is exactly the plain-English honesty a confused head of marketing wants to hear.",
+      "Mix the insider posts that lift you within the industry with ones people outside it understand, and always ask who'll read it and feel heard.",
+    ],
+    agreed: [
+      "Write and schedule four posts: the podcast day, measurement, what being visible has brought you, and running a smaller company right now.",
+      "Tell the podcast day as a story with the stills, and say you're open to more podcast invitations.",
+      "Move Undercover Boss to around Halloween and use a costume photo.",
+      "Send Ben the Web Games podcast link when it's out in November.",
+      "Session 9 booked, Monday 2 November at 11:30am.",
+    ],
+    nextSession: "Session 9 \u00b7 Monday 2 November 2026, 11:30am \u00b7 content review and what's come in",
+  },
 ];
 
 const GOALS = {
@@ -971,14 +1106,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Brilliant session today, Neil. You said it yourself, there's been measurable value from LinkedIn this week, with new partnership conversations, ecommerce consultants connecting off the back of a simple podcast question, and a seat at the table in London. That's the compound effect starting to pay out. The lost pitch post was your best yet because you laughed at yourself, so keep doing that. Next week is a big one, with Undercover Boss early on and then the podcast on Thursday in that pink polo. Ask for the stills, and I'll see you on Friday the 16th at 9am.
+                Really good catch up today, Neil. You might have expected a disappointed look, but look at what came in while you were flat out, a partnership conversation off the back of LinkedIn, a competitor naming Silverbean on his own podcast, and Ryan Bartlett reposting you. That's the web you talked about, and it only keeps growing if you keep showing up. You've got four posts to write and schedule, with the podcast day first and Undercover Boss saved for Halloween. If a week gets away from you, shout someone out rather than skipping it. Enjoy writing them and I'll see you on Monday the 2nd at half eleven.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "7 of 13", sub: "Next: Fri 16 October, 9am" },
+                { label: "Sessions done", value: "8 of 13", sub: "Next: Mon 2 November, 11:30am" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
@@ -1282,7 +1417,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>{CONTENT_IDEAS.filter(x => !x.archived).length} posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you a steer on how to write it, who it's for, and why it'll land. The colour tags show which pillar or two each post leans on. Where I've briefed the idea you'll also get two hook options, A and B, so you pick the opener that feels most like you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant and the lost pitch post are your standouts so far, one for comments and one for reactions.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant and the lost pitch post are your standouts so far, one for comments and one for reactions, and your podcast recommendation earned a repost from Ryan Bartlett himself.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
