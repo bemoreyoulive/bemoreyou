@@ -49,7 +49,7 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "nr8-podcast", text: "Write and schedule the podcast day post first. Tell it as a story rather than a list of what you did, use the best of the stills, and finish by saying you're open to more podcast invitations." },
     { id: "nr8-measurement", text: "Write the measurement post from the client's side of the table. Your 'too many cooks in the kitchen' line is the heart of it, so picture who'll read it and feel heard." },
     { id: "nr8-visible", text: "Write up what you've learnt from becoming visible on LinkedIn, the conversations and opportunities it's opened up, and pitch it at your own team so they want to start posting too." },
-    { id: "nr8-ceo", text: "Write the running a smaller company right now post, everything you're juggling at once, and land it on the fact that every founder is dealing with the same pressures whatever their industry." },
+    { id: "nr8-ceo", text: "Write your post on what it's like running a smaller company right now, everything you're juggling at once, and land it on the fact that every founder is feeling the same pressures, whatever their industry." },
     { id: "nr8-undercover", text: "Schedule Undercover Boss for around Halloween with a costume photo, still opening with 'Do you remember Undercover Boss?' on its own line." },
     { id: "nr8-podlink", text: "Send me the Web Games podcast link as soon as it's out next month, and keep the daily connection requests going to your target market." },
   ],

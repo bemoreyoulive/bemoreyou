@@ -90,7 +90,7 @@ const TODOS: { id: string; text: string; subtext?: string; section: string }[] =
   },
   {
     id: "nr8-ceo",
-    text: "Write the running a smaller company right now post, everything you're juggling at once, and land it on the fact that every founder is dealing with the same pressures whatever their industry.",
+    text: "Write your post on what it's like running a smaller company right now, everything you're juggling at once, and land it on the fact that every founder is feeling the same pressures, whatever their industry.",
     section: "content",
   },
   {
@@ -197,12 +197,12 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
     body: "Your best posts lately have come straight out of your week, the pitch you lost, your wife's Sunday question about meetings, a genuine ask for podcast recommendations. You write those in minutes because they're real, and they land because people can tell. So keep doing it. Some ideas from our calls will go cold by the time you sit down to write, and that's fine. Once your network has more of the right people in it, we'll add a monthly deep dive tied to the Silverbean webinars and a few value-led posts for heads of ecommerce and marketing, but keep those to a fifth of what you post at most. And don't spend twenty minutes hunting for a picture. Use a personal one when it's natural and post without one when it isn't.",
   },
   {
-    title: "Shout out others when your brain's fried.",
-    body: "Your podcast recommendation post took five minutes and still travelled, because Ryan Bartlett reposted it and his crowd piled in. That's what shouting out other people does. It's generous and it starts relationships, and anyone who already rates the person you've tagged warms to you straight away. So when a week runs away with you, don't skip it. Share a podcast, a book or a post you rate, tag the person behind it and say why it's worth someone's time. It keeps you showing up when you've got nothing left in the tank, and you never know where it leads, as the voucher proved.",
+    title: "Shout out others when time is tight.",
+    body: "Your podcast recommendation post took five minutes and still travelled, because Ryan Bartlett reposted it and his crowd piled in. That's what shouting out other people does. It's generous and it starts relationships, and anyone who already rates the person you've tagged warms to you straight away. So when a week runs away with you, don't skip it. Share a podcast, a book or a post you rate, tag the person behind it and say why it's worth someone's time. It keeps you showing up when you've got nothing left in the tank, and you never know where it'll lead.",
   },
   {
     title: "Answer the objection before anyone raises it.",
-    body: "Your sales calls keep surfacing the same worries, people wary of agency retainers after getting burnt elsewhere and everyone fighting to protect their margin. Those worries are content. Every so often, write a post that names one of them plainly, shows you understand why someone would feel that way, and explains how you'd handle it. A head of marketing who's read that before a pitch, or just before they think about pulling the plug, already has your answer in their head. You don't need a whole series, just fold it into the posts you're already writing when it fits.",
+    body: "The brands you talk to share the same worries at the moment, wary of agency retainers after getting burnt elsewhere and keen to protect their margin. Those worries are content. Every so often, write a post that names one of them plainly, shows you understand why someone would feel that way, and explains how you'd handle it. A head of marketing who's read that before a pitch, or just before they think about pulling the plug, already has your answer in their head. You don't need a whole series, just fold it into the posts you're already writing when it fits.",
   },
 ];
 
@@ -668,10 +668,10 @@ const CONTENT_IDEAS: {
     pillars: [2, 3],
     title: "A Day In London With 20 Agency Leaders",
     guidance:
-      "Tell the story of the day rather than listing what you did, because a run-down of sessions is dull as dishwater. You walked in expecting a chat about agency leadership, found the agenda was all about the work itself with two competitors at the table, and then one of their co-founders came back from recording his own episode to tell you he'd just named Silverbean as the agency he most admires. Share the moment your view differed from the room, kindly, and talk about recording your episode on agency profitability without giving away what Web Games are saving for the release. Finish by saying you're up for more podcast invitations.",
+      "Tell the story of the day rather than listing what you did, because a run-down of sessions is dull as dishwater. You sat round one table with twenty people from across the industry, competitors included, and then recorded your own episode on agency profitability in a studio. Share the moment your view differed from the room, kindly, and the thing you took away, without giving away what Web Games are saving for the release. Finish by saying you're up for more podcast invitations.",
     tips: [
       "Use the best of the stills Web Games sent over. You behind a big microphone does a lot of the work before anyone reads a word.",
-      "Open on the moment the agenda landed and you spotted two competitors on the list. Every founder knows that feeling.",
+      "Start in the room rather than the build-up. Sitting down at a table with your competitors is a scene every founder can picture.",
       "Close with a line saying you're open to more podcast invitations, so the right hosts know to ask.",
     ],
     questions: [
@@ -697,7 +697,7 @@ const CONTENT_IDEAS: {
     title: "Rebecca Marley's Creator Insights (Reshare)",
     used: true,
     resultNote:
-      "Good to see you backing Rebecca in public, because that's the flywheel we talked about, you go first and bring your people with you. A one-line reshare won't travel far on its own though. Next time add two or three lines of your own take on her numbers, what surprised you or what a fashion brand should do about it, and it becomes your post as well as hers.",
+      "Good to see you backing Rebecca in public, because that's the flywheel we talked about, you go first and bring your people with you. A reshare tends to travel further with a bit more of you in it, so next time add two or three lines of your own take on her numbers, what surprised you or what a fashion brand should do about it, and it becomes your post as well as hers.",
     audience: "Marketing leaders at fashion brands, and your own team watching you back one of their own.",
   },
   {
@@ -705,7 +705,7 @@ const CONTENT_IDEAS: {
     title: "A Podcast Recommendation You Can't Miss",
     used: true,
     resultNote:
-      "As easy as a post gets, and it still travelled. You closed the loop on your podcast question, thanked Ted Parry by name, and Buddy the perfect passenger stole the show in the photo. Then Ryan Bartlett reposted it and brought a flurry of activity with him, which is what happens when you shout out the people behind something you rate. Keep this kind of post in your back pocket for the weeks your brain's fried.",
+      "As easy as a post gets, and it still travelled. You closed the loop on your podcast question, thanked Ted Parry by name, and Buddy the perfect passenger stole the show in the photo. Then Ryan Bartlett reposted it and brought a flurry of activity with him, which is what happens when you shout out the people behind something you rate. Keep this kind of post in your back pocket for the busy weeks.",
     audience: "Ecommerce and growth leaders, plus everyone who follows Ryan Bartlett and Open Residency.",
   },
   {
@@ -714,7 +714,7 @@ const CONTENT_IDEAS: {
     hookA: "There are too many cooks in the kitchen when it comes to measuring affiliate.",
     hookB: "Sit twenty agency leaders round a table to talk about measurement and you'll hear twenty versions of the truth.",
     guidance:
-      "This came straight out of the roundtable, and it's your clearest view. Google gives a brand one way to measure and so does Meta, but affiliate has dozens of agencies, tech platforms and thousands of publishers, each with their own story about how it should be done. No wonder brands are confused and don't know who to trust. Write it from the client's side of the table, a head of marketing being told five different things by five different people, and keep it in plain English without the technical detail the room got lost in. If you want a second angle later, try the thing nobody said out loud at the roundtable.",
+      "This came straight out of the roundtable, and it's your clearest view. Google gives a brand one way to measure and so does Meta, but affiliate has dozens of agencies, tech platforms and thousands of publishers, each with their own story about how it should be done. No wonder brands are confused and don't know who to trust. Write it from the client's side of the table, a head of marketing being told five different things by five different people, and keep it in plain English with the technical detail left out. If you want a second angle later, try the thing nobody said out loud at the roundtable.",
     tips: [
       "Picture who'll read this and feel heard. A head of ecommerce who's been confused by measurement should finish it thinking someone finally gets it.",
       "Keep it about the industry's habits, not any one firm or person in the room.",
@@ -730,10 +730,10 @@ const CONTENT_IDEAS: {
     pillars: [2, 1],
     title: "What I've Learnt By Becoming Visible On LinkedIn",
     guidance:
-      "Four months ago you were reading LinkedIn every day and never posting. Since then a podcast invite, partnership conversations, client leads and new people in your network have all come off the back of showing up, even when your topics were all over the place. Share that honestly, here's what I did, here's what happened, and here's why I think you should try it. The real audience is your own team, because the more of them who post, the easier selling gets for everyone. Keep it about the web of opportunities rather than blowing your own trumpet.",
+      "Four months ago you were on LinkedIn every day, but only reading. Since then a podcast invite, partnership conversations, client leads and new people in your network have all come off the back of showing up. Share that honestly, here's what I did, here's what happened, and here's why I think you should try it. The real audience is your own team, because the more of them who post, the easier selling gets for everyone. Keep it about the web of opportunities rather than blowing your own trumpet.",
     tips: [
       "Be specific about one or two things that came in, without naming anyone who wouldn't want naming.",
-      "Admit the messy bits, the weeks you didn't post and the topics that went nowhere. That's what makes it believable.",
+      "Be honest about the busy weeks when posting slipped, because that's what makes it believable.",
       "End with a nudge to anyone on the fence, especially your own people.",
     ],
     questions: [
@@ -746,7 +746,7 @@ const CONTENT_IDEAS: {
     pillars: [2],
     title: "Running A Smaller Company Right Now",
     guidance:
-      "You've got eighty-odd people and you still have to drive the changes yourself. Write about what the boss of a smaller business is juggling at the moment, AI changing how everything works, people wanting different things from a place to work, the noise you have to cut through to be heard, clients expecting more, and budgets that can vanish at the last minute. Don't make it a moan. Make it the kind of post that makes another founder think it's not just them, whatever industry they're in.",
+      "You've got eighty-odd people and you still have to drive the changes yourself. Write about what the boss of a smaller business is juggling at the moment, AI changing how everything works, people wanting different things from a place to work, the noise you have to cut through to be heard, clients expecting more, and budgets that can vanish at the last minute. Keep it warm and honest, the kind of post that makes another founder think it's not just them, whatever industry they're in.",
     tips: [
       "Open on the gap between the size of the team and how hard you still have to push. People assume a bigger business runs itself.",
       "Pick the three or four pressures you're feeling most rather than listing everything.",
@@ -794,8 +794,8 @@ const CONTENT_IDEAS: {
     pillars: [1],
     title: "Not Every Year Is A Good Year",
     guidance:
-      "Everyone on LinkedIn seems to be having a record year, and you know that isn't true. Be honest that in twenty-four years Silverbean has had great years, good years and some not so good ones, and talk about what profit really looks like for an agency. It sits nicely alongside your podcast on agency profitability once that's out.",
-    audience: "Fellow founders and agency owners, and potential buyers who'll respect the honesty.",
+      "Everyone on LinkedIn seems to be having a record year, and you know that isn't true. Be honest that in twenty-four years Silverbean has had great years, good years and some not so good ones, and share what those years taught you, keeping it about the lessons rather than the numbers. It sits nicely alongside your podcast on agency profitability once that's out.",
+    audience: "Fellow founders and agency owners who are tired of everyone pretending every year is a record.",
   },
 ];
 
@@ -965,12 +965,12 @@ const SESSIONS: {
   {
     number: 8,
     date: "16 October 2026",
-    title: "Coaching session eight. The web of opportunities, and keeping going when your brain's fried.",
+    title: "Coaching session eight. The web of opportunities, and keeping going through a busy patch.",
     summary:
-      "Our eighth session, and a good reminder that showing up pays out even when you're flat out. You'd had a fortnight so busy you were fried and posting dipped, but the opportunities kept coming anyway. The founder of a sports affiliate network got in touch off the back of your LinkedIn, you met him in King's Cross after the podcast, and he's coming up to Newcastle at the end of the month to talk partnership. At the Web Games day a competitor's co-founder named Silverbean on his own podcast as the agency he most admires, and you connected with everyone in the room afterwards. Your simple podcast recommendation post got reposted by Ryan Bartlett himself. As you put it, it becomes a web. We talked through the roundtable, where everyone was polite and agreed with each other, and found your strongest angle in the measurement conversation, too many cooks in the kitchen. You left with four posts to write and schedule, and a bank of your own ideas for after that.",
+      "Our eighth session, and a good reminder that showing up pays out even when you're flat out. You'd just had one of your busiest fortnights, with less time for posting, and the opportunities kept coming anyway. A new partnership conversation came straight off the back of your LinkedIn, and it's already moving. At the Web Games day a competitor's co-founder named Silverbean on his own podcast as the agency he most admires, and you connected with everyone in the room afterwards. Your simple podcast recommendation post got reposted by Ryan Bartlett himself. As you put it, it becomes a web. We talked through the roundtable, where the room was largely in agreement, and found your strongest angle in the measurement conversation, too many cooks in the kitchen. You left with four posts to write and schedule, and a bank of your own ideas for after that.",
     insights: [
-      "Opportunities don't wait for a perfect content plan. Your topics have been all over the place and you still had a partnership conversation, a podcast shout-out and client leads come in, because you've been visible.",
-      "When your brain's fried, shout out someone else. The podcast recommendation post took five minutes and Ryan Bartlett's repost did the rest.",
+      "Opportunities don't wait for a perfect content plan. You've written about a real mix of things, and a partnership conversation, a podcast shout-out and client leads still came in, because you've been visible.",
+      "When time is tight, shout out someone else. The podcast recommendation post took five minutes and Ryan Bartlett's repost did the rest.",
       "Your sharpest view came out of the room, not a topic list. Too many cooks in the kitchen is exactly the plain-English honesty a confused head of marketing wants to hear.",
       "Mix the insider posts that lift you within the industry with ones people outside it understand, and always ask who'll read it and feel heard.",
     ],
