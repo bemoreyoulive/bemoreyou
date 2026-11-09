@@ -44,14 +44,14 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
-  // Session 7 done 1 October 2026. Fortnightly cadence. Todos below.
+  // Session 9 done 6 November 2026. Fortnightly cadence. Todos below.
   "neil-robbins": [
-    { id: "nr8-podcast", text: "Write and schedule the podcast day post first. Tell it as a story rather than a list of what you did, use the best of the stills, and finish by saying you're open to more podcast invitations." },
-    { id: "nr8-measurement", text: "Write the measurement post from the client's side of the table. Your 'too many cooks in the kitchen' line is the heart of it, so picture who'll read it and feel heard." },
-    { id: "nr8-visible", text: "Write up what you've learnt from becoming visible on LinkedIn, the conversations and opportunities it's opened up, and pitch it at your own team so they want to start posting too." },
-    { id: "nr8-ceo", text: "Write your post on what it's like running a smaller company right now, everything you're juggling at once, and land it on the fact that every founder is feeling the same pressures, whatever their industry." },
-    { id: "nr8-undercover", text: "Schedule Undercover Boss for around Halloween with a costume photo, still opening with 'Do you remember Undercover Boss?' on its own line." },
-    { id: "nr8-podlink", text: "Send me the Web Games podcast link as soon as it's out next month, and keep the daily connection requests going to your target market." },
+    { id: "nr9-journey", text: "Write your personal branding journey post first. Five months ago you only read LinkedIn, so share what showing up has brought you, from the podcast to conversations inside Silverbean, and the flood of AI sales messages that came with being visible." },
+    { id: "nr9-twomore", text: "Get two more posts out before the 23rd. Start with something that happened in your week, because it's fresher and quicker to write, and only go to your bank of ideas if nothing jumps out." },
+    { id: "nr9-carchat", text: "Record two or three car chats to camera on the drive home, a minute or two on whatever's on your mind, and send them to me rather than posting them. Mount the phone before you set off or record once you've parked up." },
+    { id: "nr9-instagram", text: "Have a nose around Instagram this fortnight. Look at a few business leaders who talk straight to camera and think about whether your car chats could work there alongside LinkedIn." },
+    { id: "nr9-bots", text: "Only reply to comments from people you know or want to know, and leave the bots alone. If the AI sales messages keep piling up, try writing CE* instead of CEO in your headline." },
+    { id: "nr9-podlink", text: "Send me the Webgains podcast link as soon as it's out, and keep the daily connection requests going to your target market." },
   ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },

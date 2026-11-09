@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 8 of 13 · October 2026",
+  sessionLabel: "Session 9 of 13 · November 2026",
   nextMove:
-    "Neil, write and schedule your four posts this week, starting with the podcast day told as a story with the stills. Then do measurement, what being visible has brought you, and running a smaller company right now. Undercover Boss goes out around Halloween.",
+    "Neil, get three posts out before we speak on the 23rd, starting with your personal branding journey so far. Then record a few car chats on your drive home, just you talking to camera, and send them to me before you post anything.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,33 +74,33 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr8-podcast",
-    text: "Write and schedule the podcast day post first. Tell it as a story rather than a list of what you did, use the best of the stills, and finish by saying you're open to more podcast invitations.",
+    id: "nr9-journey",
+    text: "Write your personal branding journey post first. Five months ago you only read LinkedIn, so share what showing up has brought you, from the podcast to conversations inside Silverbean, and the flood of AI sales messages that came with being visible.",
     section: "content",
   },
   {
-    id: "nr8-measurement",
-    text: "Write the measurement post from the client's side of the table. Your 'too many cooks in the kitchen' line is the heart of it, so picture who'll read it and feel heard.",
+    id: "nr9-twomore",
+    text: "Get two more posts out before the 23rd. Start with something that happened in your week, because it's fresher and quicker to write, and only go to your bank of ideas if nothing jumps out.",
     section: "content",
   },
   {
-    id: "nr8-visible",
-    text: "Write up what you've learnt from becoming visible on LinkedIn, the conversations and opportunities it's opened up, and pitch it at your own team so they want to start posting too.",
+    id: "nr9-carchat",
+    text: "Record two or three car chats to camera on the drive home, a minute or two on whatever's on your mind, and send them to me rather than posting them. Mount the phone before you set off or record once you've parked up.",
     section: "content",
   },
   {
-    id: "nr8-ceo",
-    text: "Write your post on what it's like running a smaller company right now, everything you're juggling at once, and land it on the fact that every founder is feeling the same pressures, whatever their industry.",
-    section: "content",
+    id: "nr9-instagram",
+    text: "Have a nose around Instagram this fortnight. Look at a few business leaders who talk straight to camera and think about whether your car chats could work there alongside LinkedIn.",
+    section: "home",
   },
   {
-    id: "nr8-undercover",
-    text: "Schedule Undercover Boss for around Halloween with a costume photo, still opening with 'Do you remember Undercover Boss?' on its own line.",
-    section: "content",
+    id: "nr9-bots",
+    text: "Only reply to comments from people you know or want to know, and leave the bots alone. If the AI sales messages keep piling up, try writing CE* instead of CEO in your headline.",
+    section: "home",
   },
   {
-    id: "nr8-podlink",
-    text: "Send me the Web Games podcast link as soon as it's out next month, and keep the daily connection requests going to your target market.",
+    id: "nr9-podlink",
+    text: "Send me the Webgains podcast link as soon as it's out, and keep the daily connection requests going to your target market.",
     section: "home",
   },
 ];
@@ -194,7 +194,7 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   },
   {
     title: "Stay reactive. It's your strength.",
-    body: "Your best posts lately have come straight out of your week, the pitch you lost, your wife's Sunday question about meetings, a genuine ask for podcast recommendations. You write those in minutes because they're real, and they land because people can tell. So keep doing it. Some ideas from our calls will go cold by the time you sit down to write, and that's fine. Once your network has more of the right people in it, we'll add a monthly deep dive tied to the Silverbean webinars and a few value-led posts for heads of ecommerce and marketing, but keep those to a fifth of what you post at most. And don't spend twenty minutes hunting for a picture. Use a personal one when it's natural and post without one when it isn't.",
+    body: "Your best posts lately have come straight out of your week, the pitch you lost, your wife's Sunday question about meetings, a genuine ask for podcast recommendations. You write those in minutes because they're real, and they land because people can tell. So keep doing it. Some ideas from our calls will go cold by the time you sit down to write, and that's fine. When the 50 problems in 50 weeks content starts, your own versions of those become your value-led posts for heads of ecommerce and marketing, but keep them to a fifth of what you post at most. And don't spend twenty minutes hunting for a picture. Use a personal one when it's natural and post without one when it isn't.",
   },
   {
     title: "Shout out others when time is tight.",
@@ -203,6 +203,14 @@ const RECOMMENDATIONS: { title: string; body: string }[] = [
   {
     title: "Answer the objection before anyone raises it.",
     body: "The brands you talk to share the same worries at the moment, wary of agency retainers after getting burnt elsewhere and keen to protect their margin. Those worries are content. Every so often, write a post that names one of them plainly, shows you understand why someone would feel that way, and explains how you'd handle it. A head of marketing who's read that before a pitch, or just before they think about pulling the plug, already has your answer in their head. You don't need a whole series, just fold it into the posts you're already writing when it fits.",
+  },
+  {
+    title: "Be more you, especially as bigger names start watching.",
+    body: "As more senior people follow you, there'll be a pull to tidy yourself up and sound more corporate, and I'd ignore it. I had exactly this before Qatar, worried my unscripted style was too much for such a big client, and the boss told me he'd seen my content and wanted me to be me. Value is easy to copy now that everyone has AI, but nobody can copy your personality. You told me you talk to me the same way you talk to clients and partners, so write like that and the right people will keep finding you.",
+  },
+  {
+    title: "Write from this week before you go to the bank.",
+    body: "Having twenty-odd ideas banked is great, but too much choice can stall you, and an idea from the summer is harder to write than something that happened this morning. So when you sit down, start with your week. Think about what happened, who said what and what made you laugh or wince, and only go to the bank if nothing jumps out. Your drive home is where this happens for you, so when something lands, hit record on the dictation app the way you've been doing for your planning.",
   },
 ];
 
@@ -653,7 +661,7 @@ const CONTENT_IDEAS: {
     guidance:
       "The pitch you lost put you right back in the detail, and you came out of it seeing things you'd never have spotted from the top. Like the bosses on the telly, you saw first-hand how little time the marketing leaders you want to reach actually have, and it changed how you think about reaching them. Write it for fellow CEOs as what you learnt by dropping back into the weeds, not as a lecture on what they should be doing. Keep it light, because the photo is half the joke.",
     tips: [
-      "Use a Halloween costume photo now it's going out at the end of October. If you can find something headless, there's a headless chicken line in there about running a business without seeing what's really going on.",
+      "Halloween has been and gone, so use any fancy dress photo you've got. If you can find something headless, there's a headless chicken line in there about running a business without seeing what's really going on.",
       "Put the question on its own line at the top. People will picture you in disguise in your own office before they've read another word.",
       "Share two or three specific things you noticed, then hand it back to the reader with a question about the last time they did the job their team does every day.",
     ],
@@ -662,23 +670,14 @@ const CONTENT_IDEAS: {
       "What did you learn the last time you went back into the detail?",
     ],
     audience: "Fellow founders and CEOs, and your own team, who'll see the boss getting stuck in.",
-    deadline: "Around Halloween, scheduled with a costume photo.",
   },
   {
     pillars: [2, 3],
-    title: "A Day In London With 20 Agency Leaders",
-    guidance:
-      "Tell the story of the day rather than listing what you did, because a run-down of sessions is dull as dishwater. You sat round one table with twenty people from across the industry, competitors included, and then recorded your own episode on agency profitability in a studio. Share the moment your view differed from the room, kindly, and the thing you took away, without giving away what Web Games are saving for the release. Finish by saying you're up for more podcast invitations.",
-    tips: [
-      "Use the best of the stills Web Games sent over. You behind a big microphone does a lot of the work before anyone reads a word.",
-      "Start in the room rather than the build-up. Sitting down at a table with your competitors is a scene every founder can picture.",
-      "Close with a line saying you're open to more podcast invitations, so the right hosts know to ask.",
-    ],
-    questions: [
-      "What's the best thing you've learnt from sitting in a room with your competitors?",
-    ],
+    title: "When I Saw The Lineup, My First Thought Was \"Oh No...\"",
+    used: true,
+    resultNote:
+      "This is the story we talked about, and it worked. Opening on 'oh no...' when you saw the lineup is honest, every founder knows that feeling, and the 'okay, only kidding' line made me laugh. Tagging Webgains, SUPO, Sherridan and Ami puts the post in front of their networks too, and finishing on being open to invitations tells the right hosts to ask. When the episode comes out, share it with a line or two on what you'd say differently now.",
     audience: "Agency founders and peers, the people who'll want to hear the podcast, and the hosts who might invite you on theirs.",
-    deadline: "First of your four, scheduled this week.",
   },
   {
     pillars: [2, 0],
@@ -710,37 +709,30 @@ const CONTENT_IDEAS: {
   },
   {
     pillars: [0],
-    title: "Too Many Cooks In The Kitchen",
-    hookA: "There are too many cooks in the kitchen when it comes to measuring affiliate.",
-    hookB: "Sit twenty agency leaders round a table to talk about measurement and you'll hear twenty versions of the truth.",
-    guidance:
-      "This came straight out of the roundtable, and it's your clearest view. Google gives a brand one way to measure and so does Meta, but affiliate has dozens of agencies, tech platforms and thousands of publishers, each with their own story about how it should be done. No wonder brands are confused and don't know who to trust. Write it from the client's side of the table, a head of marketing being told five different things by five different people, and keep it in plain English with the technical detail left out. If you want a second angle later, try the thing nobody said out loud at the roundtable.",
-    tips: [
-      "Picture who'll read this and feel heard. A head of ecommerce who's been confused by measurement should finish it thinking someone finally gets it.",
-      "Keep it about the industry's habits, not any one firm or person in the room.",
-      "Land it on clarity and honesty, because that's what clients want and what you can offer.",
-    ],
-    questions: [
-      "How many different answers have you been given about what's actually working?",
-    ],
-    audience: "Heads of ecommerce and marketing trying to work out who to trust.",
-    deadline: "Second of your four.",
+    title: "I Think The Affiliate Industry Is Holding Itself Back",
+    used: true,
+    resultNote:
+      "A strong opinion with your name on it, and the kind of honest take most agency bosses wouldn't post. It pulled twenty six reactions and fourteen comments, although plenty of those comments were bots, so only reply to the people you know. The best result came from inside the business, when someone in your team read it and came to see you with an idea they'd never have raised in the office. Next time, write the same point for the head of marketing who's been burnt, in plain English, and finish with a question for them rather than for the industry.",
+    audience: "Agency peers and industry figures, plus heads of marketing who've had their fingers burnt.",
   },
   {
     pillars: [2, 1],
-    title: "What I've Learnt By Becoming Visible On LinkedIn",
+    title: "Five Months Ago I'd Never Posted On LinkedIn",
+    hookA: "Five months ago I'd never posted on LinkedIn.",
+    hookB: "Nobody warned me about the AI sales bots that come with being visible.",
     guidance:
-      "Four months ago you were on LinkedIn every day, but only reading. Since then a podcast invite, partnership conversations, client leads and new people in your network have all come off the back of showing up. Share that honestly, here's what I did, here's what happened, and here's why I think you should try it. The real audience is your own team, because the more of them who post, the easier selling gets for everyone. Keep it about the web of opportunities rather than blowing your own trumpet.",
+      "Five months ago you were on LinkedIn every day but only reading, so this is the launch of your personal brand told honestly. Share three or four things it's brought you, like the podcast, client and partnership conversations, and someone in your own team coming to see you with an idea after reading one of your posts, without naming anyone. Then bring in the side nobody warns you about, the flood of AI sales messages that land once you're visible. Keep it about what you've learnt rather than blowing your own trumpet, and write it with your own team in mind so they fancy having a go.",
     tips: [
-      "Be specific about one or two things that came in, without naming anyone who wouldn't want naming.",
+      "Be specific about what came in without naming anyone, especially the conversation inside the business.",
       "Be honest about the busy weeks when posting slipped, because that's what makes it believable.",
+      "The AI sales messages are your light relief. Quote one daft opener word for word and people will laugh along.",
       "End with a nudge to anyone on the fence, especially your own people.",
     ],
     questions: [
       "What's actually stopping you from posting?",
     ],
     audience: "Your own team first, then fellow founders and leaders sitting on the fence about LinkedIn.",
-    deadline: "Third of your four.",
+    deadline: "First of your three, before we speak on the 23rd.",
   },
   {
     pillars: [2],
@@ -756,7 +748,6 @@ const CONTENT_IDEAS: {
       "What's on your plate right now that nobody outside the business sees?",
     ],
     audience: "Fellow founders and CEOs of smaller businesses, in any industry.",
-    deadline: "Fourth of your four.",
   },
   {
     pillars: [3, 1],
@@ -796,6 +787,46 @@ const CONTENT_IDEAS: {
     guidance:
       "Everyone on LinkedIn seems to be having a record year, and you know that isn't true. Be honest that in twenty-four years Silverbean has had great years, good years and some not so good ones, and share what those years taught you, keeping it about the lessons rather than the numbers. It sits nicely alongside your podcast on agency profitability once that's out.",
     audience: "Fellow founders and agency owners who are tired of everyone pretending every year is a record.",
+  },
+  {
+    pillars: [3, 0],
+    title: "Car Chat With Neil",
+    guidance:
+      "My challenge to you. On the drive home, talk to camera about one thing on your mind, an opinion on the industry, something that happened in a meeting or a bit of your day that made you laugh. There's no script and no editing, just you talking the way you talk to me. Send me the first few rather than posting them and we'll look at them together on the 23rd. You lead through humour and you're a natural talker, so this could suit you better than you think.",
+    tips: [
+      "Mount the phone before you set off, or record once you've parked up. No post is worth points on your licence.",
+      "Keep each one to a minute or two and stick to one point.",
+      "Start mid-thought, as if someone's just got in the car and asked what you reckon.",
+      "Buddy is very welcome as a guest.",
+    ],
+    audience: "Everyone, because nothing shows who you are faster than you talking off the cuff.",
+    deadline: "A few test videos sent to me before the 23rd.",
+  },
+  {
+    pillars: [0],
+    title: "50 Problems In 50 Weeks, In Your Own Words",
+    guidance:
+      "When the Silverbean content plan starts, take each problem and write your own LinkedIn version of it. Open with a moment you've seen that problem play out, say plainly what you'd do about it, and keep your personality in it, because the advice is easy to copy and you aren't. These are your value posts, so keep them to around a fifth of what you post, alongside the stories and opinions that got you this far.",
+    tips: [
+      "Write it the way you'd explain it to a head of marketing over a coffee, with no jargon.",
+      "Stick to one problem per post, and pick the ones you've got a story or a strong view on.",
+    ],
+    audience: "Heads of ecommerce and marketing with that exact problem on their desk.",
+  },
+  {
+    pillars: [1],
+    title: "Would I Press The Reset Button?",
+    hookA: "If I could press the reset button on 24 years in business, would I?",
+    guidance:
+      "You said yes straight away, but only if you got to keep what you know now, a 49-year-old's brain in a 25-year-old's head. Share two or three things you'd do differently, and include starting your personal brand years earlier, because it's honest and it ties back to everything this year has shown you. Keep it to lessons anyone could take something from.",
+    tips: [
+      "Keep it about the decisions you made, not the people in the business.",
+      "Finish by asking people what they'd do differently, because everyone has an answer to that one.",
+    ],
+    questions: [
+      "What would you do differently if you started again tomorrow?",
+    ],
+    audience: "Fellow founders, and anyone at the start of building something.",
   },
 ];
 
@@ -946,7 +977,7 @@ const SESSIONS: {
     date: "1 October 2026",
     title: "Coaching session seven. The first measurable value, and why being reactive works for you.",
     summary:
-      "Our seventh session, and the one where it started paying out in black and white. You told me there'd been measurable value from LinkedIn this week. A simple post asking for ecommerce podcast recommendations pulled nineteen comments and brought ecommerce consultants into your network, the kind of people who refer work your way. A couple of genuine partnership opportunities came through from companies you already wanted to talk to, and the Web Games podcast in London next Thursday came straight off a post. Your lost pitch post was your best yet at thirty nine reactions, because you laughed at yourself and people love a leader who admits a loss. The meetings post was your first real day in the life of a CEO piece, exactly the gap we talked about last time. You also said you're enjoying it now, starting the week thinking about which posts to write rather than dreading them. We agreed you stay reactive, because it's your strength, and later on, once your network has more of the right people in it, we add a monthly deep dive and some value-led posts.",
+      "Our seventh session, and the one where it started paying out in black and white. You told me there'd been measurable value from LinkedIn this week. A simple post asking for ecommerce podcast recommendations pulled nineteen comments and brought ecommerce consultants into your network, the kind of people who refer work your way. A couple of genuine partnership opportunities came through from companies you already wanted to talk to, and the Webgains podcast in London next Thursday came straight off a post. Your lost pitch post was your best yet at thirty nine reactions, because you laughed at yourself and people love a leader who admits a loss. The meetings post was your first real day in the life of a CEO piece, exactly the gap we talked about last time. You also said you're enjoying it now, starting the week thinking about which posts to write rather than dreading them. We agreed you stay reactive, because it's your strength, and later on, once your network has more of the right people in it, we add a monthly deep dive and some value-led posts.",
     insights: [
       "Admitting a loss beat every helpful post you've written. The lost pitch post flew because you were honest and funny about it, and people trust a leader who can laugh at himself.",
       "A simple ask can do more than a clever opinion. The podcast recommendations post pulled nineteen comments and brought the right people into your network.",
@@ -955,7 +986,7 @@ const SESSIONS: {
     ],
     agreed: [
       "Post Undercover Boss early next week with a fancy dress photo, written for fellow CEOs.",
-      "Chase Web Games for the agenda and format, ask for stills, and wear the pink polo on Thursday.",
+      "Chase Webgains for the agenda and format, ask for stills, and wear the pink polo on Thursday.",
       "Post about the podcast day, then follow-ups the week after.",
       "Glance at the Monday 9am emails at least, because they're your live to-do list.",
       "Session 8 booked, Friday 16 October at 9am.",
@@ -967,7 +998,7 @@ const SESSIONS: {
     date: "16 October 2026",
     title: "Coaching session eight. The web of opportunities, and keeping going through a busy patch.",
     summary:
-      "Our eighth session, and a good reminder that showing up pays out even when you're flat out. You'd just had one of your busiest fortnights, with less time for posting, and the opportunities kept coming anyway. A new partnership conversation came straight off the back of your LinkedIn, and it's already moving. At the Web Games day a competitor's co-founder named Silverbean on his own podcast as the agency he most admires, and you connected with everyone in the room afterwards. Your simple podcast recommendation post got reposted by Ryan Bartlett himself. As you put it, it becomes a web. We talked through the roundtable, where the room was largely in agreement, and found your strongest angle in the measurement conversation, too many cooks in the kitchen. You left with four posts to write and schedule, and a bank of your own ideas for after that.",
+      "Our eighth session, and a good reminder that showing up pays out even when you're flat out. You'd just had one of your busiest fortnights, with less time for posting, and the opportunities kept coming anyway. A new partnership conversation came straight off the back of your LinkedIn, and it's already moving. At the Webgains day a competitor's co-founder named Silverbean on his own podcast as the agency he most admires, and you connected with everyone in the room afterwards. Your simple podcast recommendation post got reposted by Ryan Bartlett himself. As you put it, it becomes a web. We talked through the roundtable, where the room was largely in agreement, and found your strongest angle in the measurement conversation, too many cooks in the kitchen. You left with four posts to write and schedule, and a bank of your own ideas for after that.",
     insights: [
       "Opportunities don't wait for a perfect content plan. You've written about a real mix of things, and a partnership conversation, a podcast shout-out and client leads still came in, because you've been visible.",
       "When time is tight, shout out someone else. The podcast recommendation post took five minutes and Ryan Bartlett's repost did the rest.",
@@ -978,10 +1009,33 @@ const SESSIONS: {
       "Write and schedule four posts: the podcast day, measurement, what being visible has brought you, and running a smaller company right now.",
       "Tell the podcast day as a story with the stills, and say you're open to more podcast invitations.",
       "Move Undercover Boss to around Halloween and use a costume photo.",
-      "Send Ben the Web Games podcast link when it's out in November.",
+      "Send Ben the Webgains podcast link when it's out in November.",
       "Session 9 booked, Monday 2 November at 11:30am.",
     ],
     nextSession: "Session 9 \u00b7 Monday 2 November 2026, 11:30am \u00b7 content review and what's come in",
+  },
+  {
+    number: 9,
+    date: "6 November 2026",
+    title: "Coaching session nine. Value from inside the business, and getting on camera.",
+    summary:
+      "Our ninth session, after a busy few weeks that pulled you away from posting. You still got two out, the podcast day story and your post on the affiliate industry holding itself back, and the second one paid off somewhere neither of us expected. Someone in your own team read it and came to see you with an idea they'd never have brought up over a chat about football, and you're backing it. You've also had well-known people in the industry message to say they agree with you, which is the someone worth listening to goal from June starting to show. You told me you're enjoying it, and that you can write a good post in fifteen minutes when you're in the flow. We talked about staying yourself as bigger names start following you, spotting the bots in your comments, and writing from what happened that week rather than an old idea. Then I set you a challenge, a few car chats to camera on the drive home, sent to me before anything goes live.",
+    insights: [
+      "Your posts create value inside the business as well as outside it. One post got a colleague talking to you about an idea that might never have come up otherwise.",
+      "Messages from people you respect agreeing with you are the clearest sign yet that you're becoming someone worth listening to.",
+      "Not every comment comes from a real person. Reply to the people you know and leave the bots alone.",
+      "Personality is the one thing AI can't copy, so keep writing the way you talk to clients and partners.",
+      "Something that happened this week is quicker to write and lands better than an idea from months ago.",
+    ],
+    agreed: [
+      "Three posts before Session 10, starting with your personal branding journey so far.",
+      "Record a few car chats to camera on the drive home and send them to Ben rather than posting them.",
+      "Have a look at Instagram and whether talking to camera could work for you there.",
+      "Write your own versions of the 50 problems in 50 weeks posts once they start, in your usual voice.",
+      "Send Ben the Webgains podcast link when it's out.",
+      "Session 10 booked, Monday 23 November, in the afternoon.",
+    ],
+    nextSession: "Session 10 \u00b7 Monday 23 November 2026, afternoon \u00b7 your car chats and the three posts",
   },
 ];
 
@@ -1106,14 +1160,14 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Really good catch up today, Neil. You might have expected a disappointed look, but look at what came in while you were flat out, a partnership conversation off the back of LinkedIn, a competitor naming Silverbean on his own podcast, and Ryan Bartlett reposting you. That's the web you talked about, and it only keeps growing if you keep showing up. You've got four posts to write and schedule, with the podcast day first and Undercover Boss saved for Halloween. If a week gets away from you, shout someone out rather than skipping it. Enjoy writing them and I'll see you on Monday the 2nd at half eleven.
+                Good to catch up on Friday, Neil, and thanks for being so relaxed about me moving it. You've had a busy few weeks and still got two posts out, and look what the trust post did, with someone in your own team coming to see you with an idea because of it. Add in the messages from people you respect and that's you becoming someone worth listening to. Get three posts out before we next speak, starting with your personal branding journey, and send me a few car chats. I'll see you on Monday the 23rd.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "8 of 13", sub: "Next: Mon 2 November, 11:30am" },
+                { label: "Sessions done", value: "9 of 13", sub: "Next: Mon 23 November, afternoon" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
@@ -1417,7 +1471,7 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
                       <p style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color, margin: "0 0 8px" }}>{CONTENT_IDEAS.filter(x => !x.archived).length} posts to draw from</p>
                       <p style={{ fontSize: "0.86rem", color: "#3D3935", lineHeight: 1.7, margin: "0 0 10px" }}>Each one gives you a steer on how to write it, who it's for, and why it'll land. The colour tags show which pillar or two each post leans on. Where I've briefed the idea you'll also get two hook options, A and B, so you pick the opener that feels most like you.</p>
                       <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: "0 0 10px" }}>The target is two posts per week. These are what's in the tank right now, not the full picture. After each session, we add more, built around what's been happening in the business, who you've been talking to, and what's come up in your life outside it. The library grows with you.</p>
-                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant and the lost pitch post are your standouts so far, one for comments and one for reactions, and your podcast recommendation earned a repost from Ryan Bartlett himself.</p>
+                      <p style={{ fontSize: "0.86rem", color: "#7A746E", lineHeight: 1.7, margin: 0 }}>The ones you've posted carry my feedback underneath them, and the rest are still in the tank. Use the tabs below to flick between the two. The car rental rant and the lost pitch post are your standouts so far, one for comments and one for reactions, your podcast recommendation earned a repost from Ryan Bartlett himself, and your industry trust post had someone from your own team knocking on your door.</p>
                     </div>
                     <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 6, padding: "18px 22px", marginBottom: 20 }}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 10px" }}>Before you hit publish</p>
