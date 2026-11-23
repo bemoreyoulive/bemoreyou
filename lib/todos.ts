@@ -44,14 +44,14 @@ const clientTodos: Record<string, TodoDef[]> = {
     { id: "jh5", text: "Explore the London networks Ben sent — commit to one" },
     { id: "jh6", text: "Keep a close eye on your signals — they're compounding" },
   ],
-  // Session 9 done 6 November 2026. Fortnightly cadence. Todos below.
+  // Session 10 done 23 November 2026. Monthly cadence from here. Todos below.
   "neil-robbins": [
-    { id: "nr9-journey", text: "Write your personal branding journey post first. Five months ago you only read LinkedIn, so share what showing up has brought you, from the podcast to conversations inside Silverbean, and the flood of AI sales messages that came with being visible." },
-    { id: "nr9-twomore", text: "Get two more posts out before the 23rd. Start with something that happened in your week, because it's fresher and quicker to write, and only go to your bank of ideas if nothing jumps out." },
-    { id: "nr9-carchat", text: "Record two or three car chats to camera on the drive home, a minute or two on whatever's on your mind, and send them to me rather than posting them. Mount the phone before you set off or record once you've parked up." },
-    { id: "nr9-instagram", text: "Have a nose around Instagram this fortnight. Look at a few business leaders who talk straight to camera and think about whether your car chats could work there alongside LinkedIn." },
-    { id: "nr9-bots", text: "Only reply to comments from people you know or want to know, and leave the bots alone. If the AI sales messages keep piling up, try writing CE* instead of CEO in your headline." },
-    { id: "nr9-podlink", text: "Send me the Webgains podcast link as soon as it's out, and keep the daily connection requests going to your target market." },
+    { id: "nr10-tests", text: "Record two or three test videos to camera, a minute max each, and add a short text overlay at the top in CapCut on your iPhone, something like CEO gives his opinion on Black Friday trends. Send me one or two so I can give you feedback." },
+    { id: "nr10-blackfriday", text: "Post your Black Friday trends video straight onto LinkedIn as soon as your client trends are in, ideally Monday 30 November. You're in Austria that week, so film it there if you have to, because being first matters on a topic this hot." },
+    { id: "nr10-lined", text: "Write the in-the-moment posts you've got lined up: the Porsche customer experience (I'd name the brand, it adds flavour), padel and Wednesday's match against the marketing team, and an objection post from Thursday's commercial meeting." },
+    { id: "nr10-mix", text: "Keep a couple of posts a week going, mixing topical business posts for your ecommerce audience with personal ones. If you use AI for a first draft, rewrite it in your own voice like you did with The Works." },
+    { id: "nr10-instagram", text: "Leave Instagram for now and come back to it once you're comfortable on video, because LinkedIn is the place to practise." },
+    { id: "nr10-basics", text: "Only reply to real people and leave the bots alone, keep the daily connection requests going to your target market, and send me the Webgains podcast link when it's out." },
   ],
   "alex-shiell": [
     { id: "as3-0", text: "Go and read the new bit I've added under Ben's Recommendations about going viral, because I really want you to take this one in properly before we next speak." },

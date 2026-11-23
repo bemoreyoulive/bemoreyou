@@ -24,9 +24,9 @@ const NR_CONFIG = {
   role: "Founder & CEO, Silverbean",
   initials: "NR",
   color: "#2E6F5E",
-  sessionLabel: "Session 9 of 13 · November 2026",
+  sessionLabel: "Session 10 of 13 · November 2026",
   nextMove:
-    "Neil, get three posts out before we speak on the 23rd, starting with your personal branding journey so far. Then record a few car chats on your drive home, just you talking to camera, and send them to me before you post anything.",
+    "Neil, record two or three short test videos with a text overlay in CapCut, then post your Black Friday trends video on LinkedIn as soon as the trends are in, even if you film it in Austria. Keep the in-the-moment posts coming too.",
 };
 
 const PILLAR_COLORS = ["#2E6F5E", "#2d5a8e", "#b45309", "#7c3aed"];
@@ -74,33 +74,33 @@ const NR_PILLARS: { title: string; tag: string; body: string; short: string; aud
 
 const TODOS: { id: string; text: string; subtext?: string; section: string }[] = [
   {
-    id: "nr9-journey",
-    text: "Write your personal branding journey post first. Five months ago you only read LinkedIn, so share what showing up has brought you, from the podcast to conversations inside Silverbean, and the flood of AI sales messages that came with being visible.",
+    id: "nr10-tests",
+    text: "Record two or three test videos to camera, a minute max each, and add a short text overlay at the top in CapCut on your iPhone, something like CEO gives his opinion on Black Friday trends. Send me one or two so I can give you feedback.",
     section: "content",
   },
   {
-    id: "nr9-twomore",
-    text: "Get two more posts out before the 23rd. Start with something that happened in your week, because it's fresher and quicker to write, and only go to your bank of ideas if nothing jumps out.",
+    id: "nr10-blackfriday",
+    text: "Post your Black Friday trends video straight onto LinkedIn as soon as your client trends are in, ideally Monday 30 November. You're in Austria that week, so film it there if you have to, because being first matters on a topic this hot.",
     section: "content",
   },
   {
-    id: "nr9-carchat",
-    text: "Record two or three car chats to camera on the drive home, a minute or two on whatever's on your mind, and send them to me rather than posting them. Mount the phone before you set off or record once you've parked up.",
+    id: "nr10-lined",
+    text: "Write the in-the-moment posts you've got lined up: the Porsche customer experience (I'd name the brand, it adds flavour), padel and Wednesday's match against the marketing team, and an objection post from Thursday's commercial meeting.",
     section: "content",
   },
   {
-    id: "nr9-instagram",
-    text: "Have a nose around Instagram this fortnight. Look at a few business leaders who talk straight to camera and think about whether your car chats could work there alongside LinkedIn.",
+    id: "nr10-mix",
+    text: "Keep a couple of posts a week going, mixing topical business posts for your ecommerce audience with personal ones. If you use AI for a first draft, rewrite it in your own voice like you did with The Works.",
+    section: "content",
+  },
+  {
+    id: "nr10-instagram",
+    text: "Leave Instagram for now and come back to it once you're comfortable on video, because LinkedIn is the place to practise.",
     section: "home",
   },
   {
-    id: "nr9-bots",
-    text: "Only reply to comments from people you know or want to know, and leave the bots alone. If the AI sales messages keep piling up, try writing CE* instead of CEO in your headline.",
-    section: "home",
-  },
-  {
-    id: "nr9-podlink",
-    text: "Send me the Webgains podcast link as soon as it's out, and keep the daily connection requests going to your target market.",
+    id: "nr10-basics",
+    text: "Only reply to real people and leave the bots alone, keep the daily connection requests going to your target market, and send me the Webgains podcast link when it's out.",
     section: "home",
   },
 ];
@@ -1037,6 +1037,30 @@ const SESSIONS: {
     ],
     nextSession: "Session 10 \u00b7 Monday 23 November 2026, afternoon \u00b7 your car chats and the three posts",
   },
+  {
+    number: 10,
+    date: "23 November 2026",
+    title: "Coaching session ten. Writing on purpose, and getting you on camera.",
+    summary:
+      "Our tenth session, and you came in with four posts out in a week: your personal branding journey, the how's business post, a shout-out for Rebecca's new newsletter and The Works that morning. The Rip opener did its job of pulling eyes in, and leaving the joke unexplained made people curious. The how's business post got a lot of engagement, and it came from looking back over the business since 2019 and realising how resilient you've been, which is a big moment when you've always told me you're terrible at reflecting. The Works was your most intentional post yet, written straight for the ecommerce leaders you've been connecting with, and you used AI to get the first half moving before making it your own. The car chats and Instagram haven't happened yet, which is fine, so we agreed you test video on LinkedIn first, starting with Black Friday trends. You've got plenty lined up, from Porsche to padel, and you're finding your own angles now, so we're switching to monthly sessions for the last three.",
+    insights: [
+      "Leaving the Rip joke unexplained made people curious, and a question left in someone's head makes the post stick.",
+      "Writing in the moment is working. The how's business post came out of something you'd just done, so it was fresh and quick to write.",
+      "The Works shows you writing on purpose for the ecommerce people you want to reach, and a topical story gives them a reason to stop scrolling.",
+      "AI is handy for getting a first draft moving, as long as you rewrite it in your own voice, which is exactly what you did.",
+      "On video, keep it under a minute, post it straight onto LinkedIn, and put a short text overlay at the top so the right people find it.",
+      "Not everyone who follows you is a decision-maker, and that's fine, because they influence the people who are.",
+    ],
+    agreed: [
+      "Record two or three test videos to camera with a CapCut text overlay.",
+      "Post a Black Friday trends video on LinkedIn as soon as the trends are in, around Monday 30 November.",
+      "Write the posts you've got lined up: the Porsche customer experience, padel, and an objection post from Thursday's commercial meeting.",
+      "Leave Instagram until you're comfortable on video.",
+      "Send Ben a couple of the test videos, and the Webgains podcast link when it's out.",
+      "Switch to monthly sessions. Session 11 booked, Monday 21 December at 1:30pm.",
+    ],
+    nextSession: "Session 11 \u00b7 Monday 21 December 2026, 1:30pm \u00b7 your first videos and the Black Friday post",
+  },
 ];
 
 const GOALS = {
@@ -1154,20 +1178,20 @@ export default function NeilRobbinsDashboard({ slug }: { slug: string }) {
           <div>
             <SessionPrepPrompt />
             <EmailOptIn slug={slug} accentColor={color} />
-            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="fortnight" animateIn />
+            <NextMoveBox move={config.nextMove} accentColor={color} clientName={name} sessionLabel={sessionLabel} cadence="month" animateIn />
 
             {/* A note from Ben */}
             <div style={{ background: "#eef4f1", border: `1px solid ${color}44`, borderLeft: `4px solid ${color}`, borderRadius: 8, padding: "22px 26px", marginBottom: 20 }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color, margin: "0 0 12px" }}>A note from Ben</p>
               <p style={{ fontSize: "0.9rem", color: "#3D3935", lineHeight: 1.7, margin: 0 }}>
-                Good to catch up on Friday, Neil, and thanks for being so relaxed about me moving it. You've had a busy few weeks and still got two posts out, and look what the trust post did, with someone in your own team coming to see you with an idea because of it. Add in the messages from people you respect and that's you becoming someone worth listening to. Get three posts out before we next speak, starting with your personal branding journey, and send me a few car chats. I'll see you on Monday the 23rd.
+                Good to catch up today, Neil. Four posts in a week is a cracking run, and The Works shows you writing on purpose for the ecommerce people you want to be in front of. Now let's get you on camera. Record a few test videos, then get your Black Friday trends video out while the topic's hot. We're going monthly from here, so I'll see you on Monday 21 December at 1:30pm. Enjoy Austria, and get an orchestra on that itinerary.
               </p>
             </div>
 
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 28 }}>
               {[
-                { label: "Sessions done", value: "9 of 13", sub: "Next: Mon 23 November, afternoon" },
+                { label: "Sessions done", value: "10 of 13", sub: "Next: Mon 21 December, 1:30pm" },
                 { label: "Content pillars", value: "4 set", sub: "See Brand Assets" },
                 { label: "Headline", value: "Live ✓", sub: "Updated 26 June 2026" },
                 { label: "About section", value: "Live ✓", sub: "Updated 26 June 2026" },
